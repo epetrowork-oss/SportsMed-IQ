@@ -49,15 +49,22 @@ localStorage.
 - ✅ Stage 2 — one complete unit end-to-end (ankle sprains: 7-section lesson,
   8-question quiz, 12 flashcards)
 - ✅ Stage 3 — minimal teacher dashboard (mock roster + live local progress)
-- ✅ Content expansion — 7 units across 5 categories (ankle sprains,
+- ✅ Content expansion — 11 units across 6 categories (ankle sprains,
   concussions, heat illness, knee/ACL, wound care, muscle strains, overuse
-  injuries), each added as JSON only, verified end-to-end in the browser
+  injuries, fractures & dislocations, taping & wrapping, EAP/CPR-AED,
+  hydration & nutrition), each added as JSON only, validated by
+  `npm run validate:content` and verified in the browser
 - ✅ Cross-device sync — offline progress codes: student Sync page
   (export/import with best-of-both merge) and teacher add-student-by-code
 - ✅ Honest-reading signals — per-lesson reading time + scroll depth with
   click-through flags on the teacher dashboard
 - ✅ Teacher tools — sortable roster (name / completed / flags first) and
   CSV export; mobile layout verified at phone widths
+- ✅ Compressed sync codes — SMIQ2 (deflate) format ~4.5x shorter than v1;
+  legacy SMIQ1 codes still import
+- ✅ Real-device pass — PWA install icons (192/512/maskable + apple-touch),
+  offline reload verified with network cut, all touch targets ≥ 44px at
+  phone widths, layout checked at 375px and 768px
 
 Not built yet (intentionally): accounts/auth, live server-based sync,
 assigning content.

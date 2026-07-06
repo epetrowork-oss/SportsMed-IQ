@@ -38,32 +38,31 @@ teacher dashboard).
 *Routing: orchestrator writes the spec per item; PNG icons + touch-target CSS
 are `implementer` tasks; the install-flow audit needs orchestrator judgment.*
 
-- [ ] Verify layout at tablet width (~768px), not just 375px phone width.
-- [ ] Touch-target audit: interactive elements (quiz choices, flashcard flip,
-      nav links, sort buttons) should be ≥ 44px tall on touch devices.
-      `styles.css` currently has no min-height rules on buttons.
-- [ ] PWA installability audit — likely a real gap: the manifest's only icon
-      is `icon.svg`. Chrome's install prompt wants 192px and 512px PNGs
-      (plus a maskable icon), and iOS Add-to-Home-Screen wants an
-      `apple-touch-icon` PNG link tag. Generate PNGs from the SVG, add them
-      to the manifest and `index.html`.
-- [ ] Walk the actual install flow (Chromium: check `beforeinstallprompt`
-      fires / DevTools installability report), then confirm the installed
-      app works offline — don't just check that the service worker registers.
+- [x] Verify layout at tablet width (~768px) — spot-checked all pages at
+      768px during the touch-target pass; no breakage.
+- [x] Touch-target audit — measured every control at 375px in the built
+      app (nav links 31px, buttons 37px, remove-student 22px), added
+      min-heights in `styles.css`; re-measured, all ≥ 44px, no overflow.
+- [x] PWA installability — real PNG icons added (192/512 + maskable 512
+      with safe-zone fill) and `apple-touch-icon` link; manifest verified
+      complete in the built app.
+- [x] Install flow audited: manifest (standalone, icons, start_url) +
+      active service worker verified in built app, then offline reload with
+      network cut — app fully serves all units offline, zero console
+      errors. (`beforeinstallprompt` itself can't fire in headless CI —
+      worth one manual Add-to-Home-Screen on a real phone when convenient.)
 
 ### 2. Harden sync codes (small, high-value)
 
 *Routing: orchestrator decides whether compression is warranted (measure
 first); the implementation + edge-case tests are an `implementer` task.*
 
-- [ ] Measure real code length with all 7 units of progress. The plan called
-      for *compressed* JSON; the implementation is plain base64url JSON. If
-      codes are too long to comfortably copy/paste or read aloud in class,
-      add compression (e.g. `CompressionStream('deflate-raw')`, with the
-      `SMIQ1.` prefix bumped to `SMIQ2.` and v1 still accepted on import).
-- [ ] Test malformed/truncated codes and merge edge cases (import own code,
-      import older code over newer progress) — confirm graceful errors, no
-      crashes, merge keeps best-of-both.
+- [x] Measured: full 7-unit progress was 1,345 chars. Added SMIQ2 format
+      (`deflate-raw` via CompressionStream) → ~288 chars, ~4.5x shorter.
+      Legacy SMIQ1 codes import forever. encode/decode now async.
+- [x] Verified in browser: round trip, best-of-both merge per field,
+      legacy SMIQ1 import, garbage + truncated codes → friendly errors,
+      teacher add-by-code with SMIQ2, zero unhandled rejections.
 
 ### 3. Optional — more content (only if time remains / a class needs it)
 
@@ -72,10 +71,12 @@ Same pattern as before: one JSON file per unit, full lesson + 8-question quiz
 `unit-author` (Sonnet) task per unit — these should not consume orchestrator
 credits beyond review.* Good candidates to round out a semester:
 
-- [ ] Fractures & dislocations
-- [ ] Taping & wrapping basics
-- [ ] Emergency action plans / CPR & AED awareness
-- [ ] Hydration & nutrition for athletes
+- [x] Fractures & dislocations
+- [x] Taping & wrapping basics
+- [x] Emergency action plans / CPR & AED awareness
+- [x] Hydration & nutrition for athletes (new "Prevention & Performance"
+      category) — all four validator-clean with zero warnings; 11 units
+      total across 6 categories
 
 ### 4. Stretch — teacher per-student detail
 
