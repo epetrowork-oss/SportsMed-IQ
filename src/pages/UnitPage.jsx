@@ -6,6 +6,7 @@ import {
   getUnitProgress,
   markLessonRead,
   addReadingTime,
+  recordScrollDepth,
   PASS_THRESHOLD,
 } from '../lib/progress.js'
 import NotFoundPage from './NotFoundPage.jsx'
@@ -48,6 +49,41 @@ export function formatReadTime(seconds) {
   return `${Math.round(seconds / 60)} min`
 }
 
+// Track the deepest point of the lesson the student has scrolled to.
+// Measured on scroll but only persisted every couple of seconds so
+// scrolling never triggers store writes/re-renders per-event.
+function useScrollDepth(unitId) {
+  useEffect(() => {
+    if (!unitId) return
+    let maxPct = 0
+    let savedPct = 0
+    const measure = () => {
+      const el = document.documentElement
+      const scrollable = el.scrollHeight - el.clientHeight
+      const pct =
+        scrollable <= 0 ? 100 : Math.min(100, ((el.scrollTop + el.clientHeight) / el.scrollHeight) * 100)
+      if (pct > maxPct) maxPct = pct
+    }
+    const flush = () => {
+      if (maxPct > savedPct) {
+        recordScrollDepth(unitId, maxPct)
+        savedPct = maxPct
+      }
+    }
+    measure() // a lesson shorter than the viewport counts as fully seen
+    const interval = setInterval(flush, 2000)
+    window.addEventListener('scroll', measure, { passive: true })
+    window.addEventListener('resize', measure)
+    return () => {
+      measure()
+      flush()
+      clearInterval(interval)
+      window.removeEventListener('scroll', measure)
+      window.removeEventListener('resize', measure)
+    }
+  }, [unitId])
+}
+
 function Callout({ callout }) {
   return (
     <div className={`callout callout-${callout.type ?? 'tip'}`}>
@@ -62,6 +98,7 @@ export default function UnitPage() {
   useProgress()
   const unit = getUnit(unitId)
   useReadingTimer(unit ? unit.id : null)
+  useScrollDepth(unit ? unit.id : null)
   if (!unit) return <NotFoundPage />
 
   const p = getUnitProgress(unit.id)
@@ -107,7 +144,10 @@ export default function UnitPage() {
 
       <div className="lesson-footer">
         {formatReadTime(p.readSeconds) && (
-          <p className="read-time-note">Reading time: {formatReadTime(p.readSeconds)}</p>
+          <p className="read-time-note">
+            Reading time: {formatReadTime(p.readSeconds)}
+            {p.scrollPct > 0 && ` · ${p.scrollPct}% of lesson seen`}
+          </p>
         )}
         {p.lessonRead ? (
           <p className="done-note">✓ Marked as read</p>

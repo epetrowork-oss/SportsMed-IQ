@@ -14,6 +14,7 @@ const emptyUnit = () => ({
   bestQuizScore: null, // 0..1, best across attempts
   quizAttempts: 0,
   readSeconds: 0, // accumulated time on the lesson page while visible
+  scrollPct: 0, // deepest point of the lesson ever seen, 0-100
 })
 
 function load() {
@@ -66,6 +67,13 @@ export function addReadingTime(unitId, seconds) {
   updateUnit(unitId, { readSeconds: Math.round(current.readSeconds + seconds) })
 }
 
+// High-water mark of how far down the lesson the student has scrolled.
+export function recordScrollDepth(unitId, pct) {
+  const clamped = Math.min(100, Math.max(0, Math.round(pct)))
+  const current = getUnitProgress(unitId)
+  if (clamped > current.scrollPct) updateUnit(unitId, { scrollPct: clamped })
+}
+
 export function recordQuizResult(unitId, correct, total) {
   const score = total > 0 ? correct / total : 0
   const current = state.units[unitId] ?? emptyUnit()
@@ -100,6 +108,7 @@ export function mergeProgress(name, importedUnits) {
       quizAttempts: Math.max(cur.quizAttempts, imp.quizAttempts ?? 0),
       // Max, not sum: re-importing the same code twice must not double-count.
       readSeconds: Math.max(cur.readSeconds ?? 0, imp.readSeconds ?? 0),
+      scrollPct: Math.max(cur.scrollPct ?? 0, imp.scrollPct ?? 0),
     }
   }
   save({ name: state.name || name, units: merged })

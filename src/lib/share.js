@@ -28,6 +28,7 @@ export function encodeProgress(name, units) {
       bestQuizScore: p.bestQuizScore ?? null,
       quizAttempts: p.quizAttempts ?? 0,
       readSeconds: Math.round(p.readSeconds ?? 0),
+      scrollPct: Math.round(p.scrollPct ?? 0),
     }
   }
   return PREFIX + toBase64Url(JSON.stringify({ name, units: compactUnits, at: Date.now() }))
@@ -60,6 +61,10 @@ export function decodeProgressCode(code) {
       readSeconds:
         typeof p.readSeconds === 'number' && p.readSeconds > 0
           ? Math.round(Math.min(p.readSeconds, 60 * 60 * 24)) // sanity cap: one day
+          : 0,
+      scrollPct:
+        typeof p.scrollPct === 'number' && p.scrollPct > 0
+          ? Math.round(Math.min(p.scrollPct, 100))
           : 0,
     }
   }
