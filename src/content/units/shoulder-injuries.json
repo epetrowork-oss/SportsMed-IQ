@@ -1,0 +1,261 @@
+{
+  "id": "shoulder-injuries",
+  "title": "Shoulder Injuries",
+  "category": "Upper Extremity Injuries",
+  "summary": "The body's most mobile joint is also its least stable — tell a dislocation, a separated shoulder, and an overuse rotator cuff injury apart, and know what to do first.",
+  "minutes": 18,
+  "sections": [
+    {
+      "heading": "Anatomy: the most mobile, least stable joint",
+      "body": [
+        "The shoulder is really a group of joints working together, but the one to know is the glenohumeral joint — the ball-and-socket joint where the head of the humerus (upper arm bone) meets the glenoid, a shallow socket on the shoulder blade (scapula).",
+        "That shallow socket explains almost everything about how the shoulder gets hurt. It lets the arm rotate and reach in more directions than any other joint in the body — but a shallow socket means less bony support holding the ball in place. The shoulder trades stability for mobility, which is exactly why it's the joint most likely to come out of place."
+      ],
+      "list": [
+        "Rotator cuff (SITS muscles) — four muscles (supraspinatus, infraspinatus, teres minor, subscapularis) that wrap around the ball of the joint and work as a team to hold the humeral head centered in the socket during every arm motion. Think of the rotator cuff as a group — the joint's 'dynamic stabilizer' — rather than four muscles to memorize separately.",
+        "Labrum — a rim of cartilage around the glenoid that deepens the socket slightly and helps the ball stay seated.",
+        "AC joint (acromioclavicular joint) — a separate joint from the ball-and-socket, where the collarbone (clavicle) meets the tip of the shoulder blade (acromion). It has its own ligaments and its own common injury."
+      ]
+    },
+    {
+      "heading": "How shoulders get hurt: mechanisms",
+      "body": [
+        "Three mechanisms account for most shoulder injuries you'll see on the sideline."
+      ],
+      "list": [
+        "Fall onto an outstretched hand (FOOSH) — force travels up the arm and can drive the humeral head out of the socket. This is the same mechanism that causes many wrist and forearm fractures, covered in the Fractures & Dislocations unit.",
+        "Direct blow to the point of the shoulder — landing squarely on the tip of the shoulder (common in football, hockey, cycling, and wrestling) jams the collarbone against the shoulder blade and is the classic cause of an AC joint sprain.",
+        "Repetitive overhead load — the wind-up and follow-through of throwing, serving, and swimming strokes stresses the rotator cuff tendons thousands of times a season. This is an overuse mechanism, not a single moment of trauma (see the Overuse Injuries unit).",
+        "Arm forced into an overhead, rotated position — for example, an arm pinned overhead during a tackle, or a wrenching move in wrestling — can also force the ball out of the socket."
+      ]
+    },
+    {
+      "heading": "Shoulder dislocation and subluxation",
+      "body": [
+        "A dislocation happens when the ball of the joint (the humeral head) is forced completely out of the socket. A subluxation is a partial dislocation — the ball slips partly out and then slides back into place, often on its own. Both involve the same structures and mechanisms; a subluxation is simply less severe.",
+        "Roughly 95% of shoulder dislocations are anterior — the humeral head is pushed forward and down out of the front of the socket. This typically happens when the arm is forced into an overhead, rotated position, or from a FOOSH with the arm out to the side.",
+        "A dislocated shoulder usually looks and acts the part: the athlete holds the injured arm away from the body and supports it with the other hand, refuses to move it, and the shoulder may look 'squared off' — the normal rounded contour is lost because the ball is no longer sitting in the socket. Pain is severe with any attempted motion."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Never attempt to reduce a shoulder on the field",
+        "text": "A dislocated shoulder can look dramatic, and 'popping it back in' can look simple when a coach or teammate says they've done it before. Don't attempt it. Forcing the joint back into place without imaging risks tearing nearby nerves and blood vessels (including the axillary nerve, which wraps right around the joint) and can turn a dislocation into a fracture-dislocation. Support the arm in the position found, ice it, and refer immediately — reduction is a physician's job, every time, same as any other joint."
+      }
+    },
+    {
+      "heading": "AC joint sprain (\"separated shoulder\")",
+      "body": [
+        "A fall or blow directly onto the point of the shoulder — not the arm — sprains or tears the ligaments holding the AC joint together. This is often called a 'separated shoulder,' though the joint that's separated is the small AC joint, not the ball-and-socket joint of a true dislocation.",
+        "The key distinguishing feature: in an AC sprain, the ball of the joint stays properly seated in the socket, so the arm still looks and moves roughly normally at the shoulder itself. The obvious sign is a step-off or bump right at the top of the shoulder, where the end of the collarbone rides up because it's no longer tied down to the shoulder blade. Point tenderness sits directly over the AC joint, not deep in the joint or spread through the arm."
+      ],
+      "list": [
+        "Grade I — ligament sprain only, no visible deformity, tender right at the AC joint.",
+        "Grade II — partial tear, mild step-off deformity, more pain with arm movement.",
+        "Grade III — complete tear, obvious step-off ('bump') deformity, significant pain and weakness."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Dislocation or separation? Ask two questions",
+        "text": "Where's the pain — right at the tip of the shoulder (AC sprain), or deep in the joint with the arm held out and away from the body (dislocation)? Can the athlete let their arm hang naturally at their side, even if it hurts, or are they actively guarding it and refusing any motion (more typical of a true dislocation)? When it's unclear, treat it like the more serious injury and refer."
+      }
+    },
+    {
+      "heading": "Rotator cuff overuse injury",
+      "body": [
+        "Overhead athletes — swimmers, pitchers and other throwers, volleyball hitters and servers, tennis players — repeat the same overhead motion thousands of times a season. Repetitive load without enough recovery irritates the rotator cuff tendons, producing tendinopathy (see the Overuse Injuries unit) rather than a single traumatic tear.",
+        "Unlike a dislocation or an AC sprain, there's usually no single moment the athlete can point to — the pain builds gradually across practices and games."
+      ],
+      "list": [
+        "Painful arc — pain in the middle of the motion when lifting the arm overhead, easing again near full overhead reach.",
+        "Night pain — aching that disrupts sleep, especially when lying on the affected shoulder.",
+        "Weakness with overhead work — reaching, throwing, or serving feels weak or 'dead' compared to before.",
+        "Pain that builds with training load and doesn't fully settle with rest between sessions."
+      ]
+    },
+    {
+      "heading": "Immediate response",
+      "body": [
+        "Whatever the specific injury turns out to be, the on-field response is the same first few steps: protect, don't diagnose."
+      ],
+      "list": [
+        "Support the arm in the position the athlete is already holding it (position of comfort) — usually close to the body. Don't force it across the chest or try to straighten it.",
+        "Apply a sling or improvised support so the athlete isn't holding the arm's weight with muscle effort alone.",
+        "Ice over the area (never directly on skin) to limit swelling and pain.",
+        "Refer to the athletic trainer, team physician, or emergency care as appropriate — don't send the athlete back in to 'test it out.'"
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Red flags — refer now",
+        "text": "Any of these means the athlete needs medical evaluation before anything else happens: visible deformity, numbness or tingling anywhere down the arm or into the hand, a sudden 'dead arm' feeling after a hit, or any first-time shoulder dislocation. These findings can mean nerve or blood vessel involvement, or a joint that isn't stable enough to safely move."
+      }
+    },
+    {
+      "heading": "Return to play and prevention",
+      "body": [
+        "No athlete returns to practice or competition after a suspected dislocation, AC sprain, or significant rotator cuff injury without clearance from a physician, following the treating provider's plan. Only an exam — and often imaging — can confirm what was injured and whether the joint is stable enough to load again.",
+        "A first-time shoulder dislocation is a bigger deal in a teenager than many people assume: the recurrence risk — the chance the shoulder dislocates again — is high in young athletes, especially if they return to overhead or contact sports before the joint and surrounding muscles have been properly rehabbed. That's a key reason first-time dislocations get physician follow-up rather than 'just a sling and see.'",
+        "For overhead athletes, prevention centers on the rotator cuff and the muscles that control the shoulder blade: targeted strengthening, monitoring throwing/serving/swimming volume so load increases gradually (the same load-management principle from the Overuse Injuries unit), and addressing pain early instead of playing through a building ache."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Why is the shoulder more likely to dislocate than most other joints in the body?",
+      "choices": [
+        "It has a shallow socket that allows a wide range of motion but offers less bony stability",
+        "It has more bones than any other joint",
+        "It lacks muscles crossing the joint",
+        "It is not protected by any ligaments"
+      ],
+      "answerIndex": 0,
+      "explanation": "The glenoid socket is shallow, which is what gives the shoulder its huge range of motion — but that same shallowness means less bony support holding the ball in place, trading stability for mobility. The shoulder has plenty of muscles and ligaments; those aren't the issue."
+    },
+    {
+      "id": "q2",
+      "question": "What is the main job of the rotator cuff muscles (the SITS group)?",
+      "choices": [
+        "Move the shoulder blade along the rib cage",
+        "Hold the head of the humerus centered in the glenoid socket during arm motion",
+        "Connect the collarbone to the breastbone",
+        "Provide the primary power for overhead throwing"
+      ],
+      "answerIndex": 1,
+      "explanation": "The rotator cuff acts as the joint's dynamic stabilizer, keeping the ball centered in the shallow socket through every motion. Moving the shoulder blade and generating throwing power come mainly from larger muscles like the trapezius, serratus anterior, and deltoid/chest muscles."
+    },
+    {
+      "id": "q3",
+      "question": "During a tackle, a football player's arm is forced overhead and backward. He immediately grabs his arm with his other hand, holds it away from his body, and refuses to move it; the shoulder looks 'squared off' instead of its normal rounded contour. What is this most consistent with?",
+      "choices": [
+        "An AC joint sprain",
+        "A rotator cuff strain",
+        "An anterior shoulder dislocation",
+        "A simple shoulder contusion (bruise)"
+      ],
+      "answerIndex": 2,
+      "explanation": "Holding the arm away from the body, supporting it, refusing motion, and a squared-off contour are classic anterior dislocation signs. An AC sprain would leave the ball-and-socket joint looking and moving normally, and a rotator cuff strain or bruise wouldn't produce this dramatic deformity."
+    },
+    {
+      "id": "q4",
+      "question": "A teammate says he's popped a shoulder back into place before and offers to do it for the athlete in the scenario above. What should you do?",
+      "choices": [
+        "Let him try it since he has experience",
+        "Have the athlete try to move the arm through its full range to see if it pops back on its own",
+        "Pull gently on the arm yourself while a coach pushes on the shoulder blade",
+        "Support the arm in the position found, ice it, and refer for medical evaluation — never attempt reduction on the field"
+      ],
+      "answerIndex": 3,
+      "explanation": "Reducing a dislocated joint is a physician's job, regardless of who claims experience. Attempting it on the field risks damaging nearby nerves and blood vessels and can turn a dislocation into a fracture-dislocation. Support the arm as found and refer."
+    },
+    {
+      "id": "q5",
+      "question": "A cyclist crashes and lands directly on the point of her shoulder. She has a noticeable bump at the very top of her shoulder where the collarbone appears raised, but she can still let her arm hang normally at her side and rotate it somewhat, just with pain right at that bump. This presentation best fits:",
+      "choices": [
+        "An AC joint sprain ('separated shoulder')",
+        "An anterior shoulder dislocation",
+        "A rotator cuff tendinopathy",
+        "A clavicle stress fracture"
+      ],
+      "answerIndex": 0,
+      "explanation": "The ball staying seated (normal-looking, movable arm) plus a step-off bump right at the top of the shoulder is the signature of an AC sprain. A dislocation would show the arm held away and guarded, and tendinopathy builds gradually rather than from a single fall onto the point of the shoulder."
+    },
+    {
+      "id": "q6",
+      "question": "A club volleyball hitter has had shoulder pain that has slowly worsened over three weeks of practice. She reports pain in the middle of her range when reaching overhead, aching that wakes her at night, and feeling weak when hitting or serving. There's no single moment she can blame. This pattern best fits:",
+      "choices": [
+        "An acute anterior dislocation",
+        "A rotator cuff overuse injury (tendinopathy)",
+        "An AC joint sprain from a fall",
+        "A clavicle fracture"
+      ],
+      "answerIndex": 1,
+      "explanation": "A painful arc, night pain, overhead weakness, and gradual onset over weeks of overhead loading — with no single traumatic moment — describe rotator cuff overuse injury, not an acute dislocation, AC sprain, or fracture, all of which have a specific traumatic mechanism."
+    },
+    {
+      "id": "q7",
+      "question": "Which finding after a shoulder injury is a red flag that requires immediate referral rather than a 'wait and see' approach?",
+      "choices": [
+        "Mild soreness that improves within a day",
+        "Slight stiffness first thing in the morning",
+        "Numbness or tingling down the arm",
+        "Bruising that fades over about a week"
+      ],
+      "answerIndex": 2,
+      "explanation": "Numbness or tingling down the arm can signal nerve involvement and needs urgent evaluation. Mild soreness, morning stiffness, and fading bruising are typical, expected parts of recovery from a minor injury."
+    },
+    {
+      "id": "q8",
+      "question": "A 16-year-old suffers her first anterior shoulder dislocation. What's most important for her and her coach to understand about returning to sport?",
+      "choices": [
+        "Since it's a first-time injury, she can return as soon as the pain is gone",
+        "One dislocation means the joint is now permanently stable",
+        "Wearing a brace next season removes any need for rehab",
+        "Recurrence risk after a first dislocation is high in young athletes, so physician clearance and rehab should guide the return"
+      ],
+      "answerIndex": 3,
+      "explanation": "Young athletes have a notably high chance of a repeat dislocation after a first one, especially if they return before the joint and surrounding muscles are properly rehabbed. Pain resolving is not the same as the joint being stable, and a brace supports but doesn't replace rehab and physician clearance."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Glenohumeral joint",
+      "back": "The ball-and-socket shoulder joint: the humeral head meets the shallow glenoid socket of the scapula. Most mobile, least stable joint in the body."
+    },
+    {
+      "id": "f2",
+      "front": "Rotator cuff (SITS)",
+      "back": "Supraspinatus, infraspinatus, teres minor, subscapularis — four muscles that work as a group to hold the humeral head centered in the socket."
+    },
+    {
+      "id": "f3",
+      "front": "Labrum",
+      "back": "A rim of cartilage around the glenoid socket that deepens it slightly and helps the humeral head stay seated."
+    },
+    {
+      "id": "f4",
+      "front": "AC joint",
+      "back": "Acromioclavicular joint — where the collarbone (clavicle) meets the tip of the shoulder blade (acromion); separate from the ball-and-socket joint."
+    },
+    {
+      "id": "f5",
+      "front": "Subluxation vs. dislocation",
+      "back": "Subluxation = the ball partially slips out and returns on its own. Dislocation = the ball comes completely out of the socket."
+    },
+    {
+      "id": "f6",
+      "front": "Anterior shoulder dislocation",
+      "back": "About 95% of shoulder dislocations; the humeral head is pushed forward/down out of the socket, often from an overhead-rotated arm position or a FOOSH."
+    },
+    {
+      "id": "f7",
+      "front": "Signs of shoulder dislocation",
+      "back": "Arm held away from the body and supported by the other hand, refusal to move it, severe pain, and a 'squared-off' shoulder contour."
+    },
+    {
+      "id": "f8",
+      "front": "AC sprain ('separated shoulder')",
+      "back": "Ligament injury at the AC joint from a fall/blow onto the point of the shoulder. Ball stays seated in the socket; step-off bump appears at the AC joint."
+    },
+    {
+      "id": "f9",
+      "front": "AC sprain grades",
+      "back": "I: sprain, no deformity. II: partial tear, mild step-off. III: complete tear, obvious step-off deformity."
+    },
+    {
+      "id": "f10",
+      "front": "Painful arc",
+      "back": "Pain in the middle of the range when lifting the arm overhead, easing again near full reach — a classic rotator cuff overuse sign."
+    },
+    {
+      "id": "f11",
+      "front": "Never reduce a shoulder on the field",
+      "back": "Attempting to put a dislocated shoulder back into place yourself risks nerve/blood vessel damage. Support in position found, ice, and refer — reduction is a physician's job."
+    },
+    {
+      "id": "f12",
+      "front": "First-time dislocation in young athletes",
+      "back": "Carries a high risk of recurrence, especially with early return to overhead/contact sport. Physician clearance and rehab should guide return to play."
+    }
+  ]
+}
