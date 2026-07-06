@@ -1,0 +1,242 @@
+{
+  "id": "ankle-sprain",
+  "title": "Ankle Sprains",
+  "category": "Lower Extremity Injuries",
+  "summary": "Recognize, grade, and manage the most common athletic injury — and know when an ankle needs more than tape.",
+  "minutes": 20,
+  "sections": [
+    {
+      "heading": "Why ankle sprains matter",
+      "body": [
+        "Ankle sprains are the single most common injury in high school sports, accounting for roughly 15% of all athletic injuries. They happen in basketball, volleyball, soccer, football — any sport with running, jumping, or cutting.",
+        "A sprain is a stretch or tear of a ligament, the tissue that connects bone to bone and stabilizes a joint. (A strain, by contrast, involves muscle or tendon.) Most ankle sprains heal well, but a poorly managed sprain can lead to chronic instability and repeat injury, so good early care matters."
+      ]
+    },
+    {
+      "heading": "Anatomy review",
+      "body": [
+        "The ankle joint is formed by three bones: the tibia (shin bone), the fibula (the thinner bone on the outside of the lower leg), and the talus (the foot bone that sits between them). The bony bumps you can feel on each side of the ankle are the malleoli — the medial malleolus on the inside (tibia) and the lateral malleolus on the outside (fibula).",
+        "Ligaments hold these bones together. The ones you need to know:"
+      ],
+      "list": [
+        "Lateral (outside) ligaments — anterior talofibular ligament (ATFL), calcaneofibular ligament (CFL), and posterior talofibular ligament (PTFL). The ATFL is the weakest and the most commonly sprained ligament in the body.",
+        "Medial (inside) ligament — the deltoid ligament, a strong fan-shaped ligament that resists eversion. It is injured far less often.",
+        "Syndesmosis — the tissue binding the tibia and fibula together just above the ankle. Injury here is called a 'high ankle sprain' and heals slowly."
+      ]
+    },
+    {
+      "heading": "Mechanism of injury",
+      "body": [
+        "About 85% of ankle sprains are inversion sprains: the foot rolls inward (sole turns toward the midline), usually while plantarflexed (toes pointed down) — think landing on another player's foot after a rebound. This stretches the lateral ligaments, tearing the ATFL first, then the CFL if the force continues.",
+        "Eversion sprains (foot rolls outward) are rarer because the deltoid ligament is strong and the fibula physically blocks extreme eversion — but when they happen they are often more severe and can involve a fibula fracture.",
+        "High ankle (syndesmotic) sprains typically come from forced external rotation of a planted foot, common in football and skiing."
+      ]
+    },
+    {
+      "heading": "Grading sprains",
+      "body": [
+        "Sprains are graded by how much of the ligament is torn:"
+      ],
+      "list": [
+        "Grade I (mild) — ligament stretched, no significant tear. Mild swelling and tenderness, little or no bruising, athlete can usually bear weight. Return to play often 1–2 weeks.",
+        "Grade II (moderate) — partial tear. Obvious swelling and bruising, painful weight bearing, some joint laxity. Return commonly 3–6 weeks.",
+        "Grade III (severe) — complete rupture. Significant swelling, bruising, and instability; weight bearing is very painful or impossible. Needs physician management; recovery can take several months."
+      ]
+    },
+    {
+      "heading": "On-field evaluation",
+      "body": [
+        "Use the HOPS framework: History, Observation, Palpation, Special tests.",
+        "History: ask what happened ('Did the foot roll in or out?'), whether they heard or felt a pop, whether they could keep playing, and whether they've sprained this ankle before.",
+        "Observation: compare to the other ankle. Look for swelling, deformity, discoloration, and willingness to bear weight.",
+        "Palpation: feel gently for point tenderness — over the ATFL and CFL, both malleoli, the base of the 5th metatarsal, and the navicular. Bony tenderness raises concern for fracture.",
+        "Special tests are performed by the athletic trainer or physician — for example the anterior drawer test (ATFL laxity) and the talar tilt test (CFL). Students should know what these test, not perform them on injured athletes."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Ottawa Ankle Rules (know the idea)",
+        "text": "Clinicians use the Ottawa Ankle Rules to decide if an X-ray is needed: bony tenderness at the back edge or tip of either malleolus, tenderness at the base of the 5th metatarsal or navicular, or inability to take 4 steps both immediately and during evaluation. If any of these are present, the athlete needs imaging."
+      }
+    },
+    {
+      "heading": "Immediate care",
+      "body": [
+        "For a suspected uncomplicated sprain, begin PRICE for the first 24–72 hours: Protection, Rest, Ice, Compression, Elevation.",
+        "Ice for 15–20 minutes at a time (never directly on skin — use a thin towel), roughly every 2 hours while awake during the acute phase. Apply an elastic compression wrap distal-to-proximal (start at the toes, wrap up the leg) and elevate the ankle above heart level when possible.",
+        "Modern rehab starts early: after the acute phase, protected movement and progressive exercises (range of motion, strengthening, then balance work) produce better outcomes than long immobilization. Balance training — like single-leg stands on a wobble board — is the best-proven way to prevent re-sprains."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Red flags — stop and refer to a physician",
+        "text": "Refer immediately if you find: obvious deformity, bony point tenderness (malleoli, 5th metatarsal base, navicular), inability to bear weight for 4 steps, numbness or coldness in the foot, a felt/heard pop with rapid severe swelling, gross instability, or any suspicion of a high ankle sprain. When in doubt, refer out — students never diagnose or clear athletes to return."
+      }
+    },
+    {
+      "heading": "Return to play",
+      "body": [
+        "An athlete is ready to return only when cleared by the supervising professional and when they have: full pain-free range of motion, strength equal to the other side, no swelling, and the ability to complete sport-specific movements (sprinting, cutting, jumping, landing) without pain or limping.",
+        "Returning too early is the biggest risk factor for re-injury. Taping or bracing on return can reduce re-sprain risk, but it does not replace rehab."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Which ligament is injured most often in an ankle sprain?",
+      "choices": [
+        "Anterior talofibular ligament (ATFL)",
+        "Deltoid ligament",
+        "Calcaneofibular ligament (CFL)",
+        "Posterior talofibular ligament (PTFL)"
+      ],
+      "answerIndex": 0,
+      "explanation": "The ATFL is the weakest ankle ligament and the first stressed during an inversion sprain, making it the most commonly sprained ligament in the body."
+    },
+    {
+      "id": "q2",
+      "question": "A basketball player lands on another player's foot and her ankle rolls inward, sole turning toward the midline. What mechanism is this?",
+      "choices": [
+        "Inversion sprain",
+        "Eversion sprain",
+        "High ankle (syndesmotic) sprain",
+        "Achilles strain"
+      ],
+      "answerIndex": 0,
+      "explanation": "The foot rolling inward is inversion — the mechanism in about 85% of ankle sprains — and it stresses the lateral ligaments, ATFL first."
+    },
+    {
+      "id": "q3",
+      "question": "What does the 'C' in PRICE stand for, and how is it applied?",
+      "choices": [
+        "Compression — wrap from the toes upward toward the leg",
+        "Compression — wrap from the knee downward toward the toes",
+        "Circulation — massage the ankle to keep blood moving",
+        "Cold — apply ice directly to the skin"
+      ],
+      "answerIndex": 0,
+      "explanation": "Compression with an elastic wrap is applied distal-to-proximal (toes upward) to push swelling out of the foot. Ice always goes over a barrier, never bare skin."
+    },
+    {
+      "id": "q4",
+      "question": "An athlete cannot take four steps and is tender directly on the tip of the lateral malleolus. What should happen next?",
+      "choices": [
+        "Refer for X-ray — these findings meet the Ottawa Ankle Rules",
+        "Tape the ankle and return to play with a brace",
+        "Ice for 20 minutes and re-test walking",
+        "Perform an anterior drawer test yourself to rule out a tear"
+      ],
+      "answerIndex": 0,
+      "explanation": "Bony malleolar tenderness plus inability to bear weight for 4 steps are Ottawa Ankle Rules criteria — this athlete needs imaging to rule out a fracture."
+    },
+    {
+      "id": "q5",
+      "question": "Which finding best fits a Grade II sprain?",
+      "choices": [
+        "Partial ligament tear with obvious swelling, bruising, and painful weight bearing",
+        "Ligament stretched with mild swelling and full ability to play",
+        "Complete rupture with gross instability and inability to bear weight",
+        "Muscle tear in the calf with cramping"
+      ],
+      "answerIndex": 0,
+      "explanation": "Grade II is a partial tear: clear swelling and bruising, some laxity, and painful (but usually possible) weight bearing. Grade I is a stretch; Grade III is a complete rupture."
+    },
+    {
+      "id": "q6",
+      "question": "Why are eversion sprains much less common than inversion sprains?",
+      "choices": [
+        "The deltoid ligament is strong and the fibula blocks extreme eversion",
+        "The ATFL prevents the foot from rolling outward",
+        "Athletes only cut and jump toward the midline",
+        "The Achilles tendon locks the ankle in eversion"
+      ],
+      "answerIndex": 0,
+      "explanation": "The medial side is protected by the strong deltoid ligament, and the longer lateral malleolus (fibula) physically limits eversion — so eversion sprains are rare but often severe."
+    },
+    {
+      "id": "q7",
+      "question": "A high ankle sprain involves which structure?",
+      "choices": [
+        "The syndesmosis binding the tibia and fibula together",
+        "The deltoid ligament on the inside of the ankle",
+        "The plantar fascia under the foot",
+        "The patellar tendon"
+      ],
+      "answerIndex": 0,
+      "explanation": "High ankle sprains injure the syndesmosis above the ankle joint, usually from forced external rotation of a planted foot, and they take longer to heal than lateral sprains."
+    },
+    {
+      "id": "q8",
+      "question": "Which exercise type is best proven to prevent repeat ankle sprains during rehab?",
+      "choices": [
+        "Balance training, like single-leg stands on a wobble board",
+        "Long-term immobilization in a cast",
+        "Upper-body strength training",
+        "Static stretching only"
+      ],
+      "answerIndex": 0,
+      "explanation": "Balance (proprioceptive) training retrains the ankle's position sense and is the best-supported way to cut re-sprain risk. Long immobilization actually worsens outcomes for most sprains."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Sprain vs. strain",
+      "back": "Sprain = ligament (bone-to-bone) stretched or torn. Strain = muscle or tendon injured."
+    },
+    {
+      "id": "f2",
+      "front": "Most commonly sprained ligament in the body",
+      "back": "The anterior talofibular ligament (ATFL) — the weakest lateral ankle ligament, torn first in inversion sprains."
+    },
+    {
+      "id": "f3",
+      "front": "Three bones of the ankle joint",
+      "back": "Tibia, fibula, and talus. The medial malleolus is part of the tibia; the lateral malleolus is the end of the fibula."
+    },
+    {
+      "id": "f4",
+      "front": "Lateral ankle ligaments (outside)",
+      "back": "ATFL (anterior talofibular), CFL (calcaneofibular), PTFL (posterior talofibular) — stressed by inversion."
+    },
+    {
+      "id": "f5",
+      "front": "Medial ankle ligament (inside)",
+      "back": "The deltoid ligament — strong, fan-shaped, resists eversion; injured far less often."
+    },
+    {
+      "id": "f6",
+      "front": "Most common sprain mechanism",
+      "back": "Inversion (foot rolls inward, often plantarflexed) — about 85% of ankle sprains."
+    },
+    {
+      "id": "f7",
+      "front": "PRICE",
+      "back": "Protection, Rest, Ice, Compression, Elevation — acute care for the first 24–72 hours."
+    },
+    {
+      "id": "f8",
+      "front": "Ice application rules",
+      "back": "15–20 minutes at a time, about every 2 hours while awake, never directly on skin (use a thin towel barrier)."
+    },
+    {
+      "id": "f9",
+      "front": "Grade I / II / III sprain",
+      "back": "I = stretch (mild swelling, can play). II = partial tear (swelling, bruising, painful weight bearing). III = complete rupture (instability, refer to physician)."
+    },
+    {
+      "id": "f10",
+      "front": "High ankle sprain",
+      "back": "Injury to the syndesmosis between tibia and fibula, usually from external rotation of a planted foot. Heals slowly."
+    },
+    {
+      "id": "f11",
+      "front": "Ottawa Ankle Rules (when to X-ray)",
+      "back": "Bony tenderness at either malleolus, base of the 5th metatarsal, or navicular — or inability to bear weight for 4 steps."
+    },
+    {
+      "id": "f12",
+      "front": "HOPS evaluation framework",
+      "back": "History, Observation, Palpation, Special tests — the order for evaluating an acute injury."
+    }
+  ]
+}

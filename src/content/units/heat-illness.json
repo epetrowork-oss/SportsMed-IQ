@@ -1,0 +1,219 @@
+{
+  "id": "heat-illness",
+  "title": "Heat Illness",
+  "category": "Environmental Emergencies",
+  "summary": "Tell heat cramps, heat exhaustion, and heat stroke apart — and act fast, because exertional heat stroke is a race against the clock.",
+  "minutes": 20,
+  "sections": [
+    {
+      "heading": "Why heat illness matters",
+      "body": [
+        "Exertional heat stroke is one of the leading causes of sudden death in high school sports — and it is almost always survivable when recognized and cooled immediately. Most deaths happen in August football practices, but any sport in heat and humidity carries risk.",
+        "Heat illness is a spectrum: heat cramps → heat exhaustion → heat stroke. An athlete can also jump straight to heat stroke without warning stages, so treat the spectrum as a triage tool, not a guaranteed sequence."
+      ]
+    },
+    {
+      "heading": "How the body handles heat",
+      "body": [
+        "Working muscles generate enormous heat. The body sheds it mainly by sweating — evaporation is the primary cooling mechanism during exercise. High humidity cripples evaporation, which is why a humid 88°F day can be more dangerous than a dry 95°F day.",
+        "Risk factors: high heat and humidity, poor acclimatization (the first 1–2 weeks of practice are the danger window), dehydration, heavy equipment (football pads), large body mass, illness, and certain medications or supplements."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Wet bulb globe temperature (WBGT)",
+        "text": "Programs use WBGT — a combined measure of temperature, humidity, sun, and wind — to set practice modifications: shorter sessions, more rest breaks, shells instead of full pads, or cancellation. It is a better risk gauge than air temperature alone."
+      }
+    },
+    {
+      "heading": "Heat cramps",
+      "body": [
+        "Painful, involuntary muscle spasms — usually calves, quads, hamstrings, or abdomen — during or after intense exercise in heat, linked to fluid and sodium losses plus fatigue.",
+        "Care: stop activity, move to shade, stretch and massage the cramping muscle gently, and rehydrate with fluids containing sodium (sports drink). Cramps alone don't require emergency care, but they're a warning to back off."
+      ]
+    },
+    {
+      "heading": "Heat exhaustion",
+      "body": [
+        "The body is struggling but core temperature is typically below 104°F and — critically — the athlete's mental status is normal or only mildly off (fatigue, maybe mild dizziness).",
+        "Look for: heavy sweating, pale and clammy skin, weakness, headache, nausea or vomiting, dizziness, fainting on standing, and an elevated pulse.",
+        "Care: stop activity, move to a cool or shaded area, remove excess equipment and clothing, elevate the legs, cool with cold towels or fans, and give cool fluids if the athlete is alert and not vomiting. If they don't improve within about 30 minutes — or worsen at all — treat it as an emergency."
+      ]
+    },
+    {
+      "heading": "Heat stroke — a true emergency",
+      "body": [
+        "Exertional heat stroke = core body temperature above 104°F with central nervous system dysfunction: confusion, irrational or aggressive behavior, stumbling, slurred speech, collapse, seizure, or unconsciousness. The brain change is the giveaway — an athlete who is 'acting wrong' in the heat is heat stroke until proven otherwise.",
+        "A classic trap: skin may be wet OR dry. Athletes with exertional heat stroke are often still sweating heavily — do not rule it out because the skin is moist.",
+        "The definitive treatment is immediate whole-body cold water immersion: a tub of ice water, cooling the athlete as fast as possible. The guiding rule is 'cool first, transport second' — survival is excellent when cooling starts within 10 minutes, and every minute of delay above 104°F damages organs."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Suspected heat stroke — act now",
+        "text": "Call 911, get the athlete into a cold water immersion tub (or rotate ice-water-soaked towels over the whole body if no tub exists), remove equipment, and keep cooling until emergency medical services arrive or core temperature drops to about 102°F. Cool FIRST, transport SECOND. Never give fluids to a confused or unconscious athlete."
+      }
+    },
+    {
+      "heading": "Prevention",
+      "body": [
+        "Most heat deaths are preventable with boring, unglamorous policy:"
+      ],
+      "list": [
+        "Heat acclimatization: gradually ramp up practice length, intensity, and equipment over the first 1–2 weeks of the season.",
+        "Scheduled water breaks with unlimited access to fluids — thirst lags behind dehydration.",
+        "WBGT-based practice modifications and required rest-to-work ratios.",
+        "Weigh-ins before and after practice: losing more than 2% of body weight means the athlete started the next session already dehydrated.",
+        "An emergency action plan with a cold immersion tub filled and ready at every hot-weather practice."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "During August football practice, a lineman becomes confused and combative, then stumbles. His skin is soaked with sweat. What is your working assumption?",
+      "choices": [
+        "Exertional heat stroke — mental status change in the heat is the giveaway",
+        "Heat exhaustion — sweating rules out heat stroke",
+        "Heat cramps — he needs a sports drink",
+        "Normal fatigue from a hard practice"
+      ],
+      "answerIndex": 0,
+      "explanation": "Central nervous system dysfunction (confusion, aggression, stumbling) in a hot environment is heat stroke until proven otherwise — and skin can be wet or dry. Sweating does NOT rule it out."
+    },
+    {
+      "id": "q2",
+      "question": "What is the definitive first treatment for exertional heat stroke?",
+      "choices": [
+        "Immediate cold water immersion — cool first, transport second",
+        "Drive the athlete to the hospital immediately without cooling",
+        "Give large amounts of cold water to drink",
+        "Wrap the athlete in blankets to prevent shivering"
+      ],
+      "answerIndex": 0,
+      "explanation": "Rapid whole-body cooling, ideally ice-water immersion, is what saves lives. Survival is excellent when cooling starts within 10 minutes — transporting before cooling wastes that window."
+    },
+    {
+      "id": "q3",
+      "question": "Which finding best separates heat stroke from heat exhaustion?",
+      "choices": [
+        "Altered mental status (confusion, irrational behavior)",
+        "Heavy sweating",
+        "Muscle cramps",
+        "Feeling thirsty"
+      ],
+      "answerIndex": 0,
+      "explanation": "Heat exhaustion leaves thinking essentially intact; heat stroke means core temperature above 104°F with brain dysfunction. Sweating occurs in both."
+    },
+    {
+      "id": "q4",
+      "question": "Why is a humid day more dangerous than a hotter but dry day?",
+      "choices": [
+        "Humidity blocks sweat evaporation, the body's main cooling mechanism during exercise",
+        "Humidity makes the air heavier to breathe",
+        "Humid air contains less oxygen",
+        "It isn't — only air temperature matters"
+      ],
+      "answerIndex": 0,
+      "explanation": "Evaporation of sweat is the primary way an exercising body sheds heat. High humidity prevents evaporation, so heat builds even at lower air temperatures — this is why WBGT beats plain temperature as a risk measure."
+    },
+    {
+      "id": "q5",
+      "question": "An athlete has painful calf spasms during a hot practice but is thinking clearly. Appropriate care?",
+      "choices": [
+        "Stop activity, shade, gentle stretching, and fluids with sodium",
+        "Call 911 and start ice water immersion",
+        "Have him sprint it out to loosen the muscle",
+        "Give plain water only — never sports drinks"
+      ],
+      "answerIndex": 0,
+      "explanation": "These are heat cramps: rest, shade, gentle stretch/massage, and sodium-containing fluids. Not an emergency, but a warning sign to reduce load."
+    },
+    {
+      "id": "q6",
+      "question": "When is the highest-risk window for heat illness in a season?",
+      "choices": [
+        "The first 1–2 weeks of practice, before athletes are acclimatized",
+        "Mid-season, when athletes are strongest",
+        "Playoffs, due to pressure",
+        "Winter conditioning"
+      ],
+      "answerIndex": 0,
+      "explanation": "Acclimatization — the body's adaptation to exercising in heat — takes about 1–2 weeks. Most heat stroke deaths occur in early-season practices, which is why acclimatization policies ramp up gradually."
+    },
+    {
+      "id": "q7",
+      "question": "A heat-exhausted athlete is alert and not vomiting. Which care step is WRONG?",
+      "choices": [
+        "Leave equipment and pads on to save time",
+        "Move her to shade and elevate her legs",
+        "Cool her with cold, wet towels",
+        "Give cool fluids to drink"
+      ],
+      "answerIndex": 0,
+      "explanation": "Excess equipment and clothing trap heat and must come off. Shade, leg elevation, active cooling, and fluids (if alert) are all correct."
+    },
+    {
+      "id": "q8",
+      "question": "Post-practice weigh-ins show an athlete lost 3% of body weight. What does this mean?",
+      "choices": [
+        "He's significantly dehydrated and must rehydrate before the next session",
+        "He's in great shape — weight loss means good conditioning",
+        "Nothing — daily weight swings are random",
+        "He should restrict fluids to toughen up"
+      ],
+      "answerIndex": 0,
+      "explanation": "Losing more than 2% of body weight in a session is meaningful dehydration, which raises heat illness risk and hurts performance. He needs to restore fluids before practicing again."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Heat illness spectrum",
+      "back": "Heat cramps → heat exhaustion → heat stroke. But athletes can go straight to heat stroke — use it for triage, not as a guaranteed sequence."
+    },
+    {
+      "id": "f2",
+      "front": "Body's main cooling mechanism during exercise",
+      "back": "Evaporation of sweat — which is why high humidity (blocked evaporation) is so dangerous."
+    },
+    {
+      "id": "f3",
+      "front": "WBGT",
+      "back": "Wet bulb globe temperature — combines heat, humidity, sun, and wind to guide practice modifications. Better risk measure than air temperature."
+    },
+    {
+      "id": "f4",
+      "front": "Heat cramps: care",
+      "back": "Stop activity, shade, gentle stretch and massage, fluids with sodium (sports drink)."
+    },
+    {
+      "id": "f5",
+      "front": "Heat exhaustion: key features",
+      "back": "Heavy sweating, pale/clammy skin, weakness, nausea, dizziness — with essentially NORMAL mental status. Core temp typically under 104°F."
+    },
+    {
+      "id": "f6",
+      "front": "Heat stroke: definition",
+      "back": "Core temperature above 104°F WITH central nervous system dysfunction — confusion, irrational behavior, stumbling, seizure, collapse."
+    },
+    {
+      "id": "f7",
+      "front": "Can a heat stroke victim still be sweating?",
+      "back": "Yes — exertional heat stroke athletes often have wet skin. Never rule out heat stroke because they're sweating."
+    },
+    {
+      "id": "f8",
+      "front": "Heat stroke treatment rule",
+      "back": "Cool FIRST, transport SECOND: call 911 and start immediate cold water immersion; keep cooling until EMS arrives or core temp ~102°F."
+    },
+    {
+      "id": "f9",
+      "front": "Acclimatization",
+      "back": "The body's 1–2 week adaptation to exercising in heat. Early-season practices before acclimatization are the highest-risk window."
+    },
+    {
+      "id": "f10",
+      "front": "Dehydration check with weigh-ins",
+      "back": "Losing more than 2% of body weight during a session = significant dehydration; rehydrate before the next practice."
+    }
+  ]
+}

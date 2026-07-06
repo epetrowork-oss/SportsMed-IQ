@@ -1,0 +1,222 @@
+{
+  "id": "overuse-injuries",
+  "title": "Overuse Injuries",
+  "category": "Muscle & Soft Tissue",
+  "summary": "Shin splints, tendinopathy, and stress fractures: injuries that build up from training load, and the warning signs that separate soreness from damage.",
+  "minutes": 18,
+  "sections": [
+    {
+      "heading": "Acute vs. overuse",
+      "body": [
+        "Acute injuries have a moment: a tackle, a landing, a pop. Overuse injuries have a trend: tissue breaking down faster than it can repair, across weeks of repetitive load. No single 'play' caused it — the training pattern did.",
+        "The classic setup is doing too much, too soon, too fast: a sudden jump in mileage, intensity, or frequency; a new surface (track to road, grass to turf); worn-out or changed footwear; or a young multi-sport athlete with no rest days. Most overuse injuries trace back to a load spike in the previous 2–4 weeks — always ask 'what changed in training?'"
+      ]
+    },
+    {
+      "heading": "The pain progression — your triage tool",
+      "body": [
+        "Overuse injuries typically announce themselves in stages, and the stage tells you how urgent it is:"
+      ],
+      "list": [
+        "Stage 1: pain after activity only — a warning.",
+        "Stage 2: pain during activity that doesn't limit performance — time to modify training.",
+        "Stage 3: pain during activity that DOES limit performance — needs intervention and load reduction now.",
+        "Stage 4: pain with daily life or at rest/night — stop and refer; this is where stress fractures live."
+      ]
+    },
+    {
+      "heading": "Shin splints (medial tibial stress syndrome)",
+      "body": [
+        "Diffuse aching pain along the inner (medial) border of the tibia, brought on by running and jumping — the most common overuse complaint in runners and court-sport athletes, especially early in a season.",
+        "The key exam distinction: shin splints hurt over a DIFFUSE area (several centimeters of the inner shin) and usually ease as the athlete warms up. A stress fracture hurts at a PINPOINT spot, gets worse through activity, and may ache at night or with hopping on one leg.",
+        "Care: reduce running load (relative rest — bike and pool work keep fitness), ice after activity, address footwear and training errors, and strengthen the calf and foot. Pushing through worsening shin pain is how shin splints graduate into stress fractures."
+      ]
+    },
+    {
+      "heading": "Tendinopathy",
+      "body": [
+        "Tendons hate sudden change. Repetitive loading beyond capacity produces a painful, degenerated tendon — patellar tendon ('jumper's knee'), Achilles, rotator cuff, and the elbow's extensor origin ('tennis elbow') are the classics.",
+        "Typical story: stiffness and pain at the start of activity that 'warms up' and fades, then returns worse afterward. Tenderness sits directly on the tendon, and loading it (jumping, heel raises, gripping) reproduces the pain.",
+        "Modern care is load management, not total rest: reduce the aggravating load, then rebuild tendon capacity with progressive strengthening — heavy, slow resistance and eccentric work are the evidence-backed core. Complete rest weakens the tendon further; cortisone injections into major tendons are avoided because they weaken tendon tissue and risk rupture."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Sever's and Osgood-Schlatter — growth plate cousins",
+        "text": "In growing athletes, traction on immature growth plates produces heel pain (Sever's disease) and pain over the bump below the kneecap (Osgood-Schlatter disease). Both are activity-related, usually self-limited with load management, and resolve when growth finishes — but they deserve evaluation, not 'toughing out.'"
+      }
+    },
+    {
+      "heading": "Stress fractures",
+      "body": [
+        "A stress fracture is bone failing from repetitive load — microdamage accumulating faster than bone can remodel. Most common in the tibia, the metatarsals, and (dangerously) the navicular and femoral neck.",
+        "Suspect one when: pain is at a pinpoint spot on bone, worsens during activity, persists after, hurts with hopping on that leg, or aches at night. X-rays are often normal for the first 2–3 weeks; MRI or bone scan confirms earlier.",
+        "Treatment is genuine rest from impact (often 6–8 weeks), sometimes a boot or crutches, with a gradual, supervised return. Certain sites (navicular, femoral neck, anterior tibia) are high-risk for going on to complete fracture and need urgent physician management."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Refer — and screen deeper",
+        "text": "Pinpoint bone pain, night pain, pain with hopping, or a limp that persists → physician referral. In any athlete with recurrent stress fractures — especially female athletes with menstrual changes or restricted eating — screen for Relative Energy Deficiency in Sport (RED-S, historically the 'female athlete triad'): low energy availability, menstrual dysfunction, and low bone density. That's a medical and nutritional problem, not a training problem."
+      }
+    },
+    {
+      "heading": "Prevention: manage the load",
+      "list": [
+        "Increase training gradually — the old '10% per week' rule is a reasonable guardrail for mileage and volume.",
+        "Schedule rest: at least 1–2 rest days per week and an off-season; year-round single-sport specialization is a major overuse driver in youth athletes.",
+        "Replace running shoes before they're dead (roughly 300–500 miles).",
+        "Strength train — stronger muscles and tendons absorb load that otherwise reaches bone.",
+        "Treat pain as data: soreness that resolves by the next day is training; pain that progresses along the stages above is an injury announcing itself."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What most reliably separates a tibial stress fracture from shin splints?",
+      "choices": [
+        "Pinpoint bone tenderness that worsens through activity vs. diffuse inner-shin ache that eases with warm-up",
+        "Stress fractures only happen to sprinters",
+        "Shin splints hurt at night; stress fractures never do",
+        "The color of the bruising"
+      ],
+      "answerIndex": 0,
+      "explanation": "Location and pattern: stress fracture = focal pinpoint pain, worse as activity continues, possible night pain and pain on hopping. Shin splints = diffuse medial tibial ache that often eases once warm."
+    },
+    {
+      "id": "q2",
+      "question": "A cross-country runner doubled her weekly mileage two weeks ago and now has worsening shin pain. What's the most important first question in your history?",
+      "choices": [
+        "What changed in training recently? — load spikes drive overuse injuries",
+        "What's her favorite race distance?",
+        "Did she hear a pop?",
+        "Has she iced it yet?"
+      ],
+      "answerIndex": 0,
+      "explanation": "Overuse injuries almost always trace to a recent change: mileage jump, new surface, new shoes, no rest days. The training history IS the diagnosis for mechanism."
+    },
+    {
+      "id": "q3",
+      "question": "An athlete has knee pain only AFTER practice, not during. What stage of the overuse progression is this, and what does it mean?",
+      "choices": [
+        "Stage 1 — an early warning to examine training load before it progresses",
+        "Stage 4 — stop all activity and refer immediately",
+        "Not an overuse pattern at all",
+        "Normal, and safe to ignore indefinitely"
+      ],
+      "answerIndex": 0,
+      "explanation": "Pain after activity only is the earliest stage — the cheap time to fix load, shoes, and mechanics before pain starts limiting performance."
+    },
+    {
+      "id": "q4",
+      "question": "Why is complete rest the WRONG long-term plan for patellar tendinopathy?",
+      "choices": [
+        "Unloaded tendons weaken further; capacity is rebuilt with progressive strengthening",
+        "Rest is illegal under athletic rules",
+        "Tendons heal in 24 hours anyway",
+        "Because cortisone injections work faster"
+      ],
+      "answerIndex": 0,
+      "explanation": "Tendon care is load MANAGEMENT: cut the aggravating load, then rebuild with heavy, slow, progressive loading. Total rest deconditions the tendon, and cortisone into major tendons risks rupture."
+    },
+    {
+      "id": "q5",
+      "question": "A 13-year-old basketball player has pain and a tender bump just below his kneecap that flares with jumping. Most likely?",
+      "choices": [
+        "Osgood-Schlatter disease — growth plate traction at the tibial tubercle",
+        "A torn ACL",
+        "A femur stress fracture",
+        "Gout"
+      ],
+      "answerIndex": 0,
+      "explanation": "Activity-related pain at the tibial tubercle in a growing athlete is classic Osgood-Schlatter — usually managed with load modification and resolves with growth, but deserves evaluation."
+    },
+    {
+      "id": "q6",
+      "question": "Which finding should push you to suspect a stress fracture even though last week's X-ray was 'normal'?",
+      "choices": [
+        "Pinpoint bone pain with hopping and aching at night — X-rays are often normal for 2–3 weeks",
+        "A normal X-ray rules out stress fracture permanently",
+        "Diffuse soreness in both legs after a hard workout",
+        "Pain that disappears with warm-up"
+      ],
+      "answerIndex": 0,
+      "explanation": "Early stress fractures usually don't show on X-ray; the clinical pattern (focal pain, hop pain, night ache) matters more, and MRI/bone scan confirms earlier."
+    },
+    {
+      "id": "q7",
+      "question": "A female distance runner has her second stress fracture this year and mentions her periods stopped months ago. Beyond treating the bone, what must happen?",
+      "choices": [
+        "Screening for RED-S / low energy availability with medical and nutrition professionals",
+        "Nothing — irregular periods are normal in all athletes",
+        "Double her calcium and keep training",
+        "Switch her to morning practices"
+      ],
+      "answerIndex": 0,
+      "explanation": "Recurrent stress fractures plus menstrual dysfunction point to Relative Energy Deficiency in Sport — an energy availability and bone health problem needing medical/nutritional care, not just fracture rest."
+    },
+    {
+      "id": "q8",
+      "question": "Which change does the MOST to prevent overuse injuries in a youth athlete's year?",
+      "choices": [
+        "Scheduled rest: 1–2 rest days weekly and a true off-season instead of year-round one sport",
+        "Stretching for 5 extra minutes",
+        "New insoles every month",
+        "Icing after every practice regardless of pain"
+      ],
+      "answerIndex": 0,
+      "explanation": "Load without recovery is the disease; rest days and an off-season (avoiding year-round single-sport specialization) attack the root cause. The other options are minor tweaks."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Acute vs. overuse injury",
+      "back": "Acute = one moment of trauma (tackle, landing). Overuse = tissue breaking down over weeks of repetitive load exceeding repair."
+    },
+    {
+      "id": "f2",
+      "front": "Four-stage overuse pain progression",
+      "back": "1: pain after activity. 2: pain during, not limiting. 3: pain during, limiting performance. 4: pain with daily life/rest — stop and refer."
+    },
+    {
+      "id": "f3",
+      "front": "Shin splints (MTSS) pattern",
+      "back": "Diffuse ache along the inner tibia, eases with warm-up, driven by running/jumping load spikes. Care: relative rest, ice, fix shoes/training, strengthen calf."
+    },
+    {
+      "id": "f4",
+      "front": "Stress fracture warning pattern",
+      "back": "PINPOINT bone pain, worse through activity, pain hopping on one leg, night ache. X-rays often normal first 2–3 weeks."
+    },
+    {
+      "id": "f5",
+      "front": "High-risk stress fracture sites",
+      "back": "Navicular, femoral neck, anterior tibia — risk progressing to complete fracture; urgent physician management."
+    },
+    {
+      "id": "f6",
+      "front": "Tendinopathy story",
+      "back": "Stiff/painful at start, warms up during, worse after; tender directly on the tendon. Classics: patellar (jumper's knee), Achilles, rotator cuff, tennis elbow."
+    },
+    {
+      "id": "f7",
+      "front": "Tendinopathy treatment principle",
+      "back": "Load management + progressive strengthening (heavy slow resistance, eccentrics). NOT total rest; avoid cortisone into major tendons (rupture risk)."
+    },
+    {
+      "id": "f8",
+      "front": "Sever's vs. Osgood-Schlatter",
+      "back": "Growth-plate traction injuries in growing athletes: Sever's = heel; Osgood-Schlatter = tibial tubercle below the kneecap. Load management; resolve with growth."
+    },
+    {
+      "id": "f9",
+      "front": "RED-S (Relative Energy Deficiency in Sport)",
+      "back": "Low energy availability → menstrual dysfunction + low bone density (among other effects). Suspect with recurrent stress fractures; needs medical + nutrition care."
+    },
+    {
+      "id": "f10",
+      "front": "Overuse prevention levers",
+      "back": "Gradual load increases (~10%/week), 1–2 rest days weekly, true off-season, fresh shoes (300–500 mi), strength training, treat progressing pain as data."
+    }
+  ]
+}
