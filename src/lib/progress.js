@@ -13,6 +13,7 @@ const emptyUnit = () => ({
   flashcardsReviewed: false,
   bestQuizScore: null, // 0..1, best across attempts
   quizAttempts: 0,
+  readSeconds: 0, // accumulated time on the lesson page while visible
 })
 
 function load() {
@@ -57,6 +58,14 @@ export function markFlashcardsReviewed(unitId) {
   updateUnit(unitId, { flashcardsReviewed: true })
 }
 
+// Called periodically by the lesson page while it is open and visible.
+// Deltas are capped by the caller; stored as whole seconds.
+export function addReadingTime(unitId, seconds) {
+  if (!(seconds > 0)) return
+  const current = getUnitProgress(unitId)
+  updateUnit(unitId, { readSeconds: Math.round(current.readSeconds + seconds) })
+}
+
 export function recordQuizResult(unitId, correct, total) {
   const score = total > 0 ? correct / total : 0
   const current = state.units[unitId] ?? emptyUnit()
@@ -89,6 +98,8 @@ export function mergeProgress(name, importedUnits) {
           ? null
           : Math.max(cur.bestQuizScore ?? 0, imp.bestQuizScore ?? 0),
       quizAttempts: Math.max(cur.quizAttempts, imp.quizAttempts ?? 0),
+      // Max, not sum: re-importing the same code twice must not double-count.
+      readSeconds: Math.max(cur.readSeconds ?? 0, imp.readSeconds ?? 0),
     }
   }
   save({ name: state.name || name, units: merged })
@@ -97,7 +108,9 @@ export function mergeProgress(name, importedUnits) {
 // --- reads ---
 
 export function getUnitProgress(unitId) {
-  return state.units[unitId] ?? emptyUnit()
+  // Spread over defaults so records saved by older app versions
+  // (before readSeconds existed) still have every field.
+  return { ...emptyUnit(), ...(state.units[unitId] ?? {}) }
 }
 
 export function isUnitComplete(unitId) {

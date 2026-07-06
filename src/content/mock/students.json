@@ -1,50 +1,50 @@
 {
-  "note": "Mock roster used by the teacher dashboard until real accounts exist. Shape per student: progress[unitId] = { lessonRead, flashcardsReviewed, bestQuizScore (0-1 or null), quizAttempts }.",
+  "note": "Mock roster shown on the teacher dashboard until a real student is added by code. Shape per student: progress[unitId] = { lessonRead, flashcardsReviewed, bestQuizScore (0-1 or null), quizAttempts, readSeconds }.",
   "students": [
     {
       "id": "s1",
       "name": "Avery Johnson",
       "progress": {
-        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 1.0, "quizAttempts": 1 },
-        "concussion": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 0.875, "quizAttempts": 1 },
-        "heat-illness": { "lessonRead": true, "flashcardsReviewed": false, "bestQuizScore": null, "quizAttempts": 0 }
+        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 1.0, "quizAttempts": 1, "readSeconds": 1290 },
+        "concussion": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 0.875, "quizAttempts": 1, "readSeconds": 1545 },
+        "heat-illness": { "lessonRead": true, "flashcardsReviewed": false, "bestQuizScore": null, "quizAttempts": 0, "readSeconds": 680 }
       }
     },
     {
       "id": "s2",
       "name": "Marcus Lee",
       "progress": {
-        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": false, "bestQuizScore": 0.875, "quizAttempts": 2 },
-        "concussion": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 0.75, "quizAttempts": 2 }
+        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": false, "bestQuizScore": 0.875, "quizAttempts": 2, "readSeconds": 45 },
+        "concussion": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 0.75, "quizAttempts": 2, "readSeconds": 905 }
       }
     },
     {
       "id": "s3",
       "name": "Priya Natarajan",
       "progress": {
-        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 0.625, "quizAttempts": 1 },
-        "knee-acl": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 1.0, "quizAttempts": 1 }
+        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 0.625, "quizAttempts": 1, "readSeconds": 1130 },
+        "knee-acl": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 1.0, "quizAttempts": 1, "readSeconds": 1260 }
       }
     },
     {
       "id": "s4",
       "name": "Diego Ramirez",
       "progress": {
-        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 0.75, "quizAttempts": 3 }
+        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 0.75, "quizAttempts": 3, "readSeconds": 985 }
       }
     },
     {
       "id": "s5",
       "name": "Emma Kowalski",
       "progress": {
-        "ankle-sprain": { "lessonRead": false, "flashcardsReviewed": false, "bestQuizScore": null, "quizAttempts": 0 }
+        "ankle-sprain": { "lessonRead": false, "flashcardsReviewed": false, "bestQuizScore": null, "quizAttempts": 0, "readSeconds": 0 }
       }
     },
     {
       "id": "s6",
       "name": "Jordan Whitfield",
       "progress": {
-        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": false, "bestQuizScore": null, "quizAttempts": 0 }
+        "ankle-sprain": { "lessonRead": false, "flashcardsReviewed": false, "bestQuizScore": null, "quizAttempts": 0, "readSeconds": 420 }
       }
     }
   ]

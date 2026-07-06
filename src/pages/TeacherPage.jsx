@@ -14,19 +14,48 @@ function isComplete(p) {
   )
 }
 
+// A lesson marked read with under 2 minutes on the page gets flagged —
+// that's the "clicked through without reading" signal.
+const LOW_READ_SECONDS = 120
+
+function readLabel(seconds) {
+  if (!seconds || seconds < 60) return seconds > 0 ? '<1m' : null
+  return `${Math.round(seconds / 60)}m`
+}
+
 function StatusCell({ progress }) {
+  const readSeconds = progress?.readSeconds ?? 0
+  const time = readLabel(readSeconds)
+  const clickedThrough = !!progress?.lessonRead && readSeconds < LOW_READ_SECONDS
+  const flagTitle = clickedThrough
+    ? 'Marked read with under 2 minutes on the lesson page'
+    : undefined
+
   if (isComplete(progress)) {
-    return <td className="cell-done">✓ Complete</td>
+    return (
+      <td className={clickedThrough ? 'cell-done cell-flag' : 'cell-done'} title={flagTitle}>
+        ✓ Complete{time ? ` · ${time} read` : ''}
+        {clickedThrough ? ' ⚠' : ''}
+      </td>
+    )
   }
-  if (!progress || (!progress.lessonRead && !progress.quizAttempts && !progress.flashcardsReviewed)) {
+  if (
+    !progress ||
+    (!progress.lessonRead && !progress.quizAttempts && !progress.flashcardsReviewed && !readSeconds)
+  ) {
     return <td className="cell-progress">Not started</td>
   }
   const parts = []
-  if (progress.lessonRead) parts.push('read')
+  if (progress.lessonRead) parts.push(`read ${time ?? '<1m'}${clickedThrough ? ' ⚠' : ''}`)
+  else if (time) parts.push(`${time} reading`)
   if (progress.bestQuizScore != null)
     parts.push(`quiz ${Math.round(progress.bestQuizScore * 100)}%`)
   if (progress.flashcardsReviewed) parts.push('cards')
-  return <td className="cell-progress">{parts.join(' · ') || 'Started'}</td>
+  return (
+    <td className={clickedThrough ? 'cell-progress cell-flag' : 'cell-progress'} title={flagTitle}>
+      {parts.join(' · ') || 'Started'}
+    </td>
+  )
 }
 
 function AddStudentForm() {
@@ -109,7 +138,9 @@ export default function TeacherPage() {
       <h1>Teacher dashboard</h1>
       <p className="empty-note">
         A unit is complete when the lesson is read, the flashcards are reviewed, and the best
-        quiz score is at least {Math.round(PASS_THRESHOLD * 100)}%.
+        quiz score is at least {Math.round(PASS_THRESHOLD * 100)}%. Each cell shows time spent
+        on the lesson page; a ⚠ means the lesson was marked read with under 2 minutes of
+        reading time.
         {usingMock &&
           ' Showing sample students — add a real student below and the samples disappear.'}
       </p>

@@ -1,12 +1,52 @@
+import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getUnit } from '../content/index.js'
 import {
   useProgress,
   getUnitProgress,
   markLessonRead,
+  addReadingTime,
   PASS_THRESHOLD,
 } from '../lib/progress.js'
 import NotFoundPage from './NotFoundPage.jsx'
+
+// Accumulate reading time while the lesson is open AND the tab is visible.
+// Each delta is capped so a laptop waking from sleep can't credit hours.
+const FLUSH_MS = 5000
+const MAX_DELTA_S = 30
+
+function useReadingTimer(unitId) {
+  useEffect(() => {
+    if (!unitId) return
+    let last = Date.now()
+    const credit = () => {
+      const now = Date.now()
+      addReadingTime(unitId, Math.min((now - last) / 1000, MAX_DELTA_S))
+      last = now
+    }
+    const tick = () => {
+      if (document.visibilityState === 'visible') credit()
+      else last = Date.now()
+    }
+    const onVisibility = () => {
+      // Tab just hid: bank the visible time up to this moment.
+      if (document.visibilityState === 'hidden') credit()
+      else last = Date.now()
+    }
+    const interval = setInterval(tick, FLUSH_MS)
+    document.addEventListener('visibilitychange', onVisibility)
+    return () => {
+      if (document.visibilityState === 'visible') credit()
+      clearInterval(interval)
+      document.removeEventListener('visibilitychange', onVisibility)
+    }
+  }, [unitId])
+}
+
+export function formatReadTime(seconds) {
+  if (!seconds || seconds < 60) return seconds > 0 ? 'under 1 min' : null
+  return `${Math.round(seconds / 60)} min`
+}
 
 function Callout({ callout }) {
   return (
@@ -21,6 +61,7 @@ export default function UnitPage() {
   const { unitId } = useParams()
   useProgress()
   const unit = getUnit(unitId)
+  useReadingTimer(unit ? unit.id : null)
   if (!unit) return <NotFoundPage />
 
   const p = getUnitProgress(unit.id)
@@ -65,6 +106,9 @@ export default function UnitPage() {
       </article>
 
       <div className="lesson-footer">
+        {formatReadTime(p.readSeconds) && (
+          <p className="read-time-note">Reading time: {formatReadTime(p.readSeconds)}</p>
+        )}
         {p.lessonRead ? (
           <p className="done-note">✓ Marked as read</p>
         ) : (

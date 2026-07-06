@@ -27,6 +27,7 @@ export function encodeProgress(name, units) {
       flashcardsReviewed: !!p.flashcardsReviewed,
       bestQuizScore: p.bestQuizScore ?? null,
       quizAttempts: p.quizAttempts ?? 0,
+      readSeconds: Math.round(p.readSeconds ?? 0),
     }
   }
   return PREFIX + toBase64Url(JSON.stringify({ name, units: compactUnits, at: Date.now() }))
@@ -56,6 +57,10 @@ export function decodeProgressCode(code) {
       flashcardsReviewed: !!p.flashcardsReviewed,
       bestQuizScore: score == null ? null : Math.min(1, Math.max(0, score)),
       quizAttempts: Number.isInteger(p.quizAttempts) && p.quizAttempts > 0 ? p.quizAttempts : 0,
+      readSeconds:
+        typeof p.readSeconds === 'number' && p.readSeconds > 0
+          ? Math.round(Math.min(p.readSeconds, 60 * 60 * 24)) // sanity cap: one day
+          : 0,
     }
   }
   return { name: data.name.trim().slice(0, 60), units, at: data.at ?? null }

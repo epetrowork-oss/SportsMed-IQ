@@ -426,6 +426,17 @@ th {
   color: var(--ink-soft);
 }
 
+.cell-flag {
+  color: #a05a00;
+  background: var(--amber-bg);
+}
+
+.read-time-note {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
 .remove-button {
   background: none;
   border: none;

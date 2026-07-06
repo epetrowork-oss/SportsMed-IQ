@@ -28,7 +28,10 @@ localStorage.
 - `src/lib/progress.js` — the one piece of app state: a plain object persisted
   to localStorage, exposed to React via `useSyncExternalStore`. A unit counts
   as complete when the lesson is read, flashcards reviewed, and best quiz
-  score ≥ 70%.
+  score ≥ 70%. Lesson pages also accumulate reading time (only while the tab
+  is visible); the teacher dashboard shows it per cell and flags lessons
+  marked read with under 2 minutes on the page — so "read" can't be faked by
+  clicking through.
 - `src/pages/` — unit list, lesson, quiz (choice order shuffled per attempt),
   flashcards, teacher dashboard.
 - `src/lib/share.js` + `src/pages/SyncPage.jsx` — cross-device sync without a
