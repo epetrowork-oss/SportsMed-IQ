@@ -66,24 +66,24 @@
       "id": "q1",
       "question": "A basketball player lands from a rebound, feels a pop, her knee buckles, and it balloons with swelling within an hour. Most likely injury?",
       "choices": [
-        "ACL tear",
         "Grade I MCL sprain",
+        "ACL tear",
         "Patellar tendinitis",
         "Quadriceps contusion"
       ],
-      "answerIndex": 0,
+      "answerIndex": 1,
       "explanation": "Pop + giving way + rapid swelling (bleeding into the joint) after a jump landing is the classic ACL story — and most ACL tears are exactly this kind of non-contact mechanism."
     },
     {
       "id": "q2",
       "question": "A blow to the OUTSIDE of a planted knee most directly stresses which ligament?",
       "choices": [
-        "MCL — the force drives the knee inward against the medial ligament",
         "LCL — the ligament nearest the blow always tears",
         "PCL — it resists all sideways force",
-        "Patellar ligament"
+        "Patellar ligament",
+        "MCL — the force drives the knee inward against the medial ligament"
       ],
-      "answerIndex": 0,
+      "answerIndex": 3,
       "explanation": "A lateral blow forces the knee into valgus (inward collapse), stretching the ligament on the opposite (medial) side — the MCL. Big forces can add the ACL and medial meniscus: the unhappy triad."
     },
     {
@@ -102,36 +102,36 @@
       "id": "q4",
       "question": "An injured knee is stuck and won't fully straighten. What does this 'locking' classically suggest?",
       "choices": [
-        "A displaced meniscus fragment blocking the joint",
         "Normal post-game tightness",
         "A bruised kneecap",
+        "A displaced meniscus fragment blocking the joint",
         "Weak quadriceps"
       ],
-      "answerIndex": 0,
+      "answerIndex": 2,
       "explanation": "A torn meniscus fragment can flip into the joint and mechanically block full extension. A locked knee needs physician referral, not stretching."
     },
     {
       "id": "q5",
       "question": "Which finding after a knee injury is a call-911 emergency rather than standard referral?",
       "choices": [
-        "A deformed knee with no pulse felt below the injury",
         "Swelling that appears the next morning",
+        "A deformed knee with no pulse felt below the injury",
         "Mild tenderness on the inside of the knee",
         "Soreness when squatting"
       ],
-      "answerIndex": 0,
+      "answerIndex": 1,
       "explanation": "Deformity with absent pulses suggests knee dislocation with possible popliteal artery injury — the leg itself is at risk. Call 911 and do not attempt to relocate the joint."
     },
     {
       "id": "q6",
       "question": "Why do isolated MCL sprains usually heal without surgery while complete ACL tears usually don't?",
       "choices": [
-        "The MCL has a good blood supply; the ACL sits inside the joint with poor healing capacity",
         "The MCL is not a real ligament",
         "ACL surgery is required by athletic rules",
-        "The MCL never tears completely"
+        "The MCL never tears completely",
+        "The MCL has a good blood supply; the ACL sits inside the joint with poor healing capacity"
       ],
-      "answerIndex": 0,
+      "answerIndex": 3,
       "explanation": "Blood supply drives healing. The extra-articular MCL heals well with bracing and rehab; the intra-articular ACL bathes in joint fluid, heals poorly, and is usually reconstructed in cutting-sport athletes."
     },
     {
@@ -150,12 +150,12 @@
       "id": "q8",
       "question": "Which training approach measurably LOWERS non-contact ACL injury rates?",
       "choices": [
-        "Neuromuscular programs that train landing and cutting mechanics",
         "Avoiding all jumping in practice",
         "Wearing two knee braces on healthy knees",
+        "Neuromuscular programs that train landing and cutting mechanics",
         "Stretching only after games"
       ],
-      "answerIndex": 0,
+      "answerIndex": 2,
       "explanation": "Prevention programs like FIFA 11+ that train landing, deceleration, and knee-alignment control reduce ACL injuries — especially in female athletes, who tear ACLs at several times the male rate."
     }
   ],

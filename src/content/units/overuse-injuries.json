@@ -74,24 +74,24 @@
       "id": "q1",
       "question": "What most reliably separates a tibial stress fracture from shin splints?",
       "choices": [
-        "Pinpoint bone tenderness that worsens through activity vs. diffuse inner-shin ache that eases with warm-up",
         "Stress fractures only happen to sprinters",
+        "Pinpoint bone tenderness that worsens through activity vs. diffuse inner-shin ache that eases with warm-up",
         "Shin splints hurt at night; stress fractures never do",
         "The color of the bruising"
       ],
-      "answerIndex": 0,
+      "answerIndex": 1,
       "explanation": "Location and pattern: stress fracture = focal pinpoint pain, worse as activity continues, possible night pain and pain on hopping. Shin splints = diffuse medial tibial ache that often eases once warm."
     },
     {
       "id": "q2",
       "question": "A cross-country runner doubled her weekly mileage two weeks ago and now has worsening shin pain. What's the most important first question in your history?",
       "choices": [
-        "What changed in training recently? — load spikes drive overuse injuries",
         "What's her favorite race distance?",
         "Did she hear a pop?",
-        "Has she iced it yet?"
+        "Has she iced it yet?",
+        "What changed in training recently? — load spikes drive overuse injuries"
       ],
-      "answerIndex": 0,
+      "answerIndex": 3,
       "explanation": "Overuse injuries almost always trace to a recent change: mileage jump, new surface, new shoes, no rest days. The training history IS the diagnosis for mechanism."
     },
     {
@@ -110,36 +110,36 @@
       "id": "q4",
       "question": "Why is complete rest the WRONG long-term plan for patellar tendinopathy?",
       "choices": [
-        "Unloaded tendons weaken further; capacity is rebuilt with progressive strengthening",
         "Rest is illegal under athletic rules",
         "Tendons heal in 24 hours anyway",
+        "Unloaded tendons weaken further; capacity is rebuilt with progressive strengthening",
         "Because cortisone injections work faster"
       ],
-      "answerIndex": 0,
+      "answerIndex": 2,
       "explanation": "Tendon care is load MANAGEMENT: cut the aggravating load, then rebuild with heavy, slow, progressive loading. Total rest deconditions the tendon, and cortisone into major tendons risks rupture."
     },
     {
       "id": "q5",
       "question": "A 13-year-old basketball player has pain and a tender bump just below his kneecap that flares with jumping. Most likely?",
       "choices": [
-        "Osgood-Schlatter disease — growth plate traction at the tibial tubercle",
         "A torn ACL",
+        "Osgood-Schlatter disease — growth plate traction at the tibial tubercle",
         "A femur stress fracture",
         "Gout"
       ],
-      "answerIndex": 0,
+      "answerIndex": 1,
       "explanation": "Activity-related pain at the tibial tubercle in a growing athlete is classic Osgood-Schlatter — usually managed with load modification and resolves with growth, but deserves evaluation."
     },
     {
       "id": "q6",
       "question": "Which finding should push you to suspect a stress fracture even though last week's X-ray was 'normal'?",
       "choices": [
-        "Pinpoint bone pain with hopping and aching at night — X-rays are often normal for 2–3 weeks",
         "A normal X-ray rules out stress fracture permanently",
         "Diffuse soreness in both legs after a hard workout",
-        "Pain that disappears with warm-up"
+        "Pain that disappears with warm-up",
+        "Pinpoint bone pain with hopping and aching at night — X-rays are often normal for 2–3 weeks"
       ],
-      "answerIndex": 0,
+      "answerIndex": 3,
       "explanation": "Early stress fractures usually don't show on X-ray; the clinical pattern (focal pain, hop pain, night ache) matters more, and MRI/bone scan confirms earlier."
     },
     {
@@ -158,12 +158,12 @@
       "id": "q8",
       "question": "Which change does the MOST to prevent overuse injuries in a youth athlete's year?",
       "choices": [
-        "Scheduled rest: 1–2 rest days weekly and a true off-season instead of year-round one sport",
         "Stretching for 5 extra minutes",
         "New insoles every month",
+        "Scheduled rest: 1–2 rest days weekly and a true off-season instead of year-round one sport",
         "Icing after every practice regardless of pain"
       ],
-      "answerIndex": 0,
+      "answerIndex": 2,
       "explanation": "Load without recovery is the disease; rest days and an off-season (avoiding year-round single-sport specialization) attack the root cause. The other options are minor tweaks."
     }
   ],
@@ -217,6 +217,16 @@
       "id": "f10",
       "front": "Overuse prevention levers",
       "back": "Gradual load increases (~10%/week), 1–2 rest days weekly, true off-season, fresh shoes (300–500 mi), strength training, treat progressing pain as data."
+    },
+    {
+      "id": "f11",
+      "front": "The overuse injury question",
+      "back": "\"What changed in training?\" — most overuse injuries trace back to a load spike (mileage, intensity, surface, footwear, or lack of rest) in the previous 2–4 weeks."
+    },
+    {
+      "id": "f12",
+      "front": "Stress fracture treatment",
+      "back": "Genuine rest from impact, often 6–8 weeks, sometimes a boot or crutches, with a gradual supervised return; high-risk sites need urgent physician management."
     }
   ]
 }

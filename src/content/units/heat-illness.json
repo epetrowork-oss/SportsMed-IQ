@@ -71,24 +71,24 @@
       "id": "q1",
       "question": "During August football practice, a lineman becomes confused and combative, then stumbles. His skin is soaked with sweat. What is your working assumption?",
       "choices": [
-        "Exertional heat stroke — mental status change in the heat is the giveaway",
         "Heat exhaustion — sweating rules out heat stroke",
+        "Exertional heat stroke — mental status change in the heat is the giveaway",
         "Heat cramps — he needs a sports drink",
         "Normal fatigue from a hard practice"
       ],
-      "answerIndex": 0,
+      "answerIndex": 1,
       "explanation": "Central nervous system dysfunction (confusion, aggression, stumbling) in a hot environment is heat stroke until proven otherwise — and skin can be wet or dry. Sweating does NOT rule it out."
     },
     {
       "id": "q2",
       "question": "What is the definitive first treatment for exertional heat stroke?",
       "choices": [
-        "Immediate cold water immersion — cool first, transport second",
         "Drive the athlete to the hospital immediately without cooling",
         "Give large amounts of cold water to drink",
-        "Wrap the athlete in blankets to prevent shivering"
+        "Wrap the athlete in blankets to prevent shivering",
+        "Immediate cold water immersion — cool first, transport second"
       ],
-      "answerIndex": 0,
+      "answerIndex": 3,
       "explanation": "Rapid whole-body cooling, ideally ice-water immersion, is what saves lives. Survival is excellent when cooling starts within 10 minutes — transporting before cooling wastes that window."
     },
     {
@@ -107,36 +107,36 @@
       "id": "q4",
       "question": "Why is a humid day more dangerous than a hotter but dry day?",
       "choices": [
-        "Humidity blocks sweat evaporation, the body's main cooling mechanism during exercise",
         "Humidity makes the air heavier to breathe",
         "Humid air contains less oxygen",
+        "Humidity blocks sweat evaporation, the body's main cooling mechanism during exercise",
         "It isn't — only air temperature matters"
       ],
-      "answerIndex": 0,
+      "answerIndex": 2,
       "explanation": "Evaporation of sweat is the primary way an exercising body sheds heat. High humidity prevents evaporation, so heat builds even at lower air temperatures — this is why WBGT beats plain temperature as a risk measure."
     },
     {
       "id": "q5",
       "question": "An athlete has painful calf spasms during a hot practice but is thinking clearly. Appropriate care?",
       "choices": [
-        "Stop activity, shade, gentle stretching, and fluids with sodium",
         "Call 911 and start ice water immersion",
+        "Stop activity, shade, gentle stretching, and fluids with sodium",
         "Have him sprint it out to loosen the muscle",
         "Give plain water only — never sports drinks"
       ],
-      "answerIndex": 0,
+      "answerIndex": 1,
       "explanation": "These are heat cramps: rest, shade, gentle stretch/massage, and sodium-containing fluids. Not an emergency, but a warning sign to reduce load."
     },
     {
       "id": "q6",
       "question": "When is the highest-risk window for heat illness in a season?",
       "choices": [
-        "The first 1–2 weeks of practice, before athletes are acclimatized",
         "Mid-season, when athletes are strongest",
         "Playoffs, due to pressure",
-        "Winter conditioning"
+        "Winter conditioning",
+        "The first 1–2 weeks of practice, before athletes are acclimatized"
       ],
-      "answerIndex": 0,
+      "answerIndex": 3,
       "explanation": "Acclimatization — the body's adaptation to exercising in heat — takes about 1–2 weeks. Most heat stroke deaths occur in early-season practices, which is why acclimatization policies ramp up gradually."
     },
     {
@@ -155,12 +155,12 @@
       "id": "q8",
       "question": "Post-practice weigh-ins show an athlete lost 3% of body weight. What does this mean?",
       "choices": [
-        "He's significantly dehydrated and must rehydrate before the next session",
         "He's in great shape — weight loss means good conditioning",
         "Nothing — daily weight swings are random",
+        "He's significantly dehydrated and must rehydrate before the next session",
         "He should restrict fluids to toughen up"
       ],
-      "answerIndex": 0,
+      "answerIndex": 2,
       "explanation": "Losing more than 2% of body weight in a session is meaningful dehydration, which raises heat illness risk and hurts performance. He needs to restore fluids before practicing again."
     }
   ],
@@ -214,6 +214,16 @@
       "id": "f10",
       "front": "Dehydration check with weigh-ins",
       "back": "Losing more than 2% of body weight during a session = significant dehydration; rehydrate before the next practice."
+    },
+    {
+      "id": "f11",
+      "front": "Heat exhaustion: the 30-minute rule",
+      "back": "If a heat-exhausted athlete doesn't improve within about 30 minutes of cooling and fluids — or worsens at all — treat it as an emergency."
+    },
+    {
+      "id": "f12",
+      "front": "Heat illness risk factors",
+      "back": "High heat and humidity, poor acclimatization, dehydration, heavy equipment (football pads), large body mass, illness, and certain medications or supplements."
     }
   ]
 }
