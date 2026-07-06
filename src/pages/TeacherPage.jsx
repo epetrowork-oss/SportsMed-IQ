@@ -121,9 +121,9 @@ function AddStudentForm() {
   const [code, setCode] = useState('')
   const [result, setResult] = useState(null) // { ok, message }
 
-  function add() {
+  async function add() {
     try {
-      const student = addStudentFromCode(code)
+      const student = await addStudentFromCode(code)
       setResult({ ok: true, message: `Added ${student.name}.` })
       setCode('')
     } catch (err) {
@@ -140,7 +140,7 @@ function AddStudentForm() {
       </p>
       <textarea
         className="code-box"
-        placeholder="Paste a student's progress code (starts with SMIQ1.)"
+        placeholder="Paste a student's progress code (starts with SMIQ)"
         value={code}
         onChange={(e) => {
           setCode(e.target.value)

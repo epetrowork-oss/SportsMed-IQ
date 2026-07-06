@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
   useProgress,
   setStudentName,
@@ -12,8 +12,17 @@ export default function SyncPage() {
   const [copied, setCopied] = useState(false)
   const [pasted, setPasted] = useState('')
   const [importResult, setImportResult] = useState(null) // { ok, message }
+  const [code, setCode] = useState('')
 
-  const code = encodeProgress(name, units)
+  useEffect(() => {
+    let cancelled = false
+    encodeProgress(name, units).then((c) => {
+      if (!cancelled) setCode(c)
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [name, units])
 
   async function copyCode() {
     try {
@@ -25,9 +34,9 @@ export default function SyncPage() {
     }
   }
 
-  function importCode() {
+  async function importCode() {
     try {
-      const { name: importedName, units: importedUnits } = decodeProgressCode(pasted)
+      const { name: importedName, units: importedUnits } = await decodeProgressCode(pasted)
       mergeProgress(importedName, importedUnits)
       const unitCount = Object.keys(importedUnits).length
       const known = Object.keys(importedUnits).filter((id) => getUnit(id)).length
@@ -85,7 +94,7 @@ export default function SyncPage() {
         <h2>Load a code</h2>
         <textarea
           className="code-box"
-          placeholder="Paste a progress code here (starts with SMIQ1.)"
+          placeholder="Paste a progress code here (starts with SMIQ)"
           value={pasted}
           onChange={(e) => {
             setPasted(e.target.value)
