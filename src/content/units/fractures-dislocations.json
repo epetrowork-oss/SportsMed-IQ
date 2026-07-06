@@ -1,0 +1,253 @@
+{
+  "id": "fractures-dislocations",
+  "title": "Fractures & Dislocations",
+  "category": "Acute Care & First Aid",
+  "summary": "Recognize a broken bone or a joint out of place, protect the athlete, and know the one thing you must never try to fix yourself.",
+  "minutes": 18,
+  "sections": [
+    {
+      "heading": "What's actually injured",
+      "body": [
+        "A fracture is a break in a bone — anything from a hairline crack to a bone snapped completely in two. A dislocation is different: it's a joint injury, where the bones that meet at a joint are forced out of their normal alignment (for example, the ball of the shoulder popping out of its socket). Both can happen from the same kind of forces — a hard fall, a direct blow, or a joint bent past its normal range — and both can look and feel similar on the sideline: pain, swelling, and a limb that doesn't work right.",
+        "Fractures and dislocations sometimes happen together (a 'fracture-dislocation'), and either one can also injure the ligaments, blood vessels, and nerves running past the joint. This unit focuses on what you can safely recognize and do in the first few minutes — not on telling a fracture apart from a dislocation, which often isn't possible without an X-ray anyway."
+      ]
+    },
+    {
+      "heading": "How they happen",
+      "body": [
+        "In high school sports, most fractures and dislocations come from one of a few mechanisms:"
+      ],
+      "list": [
+        "Falls onto an outstretched hand (FOOSH) — a common cause of wrist and forearm fractures in gymnastics, cheer, skateboarding, and any sport where athletes fall or get pushed.",
+        "Direct blows — a helmet-to-helmet hit, a bat or ball to a limb, or a tackle that lands directly on a bone.",
+        "Twisting or jamming forces — a finger jammed by a ball in basketball, volleyball, or baseball; a shoulder wrenched backward while a football player's arm is pinned.",
+        "Forced joint motion beyond its normal range — a shoulder pushed too far overhead or a kneecap forced sideways, both of which can pop a joint out of place."
+      ]
+    },
+    {
+      "heading": "Signs and symptoms",
+      "body": [
+        "You don't need imaging to suspect a fracture or dislocation — you need your eyes and gentle hands. Watch and feel for:"
+      ],
+      "list": [
+        "Deformity — the limb or joint looks bent, shortened, rotated, or simply 'wrong' compared to the other side.",
+        "Point tenderness — pain concentrated at one exact spot when you press along the bone, rather than pain spread across a whole area.",
+        "Crepitus — a grinding, crunching, or popping sensation or sound at the injury site (never intentionally test for this by moving the limb — it's something you may feel or hear incidentally).",
+        "Inability to use or bear weight on the limb, or significant loss of motion in a joint that's now stuck in an abnormal position.",
+        "Swelling and bruising that come on fast and are often more severe than a typical sprain or strain.",
+        "Numbness, tingling, or a cold, pale, or blue-ish limb below the injury — a sign that nerves or blood vessels may be compressed or damaged."
+      ]
+    },
+    {
+      "heading": "Open vs. closed",
+      "body": [
+        "A closed fracture is one where the skin is intact — the bone is broken underneath, but nothing is exposed. An open fracture (also called a compound fracture) is one where the broken bone has torn through the skin, or a wound overlies the fracture site so bone may be exposed to the air. Open fractures are medical emergencies: they carry a high risk of serious bleeding and infection, since the wound gives bacteria a direct path to the bone.",
+        "For an open fracture, your job is to control bleeding without disturbing the injury. Cover the wound with a clean dressing and apply gentle pressure around — not directly on top of — any visible bone fragment. Never push exposed bone back under the skin; that's not first aid, it's a way to cause more damage and introduce infection. Splint the limb in the position you found it and activate your school or team's Emergency Action Plan (EAP) immediately."
+      ]
+    },
+    {
+      "heading": "Immediate response",
+      "body": [
+        "When you suspect a fracture or dislocation, the priority is protect, don't fix:"
+      ],
+      "list": [
+        "Splint in the position found. Do not straighten a deformed limb or try to realign anything. Immobilize the joint above and below the injury using whatever rigid support is available (commercial splint, rolled towels, magazines) and padding to keep it comfortable and still.",
+        "Control bleeding around any open wound with direct pressure on the wound edges, using a clean dressing, without pressing on exposed bone.",
+        "Apply ice over (not directly on) the area to help limit swelling, and elevate the limb if it can be done without moving the injured joint.",
+        "Check circulation, sensation, and movement in the fingers or toes beyond the injury before and after splinting — numbness, coolness, or color change means the situation is more urgent.",
+        "Activate the EAP — call for the athletic trainer, team physician, or emergency medical services — for any suspected fracture or dislocation, any open wound over a bone, or any loss of circulation or sensation."
+      ]
+    },
+    {
+      "heading": "Never try to relocate a joint yourself",
+      "body": [
+        "A dislocated finger, shoulder, or kneecap can look dramatic, and it's tempting to think 'I'll just pop it back in.' Don't. Reducing a dislocation — putting the joint back into place — is a medical procedure performed by a physician or other qualified provider, not a sideline first-aid step. This applies to every joint, including a jammed or dislocated finger in basketball, volleyball, or baseball, which is one of the most common places athletes (and coaches) try this themselves.",
+        "The same 'sprain vs. fracture' problem applies here: on the sideline, you often cannot tell whether a swollen, deformed finger, wrist, or shoulder is 'just' a bad sprain, a fracture, a dislocation, or some combination — only an X-ray can confirm it. Treat any joint that looks deformed, locked, or unstable as a possible fracture-dislocation and splint it as found."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Never attempt to reduce a dislocation on the field",
+        "text": "Forcing a joint back into place without imaging risks tearing nearby nerves and blood vessels, worsening a fracture you can't see, and causing permanent damage. 'Popping it back in' is a physician's job, even for a finger. Splint the joint in the position you found it and refer immediately — do not attempt reduction, and do not let a coach, parent, or teammate attempt it either."
+      }
+    },
+    {
+      "heading": "Spine involvement changes everything",
+      "body": [
+        "If a fracture or dislocation could involve the neck or back — a football player who took a helmet-first hit and now has neck pain, a gymnast who fell hard onto their back, an athlete with numbness or weakness in more than one limb — stop moving them entirely. Any suspected spine injury means the athlete stays exactly where they are, in the position found, until EMS or a properly trained provider takes over with spinal precautions.",
+        "Do not try to sit the athlete up, remove a helmet, or move them to a more 'comfortable' position. Moving an athlete with an unstable spine injury can convert a manageable injury into a permanent spinal cord injury. Activate the EAP and call 911 for any suspected spine injury."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Suspected spine injury — do not move the athlete",
+        "text": "Never move, sit up, or reposition an athlete with a suspected neck or back injury (loss of consciousness after a collision, neck or back pain after a high-force hit, numbness/tingling/weakness in the arms or legs). Keep them still, keep them calm, and get emergency medical services involved right away."
+      }
+    },
+    {
+      "heading": "Return to play",
+      "body": [
+        "No athlete returns to a sport after a suspected fracture or dislocation without clearance from a physician. Only imaging and a medical exam can confirm what was actually injured, whether it has healed enough to bear stress again, and whether the joint is stable.",
+        "Immobilization time (how long a cast, splint, or sling is needed) and the pace of rehab afterward are determined by the treating physician based on the specific bone or joint, the athlete's age, and how the injury is healing — it varies widely and is never something a coach, athletic trainer, or student should estimate or guess at. Your role after the acute injury is to support the athlete's recovery plan, not to set a timeline."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is the key difference between a fracture and a dislocation?",
+      "choices": [
+        "A fracture only affects joints; a dislocation only affects bones",
+        "A fracture is a break in a bone; a dislocation is bones forced out of alignment at a joint",
+        "A dislocation always involves broken skin, but a fracture never does",
+        "There is no real difference — the terms are interchangeable"
+      ],
+      "answerIndex": 1,
+      "explanation": "A fracture is damage to the bone itself, while a dislocation is a joint problem where the bones that meet at the joint are pushed out of normal position. They can occur separately or together."
+    },
+    {
+      "id": "q2",
+      "question": "A soccer player is hit hard on the forearm. On exam, one exact spot is intensely painful to light touch, though the rest of the arm is only mildly sore. What does this describe?",
+      "choices": [
+        "Referred pain from the shoulder",
+        "Normal bruising with no cause for concern",
+        "Point tenderness, a red flag for possible fracture",
+        "Crepitus, meaning the bone is definitely broken"
+      ],
+      "answerIndex": 2,
+      "explanation": "Pain concentrated at one specific spot on a bone (rather than spread across an area) is called point tenderness and is a key red flag for a fracture. Crepitus is a grinding sensation or sound, a different finding."
+    },
+    {
+      "id": "q3",
+      "question": "A wrestler's forearm has a wound with a piece of bone visible through it. What should you do first?",
+      "choices": [
+        "Push the bone back under the skin, then bandage tightly",
+        "Wash the wound thoroughly with water and scrub around the bone",
+        "Splint the arm without covering the wound, since covering it could trap bacteria",
+        "Cover the wound and apply gentle pressure around the bone, without pushing it back in"
+      ],
+      "answerIndex": 3,
+      "explanation": "For an open fracture, control bleeding with a clean dressing and pressure around the wound — never on or pushing the exposed bone. Pushing bone back under the skin is never appropriate first aid and increases infection and injury risk."
+    },
+    {
+      "id": "q4",
+      "question": "A basketball player jams a finger on a rebound. It's obviously bent sideways at the middle joint. A teammate says, 'I've done this before, let me just pop it back into place.' What should you do?",
+      "choices": [
+        "Let them do it, since finger dislocations are minor and easy to reduce",
+        "Stop them — splint the finger as it is and refer to a physician",
+        "Pop it back in yourself if the teammate doesn't want to",
+        "Ice it for 10 minutes first, then attempt the reduction"
+      ],
+      "answerIndex": 1,
+      "explanation": "Reducing (relocating) any dislocated joint, including a finger, is a physician's job — attempting it on the field risks nerve and blood vessel damage and can worsen an unseen fracture. Splint it in the position found and refer out."
+    },
+    {
+      "id": "q5",
+      "question": "Why can't you reliably tell a bad sprain apart from a fracture just by looking at a swollen, deformed wrist on the sideline?",
+      "choices": [
+        "Sprains never cause swelling, so any swelling means it's a fracture",
+        "Fractures never cause bruising, only sprains do",
+        "You can always tell by whether the athlete can move their fingers",
+        "Both can cause similar swelling, deformity, and pain, and only imaging (X-ray) can confirm which is present"
+      ],
+      "answerIndex": 3,
+      "explanation": "Sprains, fractures, and dislocations can all produce swelling, pain, and even visible deformity. Without an X-ray, you cannot confirm which is present, so any suspicious injury should be splinted and referred rather than diagnosed on the sideline."
+    },
+    {
+      "id": "q6",
+      "question": "A gymnast falls hard onto her back and reports neck pain along with tingling in both arms. What is the correct first action?",
+      "choices": [
+        "Help her sit up slowly to check how she feels",
+        "Keep her still in the position found and activate the EAP/call EMS immediately",
+        "Carefully roll her onto her side to make her more comfortable",
+        "Have her try to stand and walk it off if the tingling stops"
+      ],
+      "answerIndex": 1,
+      "explanation": "Neck pain with bilateral tingling after a high-force fall suggests possible spine involvement. The athlete must not be moved; keep her still and get emergency medical services involved. Sitting up, rolling, or standing could worsen a spinal injury."
+    },
+    {
+      "id": "q7",
+      "question": "An athlete has a suspected ankle fracture. Beyond splinting, what additional check is essential before and after splinting?",
+      "choices": [
+        "The athlete's blood pressure using a cuff",
+        "Range of motion at the hip on the same side",
+        "Whether the athlete can name the day of the week",
+        "Circulation, sensation, and movement in the toes beyond the injury"
+      ],
+      "answerIndex": 3,
+      "explanation": "Checking circulation (color, warmth, pulse), sensation, and movement distal to (beyond) the injury before and after splinting catches nerve or blood vessel compromise, which is a limb-threatening emergency. Orientation questions relate to concussion assessment, not fracture care."
+    },
+    {
+      "id": "q8",
+      "question": "Who decides when an athlete with a healed fracture is cleared to return to their sport?",
+      "choices": [
+        "The head coach, based on how the athlete looks in practice",
+        "A physician, based on exam and imaging",
+        "The athlete, once the pain has gone away",
+        "The athletic trainer, using a fixed timeline for that bone"
+      ],
+      "answerIndex": 1,
+      "explanation": "Return-to-play clearance after a fracture or dislocation requires a physician's exam and often imaging to confirm healing and joint stability. Immobilization time and rehab pace vary by injury and athlete, so no fixed timeline or non-physician judgment should replace that clearance."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Fracture",
+      "back": "A break in a bone, ranging from a hairline crack to a complete break."
+    },
+    {
+      "id": "f2",
+      "front": "Dislocation",
+      "back": "A joint injury where the bones meeting at the joint are forced out of normal alignment (e.g., shoulder popping out of its socket)."
+    },
+    {
+      "id": "f3",
+      "front": "Closed fracture",
+      "back": "A broken bone with the skin intact over it."
+    },
+    {
+      "id": "f4",
+      "front": "Open (compound) fracture",
+      "back": "A fracture where broken bone has torn through the skin or is exposed through a wound — a medical emergency with high bleeding/infection risk."
+    },
+    {
+      "id": "f5",
+      "front": "Point tenderness",
+      "back": "Pain concentrated at one exact spot on a bone when pressed, rather than spread across an area — a key fracture red flag."
+    },
+    {
+      "id": "f6",
+      "front": "Crepitus",
+      "back": "A grinding, crunching, or popping sensation or sound at an injury site; never intentionally tested for by moving the limb."
+    },
+    {
+      "id": "f7",
+      "front": "FOOSH",
+      "back": "Fall Onto an OutStretched Hand — a common mechanism for wrist and forearm fractures."
+    },
+    {
+      "id": "f8",
+      "front": "Splint in the position found",
+      "back": "The core first-aid rule for suspected fractures/dislocations — never straighten or realign a deformed limb before splinting."
+    },
+    {
+      "id": "f9",
+      "front": "Open fracture bleeding control",
+      "back": "Cover the wound and apply gentle pressure around (not on top of) any exposed bone; never push bone back under the skin."
+    },
+    {
+      "id": "f10",
+      "front": "Reducing a dislocation",
+      "back": "Putting a joint back into place — a physician-only procedure. Never attempt this on the sideline, even for a 'simple' finger dislocation."
+    },
+    {
+      "id": "f11",
+      "front": "Suspected spine injury rule",
+      "back": "Never move, sit up, or reposition the athlete. Keep them still and activate EMS immediately."
+    },
+    {
+      "id": "f12",
+      "front": "CSM check",
+      "back": "Circulation, Sensation, and Movement distal to (beyond) an injury — check before and after splinting to catch nerve or vessel damage."
+    }
+  ]
+}

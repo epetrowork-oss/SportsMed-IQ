@@ -3,3 +3,6 @@ dist
 dev-dist
 *.local
 .DS_Store
+
+# agent private build outputs
+dist-*/

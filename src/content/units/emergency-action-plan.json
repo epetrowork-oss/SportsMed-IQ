@@ -1,0 +1,254 @@
+{
+  "id": "emergency-action-plan",
+  "title": "Emergency Action Plans & CPR/AED Awareness",
+  "category": "Acute Care & First Aid",
+  "summary": "Know what a venue's emergency plan must cover, how to recognize sudden cardiac arrest, and what a lay rescuer does in the first minutes — awareness-level, not certification.",
+  "minutes": 18,
+  "sections": [
+    {
+      "heading": "Why every venue needs a plan before it needs one",
+      "body": [
+        "Sudden cardiac arrest (SCA) — the heart abruptly stops pumping effectively — is a leading cause of death in young athletes during sport, and it can also strike coaches, officials, and spectators. Survival depends on minutes, not hours. Every minute defibrillation is delayed, survival drops by roughly 7-10%.",
+        "An Emergency Action Plan (EAP) is a written, venue-specific document that spells out exactly what happens in the first minutes of a medical emergency, so no one has to improvise or waste time figuring out who does what. A good EAP is practiced before an emergency, posted where staff can find it, and specific to the exact field, gym, or pool it covers — a plan for the football stadium does not automatically work for the auxiliary gym across campus."
+      ]
+    },
+    {
+      "heading": "What's actually in an EAP",
+      "body": [
+        "Every venue's plan should answer the same set of questions in writing, ahead of time:"
+      ],
+      "list": [
+        "Emergency personnel — who is trained and present (athletic trainer, coach, EMS) at this specific practice or event.",
+        "Communication — who calls 911, what phone is used, and exactly what they say (nature of emergency, exact location, number of victims, current condition, actions already taken).",
+        "Equipment location — where the first aid kit and the AED (automated external defibrillator, a portable device that checks heart rhythm and delivers a shock if needed) are kept, and who is trained to retrieve and use them.",
+        "Venue access — the exact address, plus the fastest access route for an ambulance, including which gate or door to unlock and who will meet EMS to guide them in.",
+        "Roles by title, not name — 'the head coach calls 911; the assistant coach retrieves the AED' — so the plan still works no matter who is actually on site that day.",
+        "Chain of command — who is in charge of the scene until EMS arrives, so responders aren't working at cross purposes."
+      ]
+    },
+    {
+      "heading": "Every practice, not just game day",
+      "body": [
+        "It's tempting to think of the EAP as a game-day document because that's when the crowd, the athletic trainer, and the ambulance on standby are all present. But most sudden cardiac arrests and other emergencies in youth sports happen at practice, when fewer staff are around, the athletic trainer may not be present, and equipment may be less accessible.",
+        "A venue's EAP must cover practices as well as competitions, including after-school practices on fields with no athletic trainer scheduled. If a coach doesn't know where the nearest AED is at a Tuesday practice, the plan has failed before it was ever needed."
+      ]
+    },
+    {
+      "heading": "Recognizing sudden cardiac arrest",
+      "body": [
+        "An athlete in sudden cardiac arrest will suddenly collapse and become unresponsive — they will not answer, move purposefully, or respond to a shout or a shake of the shoulders.",
+        "The key sign rescuers must not misread is breathing. A person in cardiac arrest may still make occasional gasping, snorting, or gurgling sounds called agonal gasps for the first minute or two. These are NOT normal breathing — they are a sign of cardiac arrest, not a sign the person is okay. This is one of the most commonly missed points: bystanders sometimes wait to 'see if the gasping stops' instead of starting CPR immediately."
+      ],
+      "list": [
+        "Collapsed and unresponsive — no response to voice or touch.",
+        "Not breathing, or only gasping/agonal breathing — treat any abnormal or absent breathing as cardiac arrest.",
+        "No purposeful movement."
+      ]
+    },
+    {
+      "heading": "The lay-rescuer response chain",
+      "body": [
+        "If you find a collapsed, unresponsive athlete, current lay-rescuer guidelines call for this sequence, done fast:"
+      ],
+      "list": [
+        "1. Check scene safety — make sure the scene won't hurt you too (traffic, exposed wires, an active play still in progress) before you approach.",
+        "2. Check responsiveness and breathing — tap and shout, look for normal breathing for no more than about 10 seconds.",
+        "3. Send someone to call 911 AND get the AED — these happen at the same time, by two different people if possible. Whoever calls 911 stays on the line; whoever fetches the AED brings it straight back.",
+        "4. Start hands-only CPR immediately — do not wait for the AED to arrive or for EMS to arrive.",
+        "5. Attach the AED the moment it arrives and follow its voice prompts — the device will tell you exactly what to do, including when to stand clear."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Alone with a phone?",
+        "text": "If you are the only rescuer and have a phone, call 911 first (put it on speaker) so dispatch can guide you, then begin CPR right away. Every second before compressions start matters."
+      }
+    },
+    {
+      "heading": "Hands-only CPR",
+      "body": [
+        "For a teen or adult in cardiac arrest, lay rescuers should perform hands-only (compression-only) CPR — chest compressions without rescue breaths. This is easier to remember under stress and current guidelines show it works as well as conventional CPR for lay rescuers in the first minutes.",
+        "Technique: kneel beside the athlete, place the heel of one hand on the center of the chest (the lower half of the breastbone), the other hand on top, and push hard and fast — about 2 inches deep, at a rate of 100 to 120 compressions per minute — allowing the chest to fully recoil between compressions. Keep going without stopping until the AED is ready to analyze or EMS takes over; if a second trained rescuer is present, switch every 2 minutes to avoid fatigue-related shallow compressions."
+      ]
+    },
+    {
+      "heading": "Using the AED",
+      "body": [
+        "An AED is designed for bystanders: turn it on and it talks you through every step in plain language. It analyzes the heart's rhythm and will only advise or deliver a shock if the rhythm is one a shock can actually fix (a 'shockable rhythm'). If the rhythm doesn't need a shock, the device will say so and tell you to continue CPR instead.",
+        "You cannot hurt someone by attaching or using an AED, even if it turns out they didn't need a shock — the device does the deciding, not the rescuer. The only job of the rescuer is to expose the chest, attach the pads where the pictures show, and make sure everyone is clear of the body when the device analyzes or shocks.",
+        "Getting an AED attached and delivering a shock within about 3 to 5 minutes of collapse dramatically increases the chance of survival — for every minute defibrillation is delayed, the odds of survival drop sharply. This is exactly why AED location and a clear path to retrieve it are core parts of every EAP."
+      ]
+    },
+    {
+      "heading": "Rehearsal: the plan only works if you've practiced it",
+      "body": [
+        "Writing an EAP is not enough. Coaches, athletic trainers, and staff should walk through it — ideally with a timed practice drill — before the season starts, at every venue they use, so the first time anyone reads the plan is not during an actual emergency.",
+        "A rehearsed plan surfaces problems while they're still cheap to fix: a locked gate with no key, an AED with a dead battery, a coach who doesn't actually know the venue's street address. The worst time to discover any of these is during the emergency itself."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "This is awareness, not certification",
+        "text": "This lesson is an awareness-level overview so you can recognize an emergency and understand how a proper response works — it is not CPR/AED certification and does not qualify you to respond as a trained rescuer. To be certified, complete a hands-on course through an accredited provider (for example the American Heart Association or American Red Cross), which includes supervised practice on a manikin and an AED trainer."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is an Emergency Action Plan (EAP)?",
+      "choices": [
+        "A generic first aid pamphlet handed out to all athletes",
+        "A venue-specific written plan covering personnel, communication, equipment location, and roles for a medical emergency",
+        "A list of injuries an athletic trainer has treated that season",
+        "A verbal agreement between coaches about who calls for help"
+      ],
+      "answerIndex": 1,
+      "explanation": "An EAP is a specific, written document for a particular venue, spelling out personnel, communication steps, equipment location, access routes, and roles. A verbal-only or generic plan fails exactly when it's needed most — under stress, people default to what's written down, not what someone once said."
+    },
+    {
+      "id": "q2",
+      "question": "An athlete collapses and is unresponsive. You notice she is making occasional gasping, snorting sounds every 20-30 seconds. What does this mean?",
+      "choices": [
+        "She is breathing normally; monitor and wait before doing anything",
+        "She is in a light sleep and should be woken gently",
+        "This is agonal gasping, a sign of cardiac arrest — not normal breathing — and CPR should start immediately",
+        "This is hyperventilation from anxiety and will resolve on its own"
+      ],
+      "answerIndex": 2,
+      "explanation": "Agonal gasps (occasional gasping, snorting, or gurgling) are a common early sign of cardiac arrest, not evidence the person is breathing adequately. Waiting to 'see if it stops' delays CPR and costs survival — any collapsed, unresponsive person who is not breathing normally needs CPR right away."
+    },
+    {
+      "id": "q3",
+      "question": "You're the first person to reach a collapsed, unresponsive athlete on a field. What is the very first thing you should do?",
+      "choices": [
+        "Begin chest compressions immediately without looking around",
+        "Run to get the AED yourself before doing anything else",
+        "Quickly check that the scene is safe for you to approach",
+        "Ask the athlete's teammates what medications they take"
+      ],
+      "answerIndex": 2,
+      "explanation": "Scene safety comes first in the response chain — a rescuer who gets hurt approaching the scene (traffic, an ongoing play, exposed hazards) can't help anyone. Only after confirming the scene is safe do you check responsiveness and breathing, then send for help and begin CPR."
+    },
+    {
+      "id": "q4",
+      "question": "You've confirmed an athlete is unresponsive and not breathing normally, and a teammate is nearby. What should happen next?",
+      "choices": [
+        "Send the teammate to call 911 and get the AED at the same time, then start hands-only CPR",
+        "Send the teammate to call 911 only, and wait for EMS to arrive before doing anything",
+        "Start CPR alone and only call 911 after 2 minutes of compressions",
+        "Send the teammate to find the athlete's parents first"
+      ],
+      "answerIndex": 0,
+      "explanation": "Calling 911 and getting the AED happen simultaneously, ideally by two different people, while CPR starts right away without delay. Waiting for EMS before starting CPR, or delaying the 911 call, both cost precious minutes that make the biggest difference in survival."
+    },
+    {
+      "id": "q5",
+      "question": "What is the correct rate and depth for hands-only chest compressions on a teen or adult?",
+      "choices": [
+        "60-80 compressions per minute, about 1 inch deep",
+        "100-120 compressions per minute, about 2 inches deep",
+        "150-160 compressions per minute, as deep as possible",
+        "100-120 compressions per minute, just enough to see the chest move"
+      ],
+      "answerIndex": 1,
+      "explanation": "Push hard and fast: 100-120 compressions per minute, about 2 inches deep, on the center of the chest, allowing full chest recoil between compressions. Too shallow or too slow reduces blood flow to the brain and heart."
+    },
+    {
+      "id": "q6",
+      "question": "A teammate hesitates to attach the AED, worried it might shock someone who doesn't need it and hurt them. What's the accurate response?",
+      "choices": [
+        "They're right — only EMS should attach an AED, never a bystander",
+        "The AED analyzes the heart rhythm itself and will only advise a shock for a shockable rhythm, so attaching it cannot hurt the athlete",
+        "AEDs should only be used if the person is already breathing normally",
+        "It's fine to skip the AED as long as CPR is being done well"
+      ],
+      "answerIndex": 1,
+      "explanation": "The AED — not the rescuer — decides whether a shock is appropriate by analyzing the rhythm; it will not shock a rhythm that doesn't need one. Bystanders are exactly who AEDs are designed for, and delaying or skipping the AED because of this myth removes a step that dramatically improves survival."
+    },
+    {
+      "id": "q7",
+      "question": "Which piece of information does an EAP need to specify by title rather than by name (e.g., 'the head coach' rather than 'Coach Rivera')?",
+      "choices": [
+        "Roles and responsibilities, so the plan still works regardless of who is actually present that day",
+        "The athlete's emergency contact information",
+        "The score of the game at the time of the emergency",
+        "The brand of AED used at the venue"
+      ],
+      "answerIndex": 0,
+      "explanation": "Assigning roles by title keeps the plan usable no matter who happens to be on site — coaches change, substitutes fill in, and staff rotate, but 'the assistant coach gets the AED' still makes sense on any given day."
+    },
+    {
+      "id": "q8",
+      "question": "A coach says the team's EAP only needs to be reviewed before the first game of the season, since that's when the ambulance and athletic trainer are on-site. What's the problem with this thinking?",
+      "choices": [
+        "Nothing — game day is the only time an EAP is actually needed",
+        "EAPs are only legally required for games, not practices",
+        "Most sudden cardiac arrests and other emergencies happen at practice, where fewer staff and less equipment may be available, so the plan and rehearsal must cover practices too",
+        "AEDs are not needed at games since EMS is already present"
+      ],
+      "answerIndex": 2,
+      "explanation": "Practices happen far more often than games and typically have less staff, supervision, and readily available equipment — exactly the conditions where a well-rehearsed EAP matters most. An EAP that only accounts for game day leaves the team unprotected most of the time."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Emergency Action Plan (EAP)",
+      "back": "A written, venue-specific plan covering personnel, communication, equipment location, access routes, and roles for responding to a medical emergency."
+    },
+    {
+      "id": "f2",
+      "front": "AED",
+      "back": "Automated External Defibrillator — a portable device that analyzes heart rhythm and delivers a shock only if the rhythm is shockable; designed for use by bystanders."
+    },
+    {
+      "id": "f3",
+      "front": "Roles by title, not name",
+      "back": "EAPs assign responsibilities like 'head coach calls 911' rather than a specific person's name, so the plan works no matter who is present that day."
+    },
+    {
+      "id": "f4",
+      "front": "Agonal gasps",
+      "back": "Occasional gasping, snorting, or gurgling sounds after collapse — a sign of cardiac arrest, NOT normal breathing. Do not wait; start CPR."
+    },
+    {
+      "id": "f5",
+      "front": "Signs of sudden cardiac arrest",
+      "back": "Sudden collapse, unresponsive to voice or touch, and not breathing normally (absent or only agonal gasps)."
+    },
+    {
+      "id": "f6",
+      "front": "First step at the scene",
+      "back": "Check scene safety before approaching — a hurt rescuer can't help anyone."
+    },
+    {
+      "id": "f7",
+      "front": "Call 911 and get the AED",
+      "back": "These two actions happen at the same time, ideally by two different people, immediately after confirming the athlete is unresponsive and not breathing normally."
+    },
+    {
+      "id": "f8",
+      "front": "Hands-only CPR rate and depth",
+      "back": "100-120 compressions per minute, about 2 inches deep, center of the chest, allowing full recoil between compressions."
+    },
+    {
+      "id": "f9",
+      "front": "Why hands-only CPR for lay rescuers",
+      "back": "Compression-only CPR is simpler to remember under stress and is as effective as conventional CPR with breaths in the first minutes for teens/adults."
+    },
+    {
+      "id": "f10",
+      "front": "AED shock decision",
+      "back": "The AED itself analyzes the rhythm and only advises/delivers a shock for a shockable rhythm — a rescuer cannot cause harm by attaching and using it correctly."
+    },
+    {
+      "id": "f11",
+      "front": "AED time window for best survival",
+      "back": "Roughly 3-5 minutes from collapse to shock; survival odds drop sharply with every minute defibrillation is delayed."
+    },
+    {
+      "id": "f12",
+      "front": "Why rehearse the EAP",
+      "back": "Practicing the plan in advance surfaces problems (locked gates, dead AED batteries, unclear address) while they're still fixable — the worst time to read the plan is during the emergency."
+    }
+  ]
+}

@@ -18,7 +18,7 @@ never requires touching component code** — drop a new `*.json` file into
   "sections": [
     {
       "heading": "Anatomy review",
-      "body": ["First paragraph.", "Second paragraph."],  // paragraphs
+      "body": ["First paragraph.", "Second paragraph."],  // paragraphs (optional if "list" or "callout" present)
       "list": ["Optional bullet", "Another bullet"],       // optional bullet list
       "callout": {                                          // optional highlighted box
         "type": "warning",       // "warning" (red flags / refer out) or "tip" (field tips)

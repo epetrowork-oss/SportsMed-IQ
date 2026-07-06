@@ -1,24 +1,44 @@
 // Progress codes: a student's name + progress serialized to a copy/pasteable
 // string. No server involved — codes move by hand (paste, email, LMS message),
-// which keeps the app fully offline. Format: "SMIQ1." + base64url(JSON).
+// which keeps the app fully offline.
+//
+// Format v2 (current, always emitted): "SMIQ2." + base64url(deflate-raw(UTF-8
+// JSON)). Compressed with the browser's built-in CompressionStream so codes
+// stay short enough to comfortably copy/paste — no dependency needed.
+// Format v1 (legacy, decode-only): "SMIQ1." + base64url(UTF-8 JSON), no
+// compression. Codes students already have must keep importing forever, so
+// decodeProgressCode still accepts them.
 
-const PREFIX = 'SMIQ1.'
+const PREFIX_V2 = 'SMIQ2.'
+const PREFIX_V1 = 'SMIQ1.'
 
-function toBase64Url(str) {
-  const bytes = new TextEncoder().encode(str)
+function toBase64Url(bytes) {
   let binary = ''
   bytes.forEach((b) => (binary += String.fromCharCode(b)))
   return btoa(binary).replaceAll('+', '-').replaceAll('/', '_').replace(/=+$/, '')
 }
 
-function fromBase64Url(b64) {
+function fromBase64UrlBytes(b64) {
   const padded = b64.replaceAll('-', '+').replaceAll('_', '/')
   const binary = atob(padded + '='.repeat((4 - (padded.length % 4)) % 4))
-  const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0))
-  return new TextDecoder().decode(bytes)
+  return Uint8Array.from(binary, (c) => c.charCodeAt(0))
 }
 
-export function encodeProgress(name, units) {
+function fromBase64Url(b64) {
+  return new TextDecoder().decode(fromBase64UrlBytes(b64))
+}
+
+async function deflate(bytes) {
+  const stream = new Blob([bytes]).stream().pipeThrough(new CompressionStream('deflate-raw'))
+  return new Uint8Array(await new Response(stream).arrayBuffer())
+}
+
+async function inflate(bytes) {
+  const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream('deflate-raw'))
+  return new Uint8Array(await new Response(stream).arrayBuffer())
+}
+
+export async function encodeProgress(name, units) {
   // Only carry fields the schema knows, so codes stay small and predictable.
   const compactUnits = {}
   for (const [unitId, p] of Object.entries(units)) {
@@ -31,20 +51,31 @@ export function encodeProgress(name, units) {
       scrollPct: Math.round(p.scrollPct ?? 0),
     }
   }
-  return PREFIX + toBase64Url(JSON.stringify({ name, units: compactUnits, at: Date.now() }))
+  const json = JSON.stringify({ name, units: compactUnits, at: Date.now() })
+  const compressed = await deflate(new TextEncoder().encode(json))
+  return PREFIX_V2 + toBase64Url(compressed)
 }
 
 // Returns { name, units, at } or throws with a user-readable message.
-export function decodeProgressCode(code) {
+export async function decodeProgressCode(code) {
   const trimmed = code.trim()
-  if (!trimmed.startsWith(PREFIX)) {
-    throw new Error('That does not look like a SportMedIQ code (should start with SMIQ1).')
-  }
   let data
-  try {
-    data = JSON.parse(fromBase64Url(trimmed.slice(PREFIX.length)))
-  } catch {
-    throw new Error('Code is damaged or incomplete — copy the whole code and try again.')
+  if (trimmed.startsWith(PREFIX_V2)) {
+    try {
+      const compressed = fromBase64UrlBytes(trimmed.slice(PREFIX_V2.length))
+      const bytes = await inflate(compressed)
+      data = JSON.parse(new TextDecoder().decode(bytes))
+    } catch {
+      throw new Error('Code is damaged or incomplete — copy the whole code and try again.')
+    }
+  } else if (trimmed.startsWith(PREFIX_V1)) {
+    try {
+      data = JSON.parse(fromBase64Url(trimmed.slice(PREFIX_V1.length)))
+    } catch {
+      throw new Error('Code is damaged or incomplete — copy the whole code and try again.')
+    }
+  } else {
+    throw new Error('That does not look like a SportMedIQ code (should start with SMIQ1 or SMIQ2).')
   }
   if (typeof data.name !== 'string' || typeof data.units !== 'object' || data.units === null) {
     throw new Error('Code is damaged or incomplete — copy the whole code and try again.')
