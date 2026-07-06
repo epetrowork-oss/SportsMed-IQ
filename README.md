@@ -49,11 +49,11 @@ localStorage.
 - ✅ Stage 2 — one complete unit end-to-end (ankle sprains: 7-section lesson,
   8-question quiz, 12 flashcards)
 - ✅ Stage 3 — minimal teacher dashboard (mock roster + live local progress)
-- ✅ Content expansion — 11 units across 6 categories (ankle sprains,
-  concussions, heat illness, knee/ACL, wound care, muscle strains, overuse
-  injuries, fractures & dislocations, taping & wrapping, EAP/CPR-AED,
-  hydration & nutrition), each added as JSON only, validated by
-  `npm run validate:content` and verified in the browser
+- ✅ Content expansion — 13 units across 7 categories (ankle sprains,
+  concussions, heat illness, cold exposure, knee/ACL, shoulder, wound care,
+  muscle strains, overuse injuries, fractures & dislocations, taping &
+  wrapping, EAP/CPR-AED, hydration & nutrition), each added as JSON only;
+  whole library passes `npm run validate:content` with zero warnings
 - ✅ Cross-device sync — offline progress codes: student Sync page
   (export/import with best-of-both merge) and teacher add-student-by-code
 - ✅ Honest-reading signals — per-lesson reading time + scroll depth with
@@ -65,6 +65,8 @@ localStorage.
 - ✅ Real-device pass — PWA install icons (192/512/maskable + apple-touch),
   offline reload verified with network cut, all touch targets ≥ 44px at
   phone widths, layout checked at 375px and 768px
+- ✅ Teacher per-student detail — click a roster row for the full per-unit
+  breakdown (reading time, scroll depth, flag reasons, quiz history)
 
 Not built yet (intentionally): accounts/auth, live server-based sync,
 assigning content.

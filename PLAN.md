@@ -80,8 +80,20 @@ credits beyond review.* Good candidates to round out a semester:
 
 ### 4. Stretch — teacher per-student detail
 
-- [ ] Click a roster row to see one student's full breakdown (per-unit
-      quiz attempts, reading time, flags). Only if 1–3 are done.
+- [x] Click a roster row to see one student's full breakdown — per-unit
+      reading time (min:sec), scroll %, spelled-out flag reasons, quiz
+      score/attempts, status. Browser-verified incl. sort/CSV/remove
+      interplay and 375px layout.
+
+### 5. Follow-on batch (same day, delegated)
+
+- [x] Two more units: shoulder injuries (new Upper Extremity category) and
+      cold exposure & hypothermia — 13 units across 7 categories
+- [x] Original 7 units brought to zero validator warnings (answer-position
+      spread verified byte-identical against git history; flashcards topped
+      up to 12 from existing lesson material)
+- [x] Hydration quiz fluid-replacement range fixed (64-96 → 80-96 oz,
+      caught by automated PR review)
 
 ## Out of scope (intentional, unchanged)
 

@@ -69,19 +69,19 @@
       "id": "q1",
       "question": "A soccer player collides with an opponent, never loses consciousness, but seems dazed and asks 'what's the score?' twice. What should happen?",
       "choices": [
-        "She sits out the rest of the day and is referred for evaluation",
         "She can return after 15 symptom-free minutes on the bench",
+        "She sits out the rest of the day and is referred for evaluation",
         "She can return if she passes a sprint test",
         "Nothing — no loss of consciousness means no concussion"
       ],
-      "answerIndex": 0,
+      "answerIndex": 1,
       "explanation": "Repeating questions and appearing dazed are concussion signs. A suspected concussion means immediate removal with no same-day return — and fewer than 10% of concussions involve loss of consciousness."
     },
     {
       "id": "q2",
       "question": "What is the most commonly reported concussion symptom?",
-      "choices": ["Headache", "Vomiting", "Loss of consciousness", "Neck pain"],
-      "answerIndex": 0,
+      "choices": ["Vomiting", "Loss of consciousness", "Neck pain", "Headache"],
+      "answerIndex": 3,
       "explanation": "Headache is the most common symptom. Loss of consciousness is actually uncommon — under 10% of cases."
     },
     {
@@ -100,36 +100,36 @@
       "id": "q4",
       "question": "Why is second impact syndrome the reason for strict no-same-day-return rules?",
       "choices": [
-        "A second impact before healing can cause rapid, often fatal brain swelling",
         "A second impact always breaks the skull",
         "It doubles the length of the athlete's suspension",
+        "A second impact before healing can cause rapid, often fatal brain swelling",
         "It only affects professional athletes"
       ],
-      "answerIndex": 0,
+      "answerIndex": 2,
       "explanation": "A second blow before the first concussion heals can disrupt the brain's blood-flow regulation, causing catastrophic swelling. Adolescents are at highest risk."
     },
     {
       "id": "q5",
       "question": "Can an athlete get a concussion without being hit in the head?",
       "choices": [
-        "Yes — a hard blow to the body can whip the brain inside the skull",
         "No — direct head contact is required",
+        "Yes — a hard blow to the body can whip the brain inside the skull",
         "Only if they also break a bone",
         "Only in collision sports like football"
       ],
-      "answerIndex": 0,
+      "answerIndex": 1,
       "explanation": "Any force that jolts the head — including a hard body hit — can make the brain move rapidly inside the skull and cause a concussion."
     },
     {
       "id": "q6",
       "question": "An athlete is cleared to begin the return-to-play progression. During non-contact drills her headache returns. What's the correct move?",
       "choices": [
-        "Drop back a stage and progress again once symptom-free",
         "Push through — symptoms during exercise are expected",
         "Skip ahead to full contact to test her tolerance",
-        "End her season immediately"
+        "End her season immediately",
+        "Drop back a stage and progress again once symptom-free"
       ],
-      "answerIndex": 0,
+      "answerIndex": 3,
       "explanation": "The stepwise progression (each stage ≥24 hours) requires dropping back a stage whenever symptoms return, then advancing again once symptom-free."
     },
     {
@@ -148,12 +148,12 @@
       "id": "q8",
       "question": "What is the purpose of preseason baseline testing like ImPACT?",
       "choices": [
-        "It gives clinicians the athlete's own normal scores to compare against after an injury",
         "It predicts which athletes will get concussed",
         "It replaces the need for medical clearance",
+        "It gives clinicians the athlete's own normal scores to compare against after an injury",
         "It measures physical strength"
       ],
-      "answerIndex": 0,
+      "answerIndex": 2,
       "explanation": "Baseline tests record the athlete's normal memory, reaction time, and balance so post-injury results can be compared to their own baseline rather than a population average."
     }
   ],
@@ -207,6 +207,16 @@
       "id": "f10",
       "front": "Baseline testing",
       "back": "Preseason measurement of memory, reaction time, and balance (e.g., ImPACT) so post-injury scores can be compared to the athlete's own normal."
+    },
+    {
+      "id": "f11",
+      "front": "Observable signs of a concussion on the field",
+      "back": "A dazed or stunned look, forgetting plays or assignments, confusion about score or opponent, clumsy movement, slow answers, personality change, and any loss of consciousness — even seconds."
+    },
+    {
+      "id": "f12",
+      "front": "Concussion recovery timeline",
+      "back": "Most concussions resolve in 1–4 weeks (adolescents often take longer). Recovery starts with 24–48 hours of relative rest (light activity is fine), then a gradual return to school before sport."
     }
   ]
 }

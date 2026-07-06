@@ -69,24 +69,24 @@
       "id": "q1",
       "question": "A teammate is bleeding heavily from a cut. You have no gloves. What is the best immediate action?",
       "choices": [
-        "Have the athlete press on their own wound while you find a barrier",
         "Apply direct pressure with your bare hands — bleeding comes first",
+        "Have the athlete press on their own wound while you find a barrier",
         "Wait for the athletic trainer and do nothing",
         "Pour water on the wound from a distance"
       ],
-      "answerIndex": 0,
+      "answerIndex": 1,
       "explanation": "Universal precautions are non-negotiable: never contact blood bare-handed. The athlete can apply their own pressure effectively while you improvise a barrier and direct care."
     },
     {
       "id": "q2",
       "question": "Blood has soaked through the gauze you're pressing on a laceration. What do you do?",
       "choices": [
-        "Add fresh gauze on top and keep pressing",
         "Peel off the soaked gauze and replace it with clean gauze",
         "Stop pressure to let the wound air out",
-        "Switch immediately to a tourniquet"
+        "Switch immediately to a tourniquet",
+        "Add fresh gauze on top and keep pressing"
       ],
-      "answerIndex": 0,
+      "answerIndex": 3,
       "explanation": "Removing soaked gauze tears away the forming clot and restarts bleeding. Layer new gauze on top and maintain continuous pressure."
     },
     {
@@ -100,36 +100,36 @@
       "id": "q4",
       "question": "An athlete has a nail embedded in their foot. Correct field response?",
       "choices": [
-        "Stabilize the object in place and get medical care — do not pull it out",
         "Pull it out quickly and apply pressure",
         "Twist it out slowly to minimize tearing",
+        "Stabilize the object in place and get medical care — do not pull it out",
         "Have the athlete walk it off to keep blood flowing"
       ],
-      "answerIndex": 0,
+      "answerIndex": 2,
       "explanation": "An embedded object may be plugging the very vessels it damaged. Removing it can unleash serious bleeding — stabilize it and refer."
     },
     {
       "id": "q5",
       "question": "What goes directly INTO a fresh wound to clean it?",
       "choices": [
-        "Clean running water or saline",
         "Hydrogen peroxide",
+        "Clean running water or saline",
         "Rubbing alcohol",
         "Iodine poured into the wound bed"
       ],
-      "answerIndex": 0,
+      "answerIndex": 1,
       "explanation": "Generous flushing with water or saline removes debris without harming tissue. Peroxide and alcohol damage healing cells — antiseptics belong on the intact skin around the wound."
     },
     {
       "id": "q6",
       "question": "Correct position for an athlete with a nosebleed?",
       "choices": [
-        "Sitting upright, leaning slightly forward, pinching the soft part of the nose",
         "Lying flat on their back",
         "Head tilted back to keep blood in",
-        "Standing with arms overhead"
+        "Standing with arms overhead",
+        "Sitting upright, leaning slightly forward, pinching the soft part of the nose"
       ],
-      "answerIndex": 0,
+      "answerIndex": 3,
       "explanation": "Leaning forward keeps blood out of the throat and airway; continuous pinching of the soft nose for about 10 minutes stops most nosebleeds."
     },
     {
@@ -148,12 +148,12 @@
       "id": "q8",
       "question": "When is a tourniquet appropriate?",
       "choices": [
-        "Life-threatening limb bleeding that firm direct pressure cannot control",
         "Any cut that bleeds through one gauze pad",
         "All lower-leg wounds, as a precaution",
+        "Life-threatening limb bleeding that firm direct pressure cannot control",
         "Never — tourniquets are prohibited in first aid"
       ],
-      "answerIndex": 0,
+      "answerIndex": 2,
       "explanation": "Tourniquets are for severe, uncontrollable limb hemorrhage: 2–3 inches above the wound, tight until bleeding stops, time recorded, 911 activated, removal only by medical professionals."
     }
   ],
@@ -212,6 +212,11 @@
       "id": "f11",
       "front": "Blister care",
       "back": "Intact blister = natural sterile dressing: leave it, pad around it. Drain only if it prevents play, sterile technique, never remove the skin roof."
+    },
+    {
+      "id": "f12",
+      "front": "Tetanus booster rule",
+      "back": "Any puncture or dirty wound should prompt a check — a booster is needed if it has been more than 10 years (5 years for dirty wounds) since the last one."
     }
   ]
 }

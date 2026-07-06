@@ -488,6 +488,60 @@ th {
   margin: 0;
 }
 
+.roster-row {
+  cursor: pointer;
+}
+
+.roster-row:hover {
+  background: var(--brand-light);
+}
+
+.roster-row-expanded {
+  background: var(--brand-light);
+}
+
+.detail-row td {
+  padding: 0;
+  background: var(--bg);
+}
+
+.student-detail {
+  overflow-x: auto;
+  padding: 0.75rem 0.85rem;
+}
+
+.student-detail-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.88rem;
+}
+
+.student-detail-table th,
+.student-detail-table td {
+  text-align: left;
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid var(--line);
+  white-space: normal;
+}
+
+.student-detail-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.student-detail-table th {
+  background: none;
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.detail-flag {
+  color: #a05a00;
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
 .remove-button {
   display: inline-flex;
   align-items: center;

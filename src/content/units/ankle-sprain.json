@@ -84,24 +84,24 @@
       "id": "q1",
       "question": "Which ligament is injured most often in an ankle sprain?",
       "choices": [
-        "Anterior talofibular ligament (ATFL)",
         "Deltoid ligament",
+        "Anterior talofibular ligament (ATFL)",
         "Calcaneofibular ligament (CFL)",
         "Posterior talofibular ligament (PTFL)"
       ],
-      "answerIndex": 0,
+      "answerIndex": 1,
       "explanation": "The ATFL is the weakest ankle ligament and the first stressed during an inversion sprain, making it the most commonly sprained ligament in the body."
     },
     {
       "id": "q2",
       "question": "A basketball player lands on another player's foot and her ankle rolls inward, sole turning toward the midline. What mechanism is this?",
       "choices": [
-        "Inversion sprain",
         "Eversion sprain",
         "High ankle (syndesmotic) sprain",
-        "Achilles strain"
+        "Achilles strain",
+        "Inversion sprain"
       ],
-      "answerIndex": 0,
+      "answerIndex": 3,
       "explanation": "The foot rolling inward is inversion — the mechanism in about 85% of ankle sprains — and it stresses the lateral ligaments, ATFL first."
     },
     {
@@ -120,36 +120,36 @@
       "id": "q4",
       "question": "An athlete cannot take four steps and is tender directly on the tip of the lateral malleolus. What should happen next?",
       "choices": [
-        "Refer for X-ray — these findings meet the Ottawa Ankle Rules",
         "Tape the ankle and return to play with a brace",
         "Ice for 20 minutes and re-test walking",
+        "Refer for X-ray — these findings meet the Ottawa Ankle Rules",
         "Perform an anterior drawer test yourself to rule out a tear"
       ],
-      "answerIndex": 0,
+      "answerIndex": 2,
       "explanation": "Bony malleolar tenderness plus inability to bear weight for 4 steps are Ottawa Ankle Rules criteria — this athlete needs imaging to rule out a fracture."
     },
     {
       "id": "q5",
       "question": "Which finding best fits a Grade II sprain?",
       "choices": [
-        "Partial ligament tear with obvious swelling, bruising, and painful weight bearing",
         "Ligament stretched with mild swelling and full ability to play",
+        "Partial ligament tear with obvious swelling, bruising, and painful weight bearing",
         "Complete rupture with gross instability and inability to bear weight",
         "Muscle tear in the calf with cramping"
       ],
-      "answerIndex": 0,
+      "answerIndex": 1,
       "explanation": "Grade II is a partial tear: clear swelling and bruising, some laxity, and painful (but usually possible) weight bearing. Grade I is a stretch; Grade III is a complete rupture."
     },
     {
       "id": "q6",
       "question": "Why are eversion sprains much less common than inversion sprains?",
       "choices": [
-        "The deltoid ligament is strong and the fibula blocks extreme eversion",
         "The ATFL prevents the foot from rolling outward",
         "Athletes only cut and jump toward the midline",
-        "The Achilles tendon locks the ankle in eversion"
+        "The Achilles tendon locks the ankle in eversion",
+        "The deltoid ligament is strong and the fibula blocks extreme eversion"
       ],
-      "answerIndex": 0,
+      "answerIndex": 3,
       "explanation": "The medial side is protected by the strong deltoid ligament, and the longer lateral malleolus (fibula) physically limits eversion — so eversion sprains are rare but often severe."
     },
     {
@@ -168,12 +168,12 @@
       "id": "q8",
       "question": "Which exercise type is best proven to prevent repeat ankle sprains during rehab?",
       "choices": [
-        "Balance training, like single-leg stands on a wobble board",
         "Long-term immobilization in a cast",
         "Upper-body strength training",
+        "Balance training, like single-leg stands on a wobble board",
         "Static stretching only"
       ],
-      "answerIndex": 0,
+      "answerIndex": 2,
       "explanation": "Balance (proprioceptive) training retrains the ankle's position sense and is the best-supported way to cut re-sprain risk. Long immobilization actually worsens outcomes for most sprains."
     }
   ],
