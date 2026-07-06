@@ -4,16 +4,30 @@ import { getUnit } from '../content/index.js'
 import { recordQuizResult, PASS_THRESHOLD } from '../lib/progress.js'
 import NotFoundPage from './NotFoundPage.jsx'
 
+function shuffled(n) {
+  const order = [...Array(n).keys()]
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[order[i], order[j]] = [order[j], order[i]]
+  }
+  return order
+}
+
 // One question at a time: pick an answer, see the explanation, move on.
+// Choice order is shuffled per attempt so answer positions can't be memorized.
 // Score is recorded once at the end of the attempt.
 export default function QuizPage() {
   const { unitId } = useParams()
   const unit = getUnit(unitId)
 
   const [index, setIndex] = useState(0)
-  const [selected, setSelected] = useState(null) // choice index for current question
+  const [selected, setSelected] = useState(null) // original choice index for current question
   const [correctCount, setCorrectCount] = useState(0)
   const [finished, setFinished] = useState(false)
+  // One shuffled display order per question, regenerated each attempt.
+  const [orders, setOrders] = useState(() =>
+    (unit?.quiz ?? []).map((q) => shuffled(q.choices.length)),
+  )
 
   if (!unit) return <NotFoundPage />
   const questions = unit.quiz
@@ -23,6 +37,7 @@ export default function QuizPage() {
     setSelected(null)
     setCorrectCount(0)
     setFinished(false)
+    setOrders(questions.map((q) => shuffled(q.choices.length)))
   }
 
   if (finished) {
@@ -88,15 +103,20 @@ export default function QuizPage() {
       </p>
       <h1 className="quiz-question">{question.question}</h1>
       <div className="quiz-choices">
-        {question.choices.map((choice, i) => {
+        {orders[index].map((choiceIndex) => {
           let cls = 'quiz-choice'
           if (answered) {
-            if (i === question.answerIndex) cls += ' quiz-choice-correct'
-            else if (i === selected) cls += ' quiz-choice-wrong'
+            if (choiceIndex === question.answerIndex) cls += ' quiz-choice-correct'
+            else if (choiceIndex === selected) cls += ' quiz-choice-wrong'
           }
           return (
-            <button key={i} className={cls} onClick={() => choose(i)} disabled={answered}>
-              {choice}
+            <button
+              key={choiceIndex}
+              className={cls}
+              onClick={() => choose(choiceIndex)}
+              disabled={answered}
+            >
+              {question.choices[choiceIndex]}
             </button>
           )
         })}
