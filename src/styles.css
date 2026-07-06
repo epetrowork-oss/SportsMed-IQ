@@ -69,6 +69,9 @@ body {
 }
 
 .app-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: #d7e6ea;
   text-decoration: none;
   padding: 0.35rem 0.75rem;
@@ -223,7 +226,10 @@ h2 {
 /* Buttons */
 
 .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 0.5rem;
@@ -326,6 +332,9 @@ h2 {
 }
 
 .quiz-choice {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
   text-align: left;
   background: var(--card);
   border: 1.5px solid var(--line);
@@ -419,6 +428,7 @@ h2 {
 
 .table-toolbar select {
   font: inherit;
+  min-height: 44px;
   padding: 0.3rem 0.5rem;
   border: 1.5px solid var(--line);
   border-radius: 0.4rem;
@@ -479,6 +489,11 @@ th {
 }
 
 .remove-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
   background: none;
   border: none;
   color: var(--ink-soft);
@@ -498,6 +513,7 @@ th {
 .text-input {
   width: 100%;
   max-width: 24rem;
+  min-height: 44px;
   padding: 0.55rem 0.75rem;
   font-size: 1rem;
   border: 1.5px solid var(--line);
