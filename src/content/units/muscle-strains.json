@@ -1,0 +1,213 @@
+{
+  "id": "muscle-strains",
+  "title": "Muscle Strains",
+  "category": "Muscle & Soft Tissue",
+  "summary": "Pulled hamstrings, groins, and quads: how muscles tear, how to grade and treat strains, and why athletes re-injure the same muscle.",
+  "minutes": 18,
+  "sections": [
+    {
+      "heading": "Strain vs. sprain — get the words right",
+      "body": [
+        "A strain is a stretch or tear of a MUSCLE or its TENDON (the tissue connecting muscle to bone). A sprain involves a ligament (bone to bone). Athletes and coaches mix these up constantly; sports medicine students don't get to.",
+        "Strains happen when a muscle is asked to produce force while it's lengthening — an 'eccentric' contraction. That's why they strike during explosive moments: accelerating into a sprint, decelerating suddenly, kicking, or reaching into an awkward lunge."
+      ]
+    },
+    {
+      "heading": "Where and why strains happen",
+      "body": [
+        "The muscles most often strained cross TWO joints, which exposes them to stretch at both ends:"
+      ],
+      "list": [
+        "Hamstrings (cross hip and knee) — the classic sprinter's injury; sudden grab in the back of the thigh at full stride.",
+        "Quadriceps, especially rectus femoris (crosses hip and knee) — kicking and sprinting sports.",
+        "Groin/adductors — cutting, skating, and change-of-direction sports.",
+        "Calf, especially gastrocnemius (crosses knee and ankle) — push-off injuries, common in older athletes ('tennis leg').",
+        "Risk factors: inadequate warm-up, fatigue, prior strain of the same muscle (the biggest one), muscle imbalance, and poor flexibility."
+      ]
+    },
+    {
+      "heading": "Grading strains",
+      "list": [
+        "Grade I (mild) — a few fibers overstretched or torn. Tightness or mild pain with activity, minimal strength loss, no visible defect. Days to ~2 weeks.",
+        "Grade II (moderate) — partial tear. Sudden sharp pain ('felt a grab or pull'), pain with contraction and stretch, notable strength loss, swelling, often bruising that appears a day or two later and drifts downward with gravity. Weeks to 2 months.",
+        "Grade III (severe) — complete rupture of the muscle or tendon. Sometimes a felt/heard pop, immediate loss of function, and possibly a visible or palpable gap or a balled-up muscle. Needs physician care; may require surgery."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Refer to a physician",
+        "text": "A felt pop with immediate loss of function, a visible gap or lump in the muscle, inability to bear weight or contract the muscle at all, numbness/tingling, massive swelling, or a suspected tendon rupture (e.g., can't push off — possible Achilles) all leave the training-room lane. When in doubt, refer out."
+      }
+    },
+    {
+      "heading": "Immediate care",
+      "body": [
+        "First 48–72 hours: PRICE. Protect the muscle (crutches for significant lower-limb strains), relative rest, ice 15–20 minutes at a time over a barrier, compression wrap, and elevation.",
+        "What NOT to do early: no aggressive stretching of a freshly torn muscle, no heat, no massage of the injured area, and no alcohol — all of these increase bleeding and swelling inside the muscle in the acute phase (remember HARM: Heat, Alcohol, Running, Massage).",
+        "After the acute phase, healing muscle needs progressive loading, not total rest: gentle pain-free range of motion, then isometrics, then strengthening through range — with eccentric work (the Nordic hamstring curl is the famous example) as the cornerstone for hamstrings."
+      ]
+    },
+    {
+      "heading": "Why re-injury happens",
+      "body": [
+        "The single biggest risk factor for a muscle strain is a previous strain of the same muscle. Scar tissue is stiffer and weaker than muscle, and athletes often return before the muscle regains full strength and length.",
+        "Return-to-play checklist: full pain-free range of motion equal to the other side, strength near-equal to the other side, no pain or apprehension during sport-specific movements at full speed (sprinting, cutting, kicking). 'It only hurts a little when I sprint' is a failed test, not a passing one.",
+        "Prevention that actually works: proper warm-up with dynamic (not static-only) movement, eccentric strengthening programs, managing fatigue late in games and seasons, and finishing rehab completely after any strain."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Why bruising shows up 'in the wrong place'",
+        "text": "Blood from a torn muscle tracks downward with gravity between tissue layers, so a hamstring tear often bruises behind the knee days later. A drifting, gravity-following bruise after a 'pulled muscle' is normal — but document it and make sure the injury was evaluated."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A sprinter suddenly grabs the back of her thigh mid-race and pulls up limping. What kind of injury is this, most likely?",
+      "choices": [
+        "A hamstring strain — muscle torn during eccentric contraction at full stride",
+        "A hamstring sprain — the ligament behind the thigh",
+        "A femur fracture",
+        "Sciatica"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sudden posterior thigh pain at full sprinting stride is the classic hamstring strain — a muscle/tendon injury (strain), not a ligament injury (sprain)."
+    },
+    {
+      "id": "q2",
+      "question": "What distinguishes a strain from a sprain?",
+      "choices": [
+        "Strain = muscle or tendon; sprain = ligament",
+        "Strain = ligament; sprain = muscle",
+        "Strains only happen in the legs",
+        "They are the same injury with different severities"
+      ],
+      "answerIndex": 0,
+      "explanation": "Strain: muscle or its tendon. Sprain: ligament (bone-to-bone). The precision matters for evaluation and care."
+    },
+    {
+      "id": "q3",
+      "question": "Why are hamstrings, rectus femoris, and gastrocnemius strained so often?",
+      "choices": [
+        "They cross two joints, exposing them to stretch at both ends",
+        "They are the smallest muscles in the body",
+        "They have no blood supply",
+        "They only contract concentrically"
+      ],
+      "answerIndex": 0,
+      "explanation": "Two-joint muscles get lengthened at both ends while producing force — the eccentric overload that tears fibers."
+    },
+    {
+      "id": "q4",
+      "question": "An athlete 'felt a pop' in his calf, can't push off at all, and you can feel a gap in the muscle. Grade and action?",
+      "choices": [
+        "Grade III — complete rupture; immobilize and refer to a physician",
+        "Grade I — stretch it and return to play",
+        "Grade II — tape it and re-check tomorrow",
+        "Cramp — have him drink a sports drink"
+      ],
+      "answerIndex": 0,
+      "explanation": "Pop + loss of function + palpable defect = complete (Grade III) rupture, possibly involving the Achilles. That's physician territory, not training-room care."
+    },
+    {
+      "id": "q5",
+      "question": "Which of these is appropriate in the first 48 hours after a moderate quad strain?",
+      "choices": [
+        "Ice over a barrier, compression wrap, and elevation",
+        "A hot bath to relax the muscle",
+        "Deep massage of the torn area",
+        "Aggressive stretching to prevent scar tissue"
+      ],
+      "answerIndex": 0,
+      "explanation": "Acute care is PRICE. Heat, massage, aggressive stretching, running, and alcohol (HARM) all increase bleeding and swelling inside a freshly torn muscle."
+    },
+    {
+      "id": "q6",
+      "question": "Two days after a hamstring strain, bruising appears behind the athlete's knee. What does this mean?",
+      "choices": [
+        "Blood from the tear tracked downward with gravity — expected, but document it",
+        "The athlete has a new, separate knee injury",
+        "The strain is healed and the athlete can return",
+        "This proves the injury was actually a sprain"
+      ],
+      "answerIndex": 0,
+      "explanation": "Blood between tissue layers drifts down with gravity, so bruising often surfaces below the actual tear a day or two later. Normal course — but the injury should be evaluated and documented."
+    },
+    {
+      "id": "q7",
+      "question": "What is the single biggest risk factor for a hamstring strain?",
+      "choices": [
+        "A previous strain of the same muscle",
+        "Being tall",
+        "Playing on grass instead of turf",
+        "Wearing compression shorts"
+      ],
+      "answerIndex": 0,
+      "explanation": "Prior strain is the strongest predictor — scar tissue plus incomplete rehab set up the re-tear. Finishing rehabilitation fully is the best protection."
+    },
+    {
+      "id": "q8",
+      "question": "An athlete says his strained groin 'only hurts a little' when he cuts at full speed. Is he ready to return?",
+      "choices": [
+        "No — return requires pain-free sport-specific movement at full speed",
+        "Yes — some pain during play is expected after any strain",
+        "Yes, if he tapes it tightly",
+        "Only if the coach needs him for the game"
+      ],
+      "answerIndex": 0,
+      "explanation": "Pain during full-speed sport movement is a failed return test. Returning now is how mild strains become chronic, season-ruining ones."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Strain vs. sprain",
+      "back": "Strain = muscle or tendon. Sprain = ligament. (Same as ankle unit — this distinction is everywhere.)"
+    },
+    {
+      "id": "f2",
+      "front": "Eccentric contraction",
+      "back": "Muscle producing force WHILE lengthening — the loading condition where most strains happen (sprinting, decelerating, kicking)."
+    },
+    {
+      "id": "f3",
+      "front": "Most commonly strained muscle groups",
+      "back": "Hamstrings, quadriceps (rectus femoris), groin/adductors, calf (gastrocnemius) — all two-joint muscles."
+    },
+    {
+      "id": "f4",
+      "front": "Strain grades I / II / III",
+      "back": "I = few fibers, mild pain, little strength loss. II = partial tear, sharp pain, weakness, delayed bruising. III = complete rupture, pop, loss of function, possible gap — refer."
+    },
+    {
+      "id": "f5",
+      "front": "HARM (avoid in first 48–72h)",
+      "back": "Heat, Alcohol, Running, Massage — all increase bleeding and swelling in a fresh muscle tear. Use PRICE instead."
+    },
+    {
+      "id": "f6",
+      "front": "Delayed, drifting bruise after a strain",
+      "back": "Blood tracks downward with gravity between tissue layers — bruising often appears below the tear days later. Expected, but document and evaluate."
+    },
+    {
+      "id": "f7",
+      "front": "#1 risk factor for muscle strain",
+      "back": "A previous strain of the same muscle — scar tissue plus incomplete rehab."
+    },
+    {
+      "id": "f8",
+      "front": "Nordic hamstring curl",
+      "back": "The signature eccentric-strengthening exercise shown to reduce hamstring strain rates."
+    },
+    {
+      "id": "f9",
+      "front": "Return-to-play test after a strain",
+      "back": "Full pain-free motion, near-equal strength to the other side, and pain-free sport-specific movement at FULL speed. 'Hurts a little' = not ready."
+    },
+    {
+      "id": "f10",
+      "front": "Grade III red flags",
+      "back": "Felt/heard pop, immediate loss of function, visible or palpable gap, balled-up muscle — immobilize and refer to a physician."
+    }
+  ]
+}

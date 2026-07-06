@@ -1,0 +1,217 @@
+{
+  "id": "wound-care",
+  "title": "Wound Care & Bleeding Control",
+  "category": "Acute Care & First Aid",
+  "summary": "Manage cuts, abrasions, and serious bleeding safely — gloves on, pressure first, and know which wounds need more than a bandage.",
+  "minutes": 18,
+  "sections": [
+    {
+      "heading": "Protect yourself first",
+      "body": [
+        "Before touching any wound, put on disposable gloves. Bloodborne pathogens — hepatitis B, hepatitis C, and HIV — can be transmitted through contact with blood, and universal precautions mean treating ALL blood as potentially infectious, no matter whose it is.",
+        "After care: remove gloves without touching their outside surface, dispose of blood-contaminated materials in a biohazard bag, and wash your hands thoroughly even though you wore gloves. Any surface with blood on it (mats, benches, equipment) gets cleaned with an approved disinfectant before reuse, and an athlete with blood on their uniform can't return until it's addressed."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "The rule that never bends",
+        "text": "No gloves, no wound care. If gloves aren't available, improvise a barrier (plastic bag, multiple layers of gauze held from the clean side) and have the athlete apply pressure to their own wound while you direct them."
+      }
+    },
+    {
+      "heading": "Types of open wounds",
+      "list": [
+        "Abrasion — skin scraped off by friction ('turf burn,' 'raspberry'). Shallow but dirty; infection is the main risk.",
+        "Laceration — a cut with jagged or smooth edges from a blow or sharp object. May need closure (stitches/glue).",
+        "Incision — a clean, straight cut, typically from something sharp. Edges line up well but can bleed freely.",
+        "Puncture — a small entry hole from a pointed object (spike, nail). Deceptively minor-looking; deep contamination and tetanus risk.",
+        "Avulsion — skin or tissue torn partially or completely away. Preserve any torn tissue; control bleeding."
+      ]
+    },
+    {
+      "heading": "Controlling bleeding",
+      "body": [
+        "Direct pressure is the first and most effective step for almost all external bleeding: press firmly on the wound with sterile gauze or the cleanest material available. Most bleeding stops within several minutes of firm, continuous pressure.",
+        "If blood soaks through, add more gauze ON TOP — never peel off the soaked layer, because that tears away the forming clot. Keep pressing.",
+        "Severe, life-threatening limb bleeding that direct pressure cannot control (spurting blood, rapid pooling) calls for a tourniquet applied 2–3 inches above the wound (not over a joint), tightened until bleeding stops, with the application time written down. Tourniquets are a 911-level intervention — once on, only medical professionals remove them."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Call 911 / refer immediately",
+        "text": "Spurting or uncontrollable bleeding, deep wounds with visible fat/muscle/bone, punctures to the chest, abdomen, or neck, embedded objects (stabilize in place — never pull them out), signs of shock (pale, cold, clammy, rapid weak pulse, confusion), amputations, or any wound with numbness or inability to move below it."
+      }
+    },
+    {
+      "heading": "Cleaning and dressing minor wounds",
+      "body": [
+        "Once bleeding is controlled: wash your gloved hands' surroundings, then clean the wound with clean running water or saline — flush generously to remove dirt and debris. Avoid pouring hydrogen peroxide or alcohol INTO the wound; they damage healing tissue. Antiseptic goes on intact skin around the wound.",
+        "Cover with a sterile, non-stick dressing and secure it. Change dressings daily (or whenever wet/dirty) and watch for infection over the following days: increasing redness spreading from the wound, warmth, swelling, pus, red streaks moving toward the heart, or fever. Any of those means physician referral.",
+        "Abrasions from turf or track deserve extra-thorough flushing — embedded grit that stays in the skin causes infection and 'tattooing.'"
+      ]
+    },
+    {
+      "heading": "Special situations",
+      "body": [
+        "Nosebleeds: sit the athlete upright, leaning slightly FORWARD (leaning back sends blood down the throat), and pinch the soft part of the nose continuously for 10 minutes. Refer if it won't stop or followed a significant head impact.",
+        "Blisters: prevention beats treatment (proper shoes, moisture control). An intact blister is a sterile dressing — leave it, pad around it. Drain only when it prevents play, using sterile technique, and never remove the roof of skin.",
+        "Tetanus: any puncture or dirty wound should prompt a check — a booster is needed if it has been more than 10 years (5 for dirty wounds) since the last one."
+      ]
+    },
+    {
+      "heading": "Return to play with a wound",
+      "body": [
+        "An athlete can usually return once bleeding is fully controlled and the wound is covered with a dressing that will stay put through activity. Rules in most sports REQUIRE removal from play for active bleeding and prohibit participation with exposed blood on skin or uniform.",
+        "Wounds that need closure (deep lacerations, gaping edges, facial cuts) should see a physician the same day — closure works best within hours of injury."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A teammate is bleeding heavily from a cut. You have no gloves. What is the best immediate action?",
+      "choices": [
+        "Have the athlete press on their own wound while you find a barrier",
+        "Apply direct pressure with your bare hands — bleeding comes first",
+        "Wait for the athletic trainer and do nothing",
+        "Pour water on the wound from a distance"
+      ],
+      "answerIndex": 0,
+      "explanation": "Universal precautions are non-negotiable: never contact blood bare-handed. The athlete can apply their own pressure effectively while you improvise a barrier and direct care."
+    },
+    {
+      "id": "q2",
+      "question": "Blood has soaked through the gauze you're pressing on a laceration. What do you do?",
+      "choices": [
+        "Add fresh gauze on top and keep pressing",
+        "Peel off the soaked gauze and replace it with clean gauze",
+        "Stop pressure to let the wound air out",
+        "Switch immediately to a tourniquet"
+      ],
+      "answerIndex": 0,
+      "explanation": "Removing soaked gauze tears away the forming clot and restarts bleeding. Layer new gauze on top and maintain continuous pressure."
+    },
+    {
+      "id": "q3",
+      "question": "Which wound type looks minor but carries high risk of deep contamination and tetanus?",
+      "choices": ["Puncture", "Abrasion", "Incision", "Bruise"],
+      "answerIndex": 0,
+      "explanation": "Punctures drive contaminants deep through a small entry hole that seals over — classic setup for infection and tetanus. They deserve more respect than their appearance suggests."
+    },
+    {
+      "id": "q4",
+      "question": "An athlete has a nail embedded in their foot. Correct field response?",
+      "choices": [
+        "Stabilize the object in place and get medical care — do not pull it out",
+        "Pull it out quickly and apply pressure",
+        "Twist it out slowly to minimize tearing",
+        "Have the athlete walk it off to keep blood flowing"
+      ],
+      "answerIndex": 0,
+      "explanation": "An embedded object may be plugging the very vessels it damaged. Removing it can unleash serious bleeding — stabilize it and refer."
+    },
+    {
+      "id": "q5",
+      "question": "What goes directly INTO a fresh wound to clean it?",
+      "choices": [
+        "Clean running water or saline",
+        "Hydrogen peroxide",
+        "Rubbing alcohol",
+        "Iodine poured into the wound bed"
+      ],
+      "answerIndex": 0,
+      "explanation": "Generous flushing with water or saline removes debris without harming tissue. Peroxide and alcohol damage healing cells — antiseptics belong on the intact skin around the wound."
+    },
+    {
+      "id": "q6",
+      "question": "Correct position for an athlete with a nosebleed?",
+      "choices": [
+        "Sitting upright, leaning slightly forward, pinching the soft part of the nose",
+        "Lying flat on their back",
+        "Head tilted back to keep blood in",
+        "Standing with arms overhead"
+      ],
+      "answerIndex": 0,
+      "explanation": "Leaning forward keeps blood out of the throat and airway; continuous pinching of the soft nose for about 10 minutes stops most nosebleeds."
+    },
+    {
+      "id": "q7",
+      "question": "Three days after a turf abrasion, an athlete shows spreading redness, warmth, and red streaks up the leg. What now?",
+      "choices": [
+        "Physician referral — these are signs of spreading infection",
+        "More antibiotic ointment and re-check next week",
+        "Ice and compression",
+        "Drain it with a sterile needle"
+      ],
+      "answerIndex": 0,
+      "explanation": "Spreading redness, warmth, and red streaking toward the heart signal an advancing infection that needs medical treatment promptly."
+    },
+    {
+      "id": "q8",
+      "question": "When is a tourniquet appropriate?",
+      "choices": [
+        "Life-threatening limb bleeding that firm direct pressure cannot control",
+        "Any cut that bleeds through one gauze pad",
+        "All lower-leg wounds, as a precaution",
+        "Never — tourniquets are prohibited in first aid"
+      ],
+      "answerIndex": 0,
+      "explanation": "Tourniquets are for severe, uncontrollable limb hemorrhage: 2–3 inches above the wound, tight until bleeding stops, time recorded, 911 activated, removal only by medical professionals."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Universal precautions",
+      "back": "Treat ALL blood as potentially infectious: gloves before any wound care, biohazard disposal, hand washing after, disinfect contaminated surfaces."
+    },
+    {
+      "id": "f2",
+      "front": "First and most effective step for external bleeding",
+      "back": "Firm, continuous direct pressure on the wound with sterile gauze — most bleeding stops within minutes."
+    },
+    {
+      "id": "f3",
+      "front": "Gauze soaks through — what now?",
+      "back": "Add new layers ON TOP and keep pressing. Peeling off soaked gauze rips away the forming clot."
+    },
+    {
+      "id": "f4",
+      "front": "Five open wound types",
+      "back": "Abrasion (scrape), laceration (jagged cut), incision (clean cut), puncture (small deep hole), avulsion (tissue torn away)."
+    },
+    {
+      "id": "f5",
+      "front": "Embedded object rule",
+      "back": "Never pull it out — it may be plugging damaged vessels. Stabilize in place and refer for medical care."
+    },
+    {
+      "id": "f6",
+      "front": "Tourniquet rules",
+      "back": "Only for life-threatening limb bleeding uncontrolled by pressure: 2–3 inches above the wound, not over a joint, note the time, 911 — professionals remove it."
+    },
+    {
+      "id": "f7",
+      "front": "What to flush a wound with (and what NOT)",
+      "back": "Clean running water or saline INTO the wound. Peroxide/alcohol damage tissue — they belong on intact skin around it only."
+    },
+    {
+      "id": "f8",
+      "front": "Signs a wound is infected",
+      "back": "Spreading redness, warmth, swelling, pus, red streaks toward the heart, fever — all mean physician referral."
+    },
+    {
+      "id": "f9",
+      "front": "Nosebleed care",
+      "back": "Sit upright, lean slightly FORWARD, pinch the soft part of the nose 10 minutes straight. Refer if unstoppable or after head trauma."
+    },
+    {
+      "id": "f10",
+      "front": "Bleeding and return to play",
+      "back": "Active bleeding = out of play. Return once bleeding is controlled and the wound is covered with a secure dressing; no exposed blood on skin or uniform."
+    },
+    {
+      "id": "f11",
+      "front": "Blister care",
+      "back": "Intact blister = natural sterile dressing: leave it, pad around it. Drain only if it prevents play, sterile technique, never remove the skin roof."
+    }
+  ]
+}
