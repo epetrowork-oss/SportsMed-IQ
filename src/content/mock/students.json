@@ -1,0 +1,47 @@
+{
+  "note": "Mock roster used by the teacher dashboard until real accounts exist. Shape per student: progress[unitId] = { lessonRead, flashcardsReviewed, bestQuizScore (0-1 or null), quizAttempts }.",
+  "students": [
+    {
+      "id": "s1",
+      "name": "Avery Johnson",
+      "progress": {
+        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 1.0, "quizAttempts": 1 }
+      }
+    },
+    {
+      "id": "s2",
+      "name": "Marcus Lee",
+      "progress": {
+        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": false, "bestQuizScore": 0.875, "quizAttempts": 2 }
+      }
+    },
+    {
+      "id": "s3",
+      "name": "Priya Natarajan",
+      "progress": {
+        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 0.625, "quizAttempts": 1 }
+      }
+    },
+    {
+      "id": "s4",
+      "name": "Diego Ramirez",
+      "progress": {
+        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 0.75, "quizAttempts": 3 }
+      }
+    },
+    {
+      "id": "s5",
+      "name": "Emma Kowalski",
+      "progress": {
+        "ankle-sprain": { "lessonRead": false, "flashcardsReviewed": false, "bestQuizScore": null, "quizAttempts": 0 }
+      }
+    },
+    {
+      "id": "s6",
+      "name": "Jordan Whitfield",
+      "progress": {
+        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": false, "bestQuizScore": null, "quizAttempts": 0 }
+      }
+    }
+  ]
+}
