@@ -1,0 +1,224 @@
+{
+  "id": "knee-acl",
+  "title": "Knee Injuries: ACL & Friends",
+  "category": "Lower Extremity Injuries",
+  "summary": "The four major knee ligaments, the classic non-contact ACL tear, the 'unhappy triad,' and what to do when a knee gives out on the field.",
+  "minutes": 20,
+  "sections": [
+    {
+      "heading": "Anatomy: four ligaments, two menisci",
+      "body": [
+        "The knee joins the femur (thigh bone) and tibia (shin bone), with the patella (kneecap) riding in front. Because the bones themselves provide little stability, the knee depends heavily on soft tissue:"
+      ],
+      "list": [
+        "ACL (anterior cruciate ligament) — inside the joint; stops the tibia from sliding forward and controls rotation. The famous one.",
+        "PCL (posterior cruciate ligament) — the ACL's partner; stops the tibia from sliding backward. Injured by a direct blow to the front of a bent knee ('dashboard injury').",
+        "MCL (medial collateral ligament) — inside edge of the knee; resists force pushing the knee inward (valgus). Most commonly injured by a blow to the OUTSIDE of the knee.",
+        "LCL (lateral collateral ligament) — outside edge; resists force from the inside. Least commonly injured.",
+        "Menisci (medial and lateral) — two C-shaped fibrocartilage pads between femur and tibia that absorb shock and distribute load. Torn by twisting on a planted foot, often along with ligament injuries."
+      ]
+    },
+    {
+      "heading": "How ACL tears happen",
+      "body": [
+        "Around 70% of ACL tears are non-contact: the athlete plants, cuts, pivots, or lands from a jump with the knee nearly straight and collapsing inward — no opponent involved. The athlete typically hears or feels a 'pop,' the knee gives way, and swelling develops fast, usually within 2 hours, because the torn ligament bleeds into the joint (hemarthrosis).",
+        "Female athletes tear their ACLs at roughly 2–8 times the rate of male athletes in comparable sports — factors include landing mechanics, anatomy, and neuromuscular control. This is why jump-landing training programs matter for injury prevention.",
+        "The classic contact pattern is a blow to the outside of a planted knee, driving it inward. When that force is big enough, it can produce the 'unhappy triad': torn ACL + MCL + medial meniscus."
+      ]
+    },
+    {
+      "heading": "Recognizing a serious knee injury on the field",
+      "body": [
+        "History: 'Did you hear a pop?' 'Did the knee give out?' 'Could you keep playing?' A pop plus giving way plus rapid swelling is an ACL tear until proven otherwise.",
+        "Observation: compare knees. Rapid swelling (within 2 hours) suggests bleeding in the joint — ligament tear or fracture. Slower overnight swelling is more typical of meniscus irritation.",
+        "Function: an athlete who cannot bear weight, whose knee buckles when they try, or whose knee is locked (won't fully straighten — classic for a displaced meniscus fragment) does not return to play.",
+        "Special tests like the Lachman test (the most reliable exam for ACL laxity), anterior drawer, and valgus/varus stress tests are performed by the athletic trainer or physician — know their names and purpose, not how to perform them on an injured athlete."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Refer immediately",
+        "text": "Obvious deformity or suspected dislocation (call 911 and do not relocate a dislocated kneecap or knee yourself), a felt/heard pop with rapid swelling, inability to bear weight, a knee locked short of full extension, numbness or absent pulses below the knee, or any gross instability. A dislocated knee (tibiofemoral) can tear the popliteal artery — that limb is at risk, and it's a true emergency."
+      }
+    },
+    {
+      "heading": "Immediate care",
+      "body": [
+        "For a suspected ligament injury without emergency signs: remove from play, PRICE (Protection, Rest, Ice, Compression, Elevation), and support the knee — crutches or an immobilizer if weight bearing is painful. Refer to a physician for evaluation and imaging (MRI confirms ligament and meniscus tears; X-ray rules out fracture).",
+        "Do not test the knee's stability yourself, do not let the athlete 'walk it off,' and never tape a freshly injured knee back into a game."
+      ]
+    },
+    {
+      "heading": "Treatment and return",
+      "body": [
+        "Complete ACL tears in athletes who want to return to cutting or pivoting sports usually require surgical reconstruction (rebuilding the ligament with a graft) followed by 9–12 months of rehabilitation. Returning before roughly 9 months sharply raises re-tear risk in adolescents.",
+        "Isolated MCL sprains, by contrast, usually heal WITHOUT surgery — the MCL has a good blood supply, and grade I–II injuries are managed with bracing and progressive rehab.",
+        "Rehab priorities: restore full extension early, rebuild quadriceps and hamstring strength, then retrain balance, landing, and cutting mechanics. Prevention programs (e.g., FIFA 11+) that train landing and deceleration mechanics measurably cut ACL injury rates — especially in female athletes."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Why the hamstrings matter",
+        "text": "The hamstrings pull the tibia backward — they're the ACL's muscular teammates. Strong hamstrings (and balanced hamstring-to-quad strength) reduce the forward tibial translation the ACL must resist, which is one reason strength programs protect knees."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A basketball player lands from a rebound, feels a pop, her knee buckles, and it balloons with swelling within an hour. Most likely injury?",
+      "choices": [
+        "ACL tear",
+        "Grade I MCL sprain",
+        "Patellar tendinitis",
+        "Quadriceps contusion"
+      ],
+      "answerIndex": 0,
+      "explanation": "Pop + giving way + rapid swelling (bleeding into the joint) after a jump landing is the classic ACL story — and most ACL tears are exactly this kind of non-contact mechanism."
+    },
+    {
+      "id": "q2",
+      "question": "A blow to the OUTSIDE of a planted knee most directly stresses which ligament?",
+      "choices": [
+        "MCL — the force drives the knee inward against the medial ligament",
+        "LCL — the ligament nearest the blow always tears",
+        "PCL — it resists all sideways force",
+        "Patellar ligament"
+      ],
+      "answerIndex": 0,
+      "explanation": "A lateral blow forces the knee into valgus (inward collapse), stretching the ligament on the opposite (medial) side — the MCL. Big forces can add the ACL and medial meniscus: the unhappy triad."
+    },
+    {
+      "id": "q3",
+      "question": "What three structures make up the 'unhappy triad'?",
+      "choices": [
+        "ACL, MCL, and medial meniscus",
+        "ACL, PCL, and LCL",
+        "PCL, LCL, and lateral meniscus",
+        "Patella, quadriceps tendon, and ACL"
+      ],
+      "answerIndex": 0,
+      "explanation": "A strong valgus force on a planted knee can tear the ACL, MCL, and medial meniscus together — the classic 'unhappy triad.'"
+    },
+    {
+      "id": "q4",
+      "question": "An injured knee is stuck and won't fully straighten. What does this 'locking' classically suggest?",
+      "choices": [
+        "A displaced meniscus fragment blocking the joint",
+        "Normal post-game tightness",
+        "A bruised kneecap",
+        "Weak quadriceps"
+      ],
+      "answerIndex": 0,
+      "explanation": "A torn meniscus fragment can flip into the joint and mechanically block full extension. A locked knee needs physician referral, not stretching."
+    },
+    {
+      "id": "q5",
+      "question": "Which finding after a knee injury is a call-911 emergency rather than standard referral?",
+      "choices": [
+        "A deformed knee with no pulse felt below the injury",
+        "Swelling that appears the next morning",
+        "Mild tenderness on the inside of the knee",
+        "Soreness when squatting"
+      ],
+      "answerIndex": 0,
+      "explanation": "Deformity with absent pulses suggests knee dislocation with possible popliteal artery injury — the leg itself is at risk. Call 911 and do not attempt to relocate the joint."
+    },
+    {
+      "id": "q6",
+      "question": "Why do isolated MCL sprains usually heal without surgery while complete ACL tears usually don't?",
+      "choices": [
+        "The MCL has a good blood supply; the ACL sits inside the joint with poor healing capacity",
+        "The MCL is not a real ligament",
+        "ACL surgery is required by athletic rules",
+        "The MCL never tears completely"
+      ],
+      "answerIndex": 0,
+      "explanation": "Blood supply drives healing. The extra-articular MCL heals well with bracing and rehab; the intra-articular ACL bathes in joint fluid, heals poorly, and is usually reconstructed in cutting-sport athletes."
+    },
+    {
+      "id": "q7",
+      "question": "Which exam is considered the most reliable clinical test for ACL laxity (performed by the AT or physician)?",
+      "choices": [
+        "Lachman test",
+        "Ottawa knee shuffle",
+        "Thompson test",
+        "Straight leg raise"
+      ],
+      "answerIndex": 0,
+      "explanation": "The Lachman test assesses forward tibial translation and is the most sensitive clinical ACL exam. (The Thompson test is for the Achilles tendon.) Students learn what it tests — professionals perform it."
+    },
+    {
+      "id": "q8",
+      "question": "Which training approach measurably LOWERS non-contact ACL injury rates?",
+      "choices": [
+        "Neuromuscular programs that train landing and cutting mechanics",
+        "Avoiding all jumping in practice",
+        "Wearing two knee braces on healthy knees",
+        "Stretching only after games"
+      ],
+      "answerIndex": 0,
+      "explanation": "Prevention programs like FIFA 11+ that train landing, deceleration, and knee-alignment control reduce ACL injuries — especially in female athletes, who tear ACLs at several times the male rate."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Four major knee ligaments",
+      "back": "ACL (stops tibia sliding forward), PCL (stops tibia sliding backward), MCL (resists inward/valgus force), LCL (resists outward/varus force)."
+    },
+    {
+      "id": "f2",
+      "front": "Menisci",
+      "back": "Two C-shaped fibrocartilage pads (medial and lateral) between femur and tibia — shock absorption and load distribution. Torn by twisting on a planted foot."
+    },
+    {
+      "id": "f3",
+      "front": "Classic ACL tear story",
+      "back": "Non-contact plant/cut/landing, heard or felt a 'pop,' knee gives way, rapid swelling within ~2 hours (bleeding into the joint)."
+    },
+    {
+      "id": "f4",
+      "front": "What fraction of ACL tears are non-contact?",
+      "back": "About 70% — plant, pivot, or landing with the knee collapsing inward, no opponent contact."
+    },
+    {
+      "id": "f5",
+      "front": "Unhappy triad",
+      "back": "ACL + MCL + medial meniscus, torn together by a strong blow to the outside of a planted knee (valgus force)."
+    },
+    {
+      "id": "f6",
+      "front": "Rapid swelling vs. overnight swelling",
+      "back": "Swelling within ~2 hours = bleeding in the joint (ligament tear/fracture). Slower overnight swelling = more typical of meniscus irritation."
+    },
+    {
+      "id": "f7",
+      "front": "Locked knee (won't fully extend)",
+      "back": "Classic sign of a displaced meniscus fragment blocking the joint — refer to a physician."
+    },
+    {
+      "id": "f8",
+      "front": "Knee dislocation danger",
+      "back": "A tibiofemoral dislocation can tear the popliteal artery — check pulses below the knee, call 911, never relocate it yourself."
+    },
+    {
+      "id": "f9",
+      "front": "Lachman test",
+      "back": "The most reliable clinical exam for ACL laxity — measures forward tibial translation. Performed by the AT/physician."
+    },
+    {
+      "id": "f10",
+      "front": "MCL vs. ACL healing",
+      "back": "MCL: good blood supply, usually heals with bracing + rehab. ACL: intra-articular, poor healing — complete tears usually need surgical reconstruction (9–12 months rehab)."
+    },
+    {
+      "id": "f11",
+      "front": "Why hamstring strength protects the ACL",
+      "back": "Hamstrings pull the tibia backward, reducing the forward translation the ACL must resist."
+    },
+    {
+      "id": "f12",
+      "front": "ACL risk in female athletes",
+      "back": "2–8× the rate of male athletes in comparable sports; landing-mechanics (neuromuscular) training programs measurably reduce the risk."
+    }
+  ]
+}

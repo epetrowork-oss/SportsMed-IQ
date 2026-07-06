@@ -41,6 +41,9 @@ localStorage.
 - ✅ Stage 2 — one complete unit end-to-end (ankle sprains: 7-section lesson,
   8-question quiz, 12 flashcards)
 - ✅ Stage 3 — minimal teacher dashboard (mock roster + live local progress)
+- ✅ Content expansion — 4 units across 3 categories (ankle sprains,
+  concussions, heat illness, knee/ACL), each added as JSON only, verified
+  end-to-end in the browser
 
 Not built yet (intentionally): accounts/auth, real student→teacher data sync,
-assigning content, additional units.
+assigning content.

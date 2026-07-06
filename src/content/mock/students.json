@@ -5,21 +5,25 @@
       "id": "s1",
       "name": "Avery Johnson",
       "progress": {
-        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 1.0, "quizAttempts": 1 }
+        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 1.0, "quizAttempts": 1 },
+        "concussion": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 0.875, "quizAttempts": 1 },
+        "heat-illness": { "lessonRead": true, "flashcardsReviewed": false, "bestQuizScore": null, "quizAttempts": 0 }
       }
     },
     {
       "id": "s2",
       "name": "Marcus Lee",
       "progress": {
-        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": false, "bestQuizScore": 0.875, "quizAttempts": 2 }
+        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": false, "bestQuizScore": 0.875, "quizAttempts": 2 },
+        "concussion": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 0.75, "quizAttempts": 2 }
       }
     },
     {
       "id": "s3",
       "name": "Priya Natarajan",
       "progress": {
-        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 0.625, "quizAttempts": 1 }
+        "ankle-sprain": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 0.625, "quizAttempts": 1 },
+        "knee-acl": { "lessonRead": true, "flashcardsReviewed": true, "bestQuizScore": 1.0, "quizAttempts": 1 }
       }
     },
     {
