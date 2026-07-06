@@ -31,9 +31,13 @@ localStorage.
   score ≥ 70%.
 - `src/pages/` — unit list, lesson, quiz (choice order shuffled per attempt),
   flashcards, teacher dashboard.
-- `src/content/mock/students.json` — mock roster for the teacher dashboard
-  until real accounts exist; the dashboard also shows a live row for the
-  current device.
+- `src/lib/share.js` + `src/pages/SyncPage.jsx` — cross-device sync without a
+  server: progress serializes to a copy/pasteable code (`SMIQ1.` + base64url
+  JSON). Loading a code on another device merges, keeping the best of both.
+- `src/lib/roster.js` — teacher roster: paste a student's code to add their
+  real progress to the dashboard (stored on the teacher's device). The sample
+  roster in `src/content/mock/students.json` shows only until the first real
+  student is added.
 
 ## Current status
 
@@ -44,6 +48,8 @@ localStorage.
 - ✅ Content expansion — 4 units across 3 categories (ankle sprains,
   concussions, heat illness, knee/ACL), each added as JSON only, verified
   end-to-end in the browser
+- ✅ Cross-device sync — offline progress codes: student Sync page
+  (export/import with best-of-both merge) and teacher add-student-by-code
 
-Not built yet (intentionally): accounts/auth, real student→teacher data sync,
+Not built yet (intentionally): accounts/auth, live server-based sync,
 assigning content.

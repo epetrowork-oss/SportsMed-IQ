@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import { getAllUnits } from '../content/index.js'
 import { useProgress, getUnitProgress, PASS_THRESHOLD } from '../lib/progress.js'
-import roster from '../content/mock/students.json'
+import { useRoster, addStudentFromCode, removeStudent } from '../lib/roster.js'
+import mockRoster from '../content/mock/students.json'
 
 // Same completion rule as the student side.
 function isComplete(p) {
@@ -16,7 +18,7 @@ function StatusCell({ progress }) {
   if (isComplete(progress)) {
     return <td className="cell-done">✓ Complete</td>
   }
-  if (!progress || (!progress.lessonRead && progress.quizAttempts === 0 && !progress.flashcardsReviewed)) {
+  if (!progress || (!progress.lessonRead && !progress.quizAttempts && !progress.flashcardsReviewed)) {
     return <td className="cell-progress">Not started</td>
   }
   const parts = []
@@ -27,21 +29,77 @@ function StatusCell({ progress }) {
   return <td className="cell-progress">{parts.join(' · ') || 'Started'}</td>
 }
 
+function AddStudentForm() {
+  const [code, setCode] = useState('')
+  const [result, setResult] = useState(null) // { ok, message }
+
+  function add() {
+    try {
+      const student = addStudentFromCode(code)
+      setResult({ ok: true, message: `Added ${student.name}.` })
+      setCode('')
+    } catch (err) {
+      setResult({ ok: false, message: err.message })
+    }
+  }
+
+  return (
+    <section className="add-student">
+      <h2>Add a student</h2>
+      <p className="field-hint">
+        Paste the progress code from the student's Sync page. Pasting a newer code for the
+        same name updates their row.
+      </p>
+      <textarea
+        className="code-box"
+        placeholder="Paste a student's progress code (starts with SMIQ1.)"
+        value={code}
+        onChange={(e) => {
+          setCode(e.target.value)
+          setResult(null)
+        }}
+        rows={3}
+      />
+      <div className="unit-actions">
+        <button className="button button-primary" onClick={add} disabled={!code.trim()}>
+          Add student
+        </button>
+      </div>
+      {result && (
+        <p className={result.ok ? 'import-ok' : 'import-error'} role="status">
+          {result.message}
+        </p>
+      )}
+    </section>
+  )
+}
+
 export default function TeacherPage() {
   useProgress() // include this device's live progress in the table
+  const { students } = useRoster()
   const units = getAllUnits()
+  const usingMock = students.length === 0
 
-  // Mock roster plus a live row for whoever is using this device,
-  // so the dashboard reflects real local data too.
+  // Real students imported by code; the mock roster only appears until the
+  // first real student is added. The last row is always live from this device.
   const rows = [
-    ...roster.students.map((s) => ({
-      id: s.id,
-      name: s.name,
-      progressFor: (unitId) => s.progress[unitId],
-    })),
+    ...(usingMock
+      ? mockRoster.students.map((s) => ({
+          id: s.id,
+          name: s.name,
+          removable: false,
+          progressFor: (unitId) => s.progress[unitId],
+        }))
+      : students.map((s) => ({
+          id: s.id,
+          name: s.name,
+          removable: true,
+          progressFor: (unitId) => s.progress[unitId],
+        }))),
     {
       id: 'local',
       name: 'You (this device)',
+      removable: false,
       progressFor: (unitId) => getUnitProgress(unitId),
     },
   ]
@@ -50,10 +108,10 @@ export default function TeacherPage() {
     <div className="page">
       <h1>Teacher dashboard</h1>
       <p className="empty-note">
-        Unit completion by student. A unit is complete when the lesson is read, the
-        flashcards are reviewed, and the best quiz score is at least{' '}
-        {Math.round(PASS_THRESHOLD * 100)}%. Roster data is mocked until accounts exist;
-        the last row is live from this device.
+        A unit is complete when the lesson is read, the flashcards are reviewed, and the best
+        quiz score is at least {Math.round(PASS_THRESHOLD * 100)}%.
+        {usingMock &&
+          ' Showing sample students — add a real student below and the samples disappear.'}
       </p>
 
       {units.map((unit) => {
@@ -73,6 +131,7 @@ export default function TeacherPage() {
               {units.map((unit) => (
                 <th key={unit.id}>{unit.title}</th>
               ))}
+              <th aria-label="Actions"></th>
             </tr>
           </thead>
           <tbody>
@@ -82,11 +141,25 @@ export default function TeacherPage() {
                 {units.map((unit) => (
                   <StatusCell key={unit.id} progress={row.progressFor(unit.id)} />
                 ))}
+                <td>
+                  {row.removable && (
+                    <button
+                      className="remove-button"
+                      onClick={() => removeStudent(row.id)}
+                      aria-label={`Remove ${row.name}`}
+                      title={`Remove ${row.name}`}
+                    >
+                      ✕
+                    </button>
+                  )}
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+
+      <AddStudentForm />
     </div>
   )
 }

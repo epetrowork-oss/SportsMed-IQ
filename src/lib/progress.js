@@ -18,10 +18,11 @@ const emptyUnit = () => ({
 function load() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    return raw ? JSON.parse(raw) : { units: {} }
+    const parsed = raw ? JSON.parse(raw) : {}
+    return { name: parsed.name ?? '', units: parsed.units ?? {} }
   } catch {
     // Corrupt or unavailable storage: start fresh rather than crash.
-    return { units: {} }
+    return { name: '', units: {} }
   }
 }
 
@@ -66,7 +67,31 @@ export function recordQuizResult(unitId, correct, total) {
 }
 
 export function resetAllProgress() {
-  save({ units: {} })
+  save({ ...state, units: {} })
+}
+
+export function setStudentName(name) {
+  save({ ...state, name: name.trim().slice(0, 60) })
+}
+
+// Merge imported progress into this device's progress, keeping the best of
+// both for every unit (booleans OR, scores/attempts max). Used when a student
+// loads their code on a second device that may already have some progress.
+export function mergeProgress(name, importedUnits) {
+  const merged = { ...state.units }
+  for (const [unitId, imp] of Object.entries(importedUnits)) {
+    const cur = merged[unitId] ?? emptyUnit()
+    merged[unitId] = {
+      lessonRead: cur.lessonRead || !!imp.lessonRead,
+      flashcardsReviewed: cur.flashcardsReviewed || !!imp.flashcardsReviewed,
+      bestQuizScore:
+        imp.bestQuizScore == null && cur.bestQuizScore == null
+          ? null
+          : Math.max(cur.bestQuizScore ?? 0, imp.bestQuizScore ?? 0),
+      quizAttempts: Math.max(cur.quizAttempts, imp.quizAttempts ?? 0),
+    }
+  }
+  save({ name: state.name || name, units: merged })
 }
 
 // --- reads ---

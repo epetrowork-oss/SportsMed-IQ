@@ -425,3 +425,76 @@ th {
 .cell-progress {
   color: var(--ink-soft);
 }
+
+.remove-button {
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+}
+
+.remove-button:hover {
+  background: var(--red-bg);
+  color: var(--red);
+}
+
+/* Sync page & code boxes */
+
+.text-input {
+  width: 100%;
+  max-width: 24rem;
+  padding: 0.55rem 0.75rem;
+  font-size: 1rem;
+  border: 1.5px solid var(--line);
+  border-radius: 0.5rem;
+  font-family: inherit;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: var(--brand);
+}
+
+.code-box {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  border: 1.5px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--card);
+  color: var(--ink);
+  resize: vertical;
+  word-break: break-all;
+}
+
+.code-box:focus {
+  outline: none;
+  border-color: var(--brand);
+}
+
+.field-hint {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin: 0.35rem 0 0;
+}
+
+.import-ok {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.import-error {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.add-student {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  max-width: 42rem;
+}

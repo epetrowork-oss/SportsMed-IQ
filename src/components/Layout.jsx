@@ -30,6 +30,7 @@ export default function Layout() {
           <NavLink to="/" end>
             Study
           </NavLink>
+          <NavLink to="/sync">Sync</NavLink>
           <NavLink to="/teacher">Teacher</NavLink>
         </nav>
         {!online && (
