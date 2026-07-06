@@ -1,0 +1,244 @@
+{
+  "id": "cold-exposure",
+  "title": "Cold Exposure & Hypothermia",
+  "category": "Environmental Emergencies",
+  "summary": "Recognize hypothermia and frostbite before they become emergencies — and know why wet, windy cold is more dangerous than a colder, dry day.",
+  "minutes": 18,
+  "sections": [
+    {
+      "heading": "Why cold exposure matters",
+      "body": [
+        "Cold-weather injuries show up anywhere athletes train or compete outdoors in low temperatures: late-season football and soccer games in November rain, cross country runners finishing a race soaked in sweat as the wind picks up, skiers and snowboarders exposed on a lift or a mountainside, and swimmers who train in open water that stays cold long after the air warms up.",
+        "The body works hard to keep its core — the brain, heart, and other vital organs — at a steady temperature near 98.6°F (37°C). Two things go wrong when that system is overwhelmed by cold: hypothermia, a drop in core body temperature, and frostbite, actual freezing of skin and tissue. Both are preventable and both give warning signs before they become emergencies — if you know what to look for."
+      ]
+    },
+    {
+      "heading": "How the body loses heat in the cold",
+      "body": [
+        "The body sheds heat to its environment in a few basic ways. Two matter most for athletes: conduction (direct heat loss into something colder that's touching the skin, like wet clothing, cold ground, or cold water) and convection (heat carried away by moving air, like wind stripping away the thin layer of warm air the body builds up next to the skin).",
+        "This is why 'wind chill' is a useful idea even without the physics: wind doesn't change the actual air temperature, but it dramatically increases how fast the body loses heat by convection. A windy, wet 40°F day can pull heat away from an athlete faster than a still, dry 20°F day.",
+        "That's also why wet-and-windy conditions are more dangerous than dry cold at the same temperature. Water conducts heat away from skin far faster than air does, and wind multiplies that effect. Rain-soaked football and soccer games, cold-water swim training, and windy mountain slopes are higher-risk than a calm, dry cold day — even if the thermometer reads about the same."
+      ]
+    },
+    {
+      "heading": "Recognizing mild hypothermia — the umbles",
+      "body": [
+        "Hypothermia means core body temperature has dropped below normal. Mild hypothermia is the body's early fight to warm itself back up, and shivering is the main tool it uses — involuntary muscle contractions that generate heat.",
+        "Along with shivering, watch for a pattern athletic trainers call the 'umbles':"
+      ],
+      "list": [
+        "Stumbles — losing coordination and balance, tripping or staggering",
+        "Mumbles — slurred or unclear speech",
+        "Fumbles — losing fine motor control, dropping equipment or struggling with zippers and laces",
+        "Grumbles — irritability, complaining, or a noticeable mood change"
+      ]
+    },
+    {
+      "heading": "Moderate to severe hypothermia — when shivering stops",
+      "body": [
+        "As hypothermia gets worse, something counterintuitive happens: shivering stops. This is not a sign the athlete is warming up or recovering — it's the opposite. The body has used up its ability to generate heat through shivering, and core temperature is continuing to fall. An athlete who was shivering hard and then goes quiet and still is getting worse, not better.",
+        "Other signs of moderate-to-severe hypothermia include confusion, drowsiness or wanting to sleep, worsening clumsiness and slurred speech, apathy or withdrawal, and eventually a weak pulse or loss of consciousness.",
+        "Response for any suspected hypothermia: stop activity immediately, get the athlete out of the wind and wet, remove wet clothing, and insulate with dry layers or blankets — cover the head, since a lot of heat is lost from an uncovered head. If the athlete is fully alert and able to swallow safely, warm sweet drinks can help; never give fluids to someone who is confused, drowsy, or not fully alert."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Shivering stops + confusion = emergency",
+        "text": "An athlete who stops shivering and becomes confused, drowsy, or unresponsive has moderate-to-severe hypothermia. Call 911 immediately. Handle the athlete very gently — no vigorous rubbing, rough movement, or jostling — because a cold heart is at higher risk of a dangerous heart rhythm if handled roughly. Keep them insulated and horizontal while waiting for EMS."
+      }
+    },
+    {
+      "heading": "Frostbite — when tissue actually freezes",
+      "body": [
+        "Frostbite is different from hypothermia: it's the freezing of skin and, in more serious cases, the tissue underneath — not a drop in core temperature. It happens most often at the body's extremities and exposed skin, farthest from the warm core and often less insulated: fingers, toes, ears, nose, and cheeks.",
+        "Superficial frostbite affects the skin: it looks white, waxy, or grayish, and feels numb. The surface may feel hard or frozen, but the tissue underneath still feels soft and pliable when gently pressed.",
+        "Deep frostbite extends into the tissue below the skin. The area is hard and cold all the way through, may look mottled or blue-white, and can blister. Deep frostbite is a medical emergency that needs hospital care — the tissue can be permanently damaged."
+      ]
+    },
+    {
+      "heading": "Responding to frostbite",
+      "body": [
+        "Get the athlete out of the cold and indoors as soon as possible. Rewarm the area gently — skin-to-skin contact (tucking bare fingers into an armpit, for example) or gentle immersion in lukewarm (not hot) water both work. Never use a direct heat source like a campfire, heater, or hot water, since numb skin can't feel a burn happening.",
+        "Never rub or massage a frostbitten area. The tissue may contain ice crystals, and rubbing grinds them against already-damaged cells, making the injury worse — the opposite of the instinct to 'rub it warm.'",
+        "Any suspected deep frostbite — tissue that's hard and cold throughout, blistering, or badly discolored — needs emergency medical care. Don't attempt to rewarm deep frostbite yourself; get the athlete to a hospital."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Never rewarm if refreezing is possible",
+        "text": "If there is any chance the area will refreeze before the athlete can reach a warm environment they won't have to leave again — for example, partway through a hike or practice with more cold exposure ahead — do not rewarm it in the field. Thawing and then refreezing tissue causes far more damage than staying frozen a little longer until you can guarantee it will stay warm. Keep the area protected and get to definitive shelter first."
+      }
+    },
+    {
+      "heading": "Prevention",
+      "body": [
+        "Most cold-weather injuries are preventable with simple habits and good policy:"
+      ],
+      "list": [
+        "Layer properly: a wicking base layer to move sweat off the skin, an insulating middle layer to trap warmth, and a wind- and water-resistant outer shell. Avoid cotton, which holds moisture against the skin.",
+        "Stay dry: change out of wet or sweat-soaked clothing as soon as possible, especially after activity stops and the body cools down quickly.",
+        "Cover extremities: hats, gloves, and ear protection matter, since fingers, toes, ears, and the head are common sites for both frostbite and major heat loss.",
+        "Use the buddy system: a cold or mildly hypothermic athlete may not notice their own confusion or slurred speech — teammates and coaches watching for the umbles catch problems early.",
+        "Follow a written cold-weather policy: teams should modify or cancel practice based on wind chill and conditions, not just the calendar. Exact cutoffs vary by state and governing body, but every program should have a plan."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What do the 'umbles' of mild hypothermia refer to?",
+      "choices": [
+        "Stumbles, mumbles, fumbles, and grumbles",
+        "Sweating, cramping, fatigue, and thirst",
+        "Blistering, swelling, redness, and warmth",
+        "Rapid pulse, high fever, and flushed skin"
+      ],
+      "answerIndex": 0,
+      "explanation": "The umbles describe mild hypothermia's early signs: losing coordination (stumbles), slurred speech (mumbles), losing fine motor control (fumbles), and irritability (grumbles). The other options describe heat illness or frostbite findings, not mild hypothermia."
+    },
+    {
+      "id": "q2",
+      "question": "A cross country runner finishes a race in cold rain shivering hard and slurring her words slightly, but she is still alert and answering questions. What is the best first step?",
+      "choices": [
+        "Have her keep running to generate body heat",
+        "Get her out of the wind and rain, remove wet clothing, and add dry insulating layers",
+        "Immerse her immediately in a hot bath",
+        "Give her a triple-shot energy drink to warm up fast"
+      ],
+      "answerIndex": 1,
+      "explanation": "For mild hypothermia, stop activity, get out of the wind and wet, remove wet clothing, and insulate with dry layers. Continuing to exercise doesn't reliably rewarm a hypothermic athlete, and a hot bath or high-caffeine drink can be unsafe — gradual, gentle rewarming with dry insulation is the correct field response."
+    },
+    {
+      "id": "q3",
+      "question": "A skier was shivering heavily on the lift. Now he has stopped shivering and seems confused and drowsy. What does this mean?",
+      "choices": [
+        "He is recovering and about to warm up on his own",
+        "He was never actually cold, just tired from skiing",
+        "His hypothermia has worsened to moderate-to-severe — this is an emergency, call 911",
+        "Shivering stopping always just means his hypothermia is still mild"
+      ],
+      "answerIndex": 2,
+      "explanation": "Shivering stopping is a key warning sign, not a sign of improvement — the body has lost its ability to generate heat and core temperature is still falling. Combined with confusion and drowsiness, this is moderate-to-severe hypothermia and a medical emergency requiring 911 and gentle handling."
+    },
+    {
+      "id": "q4",
+      "question": "Why are wet-and-windy conditions more dangerous for cold exposure than dry cold at a similar temperature?",
+      "choices": [
+        "Wet-and-windy days are always colder in actual air temperature than dry days",
+        "Wind and moisture increase how much oxygen the lungs need",
+        "Sweat production rises dramatically in windy conditions",
+        "Wind strips away the warm air layer near skin, and water conducts heat away from skin far faster than air does"
+      ],
+      "answerIndex": 3,
+      "explanation": "Wind increases heat loss by convection, and wet skin or clothing loses heat by conduction much faster than dry skin in air — together they pull heat away faster than the air temperature alone suggests. It's not that wet-windy days are necessarily colder in temperature; the danger comes from how much faster heat is stripped away."
+    },
+    {
+      "id": "q5",
+      "question": "A skier's fingertip looks waxy and white and feels numb. What is this, and what should happen first?",
+      "choices": [
+        "Frostbite — get him indoors and rewarm the area gently, without rubbing",
+        "Frostbite — rub the fingertip vigorously to restore circulation",
+        "Normal cold hands — no action needed, keep skiing",
+        "A blister — drain it immediately with a needle"
+      ],
+      "answerIndex": 0,
+      "explanation": "Waxy, white, numb skin is a classic frostbite sign. The athlete needs to get out of the cold and rewarm gently — skin-to-skin contact or lukewarm water. Rubbing feels like the natural fix but actually grinds ice crystals against tissue and worsens the injury."
+    },
+    {
+      "id": "q6",
+      "question": "What is the correct way to rewarm a frostbitten area?",
+      "choices": [
+        "Vigorous rubbing and massage to break up ice crystals",
+        "Skin-to-skin contact or gentle lukewarm water immersion",
+        "Hot water or a direct heat source like a campfire",
+        "Leave the area exposed to open air to air-dry"
+      ],
+      "answerIndex": 1,
+      "explanation": "Gentle rewarming — skin-to-skin contact or lukewarm (not hot) water — is correct. Rubbing damages tissue with ice crystals still present, and hot water or direct heat can burn numb skin that can't feel the injury happening."
+    },
+    {
+      "id": "q7",
+      "question": "A hiker's frostbitten toes have started to thaw at camp, but the group still has a two-hour hike through the cold before reaching the trailhead. What should they do?",
+      "choices": [
+        "Rewarm now regardless, since any delay only worsens the injury",
+        "Rub the toes vigorously to keep them warm during the hike",
+        "Keep the toes protected and avoid full rewarming until they can reach a place where refreezing is impossible",
+        "It doesn't matter — refreezing has no additional effect on already-frozen tissue"
+      ],
+      "answerIndex": 2,
+      "explanation": "Refreezing thawed tissue causes far more damage than staying frozen a bit longer. If there's a real chance of refreezing before reaching guaranteed warm shelter, protect the area and delay full rewarming until they won't have to go back out into the cold."
+    },
+    {
+      "id": "q8",
+      "question": "Which combination best describes good cold-weather prevention for a team?",
+      "choices": [
+        "A single thick cotton sweatshirt to trap heat",
+        "Skipping layers on days that feel mild to avoid overheating",
+        "Wearing wet practice clothes from an earlier drill to save time",
+        "A wicking base layer, insulating middle layer, and wind/water-resistant outer shell, plus buddy checks and a wind-chill-based practice policy"
+      ],
+      "answerIndex": 3,
+      "explanation": "Proper layering (wicking base, insulating middle, protective shell), staying dry, and having teammates watch each other for early signs (buddy checks), backed by a written wind-chill-based policy, are the core prevention habits. Cotton holds moisture against skin and wet clothing from earlier drills speeds heat loss — both increase risk."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Hypothermia",
+      "back": "A drop in core body temperature below normal, overwhelming the body's ability to stay warm. Different from frostbite, which is local tissue freezing."
+    },
+    {
+      "id": "f2",
+      "front": "Frostbite",
+      "back": "Freezing of skin and, in severe cases, underlying tissue — most common at fingers, toes, ears, nose, and cheeks."
+    },
+    {
+      "id": "f3",
+      "front": "The 'umbles' (mild hypothermia)",
+      "back": "Stumbles (poor coordination), mumbles (slurred speech), fumbles (losing fine motor control), grumbles (irritability/mood change)."
+    },
+    {
+      "id": "f4",
+      "front": "Shivering stops = worse, not better",
+      "back": "As hypothermia progresses to moderate/severe, shivering stops because the body can no longer generate heat this way. This is a red flag, not a sign of recovery."
+    },
+    {
+      "id": "f5",
+      "front": "Conduction & convection in cold exposure",
+      "back": "Conduction = direct heat loss into something colder touching the skin (wet clothes, cold water). Convection = heat carried away by moving air (wind)."
+    },
+    {
+      "id": "f6",
+      "front": "Why wet-and-windy cold is more dangerous",
+      "back": "Wind strips the warm air layer near skin (convection) and water conducts heat away much faster than air — together they pull heat away faster than a similar dry, still temperature would."
+    },
+    {
+      "id": "f7",
+      "front": "Mild hypothermia: field response",
+      "back": "Stop activity, get out of wind/wet, remove wet clothing, insulate with dry layers, cover the head. Warm sweet drinks only if the athlete is fully alert."
+    },
+    {
+      "id": "f8",
+      "front": "Severe hypothermia: field response",
+      "back": "Call 911 immediately. Handle very gently — no vigorous rubbing or rough movement, since a cold heart is prone to dangerous rhythms if jostled."
+    },
+    {
+      "id": "f9",
+      "front": "Frostbite: common sites",
+      "back": "Fingers, toes, ears, nose, and cheeks — exposed or less-insulated areas farthest from the body's core."
+    },
+    {
+      "id": "f10",
+      "front": "Frostbite: signs",
+      "back": "Skin looks white, waxy, or grayish and feels numb. Deep frostbite: hard and cold throughout, may blister, mottled or blue-white."
+    },
+    {
+      "id": "f11",
+      "front": "Frostbite: never rub",
+      "back": "Never rub or massage a frostbitten area — ice crystals in the tissue grind against cells and worsen the injury. Rewarm gently (skin-to-skin or lukewarm water) instead."
+    },
+    {
+      "id": "f12",
+      "front": "The refreezing rule",
+      "back": "Never fully rewarm frostbite if there's a chance it could refreeze before reaching a guaranteed warm environment — thawing then refreezing causes far worse tissue damage."
+    }
+  ]
+}
