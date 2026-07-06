@@ -4,6 +4,12 @@ This file is the handoff between sessions. Read it first, keep it updated:
 check items off as they land, and add anything newly discovered. The working
 rhythm is unchanged: **build a piece → verify in the browser → commit.**
 
+**Credit-saving protocol** (see `CLAUDE.md` → "Cost-efficient model
+routing"): delegate execution to the Sonnet subagents in `.claude/agents/`
+(`unit-author` for content, `implementer` for spec'd code changes) and keep
+the expensive model for specs, review, and judgment. Each task below is
+tagged with its routing.
+
 ## Where things stand
 
 The original 24-hour plan had four blocks. Three are already built, verified,
@@ -29,6 +35,9 @@ teacher dashboard).
 
 ### 1. Finish Block 3 — real-device / install pass (the only unfinished block)
 
+*Routing: orchestrator writes the spec per item; PNG icons + touch-target CSS
+are `implementer` tasks; the install-flow audit needs orchestrator judgment.*
+
 - [ ] Verify layout at tablet width (~768px), not just 375px phone width.
 - [ ] Touch-target audit: interactive elements (quiz choices, flashcard flip,
       nav links, sort buttons) should be ≥ 44px tall on touch devices.
@@ -44,6 +53,9 @@ teacher dashboard).
 
 ### 2. Harden sync codes (small, high-value)
 
+*Routing: orchestrator decides whether compression is warranted (measure
+first); the implementation + edge-case tests are an `implementer` task.*
+
 - [ ] Measure real code length with all 7 units of progress. The plan called
       for *compressed* JSON; the implementation is plain base64url JSON. If
       codes are too long to comfortably copy/paste or read aloud in class,
@@ -56,8 +68,9 @@ teacher dashboard).
 ### 3. Optional — more content (only if time remains / a class needs it)
 
 Same pattern as before: one JSON file per unit, full lesson + 8-question quiz
-+ 12 flashcards, verified end-to-end in the browser. Good candidates to round
-out a semester:
++ 12 flashcards, verified end-to-end in the browser. *Routing: one
+`unit-author` (Sonnet) task per unit — these should not consume orchestrator
+credits beyond review.* Good candidates to round out a semester:
 
 - [ ] Fractures & dislocations
 - [ ] Taping & wrapping basics
