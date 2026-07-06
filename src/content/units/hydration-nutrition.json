@@ -121,7 +121,7 @@
       "question": "A wrestler weighs 148 lbs before practice and 144 lbs after, with no bathroom breaks in between. About how much fluid should be replaced?",
       "choices": [
         "Exactly 4 oz, since only 4 lbs were lost",
-        "Roughly 64-96 oz (based on 20-24 oz per pound lost)",
+        "Roughly 80-96 oz (based on 20-24 oz per pound lost)",
         "None — weight loss during practice is muscle, not fluid",
         "A single 8 oz cup of water is always sufficient regardless of weight lost"
       ],
