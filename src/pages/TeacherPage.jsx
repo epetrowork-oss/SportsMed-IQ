@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { Fragment, useMemo, useState } from 'react'
 import { getAllUnits } from '../content/index.js'
 import { useProgress, getUnitProgress, PASS_THRESHOLD } from '../lib/progress.js'
 import { useRoster, addStudentFromCode, removeStudent } from '../lib/roster.js'
@@ -73,6 +73,78 @@ function StatusCell({ progress }) {
 
 function isFlagged(p) {
   return !!p?.lessonRead && ((p.readSeconds ?? 0) < LOW_READ_SECONDS || (p.scrollPct ?? 0) < LOW_SCROLL_PCT)
+}
+
+// Same flag logic as isFlagged/StatusCell, but spelled out as human-readable
+// reasons for the per-student detail panel.
+function flagReasons(p) {
+  if (!p?.lessonRead) return []
+  const readSeconds = p.readSeconds ?? 0
+  const scrollPct = p.scrollPct ?? 0
+  const reasons = []
+  if (readSeconds < LOW_READ_SECONDS) reasons.push('marked read with under 2 minutes on the page')
+  if (scrollPct < LOW_SCROLL_PCT) reasons.push(`marked read having seen only ${scrollPct}% of it`)
+  return reasons
+}
+
+// min:sec, for the detail panel (StatusCell's readLabel above only needs
+// whole minutes for the compact table cells).
+function formatMinSec(seconds) {
+  const total = Math.max(0, Math.round(seconds ?? 0))
+  const m = Math.floor(total / 60)
+  const s = total % 60
+  return `${m}:${String(s).padStart(2, '0')}`
+}
+
+function unitStatusLabel(p) {
+  const started = !!p && (p.lessonRead || p.quizAttempts || p.flashcardsReviewed || p.readSeconds)
+  if (!started) return 'Not started'
+  return isComplete(p) ? 'Complete' : 'In progress'
+}
+
+// Full per-unit breakdown for one student, shown beneath their row.
+function StudentDetail({ row, units }) {
+  return (
+    <div className="student-detail">
+      <table className="student-detail-table">
+        <thead>
+          <tr>
+            <th>Unit</th>
+            <th>Lesson read</th>
+            <th>Flashcards</th>
+            <th>Best quiz</th>
+            <th>Attempts</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {units.map((unit) => {
+            const p = row.progressFor(unit.id)
+            const readSeconds = p?.readSeconds ?? 0
+            const scrollPct = p?.scrollPct ?? 0
+            const reasons = flagReasons(p)
+            return (
+              <tr key={unit.id}>
+                <td>{unit.title}</td>
+                <td>
+                  {p?.lessonRead ? 'Read' : readSeconds > 0 ? 'Not marked read' : '—'}
+                  {' · '}
+                  {formatMinSec(readSeconds)} · {scrollPct}% seen
+                  {reasons.length > 0 && (
+                    <div className="detail-flag">⚠ {reasons.join('; ')}</div>
+                  )}
+                </td>
+                <td>{p?.flashcardsReviewed ? 'Reviewed' : 'Not reviewed'}</td>
+                <td>{p?.bestQuizScore != null ? `${Math.round(p.bestQuizScore * 100)}%` : '—'}</td>
+                <td>{p?.quizAttempts ?? 0}</td>
+                <td>{unitStatusLabel(p)}</td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
+    </div>
+  )
 }
 
 // Wide CSV: one row per student, four columns per unit. Opens cleanly in
@@ -168,6 +240,7 @@ export default function TeacherPage() {
   const units = getAllUnits()
   const usingMock = students.length === 0
   const [sortBy, setSortBy] = useState('name') // name | completed | flags
+  const [expandedId, setExpandedId] = useState(null)
 
   // Real students imported by code; the mock roster only appears until the
   // first real student is added. The last row is always live from this device.
@@ -250,26 +323,54 @@ export default function TeacherPage() {
             </tr>
           </thead>
           <tbody>
-            {rows.map((row) => (
-              <tr key={row.id}>
-                <td>{row.name}</td>
-                {units.map((unit) => (
-                  <StatusCell key={unit.id} progress={row.progressFor(unit.id)} />
-                ))}
-                <td>
-                  {row.removable && (
-                    <button
-                      className="remove-button"
-                      onClick={() => removeStudent(row.id)}
-                      aria-label={`Remove ${row.name}`}
-                      title={`Remove ${row.name}`}
-                    >
-                      ✕
-                    </button>
+            {rows.map((row) => {
+              const expanded = expandedId === row.id
+              const toggle = () => setExpandedId((id) => (id === row.id ? null : row.id))
+              return (
+                <Fragment key={row.id}>
+                  <tr
+                    className={expanded ? 'roster-row roster-row-expanded' : 'roster-row'}
+                    onClick={toggle}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault()
+                        toggle()
+                      }
+                    }}
+                    role="button"
+                    tabIndex={0}
+                    aria-expanded={expanded}
+                  >
+                    <td>{row.name}</td>
+                    {units.map((unit) => (
+                      <StatusCell key={unit.id} progress={row.progressFor(unit.id)} />
+                    ))}
+                    <td>
+                      {row.removable && (
+                        <button
+                          className="remove-button"
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            removeStudent(row.id)
+                          }}
+                          aria-label={`Remove ${row.name}`}
+                          title={`Remove ${row.name}`}
+                        >
+                          ✕
+                        </button>
+                      )}
+                    </td>
+                  </tr>
+                  {expanded && (
+                    <tr className="detail-row">
+                      <td colSpan={units.length + 2}>
+                        <StudentDetail row={row} units={units} />
+                      </td>
+                    </tr>
                   )}
-                </td>
-              </tr>
-            ))}
+                </Fragment>
+              )
+            })}
           </tbody>
         </table>
       </div>
