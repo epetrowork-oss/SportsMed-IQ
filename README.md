@@ -29,9 +29,10 @@ localStorage.
   to localStorage, exposed to React via `useSyncExternalStore`. A unit counts
   as complete when the lesson is read, flashcards reviewed, and best quiz
   score ≥ 70%. Lesson pages also accumulate reading time (only while the tab
-  is visible); the teacher dashboard shows it per cell and flags lessons
-  marked read with under 2 minutes on the page — so "read" can't be faked by
-  clicking through.
+  is visible) and a scroll-depth high-water mark; the teacher dashboard shows
+  both per cell and flags ⚠ any lesson marked read with under 2 minutes on
+  the page or less than 80% of it seen — so "read" can't be faked by clicking
+  through.
 - `src/pages/` — unit list, lesson, quiz (choice order shuffled per attempt),
   flashcards, teacher dashboard.
 - `src/lib/share.js` + `src/pages/SyncPage.jsx` — cross-device sync without a
@@ -48,11 +49,15 @@ localStorage.
 - ✅ Stage 2 — one complete unit end-to-end (ankle sprains: 7-section lesson,
   8-question quiz, 12 flashcards)
 - ✅ Stage 3 — minimal teacher dashboard (mock roster + live local progress)
-- ✅ Content expansion — 4 units across 3 categories (ankle sprains,
-  concussions, heat illness, knee/ACL), each added as JSON only, verified
-  end-to-end in the browser
+- ✅ Content expansion — 7 units across 5 categories (ankle sprains,
+  concussions, heat illness, knee/ACL, wound care, muscle strains, overuse
+  injuries), each added as JSON only, verified end-to-end in the browser
 - ✅ Cross-device sync — offline progress codes: student Sync page
   (export/import with best-of-both merge) and teacher add-student-by-code
+- ✅ Honest-reading signals — per-lesson reading time + scroll depth with
+  click-through flags on the teacher dashboard
+- ✅ Teacher tools — sortable roster (name / completed / flags first) and
+  CSV export; mobile layout verified at phone widths
 
 Not built yet (intentionally): accounts/auth, live server-based sync,
 assigning content.

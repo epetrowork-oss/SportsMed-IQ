@@ -44,7 +44,7 @@ function useReadingTimer(unitId) {
   }, [unitId])
 }
 
-export function formatReadTime(seconds) {
+function formatReadTime(seconds) {
   if (!seconds || seconds < 60) return seconds > 0 ? 'under 1 min' : null
   return `${Math.round(seconds / 60)} min`
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { getAllUnits } from '../content/index.js'
 import { useProgress, getUnitProgress, PASS_THRESHOLD } from '../lib/progress.js'
 import { useRoster, addStudentFromCode, removeStudent } from '../lib/roster.js'
@@ -71,6 +71,52 @@ function StatusCell({ progress }) {
   )
 }
 
+function isFlagged(p) {
+  return !!p?.lessonRead && ((p.readSeconds ?? 0) < LOW_READ_SECONDS || (p.scrollPct ?? 0) < LOW_SCROLL_PCT)
+}
+
+// Wide CSV: one row per student, four columns per unit. Opens cleanly in
+// Sheets/Excel for gradebooks.
+function buildCsv(rows, units) {
+  const esc = (v) => `"${String(v ?? '').replaceAll('"', '""')}"`
+  const header = [
+    'Student',
+    ...units.flatMap((u) => [
+      `${u.title} — status`,
+      `${u.title} — best quiz %`,
+      `${u.title} — reading min`,
+      `${u.title} — % of lesson seen`,
+    ]),
+  ]
+  const lines = rows.map((row) => {
+    const cells = [row.name]
+    for (const unit of units) {
+      const p = row.progressFor(unit.id)
+      const started =
+        p && (p.lessonRead || p.quizAttempts || p.flashcardsReviewed || p.readSeconds)
+      let status = !started ? 'Not started' : isComplete(p) ? 'Complete' : 'In progress'
+      if (isFlagged(p)) status += ' (flagged)'
+      cells.push(
+        status,
+        p?.bestQuizScore != null ? Math.round(p.bestQuizScore * 100) : '',
+        p?.readSeconds ? Math.round(p.readSeconds / 60) : started ? 0 : '',
+        p?.scrollPct ? p.scrollPct : started ? 0 : '',
+      )
+    }
+    return cells.map(esc).join(',')
+  })
+  return [header.map(esc).join(','), ...lines].join('\n')
+}
+
+function downloadCsv(rows, units) {
+  const blob = new Blob([buildCsv(rows, units)], { type: 'text/csv;charset=utf-8' })
+  const a = document.createElement('a')
+  a.href = URL.createObjectURL(blob)
+  a.download = `sportmediq-progress-${new Date().toISOString().slice(0, 10)}.csv`
+  a.click()
+  URL.revokeObjectURL(a.href)
+}
+
 function AddStudentForm() {
   const [code, setCode] = useState('')
   const [result, setResult] = useState(null) // { ok, message }
@@ -121,30 +167,40 @@ export default function TeacherPage() {
   const { students } = useRoster()
   const units = getAllUnits()
   const usingMock = students.length === 0
+  const [sortBy, setSortBy] = useState('name') // name | completed | flags
 
   // Real students imported by code; the mock roster only appears until the
   // first real student is added. The last row is always live from this device.
-  const rows = [
-    ...(usingMock
-      ? mockRoster.students.map((s) => ({
-          id: s.id,
-          name: s.name,
-          removable: false,
-          progressFor: (unitId) => s.progress[unitId],
-        }))
-      : students.map((s) => ({
-          id: s.id,
-          name: s.name,
-          removable: true,
-          progressFor: (unitId) => s.progress[unitId],
-        }))),
-    {
-      id: 'local',
-      name: 'You (this device)',
-      removable: false,
-      progressFor: (unitId) => getUnitProgress(unitId),
-    },
-  ]
+  const rows = useMemo(() => {
+    const studentRows = (usingMock ? mockRoster.students : students).map((s) => ({
+      id: s.id,
+      name: s.name,
+      removable: !usingMock,
+      progressFor: (unitId) => s.progress[unitId],
+    }))
+    const completedCount = (r) => units.filter((u) => isComplete(r.progressFor(u.id))).length
+    const flagCount = (r) => units.filter((u) => isFlagged(r.progressFor(u.id))).length
+    studentRows.sort((a, b) => {
+      if (sortBy === 'completed') {
+        const d = completedCount(b) - completedCount(a)
+        if (d !== 0) return d
+      }
+      if (sortBy === 'flags') {
+        const d = flagCount(b) - flagCount(a)
+        if (d !== 0) return d
+      }
+      return a.name.localeCompare(b.name)
+    })
+    return [
+      ...studentRows,
+      {
+        id: 'local',
+        name: 'You (this device)',
+        removable: false,
+        progressFor: (unitId) => getUnitProgress(unitId),
+      },
+    ]
+  }, [usingMock, students, units, sortBy])
 
   return (
     <div className="page">
@@ -158,14 +214,29 @@ export default function TeacherPage() {
           ' Showing sample students — add a real student below and the samples disappear.'}
       </p>
 
-      {units.map((unit) => {
-        const completed = rows.filter((r) => isComplete(r.progressFor(unit.id))).length
-        return (
-          <p key={unit.id} className="empty-note">
-            <strong>{unit.title}:</strong> {completed} of {rows.length} students complete
-          </p>
-        )
-      })}
+      <p className="empty-note">
+        Completed:{' '}
+        {units
+          .map(
+            (unit) =>
+              `${unit.title} ${rows.filter((r) => isComplete(r.progressFor(unit.id))).length}/${rows.length}`,
+          )
+          .join(' · ')}
+      </p>
+
+      <div className="table-toolbar">
+        <label>
+          Sort by{' '}
+          <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+            <option value="name">Name</option>
+            <option value="completed">Units completed</option>
+            <option value="flags">Flags first</option>
+          </select>
+        </label>
+        <button className="button" onClick={() => downloadCsv(rows, units)}>
+          Export CSV
+        </button>
+      </div>
 
       <div className="table-wrap">
         <table>
