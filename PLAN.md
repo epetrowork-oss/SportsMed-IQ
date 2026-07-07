@@ -175,9 +175,20 @@ writing so depth genuinely increases.
       7 categories. Browser-verified: 13/18/13 grade-band split, sensitive
       new units (sports-psychology, eye-injuries) render end-to-end, zero
       console errors, no overflow at 375px.
-- [ ] The 5 new strands from wave 5 need their own `7-8` and `11-12`
-      siblings to be full spiral citizens (currently `9-10`-only, same
-      state the original 13 strands were in before waves 1-4). Not started.
+- [x] Wave 6 — `7-8` and `11-12` siblings for all 5 wave-5 strands (10
+      units, authored in one parallel batch so the whole spiral for this
+      content lands in a single PR). `sports-psychology`'s crisis sections
+      (both bands) were personally read word-for-word rather than
+      pattern-matched, given the subject matter — both hold the
+      recognize/support/refer line correctly, including a genuinely
+      nuanced 11-12 quiz scenario (partial-privacy disclosure escalating
+      to self-harm mid-conversation) and the 7-8 unit's "even if said as
+      a joke" addition. One agent (eye-injuries-ms) reported before I'd
+      re-confirmed its commit; caught and fixed in the same session. All
+      18 strands are now fully spiraled across all 3 bands.
+      **Library: 54 units, 18 strands x 3 bands, 7 categories.**
+      Browser-verified: 18/18/18 grade-band split, sensitive units render
+      end-to-end, zero console errors, no overflow at 375px.
 - [ ] Further new-strand candidates for a full 6-year program: strength &
       conditioning basics is the main one not yet covered.
 - [ ] Once 7-8 and 11-12 both have real coverage, revisit the Home page:
