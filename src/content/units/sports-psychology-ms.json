@@ -1,0 +1,235 @@
+{
+  "id": "sports-psychology-ms",
+  "title": "Feelings, Teammates, and Getting Help",
+  "category": "Prevention & Performance",
+  "strand": "sports-psychology",
+  "gradeBand": "7-8",
+  "summary": "Learn that it's normal to feel sad, frustrated, or worried in sports, how to notice when a teammate might need help, and why telling a trusted adult is always the right move — including when it's serious.",
+  "minutes": 12,
+  "sections": [
+    {
+      "heading": "Feelings are part of playing sports",
+      "body": [
+        "Sports bring big feelings. Winning feels great. Losing can feel awful. Getting hurt can feel even worse — especially if it means sitting out and watching your team play without you.",
+        "Feeling sad, frustrated, or worried sometimes is completely normal for an athlete. This is true even for the toughest players on the team. Having these feelings doesn't mean something is wrong with you.",
+        "It's okay to talk about these feelings. Talking about them is not weak or babyish. It's a normal, healthy thing to do — the same way you'd tell a coach about a sore ankle instead of hiding it and hoping it goes away."
+      ]
+    },
+    {
+      "heading": "Signs a teammate might be struggling",
+      "body": [
+        "Sometimes a teammate's feelings become more than just a bad day. What matters is a change that sticks around, not one rough practice.",
+        "One off day is normal — everybody has those. Watch instead for a pattern that lasts a couple weeks or more and is different from how that person usually acts."
+      ],
+      "list": [
+        "Keeps to themselves a lot — stops hanging out with friends or talking in the locker room like they used to.",
+        "Seems really down, tired, or checked out for more than a week or two.",
+        "Gets snappy or upset more easily than usual.",
+        "Stops seeming to enjoy the sport they used to love.",
+        "Says things like \"nothing matters\" or \"what's even the point,\" even if it sounds like a joke."
+      ]
+    },
+    {
+      "heading": "Getting hurt can hurt your feelings too",
+      "body": [
+        "Getting injured doesn't just hurt your body. It can hurt your feelings too. Missing practices, games, and time with the team is a real loss, not just an inconvenience.",
+        "It's normal to feel frustrated, sad, or worried when you're hurt and can't play. A lot of athletes feel this way. That doesn't mean you're being dramatic — it means you care about your sport and your team.",
+        "If you're hurt and feeling down about it, telling a trusted adult how you feel is a smart move, just like reporting the injury itself."
+      ]
+    },
+    {
+      "heading": "What to do if you notice these signs",
+      "body": [
+        "If you notice a teammate seems really down, keeps to themselves, or says something that worries you, you have an important job to do — but it's a simple one."
+      ],
+      "list": [
+        "Listen if they want to talk. You don't need the right words — just listening helps.",
+        "Don't try to fix it yourself or figure out if it's \"serious enough\" to matter.",
+        "Tell a trusted adult — a parent, coach, athletic trainer, or school counselor."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "You don't have to have the answers",
+        "text": "You are not expected to know what's wrong or how to fix it. Your job is to notice, care, and tell a trusted adult. That's enough — you don't have to decide how serious it is on your own."
+      }
+    },
+    {
+      "heading": "When it's a crisis",
+      "body": [
+        "Sometimes what a teammate says is more serious than everyday stress. If a teammate ever talks about hurting themselves, or says they don't want to be alive, that is always serious. Every single time."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "If a teammate talks about hurting themselves — act right away",
+        "text": "Take it seriously every time, even if it's said quietly, said as a joke, or you're not totally sure they meant it. Do not keep it a secret, even if they ask you to. Tell a trusted adult right away — a parent, coach, athletic trainer, or school counselor. It needs to be an adult, not another student. Getting an adult involved fast is not breaking your friend's trust. It's protecting them."
+      }
+    },
+    {
+      "heading": "Asking for help is a smart move, not a weak one",
+      "body": [
+        "Some people used to think athletes should never talk about feelings and should just push through everything on their own. That's changing. Many top athletes today talk openly about tough feelings and getting help.",
+        "Asking for help is a strong, smart choice. It's the same as telling a coach about a sore ankle instead of hiding it and letting it get worse."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Why might an athlete not want to tell anyone they feel sad or worried?",
+      "choices": [
+        "They think they should push through it and be tough, the same way they'd push through physical pain",
+        "It's against most team rules to talk about feelings",
+        "Coaches are required to bench any player who talks about their feelings",
+        "Talking about feelings only matters for younger kids"
+      ],
+      "answerIndex": 0,
+      "explanation": "Athletes often apply the same \"push through it\" mindset to emotions that they use for physical pain, so they stay quiet. There's no rule against discussing feelings, and coaches aren't required to bench players who do."
+    },
+    {
+      "id": "q2",
+      "question": "Is it normal for an athlete to feel sad or frustrated after getting hurt and not being able to play?",
+      "choices": [
+        "No, athletes should never feel upset about an injury",
+        "Yes — it's a normal feeling, and it's okay to talk about it",
+        "Only if the injury lasts longer than a full year",
+        "Yes, but only if they keep it completely to themselves"
+      ],
+      "answerIndex": 1,
+      "explanation": "Feeling sad or frustrated about missing out on your sport is a normal reaction, not something to be ashamed of, and it's healthy to talk about it rather than bottle it up."
+    },
+    {
+      "id": "q3",
+      "question": "Which of these is a sign that a teammate might be struggling and worth telling an adult about?",
+      "choices": [
+        "They joke around once about being tired after a hard practice",
+        "They seem upset for an hour after losing a close game",
+        "They've been quiet, pulling away from friends, and seem down for a couple of weeks",
+        "They ask the coach for extra practice reps"
+      ],
+      "answerIndex": 2,
+      "explanation": "A single off moment is normal. A pattern that lasts weeks and is a real change from how someone usually acts — like pulling away and seeming down — is the kind of sign worth telling a trusted adult about."
+    },
+    {
+      "id": "q4",
+      "question": "What should you do if a teammate seems really down and keeps to themselves for weeks?",
+      "choices": [
+        "Ignore it — it's none of your business",
+        "Post about it online to get advice from strangers",
+        "Try to figure out on your own whether it's serious enough to matter",
+        "Tell a trusted adult, like a coach, parent, or school counselor"
+      ],
+      "answerIndex": 3,
+      "explanation": "You don't have to decide how serious something is on your own. Telling a trusted adult connects your teammate to someone who can actually help, which is always the right move."
+    },
+    {
+      "id": "q5",
+      "question": "What's the best way to support a teammate who tells you they're feeling really down?",
+      "choices": [
+        "Listen without judging, and help connect them to a trusted adult",
+        "Tell them to just get over it and focus on the game",
+        "Promise never to tell anyone, no matter what they say",
+        "Try to diagnose exactly what's wrong with them yourself"
+      ],
+      "answerIndex": 0,
+      "explanation": "Listening without judgment and connecting them to a trusted adult is the right role for a teammate. Promising total secrecy or trying to diagnose them yourself can both leave a struggling teammate without the real help they need."
+    },
+    {
+      "id": "q6",
+      "question": "A teammate on crutches seems irritated and quiet since getting hurt and missing games. What does this most likely mean?",
+      "choices": [
+        "They don't care about the team anymore",
+        "It's normal to feel frustrated or sad about missing out, and it's okay to talk about it",
+        "They must be faking how badly they're hurt",
+        "Nothing is wrong, so it should be ignored"
+      ],
+      "answerIndex": 1,
+      "explanation": "Missing games and team time is a real loss, so feeling frustrated or sad about it is a normal reaction to being hurt — not a sign they don't care, and not something to ignore."
+    },
+    {
+      "id": "q7",
+      "question": "A teammate tells you they don't want to be alive anymore and asks you to keep it a secret. What do you do?",
+      "choices": [
+        "Keep the secret because they trusted you with it",
+        "Wait a few days to see if they bring it up again",
+        "Tell a trusted adult right away, even though they asked you not to",
+        "Tell another student so the two of you can figure out what to do"
+      ],
+      "answerIndex": 2,
+      "explanation": "Any mention of not wanting to be alive is always serious, with no waiting period. This is the one kind of secret you don't keep — get a trusted adult involved right away, not another student."
+    },
+    {
+      "id": "q8",
+      "question": "Which statement is true about asking for help with tough feelings in sports?",
+      "choices": [
+        "Asking for help is a smart, strong move, not a weakness",
+        "Only players who get cut from the team need to talk to anyone",
+        "Talking to a counselor means you're not tough enough for sports",
+        "Athletes should keep all their feelings completely to themselves"
+      ],
+      "answerIndex": 0,
+      "explanation": "Asking for help is increasingly recognized as a smart, strong choice, similar to reporting a physical injury early. It has nothing to do with toughness, and it's not limited to players who've been cut."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "It's normal to feel...",
+      "back": "Sad, frustrated, or worried sometimes — especially if you're hurt and can't play. Having these feelings doesn't mean something is wrong with you."
+    },
+    {
+      "id": "f2",
+      "front": "Signs a teammate might be struggling",
+      "back": "Keeps to themselves, seems down or checked out for weeks, gets snappy, stops enjoying the sport, or says things like \"what's even the point.\""
+    },
+    {
+      "id": "f3",
+      "front": "One bad day vs. a lasting change",
+      "back": "One off day is normal for anyone. What matters is a pattern that lasts a couple weeks or more and is different from how a person usually acts."
+    },
+    {
+      "id": "f4",
+      "front": "What to do if you notice these signs",
+      "back": "Listen if they want to talk, don't try to fix it yourself, and tell a trusted adult."
+    },
+    {
+      "id": "f5",
+      "front": "Trusted adult",
+      "back": "A parent, coach, athletic trainer, or school counselor — an adult who can connect a struggling teammate to real help."
+    },
+    {
+      "id": "f6",
+      "front": "You don't have to fix it",
+      "back": "Your job as a teammate is to notice, care, and tell a trusted adult — not to diagnose the problem or solve it yourself."
+    },
+    {
+      "id": "f7",
+      "front": "Feelings after an injury",
+      "back": "It's normal to feel sad, frustrated, or worried when you're hurt and can't play. Talking about it is a smart move, just like reporting the injury itself."
+    },
+    {
+      "id": "f8",
+      "front": "How to listen to a teammate",
+      "back": "Listen without judging. Don't tell them to \"just get over it\" — just listening helps, even without the perfect words."
+    },
+    {
+      "id": "f9",
+      "front": "If a teammate talks about hurting themselves or not wanting to be alive",
+      "back": "Take it seriously every single time, even if it sounds like a joke. Tell a trusted adult right away."
+    },
+    {
+      "id": "f10",
+      "front": "Keeping it a secret",
+      "back": "Never promise to keep it secret if a teammate talks about hurting themselves — this is one situation where you always tell an adult, even if they ask you not to."
+    },
+    {
+      "id": "f11",
+      "front": "Adult, not another student",
+      "back": "If a teammate talks about hurting themselves, the person you tell needs to be an adult — a parent, coach, athletic trainer, or school counselor — not another kid."
+    },
+    {
+      "id": "f12",
+      "front": "Asking for help = strength",
+      "back": "Asking for help with tough feelings is a smart, strong choice — not a weakness. Many top athletes talk openly about getting help."
+    }
+  ]
+}
