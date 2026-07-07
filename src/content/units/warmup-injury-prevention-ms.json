@@ -1,0 +1,220 @@
+{
+  "id": "warmup-injury-prevention-ms",
+  "title": "Why Warming Up Matters",
+  "category": "Prevention & Performance",
+  "strand": "warmup-injury-prevention",
+  "gradeBand": "7-8",
+  "summary": "A few minutes of moving before you play hard helps your body work better and lowers your chance of getting hurt — skipping it to save time is a bad trade.",
+  "minutes": 9,
+  "sections": [
+    {
+      "heading": "What a warm-up does for you",
+      "body": [
+        "A warm-up is a few minutes of easy movement before you play hard — before a game, a practice, or any activity where you'll be sprinting, jumping, or cutting at full speed.",
+        "Warming up gets your muscles ready to work. Cold muscles are stiffer, kind of like a rubber band left in the freezer. Moving around raises your body temperature and gets blood flowing to your muscles, which makes them looser and more ready to handle sudden sprints, jumps, and quick turns.",
+        "A warm-up also wakes up your brain and body together, so your reactions and coordination are sharper once the whistle blows, instead of your body still catching up a few minutes into the game."
+      ]
+    },
+    {
+      "heading": "What a warm-up looks like",
+      "body": [
+        "A good warm-up has two simple parts, done in this order:"
+      ],
+      "list": [
+        "A little easy jogging or light cardio first — enough to get your heart beating faster and your body feeling warm, not out of breath.",
+        "Then move your body in the ways you're about to use it in the game or practice — swing your arms and legs, do some easy lunges, skip, or jog while lifting your knees high. This gets your joints and muscles moving through the same motions you're about to need."
+      ]
+    },
+    {
+      "heading": "Don't stretch and hold cold muscles",
+      "body": [
+        "You've probably seen people sit down and hold a stretch — like reaching for their toes and holding still for 30 seconds — right before a game. That's called a long, held stretch, and doing it on cold muscles right before playing hard is not a good warm-up.",
+        "Save the long, held stretches for after you're done playing, when your muscles are already warm. Right before activity, keep moving instead of holding still."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Move first, hold later",
+        "text": "Before you play: move — light jogging, then swinging your arms and legs. After you play: that's the time for holding a stretch still for 20-30 seconds."
+      }
+    },
+    {
+      "heading": "Skipping it is a bad trade",
+      "body": [
+        "It's tempting to skip the warm-up when you're running late or just want to start playing — but a warm-up only takes about 10 minutes, and skipping it doesn't actually save you much time.",
+        "What it does do is send you into hard running and jumping with cold, stiff muscles, which raises your chance of getting hurt — things like pulled muscles or twisted ankles. Ten minutes of warming up is a small price to pay compared to missing games or practices because of an injury."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Cold weather makes this more important, not less",
+        "text": "On a cold day, your muscles start out even stiffer than usual. That's exactly when it's most tempting to skip the warm-up and get moving fast — but it's also when skipping it is most likely to lead to an injury."
+      }
+    },
+    {
+      "heading": "Building the habit",
+      "body": [
+        "You don't need a complicated routine to get the benefit of warming up. The same simple pattern works before almost any practice or game: a little jogging, then moving your arms and legs through the motions you're about to use.",
+        "The biggest thing that matters is doing it every single time, not just when you feel like it or when there's extra time. A short warm-up done every practice beats a long one done occasionally."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is a warm-up?",
+      "choices": [
+        "A few minutes of easy movement before playing hard",
+        "Sitting still and resting before a game",
+        "A long, held stretch done for 10 minutes",
+        "Something you only do after a game is over"
+      ],
+      "answerIndex": 0,
+      "explanation": "A warm-up is easy movement done before hard activity — light jogging and moving your arms and legs. It's not resting, and it's not the long, held stretching that belongs after activity."
+    },
+    {
+      "id": "q2",
+      "question": "Why does warming up help your muscles?",
+      "choices": [
+        "It makes your muscles permanently bigger",
+        "It raises your body temperature and gets blood flowing, making muscles looser and more ready to move",
+        "It has no real effect on your muscles",
+        "It replaces the need to ever stretch"
+      ],
+      "answerIndex": 1,
+      "explanation": "Warming up raises muscle temperature and blood flow, which makes muscles looser and more ready for sudden sprints and jumps. It doesn't build muscle size, and stretching still has its own place after activity."
+    },
+    {
+      "id": "q3",
+      "question": "What does a good warm-up look like?",
+      "choices": [
+        "Sitting and holding a toe-touch stretch for 10 minutes",
+        "Jumping straight into a full-speed sprint",
+        "A little easy jogging first, then moving your arms and legs through the motions you're about to use",
+        "Doing nothing and just starting the game"
+      ],
+      "answerIndex": 2,
+      "explanation": "A simple, effective warm-up is light jogging followed by moving your body through the motions of your sport — swinging arms and legs, lunges, high knees. Holding still stretches or skipping straight to full speed are not good warm-ups."
+    },
+    {
+      "id": "q4",
+      "question": "Your teammate sits down and holds a hamstring stretch for 30 seconds, cold, right before a scrimmage starts. What's the problem?",
+      "choices": [
+        "Nothing — that's the best possible warm-up",
+        "She should have held it for even longer, like 2 minutes",
+        "Stretching should never be done at any time, ever",
+        "Holding a stretch on cold muscles right before playing hard is not a good warm-up; movement should come first"
+      ],
+      "answerIndex": 3,
+      "explanation": "Long, held stretches on cold muscles right before hard activity aren't a good warm-up. Movement — jogging, then moving arms and legs — should come first. Held stretches are still useful, just afterward, not as the whole warm-up."
+    },
+    {
+      "id": "q5",
+      "question": "When is the best time for a long, held stretch (holding still for 20-30 seconds)?",
+      "choices": [
+        "After you're done playing, when your muscles are already warm",
+        "Right before sprinting at full speed",
+        "During the first five minutes of a game",
+        "It should never be done"
+      ],
+      "answerIndex": 0,
+      "explanation": "Holding a stretch works best after activity, once muscles are already warm. Right before hard play, moving beats holding still."
+    },
+    {
+      "id": "q6",
+      "question": "A player is running late to practice and thinks about skipping the warm-up to save time. What's true about that plan?",
+      "choices": [
+        "It's a smart trade — skipping warm-up saves a lot of time with no downside",
+        "It only matters for adults, not middle schoolers",
+        "It's a bad trade — the warm-up only takes about 10 minutes, and skipping it raises the chance of getting hurt",
+        "Warm-ups are only needed before games, never before practice"
+      ],
+      "answerIndex": 2,
+      "explanation": "A warm-up is short — around 10 minutes — and skipping it doesn't save much time. It does mean starting hard activity with cold, stiff muscles, which raises the chance of an injury like a pulled muscle or twisted ankle."
+    },
+    {
+      "id": "q7",
+      "question": "It's a cold day and the team wants to skip the warm-up to start moving and get warm faster. What's the better choice?",
+      "choices": [
+        "Skip the warm-up — cold weather means it doesn't matter",
+        "Only do the warm-up if it's a game, not a practice",
+        "Replace the warm-up with a long held stretch instead",
+        "Still do the warm-up — cold muscles are even stiffer, so warming up matters more, not less, on cold days"
+      ],
+      "answerIndex": 3,
+      "explanation": "Cold muscles start out stiffer than usual, which makes warming up even more important on cold days. Skipping it because everyone wants to move fast is exactly when it raises injury risk the most."
+    },
+    {
+      "id": "q8",
+      "question": "Which habit gets you the most benefit from warming up over a full season?",
+      "choices": [
+        "Doing one very long, elaborate warm-up at the start of the season only",
+        "Doing a short, simple warm-up every single practice and game",
+        "Only warming up when you feel like it",
+        "Warming up only for games, never for practice"
+      ],
+      "answerIndex": 1,
+      "explanation": "A short warm-up done every time beats a long one done occasionally. Consistency — doing it every practice and game — is what actually lowers injury risk over a season."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Warm-up",
+      "back": "A few minutes of easy movement before playing hard — light jogging plus moving your arms and legs through the motions you're about to use."
+    },
+    {
+      "id": "f2",
+      "front": "Why warming up helps",
+      "back": "It raises your body temperature and gets blood flowing, making muscles looser and more ready for sudden sprints, jumps, and quick turns."
+    },
+    {
+      "id": "f3",
+      "front": "Cold muscles",
+      "back": "Stiffer and more likely to get hurt — like a rubber band left in the freezer. Warming up loosens them up before hard activity."
+    },
+    {
+      "id": "f4",
+      "front": "Order of a good warm-up",
+      "back": "Easy jogging or light cardio first, then move your arms and legs through the motions you're about to use in the game or practice."
+    },
+    {
+      "id": "f5",
+      "front": "Long, held stretch",
+      "back": "Holding a stretch still, like reaching for your toes for 20-30 seconds. Best done AFTER activity, not right before."
+    },
+    {
+      "id": "f6",
+      "front": "Move first, hold later",
+      "back": "Before playing: keep moving (jogging, arm and leg swings). After playing: that's when holding a stretch still is a good idea."
+    },
+    {
+      "id": "f7",
+      "front": "Why not hold a stretch cold, right before playing?",
+      "back": "Holding still on cold muscles right before hard activity isn't a good warm-up — movement is what actually gets muscles ready."
+    },
+    {
+      "id": "f8",
+      "front": "How long does a warm-up take?",
+      "back": "About 10 minutes — a small amount of time compared to the time you'd lose sitting out with an injury."
+    },
+    {
+      "id": "f9",
+      "front": "Skipping the warm-up",
+      "back": "A bad trade: it barely saves any time, but it means playing hard on cold, stiff muscles, which raises your chance of getting hurt."
+    },
+    {
+      "id": "f10",
+      "front": "Cold weather and warm-ups",
+      "back": "Muscles start out even stiffer on cold days, so warming up matters MORE in cold weather, not less."
+    },
+    {
+      "id": "f11",
+      "front": "What can happen if you skip warming up",
+      "back": "A higher chance of injuries like pulled muscles or twisted ankles, since your muscles aren't ready for sudden sprints or jumps."
+    },
+    {
+      "id": "f12",
+      "front": "The habit that matters most",
+      "back": "Doing a short warm-up every single practice and game — consistency beats one long warm-up done only once in a while."
+    }
+  ]
+}
