@@ -122,14 +122,14 @@ writing so depth genuinely increases.
 | heat-illness | x | x | |
 | wound-care | x | x | |
 | emergency-action-plan | x | x | |
-| knee-acl | | x | |
-| cold-exposure | | x | |
-| muscle-strains | | x | |
-| overuse-injuries | | x | |
-| shoulder-injuries | | x | |
-| fractures-dislocations | | x | |
-| taping-wrapping | | x | |
-| hydration-nutrition | | x | |
+| knee-acl | x | x | |
+| cold-exposure | x | x | |
+| muscle-strains | x | x | |
+| overuse-injuries | x | x | |
+| shoulder-injuries | x | x | |
+| fractures-dislocations | x | x | |
+| taping-wrapping | x | x | |
+| hydration-nutrition | x | x | |
 
 - [x] Wave 1 — `7-8` versions of the 5 highest-priority safety-critical
       strands: concussion, heat illness, wound care, EAP/CPR-AED, ankle
@@ -140,9 +140,17 @@ writing so depth genuinely increases.
       total now; grade filter browser-verified (5 / 13 / 0 split correct).
 
 **Remaining waves** (not yet started, rough order of value):
-- [ ] Wave 2 — `7-8` versions of the rest: knee-acl, muscle-strains,
-      overuse-injuries, cold-exposure, fractures-dislocations,
-      taping-wrapping, hydration-nutrition, shoulder-injuries (8 units)
+- [x] Wave 2 — `7-8` versions of the remaining 8 strands: knee-acl,
+      muscle-strains, overuse-injuries, cold-exposure,
+      fractures-dislocations, taping-wrapping, hydration-nutrition,
+      shoulder-injuries. Each independently verified against its 9-10
+      sibling for real depth reduction (no anatomy/grading/technique/
+      clinical thresholds). One agent hit a transient API error mid-run
+      (fractures-dislocations) and was retried cleanly with no partial
+      file left behind. All 13 strands now have both `7-8` and `9-10`
+      coverage — 26 units total. Browser-verified: grade filter (13/13/0
+      split), quiz and flashcards render correctly for new units, zero
+      console errors, no overflow at 375px.
 - [ ] Wave 3 — `11-12` versions of the 5 wave-1 strands (deeper:
       mechanism/anatomy, grading systems, differential/decision quizzes)
 - [ ] Wave 4 — `11-12` versions of the remaining 8 strands
