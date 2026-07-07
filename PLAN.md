@@ -159,11 +159,27 @@ writing so depth genuinely increases.
       orchestrator. **Spiral complete: 39 units = 13 strands x 3 bands,
       browser-verified 13/13/13 split, zero console errors.**
 - [x] Wave 4 — folded into wave 3 above (all 13 strands done together)
-- [ ] New strands not yet covered at any band, worth considering for a full
-      6-year program: eye injuries, dental/facial trauma, blisters & skin
-      issues, mental health/return-to-play psychology, nutrition for growing
-      athletes (distinct from the existing general hydration-nutrition unit),
-      strength & conditioning basics, injury prevention/warm-up science
+- [x] Wave 5 — 5 new strands, each authored as a `9-10` baseline (mirroring
+      how `shoulder-injuries`/`cold-exposure` started): `eye-injuries`,
+      `dental-facial-trauma`, `skin-conditions`, `sports-psychology`
+      (mental health/return-to-play, includes a carefully-reviewed crisis
+      callout on suicide/self-harm disclosure — recognize/support/refer
+      only, never diagnosis or counseling technique), and
+      `warmup-injury-prevention` (dynamic-vs-static stretching science,
+      cross-references `knee-acl-adv` rather than re-teaching it). Dropped
+      "nutrition for growing athletes" as too redundant with the existing
+      `hydration-nutrition` strand. One agent (eye-injuries) hit a
+      connection error at its final report step; file verified complete
+      (no truncation, quiz integrity intact) before committing. Library now
+      **44 units**, 18 strands total (13 fully spiraled + 5 new baseline-only),
+      7 categories. Browser-verified: 13/18/13 grade-band split, sensitive
+      new units (sports-psychology, eye-injuries) render end-to-end, zero
+      console errors, no overflow at 375px.
+- [ ] The 5 new strands from wave 5 need their own `7-8` and `11-12`
+      siblings to be full spiral citizens (currently `9-10`-only, same
+      state the original 13 strands were in before waves 1-4). Not started.
+- [ ] Further new-strand candidates for a full 6-year program: strength &
+      conditioning basics is the main one not yet covered.
 - [ ] Once 7-8 and 11-12 both have real coverage, revisit the Home page:
       consider a "these grades already have this strand" cross-link on unit
       cards (today the filter just shows/hides; no linking between a
