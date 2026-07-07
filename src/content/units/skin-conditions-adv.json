@@ -1,0 +1,238 @@
+{
+  "id": "skin-conditions-adv",
+  "title": "Skin Infections: Pathogens, Clearance, and Outbreak Control",
+  "category": "Acute Care & First Aid",
+  "strand": "skin-conditions",
+  "gradeBand": "11-12",
+  "summary": "Go beyond recognition to the reasoning athletic trainers use: why pathogen type drives treatment, what real clearance criteria require, and how to catch an outbreak before it spreads through a roster.",
+  "minutes": 20,
+  "sections": [
+    {
+      "heading": "Three pathogen categories, one wrong assumption",
+      "body": [
+        "You already know how to recognize ringworm, impetigo, and MRSA by sight. What matters at this level is understanding what category of organism causes each one, because that category — not how the lesion looks — determines what treatment will actually work.",
+        "Skin infections in athletics fall into three broad categories: bacterial (impetigo, MRSA, and other staph or strep infections), fungal (ringworm, athlete's foot, jock itch — all caused by a group of fungi called dermatophytes), and viral (herpes gladiatorum, molluscum contagiosum, warts). These are fundamentally different organisms with different biology, and a treatment that works on one does nothing to the others.",
+        "The clinical consequence: antibiotics kill or stop the growth of bacteria. They have zero effect on a fungus and zero effect on a virus. A physician who misidentifies a fungal or viral lesion as bacterial and prescribes an antibiotic will watch the lesion keep spreading, because the drug was never treating the actual organism. This is exactly why accurate identification — not just 'it looks infected, give it medicine' — is the foundation of correct treatment."
+      ]
+    },
+    {
+      "heading": "MRSA: resistance, culture, and why 'just give amoxicillin' fails",
+      "body": [
+        "MRSA (methicillin-resistant Staphylococcus aureus) is a strain of staph that has evolved resistance to methicillin and the broader class of antibiotics related to it, including common first-line drugs like amoxicillin. Resistance means the bacteria have a genetic mechanism — an altered target protein the antibiotic normally binds to — that lets them survive exposure to the drug. Giving a resistant infection a drug it's resistant to doesn't slow it down at all; the infection keeps progressing while everyone assumes it's 'being treated.'",
+        "Community-acquired MRSA (CA-MRSA) is the strain relevant to athletics — it spreads through skin-to-skin contact and shared equipment among otherwise healthy people, which is why locker rooms and wrestling mats are classic transmission settings. This is distinct from hospital-acquired MRSA (HA-MRSA), which develops in healthcare settings among patients with existing wounds, IV lines, or weakened immune systems and tends to be even more drug-resistant. An athlete's MRSA case is almost always the community strain, but both share the same core problem: standard antibiotics don't reliably work.",
+        "Because resistance can't be assumed or guessed from appearance, physicians confirm it with a culture and sensitivity test: a swab of pus or fluid from the lesion is grown in a lab, and the resulting bacterial colony is exposed to a panel of different antibiotics to see which ones actually stop its growth. This is the only reliable way to know which drug will work for a specific case — it replaces guessing with evidence.",
+        "When MRSA has formed an abscess (a walled-off pocket of pus under the skin), the primary treatment is incision and drainage (I&D) — a physician opens and drains the pocket, which physically removes the bulk of the infection. Antibiotics, chosen based on the culture result, are used as an adjunct (a supporting treatment) to control any infection remaining in the surrounding tissue. This is physician-only care, but understanding why I&D comes first — pus trapped in a pocket is largely inaccessible to antibiotics carried through the bloodstream — is exactly why 'just wait for the antibiotics to work' on an obvious abscess is the wrong plan, and why any suspected abscess needs same-day evaluation, not a wait-and-see approach."
+      ]
+    },
+    {
+      "heading": "Herpes gladiatorum: a virus that governs its own clearance rules",
+      "body": [
+        "Herpes gladiatorum is a skin infection caused by herpes simplex virus, the same virus family responsible for cold sores. In contact sports — wrestling and rugby especially, where prolonged skin-to-skin pressure and friction are part of competition — the virus spreads efficiently through direct contact with an active lesion, and can transfer in a single match or practice. Lesions typically cluster on the head, neck, and arms — wherever skin contact is heaviest — as small, painful, fluid-filled blisters, sometimes preceded by tingling or burning at the site before anything is visible.",
+        "This is a genuinely dangerous piece of thinking in a contact sport: 'it's just a cold sore.' A cold sore on someone's own lip is their own minor, self-limited problem. The same virus on a wrestling mat is a transmission vector to every athlete that competitor touches for the rest of the season, because active herpes gladiatorum lesions are shed and contagious with contact, not just uncomfortable.",
+        "Because of this, most wrestling and rugby governing bodies build a specific, non-negotiable clearance protocol around herpes gladiatorum, rather than leaving it to the general skin-infection rule. The concept athletes need to know: clearance typically requires a minimum number of consecutive symptom-free days (no new blisters, no active lesion) combined with a course of antiviral medication, both completed before a physician will sign off on return to contact competition. The exact day count is set by the governing body and enforced by documentation, not by how the athlete feels or how the lesion looks to a teammate."
+      ]
+    },
+    {
+      "heading": "How ringworm is actually confirmed, not guessed",
+      "body": [
+        "Ringworm and the other tinea infections are caused by dermatophytes — a specific group of fungi adapted to digest keratin, the tough structural protein that makes up the outer layer of skin, hair, and nails. That's the biological reason tinea infections stay superficial (living in keratin at the skin's surface) rather than invading deeper tissue the way a bacterial infection can.",
+        "A classic ring-shaped, scaly patch is a strong visual clue, but plenty of other skin conditions — eczema, psoriasis, even some bacterial rashes — can mimic that appearance closely enough to fool a purely visual call. A clinician confirms tinea rather than guessing from appearance using a KOH prep: a skin scraping is placed on a slide with potassium hydroxide solution, which dissolves the skin cells but leaves the fungal structures (hyphae) visible under a microscope. A fungal culture, grown over one to two weeks, can further identify the specific species when treatment isn't responding as expected.",
+        "The practical takeaway for a student aide: appearance is a reason to refer, never a reason to diagnose. Two lesions that look nearly identical can be caused by completely different organisms, and only testing tells the physician which treatment — antifungal versus antibiotic versus antiviral — will actually work."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Refer, don't diagnose or treat",
+        "text": "Nothing in this unit qualifies a student aide to identify a specific pathogen or start treatment. Suspected abscesses, any lesion with fever or rapidly worsening pain, and anything that could be herpes gladiatorum on a mat-contact athlete need same-day physician evaluation — not a wait-and-see approach while someone tries to match the appearance to a photo."
+      }
+    },
+    {
+      "heading": "Real return-to-play clearance criteria",
+      "body": [
+        "The 9-10 unit's rule — get the lesion cleared by a physician or athletic trainer before returning — is correct as far as it goes, but real clearance protocols used by athletic trainers and governing bodies are built from several specific, checkable criteria, not just a general sign-off.",
+        "A physician or athletic trainer applying formal clearance criteria is typically checking for all of these at once, not just one: no new lesions have appeared in the last 48-72 hours (a plateau, showing the infection is no longer actively spreading); the athlete has been on appropriate treatment for a documented minimum duration (long enough for the medication to be taking effect, not just started); and the existing lesion itself is dry, scabbed over, or fully covered by an intact scab or crust rather than open, weeping, or draining.",
+        "The reason all three matter together: a lesion that stopped spreading yesterday but is still weeping is still shedding infectious material on contact. A lesion that's dry and scabbed but only started treatment yesterday hasn't had time for the medication to actually clear the underlying infection. Clearance is a documented judgment made against multiple checkpoints — not a single glance that says 'looks better.'"
+      ],
+      "list": [
+        "No new lesions for 48-72 hours — the infection has plateaued, not just improved",
+        "Minimum treatment duration completed and documented, appropriate to the specific pathogen",
+        "Lesion itself is dry, scabbed, or fully coverable — not open or actively draining",
+        "For herpes gladiatorum specifically: consecutive symptom-free days plus completed antiviral course, per governing-body rule"
+      ]
+    },
+    {
+      "heading": "Outbreak management: the aide's role in surveillance",
+      "body": [
+        "One athlete with ringworm is a case. Three athletes on the same team developing similar lesions within the same one-to-two-week window is a pattern that should raise concern about a shared source — a contaminated mat, shared equipment, or an untreated case that kept training and touching teammates before being caught.",
+        "A student aide is often in the best position to notice this pattern early, precisely because they see the whole roster over time rather than one athlete at a time the way a physician seeing patients individually might. Part of the aide's real value is surveillance: keeping a simple record of who reports a skin concern and when, and flagging it to the athletic trainer or coach the moment a second or third case appears with a similar appearance or timing — not waiting until it's obviously a large outbreak.",
+        "A coach should suspect an outbreak, not an isolated case, when multiple athletes develop similar lesions within a short window, especially if they share a mat, equipment, or a locker room area; when a lesion appears on an athlete with no clear individual cause (no known cut, no known contact outside the team); or when a previously identified case wasn't promptly removed from contact activity and continued practicing. In any of these situations, the response scales up from 'evaluate one athlete' to 'inspect and disinfect shared equipment and mats, and consider screening the rest of the roster' — a team-level problem needs a team-level response, decided by the athletic trainer or team physician, not the aide alone."
+      ]
+    },
+    {
+      "heading": "Cleaning protocols that actually reduce outbreak risk",
+      "body": [
+        "Shared surfaces and equipment are the transmission bridge between individual cases and a team outbreak, which is why mat and equipment cleaning protocols are a named part of outbreak prevention, not just general tidiness.",
+        "Wrestling mats should be cleaned with an EPA-registered disinfectant effective against the specific organisms of concern (bacteria, fungi, and viruses) before and after every practice and competition, with special attention to sections where multiple athletes have had recent skin contact. Shared pads, headgear, and other equipment need the same routine, and any equipment used by an athlete with a confirmed active infection should be cleaned immediately rather than waiting for the next scheduled cleaning cycle."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A physician prescribes an antibiotic for what turns out to be a fungal skin infection. What is the most accurate explanation of what will happen?",
+      "choices": [
+        "The antibiotic will have essentially no effect, because it targets bacteria, not fungi",
+        "The antibiotic will clear the infection slightly slower than an antifungal would",
+        "The antibiotic will make the fungal infection worse by killing helpful skin bacteria only",
+        "It doesn't matter which drug category is used as long as some medication is applied"
+      ],
+      "answerIndex": 0,
+      "explanation": "Antibiotics work against bacteria specifically; they have no mechanism of action against fungi or viruses. A misidentified fungal infection treated with an antibiotic will simply keep progressing, which is why accurate pathogen category identification — not just 'it looks infected' — drives correct treatment."
+    },
+    {
+      "id": "q2",
+      "question": "What does it mean, in practical terms, that a strain of MRSA is 'resistant' to methicillin-class antibiotics?",
+      "choices": [
+        "The bacteria multiply more slowly when exposed to the drug",
+        "The drug works but takes several extra weeks to clear the infection",
+        "The bacteria have a genetic mechanism that lets them survive the drug, so it fails to stop the infection",
+        "The bacteria become permanently inactive but are not fully killed"
+      ],
+      "answerIndex": 2,
+      "explanation": "Resistance means the bacteria have evolved a way to survive exposure to that class of antibiotic, so the drug simply doesn't stop the infection — the lesion keeps progressing even though it's 'being treated.' This is why culture and sensitivity testing matters: it identifies which drugs will actually work."
+    },
+    {
+      "id": "q3",
+      "question": "Why is community-acquired MRSA (CA-MRSA) the strain most relevant to a school athletic setting, as opposed to hospital-acquired MRSA (HA-MRSA)?",
+      "choices": [
+        "CA-MRSA only affects people over age 65",
+        "CA-MRSA is not actually resistant to antibiotics",
+        "HA-MRSA cannot be transmitted between athletes under any circumstances",
+        "CA-MRSA spreads through skin-to-skin contact and shared equipment among otherwise healthy people, matching locker room and mat conditions"
+      ],
+      "answerIndex": 3,
+      "explanation": "CA-MRSA spreads in community settings — including athletics — through direct skin contact and shared gear among healthy individuals, which is exactly the wrestling-mat and locker-room scenario. HA-MRSA develops in healthcare settings among patients with existing wounds or weakened immune systems and tends to be even more resistant."
+    },
+    {
+      "id": "q4",
+      "question": "An athlete has a clear abscess from MRSA — a firm, painful, pus-filled pocket under the skin. Why is incision and drainage (I&D) considered the primary treatment rather than antibiotics alone?",
+      "choices": [
+        "Antibiotics are never effective against any staph infection",
+        "Pus trapped in a walled-off pocket is largely inaccessible to antibiotics carried through the bloodstream, so physically draining it removes the bulk of the infection",
+        "I&D eliminates the need for any follow-up care",
+        "Antibiotics are reserved only for fungal infections, not bacterial ones"
+      ],
+      "answerIndex": 1,
+      "explanation": "An abscess is a sealed pocket that antibiotics struggle to penetrate effectively, so a physician drains it directly, then uses antibiotics — chosen based on culture results — as an adjunct to handle any remaining infection in the surrounding tissue. This is exactly why 'just wait for the antibiotics to kick in' is the wrong plan for an obvious abscess."
+    },
+    {
+      "id": "q5",
+      "question": "A wrestler on the JV squad has cold-sore-like blisters near the ear and jawline after a tournament and reasons, 'it's just a cold sore, I'll wrestle through it.' What is the flaw in that reasoning?",
+      "choices": [
+        "The virus causing it — herpes simplex — is contagious through mat contact, so continuing to compete risks transmitting it to every opponent touched",
+        "Cold sores are not caused by a virus, so this reasoning is actually correct",
+        "Herpes gladiatorum only affects the hands, so a jaw lesion cannot be that infection",
+        "This reasoning is correct as long as the lesion is covered with a bandage"
+      ],
+      "answerIndex": 0,
+      "explanation": "A cold sore on someone's own lip is a minor personal issue, but the same herpes simplex virus on a wrestling mat is a transmission vector to every athlete that competitor contacts. Active lesions are contagious with skin contact, which is exactly why governing bodies apply mandatory clearance protocols to herpes gladiatorum rather than leaving it to individual judgment."
+    },
+    {
+      "id": "q6",
+      "question": "A clinician is deciding whether a scaly, ring-shaped patch is tinea (a dermatophyte fungal infection) or a different condition that mimics it, like eczema. What confirms the diagnosis rather than just the appearance?",
+      "choices": [
+        "Measuring the exact diameter of the ring",
+        "Asking the athlete how itchy it feels on a scale of 1 to 10",
+        "Comparing it to a photo of a classic ringworm case",
+        "A KOH prep, which dissolves skin cells on a scraping to reveal fungal hyphae under a microscope, or a fungal culture"
+      ],
+      "answerIndex": 3,
+      "explanation": "Because several skin conditions can closely mimic tinea's ring-shaped appearance, a KOH prep (which reveals fungal hyphae under a microscope) or a fungal culture is used to confirm the actual organism rather than relying on visual pattern-matching, which can be fooled."
+    },
+    {
+      "id": "q7",
+      "question": "An athlete's bacterial lesion stopped producing new spots two days ago but is still visibly weeping and moist. Does this meet real return-to-play clearance criteria?",
+      "choices": [
+        "Yes, because no new lesions have appeared in over 48 hours, that alone is sufficient",
+        "Yes, as long as the athlete says it doesn't hurt anymore",
+        "No — the lesion must also be dry, scabbed, or fully coverable, since a weeping lesion can still transmit infection on contact",
+        "No, because clearance requires the lesion to be completely invisible with no scar"
+      ],
+      "answerIndex": 2,
+      "explanation": "Real clearance criteria require multiple checkpoints together: no new lesions for 48-72 hours, a completed minimum treatment duration, and the lesion itself being dry, scabbed, or coverable. A lesion that has stopped spreading but is still weeping is still shedding infectious material, so it fails the third checkpoint even though the first is met."
+    },
+    {
+      "id": "q8",
+      "question": "Three wrestlers from the same practice group develop similar-looking red, scaly patches within the same ten-day window. What should this pattern prompt, beyond evaluating each athlete individually?",
+      "choices": [
+        "Nothing extra — each case should simply be treated on its own with no further action",
+        "Suspicion of a shared source (contaminated mat or equipment), prompting inspection and disinfection of shared surfaces and possible roster screening",
+        "Immediate cancellation of the season",
+        "Assuming it must be MRSA, since MRSA is the most serious skin infection"
+      ],
+      "answerIndex": 1,
+      "explanation": "Multiple similar cases clustered in a short window on a shared-contact team is the classic sign of an outbreak rather than isolated cases, and should escalate the response to inspecting and disinfecting shared mats and equipment and considering screening the rest of the roster — a team-level problem needs a team-level response from the athletic trainer, not a series of unconnected individual evaluations."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Three pathogen categories in sports skin infections",
+      "back": "Bacterial (impetigo, MRSA), fungal (ringworm, athlete's foot, jock itch — caused by dermatophytes), and viral (herpes gladiatorum). The category determines which treatment class will actually work."
+    },
+    {
+      "id": "f2",
+      "front": "Why misidentifying the pathogen matters",
+      "back": "Antibiotics only work on bacteria — they have no effect on fungal or viral infections. A lesion treated with the wrong drug class keeps progressing even though it's 'being treated.'"
+    },
+    {
+      "id": "f3",
+      "front": "Antibiotic resistance (as in MRSA)",
+      "back": "A genetic mechanism that lets bacteria survive exposure to a drug that would normally kill them, so the infection keeps progressing despite treatment."
+    },
+    {
+      "id": "f4",
+      "front": "CA-MRSA vs. HA-MRSA",
+      "back": "Community-acquired MRSA spreads via skin contact/shared gear among healthy people (the athletic setting); hospital-acquired MRSA develops in healthcare settings among patients with wounds or weak immune systems and tends to be even more resistant."
+    },
+    {
+      "id": "f5",
+      "front": "Culture and sensitivity test",
+      "back": "A lab test that grows bacteria from a swab and exposes them to different antibiotics to find which ones actually work — replaces guessing with evidence."
+    },
+    {
+      "id": "f6",
+      "front": "Incision and drainage (I&D)",
+      "back": "Physician-only procedure to physically open and drain a walled-off abscess; the primary treatment because antibiotics can't reliably penetrate a sealed pus pocket. Antibiotics are used as an adjunct afterward."
+    },
+    {
+      "id": "f7",
+      "front": "Herpes gladiatorum",
+      "back": "A herpes simplex virus infection spread via direct skin contact in contact sports (wrestling, rugby); painful fluid-filled blisters, highly contagious with any contact, not just discomfort for the carrier."
+    },
+    {
+      "id": "f8",
+      "front": "Herpes gladiatorum clearance concept",
+      "back": "Requires a minimum number of consecutive symptom-free days plus a completed course of antiviral medication before contact clearance — set by governing-body rule, not the athlete's own judgment."
+    },
+    {
+      "id": "f9",
+      "front": "Dermatophyte",
+      "back": "A group of fungi that digest keratin (the structural protein in skin, hair, nails), which is why tinea infections like ringworm stay superficial rather than invading deeper tissue."
+    },
+    {
+      "id": "f10",
+      "front": "KOH prep",
+      "back": "A skin scraping placed with potassium hydroxide solution that dissolves skin cells but leaves fungal hyphae visible under a microscope — confirms tinea rather than guessing from appearance."
+    },
+    {
+      "id": "f11",
+      "front": "Real return-to-play clearance criteria (bacterial/fungal)",
+      "back": "No new lesions for 48-72 hours, a completed minimum treatment duration, and the lesion dry/scabbed/fully coverable — all three checkpoints together, not just one."
+    },
+    {
+      "id": "f12",
+      "front": "When a coach should suspect an outbreak",
+      "back": "Multiple athletes develop similar lesions in a short window, especially sharing a mat or gear, or a known case wasn't pulled from contact activity promptly — triggers equipment disinfection and possible roster screening, not just individual evaluation."
+    }
+  ]
+}

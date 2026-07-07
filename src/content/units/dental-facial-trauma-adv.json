@@ -1,0 +1,270 @@
+{
+  "id": "dental-facial-trauma-adv",
+  "title": "Dental and Facial Trauma: Classification, Storage Science, and Escalation",
+  "category": "Head & Spine Injuries",
+  "strand": "dental-facial-trauma",
+  "gradeBand": "11-12",
+  "summary": "Go beyond avulsion first aid: fracture and luxation classification, the cell biology behind storage media, mandible fracture recognition, and when facial trauma becomes an airway emergency.",
+  "minutes": 22,
+  "sections": [
+    {
+      "heading": "Building on what you already know",
+      "body": [
+        "You already know the headline skill: pick an avulsed tooth up by the crown, never the root, and get it to a dentist within 30-60 minutes, ideally reimplanted or stored in milk along the way. That's the right first-aid action for the most common and most time-critical dental emergency, and it doesn't change here.",
+        "What changes at this level is precision. Not every knocked-out or damaged tooth is the same emergency, not every displaced tooth is a full avulsion, and not every facial injury is 'see a dentist when you get a chance.' This unit builds the classification and reasoning skills a student athletic trainer needs to sort injuries by true urgency and recognize the handful of facial trauma presentations that escalate past a dental problem into a medical one."
+      ]
+    },
+    {
+      "heading": "Crown fracture severity: why the depth of the break changes the clock",
+      "body": [
+        "A chipped tooth isn't one injury — it's a spectrum, and where the fracture line ends determines how urgent it is. Clinicians sometimes describe this using a simple severity scale (the Ellis classification is one common version), but you don't need the exact name to reason through it: what matters is which layer of the tooth is exposed.",
+        "A tooth has three layers: enamel (the hard, insensitive white outer layer), dentin (a softer, yellowish layer underneath that contains microscopic tubules connecting to the nerve — exposed dentin is sensitive to air and temperature), and pulp (the innermost living tissue, containing the nerve and blood supply)."
+      ],
+      "list": [
+        "Enamel-only fracture — a small chip through the white outer layer only. Usually painless, no urgency beyond a routine dentist visit to smooth sharp edges and check for hidden cracks.",
+        "Dentin-exposed fracture — the fracture reaches the yellowish layer beneath the enamel. The tooth is now sensitive to air, cold, and sweets because dentin tubules connect toward the nerve. Needs a dentist visit within a day or two — the pulp is still protected, but a delay risks bacteria tracking in through exposed tubules.",
+        "Pulp-exposed fracture — the fracture reaches the tooth's living core. You may see a pink or actively bleeding spot at the center of the fracture. This is a same-day dental emergency, not a 'get to it this week' injury: exposed pulp is a direct pathway for bacteria into living tissue, and every hour raises the risk of infection and eventual pulp necrosis (death of the nerve/blood supply), which can mean the difference between a simple restoration and a root canal or tooth loss."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Quick field read",
+        "text": "If a fractured tooth looks purely white/chalky at the break, that's likely enamel-only. Yellowish and sensitive to air suggests dentin exposure. Any pink tissue or active bleeding from the center of the tooth means treat it like pulp exposure and push for same-day care — don't wait to see if the sensitivity settles down."
+      }
+    },
+    {
+      "heading": "Luxation injuries: avulsion is only the most severe end",
+      "body": [
+        "Avulsion — the tooth completely out of the socket — is the injury you already know cold. But it sits at the extreme end of a family of injuries called luxations, where a tooth is displaced or destabilized without necessarily leaving the socket. Recognizing which luxation you're looking at matters because the injury pattern hints at the mechanism and what the dentist will need to check (root position, bone integrity, nerve status).",
+        "From least to most severe:"
+      ],
+      "list": [
+        "Concussion (dental sense, not brain) — the tooth was struck hard enough to injure the ligament and nerve, but it isn't loose or displaced at all. Tender to touch or biting pressure, otherwise looks normal. Easy to miss because there's nothing visible to find.",
+        "Subluxation — the tooth is loosened (you may feel or see slight mobility) but stays in its normal position, with no visible displacement.",
+        "Lateral luxation — the tooth is knocked sideways, often with an audible or felt 'click' as it locks against bone, and is usually rigid (not loose) because it's wedged into a new position. Often looks tilted compared to its neighbors.",
+        "Intrusion — the tooth is driven up into the socket, so it looks shorter than its neighbors. This is often the most damaging luxation for the root and surrounding bone, even though nothing is visibly missing.",
+        "Extrusion — the tooth is partially pulled out of the socket lengthwise, so it looks longer than its neighbors and is usually very mobile.",
+        "Avulsion — the tooth is completely out of the socket."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "The pattern to remember",
+        "text": "You don't need to name the exact luxation type on the sideline — you need to notice that the tooth looks or feels wrong (tender, loose, tilted, short, long, or gone) and treat any of these as 'see a dentist promptly,' escalating toward the same urgency as an avulsion if the tooth is visibly displaced. Only a full avulsion gets the reimplant-or-store-immediately protocol; the others still need a same-day or next-day dental evaluation to check root and bone status."
+      }
+    },
+    {
+      "heading": "Storage medium hierarchy — and the cell biology behind it",
+      "body": [
+        "You know milk beats tap water. Here's the reasoning, ranked from best to worst, so you understand why each option lands where it does. The common thread through all of it is keeping the periodontal ligament (PDL) cells on the root alive and undamaged — those cells are what let the tooth reattach.",
+        "Hank's Balanced Salt Solution (HBSS) — the gold standard, sold in some commercial tooth-preservation kits. It matches the tooth root's natural cellular environment almost exactly in osmolality (the concentration of dissolved particles) and pH, so PDL cells stay alive and functional for hours. It's rarely on hand at a practice or game, but if a kit is available, use it.",
+        "Cold milk — the realistic best option almost anywhere. Milk's osmolality is close enough to the PDL cells' natural environment that it doesn't pull water out of the cells or force water into them, and its cool temperature slows the cells' metabolic rate, buying time. This is why milk, not water, is the standard sideline answer.",
+        "The athlete's own saliva — holding the tooth inside the cheek (not swallowing it) works because saliva is also close to the right osmolality and keeps the tooth at body temperature and moist. It's a reasonable option when milk isn't available, but it carries more bacterial contamination risk than milk or HBSS, and it isn't viable for a young or disoriented athlete who might swallow or aspirate the tooth.",
+        "Saline (sterile saline, if available in an athletic training kit) — isotonic, meaning it matches the salt concentration inside the PDL cells, so it doesn't damage them by osmosis. A reasonable option but not superior to milk in practice, and rarely faster to reach than milk.",
+        "Tap water — never use it. Water is hypotonic (very low salt concentration compared to the inside of a PDL cell). Cells placed in a hypotonic solution absorb water by osmosis, swell, and rupture — the ligament cells die within minutes. A tooth stored in water may look intact, but the very cells that make reimplantation work have already been destroyed."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Osmolality is the whole story",
+        "text": "Every ranking above comes down to one idea: PDL cells need a storage medium with a salt concentration close to their own to survive. Milk, saliva, and saline are all close enough. Tap water is not — it's the single most common preventable reason a saveable tooth fails to reimplant successfully."
+      }
+    },
+    {
+      "heading": "Mandible fractures: recognition and the 'ring' concept",
+      "body": [
+        "The mandible (lower jawbone) is structurally a ring — it runs from one temporomandibular joint (TMJ), around the front of the jaw, to the other TMJ. That shape has a direct clinical consequence: a force strong enough to break a ring in one place often transmits enough energy around the ring to crack it in a second place too, frequently on the opposite side from the direct impact (for example, a blow to the chin fracturing the body of the jaw on one side and the condyle — the rounded top of the jaw near the ear — on the other). This is why any confirmed or suspected mandible fracture prompts a check of the entire jaw, not just the obvious injury site.",
+        "Key recognition signs, each pointing to a different piece of the anatomy:"
+      ],
+      "list": [
+        "Malocclusion — the athlete's bite doesn't line up the way it used to, or their teeth suddenly feel like they don't fit together right. This happens because a fracture shifts the position of the jaw segments relative to the upper teeth.",
+        "Trismus — difficulty or inability to open the jaw normally, often from pain-guarding muscle spasm around the fracture site rather than the bone itself blocking movement.",
+        "Numbness of the lower lip or chin — the inferior alveolar nerve runs through a canal inside the body of the mandible and exits at the chin as the mental nerve. A fracture through that canal can bruise or shear the nerve, producing numbness in exactly that distribution — a highly specific sign that's easy to check for and easy to miss if you don't think to ask.",
+        "Visible asymmetry, step-off deformity (a palpable irregularity in the normally smooth line of the jaw), drooling or reluctance to swallow (pain with jaw movement), and bleeding inside the mouth along the gumline."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Ring logic in practice",
+        "text": "If you find one clear sign of a mandible fracture, actively look for a second injury site before you're satisfied you've found everything — check both sides of the jaw and both TMJs, not just the area the athlete points to. Any suspected mandible fracture is an urgent medical referral, not a dental-office visit."
+      }
+    },
+    {
+      "heading": "When facial trauma becomes more than a facial injury",
+      "body": [
+        "Two categories of facial trauma deserve extra caution because they cross into other body systems entirely.",
+        "Orbital involvement: swelling around the eye, an eye that looks sunken or asymmetric, double vision, or restricted eye movement after facial trauma can mean an orbital (eye socket) fracture — sometimes with the muscle that moves the eye trapped in the fracture line. This overlaps directly with what you've covered in the eye-injuries strand: any facial trauma with these eye findings gets the same urgent-referral standard as a primary eye injury, not a 'we'll deal with the eye after the jaw' approach.",
+        "Airway compromise: this is the reason severe facial trauma can become a true emergency-action-plan-level event rather than a first-aid situation. Heavy intraoral bleeding, rapidly expanding swelling of the tongue or floor of the mouth, a mandible fracture severe enough to let the tongue fall backward (especially if it's fractured in two places, sometimes called a 'flail' mandible), or loose teeth and blood pooling in the back of the throat can all physically block the airway — particularly in an athlete who is also less alert from an associated head injury and can't protect their own airway by coughing or repositioning. This is precisely why severe facial trauma paired with any change in alertness should trigger activation of your team's Emergency Action Plan and a call for EMS, not just a trip to see a dentist."
+      ]
+    },
+    {
+      "heading": "Mouthguard evidence: fit matters, but compliance decides outcomes",
+      "body": [
+        "You know custom-fitted mouthguards generally outperform boil-and-bite ones. The more useful question at this level is by how much, and what actually drives real-world injury reduction across a team.",
+        "Custom mouthguards, made from a dentist's mold, do measurably improve fit, retention (staying in place under impact), and airway/speech comfort compared to boil-and-bite, and they're the clear choice for athletes with braces or other orthodontic hardware where a generic guard can trap or catch on brackets. But the fit gap between a well-fitted boil-and-bite guard and a custom one is smaller than most people assume — a boil-and-bite guard that's been properly softened, seated, and trimmed can perform close to a custom guard.",
+        "The bigger driver of real-world protection isn't the fit gap between guard types — it's compliance: whether an athlete actually wears the mouthguard, keeps it in during play instead of parking it on the bench or dangling it out of the mouth, and replaces it when it's worn out or has stopped fitting after orthodontic changes. A poorly worn premium mouthguard protects less than a consistently worn basic one. Coaches and athletic trainers get more real injury reduction from enforcing consistent wear than from upgrading equipment alone."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "What actually moves the needle",
+        "text": "If you're advising on mouthguard policy for a team, the highest-value intervention is usually compliance enforcement (rules requiring the guard in during all live contact, spot-checks, replacing damaged guards) rather than assuming a switch to custom guards alone will solve a team's dental injury rate."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "An athlete's front tooth is chipped during a drill. At the center of the fracture you see a small area of pink tissue that's actively oozing blood. How urgent is this compared to a simple painless white chip?",
+      "choices": [
+        "The same urgency — any chipped tooth can wait until the athlete's next routine dentist visit",
+        "Less urgent, since bleeding usually means the injury is minor and will clot on its own",
+        "A same-day dental emergency — the pink, bleeding tissue is exposed pulp, a direct pathway for infection into living tissue",
+        "Not a dental issue at all — refer directly to a physician instead of a dentist"
+      ],
+      "answerIndex": 2,
+      "explanation": "Pink or bleeding tissue at the center of a fracture indicates the pulp (the tooth's living core) is exposed, which is a same-day emergency because bacteria can track directly into living tissue and raise the risk of infection and eventual pulp necrosis. A white, chalky fracture line (enamel-only) is far lower urgency and can wait for a routine visit."
+    },
+    {
+      "id": "q2",
+      "question": "You can't reimplant an avulsed permanent tooth immediately. In order of best to worst for preserving the periodontal ligament (PDL) cells on the root, which ranking is correct, and why?",
+      "choices": [
+        "Tap water > saliva > milk, because water is the cleanest option available",
+        "Hank's Balanced Salt Solution > cold milk > saliva > saline > tap water, based on how closely each matches the PDL cells' natural osmolality",
+        "Saliva > tap water > milk, because saliva is always sterile",
+        "It doesn't matter what medium you use as long as the tooth stays visibly moist"
+      ],
+      "answerIndex": 1,
+      "explanation": "PDL cell survival depends on a storage medium's osmolality (salt concentration) being close to the cells' natural environment. HBSS matches it almost exactly; milk and saliva are close enough to keep cells viable for a useful window; saline is isotonic and safe but not superior to milk in practice. Tap water is hypotonic, so cells absorb water, swell, and rupture within minutes — it is never an acceptable option regardless of how clean it looks."
+    },
+    {
+      "id": "q3",
+      "question": "After a collision, an athlete's tooth looks noticeably shorter than its neighbors, as if it's been pushed up into the gum, but nothing is visibly missing and the tooth feels rigid, not loose. Which luxation injury does this describe, and why is it often the most damaging to the root?",
+      "choices": [
+        "Extrusion — the tooth has been pulled partially out of the socket",
+        "Subluxation — the tooth is loosened but stays in its normal position",
+        "Intrusion — the tooth has been driven up into the socket, which typically compresses and damages the root and surrounding bone more than other luxation types",
+        "Avulsion — the tooth has been completely displaced from the socket"
+      ],
+      "answerIndex": 2,
+      "explanation": "A tooth that looks shorter, not missing or visibly displaced sideways, describes intrusion — the tooth driven up into the socket. Because the root is forcefully compressed into bone, intrusion often causes more damage to the root and surrounding bone than lateral luxation or extrusion, even though there's nothing obviously wrong to see from the outside."
+    },
+    {
+      "id": "q4",
+      "question": "An athlete takes a direct blow to the chin. On exam, their bite doesn't line up correctly and they have trouble opening their jaw fully. Applying the mandible 'ring' concept, what should you do next, and why?",
+      "choices": [
+        "Treat only the chin, since that's clearly where the impact occurred",
+        "Check the entire jaw, including both TMJs near the ears, since a fracture on one side of the ring often means a second fracture elsewhere on the ring, even opposite the point of impact",
+        "Ice the jaw and reassess in 24 hours before deciding whether an exam is needed",
+        "Assume it's a dental issue only and refer to a dentist rather than urgent medical care"
+      ],
+      "answerIndex": 1,
+      "explanation": "Because the mandible is structurally a ring running from one TMJ around to the other, force strong enough to fracture it in one spot often transmits enough energy to fracture it a second time elsewhere on the ring — commonly at the condyle opposite the impact site. Malocclusion and trismus are both signs of a possible mandible fracture, which needs urgent medical evaluation and a check of the whole jaw, not just the point of contact."
+    },
+    {
+      "id": "q5",
+      "question": "An athlete with facial trauma reports numbness of the lower lip and chin but no other obvious deformity. What does this specific finding suggest, and why is it clinically useful?",
+      "choices": [
+        "It's likely unrelated bruising and can be monitored without concern",
+        "It suggests possible injury to the inferior alveolar/mental nerve from a mandible fracture through the nerve canal — a specific, easy-to-miss sign worth actively checking for",
+        "It confirms a pulp-exposed tooth fracture rather than a jaw injury",
+        "It means the athlete is likely also concussed and needs no further jaw evaluation"
+      ],
+      "answerIndex": 1,
+      "explanation": "The mental nerve exits the mandible at the chin after running through a canal in the jawbone; a fracture through that canal can bruise or shear the nerve, causing numbness in exactly that distribution. It's a specific, high-value sign for a mandible fracture that's easy to overlook unless you deliberately check for it, since it produces no visible deformity on its own."
+    },
+    {
+      "id": "q6",
+      "question": "An athlete with severe facial trauma has heavy bleeding inside the mouth, rapidly increasing swelling of the tongue and floor of the mouth, and a decreasing level of alertness. What is the correct escalation?",
+      "choices": [
+        "Manage it as a routine dental referral once bleeding is controlled with gauze",
+        "Recognize this as a possible airway compromise and activate the team's Emergency Action Plan / call EMS, not just arrange a dental or urgent care visit",
+        "Have the athlete lie flat and monitor for 15 minutes before deciding on referral",
+        "Treat it the same as an isolated nosebleed with direct pressure and observation"
+      ],
+      "answerIndex": 1,
+      "explanation": "Heavy intraoral bleeding, rapidly expanding oral swelling, and decreasing alertness together raise real concern for airway obstruction — especially since a less alert athlete may not be able to protect their own airway. This combination moves the situation past first aid into an Emergency Action Plan-level event requiring EMS activation, not a delayed dental or urgent care referral."
+    },
+    {
+      "id": "q7",
+      "question": "After a facial impact, an athlete has swelling around one eye that looks sunken compared to the other, along with double vision. How should this be handled relative to the jaw and dental findings on the same athlete?",
+      "choices": [
+        "Address the dental injury first and revisit the eye findings only if they haven't improved by the next day",
+        "Ignore the eye findings unless there's visible bleeding from the eye itself",
+        "Treat the orbital findings with the same urgency as a primary eye injury — get urgent evaluation — rather than deprioritizing them behind the dental or jaw injury",
+        "Assume the double vision is just from swelling and will resolve with ice and rest"
+      ],
+      "answerIndex": 2,
+      "explanation": "A sunken-looking eye with double vision after facial trauma raises concern for an orbital fracture, which can involve a trapped eye muscle. These findings deserve the same urgent-referral standard used for primary eye injuries — they should not be deprioritized just because a dental or jaw injury is also present and more obvious."
+    },
+    {
+      "id": "q8",
+      "question": "A team is deciding how to reduce dental injuries this season and is debating whether to require custom-fitted mouthguards for everyone. Based on the evidence on fit versus compliance, what's the strongest first step?",
+      "choices": [
+        "Skip mouthguard rules entirely, since fit differences between guard types are negligible",
+        "Immediately require custom mouthguards for all athletes, since fit is the only factor that matters",
+        "Enforce consistent wear of properly fitted mouthguards (boil-and-bite included) during all live contact, since inconsistent wear undermines protection more than the fit gap between guard types",
+        "Allow athletes to remove mouthguards during non-contact drills, since dental injuries only occur during obvious contact"
+      ],
+      "answerIndex": 2,
+      "explanation": "While custom mouthguards do offer a real fit and retention advantage, the larger driver of real-world dental injury reduction is compliance — whether athletes actually keep a properly fitted mouthguard in during play. A poorly worn premium guard protects less than a consistently worn basic one, and dental injuries can happen in 'non-contact' moments of contact sports too."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Crown fracture severity spectrum",
+      "back": "Enamel-only (painless, routine visit) → dentin-exposed (sensitive to air/cold, see a dentist within a day or two) → pulp-exposed (pink/bleeding center, same-day dental emergency)."
+    },
+    {
+      "id": "f2",
+      "front": "Why pulp exposure is urgent",
+      "back": "Exposed pulp is a direct pathway for bacteria into living tissue, raising infection risk and risk of pulp necrosis (nerve/blood supply death) the longer it's untreated."
+    },
+    {
+      "id": "f3",
+      "front": "Luxation injuries (least to most severe)",
+      "back": "Concussion (tender, no movement) → subluxation (loose, normal position) → lateral luxation (displaced sideways, rigid) → intrusion (driven up, looks short) → extrusion (pulled out lengthwise, looks long) → avulsion (completely out)."
+    },
+    {
+      "id": "f4",
+      "front": "Dental concussion vs. avulsion",
+      "back": "Dental concussion: tooth injured by impact but not loose or displaced at all — tender to touch/bite only. Easy to miss since nothing looks wrong."
+    },
+    {
+      "id": "f5",
+      "front": "Storage medium hierarchy for an avulsed tooth",
+      "back": "Hank's Balanced Salt Solution (best) > cold milk > athlete's own saliva > sterile saline > NEVER tap water."
+    },
+    {
+      "id": "f6",
+      "front": "Why tap water destroys an avulsed tooth's chances",
+      "back": "Water is hypotonic compared to periodontal ligament (PDL) cells, so the cells absorb water, swell, and rupture within minutes — the tooth may look fine but the cells needed for reattachment are already dead."
+    },
+    {
+      "id": "f7",
+      "front": "Osmolality (in this context)",
+      "back": "The concentration of dissolved particles in a solution; PDL cells survive best in a medium whose osmolality is close to their own (milk, saliva, saline) and are damaged by one that isn't (tap water)."
+    },
+    {
+      "id": "f8",
+      "front": "Mandible 'ring' concept",
+      "back": "The mandible is structurally a ring (TMJ to TMJ); a force strong enough to fracture it in one spot often causes a second fracture elsewhere on the ring, often on the opposite side — always check the whole jaw."
+    },
+    {
+      "id": "f9",
+      "front": "Malocclusion",
+      "back": "The bite doesn't line up the way it used to — a classic sign a mandible fracture has shifted jaw segments relative to the upper teeth."
+    },
+    {
+      "id": "f10",
+      "front": "Trismus",
+      "back": "Difficulty or inability to open the jaw normally, usually from pain-guarding muscle spasm around a fracture site."
+    },
+    {
+      "id": "f11",
+      "front": "Mental nerve numbness",
+      "back": "Numbness of the lower lip/chin from injury to the inferior alveolar/mental nerve inside the mandible — a specific, easy-to-miss sign of a possible mandible fracture."
+    },
+    {
+      "id": "f12",
+      "front": "Facial trauma → airway compromise",
+      "back": "Heavy intraoral bleeding, rapid oral/tongue swelling, or a flail mandible plus decreasing alertness can block the airway — activate the Emergency Action Plan, don't just refer to a dentist."
+    }
+  ]
+}

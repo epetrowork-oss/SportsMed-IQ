@@ -1,0 +1,237 @@
+{
+  "id": "dental-facial-trauma-ms",
+  "title": "Knocked-Out Teeth and Face Injuries: What to Do",
+  "category": "Head & Spine Injuries",
+  "strand": "dental-facial-trauma",
+  "gradeBand": "7-8",
+  "summary": "Learn how to handle a knocked-out tooth, a cut lip, a nosebleed, or a hard hit to the face — and when every minute matters.",
+  "minutes": 12,
+  "sections": [
+    {
+      "heading": "Why this matters",
+      "body": [
+        "Sports with balls, elbows, sticks, and falls can hurt your mouth, teeth, and face. This happens in soccer, basketball, baseball, hockey, and lots of other sports.",
+        "Most of these injuries look scary because the mouth and nose bleed a lot, even from small cuts. But there's one injury where speed really matters: a knocked-out permanent (adult) tooth. What you do in the first few minutes can help save that tooth."
+      ]
+    },
+    {
+      "heading": "What can happen",
+      "body": [
+        "Face and mouth injuries come in different types. Here are ones you might see on a field or court:"
+      ],
+      "list": [
+        "A tooth completely knocked out of its socket — the big one, covered next",
+        "A chipped or cracked tooth that's still in place",
+        "A cut on the lip, cheek, or tongue",
+        "A nosebleed",
+        "A hard hit to the jaw or cheek that might mean a broken bone"
+      ]
+    },
+    {
+      "heading": "A knocked-out tooth: the most important skill",
+      "body": [
+        "If a permanent (adult) tooth gets completely knocked out, every minute counts. The root — the part that was inside the gum — has tiny living parts that help the tooth reattach. Those parts start dying quickly once the tooth is out of the mouth.",
+        "Here's what to do:"
+      ],
+      "list": [
+        "Find the tooth. Pick it up only by the crown — the white top part you chew with. Never touch the root, the narrow part that was inside the gum.",
+        "If there's milk nearby, put the tooth in a cup of milk. Milk keeps the tooth's living parts safe.",
+        "Do not rinse it, scrub it, or wrap it in a dry tissue or paper towel.",
+        "Get an adult right away. The tooth and the athlete need to get to a dentist fast — every minute matters."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Baby teeth are different",
+        "text": "If the tooth that came out is a baby tooth (not a permanent adult tooth), never try to put it back in. Just tell an adult — they'll know what to do next."
+      }
+    },
+    {
+      "heading": "Cuts, chips, and jaw hits: tell an adult",
+      "body": [
+        "For a chipped tooth, a cut lip or cheek, a bitten tongue, or a hard hit to the jaw, your job is simple: don't try to fix it yourself. Tell a trusted adult — a coach, athletic trainer, parent, or teacher — right away.",
+        "Don't try to push a chipped tooth piece back into place, don't try to stop bleeding with anything other than clean gauze or cloth, and don't try to decide how bad a jaw hit is. That's an adult's job, not yours."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Signs it's serious — get help fast",
+        "text": "Tell an adult immediately if the face looks uneven or swells up fast, the mouth won't open or close normally, bleeding doesn't stop after a few minutes of pressure, or the athlete seems confused or was knocked out even for a second. These need a doctor right away."
+      }
+    },
+    {
+      "heading": "Nosebleeds",
+      "body": [
+        "Nosebleeds happen a lot in sports, usually from a bump to the nose. They look worse than they usually are.",
+        "Have the athlete sit up and lean forward a little — never tilt the head back. Tilting back lets blood run down the throat.",
+        "Pinch the soft part of the nose, just below the bony part, and hold steady pressure for about 10 minutes without letting go to check.",
+        "If the bleeding doesn't stop after a while, or there's a lot of blood, tell an adult so they can get medical help."
+      ]
+    },
+    {
+      "heading": "Prevention: mouthguards",
+      "body": [
+        "A mouthguard is a simple way to protect your teeth and mouth during sports. It cushions your teeth and jaw from a hit.",
+        "Wear a mouthguard every time you play a sport where it's required or recommended, like football, hockey, lacrosse, wrestling, or basketball. It's one of the easiest ways to prevent a knocked-out tooth in the first place."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A permanent tooth gets knocked all the way out. What part should you hold it by?",
+      "choices": [
+        "The root",
+        "The crown (the white part you chew with)",
+        "It doesn't matter as long as you're quick",
+        "Wrap it in a dry napkin and don't touch it at all"
+      ],
+      "answerIndex": 1,
+      "explanation": "The root has tiny living parts that help the tooth reattach, and touching it can damage those parts. Always hold a knocked-out tooth by the crown."
+    },
+    {
+      "id": "q2",
+      "question": "You can't get to a dentist right away with a knocked-out permanent tooth. Where's the best place to put it?",
+      "choices": [
+        "In tap water",
+        "Wrapped dry in a paper towel",
+        "In a cup of milk",
+        "In your pocket"
+      ],
+      "answerIndex": 2,
+      "explanation": "Milk keeps the tooth's living root parts safe. Tap water and letting the tooth dry out both damage those parts."
+    },
+    {
+      "id": "q3",
+      "question": "A teammate's baby tooth gets knocked out at practice. What should you do?",
+      "choices": [
+        "Do not put it back in — tell an adult",
+        "Push it back into the socket right away",
+        "Store it in milk and push it back in within an hour",
+        "Ignore it since baby teeth fall out anyway"
+      ],
+      "answerIndex": 0,
+      "explanation": "Baby teeth are never put back in — doing so can hurt the adult tooth growing underneath. Just tell an adult so they can decide next steps."
+    },
+    {
+      "id": "q4",
+      "question": "Why does speed matter so much when a permanent tooth is knocked out?",
+      "choices": [
+        "Because the bleeding never stops otherwise",
+        "It doesn't really matter, any time works fine",
+        "Only because a missing tooth looks bad",
+        "Because the root has living parts that start dying quickly once it's out of the mouth"
+      ],
+      "answerIndex": 3,
+      "explanation": "The living parts on the tooth's root start dying soon after the tooth leaves the mouth, so getting it to a dentist fast gives it the best chance of being saved."
+    },
+    {
+      "id": "q5",
+      "question": "A teammate chips a tooth during a game. What's the right first step?",
+      "choices": [
+        "Tell a trusted adult right away",
+        "Try to fix or glue the piece back on yourself",
+        "Ignore it if it doesn't seem to hurt",
+        "Rinse the mouth with soda to clean it off"
+      ],
+      "answerIndex": 0,
+      "explanation": "A chipped tooth still needs an adult to decide what happens next — don't try to fix it yourself. Telling a trusted adult right away is always the correct first move."
+    },
+    {
+      "id": "q6",
+      "question": "How should someone with a nosebleed sit?",
+      "choices": [
+        "Lying flat on their back",
+        "Sitting up and leaning forward slightly",
+        "Tilting the head all the way back",
+        "Standing and shaking the head side to side"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sitting up and leaning forward keeps blood from running down the throat. Tilting the head back is a common mistake that can cause choking or an upset stomach."
+    },
+    {
+      "id": "q7",
+      "question": "Which of these is a sign that a face injury needs a doctor right away?",
+      "choices": [
+        "A small bruise that doesn't hurt much",
+        "Mild soreness in the cheek that fades quickly",
+        "The face looks uneven or swells up fast",
+        "A little redness that goes away in a minute"
+      ],
+      "answerIndex": 2,
+      "explanation": "A face that suddenly looks uneven or swells up fast is a warning sign that needs a doctor right away. Small, mild symptoms that fade on their own are not the same kind of red flag."
+    },
+    {
+      "id": "q8",
+      "question": "What's the best way to help prevent a knocked-out tooth during a contact sport?",
+      "choices": [
+        "Chew gum while playing",
+        "Keep your mouth closed the whole game",
+        "Avoid any sport that uses a ball",
+        "Wear a properly fitted mouthguard"
+      ],
+      "answerIndex": 3,
+      "explanation": "A properly fitted mouthguard cushions the teeth and jaw from impact and is the single best way to prevent dental injuries during contact sports."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Knocked-out tooth (avulsed tooth)",
+      "back": "A tooth completely knocked out of its socket. For a permanent tooth, this is a race against time."
+    },
+    {
+      "id": "f2",
+      "front": "How to hold a knocked-out tooth",
+      "back": "By the crown (the white chewing part) only — never touch the root."
+    },
+    {
+      "id": "f3",
+      "front": "Best place to store a knocked-out permanent tooth",
+      "back": "A cup of milk, if one's nearby. Never tap water, and never let it dry out."
+    },
+    {
+      "id": "f4",
+      "front": "Why speed matters",
+      "back": "The tooth's root has tiny living parts that start dying quickly once the tooth is out of the mouth."
+    },
+    {
+      "id": "f5",
+      "front": "Baby tooth knocked out",
+      "back": "Never put it back in. Just tell an adult — putting it back can hurt the adult tooth growing underneath."
+    },
+    {
+      "id": "f6",
+      "front": "Chipped tooth",
+      "back": "Don't try to fix it yourself — tell a trusted adult right away."
+    },
+    {
+      "id": "f7",
+      "front": "Cut lip, cheek, or tongue",
+      "back": "Tell an adult right away — don't try to treat it yourself beyond simple pressure with clean cloth."
+    },
+    {
+      "id": "f8",
+      "front": "Hard hit to the jaw",
+      "back": "Tell an adult immediately — it's not your job to decide how serious it is."
+    },
+    {
+      "id": "f9",
+      "front": "Nosebleed position",
+      "back": "Sit up and lean forward slightly. Never tilt the head back — that lets blood run down the throat."
+    },
+    {
+      "id": "f10",
+      "front": "Nosebleed pressure",
+      "back": "Pinch the soft part of the nose (below the bony part) and hold steady pressure for about 10 minutes."
+    },
+    {
+      "id": "f11",
+      "front": "Signs it's serious — get help fast",
+      "back": "Face looks uneven or swells up fast, mouth won't open or close right, bleeding won't stop, or the athlete seems confused or was knocked out."
+    },
+    {
+      "id": "f12",
+      "front": "Mouthguard",
+      "back": "A simple piece of gear that cushions the teeth and jaw during contact sports — wear it whenever it's required or recommended."
+    }
+  ]
+}
