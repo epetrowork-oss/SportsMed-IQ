@@ -1,0 +1,224 @@
+{
+  "id": "knee-acl-ms",
+  "title": "Knee Injuries: What to Watch For",
+  "category": "Lower Extremity Injuries",
+  "strand": "knee-acl",
+  "gradeBand": "7-8",
+  "summary": "How to spot a serious knee injury on the field and why you always stop and tell an adult right away.",
+  "minutes": 12,
+  "sections": [
+    {
+      "heading": "Why knees get hurt",
+      "body": [
+        "Your knee is one of the biggest joints in your body. It has to bend, straighten, and handle your whole body weight while you run, jump, and cut side to side.",
+        "Inside the knee are strong bands of tissue that hold the bones together and pads that cushion the joint. You don't need to know their names for this lesson — you just need to know that a hard twist, a sudden stop, or a hit to the knee can hurt those inside parts, even if nothing looks broken from the outside."
+      ]
+    },
+    {
+      "heading": "How it usually happens",
+      "body": [
+        "Most serious knee injuries in sports happen without anyone even touching the athlete. A player plants a foot, twists, cuts sharply, or lands from a jump, and the knee buckles or twists the wrong way.",
+        "It can also happen from contact — getting hit or tackled on the side of the knee while the foot is planted on the ground.",
+        "Either way, the athlete often feels or hears something happen inside the knee right when it occurs."
+      ]
+    },
+    {
+      "heading": "Signs something is wrong",
+      "body": [
+        "You don't have to know exactly what's torn or hurt inside the knee — that's a job for an athletic trainer or doctor. Your job is to notice the warning signs and stop play."
+      ],
+      "list": [
+        "A pop or snap the athlete heard or felt at the moment of injury",
+        "The knee 'gives way,' buckles, or feels wobbly and unstable when they try to stand or walk on it",
+        "Swelling around the knee, especially if it shows up fast",
+        "The athlete can't put normal weight on that leg",
+        "The knee won't fully straighten or fully bend like the other one",
+        "The athlete says it just feels 'wrong' compared to normal, even without obvious swelling"
+      ]
+    },
+    {
+      "heading": "What to do right away",
+      "body": [
+        "If any of those signs show up, stop playing immediately — do not try to keep going or 'walk it off.' Playing on an injured knee can turn a small problem into a much bigger one.",
+        "Tell a coach, athletic trainer, or other trusted adult right away. It is never your job as a student to decide how bad a knee injury is or whether it's safe to keep playing — that decision belongs to a trained adult."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Get an adult immediately",
+        "text": "If the knee looks bent out of shape, the athlete cannot bear any weight on it, the leg below the knee looks pale, cold, or numb, or the athlete cannot move their foot or toes, this is an emergency. Get an adult and call 911 right away. Never try to straighten or push a badly deformed knee back into place yourself."
+      }
+    },
+    {
+      "heading": "Getting better and staying safe",
+      "body": [
+        "An injured knee needs to be looked at by a doctor or athletic trainer before returning to any sport. They may use ice, rest, a brace, or crutches at first, and some knee injuries need more treatment, like physical therapy or even surgery, before it's safe to play again.",
+        "Returning to play too soon, before a doctor clears the athlete, is one of the most common reasons knee injuries get worse or come back."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Prevention starts with strong legs",
+        "text": "Warming up before practice, doing leg-strengthening exercises, and practicing safe landing and cutting technique all help protect knees. Coaches and athletic trainers can teach these — ask about them."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A soccer player plants her foot, twists, and feels a pop in her knee. No one touched her. What should she do?",
+      "choices": [
+        "Keep playing since no one hit her",
+        "Stop playing and tell an adult right away",
+        "Wait until after the game to mention it",
+        "Stretch it out and see if it feels better"
+      ],
+      "answerIndex": 1,
+      "explanation": "A felt or heard pop is a warning sign, even without contact from another player. The athlete should stop immediately and tell a trusted adult — never keep playing to 'test it out.'"
+    },
+    {
+      "id": "q2",
+      "question": "Which of these is a warning sign that a knee injury might be serious?",
+      "choices": [
+        "The knee feels normal the next day",
+        "The athlete is a little tired after practice",
+        "The knee gives way or buckles when the athlete tries to stand on it",
+        "The athlete is thirsty after running"
+      ],
+      "answerIndex": 2,
+      "explanation": "A knee that buckles or gives way when weight is put on it is a red flag for a serious injury. Normal tiredness or thirst are not injury warning signs."
+    },
+    {
+      "id": "q3",
+      "question": "Do serious knee injuries always happen from getting hit by another player?",
+      "choices": [
+        "Yes, only from a direct hit",
+        "No — many happen just from planting, twisting, or landing wrong, with no contact at all",
+        "Yes, but only in football",
+        "No, they only happen from falling down"
+      ],
+      "answerIndex": 1,
+      "explanation": "Many serious knee injuries are non-contact — they happen from planting, cutting, twisting, or landing awkwardly, with no opponent involved."
+    },
+    {
+      "id": "q4",
+      "question": "Whose job is it to decide exactly what's injured inside a hurt knee?",
+      "choices": [
+        "The injured athlete themselves",
+        "A teammate who saw it happen",
+        "An athletic trainer or doctor",
+        "Whoever is closest when it happens"
+      ],
+      "answerIndex": 2,
+      "explanation": "Figuring out exactly what structure inside the knee is hurt is a trained adult's job. A student's job is to notice the warning signs, stop play, and tell an adult."
+    },
+    {
+      "id": "q5",
+      "question": "An athlete's knee looks bent out of shape after a collision, and their foot below the knee looks pale and feels cold. What should happen?",
+      "choices": [
+        "Have them walk it off slowly",
+        "Straighten the knee back into place for them",
+        "Get an adult and call 911 immediately",
+        "Wrap it with tape and send them back in"
+      ],
+      "answerIndex": 2,
+      "explanation": "A deformed knee with a pale, cold foot below it is an emergency sign of a serious injury affecting blood flow. Call 911 and get an adult immediately — never try to push the knee back into place yourself."
+    },
+    {
+      "id": "q6",
+      "question": "Why is it dangerous to keep playing on an injured knee?",
+      "choices": [
+        "It isn't dangerous if the pain is mild",
+        "It can turn a smaller injury into a much bigger one",
+        "It only affects how the uniform fits",
+        "It has no effect either way"
+      ],
+      "answerIndex": 1,
+      "explanation": "Continuing to play on an injured knee can make the damage worse. Stopping right away protects the athlete from a bigger injury."
+    },
+    {
+      "id": "q7",
+      "question": "Fast swelling around the knee after an injury is:",
+      "choices": [
+        "A normal part of every practice",
+        "A sign the knee will feel better",
+        "A warning sign that something inside the knee may be seriously hurt",
+        "Something to ignore until next week"
+      ],
+      "answerIndex": 2,
+      "explanation": "Swelling that shows up quickly after a knee injury is a warning sign of a possibly serious injury and should be reported to an adult right away."
+    },
+    {
+      "id": "q8",
+      "question": "Before returning to any sport after a knee injury, an athlete should:",
+      "choices": [
+        "Wait until it stops hurting and decide on their own",
+        "Be cleared by a doctor or athletic trainer",
+        "Ask a teammate if it looks okay",
+        "Play a lighter practice to test it"
+      ],
+      "answerIndex": 1,
+      "explanation": "A doctor or athletic trainer needs to check and clear the knee before returning to play. Returning too soon, without clearance, is a common reason knee injuries get worse."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "What is your job when a teammate's knee gets hurt?",
+      "back": "Notice the warning signs, help them stop playing, and tell a trusted adult right away — not decide how serious it is yourself."
+    },
+    {
+      "id": "f2",
+      "front": "Pop or snap",
+      "back": "A sound or feeling the athlete notices right when the knee gets hurt — a warning sign to stop playing and tell an adult."
+    },
+    {
+      "id": "f3",
+      "front": "Knee 'gives way'",
+      "back": "The knee buckles or feels wobbly/unstable when weight is put on it — a warning sign of a serious injury."
+    },
+    {
+      "id": "f4",
+      "front": "Non-contact knee injury",
+      "back": "A knee injury that happens from planting, twisting, cutting, or landing wrong — with no other player involved."
+    },
+    {
+      "id": "f5",
+      "front": "Fast swelling after a knee injury",
+      "back": "Swelling that shows up quickly is a warning sign that something inside the knee may be seriously hurt."
+    },
+    {
+      "id": "f6",
+      "front": "Can't bear weight",
+      "back": "The athlete can't put normal weight on the injured leg — a sign to stop play and get help immediately."
+    },
+    {
+      "id": "f7",
+      "front": "Emergency knee signs",
+      "back": "A deformed (bent out of shape) knee, or a foot/leg below the knee that looks pale, feels cold, or is numb — call 911."
+    },
+    {
+      "id": "f8",
+      "front": "What NOT to do with a badly deformed knee",
+      "back": "Never try to straighten or push it back into place yourself — get an adult and call 911."
+    },
+    {
+      "id": "f9",
+      "front": "'Walking it off'",
+      "back": "Never a safe response to real knee warning signs — playing through them can make the injury worse."
+    },
+    {
+      "id": "f10",
+      "front": "Who decides when it's safe to return to play?",
+      "back": "A doctor or athletic trainer — not the athlete, a teammate, or a coach guessing."
+    },
+    {
+      "id": "f11",
+      "front": "Knee won't fully straighten or bend",
+      "back": "Compare it to the other knee — if it moves less than normal after an injury, tell an adult; don't force it."
+    },
+    {
+      "id": "f12",
+      "front": "One way to help prevent knee injuries",
+      "back": "Warming up, strengthening leg muscles, and practicing safe landing/cutting technique, taught by a coach or athletic trainer."
+    }
+  ]
+}
