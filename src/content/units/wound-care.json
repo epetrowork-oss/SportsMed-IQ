@@ -2,6 +2,8 @@
   "id": "wound-care",
   "title": "Wound Care & Bleeding Control",
   "category": "Acute Care & First Aid",
+  "strand": "wound-care",
+  "gradeBand": "9-10",
   "summary": "Manage cuts, abrasions, and serious bleeding safely — gloves on, pressure first, and know which wounds need more than a bandage.",
   "minutes": 18,
   "sections": [
@@ -92,7 +94,12 @@
     {
       "id": "q3",
       "question": "Which wound type looks minor but carries high risk of deep contamination and tetanus?",
-      "choices": ["Puncture", "Abrasion", "Incision", "Bruise"],
+      "choices": [
+        "Puncture",
+        "Abrasion",
+        "Incision",
+        "Bruise"
+      ],
       "answerIndex": 0,
       "explanation": "Punctures drive contaminants deep through a small entry hole that seals over — classic setup for infection and tetanus. They deserve more respect than their appearance suggests."
     },

@@ -2,6 +2,8 @@
   "id": "muscle-strains",
   "title": "Muscle Strains",
   "category": "Muscle & Soft Tissue",
+  "strand": "muscle-strains",
+  "gradeBand": "9-10",
   "summary": "Pulled hamstrings, groins, and quads: how muscles tear, how to grade and treat strains, and why athletes re-injure the same muscle.",
   "minutes": 18,
   "sections": [

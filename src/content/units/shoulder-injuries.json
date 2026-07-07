@@ -2,6 +2,8 @@
   "id": "shoulder-injuries",
   "title": "Shoulder Injuries",
   "category": "Upper Extremity Injuries",
+  "strand": "shoulder-injuries",
+  "gradeBand": "9-10",
   "summary": "The body's most mobile joint is also its least stable — tell a dislocation, a separated shoulder, and an overuse rotator cuff injury apart, and know what to do first.",
   "minutes": 18,
   "sections": [

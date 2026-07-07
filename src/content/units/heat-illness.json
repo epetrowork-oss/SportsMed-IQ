@@ -2,6 +2,8 @@
   "id": "heat-illness",
   "title": "Heat Illness",
   "category": "Environmental Emergencies",
+  "strand": "heat-illness",
+  "gradeBand": "9-10",
   "summary": "Tell heat cramps, heat exhaustion, and heat stroke apart — and act fast, because exertional heat stroke is a race against the clock.",
   "minutes": 20,
   "sections": [

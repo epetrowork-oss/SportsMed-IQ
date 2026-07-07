@@ -2,6 +2,8 @@
   "id": "fractures-dislocations",
   "title": "Fractures & Dislocations",
   "category": "Acute Care & First Aid",
+  "strand": "fractures-dislocations",
+  "gradeBand": "9-10",
   "summary": "Recognize a broken bone or a joint out of place, protect the athlete, and know the one thing you must never try to fix yourself.",
   "minutes": 18,
   "sections": [
