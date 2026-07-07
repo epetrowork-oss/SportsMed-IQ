@@ -3,6 +3,8 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
+  // GitHub Pages serves this repo from /SportsMed-IQ/, not the domain root.
+  base: '/SportsMed-IQ/',
   plugins: [
     react(),
     VitePWA({
