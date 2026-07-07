@@ -1,0 +1,228 @@
+{
+  "id": "warmup-injury-prevention",
+  "title": "Warming Up Right: The Science of Injury Prevention",
+  "category": "Prevention & Performance",
+  "strand": "warmup-injury-prevention",
+  "gradeBand": "9-10",
+  "summary": "Why a real warm-up changes how the body performs and how injured it gets — and why 'stretching' and 'warming up' are not the same thing.",
+  "minutes": 18,
+  "sections": [
+    {
+      "heading": "What a warm-up actually does to the body",
+      "body": [
+        "A warm-up isn't just a ritual before practice — it produces measurable physiological changes that make an athlete both faster and safer. The most basic effect is in the name: warm-up literally raises muscle temperature. Warmer muscle fibers are more elastic (they stretch and recoil more easily), which improves both power output and the tissue's ability to absorb force without tearing.",
+        "Raising heart rate and blood flow gradually delivers more oxygen to working muscles before they're asked to sprint or jump at full effort, instead of asking the cardiovascular system to catch up mid-play. A proper warm-up also primes the nervous system: the connections between brain and muscle fire faster and more precisely after a few minutes of progressively harder movement, which is part of why reaction time and coordination improve with a good warm-up and don't just depend on being 'loose.'",
+        "There's a mental piece too. A structured warm-up gives an athlete a few minutes to shift focus from the classroom or the sideline to the game, which matters for a body-and-brain system that reacts to fast, unpredictable situations."
+      ]
+    },
+    {
+      "heading": "Dynamic vs. static stretching — order matters",
+      "body": [
+        "These two are easy to confuse but do different jobs. Dynamic stretching moves a joint actively through its range of motion — leg swings, walking lunges, high knees, arm circles. It stretches muscle while also raising heart rate and rehearsing movement patterns the athlete is about to use. This is the right kind of stretching for before activity.",
+        "Static stretching means holding a stretch in one position without moving — for example, holding a hamstring stretch for 20-30 seconds. It's a valuable habit, but the timing matters. Research has repeatedly found that static stretching immediately before intense activity does not reduce injury risk the way many athletes assume, and it can even cause a brief, temporary dip in muscular power right afterward. That doesn't mean static stretching is bad — it means it belongs at a different point in the session."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Save the long holds for after",
+        "text": "If an athlete wants to work on flexibility with static stretching, the best time is after activity during the cool-down, when muscles are already warm and there's no upcoming sprint or jump that needs full power output."
+      }
+    },
+    {
+      "heading": "Building an effective warm-up: three phases",
+      "body": [
+        "A warm-up that actually prevents injury and improves performance has a predictable structure, moving from general to specific:"
+      ],
+      "list": [
+        "General warm-up — a few minutes of light, easy cardio (jogging, jumping jacks, biking) to raise heart rate and start increasing muscle temperature before anything more demanding.",
+        "Dynamic stretching and mobility — leg swings, walking lunges, high knees, carioca, arm circles — actively moving joints through the ranges of motion the sport will demand.",
+        "Sport-specific movement — drills that rehearse the actual patterns of the sport at increasing intensity. A soccer warm-up should include short passes, first-touch control, and cutting — not just jogging in a straight line, since jogging alone never rehearses the sharp direction changes that cause most non-contact injuries."
+      ]
+    },
+    {
+      "heading": "Structured injury-prevention programs",
+      "body": [
+        "Sports medicine researchers have taken the idea of a good warm-up one step further and built structured programs specifically designed to lower injury rates — the best-known example is soccer's FIFA 11+ warm-up, and similar programs exist for other sports. These programs combine the general/dynamic/sport-specific structure above with targeted strength, balance, and landing-mechanics exercises.",
+        "The reasoning behind them is straightforward: most non-contact injuries (sprains, strains, and more serious injuries like ACL tears, covered in its own unit) share preventable movement patterns — poor landing control, weak hip and core stability, imbalance between muscle groups. A program that rehearses safer movement patterns every single practice, before those patterns are ever needed in a game, measurably lowers injury rates in research trials. This unit focuses on warm-up structure in general; if your program covers ACL injury mechanics, that's where the landing-mechanics detail lives."
+      ]
+    },
+    {
+      "heading": "Cool-downs: the other half of the session",
+      "body": [
+        "A cool-down is a short period after activity — easy movement and light static stretching — that gradually brings heart rate and breathing back toward resting levels instead of stopping suddenly. This is where the static, long-hold stretching mentioned earlier fits well: muscles are already warm, flexibility work doesn't cost any upcoming power output, and it's a low-effort habit that supports recovery for the next practice.",
+        "A cool-down doesn't need to be long — a few minutes of easy movement followed by a few key stretches covers the basics. The point isn't to spend equal time on warm-up and cool-down; it's to not skip either one."
+      ]
+    },
+    {
+      "heading": "Putting it into practice",
+      "body": [
+        "A few practical rules carry more weight than memorizing any single 'perfect' routine: consistency beats perfection. A team that does a solid 10-15 minute warm-up every single practice gets far more injury-prevention benefit than one that does an elaborate version occasionally and skips it when the schedule is tight.",
+        "'Warming up' and 'stretching' are not the same thing, and treating a few static stretches as a complete warm-up misses most of the benefit — muscle temperature, blood flow, and nervous-system readiness all come from movement, not from holding still. When time is short, trim the warm-up down rather than cutting it out; even a shortened general-plus-dynamic sequence beats skipping straight to full-speed activity."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Don't skip it in cold weather",
+        "text": "Cold muscles are stiffer and more injury-prone, so a warm-up matters even more on a cold field or in an unheated gym — never less. If a team is tempted to shorten warm-ups because everyone is cold and wants to get moving fast, that's exactly the situation where cutting the warm-up short raises injury risk the most."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Which of these is a direct physiological effect of a proper warm-up?",
+      "choices": [
+        "It raises muscle temperature, improving elasticity and force absorption",
+        "It permanently increases muscle fiber size",
+        "It replaces the need for any strength training",
+        "It eliminates the need for a cool-down afterward"
+      ],
+      "answerIndex": 0,
+      "explanation": "Warming up raises muscle temperature, which makes muscle fibers more elastic — better able to stretch, recoil, and absorb force without tearing. It doesn't build muscle size and doesn't remove the value of a cool-down."
+    },
+    {
+      "id": "q2",
+      "question": "What is dynamic stretching?",
+      "choices": [
+        "Holding a stretch in one position for 20-30 seconds without moving",
+        "Actively moving a joint through its range of motion, like leg swings or walking lunges",
+        "Stretching performed only by a physical therapist",
+        "A stretch done exclusively during the cool-down"
+      ],
+      "answerIndex": 1,
+      "explanation": "Dynamic stretching involves active movement through a range of motion — leg swings, walking lunges, high knees — which also raises heart rate and rehearses movement patterns. Holding a still position is static stretching, the opposite concept."
+    },
+    {
+      "id": "q3",
+      "question": "A team lines up before a scrimmage and does 10 minutes of static stretches — holding each hamstring and quad stretch for 30 seconds — as their entire warm-up. What's the problem with this plan?",
+      "choices": [
+        "Nothing — this is an ideal pre-activity warm-up",
+        "Static stretching should never be done at any point in a session",
+        "Static stretching right before intense activity doesn't reduce injury risk the way people assume and can briefly reduce power output; it also skips raising heart rate and rehearsing sport movement",
+        "The stretches should have been held for at least 2 minutes each instead"
+      ],
+      "answerIndex": 2,
+      "explanation": "Static stretching has real value, but not as a stand-in for a full warm-up right before intense play — it doesn't raise heart rate or rehearse movement the way dynamic work does, and holding stretches right before sprinting can temporarily reduce power. Static stretching is a good fit after activity, not a total ban."
+    },
+    {
+      "id": "q4",
+      "question": "Put the three phases of an effective warm-up in the correct order.",
+      "choices": [
+        "Sport-specific movement, general cardio, dynamic stretching",
+        "Dynamic stretching, sport-specific movement, general cardio",
+        "Static stretching, general cardio, sport-specific movement",
+        "General cardio, dynamic stretching, sport-specific movement"
+      ],
+      "answerIndex": 3,
+      "explanation": "The structure moves from general to specific: light cardio first raises heart rate and temperature, dynamic stretching then moves joints through range of motion, and sport-specific drills rehearse the actual movement patterns of the sport at rising intensity."
+    },
+    {
+      "id": "q5",
+      "question": "A soccer team's warm-up is 15 minutes of jogging around the field in a straight line, then straight into a scrimmage. What's missing?",
+      "choices": [
+        "Sport-specific movement, like short passes, first-touch control, and cutting, which jogging in a straight line never rehearses",
+        "Nothing — jogging alone is a complete warm-up for any sport",
+        "A longer jog — 30 minutes would fix the problem",
+        "A period of complete rest before the scrimmage begins"
+      ],
+      "answerIndex": 0,
+      "explanation": "Straight-line jogging raises heart rate but never rehearses the cutting, quick direction changes, and ball-handling patterns that cause many non-contact soccer injuries. A complete warm-up needs a sport-specific phase, not just general cardio."
+    },
+    {
+      "id": "q6",
+      "question": "What is the main idea behind structured injury-prevention warm-up programs like FIFA 11+-style programs?",
+      "choices": [
+        "They replace the need for any coaching or supervision",
+        "They combine strength, balance, and landing-mechanics work to retrain the movement patterns behind most non-contact injuries",
+        "They are only useful for elite, professional-level athletes",
+        "They work only if performed once at the start of the season"
+      ],
+      "answerIndex": 1,
+      "explanation": "These programs target the movement patterns — poor landing control, weak hip/core stability, muscle imbalance — that show up across many non-contact injuries. They're designed for regular teams at any level and only work when run consistently, not as a one-time event."
+    },
+    {
+      "id": "q7",
+      "question": "When is static stretching most appropriate to include in a training session?",
+      "choices": [
+        "Immediately before a maximal-effort sprint or jump",
+        "During the general cardio phase of the warm-up",
+        "During the cool-down, after activity, when muscles are already warm",
+        "Static stretching should never be part of a training session"
+      ],
+      "answerIndex": 2,
+      "explanation": "Static stretching fits well in the cool-down: muscles are already warm, there's no upcoming power demand to protect, and it supports flexibility and recovery. It's a useful tool — just not as the last thing before an explosive effort."
+    },
+    {
+      "id": "q8",
+      "question": "A practice is running short on time. What's the best approach to the warm-up?",
+      "choices": [
+        "Skip it entirely and go straight into full-speed drills to save time",
+        "Replace it with 2 minutes of static stretching only",
+        "Do the full warm-up but skip the sport-specific phase every time, permanently",
+        "Trim it down but keep a shortened general-plus-dynamic sequence rather than cutting it out"
+      ],
+      "answerIndex": 3,
+      "explanation": "When time is tight, the right move is to shorten the warm-up, not eliminate it — even a brief general-plus-dynamic sequence still raises muscle temperature and primes the nervous system. Skipping straight to full-speed activity, especially in cold conditions, raises injury risk."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Warm-up (physiological definition)",
+      "back": "A period of progressively harder movement that raises muscle temperature, increases blood flow, and primes the nervous system before full-effort activity."
+    },
+    {
+      "id": "f2",
+      "front": "Dynamic stretching",
+      "back": "Actively moving a joint through its range of motion (leg swings, walking lunges, high knees) — belongs in the warm-up, before activity."
+    },
+    {
+      "id": "f3",
+      "front": "Static stretching",
+      "back": "Holding a stretch in one position without moving, typically 20-30 seconds — most valuable after activity, during the cool-down."
+    },
+    {
+      "id": "f4",
+      "front": "Why not static stretch right before intense activity?",
+      "back": "It doesn't reduce injury risk the way people assume, doesn't raise heart rate or rehearse sport movement, and can briefly reduce muscular power output right afterward."
+    },
+    {
+      "id": "f5",
+      "front": "Three phases of an effective warm-up",
+      "back": "General (light cardio to raise temperature) → dynamic stretching/mobility → sport-specific movement patterns."
+    },
+    {
+      "id": "f6",
+      "front": "Why sport-specific movement matters in a warm-up",
+      "back": "General cardio alone (like jogging in a line) never rehearses cutting, accepting a pass, or other actual sport movement patterns that cause many non-contact injuries."
+    },
+    {
+      "id": "f7",
+      "front": "FIFA 11+-style programs",
+      "back": "Structured injury-prevention warm-up programs combining strength, balance, and landing-mechanics work to retrain movement patterns behind most non-contact injuries; proven to lower injury rates only with consistent use."
+    },
+    {
+      "id": "f8",
+      "front": "Cool-down (purpose)",
+      "back": "A short period after activity that gradually returns heart rate and breathing to resting levels — the best time for static stretching."
+    },
+    {
+      "id": "f9",
+      "front": "\"Warming up\" vs. \"stretching\"",
+      "back": "Not the same thing. Muscle temperature, blood flow, and nervous-system readiness come from movement; a few static stretches alone are not a complete warm-up."
+    },
+    {
+      "id": "f10",
+      "front": "Consistency vs. a \"perfect\" routine",
+      "back": "A solid warm-up done every single practice provides far more injury-prevention benefit than an elaborate one done occasionally and skipped when busy."
+    },
+    {
+      "id": "f11",
+      "front": "Typical warm-up length",
+      "back": "Roughly 10-15 minutes covering all three phases — short enough to fit any practice, long enough to raise temperature and rehearse movement."
+    },
+    {
+      "id": "f12",
+      "front": "Cold weather and warm-ups",
+      "back": "Cold muscles are stiffer and more injury-prone, so warm-ups matter more, not less, in cold conditions — never shorten them for that reason."
+    }
+  ]
+}
