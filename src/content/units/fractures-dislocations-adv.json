@@ -1,0 +1,254 @@
+{
+  "id": "fractures-dislocations-adv",
+  "title": "Fracture Patterns, Splinting Science, and Joint Injury Management",
+  "category": "Acute Care & First Aid",
+  "strand": "fractures-dislocations",
+  "gradeBand": "11-12",
+  "summary": "Go beyond splint-and-refer: read fracture patterns from mechanism, apply CSM checks correctly, and recognize the complications that turn a broken bone into a limb- or life-threatening emergency.",
+  "minutes": 24,
+  "sections": [
+    {
+      "heading": "Bone as living tissue: two bone types, six fracture patterns",
+      "body": [
+        "You already know a fracture is a break in a bone. To reason about fractures the way an athletic trainer does, start with what kind of bone actually broke. Cortical bone is the dense, compact outer shell of a bone shaft — stiff, strong, and slow to remodel. Cancellous bone (also called trabecular or spongy bone) is the honeycomb-like tissue inside the ends of long bones and inside vertebrae — more elastic, more blood supply, and it heals faster. A shaft fracture through dense cortical bone and a compression fracture through cancellous bone at a joint end behave differently and heal on different timelines, which is part of why physicians image and classify fractures instead of treating 'a broken bone' as one category.",
+        "The pattern a fracture takes on an X-ray is a readable record of the force that caused it. A transverse fracture — a clean break straight across the bone — comes from a direct, perpendicular blow. An oblique fracture, angled across the bone, comes from a diagonal or bending force. A spiral fracture wraps around the shaft in a corkscrew pattern and implies rotational (twisting) force — think of a planted foot with the body rotating over it, a classic skiing or football mechanism. A comminuted fracture shatters into three or more pieces, usually from high-energy trauma like a direct helmet-to-helmet hit or a car crash. Two patterns are specific to younger, more pliable bone: a greenstick fracture bends and cracks on one side without breaking all the way through (like snapping a green tree branch), and a buckle (torus) fracture compresses and bulges the bone's surface without a clean break line at all. Both reflect that immature bone has more plasticity than adult bone, which is why they show up almost exclusively in younger athletes with growing skeletons."
+      ]
+    },
+    {
+      "heading": "Stress fractures and growth-plate injuries: two exceptions worth flagging",
+      "body": [
+        "Not every fracture comes from a single traumatic event. A stress fracture develops from repeated submaximal loading over time — training volume that outpaces the bone's ability to remodel — and is covered in depth in the overuse injuries strand. The distinguishing clue on the sideline is history: an acute fracture has a clear mechanism moment (the hit, the fall, the awkward landing), while a stress fracture presents as pain that built gradually over days or weeks of training and is often missed on a standard X-ray early on. Treat gradually worsening, activity-related bone pain with the same 'refer for imaging' instinct as an acute injury — stress fractures can progress to a complete fracture if training continues.",
+        "The second exception is the growth plate, or physis — the band of active cartilage near the ends of long bones in athletes who haven't finished growing, where new bone length is added. Because cartilage is mechanically weaker than the bone and ligaments around it, a force that would sprain a ligament in an adult can instead fracture the physis in an adolescent. This matters clinically: physeal fractures involve the zone responsible for future bone growth, so a missed or mistreated one can affect limb length or joint alignment years later. Physicians use a grading concept (the Salter-Harris system) to describe how the fracture line runs through the growth plate versus the surrounding bone — you don't need to memorize the types, but you should recognize the underlying idea: any suspected fracture near a joint in a still-growing athlete gets treated with extra caution and always gets imaged, even when the injury 'only' looks like a bad sprain."
+      ]
+    },
+    {
+      "heading": "Assessment: CSM done right, and the fracture-until-proven-otherwise rule",
+      "body": [
+        "You learned to check circulation, sensation, and movement (CSM) distal to an injury. At this level, the standard is doing it properly and treating it as a decision point, not a formality:"
+      ],
+      "list": [
+        "Circulation: check skin color and temperature distal to the injury, and capillary refill (press a nail bed or fingertip pad, release, and confirm color returns within about 2 seconds) — a pulse check where accessible, but color/warmth/refill are more practical for a student aide to assess reliably.",
+        "Sensation: test light touch in the area supplied by the nerves that cross the injury site, comparing to the uninjured side — ask the athlete to close their eyes so they can't rely on sight.",
+        "Movement: ask the athlete to actively move the digits or joint beyond the injury (not the injured joint itself) — absence of active movement, not just pain with movement, is the more concerning finding.",
+        "Recheck all three after every intervention — after splinting, after any repositioning, after transport. A splint applied too tight, or swelling that increases after immobilization, can silently cut off circulation or compress a nerve; a CSM change after splinting means loosen the splint immediately and recheck, not 'wait and see.'"
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Fracture-until-proven-otherwise",
+        "text": "When mechanism (a significant force) and point tenderness over a specific spot on bone are both present, treat it as a fracture and splint it — even with a normal-looking limb and no deformity. Many fractures, especially in cancellous bone or through a growth plate, produce no visible deformity at all. Waiting for deformity before you splint means you'll miss the injuries that need it most."
+      }
+    },
+    {
+      "heading": "Splinting science: principles, splint types, and why traction splints exist",
+      "body": [
+        "The 9-10 rule — splint as found, immobilize joint above and below — is correct but incomplete on its own. The full principle set an athletic training student should know:"
+      ],
+      "list": [
+        "Immobilize one joint above and one joint below the fracture site, or immobilize the joints above and below a dislocated joint — a forearm fracture needs the wrist and elbow controlled, not just the forearm shaft.",
+        "Pad bony prominences (wrist, ankle, elbow) before securing straps, both for comfort and to prevent the splint itself from creating pressure injury over the intervention.",
+        "Splint in the position found unless circulation is absent — the rare exception where a provider trained to do so may make one gentle attempt to realign a severely angulated limb specifically to restore blood flow. That is an athletic trainer/EMS-level call, not a first-aid step for a student aide.",
+        "Recheck CSM after the splint is secured, and periodically afterward if transport is delayed."
+      ]
+    },
+    {
+      "heading": "Splint types by region",
+      "body": [
+        "Different splint hardware suits different injuries, and recognizing the concept behind each helps you assist an athletic trainer effectively rather than just hand over supplies:"
+      ],
+      "list": [
+        "Rigid splints (padded boards, aluminum finger splints) — best for straight, longer-bone injuries like a forearm or lower leg.",
+        "Moldable/SAM-style splints (a foam-core aluminum strip that bends and holds its shape) — versatile for angled joints like an elbow or wrist where a flat rigid board doesn't fit the position found.",
+        "Vacuum splints (a bag of beads that stiffens when air is pumped out) — conform fully around an oddly shaped or already-deformed limb without needing to move it into a straight position first.",
+        "Sling-and-swathe combinations — used for shoulder girdle and upper-arm injuries, where the arm is supported in a sling and then secured against the torso (the swathe) so the whole limb is stabilized as one unit.",
+        "Traction splints — a longer, mechanical splint used specifically for a suspected mid-shaft femur fracture, where thigh muscle spasm otherwise causes the broken ends to override and cause additional damage and pain. Applying a traction splint correctly is an EMS-level skill requiring specific training — know that it exists and why the femur is the one bone that gets this special device, but this is not something a student aide applies."
+      ]
+    },
+    {
+      "heading": "Complications that change the urgency",
+      "body": [
+        "A handful of fracture complications are worth recognizing specifically because they're time-critical and easy to miss if you're only watching for the injury itself.",
+        "Compartment syndrome develops when swelling and bleeding inside a muscle compartment — a section of limb wrapped in tough, non-stretching fascia — builds pressure faster than the compartment can expand. That pressure eventually chokes off the blood supply to the muscles and nerves inside it. It's most associated with lower-leg and forearm fractures, and a cast or splint applied too tightly over a swelling limb is a classic setup, which is exactly why CSM rechecks after splinting matter. The classic teaching is the '5 P's': pain out of proportion to the injury (and pain with passive stretch of the muscles in that compartment) is the earliest and most reliable sign — pallor, paresthesia (numbness/tingling), pulselessness, and paralysis are later signs, and by the time pulses are lost, muscle and nerve damage may already be underway. This is a surgical emergency measured in hours, not days.",
+        "Fat embolism syndrome is a rare but serious complication of long-bone fractures (especially femur) and pelvic fractures, where fat from the marrow enters the bloodstream and can affect breathing and mental status, typically 24-72 hours after injury. You won't manage this on a sideline, but recognizing that a long-bone fracture patient who develops confusion or shortness of breath a day or two later needs urgent medical reassessment — not just 'the pain medication wearing off' — is the point.",
+        "Fracture blisters (skin blisters that form directly over a badly swollen fracture site, usually within the first day or two) signal that swelling has overwhelmed the skin's blood supply and change how a physician can splint, cast, or eventually operate on the injury.",
+        "Avascular necrosis is bone tissue death from an interrupted blood supply, and certain fracture sites carry a high risk because their blood supply runs through the injury zone itself: the scaphoid (a wrist bone) and the femoral neck (hip) are the two classic examples. This is exactly why a 'wrist sprain' with tenderness in the anatomical snuffbox (the hollow at the base of the thumb) gets imaged and often repeat-imaged even when an initial X-ray looks normal — a missed scaphoid fracture can go on to lose its blood supply and never heal properly."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Compartment syndrome — pain out of proportion is the early warning",
+        "text": "Severe, escalating pain that seems disproportionate to the injury, especially pain that worsens when the muscle is passively stretched, is the earliest sign of compartment syndrome — don't wait for numbness or a lost pulse to escalate care. Loosen any tight splint or dressing immediately, recheck CSM, and get the athlete to emergency care without delay. This is limb-threatening on a timescale of hours."
+      }
+    },
+    {
+      "heading": "Dislocations: why reduction stays physician-only, and joint-specific traps",
+      "body": [
+        "You already know reduction (putting a joint back into place) is never a sideline first-aid step. The mechanism-level reasons matter here: forcing a dislocated joint back into place without imaging risks completing an associated fracture you can't see, and risks catching a nerve or blood vessel between the bone ends during the reduction itself — turning a joint injury into a permanent nerve deficit or a vascular emergency. Physicians reduce dislocations after imaging confirms what's actually displaced and rules out entrapped structures, and often under sedation so the surrounding muscles are relaxed enough to reduce safely.",
+        "A few joints deserve specific attention because the 'obvious' presentation and the true emergency don't match:"
+      ],
+      "list": [
+        "Patellar dislocation (kneecap slides out, usually to the outside of the knee) versus true knee (tibiofemoral) dislocation are very different emergencies that can look similar to a panicked bystander. A patellar dislocation is painful and dramatic but rarely limb-threatening. A true knee dislocation — the shin bone and thigh bone separating at the knee joint itself — is a vascular emergency: the popliteal artery runs directly behind the knee and can be stretched, kinked, or torn even in dislocations that partially reduce on their own before you arrive. Any suspected knee dislocation (not kneecap) gets emergent CSM checks and immediate EMS activation regardless of how much deformity remains visible.",
+        "Finger dislocations are common and often reduced in urgent care rather than by an on-field physician, but the rule is sequence, not skip: splint as found, get it evaluated and imaged, and only after a physician confirms no fracture and performs or clears the reduction does buddy-taping to an adjacent finger become appropriate for return to activity. Buddy-taping an unevaluated jammed finger skips the step that catches the associated fractures physicians see routinely with this injury.",
+        "Posterior hip dislocation, seen in high-energy mechanisms (a knee-to-dashboard-style force, or a football pileup driving a flexed hip backward), has a recognizable position: the hip held flexed, adducted (pulled toward the midline), and internally rotated ('toe pointing in'), with the leg looking shorter than the other side. This is a load-and-go emergency — the femoral head's blood supply is at direct risk the longer it stays out of the socket — recognize the position, do not attempt any movement of the leg, and activate EMS immediately."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A soccer player plants a foot and her body rotates over it while an opponent's cleat pins the foot in place. She has a tibia fracture. Which fracture pattern does this mechanism most strongly suggest?",
+      "choices": [
+        "Transverse",
+        "Spiral",
+        "Buckle",
+        "Greenstick"
+      ],
+      "answerIndex": 1,
+      "explanation": "A rotational (twisting) force with the foot fixed and the body turning over it is the classic mechanism for a spiral fracture, which wraps around the bone shaft in a corkscrew pattern. Transverse fractures come from a direct perpendicular blow; buckle and greenstick patterns are specific to the plasticity of pediatric bone, not rotational adult-bone injuries."
+    },
+    {
+      "id": "q2",
+      "question": "A 13-year-old gymnast falls onto an outstretched hand and has wrist pain and swelling near the growth plate, but no visible deformity and an X-ray read as 'no fracture.' What is the best next step in reasoning?",
+      "choices": [
+        "Clear her to return since the X-ray was negative",
+        "Assume it's just a sprain since there's no deformity",
+        "Treat it with continued caution — physeal (growth plate) fractures can be subtle on initial imaging and involve cartilage that's weaker than the surrounding ligaments in a still-growing athlete",
+        "Apply heat and have her attempt full range of motion to test it"
+      ],
+      "answerIndex": 2,
+      "explanation": "In a skeletally immature athlete, the growth plate (physis) is often the weakest link — a force that would sprain a ligament in an adult can fracture the physis in an adolescent, and these injuries aren't always obvious on a first X-ray. The safe approach is continued caution and follow-up, not clearance based on absence of deformity or a single negative image."
+    },
+    {
+      "id": "q3",
+      "question": "After splinting a suspected forearm fracture, you recheck CSM and find the fingers are now cooler and the athlete reports new numbness that wasn't present before splinting. What should you do?",
+      "choices": [
+        "Leave the splint in place since removing it could worsen the fracture",
+        "Wait 15 minutes and recheck before doing anything",
+        "Loosen the splint immediately and recheck CSM",
+        "Elevate the limb higher and apply more ice, then reassess in an hour"
+      ],
+      "answerIndex": 2,
+      "explanation": "A CSM change after an intervention means the splint itself may be compromising circulation or a nerve, and it needs to be loosened immediately with an immediate recheck — this is not a 'wait and see' finding. Leaving it tight or delaying reassessment risks worsening nerve or vascular injury."
+    },
+    {
+      "id": "q4",
+      "question": "Which finding is the earliest and most reliable warning sign of compartment syndrome, before pulses are lost?",
+      "choices": [
+        "A cold, pale limb with no palpable pulse",
+        "A limb that looks normal in color and temperature",
+        "Mild swelling that decreases with elevation",
+        "Pain out of proportion to the injury, especially with passive stretch of the muscles in that compartment"
+      ],
+      "answerIndex": 3,
+      "explanation": "Pain out of proportion to the injury, and pain worsened by passively stretching the muscles in the affected compartment, is the earliest and most reliable sign of compartment syndrome. Pallor and pulselessness are later signs — by the time a pulse is lost, significant damage may already be occurring, so waiting for that sign delays care too long."
+    },
+    {
+      "id": "q5",
+      "question": "A basketball player lands awkwardly and her knee visibly buckles. On the sideline, how should you distinguish urgency between a suspected patellar (kneecap) dislocation and a suspected true knee (tibiofemoral) dislocation?",
+      "choices": [
+        "They carry the same urgency, since both are 'knee dislocations'",
+        "A patellar dislocation is the more urgent one because it's more visibly deformed",
+        "Neither requires emergency activation unless there's an open wound",
+        "A true knee dislocation is a vascular emergency due to the popliteal artery's path directly behind the joint, and warrants immediate EMS activation and close CSM monitoring even if it appears to have partially reduced"
+      ],
+      "answerIndex": 3,
+      "explanation": "A true knee (tibiofemoral) dislocation risks injury to the popliteal artery running directly behind the knee, making it a vascular emergency regardless of how much deformity remains visible on arrival. A patellar dislocation is dramatic and painful but rarely limb-threatening — the two injuries look similar to a bystander but carry very different urgency."
+    },
+    {
+      "id": "q6",
+      "question": "A football player jams a finger and it's swollen with point tenderness but no obvious deformity. A teammate suggests buddy-taping it to the next finger so he can keep playing. What's the correct sequence?",
+      "choices": [
+        "Buddy-tape it now since there's no visible deformity, then get it checked after the game",
+        "Splint it as found and get it evaluated and imaged before any buddy-taping, since an unevaluated jammed finger can hide an associated fracture",
+        "Ice it and re-tape it tighter each quarter as needed",
+        "Have him try to bend it fully first to test how bad it is"
+      ],
+      "answerIndex": 1,
+      "explanation": "Buddy-taping is appropriate only after a physician has evaluated and imaged the finger and cleared or performed any needed reduction — skipping straight to buddy-taping an unevaluated jammed finger can miss an associated fracture that imaging would catch. Absence of visible deformity doesn't rule out a fracture."
+    },
+    {
+      "id": "q7",
+      "question": "A wrestler has wrist pain after a fall, with tenderness concentrated in the anatomical snuffbox (the hollow at the base of the thumb) but a first X-ray read as normal. Why does this presentation still warrant imaging follow-up rather than clearance?",
+      "choices": [
+        "It suggests a possible scaphoid fracture, a bone at high risk for avascular necrosis if the fracture is missed and its blood supply is disrupted",
+        "Snuffbox tenderness is never significant and can be dismissed",
+        "It's a sign of a growth plate injury exclusive to adolescents",
+        "It indicates a spiral fracture pattern that always shows up on a first X-ray"
+      ],
+      "answerIndex": 0,
+      "explanation": "Snuffbox tenderness after a fall is a classic sign of a possible scaphoid fracture, which can be missed on an initial X-ray. Because the scaphoid's blood supply runs through the fracture-prone area itself, a missed fracture risks avascular necrosis (bone death from lost blood supply) and poor healing — which is why this presentation gets follow-up imaging even after a negative first film."
+    },
+    {
+      "id": "q8",
+      "question": "A player is found after a pileup with the hip flexed, pulled toward the midline, and internally rotated, leg appearing shorter than the other side. What does this presentation most likely represent, and what should you do?",
+      "choices": [
+        "A hip flexor strain — have him try to stand and walk it off",
+        "A normal resting position after a hard hit — monitor from the sideline",
+        "A posterior hip dislocation — do not move the leg, and activate EMS immediately given the time-sensitive risk to the femoral head's blood supply",
+        "A quadriceps contusion — apply ice and compression, then reassess in 10 minutes"
+      ],
+      "answerIndex": 2,
+      "explanation": "Hip flexed, adducted, and internally rotated with apparent leg shortening is the classic position of a posterior hip dislocation, a high-energy injury where the femoral head's blood supply is at time-sensitive risk. This is a load-and-go emergency: do not move the leg, and activate EMS immediately rather than testing weight-bearing or waiting to reassess."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Cortical vs. cancellous bone",
+      "back": "Cortical bone is the dense outer shaft; cancellous (trabecular) bone is the spongy tissue at bone ends and in vertebrae — more elastic and faster-healing than cortical bone."
+    },
+    {
+      "id": "f2",
+      "front": "Spiral fracture",
+      "back": "A corkscrew-pattern fracture around the bone shaft, implying a rotational (twisting) force — e.g., a planted foot with the body rotating over it."
+    },
+    {
+      "id": "f3",
+      "front": "Greenstick and buckle fractures",
+      "back": "Pediatric-specific patterns: greenstick bends and cracks on one side without fully breaking; buckle (torus) compresses and bulges the bone surface. Both reflect immature bone's plasticity."
+    },
+    {
+      "id": "f4",
+      "front": "Stress fracture vs. acute fracture",
+      "back": "Acute fracture: clear single mechanism moment. Stress fracture: gradual, activity-related pain from repeated submaximal loading, may not show on early X-ray."
+    },
+    {
+      "id": "f5",
+      "front": "Physis (growth plate)",
+      "back": "The cartilage growth zone near the ends of long bones in still-growing athletes; weaker than surrounding ligaments, so forces that sprain an adult can fracture a physis in an adolescent."
+    },
+    {
+      "id": "f6",
+      "front": "Fracture-until-proven-otherwise",
+      "back": "Significant mechanism + point tenderness over bone = treat and splint as a fracture even without visible deformity; many fractures show no deformity at all."
+    },
+    {
+      "id": "f7",
+      "front": "CSM recheck rule",
+      "back": "Recheck circulation, sensation, and movement after every intervention (splinting, repositioning, transport) — a change after splinting means loosen and recheck immediately, not wait and see."
+    },
+    {
+      "id": "f8",
+      "front": "Traction splint",
+      "back": "A mechanical splint for suspected mid-shaft femur fractures that counters thigh muscle spasm; applying one correctly is an EMS-level skill, not a student-aide task."
+    },
+    {
+      "id": "f9",
+      "front": "Compartment syndrome — earliest sign",
+      "back": "Pain out of proportion to the injury, worsened by passive stretch of the muscles in that compartment — appears before pallor, pulselessness, or paralysis. A surgical emergency measured in hours."
+    },
+    {
+      "id": "f10",
+      "front": "Avascular necrosis risk sites",
+      "back": "Scaphoid (wrist) and femoral neck (hip) — fracture sites where the blood supply runs through the injury zone, so a missed fracture can cause bone death. Snuffbox tenderness after a fall gets imaged for this reason."
+    },
+    {
+      "id": "f11",
+      "front": "Knee dislocation vs. patellar dislocation",
+      "back": "True knee (tibiofemoral) dislocation risks the popliteal artery behind the joint — a vascular emergency. Patellar (kneecap) dislocation is dramatic but rarely limb-threatening."
+    },
+    {
+      "id": "f12",
+      "front": "Posterior hip dislocation position",
+      "back": "Hip flexed, adducted, internally rotated, leg appears shortened — a time-sensitive emergency for the femoral head's blood supply; do not move the leg, activate EMS immediately."
+    }
+  ]
+}

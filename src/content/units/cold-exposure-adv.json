@@ -1,0 +1,253 @@
+{
+  "id": "cold-exposure-adv",
+  "title": "Cold Physiology and Field Management of Cold Injury",
+  "category": "Environmental Emergencies",
+  "strand": "cold-exposure",
+  "gradeBand": "11-12",
+  "summary": "Go beyond the umbles and the mild/moderate/severe ladder: the physiology behind heat conservation, why rough handling can kill a cold heart, the science of frostbite injury, and how to tell hypothermia apart from hypoglycemia or a concussion.",
+  "minutes": 25,
+  "sections": [
+    {
+      "heading": "Heat conservation under cold stress: vasoconstriction and shivering thermogenesis",
+      "body": [
+        "You already know the umbles and the mild/moderate/severe ladder from earlier training. This unit goes under the hood: what the body is actually doing to fight cold, and why specific field decisions — how you handle a hypothermic patient, whether you keep doing CPR, how you rewarm frostbite — follow directly from that physiology.",
+        "The body's first line of defense is peripheral vasoconstriction: blood vessels supplying the skin and extremities narrow, shunting blood volume toward the core to protect the brain, heart, and other vital organs. This is deliberate triage. It buys the core more time, but it sacrifices blood flow — and therefore heat — to fingers, toes, ears, and nose. That's exactly why those areas take the frostbite hit first, even in an athlete whose core temperature is still holding steady.",
+        "When vasoconstriction alone can't hold the line, the body adds shivering thermogenesis: rapid, involuntary contraction-relaxation cycles in skeletal muscle that generate heat as a byproduct of muscle metabolism. Shivering can raise the body's heat production several times over its resting rate, but it runs on a fuel tank — mainly muscle and liver glycogen, the body's stored form of carbohydrate — and that tank empties. Fatigue and glycogen depletion (which a long, hard practice before the cold exposure even started can accelerate) limit how long vigorous shivering can keep up its output.",
+        "That's the physiological cliff behind a fact you already know from the 9-10 unit: shivering stopping is a red flag, not recovery. It isn't one thing failing, it's two at once — the fuel needed to sustain forceful muscle contraction runs low, and as core temperature keeps dropping, the hypothalamus (the brain's thermoregulatory control center) itself starts losing the ability to coordinate an effective shivering response. Below roughly 90°F (32°C) core temperature, shivering typically shuts off entirely — which is also the rough boundary between mild and moderate hypothermia."
+      ]
+    },
+    {
+      "heading": "Cold water immersion: the 25x multiplier and the 1-10-1 principle",
+      "body": [
+        "Water conducts heat away from the body roughly 25 times faster than air at the same temperature. Water molecules are far more effective than air at carrying heat away from skin on contact, and moving water continuously replaces the thin layer of body-warmed water next to the skin with fresh cold water. That compresses the timeline dramatically for a capsized kayaker, a distance swimmer, or an athlete who breaks through ice — minutes matter in a way they don't for someone cold and dry.",
+        "Sudden immersion in cold water triggers the cold shock response in roughly the first minute: an involuntary gasp reflex, uncontrollable hyperventilation, and a spike in heart rate and blood pressure. This initial phase — not hypothermia itself — is the leading cause of death in cold-water immersion incidents, because a gasp reflex underwater or panic-driven hyperventilation can cause water inhalation before the body has cooled significantly at all.",
+        "The 1-10-1 principle gives water-sport athletes (rowers, sailors, open-water swimmers) a realistic timeline instead of panic: roughly 1 minute to get the gasp/hyperventilation response under control by forcing slow breathing, about 10 minutes of useful, coordinated muscle movement before cold-induced loss of muscle function (swim failure) makes swimming or self-rescue impossible, and roughly 1 hour before hypothermia itself causes unconsciousness. The practical lesson: don't burn the first, most capable 10 minutes swimming for a distant shore — get horizontal, minimize movement, and get flotation or self-rescue going immediately, because that window is shorter than most people expect."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Afterdrop: expect the patient to look worse right after rescue",
+        "text": "Once a hypothermic patient is pulled from cold water or exposure, core temperature can keep falling for a while during rewarming rather than climbing right away — a phenomenon called afterdrop. Cold blood that pooled in the constricted periphery starts returning toward the core as those vessels relax, and the still-cold extremities keep losing heat during the transition. Don't mistake this expected dip for a treatment failure — keep insulating, keep monitoring, and don't stop care because the patient briefly seems to get worse."
+      }
+    },
+    {
+      "heading": "Staging hypothermia: field markers and the cardiac risk",
+      "body": [
+        "The 9-10 unit gave you mild/moderate/severe as a ladder of worsening signs. Here's what's actually happening at each stage, and why it changes how you're allowed to handle the patient.",
+        "Mild hypothermia (roughly 90-95°F / 32-35°C core): shivering is present and vigorous, the athlete is conscious and oriented, and the umbles (stumbles, mumbles, fumbles, grumbles) are the dominant picture.",
+        "Moderate hypothermia (roughly 82-90°F / 28-32°C core): shivering weakens or stops as the physiological cliff from the first section hits, and mental status clearly declines — lethargy, confusion, and sometimes irrational behavior. One striking and real sign at this stage is paradoxical undressing, where a hypothermic person removes clothing despite being dangerously cold, thought to result from confused thermoregulatory signaling and vasodilation as the system starts to fail — worth knowing so it doesn't get misread as the person simply feeling fine.",
+        "Severe hypothermia (below roughly 82°F / 28°C core): the patient is unconscious or minimally responsive, and breathing and pulse can be so slow and faint that they're genuinely difficult to detect even for trained hands. Muscles may become rigid.",
+        "The reason handling changes at moderate-to-severe stages comes down to the heart: a cold myocardium (heart muscle) becomes electrically irritable, meaning its cells conduct electrical signals less predictably. That makes the heart prone to firing a chaotic, ineffective rhythm called ventricular fibrillation (v-fib) — especially when the patient is jostled, moved abruptly, or handled roughly."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Cold heart, gentle hands",
+        "text": "Once hypothermia reaches moderate or severe, handle the patient as little and as gently as possible: keep them horizontal, avoid unnecessary repositioning or vigorous movement, and let EMS manage transport-specific handling. Rough handling of a cold, electrically irritable heart can trigger ventricular fibrillation — a rhythm that stops effective blood flow — even in a patient who still has a pulse when you find them."
+      }
+    },
+    {
+      "heading": "Resuscitation logic and the rewarming-drinks myths",
+      "body": [
+        "Severe hypothermia dramatically slows the body's metabolism, so the brain and organs need far less oxygen and can survive much longer without a detectable pulse or normal breathing than they could at a normal body temperature. That's why a severely hypothermic patient can look and feel dead — no obvious pulse, extremely slow or absent breathing — while still being alive.",
+        "That physiology is the basis for a guiding resuscitation principle: a hypothermic patient is not presumed dead until they have been rewarmed and still show no signs of life, or a physician determines otherwise. For a lay rescuer or student aide, the practical takeaway is that standard signs used to declare death don't reliably apply to a cold patient — CPR should be started or continued for a suspected hypothermic cardiac arrest rather than withheld because the patient 'looks gone.'",
+        "Warm sweet drinks have a real but narrow role: they're appropriate only for a patient who is fully alert, still shivering, and able to protect their airway and swallow safely — mild hypothermia only. The benefit is modest (a little usable fuel, a psychological lift), not meaningful core rewarming, which is why it's never given to anyone with altered mental status — the aspiration risk of a confused or drowsy person trying to swallow outweighs any benefit.",
+        "Two persistent myths are worth debunking directly. Alcohol creates a false sense of warmth by dilating peripheral blood vessels, but that same dilation accelerates heat loss from the skin surface and also blunts shivering and judgment — it makes hypothermia worse, not better, despite the old idea of a warming drink. Caffeine has no proven rewarming benefit either; its mild diuretic and vasoactive effects don't help and may work against fluid balance. Neither belongs in cold-weather first aid."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "\"Not dead until warm and dead\"",
+        "text": "Never withhold or stop CPR on a suspected hypothermic cardiac arrest patient just because they lack normal signs of life. Slowed metabolism can let the brain tolerate far longer without oxygen than usual, so patients who look unsalvageable in the cold have been successfully resuscitated after rewarming in a hospital. Continue care and get them to definitive care — that determination isn't a field call."
+      }
+    },
+    {
+      "heading": "Frostbite science: freezing versus non-freezing cold injury",
+      "body": [
+        "Not every cold-damaged extremity is the same injury, and the distinctions matter for prognosis. Frostnip is a superficial, fully reversible cold injury — skin pales and goes numb briefly, but no actual ice crystals form in the tissue, and it resolves completely with rewarming, without blistering or lasting damage. Think of it as frostbite's warning stage.",
+        "Chilblains (also called pernio) is a non-freezing injury from repeated exposure to cool, damp — not freezing — conditions. It causes localized, itchy, inflamed red-to-purple patches, usually on fingers, toes, or ears, from repeated cycles of blood vessels constricting and dilating that damage small vessels over time — not from tissue actually freezing. Trench foot (immersion foot) is another non-freezing injury, caused by prolonged immersion in wet, cold conditions — historically soldiers standing for days in flooded trenches, today an athlete in soaked cleats or boots for hours of cold, wet practice. Sustained vasoconstriction combined with constant moisture causes tissue maceration (softening and breakdown from prolonged wetness), with pain, numbness, and swelling that can progress to blistering — again, without the tissue ever actually freezing.",
+        "True frostbite requires actual ice crystal formation within tissue. As fluid outside the cells freezes, it draws water out of the cells osmotically, causing cellular dehydration and damage, while the ice crystals themselves mechanically disrupt cell membranes and can block small blood vessels.",
+        "The damage doesn't stop when the ice melts. Reperfusion injury occurs when blood flow returns to that previously oxygen-starved tissue during rewarming — the returning circulation carries inflammatory mediators and oxygen free radicals that injure the already-fragile cells further, driving swelling and blister formation. Clear blisters generally mean a shallower injury; blood-filled (hemorrhagic) blisters signal deeper injury and a worse prognosis.",
+        "This mechanism is exactly why refreezing partially thawed tissue causes more damage than staying frozen a while longer: once tissue thaws and the reperfusion cascade begins, refreezing forces a second round of ice-crystal formation onto tissue that's already inflamed, swollen, and metabolically active — compounding the injury well beyond what either single freeze would cause. Walking out on a still-frozen limb causes mechanical stress, but it doesn't restart that inflammatory cascade — which is the actual reasoning behind the 9-10 unit's rule to protect a frozen area and delay full rewarming until reaching guaranteed permanent warmth.",
+        "Definitive rewarming uses a circulating water bath kept at about 98-102°F (37-39°C) — checked with a thermometer, not guessed by feel — until the tissue looks flushed and feels pliable, typically 15-30 minutes. It's genuinely painful as nerves reactivate, which is why pain management is part of definitive medical care; that's beyond a student aide's scope, but it's worth knowing the process is intentionally supervised, not something to replicate on a sideline. Dry heat sources — campfires, heating pads, car heater vents, hot water bottles — are dangerous instead of helpful because numb, damaged tissue can't reliably signal pain until a burn has already happened, and these sources are far harder to keep inside that narrow safe temperature range than a monitored water bath.",
+        "Even successfully treated frostbite often leaves lasting effects: cold sensitivity or hypersensitivity in the affected area for years, a lower threshold for re-injury at that same site, possible nerve damage or chronic pain, and in severe, deep cases, permanent tissue loss requiring debridement or amputation."
+      ]
+    },
+    {
+      "heading": "Differential: the confused cold-weather athlete",
+      "body": [
+        "Confusion in a cold environment isn't automatically hypothermia. Two other conditions can produce a nearly identical presentation, and telling them apart on the sideline is genuinely hard — which is exactly why the safe teaching is to escalate rather than diagnose.",
+        "Hypoglycemia (low blood sugar) can mimic hypothermia closely: confusion, slurred speech, poor coordination, irritability, even trembling that looks like shivering, because both the brain and muscles are fuel-starved. It's a particular risk for athletes with diabetes on insulin, and for any exhausted, glycogen-depleted athlete — recall from earlier in this unit that shivering itself burns through glycogen quickly, so a long, cold, hard session can leave an athlete both hypoglycemic and genuinely hypothermic at the same time. Ask about known diabetes and recent food intake if you realistically can, but don't delay escalating care to get the answer.",
+        "Concussion can also produce confusion, disorientation, and poor coordination that looks a lot like hypothermia's umbles, especially in a contact sport being played in cold weather. The key differentiator to look for is mechanism — was there a recent blow to the head or body — but a hard hit and cold exposure can happen to the same athlete on the same play, so finding one doesn't rule out the other.",
+        "The practical lesson at this level isn't a clean decision tree that separates these three conditions with certainty, because on the sideline you often can't. Check what you realistically can — cold exposure history and shivering status, known diabetes and time since last meal, any head or body impact — but treat any athlete with new confusion, slurred speech, or altered behavior in a cold-weather setting as an emergency requiring adult or medical escalation, regardless of which of the three it turns out to be."
+      ]
+    },
+    {
+      "heading": "Risk management: reading conditions, layering science, and policy",
+      "body": [
+        "Wind chill charts combine temperature and wind speed to estimate how quickly exposed skin can develop frostbite — a windy 15°F day might carry a 15-minute frostbite window, while a calm day at the same temperature carries a much longer one. Programs use charts like this to set objective modification thresholds instead of relying on how the day 'feels.'",
+        "Wet-cold and dry-cold sports carry different risk profiles that need different fixes. Sports with heavy water or moisture exposure at moderate temperatures — outdoor swimming, rowing and crew, late-season football or soccer in cold rain — carry a high conductive heat-loss risk even when the air temperature alone doesn't look alarming, because wet skin and clothing lose heat far faster than dry. Dry-cold sports — Nordic skiing, winter distance running on a clear day — carry lower conductive risk but still face convective (wind-driven) heat loss and intensity/altitude considerations. The mitigation has to match the mechanism: moisture management for wet-cold sports, wind-blocking shells for dry-cold, windy ones.",
+        "Layering science, in mechanism terms: a wicking base layer (synthetic or wool) uses capillary action to move sweat away from the skin into the next layer, keeping skin drier and preserving the thin layer of body-warmed air next to it. An insulating middle layer traps that warmed air within its fibers — more loft generally means more trapped air and more insulation, up to a point. A wind- and water-resistant outer shell blocks convective heat loss from wind and keeps external moisture out. Cotton fails this system because its fibers absorb and hold moisture instead of moving it away, and wet fibers lose most of their insulating value while also sharply increasing conductive heat loss against the skin — the actual mechanism behind 'cotton kills,' not just a slogan.",
+        "Effective cold-weather policy ties objective wind-chill or temperature thresholds to specific actions — full practice, modified/shortened practice with more indoor breaks, equipment removed, or cancellation — rather than a coach's on-the-spot judgment call. Good policy also requires a buddy-check system, where paired athletes check each other for umbles and frostbite signs at set intervals instead of relying on self-report, and mandates dry-clothing swaps whenever clothing becomes wet from sweat or precipitation rather than leaving that call to the athlete, because self-perception of cold and wetness becomes unreliable exactly when it matters most, as cognition starts to decline.",
+        "One special-risk group deserves its own mention: athletes with asthma or exercise-induced bronchoconstriction face an added cold-weather risk, because cold, dry air moving through the airway during hard breathing can trigger bronchospasm — a tightening of the airway's smooth muscle — producing wheezing, coughing, and shortness of breath that is a separate problem from hypothermia and needs its own management: rescue inhaler access, an adequate warm-up period, and breathing through a scarf or buff to warm and humidify the air before it reaches the airway."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A skier has been shivering steadily for 20 minutes on a long, cold run, then suddenly appears to stop shivering while still moving but sluggish. What does this most likely reflect?",
+      "choices": [
+        "His body is warming back up and no longer needs to shiver",
+        "Shivering only occurs during the first few minutes of cold exposure, so this is expected",
+        "He switched to a more efficient heat-generating response (vasoconstriction) that doesn't require shivering",
+        "Muscle glycogen depletion combined with a failing hypothalamic response is shutting shivering down as his core temperature keeps falling"
+      ],
+      "answerIndex": 3,
+      "explanation": "Shivering requires continuous fuel (glycogen) and coordination from the hypothalamus; as fuel runs low and core temperature keeps dropping, shivering fails rather than resolving. It's not a sign of rewarming — if anything it marks the shift toward moderate hypothermia. Vasoconstriction is a separate, earlier response and doesn't replace shivering as a heat generator, and shivering isn't limited to the first few minutes of exposure."
+    },
+    {
+      "id": "q2",
+      "question": "A kayaker capsizes into 40°F water. Using the 1-10-1 principle, what matters most in the first minute?",
+      "choices": [
+        "Focusing on controlling breathing rather than immediately swimming hard for shore",
+        "Swimming as hard and fast as possible toward shore right away",
+        "Removing all clothing first to reduce drag before swimming",
+        "Diving underwater to reach calmer, less choppy water"
+      ],
+      "answerIndex": 0,
+      "explanation": "The first minute is dominated by the cold shock response — an involuntary gasp reflex and hyperventilation that can cause drowning if not controlled. Getting breathing under control comes before any swimming decision; the 10 minutes of useful muscle movement come next, and burning effort on a hard swim during the gasp response raises the risk of inhaling water."
+    },
+    {
+      "id": "q3",
+      "question": "Rescuers pull an unresponsive, severely hypothermic hiker from a frozen lake. Bystanders want to carry him quickly over uneven terrain to reach the ambulance faster. What is the main concern with that plan?",
+      "choices": [
+        "Rough movement wastes time that would be better spent starting CPR immediately",
+        "Rough handling of a hypothermic patient can trigger ventricular fibrillation, because a cold heart is electrically irritable",
+        "Carrying him quickly will cause any frostbitten tissue to refreeze faster",
+        "There is no special concern — moving him however is fastest is the correct priority"
+      ],
+      "answerIndex": 1,
+      "explanation": "A cold myocardium conducts electrical signals unpredictably and is prone to firing ventricular fibrillation when jostled or moved abruptly — the core reason severe hypothermia calls for slow, gentle, minimal handling rather than speed. CPR should still be started if needed, but that doesn't make rough carrying safe, and refreezing speed isn't affected by how he's carried."
+    },
+    {
+      "id": "q4",
+      "question": "A severely hypothermic patient found in the snow has no detectable pulse or breathing on initial check. What is the correct approach?",
+      "choices": [
+        "Declare death immediately since normal signs of life are absent",
+        "Wait 10 minutes and recheck before deciding whether to start CPR",
+        "Begin or continue CPR — a hypothermic patient is not presumed dead until rewarmed and still showing no signs of life",
+        "Only start CPR if the patient's skin still looks pink rather than pale"
+      ],
+      "answerIndex": 2,
+      "explanation": "Severely slowed metabolism lets the brain and organs tolerate far longer without oxygen than normal, so a hypothermic patient can appear dead by usual standards while still being viable. \"Not dead until warm and dead\" means CPR is started or continued rather than withheld based on standard signs of death, and there's no reason to delay care while waiting or checking skin color."
+    },
+    {
+      "id": "q5",
+      "question": "Which best explains why refreezing a partially thawed frostbitten foot causes more damage than leaving it frozen until reaching guaranteed warmth?",
+      "choices": [
+        "Thawing starts a reperfusion/inflammatory cascade, and refreezing forces a second round of ice-crystal damage onto tissue that's already inflamed and fragile",
+        "Frozen tissue is always more resistant to injury than thawed tissue, so freezing it twice is inherently safer",
+        "Refreezing has no real additional effect — the advice is outdated folklore",
+        "Walking on refrozen tissue causes more direct mechanical damage than the freeze-thaw cycle itself"
+      ],
+      "answerIndex": 0,
+      "explanation": "Once tissue thaws, reperfusion brings inflammatory mediators and free radicals that damage already-stressed cells; refreezing that inflamed, fragile tissue triggers a second ice-crystal injury on top of it, compounding harm well beyond a single freeze. It's the opposite of harmless, and the damage comes from the biological cascade, not primarily from mechanical stress of walking."
+    },
+    {
+      "id": "q6",
+      "question": "A distance runner training in cold rain develops painful, itchy, purplish patches on her toes after several weeks of similar wet-cold sessions, with no history of the toes ever feeling hard or frozen. This is most consistent with:",
+      "choices": [
+        "True frostbite, since any discoloration means the tissue froze",
+        "Trench foot, from a single day of prolonged wet immersion",
+        "Frostnip, a mild and fully reversible form of frostbite",
+        "Chilblains, from repeated exposure to cool, damp — non-freezing — conditions damaging small blood vessels over time"
+      ],
+      "answerIndex": 3,
+      "explanation": "Repeated, non-freezing cool-damp exposure causing itchy, inflamed, purplish patches over time is the classic chilblains pattern — no ice crystal formation is required, and the history here shows repeated exposure rather than one prolonged immersion (trench foot) or a single freezing event (frostnip or frostbite)."
+    },
+    {
+      "id": "q7",
+      "question": "A basketball player with type 1 diabetes becomes confused, slurs her words, and stumbles during an outdoor cold-weather conditioning session. Teammates aren't sure if it's the cold or something else. What is the best approach?",
+      "choices": [
+        "Assume it must be hypothermia since she's outside in the cold, and only apply warming measures",
+        "Recognize that hypoglycemia can look identical to hypothermia, especially in a diabetic athlete, and escalate to an adult or medical help regardless of which one it is",
+        "Wait to see if her symptoms resolve on their own before doing anything",
+        "Rule out hypoglycemia entirely because she isn't sweating"
+      ],
+      "answerIndex": 1,
+      "explanation": "Hypoglycemia and hypothermia produce nearly identical confusion, slurred speech, and clumsiness, and a diabetic athlete in the cold could have either — or both. The safe move is escalating for adult/medical help rather than betting on one diagnosis; sweating status doesn't reliably distinguish the two, and waiting risks both conditions worsening."
+    },
+    {
+      "id": "q8",
+      "question": "Why does a cotton base layer increase cold-injury risk more than a synthetic or wool wicking layer, even starting at the same temperature?",
+      "choices": [
+        "Cotton is heavier, which raises metabolic heat production and paradoxically causes more sweating",
+        "Cotton reflects body heat away from the skin surface",
+        "Cotton absorbs and holds moisture against the skin instead of wicking it away, and wet fibers lose most of their insulating value while increasing conductive heat loss",
+        "Cotton blocks airflow so completely that the body overheats and then sweats excessively"
+      ],
+      "answerIndex": 2,
+      "explanation": "The mechanism behind \"cotton kills\" is moisture management: cotton holds sweat against the skin rather than moving it away, and once wet, it loses insulating value while conducting heat away from the skin much faster than dry fabric. It isn't about weight, reflectivity, or blocking airflow."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Peripheral vasoconstriction (cold response)",
+      "back": "Blood vessels to skin and extremities narrow, shunting blood toward the core to protect vital organs — at the cost of blood flow (and heat) to fingers, toes, ears, and nose, which is why those sites frostbite first."
+    },
+    {
+      "id": "f2",
+      "front": "Shivering thermogenesis",
+      "back": "Involuntary muscle contraction-relaxation cycles that generate heat as a metabolic byproduct. Fueled mainly by muscle/liver glycogen — a limited tank that runs out with fatigue and prolonged exertion."
+    },
+    {
+      "id": "f3",
+      "front": "The shivering-cessation cliff",
+      "back": "Shivering stops from two combined failures: glycogen fuel depletion AND the hypothalamus losing its ability to coordinate shivering as core temp keeps dropping — typically below about 90°F (32°C) core, marking mild-to-moderate transition."
+    },
+    {
+      "id": "f4",
+      "front": "Water's 25x conduction multiplier",
+      "back": "Water conducts heat away from the body roughly 25 times faster than air at the same temperature, which is why cold-water immersion timelines are dramatically compressed compared to cold-dry exposure."
+    },
+    {
+      "id": "f5",
+      "front": "Cold shock response",
+      "back": "In the first ~60 seconds of cold water immersion: involuntary gasp reflex, hyperventilation, spiked heart rate/blood pressure. The leading cause of cold-water immersion deaths, from water inhalation — not hypothermia itself."
+    },
+    {
+      "id": "f6",
+      "front": "1-10-1 principle",
+      "back": "Roughly 1 minute to control the gasp/breathing response, 10 minutes of useful muscle movement before swim failure sets in, 1 hour before hypothermia causes unconsciousness. Guides water-sport athletes to act fast, not panic-swim."
+    },
+    {
+      "id": "f7",
+      "front": "Afterdrop",
+      "back": "Core temperature can keep falling for a period AFTER a hypothermic patient is removed from cold exposure, as cold peripheral blood returns toward the core. Expected — don't mistake it for treatment failure."
+    },
+    {
+      "id": "f8",
+      "front": "Hypothermia staging & cardiac irritability",
+      "back": "Mild ~90-95°F (shivering, alert), moderate ~82-90°F (shivering fails, altered mental status, possible paradoxical undressing), severe <82°F (unconscious, faint vitals). Cold myocardium becomes electrically irritable — rough handling in moderate/severe stages risks ventricular fibrillation."
+    },
+    {
+      "id": "f9",
+      "front": "\"Not dead until warm and dead\"",
+      "back": "Severely slowed metabolism lets a hypothermic patient survive far longer without a detectable pulse/breathing than normal. CPR is started/continued regardless of apparent signs of death; only rewarming (or a physician) can determine otherwise."
+    },
+    {
+      "id": "f10",
+      "front": "Freezing vs. non-freezing cold injury",
+      "back": "Frostnip (superficial, fully reversible, no ice crystals) and true frostbite (actual tissue freezing) are freezing injuries. Chilblains (repeated cool-damp exposure, vessel damage) and trench foot (prolonged wet-cold immersion, tissue maceration) are non-freezing injuries."
+    },
+    {
+      "id": "f11",
+      "front": "Reperfusion injury & the refreezing rule",
+      "back": "Rewarming returns blood flow to frozen tissue, but that reperfusion brings inflammatory damage of its own. Refreezing already-thawed, inflamed tissue causes a second, worse round of ice-crystal injury — why field rewarming is avoided if refreezing is possible."
+    },
+    {
+      "id": "f12",
+      "front": "Rapid rewarming protocol",
+      "back": "Circulating water bath at 98-102°F (37-39°C), about 15-30 minutes until tissue is flushed and pliable — supervised medical care, genuinely painful. Dry heat (campfires, heating pads) risks burning numb tissue that can't signal pain."
+    }
+  ]
+}

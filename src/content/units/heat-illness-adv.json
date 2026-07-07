@@ -1,0 +1,247 @@
+{
+  "id": "heat-illness-adv",
+  "title": "Exertional Heat Illness: Physiology and Prevention Science",
+  "category": "Environmental Emergencies",
+  "strand": "heat-illness",
+  "gradeBand": "11-12",
+  "summary": "Go beyond recognition: the physiology behind heat dissipation, why core temperature is measured the way it is, and how to tell exertional heat stroke apart from other causes of collapse.",
+  "minutes": 26,
+  "sections": [
+    {
+      "heading": "How the body actually sheds heat",
+      "body": [
+        "You already know sweating cools you down. Here's the fuller picture: the body dumps heat through four physical pathways — radiation (heat energy radiating off skin, the way a warm object radiates infrared), conduction (direct heat transfer to something touching the skin, like cold water or ice), convection (heat carried away by moving air or water across the skin), and evaporation (heat absorbed as sweat converts from liquid to vapor).",
+        "At rest in a cool room, radiation and convection handle most of the job. During intense exercise, especially in heat, that flips: skin temperature rises close to (or above) air temperature, which collapses the temperature gradient radiation and convection depend on. Evaporation becomes the dominant — sometimes the only functional — cooling pathway, which is exactly why anything that blocks evaporation is dangerous.",
+        "Humidity blocks evaporation directly: sweat evaporates because there's a vapor pressure gradient pulling moisture off the skin into drier air. Push the surrounding air's humidity up and that gradient shrinks — sweat just sits on the skin (or drips off) without doing its job. That's the physiological reason a humid 88°F day can be more dangerous than a dry 98°F day, and why exercise physiologists track wet bulb globe temperature (WBGT) instead of air temperature alone."
+      ]
+    },
+    {
+      "heading": "The cardiovascular squeeze",
+      "body": [
+        "Exercising in heat puts two competing demands on the same limited blood supply. Working muscle needs blood flow to deliver oxygen and fuel. The skin needs blood flow to carry core heat to the surface for radiation and to feed the sweat glands. The cardiovascular system has to serve both from one cardiac output.",
+        "As exercise continues in heat, sweat losses shrink plasma volume (the fluid portion of blood), which lowers stroke volume (blood pumped per heartbeat). Heart rate climbs to compensate — a pattern called cardiovascular drift, where heart rate keeps rising over time even though pace or intensity hasn't changed. Eventually the system can't fully supply both muscle and skin at once, and something gives: performance drops, core temperature climbs faster, or both.",
+        "This is why individual risk isn't just about the weather. Acclimatization status (has the cardiovascular system adapted to heat yet — expanded plasma volume, earlier and saltier sweating, lower heart rate at a given workload), aerobic fitness, hydration status going in, illness (fever, vomiting, or diarrhea in the days before practice depletes the same reserve), certain medications and supplements (stimulants that raise metabolic heat production, diuretics, and other substances that impair sweating or fluid balance), and body composition (more body mass and body fat means more heat to dissipate relative to surface area) all shift how much cardiovascular reserve an athlete has left before the system fails."
+      ]
+    },
+    {
+      "heading": "The full spectrum — and what actually separates them",
+      "body": [
+        "You know the spectrum from cramps to stroke. At this level, the differentiating features matter more than the labels:",
+        "Heat cramps — painful, involuntary spasms from fluid/sodium losses and neuromuscular fatigue. Mental status is entirely normal.",
+        "Heat syncope — brief fainting, usually when an athlete stops moving (blood pools in the legs when muscle-pump action stops and skin vessels are still dilated from heat exposure). The athlete is oriented again almost immediately on lying flat — that fast, full recovery is what separates it from something more serious.",
+        "Heat exhaustion — the cardiovascular system is overwhelmed but core temperature is typically under 104°F and mental status is normal or only mildly foggy. Heavy sweating, pallor, weakness, nausea are expected.",
+        "Exertional heat stroke (EHS) — core temperature above 104°F WITH central nervous system dysfunction: confusion, irrational behavior, combativeness, ataxia (stumbling, loss of coordination), seizure, or coma. CNS dysfunction is the dividing line, full stop. Skin can be wet or dry in EHS — sweating status alone never rules it in or out."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Confusion in the heat is EHS until proven otherwise",
+        "text": "Any new-onset confusion, irrational behavior, or loss of coordination during exercise in heat should be treated as exertional heat stroke immediately — call 911 and begin whole-body cooling. Waiting to 'see if it clears up' costs the athlete organ-damaging minutes."
+      }
+    },
+    {
+      "heading": "Why temperature is measured the way it's measured",
+      "body": [
+        "Athletic trainers and physicians use rectal temperature as the clinical gold standard for suspected EHS, because it's the measurement that most accurately reflects true core temperature during and immediately after exercise. This is taught for understanding, not for you to perform — it's a clinical skill for the supervising AT or physician.",
+        "Oral, tympanic (ear), axillary, and skin-surface measurements are all unreliable in this setting. Oral temperature is thrown off by breathing rate and recent fluid intake. Tympanic readings are affected by ear canal debris, sweat, and ambient conditions. Skin and axillary temperature lag badly behind core temperature — remember, the skin is actively vasodilated and covered in evaporating sweat specifically to shed heat, so its surface can read normal or even cool while the core is at a dangerous 106°F. Relying on 'his forehead feels okay' to rule out heat stroke is a documented, deadly mistake."
+      ]
+    },
+    {
+      "heading": "Evidence-based cooling: cool first, transport second",
+      "body": [
+        "Survival from EHS is directly tied to how fast core temperature comes down and how long it stayed elevated — prolonged temperatures above 104°F drive protein denaturation and cellular damage in the brain, kidneys, liver, and muscle (rhabdomyolysis). The guiding principle is cool first, transport second: cooling begins on-site immediately, before or during transport, rather than waiting for arrival at a hospital.",
+        "Cold-water immersion (CWI) — submerging the athlete's torso and limbs in a tub of ice water — is the gold standard because it cools faster than any other method by maximizing conductive and convective heat transfer across the whole body surface. Spot cooling (ice bags at the neck, armpits, and groin, or rotating wet towels) is a distant fallback for when no tub is available; it cools far more slowly because it treats a small fraction of total body surface area.",
+        "The rough clinical target: get the athlete's core temperature below about 104°F within roughly 30 minutes of collapse. Outcomes are excellent when that window is met and worsen the longer it's missed — which is why 'drive to the ER first, cool later' is the wrong call. Stop active cooling around 100-102°F to avoid overshooting into hypothermia, and continue monitoring."
+      ]
+    },
+    {
+      "heading": "Prevention science: policy that actually works",
+      "body": [
+        "WBGT combines dry-bulb air temperature, humidity (wet-bulb temperature), and solar/radiant heat (globe temperature) into one number, weighted heavily toward humidity — because evaporation is the primary cooling pathway during exercise. Programs set practice modifications off WBGT categories: as WBGT rises, sessions shorten, rest breaks lengthen, equipment comes off, and at the highest categories activity is suspended entirely.",
+        "Heat acclimatization protocols (used by most state athletic associations) phase athletes in over roughly the first two weeks of a season: single practice sessions per day at first (no two-a-days), equipment added gradually (helmet only, then shoulder pads, then full pads over several days), and practice duration ramped up incrementally. Skipping this phase-in is the single biggest preventable risk factor for early-season EHS deaths.",
+        "As WBGT climbs, work-to-rest ratios shift toward more rest: lower-risk conditions allow near-continuous activity, while higher-risk conditions require scheduled rest breaks every set number of minutes, in the shade, with equipment off.",
+        "Pre- and post-practice weigh-ins track hydration: losing more than about 2% of body mass in a session flags meaningful dehydration and should prompt rehydration before the next session; losses in the 3-5%+ range are a bigger flag and may warrant withholding the athlete from strenuous activity until corrected. (Weight GAIN during exercise is also a red flag — more on that below.)"
+      ],
+      "list": [
+        "Aide's real role in prevention: keep the cold-water immersion tub filled, iced, and within reach at every hot-weather practice — not stored in a closet.",
+        "Confirm ice supply is restocked before, not during, an emergency.",
+        "Set up and maintain shaded rest areas as part of the practice plan, not an afterthought.",
+        "During acclimatization weeks especially, actively watch teammates for early warning signs — this is the highest-risk window of the whole season.",
+        "Know the emergency action plan and your specific role in it before the first hot practice, not during one."
+      ]
+    },
+    {
+      "heading": "Differential thinking: it isn't always heat stroke",
+      "body": [
+        "A collapse on a hot day is not automatically EHS. Three other causes matter and are managed differently:",
+        "Sudden cardiac arrest — collapse with no prior complaints, unresponsive, not breathing normally or absent pulse. This needs CPR and an AED immediately; do not delay chest compressions to search for a thermometer or start cooling first. Cardiac causes (structural heart conditions, or commotio cordis from chest impact) can look sudden and unrelated to heat.",
+        "Exertional sickling in athletes with sickle cell trait — under intense exertion, acidosis, and dehydration, red blood cells can sickle and cause vaso-occlusion (blood flow blockage) in muscle. It presents as sudden, diffuse muscle weakness and pain (described as weakness more than cramping), often during intense conditioning like repeat sprints, and — unlike EHS — mental status usually stays normal; the athlete can talk and is oriented even while collapsing. It does not respond to the stretching/sodium approach used for ordinary cramps and is a medical emergency requiring EMS and oxygen if available.",
+        "Exercise-associated hyponatremia — low blood sodium from drinking too much plain water or other hypotonic fluid relative to sodium losses, most often in prolonged endurance events. It can mimic heat exhaustion or even EHS (nausea, headache, confusion, and in severe cases seizure), but the tell is often a normal or only mildly elevated temperature and a body weight that stayed the same or went UP over the session instead of down. Giving more water makes it worse — this is why 'more fluids' is not automatically the safe answer, and why post-practice weigh-ins matter in both directions."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Fast field differential",
+        "text": "No pulse/not breathing normally -> think cardiac, start CPR/AED. Diffuse weakness without confusion in an athlete known to have sickle cell trait -> think exertional sickling. Confusion with a history of drinking large volumes of plain water and stable-or-higher body weight -> think hyponatremia, do not push more water. Confusion plus a hot environment and no better explanation -> default to EHS and cool."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Day A: 92°F air temperature, high humidity, full sun. Day B: 92°F air temperature, low humidity, overcast. Why does Day A require far more practice modification even though the air temperature is identical?",
+      "choices": [
+        "It doesn't — air temperature is what matters, so both days need identical modifications",
+        "Overcast skies always increase heat illness risk more than sun",
+        "Humidity only matters for athletes who are already dehydrated",
+        "WBGT weights humidity and solar radiation heavily because evaporation (blocked by humidity) is the body's dominant cooling pathway during exercise"
+      ],
+      "answerIndex": 3,
+      "explanation": "Air temperature alone misses two major risk drivers: humidity (which cripples evaporative cooling) and solar radiation. WBGT captures both, which is why identical air temperatures can carry very different real risk."
+    },
+    {
+      "id": "q2",
+      "question": "An athlete on a hot field collapses suddenly with no prior complaints. On arrival he is unresponsive and not breathing normally. What is the correct immediate action?",
+      "choices": [
+        "Recognize this pattern as possible sudden cardiac arrest — start CPR and get an AED immediately",
+        "Begin cold water immersion first, then check for a pulse",
+        "Assume exertional heat stroke and wait for a rectal temperature before acting",
+        "Give oral fluids and monitor for improvement over the next few minutes"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sudden collapse with no breathing/pulse is a cardiac arrest presentation, not the gradual-onset pattern typical of EHS. CPR and AED take priority over cooling or waiting for a temperature reading — ABCs come first."
+    },
+    {
+      "id": "q3",
+      "question": "During early-season sprint conditioning, an athlete with known sickle cell trait suddenly develops diffuse leg weakness and slumps to the ground, but is still talking normally and knows where he is. This presentation is most consistent with:",
+      "choices": [
+        "Ordinary heat cramps — stretch the muscle and give a sports drink",
+        "Exertional heat stroke — begin cold water immersion",
+        "Exertional sickling — a vaso-occlusive emergency that needs EMS, not stretching",
+        "Exercise-associated hyponatremia — restrict all fluids"
+      ],
+      "answerIndex": 2,
+      "explanation": "Preserved mental status plus diffuse weakness (not the confusion of EHS) in an athlete with sickle cell trait fits exertional sickling, a vaso-occlusive event distinct from cramps or heat stroke. It needs an emergency response, not cramp care."
+    },
+    {
+      "id": "q4",
+      "question": "A cross-country runner finishes a long, hot race confused and nauseated. Her post-race weight is slightly HIGHER than her pre-race weight, and teammates say she drank large amounts of plain water throughout. What should you suspect, and what should you NOT do?",
+      "choices": [
+        "Suspect heat cramps; do not give her shade",
+        "Suspect exercise-associated hyponatremia; do not give her more water",
+        "Suspect exertional heat stroke; do not call 911",
+        "Suspect ordinary dehydration; do not let her sit down"
+      ],
+      "answerIndex": 1,
+      "explanation": "Weight gain during exercise plus large plain-water intake and confusion points to dilutional hyponatremia, not dehydration. Giving more water worsens it — she needs medical evaluation, not more fluids."
+    },
+    {
+      "id": "q5",
+      "question": "Why do athletic trainers use rectal temperature rather than oral or forehead/skin temperature when EHS is suspected?",
+      "choices": [
+        "Skin temperature is actively cooled by vasodilation and evaporating sweat, so it can read normal even when core temperature is dangerously high",
+        "Skin and oral readings are simply less convenient to take, not less accurate",
+        "Oral thermometers are more expensive than rectal probes",
+        "Rectal temperature is only needed for children, not teen or adult athletes"
+      ],
+      "answerIndex": 0,
+      "explanation": "The whole point of skin blood flow and sweating is to shed heat at the surface — so surface temperature is a poor proxy for what's happening at the core. Rectal temperature isn't affected by that surface cooling and tracks true core temperature."
+    },
+    {
+      "id": "q6",
+      "question": "A cold-water immersion tub is not available at a suspected EHS scene, only ice bags and towels. What's the correct approach, and why?",
+      "choices": [
+        "Skip cooling entirely and wait for EMS to arrive with a tub",
+        "Use ice bags at the neck, armpits, and groin plus wet towels as a fallback, knowing it cools more slowly than whole-body immersion",
+        "Apply ice bags only to the forehead, since that's where core temperature is measured",
+        "Delay any cooling until the athlete reaches the hospital, since field cooling isn't proven to work"
+      ],
+      "answerIndex": 1,
+      "explanation": "Spot cooling with ice packs and towels is a legitimate fallback when immersion isn't available, but it cools far more slowly because it only treats a small fraction of body surface area. Cooling should start immediately regardless — never wait for transport or a 'better' method."
+    },
+    {
+      "id": "q7",
+      "question": "A new athlete arrives at day 2 of preseason and the team runs a full-pad, two-a-day practice in high heat. What's wrong with this plan?",
+      "choices": [
+        "Nothing — athletes should be tested hard immediately to see who's fit",
+        "Two-a-days are fine as long as WBGT is checked once at the start of the day",
+        "It violates heat acclimatization protocols, which phase in equipment and session frequency over roughly the first two weeks precisely because early, un-acclimatized practices carry the highest EHS risk",
+        "Full pads are the main risk factor, but session frequency doesn't matter"
+      ],
+      "answerIndex": 2,
+      "explanation": "Acclimatization protocols exist because the body needs about two weeks to adapt cardiovascular and sweating responses to heat. Full equipment and multiple sessions on day 2, before that adaptation happens, is the classic setup for early-season EHS deaths."
+    },
+    {
+      "id": "q8",
+      "question": "Which pair of findings best distinguishes exertional heat stroke from heat exhaustion?",
+      "choices": [
+        "Heavy sweating in heat stroke vs. no sweating in heat exhaustion",
+        "Muscle cramping in heat stroke vs. no cramping in heat exhaustion",
+        "Thirst in heat exhaustion vs. no thirst in heat stroke",
+        "Core temperature above 104°F WITH central nervous system dysfunction (heat stroke) vs. core temperature typically under 104°F with normal or only mildly altered mental status (heat exhaustion)"
+      ],
+      "answerIndex": 3,
+      "explanation": "The dividing line is core temperature combined with CNS dysfunction, not sweating status (which can go either way in both conditions) or cramping/thirst, which aren't reliable differentiators."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Four heat dissipation pathways",
+      "back": "Radiation, conduction, convection, and evaporation. Evaporation of sweat dominates during intense exercise because it's the only pathway that still works once skin temperature nears air temperature."
+    },
+    {
+      "id": "f2",
+      "front": "Why humidity blocks evaporative cooling",
+      "back": "Evaporation depends on a vapor pressure gradient pulling sweat off the skin. High humidity shrinks that gradient, so sweat sits on the skin instead of evaporating and carrying heat away."
+    },
+    {
+      "id": "f3",
+      "front": "Cardiovascular drift",
+      "back": "Heart rate climbs over time during exercise in heat even at constant intensity, as shrinking plasma volume lowers stroke volume — a sign the cardiovascular system is straining to supply both working muscle and skin blood flow."
+    },
+    {
+      "id": "f4",
+      "front": "WBGT components",
+      "back": "Wet bulb globe temperature combines dry-bulb air temperature, wet-bulb (humidity) temperature, and globe (radiant/solar) temperature — weighted heavily toward humidity since that's what blocks evaporative cooling."
+    },
+    {
+      "id": "f5",
+      "front": "Rectal temperature",
+      "back": "The clinical gold standard for core temperature in suspected EHS — performed by the AT/physician, not the student aide. Oral, tympanic, axillary, and skin readings are all unreliable during/after exercise."
+    },
+    {
+      "id": "f6",
+      "front": "Heat syncope",
+      "back": "Brief fainting from blood pooling when an athlete stops moving in heat. Distinguishing feature: fast, full return to normal orientation lying flat — unlike EHS."
+    },
+    {
+      "id": "f7",
+      "front": "EHS dividing line",
+      "back": "Core temperature above 104°F WITH central nervous system dysfunction (confusion, ataxia, seizure, coma). Skin can be wet or dry either way — sweating never rules EHS out."
+    },
+    {
+      "id": "f8",
+      "front": "Cool-first-transport-second target",
+      "back": "Get core temperature under roughly 104°F within about 30 minutes of collapse; survival and organ outcomes are best inside that window. Stop active cooling around 100-102°F to avoid overshoot."
+    },
+    {
+      "id": "f9",
+      "front": "Cold water immersion vs. spot cooling",
+      "back": "Whole-body CWI cools fastest by using the entire body surface for heat transfer. Ice bags/towels at neck, armpits, groin are a slower fallback for when no tub is available."
+    },
+    {
+      "id": "f10",
+      "front": "Heat acclimatization protocol (concept)",
+      "back": "Roughly a two-week phase-in: single sessions per day at first, equipment added gradually, duration ramped up incrementally. Skipping it is the top preventable risk factor for early-season EHS."
+    },
+    {
+      "id": "f11",
+      "front": "Exertional sickling (sickle cell trait)",
+      "back": "Vaso-occlusion under intense exertion/acidosis causes sudden diffuse muscle weakness — mental status stays normal, unlike EHS. Does not respond to cramp care; needs EMS."
+    },
+    {
+      "id": "f12",
+      "front": "Exercise-associated hyponatremia",
+      "back": "Dilutional low sodium from overdrinking hypotonic fluids. Can mimic heat exhaustion/EHS, but body weight is stable or UP (not down) and giving more water makes it worse."
+    }
+  ]
+}

@@ -111,25 +111,24 @@ writing so depth genuinely increases.
       Home page grade filter (All / 7-8 / 9-10 / 11-12) shipped, persisted,
       browser-verified.
 
-**Strand × band matrix** — 15 strands total (13 original + `shoulder-injuries`
-+ `cold-exposure`, both authored straight at `9-10`, no MS/advanced yet).
-`x` = exists, blank = queued, `9-10` is the only band with full coverage today.
+**Strand × band matrix** — 13 strands, all three bands complete (39 units).
+`x` = exists. Spiral fully filled as of 2026-07-07.
 
 | Strand | 7-8 | 9-10 | 11-12 |
 |---|---|---|---|
-| ankle-sprain | x | x | |
-| concussion | x | x | |
-| heat-illness | x | x | |
-| wound-care | x | x | |
-| emergency-action-plan | x | x | |
-| knee-acl | x | x | |
-| cold-exposure | x | x | |
-| muscle-strains | x | x | |
-| overuse-injuries | x | x | |
-| shoulder-injuries | x | x | |
-| fractures-dislocations | x | x | |
-| taping-wrapping | x | x | |
-| hydration-nutrition | x | x | |
+| ankle-sprain | x | x | x |
+| concussion | x | x | x |
+| heat-illness | x | x | x |
+| wound-care | x | x | x |
+| emergency-action-plan | x | x | x |
+| knee-acl | x | x | x |
+| cold-exposure | x | x | x |
+| muscle-strains | x | x | x |
+| overuse-injuries | x | x | x |
+| shoulder-injuries | x | x | x |
+| fractures-dislocations | x | x | x |
+| taping-wrapping | x | x | x |
+| hydration-nutrition | x | x | x |
 
 - [x] Wave 1 — `7-8` versions of the 5 highest-priority safety-critical
       strands: concussion, heat illness, wound care, EAP/CPR-AED, ankle
@@ -151,9 +150,15 @@ writing so depth genuinely increases.
       coverage — 26 units total. Browser-verified: grade filter (13/13/0
       split), quiz and flashcards render correctly for new units, zero
       console errors, no overflow at 375px.
-- [ ] Wave 3 — `11-12` versions of the 5 wave-1 strands (deeper:
-      mechanism/anatomy, grading systems, differential/decision quizzes)
-- [ ] Wave 4 — `11-12` versions of the remaining 8 strands
+- [x] Wave 3 — `11-12` versions of ALL 13 strands (done in two rounds of
+      parallel agents, not just the 5 wave-1 strands). Each verified to
+      build ON TOP of its 9-10 sibling (mechanism/physiology, grading,
+      differential/decision quizzes) rather than repeat it. Two round-2
+      agents hit a session limit at their final report step but had
+      already written valid files; verified complete + committed by the
+      orchestrator. **Spiral complete: 39 units = 13 strands x 3 bands,
+      browser-verified 13/13/13 split, zero console errors.**
+- [x] Wave 4 — folded into wave 3 above (all 13 strands done together)
 - [ ] New strands not yet covered at any band, worth considering for a full
       6-year program: eye injuries, dental/facial trauma, blisters & skin
       issues, mental health/return-to-play psychology, nutrition for growing

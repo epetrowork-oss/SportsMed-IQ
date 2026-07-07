@@ -1,0 +1,238 @@
+{
+  "id": "shoulder-injuries-adv",
+  "title": "The Shoulder: Instability, Overhead Athletes, and Evaluation Concepts",
+  "category": "Upper Extremity Injuries",
+  "strand": "shoulder-injuries",
+  "gradeBand": "11-12",
+  "summary": "Go beyond dislocation vs. AC sprain vs. rotator cuff strain — instability classification, the throwing shoulder's specific pathologies, and the reasoning behind return-to-throw decisions.",
+  "minutes": 24,
+  "sections": [
+    {
+      "heading": "Static vs. dynamic stabilizers: revisiting the golf-ball-on-a-tee",
+      "body": [
+        "You already know the shoulder trades stability for mobility because the glenoid socket is shallow. Here's the number behind that idea: at any given moment, the humeral head's articular surface contacts only about a quarter to a third of the glenoid — the classic 'golf ball on a tee' comparison. Something else has to keep the ball centered through an enormous range of motion, and that job splits between two systems.",
+        "Static stabilizers are passive tissue that resists excessive translation without any muscle activity: the labrum (the cartilage rim that deepens the socket), the joint capsule, and the glenohumeral ligaments (superior, middle, inferior — the inferior glenohumeral ligament complex is the primary checkrein against anterior and inferior translation with the arm elevated and externally rotated). Dynamic stabilizers are the muscles that actively adjust in real time: the rotator cuff acts less like a set of prime movers and more like a compressor — it presses the humeral head into the glenoid and fine-tunes its position through the arc of motion, while the scapular stabilizers (serratus anterior, trapezius, rhomboids) position the socket itself so the arm has a stable base to move against.",
+        "Those two systems have to work together in a coordinated sequence called scapulohumeral rhythm: for roughly every 2 degrees of motion at the glenohumeral joint during arm elevation past the initial arc, the scapula rotates about 1 degree upward on the rib cage — a rough 2:1 ratio. When the scapula stops moving through its share of that rhythm — from fatigue, poor posture, or weak serratus anterior/lower trapezius — it's called scapular dyskinesis (visible as 'winging' or asymmetric scapular motion). Scapular dyskinesis doesn't just look wrong; it shifts load onto the rotator cuff and static stabilizers that were never meant to compensate for it, which is why scapular control shows up in almost every shoulder rehab and prevention program you'll read about."
+      ]
+    },
+    {
+      "heading": "The instability spectrum: TUBS, AMBRI, and why teenage dislocations recur",
+      "body": [
+        "Not all shoulder instability is the same injury with different severity — athletic training curricula use two contrasting patterns to organize the whole spectrum, often taught with the mnemonics TUBS and AMBRI.",
+        "TUBS describes the classic teenage-athlete dislocation: Traumatic, Unidirectional (almost always anterior), with a Bankart lesion, often needing Surgery. A Bankart lesion is a tear of the anterior-inferior labrum (sometimes with a piece of glenoid bone) off the glenoid rim, torn away as the humeral head is forced out the front of the socket — it removes both the labral 'bumper' and the attachment point for the inferior glenohumeral ligament, so the socket loses its main static checkrein against the same direction of force happening again. A Hill-Sachs lesion is the matching injury on the ball side: a compression fracture/divot in the back of the humeral head where it jammed against the front edge of the glenoid during the dislocation. Neither lesion heals back to pre-injury strength on its own, which is the anatomic reason recurrence rates after a first traumatic anterior dislocation are so high in teenagers and young adults — commonly cited in the 70-90% range for athletes under 20 who return to sport, dropping substantially in older, less active patients.",
+        "AMBRI sits at the other end of the spectrum: Atraumatic, Multidirectional, often Bilateral, managed first with Rehabilitation, with an Inferior capsular shift as the surgical option if rehab fails. This is the loose-jointed athlete (think swimmers or gymnasts) whose capsule and ligaments are simply more lax than average in more than one direction, without a specific dislocating event or a Bankart lesion to blame. Recognizing which end of the spectrum an athlete's presentation fits changes the whole management conversation, which is why a physician's exam and imaging — not the sideline picture alone — decides where a given shoulder falls.",
+        "Two special tests come up constantly in this conversation, and you should recognize what they test even though performing them on an acutely injured shoulder is the athletic trainer's or physician's job, not yours: the apprehension test positions the arm abducted and externally rotated to see if the athlete feels the shoulder is about to slip out (reproducing the fear, not necessarily pain), and the relocation test applies a posteriorly directed force during that same position — if apprehension eases, it supports anterior instability as the cause."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "First-time dislocation still means refer, every time",
+        "text": "Knowing the Bankart/Hill-Sachs mechanism doesn't change the field response: a suspected dislocation still gets supported in the position found, iced, and referred without any attempt at reduction. Muscle spasm around a freshly dislocated joint makes a field reduction attempt far more likely to injure the axillary nerve or axillary artery, and a meaningful share of first-time dislocations carry an associated fracture (including Hill-Sachs lesions and glenoid rim fractures) that only imaging will catch — forcing movement before that's known can convert a dislocation into a fracture-dislocation."
+      }
+    },
+    {
+      "heading": "The overhead athlete's shoulder: where the throwing motion breaks down",
+      "body": [
+        "The throwing motion is usually divided into phases: wind-up, early and late cocking, acceleration, deceleration, and follow-through. Late cocking (the arm maximally abducted and externally rotated, just before the arm moves forward) and deceleration (absorbing the arm's momentum after ball release) are where the overwhelming majority of throwing-shoulder pathology concentrates — late cocking places the greatest anterior shear stress on the front of the joint, while deceleration places enormous eccentric (lengthening-while-contracting) demand on the rotator cuff and posterior shoulder to slow an arm that's moving at extremely high angular velocity.",
+        "This is also where internal impingement differs from the classic impingement you may already associate with rotator cuff overuse. Classic (outlet/subacromial) impingement pinches the rotator cuff tendon between the humeral head and the bony arch overhead (the acromion and coracoacromial ligament) during overhead reaching — it's the more common story in swimmers and the general overhead-athlete population. Internal impingement is specific to the throwing position: in maximal abduction and external rotation, the undersurface of the posterior rotator cuff (supraspinatus/infraspinatus) gets pinched against the posterior-superior labrum and glenoid rim itself, from the inside of the joint. It's a normal, low-grade contact in every throwing shoulder — it becomes pathological when repetitive throwing volume, poor mechanics, or instability increase how hard and how often that contact happens.",
+        "Glenohumeral internal rotation deficit (GIRD) is the throwing shoulder's signature adaptation: internal rotation range of motion at the throwing shoulder measured smaller than the non-throwing shoulder, largely from posterior capsule and posterior cuff tightness built up by repetitive deceleration loading. Some GIRD is expected and not itself a red flag — what matters more is the total rotational arc (internal rotation plus external rotation added together) compared side-to-side. A throwing shoulder that has lost internal rotation but gained a matching amount of external rotation may be fine; one where the total arc is meaningfully smaller than the non-throwing side is the pattern athletic trainers flag for posterior capsule mobility work, because that pattern is linked to a higher injury rate.",
+        "A SLAP tear (Superior Labrum, Anterior to Posterior) is a tear of the labrum at the top of the socket, where the biceps tendon anchors — a common companion injury in throwers dealing with internal impingement and instability, rather than a completely separate problem. It's worth knowing the name and the general location at this level; diagnosing it from symptoms alone is unreliable even for professionals, which is exactly why persistent deep shoulder pain, catching, or a 'dead arm' sensation during throwing gets sent for a full evaluation rather than guessed at on the sideline."
+      ]
+    },
+    {
+      "heading": "Youth pitching load and Little League shoulder",
+      "body": [
+        "Skeletally immature throwers have a vulnerability adult throwers don't: open growth plates. Little League shoulder is a stress injury (technically an epiphysiolysis, a widening/stress reaction) of the growth plate at the top of the humerus, driven by the repetitive rotational torque of pitching landing on a plate that hasn't fused yet. It presents as gradual lateral shoulder pain with throwing, often with a drop in velocity or control before pain becomes severe, and it's managed with rest from throwing, not by pitching through it — because the growth plate, unlike mature bone, can be permanently affected by repetitive stress if it's ignored.",
+        "This is the biology behind pitch count and rest-day guidelines used by national governing bodies for youth baseball: caps on pitches thrown per outing (tiered by age) and required rest days that increase with how many pitches were thrown, so the shoulder (and elbow) get enough recovery between high-load outings. The specific numbers vary by age and organization, but the underlying principle doesn't: total throwing volume, tracked and limited, protects an immature shoulder in a way that 'how he's feeling' cannot, because pain in a stress-injured growth plate often shows up after the damage has already started.",
+        "Delaying breaking balls (curveballs, sliders) until after growth plates mature is common guidance, but it's genuinely debated in current sports medicine: some research points to overall pitch volume and fatigue — not pitch type — as the stronger driver of injury risk, while other data still associates early breaking-ball use with elbow and shoulder problems. The safest teaching point for a student at this level isn't picking a side in that debate; it's understanding that pitch volume, rest, and mechanics are the levers with the clearest evidence, and that any of them being ignored raises risk regardless of which pitch is being thrown."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Reasoning through a youth throwing-shoulder case",
+        "text": "A 13-year-old pitcher reports gradually worsening lateral shoulder pain with throwing over several weeks, with no single injury moment and a noticeable drop in velocity. Before jumping to 'rotator cuff tendinopathy' (a diagnosis more typical of an older or non-throwing overhead athlete), a grown-plate stress injury has to stay on the differential precisely because of his age and the throwing-specific mechanism — which is why this presentation gets referred for evaluation rather than managed with rest-and-see on the field."
+      }
+    },
+    {
+      "heading": "AC joint and clavicle: grading further and the SC joint distinction",
+      "body": [
+        "You already know AC (acromioclavicular) separations are graded I-III. The fuller Rockwood classification extends to VI, and while grades IV-VI are uncommon, knowing the concept matters for understanding why some 'shoulder separations' need surgery and most don't: grade IV involves the distal clavicle displaced backward through the trapezius muscle, grade V is a severe version of grade III with much greater upward displacement of the clavicle (both the AC and coracoclavicular ligaments completely torn, plus deltoid/trapezius attachment disruption), and grade VI is a rare inferior displacement of the clavicle below the coracoid process. In practice, grades I-III are managed conservatively far more often than IV-VI, which more consistently need surgical stabilization.",
+        "It's just as important to distinguish an AC joint injury from a sternoclavicular (SC) joint injury — the joint at the other end of the clavicle, where it meets the breastbone (sternum). Anterior SC dislocations (the medial clavicle displaces forward) are far more common and usually managed non-operatively. Posterior SC dislocations are rare but a true emergency: the medial clavicle displaces backward, directly toward the trachea, esophagus, and the great vessels of the chest sitting just behind that joint. Difficulty breathing or swallowing, or a change in voice, after a direct chest/shoulder-girdle blow is a marker of exactly this injury and needs emergency evaluation, not sideline management.",
+        "Clavicle fractures are also worth separating from both of these: they're most common in the middle third of the bone (the thinnest, least supported segment), typically from a fall onto the shoulder or an outstretched hand, and present with a visible or palpable deformity along the collarbone itself rather than a step-off confined to the very tip of the shoulder (AC injury) or a swallowing/breathing complaint (posterior SC injury)."
+      ]
+    },
+    {
+      "heading": "Evaluation flow and why reduction stays out of scope",
+      "body": [
+        "A systematic shoulder assessment — the kind an athletic trainer runs through — follows the same logic as any other joint, just with shoulder-specific detail added at each step: history (mechanism, arm position at the time, any pop/snap felt, prior injuries to that shoulder), observation (symmetry, contour, arm position, willingness to use the arm), palpation (bony landmarks first — clavicle, AC joint, greater tuberosity — then soft tissue), and special tests reserved for the supervising professional (apprehension/relocation for instability, tests targeting specific rotator cuff tendons, and others). Your role in that flow is to gather the history and observation accurately and hand off a clear picture, not to run the special tests yourself on an acute injury.",
+        "Once an injury is identified as significant, positioning for transport/immediate care matters: a standard sling holds the arm adducted (close to the body) and in a comfortable degree of internal rotation, elbow flexed around 90 degrees, supporting the forearm's weight so the athlete isn't holding it up with muscle effort. This is comfort and protection, not treatment — it doesn't substitute for physician evaluation.",
+        "The reasoning for keeping reduction (putting a dislocated joint back in place) strictly out of scope only gets stronger with more anatomy, not weaker: muscle spasm around an acutely dislocated joint actively resists any reduction attempt and makes an unskilled attempt more likely to stretch or tear the axillary nerve and axillary artery that wrap directly around the joint capsule, and a meaningful percentage of dislocations carry an associated fracture (Hill-Sachs lesion, glenoid rim fracture, greater tuberosity fracture) that changes how — and whether — a safe reduction can even be attempted. That combination is exactly why reduction, at every level of training below a physician, stays a hospital procedure rather than a sideline one."
+      ]
+    },
+    {
+      "heading": "Rehab pillars and return-to-play criteria for overhead athletes",
+      "body": [
+        "Whatever the specific diagnosis, shoulder rehab for overhead athletes is generally built on the same pillars: rotator cuff strengthening (restoring the dynamic 'compressor' function), scapular control work targeting the serratus anterior and lower trapezius (restoring scapulohumeral rhythm and correcting scapular dyskinesis), and posterior capsule mobility work (addressing problematic GIRD so the total rotational arc returns closer to symmetric). None of these are 'nice to have' add-ons — each one directly targets one of the mechanisms covered above.",
+        "Return-to-play for a throwing athlete is a graded process, not a single clearance visit: pain-free strength and range of motion, a total rotational arc close to the non-throwing side, and then a structured interval throwing program that rebuilds distance, velocity, and pitch count gradually before a return to competitive throwing. Skipping straight from 'pain-free at rest' to a full bullpen or game appearance ignores exactly the load-management principle behind pitch counts and rest days in the first place."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A 16-year-old sustains a first-time traumatic anterior shoulder dislocation. Imaging later confirms a Bankart lesion and a Hill-Sachs lesion. Why does this specific combination help explain his high risk of a repeat dislocation?",
+      "choices": [
+        "The Bankart lesion tears the labrum and its ligament attachment while the Hill-Sachs lesion is a divot in the humeral head where it jammed on the glenoid rim — together they remove the socket's static checkrein and leave a bony defect that re-engages more easily",
+        "Both lesions are minor soft-tissue bruises that resolve completely within a week regardless of activity",
+        "The Hill-Sachs lesion is a rotator cuff tear that has nothing to do with instability risk",
+        "The Bankart lesion only affects the AC joint, which is unrelated to glenohumeral dislocation"
+      ],
+      "answerIndex": 0,
+      "explanation": "The Bankart lesion removes the labral bumper and the inferior glenohumeral ligament's attachment point (the main static checkrein against anterior translation), while the Hill-Sachs lesion is a compression defect in the back of the humeral head from jamming against the glenoid rim during the dislocation. Together they explain the anatomic basis for high recurrence — neither is a minor bruise, and Hill-Sachs is a humeral head defect, not a cuff tear or AC joint finding."
+    },
+    {
+      "id": "q2",
+      "question": "An athlete has shoulder laxity in multiple directions, no clear traumatic dislocating event, and a similar looseness in the other shoulder. Which pattern and management approach best fits?",
+      "choices": [
+        "TUBS — traumatic, unidirectional, surgery is the first-line treatment",
+        "AMBRI — atraumatic, multidirectional, often bilateral, managed with rehabilitation first",
+        "A posterior sternoclavicular dislocation requiring emergency referral",
+        "A Grade III AC separation requiring immediate reduction"
+      ],
+      "answerIndex": 1,
+      "explanation": "Atraumatic onset, multidirectional laxity, and bilateral involvement is the AMBRI pattern, generally managed with rehab before surgery is considered. TUBS describes the opposite (traumatic, unidirectional, Bankart lesion, surgery), and the other two choices describe unrelated injuries with no matching features here."
+    },
+    {
+      "id": "q3",
+      "question": "A 14-year-old pitcher reports gradually worsening lateral shoulder pain over several weeks along with a drop in throwing velocity, with no single injury moment. Why does his age change the most likely diagnosis compared to an adult thrower with the same symptoms?",
+      "choices": [
+        "Age doesn't affect the differential — the evaluation and likely diagnosis are identical at any age",
+        "Adults are more likely to have growth-plate injuries than adolescents",
+        "His open growth plate makes Little League shoulder (a proximal humeral physis stress injury) a leading concern, whereas an adult's fused growth plate makes rotator cuff tendinopathy more likely",
+        "This pattern only occurs in swimmers, never in throwers"
+      ],
+      "answerIndex": 2,
+      "explanation": "A skeletally immature thrower's open growth plate is vulnerable to repetitive-load stress injury (Little League shoulder), which has to stay on the differential given his age and throwing-specific mechanism. An adult's growth plates are fused, making cuff tendinopathy the more typical gradual-onset diagnosis instead."
+    },
+    {
+      "id": "q4",
+      "question": "A throwing athlete has internal rotation range of motion at the throwing shoulder that is smaller than the non-throwing shoulder, but external rotation is correspondingly greater, so the total rotational arc (IR + ER) is about equal on both sides. How should this be interpreted?",
+      "choices": [
+        "This is a medical emergency requiring immediate referral",
+        "This confirms a SLAP tear is present",
+        "This is a matched shift in rotation (some GIRD is expected in throwers); the finding of greater concern is a smaller total rotational arc compared to the non-throwing side, not GIRD alone",
+        "This means the athlete has a complete rotator cuff tear"
+      ],
+      "answerIndex": 2,
+      "explanation": "Some glenohumeral internal rotation deficit (GIRD) is a normal throwing-shoulder adaptation, especially when external rotation gains offset it and the total arc stays roughly symmetric. The injury-associated red flag is a reduced total arc compared to the non-throwing side — not GIRD by itself, and none of the other choices are supported by this finding."
+    },
+    {
+      "id": "q5",
+      "question": "What distinguishes internal impingement from classic (outlet/subacromial) impingement?",
+      "choices": [
+        "They are the same condition described with two different names",
+        "Internal impingement only occurs in swimmers and never in throwers",
+        "Classic impingement pinches the cuff tendon between the humeral head and the acromial arch during overhead reaching; internal impingement pinches the cuff's undersurface against the posterior-superior labrum from inside the joint, specific to the late-cocking throwing position",
+        "Internal impingement involves the AC joint, while classic impingement involves the glenohumeral joint"
+      ],
+      "answerIndex": 2,
+      "explanation": "Internal impingement is a throwing-specific mechanism where the posterior cuff's undersurface contacts the posterior-superior labrum in maximal abduction/external rotation, while classic impingement pinches the cuff externally against the acromion during overhead reaching and is more typical in swimmers/general overhead athletes. Neither is an AC joint problem."
+    },
+    {
+      "id": "q6",
+      "question": "An athlete is struck directly in the chest/shoulder girdle and afterward reports difficulty breathing and a change in voice. What should this raise immediate concern for?",
+      "choices": [
+        "A routine Grade I AC sprain",
+        "A posterior sternoclavicular dislocation, given the joint's proximity to the trachea, esophagus, and great vessels",
+        "A rotator cuff tendinopathy",
+        "Scapular dyskinesis"
+      ],
+      "answerIndex": 1,
+      "explanation": "Breathing or swallowing difficulty and voice changes after a chest blow point toward a posterior SC dislocation, a true emergency because the displaced medial clavicle sits directly against the trachea, esophagus, and great vessels. AC sprains, cuff tendinopathy, and scapular dyskinesis don't produce breathing or swallowing symptoms."
+    },
+    {
+      "id": "q7",
+      "question": "Why does a coach's or teammate's offer to reduce a dislocated shoulder on the field remain unsafe even when explained with more anatomical detail than a 9th-grade course covers?",
+      "choices": [
+        "Because muscle spasm around the joint resists reduction and increases the risk of injuring the axillary nerve/artery, and because a meaningful share of dislocations carry an associated fracture that changes whether reduction can safely be attempted at all",
+        "Because reduction is easy but takes too much time on the sideline",
+        "Because only ice and elevation are ever needed for a dislocation",
+        "Because the axillary nerve and artery are not actually near the shoulder joint"
+      ],
+      "answerIndex": 0,
+      "explanation": "Muscle spasm makes an unskilled reduction attempt more likely to damage the axillary nerve or artery, which wrap directly around the joint, and associated fractures (common with dislocations) can make reduction unsafe until imaging clarifies the injury. This is exactly why reduction stays a hospital/physician procedure at every level of training below that."
+    },
+    {
+      "id": "q8",
+      "question": "A youth baseball organization sets age-based daily pitch limits and requires more rest days after higher pitch counts. What principle are these guidelines primarily built on?",
+      "choices": [
+        "Pitch type (curveball vs. fastball) is the only factor that matters, regardless of volume",
+        "Total throwing volume and adequate recovery time protect a still-developing shoulder/elbow better than relying on how the athlete says he feels, since pain from a growth-plate stress injury often appears after damage has begun",
+        "Pitch counts exist only to speed up games and have no injury-prevention basis",
+        "Rest days are unnecessary as long as the athlete reports no pain"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pitch count and rest-day guidelines are built on managing total throwing volume and recovery for a skeletally immature athlete, because symptom-based self-monitoring can miss a growth-plate stress injury until damage has already started. Pitch type is a separate, genuinely debated factor, not the basis for these particular guidelines, and 'no pain reported' isn't a reliable safety signal in this population."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Static vs. dynamic shoulder stabilizers",
+      "back": "Static: labrum, capsule, glenohumeral ligaments — passive tissue resisting translation. Dynamic: rotator cuff (compresses the ball into the socket) and scapular stabilizers (position the socket itself)."
+    },
+    {
+      "id": "f2",
+      "front": "Golf-ball-on-a-tee, quantified",
+      "back": "The humeral head's articular surface contacts only about a quarter to a third of the glenoid at any given moment — the anatomic basis of the shoulder's mobility/stability tradeoff."
+    },
+    {
+      "id": "f3",
+      "front": "Scapulohumeral rhythm",
+      "back": "Roughly a 2:1 ratio of glenohumeral motion to scapulothoracic motion during arm elevation past the initial arc. Breakdown of this coordination is scapular dyskinesis."
+    },
+    {
+      "id": "f4",
+      "front": "TUBS",
+      "back": "Traumatic, Unidirectional, Bankart lesion, Surgery — the classic pattern of teenage anterior shoulder dislocation."
+    },
+    {
+      "id": "f5",
+      "front": "AMBRI",
+      "back": "Atraumatic, Multidirectional, often Bilateral, Rehabilitation first, Inferior capsular shift if surgery is needed — the opposite end of the instability spectrum from TUBS."
+    },
+    {
+      "id": "f6",
+      "front": "Bankart lesion",
+      "back": "Tear of the anterior-inferior labrum (sometimes with bone) off the glenoid rim during anterior dislocation; removes the labral bumper and the inferior glenohumeral ligament's attachment point."
+    },
+    {
+      "id": "f7",
+      "front": "Hill-Sachs lesion",
+      "back": "A compression defect/divot in the back of the humeral head where it jammed against the glenoid rim during an anterior dislocation."
+    },
+    {
+      "id": "f8",
+      "front": "Recurrence risk after first dislocation, under 20",
+      "back": "Commonly cited in the 70-90% range for athletes under 20 who return to sport — a major reason first-time teenage dislocations get physician follow-up and structured rehab."
+    },
+    {
+      "id": "f9",
+      "front": "Internal impingement",
+      "back": "Throwing-specific: the undersurface of the posterior rotator cuff contacts the posterior-superior labrum during maximal abduction/external rotation (late cocking) — distinct from classic outlet impingement against the acromion."
+    },
+    {
+      "id": "f10",
+      "front": "GIRD and total rotational arc",
+      "back": "Glenohumeral internal rotation deficit: reduced internal rotation in the throwing shoulder. Some GIRD is normal; the concerning pattern is a total arc (IR+ER) meaningfully smaller than the non-throwing side."
+    },
+    {
+      "id": "f11",
+      "front": "Little League shoulder",
+      "back": "Stress injury (epiphysiolysis) of the proximal humeral growth plate in skeletally immature throwers from repetitive rotational torque — managed with rest from throwing, not playing through it."
+    },
+    {
+      "id": "f12",
+      "front": "Posterior SC dislocation",
+      "back": "Rare but a true emergency: the medial clavicle displaces backward toward the trachea, esophagus, and great vessels. Breathing/swallowing changes after a chest blow signal this injury."
+    }
+  ]
+}
