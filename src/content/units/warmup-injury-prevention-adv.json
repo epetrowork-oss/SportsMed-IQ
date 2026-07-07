@@ -1,0 +1,245 @@
+{
+  "id": "warmup-injury-prevention-adv",
+  "title": "Warm-Up Physiology and Injury-Prevention Program Design",
+  "category": "Prevention & Performance",
+  "strand": "warmup-injury-prevention",
+  "gradeBand": "11-12",
+  "summary": "The mechanism behind a warm-up's protective and performance effects, the RAMP framework for building one, what the FIFA 11+ family of programs actually contains, and why compliance — not the science — is the real weak link.",
+  "minutes": 22,
+  "sections": [
+    {
+      "heading": "Why warm tissue survives more: viscoelasticity and the stress-strain curve",
+      "body": [
+        "You already know from the 9-10 unit that warming up raises muscle temperature and makes tissue more elastic. Here's the actual mechanism: muscle and tendon are viscoelastic materials — they behave partly like a viscous fluid (resistant to being deformed quickly) and partly like an elastic solid (able to stretch and spring back). Temperature shifts the balance between those two properties.",
+        "As tissue temperature rises, the viscosity component drops — collagen fibers within tendon, and the connective tissue surrounding muscle fibers, become more pliable and offer less internal resistance to being stretched. On a stress-strain curve (a plot of the force applied to a tissue against how much it deforms), warmer tissue shifts the curve so the failure point — where fibers actually tear — arrives at a greater strain. That's the real reason a cold hamstring is more likely to strain during a sudden sprint than a warm one: it isn't that cold muscle is 'weaker,' it's that its failure point arrives sooner, at a shorter length and lower force.",
+        "This is also why the target isn't just 'some warming.' Research generally points to raising muscle temperature by roughly 1-2°C (about 2-4°F) above resting to meaningfully shift tissue properties. A few light jogging strides don't reliably get there; a sustained several-minute raise phase does."
+      ]
+    },
+    {
+      "heading": "Neuromuscular activation and post-activation potentiation: warm-up as a performance tool, not just protection",
+      "body": [
+        "A warm-up doesn't just lower injury risk — a well-built one can make an athlete measurably more powerful in the minutes that follow, through a phenomenon called post-activation potentiation (PAP). PAP describes a temporary boost in force or power output following a prior bout of muscle activation, separate from and in addition to any effect of raised temperature.",
+        "The leading explanation involves two changes at the muscle and nervous-system level: a brief, sufficiently intense contraction phosphorylates (chemically primes) the myosin regulatory light chains inside muscle fibers, making the fiber more sensitive to the calcium signal that triggers a contraction, and it increases the excitability of the motor neurons recruiting those fibers, so a subsequent effort recruits more motor units, faster. The practical effect: a short bout of heavy or explosive loading — a few sets of heavy squats, loaded jumps, or short maximal sprints — followed by several minutes of rest, can measurably improve a subsequent sprint or jump.",
+        "PAP and fatigue are competing effects from the same stimulus, which is why timing matters: too little rest after the activating bout and fatigue still dominates; too much rest and the potentiation effect fades. Most athletes see the window open somewhere in the roughly 5-12 minute range after the activating bout, though it varies by individual training status."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Potentiation work needs real supervision",
+        "text": "Heavy-load or maximal-effort potentiation exercises (loaded jumps, heavy squats, sprint-out efforts) carry their own injury risk if form or load isn't appropriate for the athlete. This is programming territory for a coach, strength coach, or athletic trainer — not something a student aide should introduce on their own initiative without a coach's plan."
+      }
+    },
+    {
+      "heading": "RAMP: a working framework for building the warm-up",
+      "body": [
+        "The 9-10 unit's general → dynamic → sport-specific sequence is accurate but loose. RAMP (Raise, Activate, Mobilize, Potentiate) is the framework used at the collegiate and professional level to actually build a specific session, because each letter maps to a concrete goal and specific exercise types rather than a vague category."
+      ],
+      "list": [
+        "Raise — several minutes of continuous, low-to-moderate intensity movement (jogging, skipping, easy cycling) whose single job is raising heart rate, blood flow, and muscle temperature toward that ~1-2°C target before anything more demanding happens.",
+        "Activate & Mobilize — targeted work for muscles and joints the sport-specific movement is about to stress hard, especially ones that tend to be under-recruited at rest: glute bridges, band walks, core anti-rotation holds, hip and ankle mobility drills. This phase corrects the specific weak links — hip stability, core control — that general dynamic stretching alone tends to skip.",
+        "Potentiate — the highest-intensity phase, closest to game speed: bounding, short accelerations, cutting, plyometrics, and sport-specific skill at rising intensity. This is where the PAP effect from the previous section is deliberately built in, and it doubles as the final rehearsal of the actual movement patterns the athlete is about to use."
+      ]
+    },
+    {
+      "heading": "What the research actually shows",
+      "body": [
+        "Structured injury-prevention programs — the FIFA 11+ family and its equivalents in other sports — have been tested in randomized and prospective cohort trials, not just marketed. Findings vary by sport, injury type, and how strictly the program was followed, but a reasonable read across trials is a roughly one-third to one-half reduction in lower-extremity injury rates among teams using a program consistently, compared to teams doing a standard warm-up. (Non-contact ACL injuries specifically show reductions closer to half — a research finding worth taking seriously, not a marketing claim; the underlying biomechanics are covered in the ACL unit.)",
+        "The mechanism behind static stretching's cost immediately before intense activity is also better understood than the 9-10 unit's summary lets on. Holding a stretch at end-range for 20-30+ seconds reduces musculotendinous stiffness — the muscle-tendon unit temporarily becomes 'looser' and less able to store and return elastic energy efficiently in the stretch-shortening cycle that powers sprinting and jumping. A sustained stretch can also trigger autogenic inhibition, a protective neural reflex — via the Golgi tendon organ, a sensor in the tendon that detects excessive tension — that dampens the stretched muscle's own contraction signal. Dynamic stretching doesn't cost the same because it never holds a sustained end-range position long enough to trigger that reflex, and it raises temperature and rehearses movement instead of temporarily de-tuning the muscle-tendon unit's spring-like properties."
+      ]
+    },
+    {
+      "heading": "Inside a program like FIFA 11+: the actual three-part structure",
+      "body": [
+        "You already know the concept from the 9-10 unit — a structured program combining strength, balance, and landing work. Here's what's actually inside one: FIFA 11+ runs about 20 minutes in three parts."
+      ],
+      "list": [
+        "Part 1 — running exercises (~8 minutes): straight-ahead and lateral running drills at increasing speed with a partner (running with hip out, hip in, shoulder contact, quick forward-backward movement), which doubles as the Raise phase.",
+        "Part 2 — strength, plyometric, and balance exercises (~10 minutes): six core exercises — a plank/side-plank series, single-leg balance work, squats into calf raises, and hamstring-focused (Nordic-style) work — each with three progressive difficulty levels, so a team advances the program across a season instead of repeating week one all year.",
+        "Part 3 — running exercises again, at higher speed (~2 minutes): running across the field combined with bounding and plant-and-cut movements at close to game speed, functioning as the Potentiate phase and the final movement rehearsal before play."
+      ]
+    },
+    {
+      "heading": "Individualizing the warm-up",
+      "body": [
+        "A single script doesn't fit every athlete on a roster. Position matters: a soccer goalkeeper's job is short, explosive, multidirectional reaction — diving, low-to-ground recovery, shoulder and wrist loading on contact with the ground — so a keeper's Potentiate phase should emphasize reactive lateral movement and controlled falling/landing drills, not the same straight-line sprint progression a winger needs. A lineman's warm-up should load short, powerful, contact-adjacent movement; a distance runner's should build toward sustained rhythm rather than single-effort explosiveness.",
+        "An athlete returning from injury needs a modified version, built with the athletic trainer or physical therapist rather than improvised on the fly: typically dialing back load and range in the Activate/Mobilize phase around the healing area, avoiding the specific movement that caused the original injury until it's been cleared, and progressing volume more gradually through Potentiate than the rest of the team."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Cold weather changes the Raise phase, not the rulebook",
+        "text": "The physiology behind why cold muscle needs more warm-up time, and how cold exposure itself is monitored and managed, is covered in the cold-exposure unit. The warm-up-specific takeaway here is that the Raise phase needs to run longer and the whole session needs to stay continuous — no standing around between phases — to hold onto the temperature gain, not that the RAMP structure itself changes."
+      }
+    },
+    {
+      "heading": "The aide's real leverage: leading it, every time",
+      "body": [
+        "The research numbers above assume the program is actually run as designed. Real-world results consistently fall short of trial results for the same reason across every program studied: teams skip it, rush it, or run an abbreviated version once the season gets busy. That compliance gap — not any flaw in the science — is the single biggest reason these programs underperform their trial results in practice.",
+        "A student aide who can lead a team through a consistent, correctly-cued RAMP or FIFA 11+-style routine, every single practice, without letting it slide on a short-time day, is providing more real injury-prevention value than knowing every mechanism in this unit by itself. Cueing form during the Activate/Mobilize phase — hips staying level during single-leg work, knees tracking over toes, not caving inward — matters more than running an elaborate but rarely-repeated version."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Consistency is the intervention",
+        "text": "If you only remember one thing from this unit for actual practice: a shortened, correctly-run warm-up program done every day beats a perfect one done occasionally. Protect the routine before you protect any single exercise."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A physiologist explains that warm tendon tissue can stretch farther before tearing than cold tendon tissue under the same applied force. What best explains this using stress-strain and viscoelasticity concepts?",
+      "choices": [
+        "Rising temperature lowers the tissue's viscosity, shifting the stress-strain curve so the failure point occurs at greater strain",
+        "Warm tissue is thicker, giving it more cross-sectional area to resist tearing",
+        "Warm tissue conducts nerve signals faster, which prevents the sensation of pain during tearing",
+        "Cold tissue has a higher percentage of fast-twitch fibers"
+      ],
+      "answerIndex": 0,
+      "explanation": "Temperature shifts the balance of viscoelastic tissue toward being more pliable — lower viscosity means the tissue can absorb more strain before reaching its failure point. Tissue thickness, nerve conduction speed, and fiber-type percentage don't change with a warm-up and aren't the mechanism here."
+    },
+    {
+      "id": "q2",
+      "question": "A sprinter does a set of heavy loaded jumps, rests eight minutes, then runs a faster 40-yard time than her un-potentiated baseline. What mechanism best explains the temporary performance boost?",
+      "choices": [
+        "The loaded jumps depleted glycogen, forcing the body to preferentially recruit fast-twitch fibers",
+        "The rest period allowed full recovery from fatigue, simply returning her to baseline performance",
+        "Heavy loading permanently increased her fast-twitch fiber count",
+        "Post-activation potentiation — phosphorylation of myosin regulatory light chains and increased motor neuron excitability — temporarily increases force and power output"
+      ],
+      "answerIndex": 3,
+      "explanation": "PAP is a real, temporary neuromuscular effect: priming myosin light chains and boosting motor neuron excitability lets a subsequent effort recruit more motor units faster. It's more than a return to baseline — it's a boost above it — and no single warm-up session permanently changes fiber-type composition."
+    },
+    {
+      "id": "q3",
+      "question": "A team's warm-up includes single-leg glute bridges and band walks targeting hip stabilizers that tend to be under-recruited at rest. Which RAMP phase does this belong to, and why?",
+      "choices": [
+        "Raise, because it's low-intensity continuous movement",
+        "Activate/Mobilize, because it targets specific muscle groups and joint ranges the sport-specific work is about to stress, correcting weak links general dynamic stretching alone tends to skip",
+        "Potentiate, because it's the highest-intensity phase of the session",
+        "It isn't part of RAMP — it belongs in the cool-down"
+      ],
+      "answerIndex": 1,
+      "explanation": "Activate/Mobilize exists specifically to target under-recruited stabilizers like the glutes and hip complex before the sport-specific demand arrives — a step more targeted than general dynamic stretching. It's not the low-intensity Raise phase and it isn't near game-speed, so it isn't Potentiate."
+    },
+    {
+      "id": "q4",
+      "question": "Explain, in mechanism terms, why holding a 30-second static hamstring stretch immediately before a maximal sprint can reduce power output, while dynamic leg swings covering a similar range of motion don't carry the same cost.",
+      "choices": [
+        "Static stretching burns enough calories to leave less energy available for the sprint",
+        "Static stretching happens too slowly to raise heart rate at all, unlike dynamic stretching",
+        "Sustained end-range holding reduces musculotendinous stiffness and can trigger autogenic inhibition via the Golgi tendon organ, dampening the stretched muscle's contraction; dynamic stretching never holds end-range long enough to trigger that reflex and instead raises temperature and rehearses movement",
+        "Dynamic stretching activates an entirely different muscle group than static stretching does"
+      ],
+      "answerIndex": 2,
+      "explanation": "The real mechanism is mechanical (reduced musculotendinous stiffness hurting the stretch-shortening cycle) and neural (autogenic inhibition via the Golgi tendon organ dampening contraction) — both require a sustained end-range hold that dynamic stretching never produces. Calorie burn and heart rate aren't the relevant variables here."
+    },
+    {
+      "id": "q5",
+      "question": "A team abandons the final running phase of a FIFA 11+-style program to save time, keeping only the initial running warm-up and the strength/balance/plyometric middle section. What is lost by cutting that final phase?",
+      "choices": [
+        "The Potentiate phase — the higher-speed running, bounding, and cutting that rehearses game-speed movement right before play and builds in the performance benefit of prior activation",
+        "Nothing meaningful — the middle section covers all the necessary work on its own",
+        "The Raise phase, since running always raises heart rate regardless of when it happens",
+        "The Activate phase, since running targets underused stabilizer muscles"
+      ],
+      "answerIndex": 0,
+      "explanation": "Part 3's higher-speed running, bounding, and cutting is the program's Potentiate phase — it rehearses actual game-speed movement and is where the PAP-related performance benefit is built in. Skipping it isn't harmless; it removes the closest-to-competition rehearsal in the whole session."
+    },
+    {
+      "id": "q6",
+      "question": "How should a goalkeeper's Potentiate phase differ from a winger's, and why?",
+      "choices": [
+        "They should be identical, since both athletes play the same sport",
+        "The goalkeeper needs more static stretching, since goalkeepers stand still more often during play",
+        "The goalkeeper should skip the Potentiate phase entirely, since goalkeepers don't cover as much ground as a winger",
+        "The goalkeeper's phase should emphasize reactive lateral movement and controlled falling/landing given the position's short, explosive, multidirectional demands, rather than the winger's straight-line sprint progression"
+      ],
+      "answerIndex": 3,
+      "explanation": "Individualizing a warm-up means matching the Potentiate phase to actual position demands — a goalkeeper's diving, low recovery, and ground contact call for reactive lateral and landing work, not the same linear sprint emphasis a winger needs. Position, not the sport label alone, should drive the exercise selection."
+    },
+    {
+      "id": "q7",
+      "question": "An athlete returning from a hamstring strain rejoins team warm-ups. What is the most appropriate approach to her Activate/Mobilize phase, from a program-design standpoint?",
+      "choices": [
+        "She should perform the exact same volume and range as teammates immediately, to rebuild confidence",
+        "A modified version built with the athletic trainer or physical therapist — reduced load and range around the healing area, avoiding the specific movement that caused the original strain until it's been cleared, with more gradual progression through Potentiate",
+        "She should skip the warm-up entirely until she is fully healed",
+        "Only the Raise phase needs modification; Activate/Mobilize should stay identical to the rest of the team's"
+      ],
+      "answerIndex": 1,
+      "explanation": "Individualizing for a returning athlete means a coordinated, modified plan — not full participation on day one and not total avoidance either. Reduced load/range around the healing area and gradual re-progression, guided by the AT or PT, is the appropriate middle path."
+    },
+    {
+      "id": "q8",
+      "question": "Across published trials, structured warm-up programs consistently show smaller injury reductions in everyday team use than in the original research trials. What is the best-supported explanation, and what does it imply about a student aide's role?",
+      "choices": [
+        "The programs are less biologically effective outside controlled settings for reasons that remain unknown, and an aide's involvement has little effect either way",
+        "Real-world athletes are inherently less injury-prone than research subjects, making the programs largely unnecessary in practice",
+        "Real-world compliance gaps — programs skipped, rushed, or run inconsistently — explain most of the difference, meaning an aide who reliably leads a correctly cued routine every practice provides real, measurable injury-prevention value",
+        "The gap comes from research trials relying on supplements unavailable to typical high school teams"
+      ],
+      "answerIndex": 2,
+      "explanation": "The biology of these programs is well established in trials; the real-world shortfall comes from compliance — programs run inconsistently, rushed, or skipped. That means an aide's ability to lead a consistent, correctly-cued routine is genuinely one of the highest-leverage things they can do for a team's injury rate, not a minor detail."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Viscoelastic tissue",
+      "back": "Tissue (like muscle and tendon) that behaves partly like a viscous fluid and partly like an elastic solid; temperature shifts the balance, with warmer tissue offering less internal resistance to being stretched."
+    },
+    {
+      "id": "f2",
+      "front": "Stress-strain curve & failure point",
+      "back": "A plot of force applied to tissue against how much it deforms; the failure point is where fibers tear. Warming tissue shifts the curve so failure occurs at a greater strain, not a higher force alone."
+    },
+    {
+      "id": "f3",
+      "front": "Target muscle temperature rise for a warm-up",
+      "back": "Roughly 1-2°C (about 2-4°F) above resting — the level research points to for meaningfully changing tissue properties; a few light strides don't reliably reach it."
+    },
+    {
+      "id": "f4",
+      "front": "Post-activation potentiation (PAP)",
+      "back": "A temporary boost in force/power output following a prior bout of muscle activation, separate from and in addition to the effect of raised temperature."
+    },
+    {
+      "id": "f5",
+      "front": "PAP mechanism",
+      "back": "Phosphorylation of myosin regulatory light chains (increasing calcium sensitivity) plus increased motor neuron excitability, so a subsequent effort recruits more motor units, faster."
+    },
+    {
+      "id": "f6",
+      "front": "PAP window",
+      "back": "Roughly 5-12 minutes after a sufficiently intense activating bout — too little rest and fatigue still dominates; too much and the potentiation effect fades."
+    },
+    {
+      "id": "f7",
+      "front": "RAMP framework",
+      "back": "Raise (light continuous movement to raise HR/temperature) → Activate & Mobilize (targeted work for under-recruited stabilizers and needed joint ranges) → Potentiate (highest-intensity, game-speed rehearsal)."
+    },
+    {
+      "id": "f8",
+      "front": "Why static stretching can cost power right before intensity",
+      "back": "A sustained end-range hold reduces musculotendinous stiffness (hurting the stretch-shortening cycle) and can trigger autogenic inhibition via the Golgi tendon organ, dampening the stretched muscle's contraction signal."
+    },
+    {
+      "id": "f9",
+      "front": "FIFA 11+ three-part structure",
+      "back": "Part 1: running exercises (~8 min, doubles as Raise). Part 2: strength/plyometric/balance exercises (~10 min, 3 progressive levels). Part 3: running exercises again at higher speed (~2 min, doubles as Potentiate). About 20 minutes total."
+    },
+    {
+      "id": "f10",
+      "front": "Evidence on structured warm-up programs",
+      "back": "Trials show roughly a one-third to one-half reduction in lower-extremity injury rates with consistent use compared to a standard warm-up; non-contact ACL reductions run closer to half."
+    },
+    {
+      "id": "f11",
+      "front": "Individualizing by position",
+      "back": "Potentiate-phase content should match position demands — e.g., a goalkeeper needs reactive lateral movement and landing control, not the same linear sprint progression as a winger."
+    },
+    {
+      "id": "f12",
+      "front": "The real-world compliance gap",
+      "back": "Programs underperform their trial results mainly because teams skip, rush, or run them inconsistently — not because the science is weaker in practice. Consistent, correctly-cued delivery is the highest-leverage thing an aide can control."
+    }
+  ]
+}
