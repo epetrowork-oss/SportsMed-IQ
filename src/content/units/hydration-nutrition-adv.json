@@ -1,0 +1,257 @@
+{
+  "id": "hydration-nutrition-adv",
+  "title": "Performance Nutrition: Fueling Science for Serious Athletes",
+  "category": "Prevention & Performance",
+  "strand": "hydration-nutrition",
+  "gradeBand": "11-12",
+  "summary": "The mechanisms behind fuel use, sweat rate, and hyponatremia, plus a hard look at supplement marketing and body-composition pressure — for athletes ready to go past the basics.",
+  "minutes": 25,
+  "sections": [
+    {
+      "heading": "Fuel use across the intensity spectrum",
+      "body": [
+        "You already know carbohydrate and fat both fuel exercise. Here's the part that matters for training and race planning: the mix between them shifts with intensity, a pattern exercise physiologists call the crossover concept. At low intensity (an easy jog, warm-up pace), fat oxidation supplies most of the energy. As intensity climbs, the body relies increasingly on carbohydrate, because carbohydrate metabolism can generate ATP (the cell's usable energy currency) fast enough to match a harder work rate — fat oxidation is comparatively slow and simply can't keep pace once effort gets hard enough. Past that crossover point, carbohydrate becomes the dominant fuel even though fat is never used at zero.",
+        "Carbohydrate isn't unlimited, though. It's stored as glycogen — roughly 80-100g in the liver and 300-500g in muscle, depending on training status and body size — and that's a finite tank. \"Hitting the wall\" or \"bonking\" is what happens when glycogen runs critically low during prolonged exercise: pace collapses because fat oxidation alone can't sustain the intensity the athlete was holding, no matter how much willpower is left.",
+        "This is why daily carbohydrate needs aren't one fixed number for every athlete — they scale with training volume and intensity. A two-a-day preseason week burns through glycogen faster and more completely than a light in-season maintenance week, so carbohydrate intake should flex with the work being done, not stay locked at whatever a generic chart says."
+      ]
+    },
+    {
+      "heading": "Protein: synthesis, timing, and realistic targets",
+      "body": [
+        "Muscle protein synthesis (MPS) — the process of building new muscle protein, stimulated by both resistance training and dietary protein — isn't triggered just because protein was eaten somewhere that day. A meal needs enough protein, and specifically enough leucine (an amino acid that acts as the biochemical trigger), to cross the threshold that switches MPS on. A meal with little or no protein essentially wastes that opportunity, even if a later meal is protein-heavy.",
+        "That's the case for distributing protein across the day — 4-5 meals or snacks each containing an adequate protein dose stimulate MPS more consistently than concentrating almost all of it into one large evening meal, even when the daily total is identical.",
+        "Realistic totals: athletes in regular training generally do well around 1.2-2.0 g of protein per kilogram of body weight per day (well above the general population's ~0.8 g/kg), and that range is easily met with food — chicken, fish, eggs, dairy, beans, and nuts spread across meals. This is a food-first target, not a case for supplementation; more on why in the supplement section below."
+      ]
+    },
+    {
+      "heading": "Measuring your own sweat rate",
+      "body": [
+        "Sweat rate varies enormously between athletes — anywhere from roughly 0.5 to over 2.5 liters per hour — driven by body size, fitness and heat acclimatization, exercise intensity, and environmental conditions. That range is too wide for a single generic fluid recommendation to fit everyone, which is why the more useful skill is measuring your own number rather than relying on a team-wide guideline.",
+        "The protocol: weigh in wearing minimal clothing (or the same clothing weight) immediately before and after a standardized practice, track any fluid consumed during the session, and note whether the athlete urinated. Sweat rate per hour = (pre-practice weight minus post-practice weight, converted to volume, plus fluid consumed during, minus any urine output) divided by the practice's duration in hours. Repeating this across a few practices in different conditions gives an athlete a personal number to plan around instead of guessing.",
+        "Sodium matters here too. Sweat sodium concentration also varies by athlete — some lose relatively little, others lose a lot. \"Salty sweaters,\" recognizable by visible white residue or salt crusting on skin and dark clothing after practice, lose more sodium per liter of sweat than average and may need sodium replacement beyond what a standard sports drink provides, especially across a long, hot session."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Run the protocol before you need it",
+        "text": "Do a pre/post weigh-in on a normal, moderate-intensity practice — not the first 100-degree day of the season — so an athlete's baseline sweat rate is already known before conditions get extreme. Guessing under pressure is far less accurate than a number measured ahead of time."
+      }
+    },
+    {
+      "heading": "Hyponatremia, fully: mechanism and the thirst-vs-programmed debate",
+      "body": [
+        "You know hyponatremia (dangerously low blood sodium) can result from drinking too much plain fluid during long exercise. The fuller mechanism: it's dilutional — blood sodium concentration drops because total body water rises faster than sodium is added or retained, not simply because sodium was \"lost.\" What makes some cases worse than overdrinking alone would predict is antidiuretic hormone (ADH, also called vasopressin), the hormone that normally gets suppressed when the body has plenty of fluid so the kidneys can excrete the excess. During prolonged exercise, ADH release triggered by exercise itself — along with factors like pain, nausea, or certain medications — can stay elevated even when the athlete is fluid-overloaded. The kidneys hold onto water instead of excreting it, and the dilution gets worse than the intake alone would explain.",
+        "This mechanism is part of why current evidence-based guidance leans toward drinking to thirst rather than following a fixed, programmed drinking schedule, even in long events. For most practices and competitions under about two hours, drinking to thirst is well supported and protects against both under- and over-drinking. In multi-hour endurance events, where aid-station culture can pressure athletes to drink at every stop regardless of thirst, rigid high-volume programmed drinking has been linked to hyponatremia cases — the better approach is still thirst-driven intake, adjusted for what an individual athlete already knows about their own sweat rate and sodium losses from the previous section."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Confusion late in a long event — don't assume dehydration",
+        "text": "An athlete who has been drinking heavily throughout a long event and develops confusion, a worsening headache, vomiting, or swelling is showing signs consistent with hyponatremia, not simple dehydration — and body weight that is stable or higher than at the start (rather than lower) supports that. Giving more fluid makes it worse. Stop activity and get emergency medical care immediately; do not default to \"more water\" as the fix for a distance athlete who looks unwell."
+      }
+    },
+    {
+      "heading": "Periodized eating: fueling the work you're actually doing",
+      "body": [
+        "Energy and carbohydrate intake should flex with training load, not stay fixed all season. A heavy two-a-day or high-volume training day calls for meaningfully more carbohydrate and total calories than a light or rest day — consistently under-fueling the hardest days is what actually blunts recovery and adaptation over a season, more than any single meal choice.",
+        "\"Carbo-loading\" — increasing carbohydrate intake and easing training volume in the days before a competition to maximize glycogen stores — provides real, measurable benefit mainly for continuous events lasting roughly 90 minutes or more that can meaningfully deplete glycogen (distance running, soccer, cycling, similar endurance sports). For a typical shorter contest, normal higher-carbohydrate pre-game eating covers the need; a dramatic multi-day loading protocol isn't necessary and isn't supported by the same evidence for short events.",
+        "The \"anabolic window\" — the idea that protein must be consumed within a narrow 30-60 minute post-workout period or the training session's benefit is lost — is real in the sense that early refueling helps, but it's considerably wider than supplement marketing suggests. Research consistently shows total daily protein and carbohydrate intake, reasonably distributed across the day, matters far more than hitting a narrow post-workout window. Missing it occasionally isn't the crisis it's often sold as, though eating a normal meal or snack within a few hours of a hard session is still good practice.",
+        "On competition day, especially tournaments with multiple games, \"grazing\" on small carbohydrate-based snacks between games beats trying to eat full meals on a tight turnaround."
+      ],
+      "list": [
+        "Games close together (under ~90 minutes apart): fast-digesting, low-fat, low-fiber choices — banana, pretzels, a sports drink — that won't still be sitting in the stomach at kickoff.",
+        "A longer gap (2+ hours): room for a fuller meal with more protein and moderate fat, since there's time to digest before playing again.",
+        "Either way: avoid heavy, greasy meals between games — slow digestion competes with blood flow the muscles need once play resumes."
+      ]
+    },
+    {
+      "heading": "Supplement literacy: what the label doesn't tell you",
+      "body": [
+        "In the United States, dietary supplements are regulated far more loosely than medications — manufacturers are not required to prove a product is safe or effective before it goes on sale, and the FDA generally only acts after a problem is reported. The practical result: the label is not a guarantee of what's actually in the bottle.",
+        "This gap has real consequences. Independent testing has repeatedly found supplements — even mainstream-looking ones — contaminated with unlisted stimulants, anabolic steroids, or their precursors. For any athlete, that's a health risk; for an athlete subject to drug testing (NCAA, Olympic pathways, some state associations), it can end a career even when the athlete had no idea the product was contaminated. Third-party certification programs like NSF Certified for Sport or Informed-Sport independently test the actual contents of a specific batch against the label and screen for banned substances — that seal is the minimum bar before a tested athlete should consider any supplement, not a nice-to-have.",
+        "Evidence quality varies enormously across the supplement aisle. Creatine monohydrate is the most-studied sports supplement in existence, with strong evidence for improving high-intensity, repeated-effort performance and a well-established safety record in the populations studied — a genuine exception in a market where the vast majority of products (fat burners, \"testosterone boosters,\" pump formulas) lack meaningful evidence behind their claims. Protein powder deserves its own note: it's food-convenience, not magic — the same protein as chicken, eggs, or beans in a more portable form for when a whole-food meal isn't practical, nothing more. Caffeine does have a real, evidence-supported ergogenic effect (improved alertness and some endurance performance) at moderate doses, but energy-drink-style doses layered with other stimulants raise real risk for adolescents — cardiac symptoms, anxiety, and a dangerous combination with dehydration or heat.",
+        "Marketing red flags worth training yourself to notice: a \"proprietary blend\" (hides the exact dose of each ingredient behind a single combined number), dramatic before-and-after transformation photos (not controlled evidence), \"one weird trick\" or miracle-cure language, and testimonials with no data behind them. None of that is proof a product works — treat it as a reason for skepticism, not a reason to buy."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Untested supplements can end a season, not just a workout",
+        "text": "A supplement without third-party certification (NSF Certified for Sport, Informed-Sport) has not had its actual contents verified. For an athlete subject to drug testing, a contaminated product can trigger a positive test and a suspension even when the athlete never knowingly took a banned substance — \"I didn't know it was in there\" is not a defense in most testing programs. When in doubt, don't take it, or check with the athletic trainer or team physician first."
+      }
+    },
+    {
+      "heading": "Body composition, weight-class sports, and knowing when to refer",
+      "body": [
+        "Rapid dehydration-based weight cutting — restricting fluids, sitting in a sauna or plastic suit before a weigh-in — is already known to be dangerous. Here's the deeper point: even when an athlete rehydrates quickly after weigh-in and \"makes it back,\" research shows measurable costs to strength, reaction time, and cardiovascular capacity persist into same-day competition. Making weight on the scale doesn't mean the performance and safety cost disappeared — it's still the same cardiovascular strain covered in the heat-illness unit, just self-inflicted on a schedule.",
+        "Relative Energy Deficiency in Sport (RED-S) is the broader concept behind why chronic under-fueling is dangerous beyond any one weigh-in: when energy intake consistently fails to cover the energy cost of training (low energy availability), it disrupts hormone regulation, bone density, immune function, and performance — not just body composition. RED-S can affect any athlete in any sport, regardless of body size or whether the sport has a weight class or aesthetic component; it is not limited to the sports usually associated with disordered eating.",
+        "Comments from coaches or teammates about \"leaning out,\" \"cutting weight,\" or body composition — however well-intentioned — aren't a substitute for an actual assessment of energy availability or health risk, and casual advice in this area can push an athlete toward a genuinely harmful pattern. Body composition and weight management decisions belong with a physician, registered dietitian, or athletic trainer, not sideline advice."
+      ],
+      "list": [
+        "Signs worth noticing in a teammate: a dramatic or rapid weight change, preoccupation with food or weight, exercising through injury or illness specifically to \"make weight,\" or menstrual cycle changes.",
+        "Your role if you notice these signs: recognize them, express concern to the athlete privately and without judgment, and loop in a coach, athletic trainer, or parent — not diagnose, confront, or try to manage it yourself."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Red flag — refer, don't manage it yourself",
+        "text": "Suspected RED-S or disordered eating patterns need a physician, registered dietitian, or athletic trainer — never peer advice or a teammate's meal plan. If you notice the warning signs above in yourself or a teammate, tell a coach, athletic trainer, or parent promptly and let a qualified professional take it from there."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "One athlete is training for a 3-hour marathon; a teammate is preparing for a 6-minute wrestling match. Which athlete's plan should include multi-day carbohydrate loading, and why?",
+      "choices": [
+        "The wrestler, because short high-intensity events burn glycogen fastest",
+        "The marathon runner, because carbo-loading provides its main benefit for continuous efforts lasting roughly 90+ minutes that can meaningfully deplete glycogen stores",
+        "Both athletes equally, since carbo-loading benefits any event length the same way",
+        "Neither — carbo-loading provides no measurable benefit for any high school athlete"
+      ],
+      "answerIndex": 1,
+      "explanation": "Carbo-loading maximizes glycogen stores, which is only meaningfully useful when an event is long and continuous enough to actually deplete those stores — roughly 90+ minutes of sustained effort. A wrestling match is short and intermittent, so extra glycogen from a multi-day loading protocol isn't the limiting factor there."
+    },
+    {
+      "id": "q2",
+      "question": "An athlete weighs 154 lbs before a 1-hour practice and 151 lbs after, having drunk 1 lb (about 16 oz) of fluid during the session and not urinated. What is this athlete's approximate hourly sweat rate, and what does it suggest?",
+      "choices": [
+        "About 1 lb/hour — a low sweat rate needing no special fluid plan",
+        "About 3 lbs/hour, the raw scale difference, meaning the fluid consumed had no real effect",
+        "About 4 lbs (roughly 1.9 L) per hour — a heavy sweat rate that calls for an individualized fluid plan above generic guidelines",
+        "0 lbs/hour, since the fluid consumed exactly canceled out the sweat losses"
+      ],
+      "answerIndex": 2,
+      "explanation": "Total sweat loss equals the weight lost (3 lbs) plus the fluid replaced during the session (1 lb) = 4 lbs, or roughly 1.9 L, in one hour. That's a heavy sweat rate, meaning generic hydration guidelines would under-replace this athlete's actual needs."
+    },
+    {
+      "id": "q3",
+      "question": "A supplement label advertises a 'proprietary muscle-building blend' with dramatic before-and-after photos and no NSF Certified for Sport or Informed-Sport seal. What should this tell a tested athlete?",
+      "choices": [
+        "The proprietary blend guarantees a higher, more effective dose than a labeled formula",
+        "Dramatic before-and-after photos are reliable evidence the product works",
+        "Supplements are FDA-approved for safety and effectiveness before reaching store shelves, so this product is already vetted",
+        "Without third-party certification, the actual contents haven't been independently verified — raising real contamination and banned-substance risk"
+      ],
+      "answerIndex": 3,
+      "explanation": "A 'proprietary blend' hides the exact dose of every ingredient, and without third-party testing, no one has verified the bottle's contents match the label or are free of contaminants — including substances that could cause a positive drug test. Photos and marketing claims aren't evidence, and the FDA does not pre-approve supplements the way it does medications."
+    },
+    {
+      "id": "q4",
+      "question": "A wrestler tells you his plan is to restrict fluids and sit in a sauna suit the day before weigh-ins, then rapidly rehydrate before competing same-day. As a student aide, what's the most accurate thing to tell him?",
+      "choices": [
+        "It's fine, since rapid rehydration after weigh-ins fully restores performance by competition time",
+        "Go ahead, since making weight matters more than same-day performance",
+        "Even with rapid same-day rehydration, research shows measurable strength, reaction-time, and cardiovascular costs persist — flag this plan to the coach or athletic trainer rather than help execute it",
+        "This is only risky for younger or smaller wrestlers, not a physically mature high schooler"
+      ],
+      "answerIndex": 2,
+      "explanation": "Studies on rapid weight-cutting followed by same-day rehydration still show measurable decrements in strength, reaction time, and cardiovascular capacity — making weight on the scale doesn't mean the performance and safety cost disappeared. A student aide's job is to recognize a dangerous plan and route it to someone with authority to intervene."
+    },
+    {
+      "id": "q5",
+      "question": "As exercise intensity increases from an easy jog toward a full sprint, what happens to the body's relative reliance on fat vs. carbohydrate as fuel?",
+      "choices": [
+        "Reliance shifts increasingly toward carbohydrate past the crossover point, because carbohydrate metabolism can supply ATP fast enough for the higher work rate that fat oxidation can't match",
+        "Fat oxidation increasingly dominates as intensity rises",
+        "The fat-to-carbohydrate ratio stays completely fixed regardless of intensity",
+        "Protein becomes the primary fuel source once intensity is high enough"
+      ],
+      "answerIndex": 0,
+      "explanation": "Past the crossover point, carbohydrate metabolism can generate ATP fast enough to match the higher energy demand of harder efforts, while fat oxidation is comparatively slow and can't keep pace — so the fuel mix shifts toward carbohydrate as intensity climbs, even though fat is never used at zero."
+    },
+    {
+      "id": "q6",
+      "question": "A lineman eats almost no protein at breakfast or lunch, then eats a large steak at dinner to 'hit his numbers' for the day. What's the issue with this pattern compared to spreading protein across meals?",
+      "choices": [
+        "There's no issue — only the total daily gram amount matters, and timing within the day is irrelevant",
+        "Concentrating almost all protein into one meal likely misses the leucine threshold needed to trigger muscle protein synthesis at the other meals, even if the daily total looks adequate on paper",
+        "Steak is an unsafe protein source for athletes and should be avoided at any meal",
+        "Muscle protein synthesis can only be triggered at night, so breakfast and lunch protein don't matter"
+      ],
+      "answerIndex": 1,
+      "explanation": "Muscle protein synthesis needs a high-enough dose of protein, with enough leucine, at a given meal to actually switch it on. A meal with little or no protein wastes that opportunity even if the day's grand total is fine — spreading adequate protein across several meals stimulates MPS more consistently across the day."
+    },
+    {
+      "id": "q7",
+      "question": "What role can antidiuretic hormone (ADH) play in some cases of exercise-associated hyponatremia?",
+      "choices": [
+        "ADH is completely shut off during exercise, so excess water is always expelled quickly, preventing hyponatremia",
+        "ADH increases sodium excretion directly, which by itself causes hyponatremia",
+        "ADH has no established role in exercise-associated hyponatremia — it is caused purely by sweat sodium losses",
+        "ADH (vasopressin) can remain elevated during prolonged exercise despite fluid overload, impairing the kidneys' ability to excrete excess water and worsening the dilution of blood sodium"
+      ],
+      "answerIndex": 3,
+      "explanation": "Normally, a fluid-overloaded body suppresses ADH so the kidneys can dump the excess water. In some cases of exercise-associated hyponatremia, exercise itself keeps ADH elevated despite the overload, so the kidneys hold onto water instead of excreting it — worsening the dilution beyond what overdrinking alone would cause."
+    },
+    {
+      "id": "q8",
+      "question": "For a 4-hour ultra-endurance event, what does current evidence-based guidance favor for fluid intake, and why?",
+      "choices": [
+        "Fixed, high-volume programmed drinking at every aid station regardless of thirst, since more fluid is always safer over long durations",
+        "Restricting fluid entirely until the finish line to avoid any dilution risk",
+        "Drinking to thirst, adjusted for an athlete's known individual sweat and sodium losses, since rigid high-volume programmed drinking has been linked to hyponatremia in long events",
+        "Drinking as much as is physically tolerable throughout, since maximizing intake minimizes dehydration risk"
+      ],
+      "answerIndex": 2,
+      "explanation": "Rigid programmed drinking at every station can push intake well past what the body actually needs and has been linked to hyponatremia cases in long events. Current guidance favors drinking to thirst, adjusted for what an athlete already knows about their own sweat and sodium losses, even in ultra-endurance settings."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Crossover concept",
+      "back": "As exercise intensity rises past a certain point, the body's fuel mix shifts from mostly fat to mostly carbohydrate, because carbohydrate metabolism supplies ATP fast enough for harder efforts and fat oxidation can't keep up."
+    },
+    {
+      "id": "f2",
+      "front": "\"Hitting the wall\" / bonking",
+      "back": "The sharp drop in pace or performance when muscle and liver glycogen stores run critically low during prolonged exercise — the body can't sustain intensity on fat oxidation alone."
+    },
+    {
+      "id": "f3",
+      "front": "Leucine trigger",
+      "back": "Leucine, an amino acid in protein, must be present in high-enough amounts at a meal to switch on muscle protein synthesis (MPS) — a small amount of protein at one meal may not trigger it, no matter how much a later meal contains."
+    },
+    {
+      "id": "f4",
+      "front": "Why protein distribution matters",
+      "back": "Spreading adequate protein across 4-5 meals/snacks a day triggers muscle protein synthesis more times across the day than concentrating it into one large evening meal, even if the daily total is the same."
+    },
+    {
+      "id": "f5",
+      "front": "Realistic athlete protein target",
+      "back": "Roughly 1.2-2.0 g of protein per kg of body weight per day for athletes in regular training — achievable through food (chicken, eggs, dairy, beans, fish) without needing powders."
+    },
+    {
+      "id": "f6",
+      "front": "How to measure your own sweat rate",
+      "back": "Weigh in with minimal/same clothing before and after a standardized practice: sweat rate per hour = (pre-weight minus post-weight, as volume, plus fluid drunk during, minus urine output), divided by practice hours."
+    },
+    {
+      "id": "f7",
+      "front": "Salty sweaters",
+      "back": "Athletes with higher sweat sodium concentration (visible white residue or salt crusting on skin/clothes) lose more sodium per liter of sweat and may need sodium replacement beyond a standard sports drink."
+    },
+    {
+      "id": "f8",
+      "front": "Hyponatremia mechanism, in full",
+      "back": "Dilutional: total body water rises faster than sodium is added or retained. In some cases, exercise keeps ADH (vasopressin) elevated despite fluid overload, so the kidneys don't excrete the excess water — worsening the dilution beyond overdrinking alone."
+    },
+    {
+      "id": "f9",
+      "front": "When does carbo-loading actually help?",
+      "back": "Mainly for continuous events lasting roughly 90+ minutes that meaningfully deplete glycogen (distance running, soccer, cycling) — not needed for short games or matches."
+    },
+    {
+      "id": "f10",
+      "front": "NSF Certified for Sport / Informed-Sport",
+      "back": "Independent testing programs that verify a supplement's actual contents match the label and screen for contaminants/banned substances — the minimum bar before a tested athlete considers a product, since supplements aren't pre-approved by the FDA for safety or effectiveness."
+    },
+    {
+      "id": "f11",
+      "front": "Creatine's evidence tier",
+      "back": "The most-studied sports supplement, with strong evidence for improving high-intensity, repeated-effort performance and a strong safety record in studied populations — an exception in a market where most products lack meaningful evidence. Follow a physician/AT's guidance on appropriate use."
+    },
+    {
+      "id": "f12",
+      "front": "RED-S (Relative Energy Deficiency in Sport)",
+      "back": "A chronic mismatch between energy intake and the energy cost of training that disrupts hormones, bone density, immune function, and performance — can affect any athlete regardless of body size or sport, not just weight-class or aesthetic sports."
+    }
+  ]
+}
