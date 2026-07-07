@@ -1,0 +1,229 @@
+{
+  "id": "eye-injuries-ms",
+  "title": "Eye Injuries: Spot It, Don't Touch It, Get Help",
+  "category": "Head & Spine Injuries",
+  "strand": "eye-injuries",
+  "gradeBand": "7-8",
+  "summary": "Learn how to notice a serious eye injury during a game or practice and why you should never touch, rub, or press on it yourself.",
+  "minutes": 10,
+  "sections": [
+    {
+      "heading": "Why eyes need special care",
+      "body": [
+        "A ball, elbow, or finger to the eye can happen fast during basketball, baseball, soccer, or almost any sport. Most of the time it's just a bump that hurts for a minute and then feels fine.",
+        "But sometimes a hit to the eye is a real emergency. Your eye is soft and delicate, and the wrong move — like rubbing it or pressing on it — can make an injury much worse, even if you're trying to help. Your job is not to fix an eye injury. Your job is to notice it and get an adult right away."
+      ]
+    },
+    {
+      "heading": "Signs something is seriously wrong",
+      "body": [
+        "After a hit near the eye, ask the athlete these questions and look at the eye. Any one of these means it's serious:"
+      ],
+      "list": [
+        "Vision looks blurry, doubled, or is missing in that eye",
+        "The eye hurts a lot and the pain isn't going away",
+        "The athlete can't open the eye normally, or the eyelid is cut",
+        "The eye looks different from the other eye — swollen, sunken in, or an odd shape",
+        "You can see blood in the white part of the eye",
+        "Something is stuck in or sticking out of the eye"
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "See any of these signs? Stop and get an adult now",
+        "text": "Do not wait to see if it gets better on its own. Any change in vision, an eye that looks different from the other one, blood in the eye, or something stuck in the eye means the athlete needs to see a doctor right away."
+      }
+    },
+    {
+      "heading": "What to do right away",
+      "body": [
+        "Get a coach, athletic trainer, or other trusted adult immediately — this is not something a student should handle alone.",
+        "While waiting for the adult, keep the athlete calm and sitting or lying still. Do not let them keep playing."
+      ],
+      "list": [
+        "Never rub the eye",
+        "Never press on the eye",
+        "Never try to pull out or remove anything stuck in the eye",
+        "Never try to force the eyelid open if it won't open"
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Never touch an injured eye",
+        "text": "Rubbing, pressing, or poking at an injured eye — even gently — can make the damage much worse. If something is stuck in the eye, leave it exactly where it is and get an adult."
+      }
+    },
+    {
+      "heading": "When it's just something minor",
+      "body": [
+        "Sometimes dust, an eyelash, or a bit of dirt blows into the eye and it just feels scratchy or waters a little. There was no hit, and vision is normal.",
+        "In that case, blinking a lot can help tears wash it out on their own. An adult can also gently rinse the eye with clean water. If it still feels scratchy after that, or if it starts to hurt more, tell an adult — it's time for a doctor to look at it, not to keep trying to fix it yourself."
+      ]
+    },
+    {
+      "heading": "Prevention: wear the right eyewear",
+      "body": [
+        "The best way to deal with a serious eye injury is to never get one. Sports like racquetball, hockey, and lacrosse require athletes to wear protective eyewear made for that sport, and for good reason — a ball or stick can hit the eye faster than you can blink away.",
+        "Regular glasses or sunglasses are not the same thing. Sports eyewear is built to not shatter and to keep objects away from your eye. If your sport has protective eyewear, wear it every time, not just when you remember."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A teammate gets hit in the eye with an elbow during a rebound. What is your job?",
+      "choices": [
+        "Try to fix the eye yourself so play can continue",
+        "Tell them to blink it off and keep playing",
+        "Wait a few minutes to see if it gets better before doing anything",
+        "Notice something is wrong and get an adult right away"
+      ],
+      "answerIndex": 3,
+      "explanation": "A middle school athlete's job is to recognize a possible eye injury and get a trusted adult immediately — not to treat it or decide if it's serious enough on their own."
+    },
+    {
+      "id": "q2",
+      "question": "Which of these is a sign that an eye injury is serious?",
+      "choices": [
+        "The athlete blinks a couple of times after the hit",
+        "Vision in that eye is blurry or missing",
+        "The eye waters a little",
+        "The athlete says the hit surprised them"
+      ],
+      "answerIndex": 1,
+      "explanation": "A vision change like blurriness or loss of sight in the injured eye is a red-flag sign of a serious injury. Blinking or a little watering right after a bump is common and not, by itself, a warning sign."
+    },
+    {
+      "id": "q3",
+      "question": "An athlete's eye looks swollen and shaped differently than their other eye after getting hit with a ball. What should you do?",
+      "choices": [
+        "Press on it gently to check how bad it is",
+        "Ignore it since there's no blood",
+        "Get an adult immediately",
+        "Tell the athlete to rub it to make it feel normal again"
+      ],
+      "answerIndex": 2,
+      "explanation": "An eye that looks different from the other eye is a warning sign even without visible blood. Get an adult right away — never press on or rub an injured eye."
+    },
+    {
+      "id": "q4",
+      "question": "Why should you never rub or press on an eye after it's been hit?",
+      "choices": [
+        "It could make the injury much worse",
+        "It will smear the athlete's eye makeup",
+        "It's against the rules of most sports",
+        "It has no effect either way, so it doesn't matter"
+      ],
+      "answerIndex": 0,
+      "explanation": "Even gentle rubbing or pressure on an injured eye can make the damage worse. This is why hands-off is the rule until a trained adult or doctor takes over."
+    },
+    {
+      "id": "q5",
+      "question": "Something is sticking out of an athlete's eye after a fall. What should you do?",
+      "choices": [
+        "Leave it alone and get an adult immediately",
+        "Carefully pull it out so it stops moving around",
+        "Wipe it with a towel",
+        "Tape it down tightly with gauze"
+      ],
+      "answerIndex": 0,
+      "explanation": "Never touch or try to remove anything stuck in an eye — leave it exactly where it is and get an adult or emergency help right away. Pulling it out yourself can cause serious damage."
+    },
+    {
+      "id": "q6",
+      "question": "A little dirt blows into a soccer player's eye during a drill. There was no hit, and her vision is normal, but it feels scratchy. What is a reasonable first step?",
+      "choices": [
+        "Rub the eye firmly until the dirt comes out",
+        "Immediately call 911",
+        "Cover the eye with a rigid shield and tape",
+        "Have her blink and let an adult gently rinse the eye with clean water"
+      ],
+      "answerIndex": 3,
+      "explanation": "Loose dirt or dust without a hit or vision change is usually minor. Blinking and a gentle rinse with clean water can help — rubbing can scratch the eye and make it worse."
+    },
+    {
+      "id": "q7",
+      "question": "After rinsing, the scratchy feeling in an athlete's eye doesn't go away and starts to hurt more. What should happen next?",
+      "choices": [
+        "Keep rinsing on your own until it stops hurting",
+        "Have the athlete rub it to work the dirt loose",
+        "Tell an adult so the athlete can be seen by a doctor",
+        "Nothing — scratchy feelings always go away on their own"
+      ],
+      "answerIndex": 2,
+      "explanation": "If discomfort continues or gets worse after a simple rinse, it's time to involve an adult and get the athlete checked by a doctor — not to keep trying home remedies."
+    },
+    {
+      "id": "q8",
+      "question": "Why is wearing sport-specific protective eyewear a good habit in sports like hockey or racquetball?",
+      "choices": [
+        "It makes players look more professional",
+        "It's more comfortable than regular glasses",
+        "It's built to help keep fast-moving balls, sticks, or fingers away from the eye",
+        "It's only needed if a player has had an eye injury before"
+      ],
+      "answerIndex": 2,
+      "explanation": "Sport-specific eyewear is designed to protect the eye from fast-moving objects and impacts, unlike regular glasses or sunglasses. Wearing it every time, not just after an injury, is what prevents injuries in the first place."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Your job when a teammate's eye gets hit",
+      "back": "Notice something is wrong and get a trusted adult right away — don't try to treat it yourself."
+    },
+    {
+      "id": "f2",
+      "front": "Vision sign of a serious eye injury",
+      "back": "Blurry, doubled, or missing vision in the injured eye."
+    },
+    {
+      "id": "f3",
+      "front": "Eye that 'looks different' warning sign",
+      "back": "Swollen, sunken, or an odd shape compared to the other eye — get an adult even without blood."
+    },
+    {
+      "id": "f4",
+      "front": "Blood in the eye",
+      "back": "Blood visible in the white part of the eye is a warning sign — get an adult immediately."
+    },
+    {
+      "id": "f5",
+      "front": "Something stuck in the eye",
+      "back": "Never touch or try to remove it. Leave it exactly where it is and get an adult right away."
+    },
+    {
+      "id": "f6",
+      "front": "Never do this to an injured eye",
+      "back": "Never rub it, never press on it, never try to force it open, never remove an object from it."
+    },
+    {
+      "id": "f7",
+      "front": "Eyelid won't open after a hit",
+      "back": "A warning sign — do not force it open. Get an adult right away."
+    },
+    {
+      "id": "f8",
+      "front": "Safe step for dust or an eyelash in the eye (no hit, no vision change)",
+      "back": "Blink to let tears wash it out, or have an adult gently rinse with clean water. Never rub it."
+    },
+    {
+      "id": "f9",
+      "front": "When minor eye irritation needs a doctor",
+      "back": "If it still hurts or feels scratchy after blinking and rinsing, tell an adult — it needs to be checked."
+    },
+    {
+      "id": "f10",
+      "front": "Why rubbing an injured eye is dangerous",
+      "back": "Even gentle rubbing or pressure can make an eye injury much worse."
+    },
+    {
+      "id": "f11",
+      "front": "Protective eyewear",
+      "back": "Sport-specific eyewear built to keep balls, sticks, and fingers away from the eye — not the same as regular glasses or sunglasses."
+    },
+    {
+      "id": "f12",
+      "front": "Best way to handle a serious eye injury",
+      "back": "Prevent it — wear the protective eyewear required for your sport every single time."
+    }
+  ]
+}
