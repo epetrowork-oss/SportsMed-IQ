@@ -95,6 +95,64 @@ credits beyond review.* Good candidates to round out a semester:
 - [x] Hydration quiz fluid-replacement range fixed (64-96 → 80-96 oz,
       caught by automated PR review)
 
+### 6. The 6-year program: spiral curriculum expansion (in progress)
+
+**Direction** (user decision, 2026-07-07): SportMedIQ becomes a 7th-12th
+grade program. Most topics ("strands") get up to three units — one per
+grade band (`7-8`, `9-10`, `11-12`) — each going deeper than the last,
+rather than one flat difficulty level. See `src/content/README.md` →
+"Grade bands" for the depth/tone contract each band must follow, and
+`.claude/agents/unit-author.md`, which now reads sibling-band units before
+writing so depth genuinely increases.
+
+- [x] Foundation: `strand` + `gradeBand` fields added to the schema,
+      validator enforces both (valid band enum, no duplicate strand+band
+      pairs). All 13 existing units retrofitted as the `9-10` middle rung.
+      Home page grade filter (All / 7-8 / 9-10 / 11-12) shipped, persisted,
+      browser-verified.
+
+**Strand × band matrix** — 15 strands total (13 original + `shoulder-injuries`
++ `cold-exposure`, both authored straight at `9-10`, no MS/advanced yet).
+`x` = exists, blank = queued, `9-10` is the only band with full coverage today.
+
+| Strand | 7-8 | 9-10 | 11-12 |
+|---|---|---|---|
+| ankle-sprain | wave 1 | x | |
+| concussion | wave 1 | x | |
+| heat-illness | wave 1 | x | |
+| wound-care | wave 1 | x | |
+| emergency-action-plan | wave 1 | x | |
+| knee-acl | | x | |
+| cold-exposure | | x | |
+| muscle-strains | | x | |
+| overuse-injuries | | x | |
+| shoulder-injuries | | x | |
+| fractures-dislocations | | x | |
+| taping-wrapping | | x | |
+| hydration-nutrition | | x | |
+
+"wave 1" = in flight now (5 units: the highest-priority safety-critical
+strands' `7-8` versions — concussion, heat illness, wound care, EAP/CPR-AED,
+ankle sprain — chosen because they're the most common/serious risks a
+middle schooler around sports would actually encounter).
+
+**Remaining waves** (not yet started, rough order of value):
+- [ ] Wave 2 — `7-8` versions of the rest: knee-acl, muscle-strains,
+      overuse-injuries, cold-exposure, fractures-dislocations,
+      taping-wrapping, hydration-nutrition, shoulder-injuries (8 units)
+- [ ] Wave 3 — `11-12` versions of the 5 wave-1 strands (deeper:
+      mechanism/anatomy, grading systems, differential/decision quizzes)
+- [ ] Wave 4 — `11-12` versions of the remaining 8 strands
+- [ ] New strands not yet covered at any band, worth considering for a full
+      6-year program: eye injuries, dental/facial trauma, blisters & skin
+      issues, mental health/return-to-play psychology, nutrition for growing
+      athletes (distinct from the existing general hydration-nutrition unit),
+      strength & conditioning basics, injury prevention/warm-up science
+- [ ] Once 7-8 and 11-12 both have real coverage, revisit the Home page:
+      consider a "these grades already have this strand" cross-link on unit
+      cards (today the filter just shows/hides; no linking between a
+      strand's grade-band versions yet)
+
 ## Out of scope (intentional, unchanged)
 
 Accounts/auth, live server-based sync, assigning content.
