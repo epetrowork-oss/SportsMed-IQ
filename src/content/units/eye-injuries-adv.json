@@ -1,0 +1,240 @@
+{
+  "id": "eye-injuries-adv",
+  "title": "Eye Injuries: Classification, Differentials, and Urgent Referral",
+  "category": "Head & Spine Injuries",
+  "strand": "eye-injuries",
+  "gradeBand": "11-12",
+  "summary": "Go beyond shield-don't-patch: classify trauma by mechanism, tell a benign red eye from a hyphema, catch orbital fracture entrapment and retinal detachment red flags, and run a chemical-exposure protocol correctly.",
+  "minutes": 25,
+  "sections": [
+    {
+      "heading": "Why mechanism changes everything",
+      "body": [
+        "You already know the core sideline rules for eye trauma: shield, don't patch; never press on the globe; never pull an embedded object; recognize the red flags that mean 'go now, not later.' At this level, the useful next question is why those rules exist for some injuries and not others — and that comes down to classifying the mechanism before you decide what to do.",
+        "Ocular trauma is generally sorted into three families: blunt (a compressive force that doesn't break the skin — a ball, elbow, or fist), penetrating or open-globe (something breaches the wall of the eye — a fingernail gouge, a shard, a projectile), and chemical (a substance actively damaging tissue on contact). Each family has a genuinely different first-aid priority. Blunt trauma's danger is often what you can't see — bleeding or fracture inside an intact-looking eye. Penetrating trauma's danger is mechanical — anything that touches or presses the wound makes it worse. Chemical trauma's danger is ongoing — the injury keeps getting worse for as long as the substance stays in contact with tissue, which is the one scenario where treatment starts before you've even finished gathering history."
+      ]
+    },
+    {
+      "heading": "Hyphema: what's actually happening, and why it's not 'just bleeding'",
+      "body": [
+        "You already know a hyphema is blood pooling in front of the iris. The anterior chamber — the fluid-filled space between the cornea and the iris — normally holds only clear aqueous humor; blunt trauma tears small vessels at the iris root or ciliary body, and that blood settles into the chamber, sometimes visible as a distinct fluid level (a layer of blood you can see settle to the bottom, like sediment) if the athlete has been upright for a few minutes.",
+        "The reason a hyphema gets urgent ophthalmology referral rather than 'ice it and reassess' is re-bleeding risk. The original clot is fragile, and a re-bleed — typically in the first 3-5 days after injury — tends to be worse than the original bleed and carries much higher risk of complications, including a dangerous spike in eye pressure that can damage the optic nerve. That is the entire rationale for the activity restrictions that follow a hyphema diagnosis: strict rest, the head kept elevated (even during sleep), no bending or straining, and no aspirin or NSAIDs (they impair clotting) — all aimed at protecting that fragile clot through the re-bleed window, not just managing pain."
+      ],
+      "list": [
+        "Grading is by how much of the anterior chamber fills with blood (roughly: a small layer at the bottom vs. up to total blackout of the chamber) — more fill generally means higher pressure and re-bleed risk, but any visible hyphema gets same-day ophthalmology evaluation regardless of grade.",
+        "This is a genuine sports medicine judgment call you should recognize, not make: an athlete with a hyphema does not return to play that day, full stop, even if vision seems fine and pain is minimal."
+      ]
+    },
+    {
+      "heading": "Orbital blowout fracture: the injury hiding inside 'just a black eye'",
+      "body": [
+        "A blunt object close to the size of the orbital opening — a fist, an elbow, a ball — can transmit force through the orbit's contents rather than the object being deflected by bone. That sudden pressure spike can fracture the thin bones of the orbital floor or medial wall (both are notably thinner than the sturdy orbital rim), while the rim itself often stays intact. This is why a blowout fracture can look, at first glance, like nothing worse than bruising and swelling around the eye — the obvious rim landmarks are unbroken, so it's easy to under-triage.",
+        "The finding that should make you suspect entrapment — muscle or surrounding tissue getting physically caught in the fracture line — is restricted, painful eye movement, classically double vision (diplopia) that appears or worsens specifically when the athlete looks up or down. That pattern points to the inferior rectus muscle (which moves the eye up and down) being caught in a floor fracture. Entrapment is a surgical urgency, not a 'follow up this week' finding, especially in younger athletes, whose more flexible bone can trap the muscle in a narrow 'trapdoor' fracture with less obvious bone displacement than an adult would show — meaning the fracture can look subtle on imaging while the entrapment itself is severe."
+      ],
+      "list": [
+        "Suspect blowout fracture, not just soft-tissue bruising, when you see: double vision on vertical gaze, numbness of the cheek or upper lip (the infraorbital nerve runs through the orbital floor and can be compressed), the eye sitting lower or more sunken than the other (enophthalmos), or pain with eye movement out of proportion to a simple contusion.",
+        "'Just a black eye' is a description of what the skin looks like, not a diagnosis — any orbital-area blunt trauma needs a real motion and symmetry check before you accept that framing."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Double vision on up/down gaze after orbital trauma",
+        "text": "This is a specific, teachable red flag for orbital floor fracture with possible muscle entrapment — a genuine surgical time-sensitivity, not a routine 'see a doctor this week' referral. Treat it with the same urgency as any other serious eye red flag: refer for immediate evaluation."
+      }
+    },
+    {
+      "heading": "Chemical exposure: the one injury where treatment starts before history",
+      "body": [
+        "For every other eye injury in this unit, you gather some information before acting. Chemical exposure is the exception: irrigation starts immediately, before you've finished asking what the substance was, because ongoing tissue contact is the injury and every second of delay lets it progress. Tilt the head so the injured eye is lower and to the side, hold the eyelids open (blinking alone won't clear a chemical the way it clears grit), and flush with the largest available supply of clean, low-pressure water — a hose, a squeeze bottle, an eyewash station if one is on hand. Sport-specific detail worth knowing: don't reach for eye drops, saline packets, or anything branded as 'eyewash' first if plain water is faster to get flowing — for a chemical burn, volume and speed of irrigation matter more than the fluid being sterile.",
+        "Alkali substances (many cleaning agents, cement, lime, some pool chemicals) generally cause worse injury than acids at a similar concentration, because alkalis dissolve fatty tissue and keep penetrating deeper into the eye as long as contact continues, while acids tend to coagulate the surface tissue they touch and that coagulated layer partly limits how much deeper the injury spreads. You don't need lab chemistry to use this — the practical takeaway is that any alkali exposure should be treated as a more urgent, not less urgent, chemical injury, and irrigation should run longer, not shorter.",
+        "Irrigate for a sustained period — commonly cited guidance is at least 15-20 minutes and often longer for a known alkali — checking periodically if you have litmus/pH strips available (a pH trending back toward neutral, roughly 7, is a sign irrigation is working). Every chemical eye exposure gets an ER or ophthalmology follow-up after irrigation, even one that looks and feels fine afterward, because surface symptoms can improve well before deeper tissue effects are known."
+      ]
+    },
+    {
+      "heading": "Retinal detachment: symptoms that mean same-day, not wait-and-see",
+      "body": [
+        "The retina is the light-sensing layer lining the back of the eye; blunt trauma (and, less obviously, repetitive smaller impacts over a season) can tear it or pull it loose from the tissue behind it. Unlike a hyphema or an obviously bruised orbit, a retinal detachment often produces no visible external sign at all — the eye can look completely normal while vision is quietly failing behind it, which is exactly why the symptom pattern below has to be treated as diagnostic on its own.",
+        "The classic triad: a sudden shower of flashes of light (photopsia, from the retina being mechanically tugged), a sudden increase in floaters (small dark specks or strands drifting in the visual field, from blood or debris in the vitreous), and a curtain or shadow spreading across part of the visual field, as if a shade were being pulled down from one side. Any one of these, appearing suddenly after trauma or even without a clear trauma trigger, is a same-day ophthalmology emergency — not something to monitor overnight and reassess at practice tomorrow. Detachment is a race against time because the detached retina is cut off from its blood and oxygen supply; delay directly costs vision that surgery may not be able to recover."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Flashes, new floaters, or a curtain over vision",
+        "text": "Treat any of these as a same-day ophthalmology emergency, regardless of how the rest of the eye exam looks. A completely normal-looking eye does not rule out a retinal detachment — the symptom pattern itself is the red flag."
+      }
+    },
+    {
+      "heading": "Differential: the red eye after trauma — alarming look vs. alarming injury",
+      "body": [
+        "Two very different findings can both show up as 'redness' after a hit to the face, and telling them apart is a core differential skill at this level.",
+        "Subconjunctival hemorrhage is a small blood vessel breaking under the conjunctiva (the clear membrane covering the white of the eye), producing a flat, bright-red patch on the sclera with a sharp border. It looks dramatic to an untrained observer, but it's superficial: painless or only mildly irritating, no effect on vision, no blood pooling in front of the iris, and it resolves on its own over one to two weeks, the same way a bruise fades. Hyphema, by contrast, is blood inside the anterior chamber itself — you're often looking at a visible fluid level in front of the iris/pupil rather than a flat red patch on the white, it's frequently associated with pain and light sensitivity, and it can blur or dim vision depending on how much of the chamber fills.",
+        "The fast field distinction: does the red area sit flat on the white of the eye with a normal-looking pupil and colored iris underneath (favors subconjunctival hemorrhage), or is there blood layered in front of the iris/pupil itself, with pain, light sensitivity, or vision change (favors hyphema)? When genuinely uncertain, or when there was significant trauma rather than something like a hard cough or sneeze, the safe default is always to treat it as the more serious finding and refer."
+      ]
+    },
+    {
+      "heading": "Return-to-play: the vision-change rule",
+      "body": [
+        "Across every mechanism in this unit — blunt, penetrating, chemical — one return-to-play principle stays constant: any new vision change after eye trauma means no same-day return, full stop, and physician clearance is required before the athlete goes back to any activity, not just contact activity. This holds even if the athlete insists they feel fine, even if the vision change seems to be improving, and even if there's no visible external injury at all.",
+        "The reasoning is the same pattern you've now seen across hyphema (re-bleed risk), entrapment (progressive muscle damage with continued eye movement), chemical injury (delayed deeper tissue effects), and retinal detachment (a ticking clock on blood supply) — the eye can look and feel deceptively okay while a process that only gets worse with continued activity is still unfolding. 'Recognize, protect, refer' scales up at this level into 'recognize which failure mode you're protecting against, and match the urgency to it' — but the underlying discipline of not making an independent return-to-play call is unchanged from what you learned before."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Why does chemical eye exposure get a different first-aid sequence than blunt or penetrating trauma — irrigation starting before history-taking is even finished?",
+      "choices": [
+        "Ongoing tissue contact with the chemical is itself the injury, so every second of delay lets damage progress further",
+        "Chemical exposures are actually less serious, so speed doesn't matter for other injuries",
+        "Water is always the first tool for any eye injury, regardless of mechanism",
+        "History-taking is not useful information for chemical exposures"
+      ],
+      "answerIndex": 0,
+      "explanation": "Chemical injury is unique because the damage is active and ongoing as long as the substance stays in contact with tissue — that's why irrigation preempts history-taking instead of following it, unlike blunt or penetrating trauma where the injury is already done by the time you arrive."
+    },
+    {
+      "id": "q2",
+      "question": "An athlete has a confirmed hyphema after a finger to the eye. Vision is only mildly blurred and pain is minimal. What is the correct return-to-play decision for that day?",
+      "choices": [
+        "Cleared to return since vision and pain are both mild",
+        "No same-day return regardless of how mild symptoms seem, due to re-bleed risk in the days following injury",
+        "Cleared to return only for non-contact drills",
+        "Return decision is based on a coach's judgment of how the athlete looks"
+      ],
+      "answerIndex": 1,
+      "explanation": "Hyphema carries a meaningful re-bleed risk in the days after injury, and a re-bleed is often worse than the original bleed. That risk exists independent of how mild the athlete's current symptoms are, so no same-day return, regardless of presentation."
+    },
+    {
+      "id": "q3",
+      "question": "A basketball player takes an elbow near the eye. Swelling and bruising look moderate, but when asked to look up, she reports sudden double vision that wasn't present looking straight ahead. What does this specific pattern most concern you for?",
+      "choices": [
+        "A normal soft-tissue contusion that will resolve with ice",
+        "A subconjunctival hemorrhage",
+        "Simple eye fatigue from the impact",
+        "An orbital blowout fracture with possible muscle entrapment"
+      ],
+      "answerIndex": 3,
+      "explanation": "Double vision that appears specifically on vertical gaze after blunt periorbital trauma is the classic sign of orbital floor fracture with entrapment of the inferior rectus muscle — a surgical urgency that can hide behind ordinary-looking bruising and swelling."
+    },
+    {
+      "id": "q4",
+      "question": "Why are alkali chemical burns to the eye generally considered more dangerous than acid burns at a similar exposure?",
+      "choices": [
+        "Alkalis are always more concentrated than acids in sports settings",
+        "Acids don't require irrigation, so they resolve on their own",
+        "Alkalis dissolve fatty tissue and keep penetrating deeper as long as contact continues, while acids tend to coagulate surface tissue and partly self-limit",
+        "Alkali burns never require an ER follow-up"
+      ],
+      "answerIndex": 2,
+      "explanation": "Alkalis liquefy fatty tissue and keep advancing into deeper layers, while acid burns tend to coagulate the tissue they first contact, which somewhat limits further penetration. The practical takeaway is that a known or suspected alkali exposure should be irrigated longer and treated with more urgency."
+    },
+    {
+      "id": "q5",
+      "question": "An athlete reports a sudden shower of flashing lights and a curtain shadow spreading across part of her vision after being struck near the eye. The eye itself looks completely normal — no redness, no visible bruising. What should happen?",
+      "choices": [
+        "Same-day ophthalmology evaluation — this symptom pattern is diagnostic for possible retinal detachment regardless of external appearance",
+        "Nothing urgent — a normal-looking eye rules out a serious injury",
+        "Ice and monitor overnight, reassess at tomorrow's practice",
+        "Only refer if the flashes and curtain persist for more than a week"
+      ],
+      "answerIndex": 0,
+      "explanation": "Flashes, new floaters, and a curtain/shadow over vision are the classic retinal detachment triad. A normal-looking external eye does not rule this out — the retina is at the back of the eye and its detachment produces no visible external sign, so the symptom pattern itself demands same-day evaluation."
+    },
+    {
+      "id": "q6",
+      "question": "Two athletes both have a red patch on the white of the eye after separate incidents. Athlete A's redness is a flat, sharply-bordered patch with normal vision and only mild irritation. Athlete B has visible blood layered in front of the iris, pain, and light sensitivity. How should you differentiate these?",
+      "choices": [
+        "Both should be treated identically since any red eye after trauma is equally urgent",
+        "Athlete A's finding is more dangerous because it's more visually dramatic",
+        "Neither finding requires any follow-up since both athletes can still see",
+        "Athlete A likely has a subconjunctival hemorrhage (benign, self-resolving); Athlete B likely has a hyphema (serious, needs urgent referral)"
+      ],
+      "answerIndex": 3,
+      "explanation": "Subconjunctival hemorrhage is a superficial, flat, sharply-bordered bleed under the conjunctiva that looks alarming but is benign and self-resolving. Hyphema is blood pooling in front of the iris inside the anterior chamber, associated with pain, light sensitivity, and possible vision change — it requires urgent referral. Appearance alone (how dramatic the redness looks) is not a reliable way to tell them apart; location and associated symptoms are."
+    },
+    {
+      "id": "q7",
+      "question": "Why is 'it's just a black eye' considered a risky framing for periorbital blunt trauma at this level?",
+      "choices": [
+        "Black eyes are always a sign of a fracture",
+        "It describes the visible skin appearance, not a diagnosis, and can mask an orbital blowout fracture that has no obvious rim deformity",
+        "Black eyes require immediate surgery in every case",
+        "It means the athlete should be immediately disqualified from the season"
+      ],
+      "answerIndex": 1,
+      "explanation": "A blowout fracture typically involves the thin orbital floor or medial wall, not the sturdy rim — so the visible bruising ('black eye') can look like simple soft-tissue trauma while a fracture with possible entrapment hides underneath. The description of skin appearance doesn't substitute for checking eye movement, sensation, and symmetry."
+    },
+    {
+      "id": "q8",
+      "question": "An athlete with a chemical splash to the eye says it feels fine after five minutes of flushing and wants to keep practicing. What is the correct next step?",
+      "choices": [
+        "Allow return to practice since symptoms have resolved",
+        "Stop irrigating once discomfort resolves, since further flushing has no benefit",
+        "Continue irrigation for a sustained period (commonly at least 15-20 minutes, longer for a suspected alkali) and still arrange an ER/ophthalmology follow-up regardless of how the eye feels afterward",
+        "Skip irrigation and go straight to the emergency room"
+      ],
+      "answerIndex": 2,
+      "explanation": "Chemical injury severity is not reliably judged by how quickly surface discomfort improves — deeper tissue effects, especially with an alkali, can still be progressing. Irrigation should continue for a sustained duration, and every chemical eye exposure needs a follow-up evaluation even when it looks and feels resolved."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Three families of ocular trauma mechanism",
+      "back": "Blunt (compressive, no break in the eye wall), penetrating/open-globe (the eye wall is breached), and chemical (ongoing tissue damage from a substance) — each changes the first-aid priority."
+    },
+    {
+      "id": "f2",
+      "front": "Hyphema — what it is and why it's urgent",
+      "back": "Blood pooling in the anterior chamber (between cornea and iris) from torn vessels at the iris root/ciliary body. Urgent because of re-bleed risk, typically in the first 3-5 days, which is often worse than the original bleed."
+    },
+    {
+      "id": "f3",
+      "front": "Hyphema activity restrictions — why",
+      "back": "Strict rest, head elevated, no bending/straining, no aspirin/NSAIDs — all aimed at protecting the fragile clot through the re-bleed window, not just managing pain."
+    },
+    {
+      "id": "f4",
+      "front": "Orbital blowout fracture — mechanism",
+      "back": "A blunt object near the size of the orbital opening (fist, elbow, ball) transmits force through the orbit, fracturing the thin floor or medial wall while the sturdy rim often stays intact."
+    },
+    {
+      "id": "f5",
+      "front": "Entrapment red flag",
+      "back": "Double vision (diplopia) on looking up or down after orbital trauma — suggests the inferior rectus muscle is caught in a floor fracture. A surgical urgency, especially in younger athletes' more flexible bone ('trapdoor' fracture)."
+    },
+    {
+      "id": "f6",
+      "front": "Chemical exposure protocol priority",
+      "back": "Irrigate immediately with copious clean water, before finishing history-taking — ongoing contact is the injury itself. Hold eyelids open; don't wait for sterile saline if plain water flows faster."
+    },
+    {
+      "id": "f7",
+      "front": "Alkali vs. acid eye burns",
+      "back": "Alkalis dissolve fatty tissue and keep penetrating deeper as contact continues (worse); acids tend to coagulate surface tissue, partly self-limiting depth. Treat alkali exposures as more urgent — irrigate longer."
+    },
+    {
+      "id": "f8",
+      "front": "Chemical irrigation duration",
+      "back": "At least 15-20 minutes, longer for a known/suspected alkali. Every chemical eye exposure still needs an ER/ophthalmology follow-up, even if it looks and feels fine afterward."
+    },
+    {
+      "id": "f9",
+      "front": "Retinal detachment symptom triad",
+      "back": "Sudden flashes of light (photopsia), a sudden increase in floaters, and a curtain/shadow spreading across part of the visual field — same-day ophthalmology emergency, even with a normal-looking eye."
+    },
+    {
+      "id": "f10",
+      "front": "Subconjunctival hemorrhage vs. hyphema",
+      "back": "Subconjunctival hemorrhage: flat, sharp-bordered red patch on the sclera, painless, normal vision, self-resolves in 1-2 weeks. Hyphema: blood layered in front of the iris/pupil, often painful, light-sensitive, can blur vision — urgent referral."
+    },
+    {
+      "id": "f11",
+      "front": "Vision-change return-to-play rule",
+      "back": "Any new vision change after eye trauma (any mechanism) means no same-day return and physician clearance required before any activity — even if the athlete feels fine or symptoms seem to be improving."
+    },
+    {
+      "id": "f12",
+      "front": "'Just a black eye' — the risk of that framing",
+      "back": "Describes skin appearance only, not a diagnosis. A blowout fracture involving the thin orbital floor/wall can hide behind ordinary-looking bruising because the rim itself often stays intact — always check eye movement and sensation."
+    }
+  ]
+}
