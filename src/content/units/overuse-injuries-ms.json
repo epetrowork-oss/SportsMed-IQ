@@ -1,0 +1,236 @@
+{
+  "id": "overuse-injuries-ms",
+  "title": "When Pain Builds Up Over Time",
+  "category": "Muscle & Soft Tissue",
+  "strand": "overuse-injuries",
+  "gradeBand": "7-8",
+  "summary": "Not every injury comes from one big hit — pain that slowly builds up over practices and games is a real injury too, and it's a sign to tell a trusted adult.",
+  "minutes": 10,
+  "sections": [
+    {
+      "heading": "Two kinds of injuries",
+      "body": [
+        "Some injuries happen in one moment — you land wrong, you get hit, you feel a sudden pop. Those are easy to notice because you can point to exactly when it happened.",
+        "Other injuries build up slowly. This is called an overuse injury — pain caused by doing the same motion over and over (running, jumping, throwing) without enough time to rest and recover in between. There's no single moment you can point to. It just gets a little worse, practice after practice."
+      ]
+    },
+    {
+      "heading": "What it can look like",
+      "body": [
+        "Overuse pain shows up in the parts of the body that do the most repeating work in your sport. A few common ones:"
+      ],
+      "list": [
+        "Shin pain in runners and basketball or soccer players — an ache along the front or inside of the lower leg.",
+        "Heel pain in athletes who run and jump a lot, especially during a growth spurt.",
+        "Knee pain right below the kneecap, common in jumping sports.",
+        "Elbow or shoulder soreness in pitchers and other throwing athletes."
+      ]
+    },
+    {
+      "heading": "Why this matters more while you're growing",
+      "body": [
+        "Middle school athletes are still growing — bones, muscles, and tendons are changing fast, and they don't always keep up with each other. That can make growing bodies more likely to get sore from repeated activity, especially if you play the same sport year-round with no breaks.",
+        "This does NOT mean sports are bad for you. It means pain that keeps building up is worth paying attention to instead of ignoring."
+      ]
+    },
+    {
+      "heading": "Recognize it: signs this isn't normal soreness",
+      "body": [
+        "Feeling a little tired or sore after a hard practice is normal — it usually fades by the next day. Overuse pain is different because it doesn't just go away. Watch for:"
+      ],
+      "list": [
+        "Pain that shows up again every practice, in the same spot.",
+        "Pain that gets a little worse over days or weeks instead of better.",
+        "Pain that changes how you move — limping, favoring an arm, avoiding a jump.",
+        "Pain that's still there even after resting for a day or two."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Tell an adult right away if...",
+        "text": "You are limping, the pain wakes you up at night, the pain is there even when you're just sitting or walking around, or the same spot has hurt for more than a few days. These are signs to speak up immediately — don't wait to see if it goes away on its own."
+      }
+    },
+    {
+      "heading": "What to do about it",
+      "body": [
+        "Your job is not to diagnose the injury or decide if it's serious — that's an adult's job. Your job is to notice the pattern and speak up before it gets worse.",
+        "Tell your coach, athletic trainer, or parent as soon as you notice pain that keeps coming back. Say exactly where it hurts and when — for example, 'my shin has hurt every practice for the last week.' Don't just play through it hoping it disappears, and don't hide it because you're afraid of missing a game. Hiding overuse pain is how a small problem turns into a much bigger one."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Speaking up isn't weakness",
+        "text": "Telling an adult about pain doesn't mean you're being soft or letting your team down. Athletes who speak up early usually miss less time than athletes who push through pain and end up with a bigger injury."
+      }
+    },
+    {
+      "heading": "Lowering your risk",
+      "list": [
+        "Warm up before practices and games instead of jumping straight into hard activity.",
+        "Take rest days during the week — your body repairs itself during rest, not just during activity.",
+        "Try more than one sport or activity across the year instead of doing the exact same motions year-round.",
+        "Wear shoes and gear that fit and aren't worn out.",
+        "Treat pain like information: pain that fades by the next day is normal training; pain that keeps coming back and getting worse is a signal to tell someone."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is an overuse injury?",
+      "choices": [
+        "An injury from one big hit or fall",
+        "Pain that builds up slowly from doing the same motion over and over without enough rest",
+        "An injury that only happens to adults",
+        "A broken bone from a car accident"
+      ],
+      "answerIndex": 1,
+      "explanation": "Overuse injuries build up gradually from repeated motion outpacing rest and recovery — there's no single moment it happened, unlike a sudden injury like a fall or collision."
+    },
+    {
+      "id": "q2",
+      "question": "Which of these is an example of pain that might come from overuse, not a sudden injury?",
+      "choices": [
+        "Twisting your ankle badly on a landing and hearing a pop",
+        "Shin pain that shows up every practice and slowly gets worse over two weeks",
+        "Getting hit hard by another player and feeling immediate pain",
+        "Spraining your wrist falling on an outstretched hand"
+      ],
+      "answerIndex": 1,
+      "explanation": "Overuse pain builds up gradually across many practices. The other choices all describe a single, specific moment of injury, which is how sudden (acute) injuries are recognized."
+    },
+    {
+      "id": "q3",
+      "question": "Why might middle school athletes be more likely to get overuse pain?",
+      "choices": [
+        "Because middle schoolers never get injured",
+        "Because their bodies are still growing and changing fast, and don't always keep up with heavy repeated activity",
+        "Because they run slower than high schoolers",
+        "Because overuse pain only happens after age 18"
+      ],
+      "answerIndex": 1,
+      "explanation": "Growing bones, muscles, and tendons are still developing and can be more sensitive to repeated stress, especially with year-round single-sport play and no rest days."
+    },
+    {
+      "id": "q4",
+      "question": "Which is a warning sign that pain is more than normal soreness?",
+      "choices": [
+        "Feeling a little tired the evening after a hard practice",
+        "Mild muscle soreness that's gone by the next morning",
+        "The same spot hurting every practice and slowly getting worse over weeks",
+        "Feeling thirsty after running"
+      ],
+      "answerIndex": 2,
+      "explanation": "Normal soreness fades within a day. Pain that repeats in the same spot and keeps getting worse over time is the pattern of an overuse injury, not ordinary tiredness."
+    },
+    {
+      "id": "q5",
+      "question": "Your teammate says her heel has hurt during every practice for the past week, especially when jumping. What should you tell her to do?",
+      "choices": [
+        "Ignore it — heel pain always goes away on its own",
+        "Tape it herself and keep playing without telling anyone",
+        "Tell a coach, athletic trainer, or parent about the pain",
+        "Just switch to running instead of jumping and say nothing"
+      ],
+      "answerIndex": 2,
+      "explanation": "Pain that keeps returning in the same spot over multiple practices should be reported to a trusted adult. A middle schooler's job is to recognize and report the pattern, not to treat it or decide it's fine on their own."
+    },
+    {
+      "id": "q6",
+      "question": "Which of these is a red flag that means 'tell an adult right away'?",
+      "choices": [
+        "Pain that wakes you up at night",
+        "Feeling a little sore after a long practice",
+        "Being thirsty after running sprints",
+        "Feeling tired at the end of a two-hour tournament"
+      ],
+      "answerIndex": 0,
+      "explanation": "Pain severe enough to wake you up at night, pain at rest, or a limp are red flags that need an adult's attention right away — they're not normal training fatigue."
+    },
+    {
+      "id": "q7",
+      "question": "Why is it a bad idea to hide overuse pain from your coach or parent?",
+      "choices": [
+        "Because hiding pain is against the rules of every sport",
+        "Because a small problem can turn into a bigger injury if it isn't addressed early",
+        "Because coaches can tell just by looking at you",
+        "It's not a bad idea — pain always goes away by itself"
+      ],
+      "answerIndex": 1,
+      "explanation": "Overuse pain that's ignored tends to get worse, not better, since the repeated activity that caused it keeps happening. Speaking up early is what keeps a small issue from growing into a bigger one."
+    },
+    {
+      "id": "q8",
+      "question": "Which habit helps LOWER the risk of overuse injuries?",
+      "choices": [
+        "Playing the exact same sport with no rest days all year long",
+        "Skipping warm-ups to save time before practice",
+        "Taking rest days during the week and trying different activities across the year",
+        "Wearing shoes no matter how worn out they are"
+      ],
+      "answerIndex": 2,
+      "explanation": "Rest days and mixing up activities give repeatedly-stressed muscles, tendons, and growing bones time to recover. Skipping warm-ups, never resting, and worn-out shoes all raise overuse risk instead."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Overuse injury",
+      "back": "Pain that builds up slowly from doing the same motion over and over without enough rest — not from one sudden moment."
+    },
+    {
+      "id": "f2",
+      "front": "Overuse injury vs. sudden injury",
+      "back": "Sudden injury: one moment you can point to (a fall, a hit, a pop). Overuse injury: no single moment — it builds up over practices."
+    },
+    {
+      "id": "f3",
+      "front": "Common overuse pain spots in young athletes",
+      "back": "Shins (running/jumping sports), heels (running/jumping), just below the kneecap (jumping sports), elbow/shoulder (throwing sports)."
+    },
+    {
+      "id": "f4",
+      "front": "Why growing athletes get overuse pain more easily",
+      "back": "Bones, muscles, and tendons are still developing and changing fast — repeated hard activity with no breaks can outpace how fast the body can keep up."
+    },
+    {
+      "id": "f5",
+      "front": "Normal soreness",
+      "back": "Mild tiredness or ache after a hard practice that fades by the next day. Expected, not a warning sign."
+    },
+    {
+      "id": "f6",
+      "front": "Warning sign: repeating pain",
+      "back": "Pain in the same spot every practice that slowly gets worse over days or weeks is not normal soreness — it's a sign of an overuse injury."
+    },
+    {
+      "id": "f7",
+      "front": "Warning sign: pain that changes how you move",
+      "back": "Limping, favoring an arm, or avoiding a jump because of pain means the pain is serious enough to report right away."
+    },
+    {
+      "id": "f8",
+      "front": "Red flag: night pain or rest pain",
+      "back": "Pain that wakes you up at night or is there even when you're just sitting or walking is a sign to tell a trusted adult immediately."
+    },
+    {
+      "id": "f9",
+      "front": "Your job when you notice building-up pain",
+      "back": "Recognize the pattern and tell a coach, athletic trainer, or parent right away. You don't have to diagnose it or decide how serious it is — that's an adult's job."
+    },
+    {
+      "id": "f10",
+      "front": "Why hiding pain is risky",
+      "back": "Playing through pain and hiding it from adults lets a small problem keep building until it becomes a much bigger injury."
+    },
+    {
+      "id": "f11",
+      "front": "Speaking up about pain",
+      "back": "Telling an adult about pain early isn't weakness — athletes who speak up early usually miss less time than athletes who push through pain."
+    },
+    {
+      "id": "f12",
+      "front": "Lowering overuse risk",
+      "back": "Warm up before activity, take rest days during the week, play more than one sport/activity across the year, and wear shoes that fit and aren't worn out."
+    }
+  ]
+}
