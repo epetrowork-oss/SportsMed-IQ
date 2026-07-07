@@ -117,11 +117,11 @@ writing so depth genuinely increases.
 
 | Strand | 7-8 | 9-10 | 11-12 |
 |---|---|---|---|
-| ankle-sprain | wave 1 | x | |
-| concussion | wave 1 | x | |
-| heat-illness | wave 1 | x | |
-| wound-care | wave 1 | x | |
-| emergency-action-plan | wave 1 | x | |
+| ankle-sprain | x | x | |
+| concussion | x | x | |
+| heat-illness | x | x | |
+| wound-care | x | x | |
+| emergency-action-plan | x | x | |
 | knee-acl | | x | |
 | cold-exposure | | x | |
 | muscle-strains | | x | |
@@ -131,10 +131,13 @@ writing so depth genuinely increases.
 | taping-wrapping | | x | |
 | hydration-nutrition | | x | |
 
-"wave 1" = in flight now (5 units: the highest-priority safety-critical
-strands' `7-8` versions — concussion, heat illness, wound care, EAP/CPR-AED,
-ankle sprain — chosen because they're the most common/serious risks a
-middle schooler around sports would actually encounter).
+- [x] Wave 1 — `7-8` versions of the 5 highest-priority safety-critical
+      strands: concussion, heat illness, wound care, EAP/CPR-AED, ankle
+      sprain. Each independently verified to genuinely simplify (no
+      ligament names/grading system, no WBGT/clinical thresholds, no
+      tourniquets/wound taxonomy, no CPR technique/rescuer framing, etc.)
+      rather than just restate the 9-10 unit in shorter words. 18 units
+      total now; grade filter browser-verified (5 / 13 / 0 split correct).
 
 **Remaining waves** (not yet started, rough order of value):
 - [ ] Wave 2 — `7-8` versions of the rest: knee-acl, muscle-strains,
