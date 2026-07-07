@@ -1,0 +1,240 @@
+{
+  "id": "wound-care-adv",
+  "title": "Advanced Wound Management and Bleeding Control",
+  "category": "Acute Care & First Aid",
+  "strand": "wound-care",
+  "gradeBand": "11-12",
+  "summary": "Go beyond direct pressure: hemorrhage physiology, the full bleeding-control escalation ladder including packing and tourniquets, closure decisions, and bloodborne pathogen protocol at a student-aide level.",
+  "minutes": 24,
+  "sections": [
+    {
+      "heading": "Why uncontrolled bleeding kills fast",
+      "body": [
+        "You already know direct pressure stops most bleeding. This section asks why bleeding is dangerous in the first place, and why the body's own clotting response sometimes isn't enough without your help.",
+        "An adult has roughly 5 liters of blood. Losing about 15-20% of it (roughly 1 liter) starts to produce measurable signs of shock — a compensatory rise in heart rate and pale, cool skin as the body shunts blood to the brain and heart. Losing closer to 40% is life-threatening within minutes, not hours. That narrow window is why hemorrhage — heavy or uncontrolled bleeding — is treated as a 911-level emergency before almost anything else at an athletic event, including obvious fractures or head injuries.",
+        "The type of vessel torn changes the picture. Capillary bleeding (the smallest vessels) oozes slowly and is rarely dangerous alone. Venous bleeding flows steadily, dark red, and responds well to pressure because veins are low-pressure. Arterial bleeding is bright red (fully oxygenated) and often spurts in sync with the pulse — it's high-pressure and can empty a significant blood volume in minutes if a major artery is involved, which is exactly why it jumps to the top of the escalation ladder in the next section.",
+        "The body's own defense is hemostasis: platelets clump at the injury site and a fibrin mesh forms a clot, sealing the vessel. That process takes several minutes of stability to complete. This is the mechanism behind a rule you've already learned: lifting a dressing to 'check' on a wound tears the half-formed fibrin mesh apart and bleeding restarts from zero. Every time you peek, you reset hemostasis's clock."
+      ]
+    },
+    {
+      "heading": "The bleeding-control escalation ladder",
+      "body": [
+        "Direct pressure is still step one, but 'apply pressure' undersells the technique. Effective pressure is focused — concentrated over the specific bleeding point, not spread across the whole wound — and sustained, meaning you lean your body weight through your hands for a full, uninterrupted period rather than pumping or checking. Two minutes of steady, focused weight-bearing pressure controls more bleeding than ten minutes of light, distracted pressure.",
+        "Some wounds won't respond to surface pressure because the bleeding vessel is deep and the wound tract doesn't allow force to reach it directly — this is common in junctional wounds, injuries at the 'junctions' where a limb meets the torso (groin, armpit, high on the thigh or neck) where a tourniquet can't be applied. For these, lay-rescuer training in the Stop the Bleed model teaches wound packing: firmly stuffing gauze (or the cleanest available cloth) directly into the wound cavity, packing layer over layer while holding pressure, so that pressure is applied at the source of bleeding rather than only at the skin surface. Packing is uncomfortable for the athlete and looks aggressive to bystanders — it's supposed to. Timid packing doesn't work.",
+        "A pressure dressing — gauze held under tension with an elastic wrap, tight enough to maintain compression but not so tight it cuts off circulation to the rest of the limb — lets you maintain focused pressure hands-free once bleeding is controlled, which matters when you need to call 911 or manage other injuries."
+      ]
+    },
+    {
+      "heading": "Tourniquets: lay-rescuer scope",
+      "body": [
+        "When direct pressure and packing cannot control severe limb bleeding, a commercial tourniquet is the next rung — and it is squarely within Stop the Bleed-style lay-rescuer training, not an EMS-only tool. The principles are simple and are meant to be followed exactly, under stress, by a non-medical bystander:",
+        "'High and tight' means placing the tourniquet as close to the junction of the limb and torso as possible (not directly over the wound), never over a joint, and applying it over clothing if needed rather than losing time undressing the injury. Tighten until the bleeding fully stops and the pulse below the tourniquet disappears — a tourniquet tight enough to hurt but not tight enough to stop bleeding completely isn't doing its job; it can actually worsen venous bleeding while failing to stop arterial flow. Write the application time on the tourniquet or the athlete's skin (or tell EMS verbally) because that timestamp changes hospital treatment decisions.",
+        "The rule every trained rescuer follows: once applied, a tourniquet is never loosened or removed in the field, by anyone except a physician in a controlled setting. Removing it early to 'check' can release a hemorrhage that has been temporarily but not permanently stopped."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Call 911 immediately for any of these",
+        "text": "Arterial (spurting, bright red) bleeding, bleeding that soaks through packing and a pressure dressing, any junctional or truncal wound with heavy bleeding, an amputation, or bleeding accompanied by shock signs (rapid weak pulse, pale/cool/clammy skin, confusion, dropping consciousness). Tourniquet or no tourniquet, these athletes go to a hospital."
+      }
+    },
+    {
+      "heading": "Deciding whether a wound needs closure",
+      "body": [
+        "Not every laceration needs stitches or skin glue, but several factors push a wound from 'bandage it' toward 'get it closed by a clinician': a gaping wound where the edges don't fall back together on their own, a wound crossing a joint line (where movement will keep reopening it), a facial wound (cosmetic and functional stakes are higher), and a wound with heavy contamination (dirt, turf, gravel ground into the tissue) that needs cleaning under better conditions than a sideline offers.",
+        "Bite wounds — human or animal — are a special case and are generally NOT closed immediately even when they look closable. Bites drive bacteria deep into tissue, and closing the skin over that bacterial load traps infection inside. Many bites are left open or only loosely approximated and are treated with prophylactic (preventive) antibiotics instead.",
+        "Timing matters: closure works best within a golden window, often cited as roughly 6-8 hours after injury for most body sites (bacterial colonization increases sharply after this), though facial wounds — thanks to a rich blood supply that fights infection more effectively — can sometimes be closed later. This is why 'go get it looked at today' is not just a formality; delay can take closure off the table entirely and force the wound to heal open instead.",
+        "That distinction maps onto two ways skin heals. Primary intention is when a wound is closed (sutures, staples, glue) and the edges heal together directly — faster healing, less scarring. Secondary intention is when a wound is left open — because it's too contaminated, too old, or a deliberate choice for a bite — and heals from the bottom up by filling in with new tissue (granulation tissue) before the surface closes; it takes longer and scars more but avoids trapping infection."
+      ]
+    },
+    {
+      "heading": "Infection surveillance and tetanus logic",
+      "body": [
+        "Local infection — redness, warmth, and swelling confined to the wound itself, with possible pus — is common and manageable, but distinguish it from spreading infection: redness extending outward from the wound margin, red streaking traveling up a limb toward the torso (lymphangitis — inflammation tracking along the lymphatic vessels that drain the area), tender swollen lymph nodes upstream (armpit for a hand wound, groin for a foot wound), and fever. Spreading signs mean the infection has moved past the local tissue and is becoming a systemic problem — that's a same-day medical evaluation, not a 'watch it' situation.",
+        "Higher-risk wounds deserve closer surveillance: punctures (deep, hard to clean), bites (heavy bacterial load), and wounds contaminated with soil or rust (tetanus-forming bacteria live in soil, dust, and manure).",
+        "Tetanus booster logic follows the wound's cleanliness, not just the calendar: a clean, minor wound needs a booster if it has been more than 10 years since the last one; a dirty or high-risk wound (deep puncture, contaminated with soil, or a wound from an object like a nail) drops that window to 5 years, because tetanus toxin production starts fast and a marginal immune response isn't enough margin for a dirty wound."
+      ]
+    },
+    {
+      "heading": "Bloodborne pathogen protocol as a system",
+      "body": [
+        "Universal precautions exist because you cannot tell by looking whether a given athlete's blood carries hepatitis B, hepatitis C, or HIV — so the only workable system, the one athletic trainers and student aides are trained under (mirroring OSHA's bloodborne pathogen standard for workplaces), is to treat every exposure to blood as potentially infectious, every time, regardless of who the athlete is or how well you know them. Judging risk case-by-case guarantees an eventual lapse.",
+        "The system has parts beyond gloves: a sharps/biohazard disposal method for contaminated materials, decontamination of any surface, mat, or bench that contacted blood using an approved disinfectant before it's reused, and handling of a blood-contaminated uniform — it comes off before the athlete returns.",
+        "If an exposure happens anyway — someone's broken skin, eye, or mouth contacts another person's blood — the protocol is immediate: wash the area with soap and water (flush eyes/mucous membranes with water only), report the exposure to the athletic trainer or supervising adult right away, and follow up with a medical provider, since post-exposure evaluation and possible treatment is time-sensitive and works best started within hours, not days.",
+        "Most sports encode this in their rules directly: an athlete with active bleeding is removed from play immediately and cannot return until bleeding is fully controlled and covered, and any blood on a uniform must be cleaned or the uniform changed before re-entry — the rule exists independent of how the bleeding happened."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Why the rule never bends for anyone",
+        "text": "A teammate 'looking fine' tells you nothing about hepatitis B, hepatitis C, or HIV status — none of these are visible, and many people don't know their own status. That's exactly why universal precautions treat every exposure identically instead of asking you to judge risk in the moment."
+      }
+    },
+    {
+      "heading": "Skin conditions that complicate the picture",
+      "body": [
+        "A 'turf burn' abrasion is a friction injury, but its real long-term risk is what grows in it afterward: ground-in synthetic turf fibers and bacteria create ideal conditions for infection days later, so thorough initial irrigation and daily monitoring matter more for turf burns than their shallow appearance suggests.",
+        "MRSA (methicillin-resistant Staphylococcus aureus) is a staph bacterium resistant to common antibiotics, and it spreads efficiently in team settings through skin-to-skin contact and shared surfaces (mats, equipment, towels) — exactly the environment a wrestling room or football locker room provides. It often first looks like a spider bite or pimple: a red, warm, swollen, painful bump that may develop a pus-filled center and can worsen fast. Because it can look minor at first, any suspicious skin lesion in a contact sport should be shown to an athletic trainer rather than self-treated or popped, and prevention (showering right after practice, not sharing towels or razors, disinfecting shared equipment, covering any open lesion) is the main defense since resistant infections are harder to treat once established.",
+        "Herpes gladiatorum is a herpes simplex skin infection named for its spread in wrestling — it transmits through skin-to-skin contact and produces clusters of small fluid-filled blisters, often with tingling or burning beforehand. Unlike a routine skin infection, the recognition-level action here is strict: an athlete with a suspected outbreak is held from all contact activity until a physician has examined and cleared them, because contact before the lesions are fully resolved reliably spreads the virus to opponents and teammates."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A wound is bleeding in bright red spurts that sync with the athlete's pulse. What does this tell you about the source, and what does it mean for urgency?",
+      "choices": [
+        "Capillary bleeding — minor, will stop on its own",
+        "Venous bleeding — steady flow, low pressure, easy to control",
+        "Arterial bleeding — high pressure, oxygenated blood, can cause life-threatening loss within minutes",
+        "It's impossible to tell bleeding source from appearance"
+      ],
+      "answerIndex": 2,
+      "explanation": "Bright red, pulse-synced spurting is the signature of arterial bleeding — high pressure and fully oxygenated blood. Venous bleeding is darker and flows steadily rather than spurting; capillary bleeding just oozes. Arterial bleeding demands the fastest escalation up the bleeding-control ladder."
+      },
+    {
+      "id": "q2",
+      "question": "An athlete has a deep wound at the groin (a junctional area) that keeps bleeding heavily despite two minutes of firm, focused direct pressure. What's the correct next step?",
+      "choices": [
+        "Pack the wound firmly with gauze, layer over layer, while maintaining pressure",
+        "Apply a tourniquet high on the thigh",
+        "Switch to light, intermittent pressure to let the area breathe",
+        "Elevate the leg and wait for EMS without further intervention"
+      ],
+      "answerIndex": 0,
+      "explanation": "Junctional wounds (groin, armpit, high thigh/neck) can't be controlled with a tourniquet since there's no limb to encircle above the wound. Wound packing gets pressure to the source of bleeding inside the cavity itself. Light or intermittent pressure won't allow hemostasis to establish."
+    },
+    {
+      "id": "q3",
+      "question": "You've applied a commercial tourniquet for severe limb bleeding. Which of these matches correct lay-rescuer technique?",
+      "choices": [
+        "Tighten until the bleeding visibly slows, then loosen slightly for comfort",
+        "Tighten until bleeding fully stops and the pulse below it disappears, then note the application time",
+        "Place it directly over the wound itself for maximum local pressure",
+        "Leave it in place but re-check and loosen it every 10 minutes to preserve circulation"
+      ],
+      "answerIndex": 1,
+      "explanation": "A tourniquet must be tightened until bleeding is fully stopped, not just slowed — partial tightening can worsen venous bleeding while failing to stop the arterial source. It goes high and tight above the wound, never over it, and is never loosened or removed in the field once applied; the application time is critical information for the hospital team."
+    },
+    {
+      "id": "q4",
+      "question": "A soccer player has a gaping laceration over the knee that occurred about 4 hours ago. What's the priority?",
+      "choices": [
+        "Bandage it and reassess in a week — knee wounds heal on their own",
+        "Wait until it shows infection signs before seeking care",
+        "Pack the wound like a junctional bleed",
+        "Get it evaluated for closure today — gaping wounds over joints and the shrinking closure window make this time-sensitive"
+      ],
+      "answerIndex": 3,
+      "explanation": "A gaping wound crossing a joint line is a closure-urgent combination — joint movement keeps reopening it, and the roughly 6-8 hour golden window for clean closure is closing. Waiting for infection signs, or assuming it heals fine untreated, risks losing the option of primary closure altogether."
+    },
+    {
+      "id": "q5",
+      "question": "Why is a contaminated bite wound typically left open (healing by secondary intention) rather than stitched closed right away?",
+      "choices": [
+        "Closing the skin over a bite traps the bacteria driven deep into the tissue, risking infection under a sealed surface",
+        "Bites never bleed enough to need closure",
+        "Secondary intention heals faster and scars less than primary closure",
+        "Bite wounds are always too small to close"
+      ],
+      "answerIndex": 0,
+      "explanation": "Bites carry a heavy bacterial load driven deep by the puncturing/tearing mechanism. Suturing over that traps infection beneath intact skin, so many bites are deliberately left open (or antibiotics are used) rather than closed by primary intention — the opposite of the usual preference for faster, less-scarring primary healing."
+    },
+    {
+      "id": "q6",
+      "question": "Three days after a turf abrasion, an athlete has red streaking traveling up the leg, tender swollen lymph nodes in the groin, and a fever. What does this pattern indicate, and what's the urgency?",
+      "choices": [
+        "Normal healing inflammation — recheck in a week",
+        "An allergic reaction to the bandage adhesive — switch bandage types",
+        "Spreading infection (lymphangitis) beyond the local wound — needs same-day medical evaluation",
+        "MRSA is ruled out because there's no visible pus"
+      ],
+      "answerIndex": 2,
+      "explanation": "Streaking, upstream swollen nodes, and fever together indicate the infection has spread past the local tissue into the lymphatic system — a systemic problem, not a 'watch and wait' local one. This needs same-day care, not a delayed recheck. Streaking without pus doesn't rule out a resistant infection like MRSA."
+    },
+    {
+      "id": "q7",
+      "question": "During wound care, an athlete's blood splashes into your eye. What is the correct sequence of steps?",
+      "choices": [
+        "Finish treating the athlete first, then deal with your eye afterward",
+        "Flush the eye with water immediately, report the exposure right away, and follow up with a medical provider",
+        "Apply antiseptic directly to the eye and continue working",
+        "Only report it if symptoms develop later"
+      ],
+      "answerIndex": 1,
+      "explanation": "A bloodborne pathogen exposure to a mucous membrane calls for immediate flushing with water, prompt reporting to a supervising adult, and medical follow-up — post-exposure evaluation is time-sensitive and most effective started within hours. Waiting until symptoms appear, or finishing other tasks first, forfeits that window. Antiseptic is not used in the eye."
+    },
+    {
+      "id": "q8",
+      "question": "A wrestler has a red, warm, painful bump with a developing pus center that first looked like a spider bite. A teammate separately has a cluster of small fluid-filled blisters with tingling beforehand. What's the correct return-to-contact decision for each?",
+      "choices": [
+        "Both can continue practicing since neither is bleeding",
+        "Only the blister case needs to be held out; the pus-filled bump is just acne",
+        "Both should be held out for exactly one week regardless of exam findings",
+        "The first athlete (suspected MRSA) needs evaluation and the lesion covered; the second (suspected herpes gladiatorum) is held from ALL contact until a physician clears them"
+      ],
+      "answerIndex": 3,
+      "explanation": "A worsening pus-filled 'spider bite' lesion in a contact sport is treated as suspected MRSA — evaluate, cover, and don't let the athlete self-treat or pop it. A blistering cluster with a tingling prodrome is classic for herpes gladiatorum, which spreads readily through skin contact — the standard is no contact activity until physician clearance, not a fixed time-out or self-assessment."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Hemostasis",
+      "back": "The body's clot-forming response to a vessel injury: platelets clump and a fibrin mesh seals the wound. Takes several minutes of stability to complete — disturbing the wound resets it."
+    },
+    {
+      "id": "f2",
+      "front": "Arterial vs. venous bleeding — how to tell them apart",
+      "back": "Arterial: bright red, spurts with the pulse, high pressure, can cause life-threatening loss in minutes. Venous: darker red, flows steadily, lower pressure, responds well to direct pressure."
+    },
+    {
+      "id": "f3",
+      "front": "Junctional wound",
+      "back": "A wound where a limb meets the torso (groin, armpit, high thigh/neck) — a tourniquet can't be applied here, so severe bleeding is controlled with wound packing instead."
+    },
+    {
+      "id": "f4",
+      "front": "Wound packing",
+      "back": "Firmly stuffing gauze into a wound cavity, layer over layer, while maintaining pressure — delivers pressure to the bleeding source itself, used for junctional and deep wounds direct surface pressure can't control."
+    },
+    {
+      "id": "f5",
+      "front": "Tourniquet application rule",
+      "back": "High and tight, above the wound, never over a joint; tighten until bleeding fully stops and the distal pulse disappears; note the application time; never loosen or remove in the field once applied."
+    },
+    {
+      "id": "f6",
+      "front": "Closure golden window",
+      "back": "Roughly 6-8 hours after injury for most wounds (bacterial colonization rises sharply after); facial wounds can often tolerate longer delay due to rich blood supply."
+    },
+    {
+      "id": "f7",
+      "front": "Primary vs. secondary intention healing",
+      "back": "Primary: wound is closed (sutures/glue/staples), edges heal together directly — faster, less scarring. Secondary: wound left open, fills in from the bottom with granulation tissue — slower, more scarring, avoids trapping infection (e.g., many bite wounds)."
+    },
+    {
+      "id": "f8",
+      "front": "Why bite wounds are often left open",
+      "back": "Bites drive bacteria deep into tissue; closing the skin over that bacterial load traps infection. Often left open or given prophylactic antibiotics instead of primary closure."
+    },
+    {
+      "id": "f9",
+      "front": "Local infection vs. spreading infection",
+      "back": "Local: redness/warmth/swelling confined to the wound. Spreading: redness extending outward, red streaking (lymphangitis), tender swollen upstream lymph nodes, fever — needs same-day medical care."
+    },
+    {
+      "id": "f10",
+      "front": "Tetanus booster windows",
+      "back": "Clean, minor wound: booster needed if more than 10 years since last one. Dirty/high-risk wound (deep puncture, soil contamination): window drops to 5 years."
+    },
+    {
+      "id": "f11",
+      "front": "Blood exposure protocol (splash/broken skin contact)",
+      "back": "Flush the area with water immediately (water only for eyes/mucous membranes), report the exposure right away, follow up with a medical provider — post-exposure care is most effective started within hours."
+    },
+    {
+      "id": "f12",
+      "front": "MRSA vs. herpes gladiatorum — recognition",
+      "back": "MRSA: red, warm, painful bump, often with a pus center, can look like a spider bite; spreads via skin contact and shared surfaces. Herpes gladiatorum: cluster of small fluid-filled blisters, often with tingling first; athlete is held from ALL contact until physician-cleared."
+    }
+  ]
+}
