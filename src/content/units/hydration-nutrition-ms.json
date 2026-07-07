@@ -1,0 +1,241 @@
+{
+  "id": "hydration-nutrition-ms",
+  "title": "Fueling Up: Water and Food for Young Athletes",
+  "category": "Prevention & Performance",
+  "strand": "hydration-nutrition",
+  "gradeBand": "7-8",
+  "summary": "Simple daily habits for drinking enough water and eating well so you have energy for practice and games.",
+  "minutes": 10,
+  "sections": [
+    {
+      "heading": "Why water and food matter",
+      "body": [
+        "Your body is mostly water. Water helps your muscles work, helps your brain think clearly, and helps you sweat — which is how your body cools itself down when you're active.",
+        "Food gives you energy. What you eat before and after practice affects how strong and focused you feel — and how fast you recover for the next day."
+      ]
+    },
+    {
+      "heading": "Build a water habit",
+      "body": [
+        "Don't wait until you feel thirsty to drink water. Thirst means your body is already running low, so the best plan is to drink small amounts throughout the whole day, not just at practice.",
+        "During practice or a game, take a water break every chance you get, even if you don't feel thirsty yet."
+      ],
+      "list": [
+        "Drink water with breakfast, lunch, and dinner.",
+        "Bring a water bottle to school and to practice — refill it often.",
+        "Take small sips during water breaks instead of chugging a huge amount all at once."
+      ]
+    },
+    {
+      "heading": "Water, sports drinks, and energy drinks are not the same",
+      "body": [
+        "For most practices, plain water is all you need. Sports drinks (like Gatorade) can help on very long or very hot, sweaty days, but they aren't needed for a normal practice.",
+        "Energy drinks are different from sports drinks. Energy drinks (like Red Bull or Monster) are made for a caffeine buzz, not for hydration."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Energy drinks are not for hydration",
+        "text": "Never use an energy drink to hydrate during or after a workout. Energy drinks are packed with caffeine, which is a stimulant, not a fluid replacement. Kids and teens should avoid energy drinks, especially around practice or games — stick to water and, when needed, a sports drink."
+      }
+    },
+    {
+      "heading": "Eat regular meals, especially before practice or a game",
+      "body": [
+        "Skipping meals — especially breakfast on a game day — leaves you with less energy by the second half. Even a small meal or snack is better than nothing.",
+        "Try to eat something with carbs (like fruit, toast, or rice) and a little protein (like eggs, yogurt, or chicken) at meals throughout the day, not just one big meal."
+      ],
+      "list": [
+        "Before practice: eat a meal or snack a couple of hours ahead of time — a banana, toast, or a granola bar works well if you're short on time.",
+        "After practice: have a snack or meal with some carbs and protein, like chocolate milk or a sandwich, to help your body recover.",
+        "Don't skip breakfast on game day — your body needs that fuel."
+      ]
+    },
+    {
+      "heading": "Signs you need more water or food",
+      "body": [
+        "Your body gives you warning signs when it needs more water or food. Learning to notice these signs — and telling a coach, parent, or athletic trainer right away — is your job as a young athlete. Deciding what to do about it is an adult's job."
+      ],
+      "list": [
+        "Feeling really thirsty, having a dry mouth, or noticing dark yellow urine.",
+        "Feeling unusually tired, dizzy, or getting a headache during or after activity.",
+        "Feeling weak, cramping, or noticing you can't focus like usual."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "See it, say it",
+        "text": "If you or a teammate feels dizzy, very tired, or has a bad headache during practice, tell a coach or adult right away. It's always okay to ask for a water break."
+      }
+    },
+    {
+      "heading": "Pack smart for practice and game day",
+      "body": [
+        "A little planning makes it easy to stay hydrated and fueled all day, especially on days with more than one game or a long practice."
+      ],
+      "list": [
+        "Pack a refillable water bottle and a healthy snack, like fruit, crackers, or a granola bar.",
+        "Bring an extra shirt or socks — staying dry helps your body regulate its temperature.",
+        "Plan a real meal for after a long day of games so your body can recover."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is the best time to start drinking water during practice?",
+      "choices": [
+        "Only after you start to feel thirsty",
+        "Before you feel thirsty, on a regular schedule",
+        "Only at the very end of practice",
+        "Only if it's a hot day"
+      ],
+      "answerIndex": 1,
+      "explanation": "Thirst means your body is already a little low on fluid, so the best habit is to drink water regularly throughout the day and practice — not wait until you feel thirsty."
+    },
+    {
+      "id": "q2",
+      "question": "For a normal, everyday practice, what should most young athletes drink?",
+      "choices": [
+        "An energy drink",
+        "Plain water",
+        "Soda",
+        "Nothing until practice ends"
+      ],
+      "answerIndex": 1,
+      "explanation": "Plain water covers most normal practices. Sports drinks are sometimes useful on very long or very hot days, but energy drinks are never the right choice for hydration."
+    },
+    {
+      "id": "q3",
+      "question": "What are energy drinks (like Red Bull or Monster) mainly made for?",
+      "choices": [
+        "Replacing water lost in sweat",
+        "Giving you a caffeine buzz, not hydration",
+        "Building muscle faster than food",
+        "Cooling your body down during exercise"
+      ],
+      "answerIndex": 1,
+      "explanation": "Energy drinks are built around caffeine for a jolt of alertness, not to replace fluids. They should never be used in place of water or a sports drink."
+    },
+    {
+      "id": "q4",
+      "question": "Why is skipping breakfast on game day a bad idea?",
+      "choices": [
+        "It has no real effect on performance",
+        "It only matters for adults, not middle schoolers",
+        "It can leave you with less energy by the second half",
+        "It makes you drink more water than needed"
+      ],
+      "answerIndex": 2,
+      "explanation": "Your body uses food for energy. Skipping breakfast, especially on game day, means you're running on empty fuel by later in the game — even a small meal helps."
+    },
+    {
+      "id": "q5",
+      "question": "Which of these is a good after-practice snack to help your body recover?",
+      "choices": [
+        "Nothing — snacks aren't necessary after practice",
+        "An energy drink",
+        "Chocolate milk or a sandwich",
+        "Candy only"
+      ],
+      "answerIndex": 2,
+      "explanation": "A snack with both carbs and a little protein, like chocolate milk or a sandwich, helps your body recover after activity. Energy drinks and candy-only snacks don't provide the same recovery benefit."
+    },
+    {
+      "id": "q6",
+      "question": "What color urine usually means you're well hydrated?",
+      "choices": [
+        "Dark yellow or amber",
+        "Bright orange",
+        "Pale yellow, like lemonade",
+        "Clear only, any other color is a problem"
+      ],
+      "answerIndex": 2,
+      "explanation": "Pale yellow urine, like lemonade, is a sign of good hydration. Dark yellow or amber urine usually means you need to drink more water."
+    },
+    {
+      "id": "q7",
+      "question": "During practice, you start to feel dizzy and get a bad headache. What should you do?",
+      "choices": [
+        "Keep playing and ignore it",
+        "Tell a coach or adult right away",
+        "Quietly leave practice without telling anyone",
+        "Drink an energy drink to feel better"
+      ],
+      "answerIndex": 1,
+      "explanation": "Feeling dizzy or getting a bad headache during activity is a warning sign. Your job is to recognize it and tell a trusted adult right away — they'll decide what to do next."
+    },
+    {
+      "id": "q8",
+      "question": "What is a smart thing to pack in your bag for a day with more than one game?",
+      "choices": [
+        "A refillable water bottle and a healthy snack",
+        "Nothing — the snack bar at the field will have what you need",
+        "Only an energy drink for a boost between games",
+        "A large, greasy fast-food meal to eat right before your next game"
+      ],
+      "answerIndex": 0,
+      "explanation": "Packing a water bottle and a healthy snack like fruit or crackers helps you stay hydrated and fueled between games. Energy drinks and heavy, greasy food right before playing again aren't good choices."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Best time to drink water",
+      "back": "Before you feel thirsty — drink on a regular schedule throughout the day and during practice."
+    },
+    {
+      "id": "f2",
+      "front": "What does thirst mean?",
+      "back": "Your body is already a little low on water — it's a late signal, not an early one."
+    },
+    {
+      "id": "f3",
+      "front": "What is water mostly used for in your body?",
+      "back": "Helping muscles work, helping your brain think clearly, and making sweat to cool you down."
+    },
+    {
+      "id": "f4",
+      "front": "For a normal practice, what should you drink?",
+      "back": "Plain water is usually enough."
+    },
+    {
+      "id": "f5",
+      "front": "Energy drinks vs. sports drinks",
+      "back": "Energy drinks (Red Bull, Monster) are made for caffeine and alertness, not hydration. They are never a substitute for water."
+    },
+    {
+      "id": "f6",
+      "front": "Pale yellow urine",
+      "back": "A sign you're well hydrated (like the color of lemonade)."
+    },
+    {
+      "id": "f7",
+      "front": "Dark yellow urine",
+      "back": "A sign you need to drink more water."
+    },
+    {
+      "id": "f8",
+      "front": "Why not skip breakfast on game day?",
+      "back": "Your body needs fuel — skipping meals can leave you with less energy later in the game."
+    },
+    {
+      "id": "f9",
+      "front": "Good after-practice snack",
+      "back": "A snack with carbs and protein, like chocolate milk or a sandwich, helps your body recover."
+    },
+    {
+      "id": "f10",
+      "front": "Warning signs to tell an adult about",
+      "back": "Feeling dizzy, very tired, having a bad headache, or noticing dark urine during or after activity."
+    },
+    {
+      "id": "f11",
+      "front": "Your job when you notice a warning sign",
+      "back": "Recognize it and tell a coach, parent, or athletic trainer right away — let an adult decide what to do next."
+    },
+    {
+      "id": "f12",
+      "front": "Smart things to pack for game day",
+      "back": "A refillable water bottle, a healthy snack (fruit, crackers, granola bar), and an extra shirt or socks."
+    }
+  ]
+}

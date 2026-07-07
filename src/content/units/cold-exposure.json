@@ -2,6 +2,8 @@
   "id": "cold-exposure",
   "title": "Cold Exposure & Hypothermia",
   "category": "Environmental Emergencies",
+  "strand": "cold-exposure",
+  "gradeBand": "9-10",
   "summary": "Recognize hypothermia and frostbite before they become emergencies — and know why wet, windy cold is more dangerous than a colder, dry day.",
   "minutes": 18,
   "sections": [

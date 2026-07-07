@@ -1,0 +1,229 @@
+{
+  "id": "wound-care-ms",
+  "title": "Cuts and Scrapes: Basic Wound Care",
+  "category": "Acute Care & First Aid",
+  "strand": "wound-care",
+  "gradeBand": "7-8",
+  "summary": "Learn to recognize a minor scrape you can handle yourself, and when a cut means you stop and get an adult right away.",
+  "minutes": 10,
+  "sections": [
+    {
+      "heading": "Blood can carry hidden germs",
+      "body": [
+        "You can't see germs, but some live in blood. A few of them can make a person very sick.",
+        "Rule: never touch someone else's blood with your bare hands. If a teammate is bleeding, don't touch the wound yourself — tell a coach, athletic trainer, or school nurse right away. They have gloves and know how to help safely.",
+        "If you get a small scrape on your own skin, wash your hands before and after you touch it."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Your job with someone else's wound",
+        "text": "See blood on a teammate? Don't touch it. Get an adult immediately and let them take it from there."
+      }
+    },
+    {
+      "heading": "Is it a minor scrape or something bigger?",
+      "body": [
+        "A minor scrape or cut is small, close to the surface of the skin, and only oozes a little blood. Think of a scraped knee from falling on the track, or a small cut from a fingernail.",
+        "Anything bigger than that is not something to handle yourself. That includes a deep cut, a wound that is bleeding a lot, or a cut with something stuck in it, like a splinter or a piece of glass.",
+        "When you're not sure if a wound is minor, treat it like it isn't. Get an adult to look at it."
+      ]
+    },
+    {
+      "heading": "Caring for your own minor scrape",
+      "list": [
+        "Wash your hands first.",
+        "If it's bleeding, press a clean cloth or gauze on it and hold it there.",
+        "Rinse the scrape gently with clean water to wash away dirt.",
+        "Cover it with a bandage.",
+        "Tell an adult about it, even if it seems small — they can check it and help if it needs more care."
+      ]
+    },
+    {
+      "heading": "Get an adult right away",
+      "body": [
+        "Some wounds are never a \"handle it yourself\" situation, even if they happen to you. These need an adult immediately — no waiting, no trying it on your own first."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Stop and get an adult immediately if you see...",
+        "text": "Blood that is spurting out or won't stop after a few minutes of firm pressure, a deep or gaping cut, anything stuck in the wound (never pull it out), a wound from a bite, a wound from something rusty or dirty, or numbness/inability to move the area."
+      }
+    },
+    {
+      "heading": "Watching a bandage heal",
+      "body": [
+        "Keep the bandage clean and dry, and change it if it gets wet or dirty.",
+        "Check it each day. If the skin around it turns more red, feels warm, swells up, or has pus, that's a sign of infection — germs growing in the wound. Tell an adult right away so a doctor can check it.",
+        "A fever along with a healing scrape is also a reason to tell an adult right away."
+      ]
+    },
+    {
+      "heading": "Nosebleeds",
+      "body": [
+        "Sit up and lean slightly forward — don't tilt your head back, because that lets blood run down your throat.",
+        "Pinch the soft part of your nose and hold it for a full 10 minutes without letting go to check.",
+        "If it doesn't stop after 10 minutes, or it happened after a hit to the head, tell an adult right away."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "You see a teammate bleeding from a cut on their arm. What should you do first?",
+      "choices": [
+        "Tell a coach, athletic trainer, or school nurse right away",
+        "Press on it with your bare hands to help",
+        "Wrap it in your own jacket",
+        "Ignore it since it's not your wound"
+      ],
+      "answerIndex": 0,
+      "explanation": "You should never touch someone else's blood with bare hands. Getting an adult immediately means the wound gets handled safely by someone with gloves and training."
+    },
+    {
+      "id": "q2",
+      "question": "Why is it risky to touch someone else's blood with your bare hands?",
+      "choices": [
+        "It might stain your clothes",
+        "Blood can carry germs you can't see, and some can make you very sick",
+        "It's against the rules of most sports",
+        "It could get on your shoes"
+      ],
+      "answerIndex": 1,
+      "explanation": "Blood can carry hidden germs that cause serious illness. That's why bare-hand contact with someone else's blood is never okay — leave it to an adult with gloves."
+    },
+    {
+      "id": "q3",
+      "question": "Which of these counts as a minor scrape you could care for yourself?",
+      "choices": [
+        "A deep cut with a piece of glass stuck in it",
+        "Blood that keeps spurting out",
+        "A small, shallow scrape on your knee that oozes a little blood",
+        "A bite wound"
+      ],
+      "answerIndex": 2,
+      "explanation": "A small, shallow scrape with light oozing is minor. Deep cuts, embedded objects, spurting blood, and bites all need an adult right away, not self-care."
+    },
+    {
+      "id": "q4",
+      "question": "What is the correct order of steps for caring for your own minor scrape?",
+      "choices": [
+        "Cover it, rinse it, wash your hands",
+        "Rinse it with alcohol, wrap it tightly, ignore it",
+        "Pull off any loose skin, then cover it",
+        "Wash your hands, press on it if bleeding, rinse it, cover it"
+      ],
+      "answerIndex": 3,
+      "explanation": "Start with clean hands, control any bleeding with pressure, rinse away dirt with clean water, then cover with a bandage."
+    },
+    {
+      "id": "q5",
+      "question": "You find a splinter stuck deep in your own cut. What should you do?",
+      "choices": [
+        "Leave it alone and tell an adult right away",
+        "Pull it out quickly so it doesn't hurt as long",
+        "Dig it out carefully with a pin",
+        "Cover it with a bandage and forget about it"
+      ],
+      "answerIndex": 0,
+      "explanation": "Never pull an object out of a wound yourself. Get an adult immediately — removing it the wrong way can make bleeding worse."
+    },
+    {
+      "id": "q6",
+      "question": "A few days after a scrape, the skin around it looks more red, feels warm, and has pus. What does this mean?",
+      "choices": [
+        "The scrape is healing perfectly",
+        "This could be an infection — tell an adult right away",
+        "This is normal and needs no attention",
+        "You should scrub it harder with soap"
+      ],
+      "answerIndex": 1,
+      "explanation": "Spreading redness, warmth, and pus are signs of infection — germs growing in the wound. An adult needs to know so a doctor can check it."
+    },
+    {
+      "id": "q7",
+      "question": "What is the correct way to handle a nosebleed?",
+      "choices": [
+        "Tilt your head back and lie down",
+        "Stuff tissue far up the nose and stand still",
+        "Sit up, lean slightly forward, and pinch the soft part of your nose for 10 minutes",
+        "Blow your nose hard right away"
+      ],
+      "answerIndex": 2,
+      "explanation": "Leaning forward keeps blood from running down the throat. Pinching the soft part of the nose for a full 10 minutes stops most nosebleeds."
+    },
+    {
+      "id": "q8",
+      "question": "Which of these means you should get an adult right away, no matter what?",
+      "choices": [
+        "A tiny scrape with barely any blood",
+        "A bandage that needs to be changed after gym class",
+        "A small bruise from bumping a locker",
+        "Blood that won't stop after a few minutes of firm pressure"
+      ],
+      "answerIndex": 3,
+      "explanation": "Bleeding that keeps going despite firm pressure is a sign that this is not a minor wound — it needs an adult's help immediately."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Why can't you touch someone else's blood with bare hands?",
+      "back": "Blood can carry hidden germs that make people very sick. Always get an adult instead."
+    },
+    {
+      "id": "f2",
+      "front": "What should you do if a teammate is bleeding?",
+      "back": "Don't touch the wound yourself. Tell a coach, athletic trainer, or school nurse right away."
+    },
+    {
+      "id": "f3",
+      "front": "What is a minor scrape?",
+      "back": "A small, shallow wound close to the surface of the skin that only oozes a little blood."
+    },
+    {
+      "id": "f4",
+      "front": "First step in caring for your own minor scrape",
+      "back": "Wash your hands before you touch it."
+    },
+    {
+      "id": "f5",
+      "front": "How do you stop a scrape from bleeding?",
+      "back": "Press a clean cloth or gauze on it and hold it there."
+    },
+    {
+      "id": "f6",
+      "front": "How do you clean a minor scrape?",
+      "back": "Rinse it gently with clean water to wash away dirt, then cover with a bandage."
+    },
+    {
+      "id": "f7",
+      "front": "Object stuck in a wound — what do you do?",
+      "back": "Never pull it out yourself. Get an adult right away."
+    },
+    {
+      "id": "f8",
+      "front": "Name three signs a wound might be infected",
+      "back": "Spreading redness, warmth, and pus around the wound (a fever is also a warning sign)."
+    },
+    {
+      "id": "f9",
+      "front": "Correct nosebleed position",
+      "back": "Sit up and lean slightly forward — never tilt your head back."
+    },
+    {
+      "id": "f10",
+      "front": "How long do you pinch the nose for a nosebleed?",
+      "back": "A full 10 minutes without letting go, to check if it has stopped."
+    },
+    {
+      "id": "f11",
+      "front": "Name three wounds that always need an adult, not self-care",
+      "back": "A deep cut, a bite wound, and blood that won't stop after firm pressure."
+    },
+    {
+      "id": "f12",
+      "front": "When in doubt about a wound...",
+      "back": "Treat it like it's serious. Get an adult to look at it."
+    }
+  ]
+}

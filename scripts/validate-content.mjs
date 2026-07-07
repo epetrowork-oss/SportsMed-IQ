@@ -14,6 +14,7 @@ import { fileURLToPath } from 'node:url'
 const unitsDir = path.join(path.dirname(fileURLToPath(import.meta.url)), '../src/content/units')
 
 const VALID_CALLOUT_TYPES = ['warning', 'tip']
+const VALID_GRADE_BANDS = ['7-8', '9-10', '11-12']
 
 function isNonEmptyString(v) {
   return typeof v === 'string' && v.trim().length > 0
@@ -33,6 +34,10 @@ function checkUnit(unit, file) {
   if (!isNonEmptyString(unit.category)) err('missing "category"')
   if (!isNonEmptyString(unit.summary)) err('missing "summary"')
   if (!Number.isFinite(unit.minutes) || unit.minutes <= 0) err('"minutes" must be a positive number')
+  if (!VALID_GRADE_BANDS.includes(unit.gradeBand))
+    err(`"gradeBand" must be one of: ${VALID_GRADE_BANDS.join(', ')}`)
+  if (!isNonEmptyString(unit.strand) || !/^[a-z0-9-]+$/.test(unit.strand))
+    err('missing or invalid "strand" (lowercase-hyphenated topic id shared across grade-band versions)')
 
   // Lesson sections.
   if (!Array.isArray(unit.sections) || unit.sections.length === 0) {
@@ -116,6 +121,7 @@ function checkUnit(unit, file) {
 const files = (await readdir(unitsDir)).filter((f) => f.endsWith('.json')).sort()
 let errorCount = 0
 const seenIds = new Set()
+const seenStrandBands = new Set()
 
 for (const file of files) {
   let unit
@@ -130,6 +136,12 @@ for (const file of files) {
   if (isNonEmptyString(unit.id)) {
     if (seenIds.has(unit.id)) errors.push(`duplicate unit id "${unit.id}"`)
     seenIds.add(unit.id)
+  }
+  if (isNonEmptyString(unit.strand) && isNonEmptyString(unit.gradeBand)) {
+    const key = `${unit.strand}::${unit.gradeBand}`
+    if (seenStrandBands.has(key))
+      errors.push(`duplicate strand+gradeBand: "${unit.strand}" already has a "${unit.gradeBand}" unit`)
+    seenStrandBands.add(key)
   }
   for (const w of warnings) console.warn(`⚠ ${file}: ${w}`)
   for (const e of errors) console.error(`✗ ${file}: ${e}`)

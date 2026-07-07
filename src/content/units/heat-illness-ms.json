@@ -1,0 +1,248 @@
+{
+  "id": "heat-illness-ms",
+  "title": "Beating the Heat: Staying Safe in Hot Weather",
+  "category": "Environmental Emergencies",
+  "strand": "heat-illness",
+  "gradeBand": "7-8",
+  "summary": "Learn the warning signs your body gives you in hot weather, and what to do about them: tell an adult, get water, get shade.",
+  "minutes": 12,
+  "sections": [
+    {
+      "heading": "Why hot weather can be dangerous",
+      "body": [
+        "Playing sports in hot weather makes your body work extra hard. Most of the time you just feel sweaty and tired. But sometimes the heat can make someone very sick, very fast.",
+        "The good news: heat illness is almost always preventable. The key is catching the warning signs early and telling an adult right away — not toughing it out."
+      ]
+    },
+    {
+      "heading": "How your body cools off",
+      "body": [
+        "When you exercise, your muscles make heat. Your body's main way to get rid of that heat is sweating. As sweat dries (evaporates) off your skin, it carries heat away with it.",
+        "That's why drinking water matters so much. If you wait until you feel thirsty, you're already running low on fluid. Drink water regularly, even before you feel thirsty."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Sip on a schedule",
+        "text": "During practice or a game in hot weather, take small sips of water every 15-20 minutes — don't wait for a break or for thirst."
+      }
+    },
+    {
+      "heading": "Signs something's wrong",
+      "body": [
+        "These are the warning signs of heat illness. Learn them for yourself AND for watching out for your teammates."
+      ],
+      "list": [
+        "Headache",
+        "Feeling dizzy or lightheaded",
+        "Upset stomach or feeling like you might throw up",
+        "Muscle cramps (tight, painful muscles)",
+        "Feeling way more tired than usual",
+        "Skin looking pale or feeling clammy",
+        "Suddenly NOT sweating anymore, even though it's hot",
+        "Acting confused, or saying things that don't make sense"
+      ]
+    },
+    {
+      "heading": "What to do if you notice these signs",
+      "body": [
+        "If you feel any of these warning signs — or you notice them in a teammate — your job is simple: recognize it and tell a trusted adult right away. You are not expected to decide how serious it is. That's the coach's or athletic trainer's job."
+      ],
+      "list": [
+        "Tell your coach, athletic trainer, or another adult immediately.",
+        "Stop playing and move to shade or somewhere cool.",
+        "Sip water slowly.",
+        "Don't wait around to see if it goes away on its own."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "It's never wrong to speak up",
+        "text": "Some athletes worry about looking weak or missing playing time. Telling an adult about warning signs is never the wrong choice — even if it turns out to be nothing serious."
+      }
+    },
+    {
+      "heading": "Heat stroke: the most dangerous sign",
+      "body": [
+        "Heat stroke is when the body gets so overheated that it stops working right, especially the brain. This is the most serious kind of heat illness.",
+        "The biggest red flags for heat stroke are confusion (acting strange, not making sense, not knowing where they are) and passing out. A person with heat stroke might still be sweating, so don't assume someone is fine just because they're wet with sweat."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Confusion or passing out in the heat = call 911",
+        "text": "If you or a teammate becomes confused, acts strange, or passes out during hot-weather activity, this is a medical emergency. Tell an adult immediately so they can call 911. Do not wait to see if it passes."
+      }
+    },
+    {
+      "heading": "Staying safe in hot weather",
+      "body": [
+        "Most heat illness can be prevented with simple habits."
+      ],
+      "list": [
+        "Drink water throughout the whole day, not just during practice.",
+        "Wear light-colored, loose-fitting clothing when possible.",
+        "Take breaks in the shade when you can.",
+        "Speak up early — tell an adult as soon as you notice a warning sign, not after it gets worse.",
+        "On very hot or humid days, coaches and athletic trainers may shorten practice or add extra breaks — that's a good thing, not a punishment."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "You start to feel dizzy and get a headache during outdoor practice on a hot day. What should you do first?",
+      "choices": [
+        "Keep playing and see if it passes",
+        "Tell your coach or another adult right away",
+        "Quietly sit out without telling anyone",
+        "Drink a soda to feel better"
+      ],
+      "answerIndex": 1,
+      "explanation": "Your job is to recognize warning signs and tell a trusted adult right away. Playing through it, hiding it, or sitting out silently all delay the help you might need."
+    },
+    {
+      "id": "q2",
+      "question": "Which of these is a warning sign of heat illness?",
+      "choices": [
+        "Feeling more energetic than usual",
+        "Dizziness",
+        "Colder skin than normal",
+        "Improved mood"
+      ],
+      "answerIndex": 1,
+      "explanation": "Dizziness is a common warning sign of heat illness. Feeling more energetic, having cold skin, or an improved mood are not warning signs of overheating."
+    },
+    {
+      "id": "q3",
+      "question": "During a hot practice, a teammate suddenly stops sweating and starts talking in a way that doesn't make sense. What should you do?",
+      "choices": [
+        "Give them a sports drink and keep an eye on them yourself",
+        "Tell them to walk it off",
+        "Tell an adult immediately — this could be an emergency",
+        "Ignore it, everyone gets tired at practice"
+      ],
+      "answerIndex": 2,
+      "explanation": "Confusion combined with not sweating in the heat are major red flags for heat stroke, a medical emergency. Get an adult immediately so they can call 911 — don't try to manage it yourself or wait it out."
+    },
+    {
+      "id": "q4",
+      "question": "Why should you drink water before you feel thirsty?",
+      "choices": [
+        "Thirst means your body is already low on fluid",
+        "Thirst has nothing to do with hydration",
+        "Drinking before you're thirsty is bad for you",
+        "You should only drink water after practice ends"
+      ],
+      "answerIndex": 0,
+      "explanation": "By the time you feel thirsty, your body is already running low on fluid. Drinking on a schedule, rather than waiting for thirst, helps you stay ahead of dehydration."
+    },
+    {
+      "id": "q5",
+      "question": "What is heat stroke?",
+      "choices": [
+        "A minor sunburn from being outside too long",
+        "The body's most serious heat illness — it overheats so much that it stops working correctly, especially the brain",
+        "The same thing as a muscle cramp",
+        "A mild headache from not eating breakfast"
+      ],
+      "answerIndex": 1,
+      "explanation": "Heat stroke is the most dangerous heat illness — the body overheats badly enough to affect the brain, causing confusion or passing out. It's a medical emergency, not a minor issue."
+    },
+    {
+      "id": "q6",
+      "question": "You start feeling overheated during a game. After telling an adult, what else should you do?",
+      "choices": [
+        "Push through and exercise harder to sweat it out",
+        "Move to shade and sip water slowly",
+        "Take a hot shower right away",
+        "Hold your breath until you feel normal"
+      ],
+      "answerIndex": 1,
+      "explanation": "Moving to shade and sipping water helps your body cool down and rehydrate. Exercising harder or adding more heat (a hot shower) would make things worse."
+    },
+    {
+      "id": "q7",
+      "question": "Which of these situations is a 911 emergency?",
+      "choices": [
+        "Feeling a little thirsty during warmups",
+        "A mild headache before practice starts",
+        "A teammate passes out during hot-weather practice",
+        "Feeling tired at the end of a long practice"
+      ],
+      "answerIndex": 2,
+      "explanation": "Passing out during hot-weather activity is a red flag for heat stroke and needs an immediate call to 911. Mild thirst, a mild headache before starting, or normal end-of-practice tiredness are not emergencies by themselves."
+    },
+    {
+      "id": "q8",
+      "question": "What is one of the best ways to prevent heat illness during practice?",
+      "choices": [
+        "Drink water regularly throughout the day and take shade breaks",
+        "Skip water breaks so you don't have to stop",
+        "Wear heavy, dark-colored clothing",
+        "Wait until you feel very thirsty before drinking"
+      ],
+      "answerIndex": 0,
+      "explanation": "Drinking water on a regular schedule and taking breaks in the shade are simple, effective habits that prevent heat illness. Skipping water, wearing heat-trapping clothing, or waiting for thirst all raise your risk."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Heat illness",
+      "back": "When hot weather and exercise make your body overheat, ranging from mild (cramps, headache) to very serious (heat stroke)."
+    },
+    {
+      "id": "f2",
+      "front": "How sweat cools you down",
+      "back": "As sweat evaporates (dries) off your skin, it carries heat away from your body. That's your body's main cooling system."
+    },
+    {
+      "id": "f3",
+      "front": "Most dangerous warning sign: confusion",
+      "back": "Acting confused or not making sense during hot-weather activity is a major red flag for heat stroke — tell an adult immediately."
+    },
+    {
+      "id": "f4",
+      "front": "Warning sign: no more sweating",
+      "back": "Suddenly not sweating anymore even though it's hot is dangerous — it can mean the body's cooling system is failing."
+    },
+    {
+      "id": "f5",
+      "front": "What to do if you feel warning signs",
+      "back": "Tell a coach or trusted adult right away, stop and move to shade, and sip water slowly."
+    },
+    {
+      "id": "f6",
+      "front": "Heat stroke",
+      "back": "The most serious heat illness — the body overheats so badly it stops working correctly, especially the brain. It is a 911 emergency."
+    },
+    {
+      "id": "f7",
+      "front": "Rule about thirst",
+      "back": "Drink water before you feel thirsty — feeling thirsty means your body is already low on fluid."
+    },
+    {
+      "id": "f8",
+      "front": "How often should you drink during activity?",
+      "back": "Take small sips of water about every 15-20 minutes, even if you don't feel thirsty yet."
+    },
+    {
+      "id": "f9",
+      "front": "Who to tell about warning signs",
+      "back": "Your coach, athletic trainer, or any other trusted adult nearby — right away, not after practice."
+    },
+    {
+      "id": "f10",
+      "front": "Is it ever wrong to speak up?",
+      "back": "No. Telling an adult about a warning sign is never the wrong choice, even if it turns out to be nothing serious."
+    },
+    {
+      "id": "f11",
+      "front": "Prevention habits",
+      "back": "Drink water all day (not just at practice), wear light loose clothing, and take shade breaks when you can."
+    },
+    {
+      "id": "f12",
+      "front": "Heat cramps (simple version)",
+      "back": "Painful, tight muscles from sweating a lot and losing fluid. Rest, get shade, and drink fluids."
+    }
+  ]
+}

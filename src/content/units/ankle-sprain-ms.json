@@ -1,0 +1,229 @@
+{
+  "id": "ankle-sprain-ms",
+  "title": "Rolled Ankles: What to Do",
+  "category": "Lower Extremity Injuries",
+  "strand": "ankle-sprain",
+  "gradeBand": "7-8",
+  "summary": "Learn to spot a rolled ankle, what to do right away, and when it needs a doctor instead of just rest.",
+  "minutes": 10,
+  "sections": [
+    {
+      "heading": "Why this matters",
+      "body": [
+        "A rolled ankle — doctors call it an ankle sprain — is the most common injury in youth sports. It happens in basketball, soccer, volleyball, football, and just about every other sport that involves running, jumping, or cutting.",
+        "You don't need to be a doctor to help. Your job is to notice it happened, know the basic first steps, and know when to get an adult right away."
+      ]
+    },
+    {
+      "heading": "What's actually happening",
+      "body": [
+        "Your ankle is held together by ligaments — strong bands of tissue that connect bone to bone, kind of like sturdy rubber straps. They keep your ankle from moving too far in any one direction.",
+        "When your foot rolls or twists too hard — usually inward, so the bottom of your foot turns toward your other foot — those ligaments get stretched too far or torn. That stretch or tear is what we call a sprain."
+      ]
+    },
+    {
+      "heading": "How to spot it",
+      "body": [
+        "Most rolled ankles look and feel similar. Watch for:"
+      ],
+      "list": [
+        "The player rolls, twists, or 'turns over' their ankle, often landing on someone's foot or an uneven spot",
+        "Pain right around the ankle, usually worse on the outside",
+        "Swelling — the ankle starts to puff up, sometimes within minutes",
+        "Bruising that shows up later (not always right away)",
+        "Limping, favoring the ankle, or not wanting to put weight on it"
+      ]
+    },
+    {
+      "heading": "What to do right away",
+      "body": [
+        "If you see or suspect a rolled ankle, follow these steps in order:"
+      ],
+      "list": [
+        "Stop playing. Don't try to 'walk it off' or finish the play.",
+        "Tell a coach, athletic trainer, or other trusted adult right away.",
+        "Rest — stay off the ankle and let the adult decide next steps.",
+        "Ice — a bag of ice wrapped in a thin towel, about 15-20 minutes, never straight on bare skin.",
+        "Elevate — prop the ankle up higher than the heart when sitting or lying down, if possible."
+      ]
+    },
+    {
+      "heading": "Red flags — this might be more than a sprain",
+      "body": [
+        "Most rolled ankles are simple sprains that get better with rest. But some signs mean the bone itself might be broken, not just the ligaments stretched. These need a doctor, not just rest and ice."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Get an adult and see a doctor if you notice:",
+        "text": "The athlete cannot put any weight on the foot at all (not even a little), the ankle or foot looks bent or crooked (deformity), the foot feels numb or looks pale/cold, or the pain is severe and not improving. Any of these means: stop, tell an adult immediately, and get it checked by a doctor. Never wait and see with these signs."
+      }
+    },
+    {
+      "heading": "Getting back to sport",
+      "body": [
+        "Don't decide on your own when a teammate (or you) can go back to play — that call belongs to an athletic trainer, coach following medical guidance, or a doctor.",
+        "Going back too soon, before the ankle is fully healed, is one of the biggest reasons athletes re-sprain the same ankle again and again. Healing takes patience, even when a sprain feels 'not that bad.'"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is a ligament?",
+      "choices": [
+        "A strong band of tissue that connects bone to bone",
+        "A type of muscle in the calf",
+        "The bone on the outside of the ankle",
+        "A brace worn during sports"
+      ],
+      "answerIndex": 0,
+      "explanation": "Ligaments connect bone to bone and hold joints like the ankle together. When they stretch or tear too far, that's a sprain."
+    },
+    {
+      "id": "q2",
+      "question": "Which direction does the foot usually roll in a typical ankle sprain?",
+      "choices": [
+        "Straight up",
+        "Inward, so the sole turns toward the other foot",
+        "It doesn't matter, sprains don't involve rolling",
+        "Backward, like stepping off a curb"
+      ],
+      "answerIndex": 1,
+      "explanation": "Most ankle sprains happen when the foot rolls inward, stretching or tearing the ligaments on the outside of the ankle."
+    },
+    {
+      "id": "q3",
+      "question": "A teammate rolls her ankle during a game. What should you do first?",
+      "choices": [
+        "Tell her to keep playing if she can handle the pain",
+        "Wrap it with tape yourself so she can finish the game",
+        "Have her stop playing and tell a coach or athletic trainer right away",
+        "Tell her to stretch it out"
+      ],
+      "answerIndex": 2,
+      "explanation": "The first step is always to stop playing and get a trusted adult involved. Students should never tape an injury or decide someone can keep playing."
+    },
+    {
+      "id": "q4",
+      "question": "Which of these is NOT one of the immediate first-aid steps for a simple rolled ankle?",
+      "choices": [
+        "Rest",
+        "Ice",
+        "Elevate",
+        "Massage it hard to work out the swelling"
+      ],
+      "answerIndex": 3,
+      "explanation": "Rest, ice, and elevation help a sprain. Massaging or pushing on a fresh injury can make swelling and pain worse and is not a first-aid step."
+    },
+    {
+      "id": "q5",
+      "question": "How should ice be applied to a rolled ankle?",
+      "choices": [
+        "Directly on bare skin for an hour",
+        "Wrapped in a thin towel, about 15-20 minutes at a time",
+        "Only after the swelling has already gone away",
+        "Ice should never be used on a sprain"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ice should go over a thin towel, not bare skin, for about 15-20 minutes at a time. This cools the area without causing an ice burn."
+    },
+    {
+      "id": "q6",
+      "question": "Which sign is a red flag that means an athlete needs to see a doctor right away, not just rest?",
+      "choices": [
+        "Mild swelling around the ankle bone",
+        "Complete inability to put any weight on the foot at all",
+        "Some soreness the next morning",
+        "Wanting to sit out the rest of practice"
+      ],
+      "answerIndex": 1,
+      "explanation": "Being unable to bear any weight at all — along with deformity, numbness, or coldness in the foot — suggests a possible broken bone, which needs a doctor right away."
+    },
+    {
+      "id": "q7",
+      "question": "Why is it risky for an athlete to go back to play too soon after a rolled ankle?",
+      "choices": [
+        "It isn't risky — sprains heal instantly once the pain stops",
+        "It can lead to re-spraining the same ankle again",
+        "It causes a completely different injury to the knee",
+        "It only matters for professional athletes"
+      ],
+      "answerIndex": 1,
+      "explanation": "Returning before a sprain has fully healed is one of the top reasons athletes hurt the same ankle again. Return-to-play decisions belong to a trained professional."
+    },
+    {
+      "id": "q8",
+      "question": "Who should decide when an athlete is ready to return to play after a rolled ankle?",
+      "choices": [
+        "The athlete themselves, based on how tough they feel",
+        "A teammate who has had a similar injury before",
+        "An athletic trainer, doctor, or coach following medical guidance",
+        "Whoever is closest to the field at the time"
+      ],
+      "answerIndex": 2,
+      "explanation": "Return-to-play decisions should always come from an athletic trainer, doctor, or coach acting on medical guidance — never a self-decision or a guess by a peer."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Ankle sprain (rolled ankle)",
+      "back": "When the ligaments holding the ankle together get stretched or torn, usually from the foot rolling or twisting."
+    },
+    {
+      "id": "f2",
+      "front": "Ligament",
+      "back": "A strong band of tissue that connects bone to bone and holds a joint together."
+    },
+    {
+      "id": "f3",
+      "front": "Most common direction of ankle roll",
+      "back": "Inward — the sole of the foot turns toward the other foot."
+    },
+    {
+      "id": "f4",
+      "front": "Signs of a rolled ankle",
+      "back": "Pain, swelling, bruising (sometimes later), and trouble putting weight on the foot."
+    },
+    {
+      "id": "f5",
+      "front": "First step after a rolled ankle",
+      "back": "Stop playing right away — don't try to walk it off or finish the play."
+    },
+    {
+      "id": "f6",
+      "front": "Second step after a rolled ankle",
+      "back": "Tell a coach, athletic trainer, or other trusted adult immediately."
+    },
+    {
+      "id": "f7",
+      "front": "Rest, Ice, Elevate",
+      "back": "The basic first-aid steps for a simple rolled ankle: stay off it, ice it, and prop it up above the heart."
+    },
+    {
+      "id": "f8",
+      "front": "How to ice a sprain",
+      "back": "Wrap ice in a thin towel (never bare skin) and apply for about 15-20 minutes at a time."
+    },
+    {
+      "id": "f9",
+      "front": "Red flag: can't bear any weight",
+      "back": "If someone cannot put any weight at all on the foot, it might be broken, not just sprained — get a doctor right away."
+    },
+    {
+      "id": "f10",
+      "front": "Red flag: deformity",
+      "back": "If the ankle or foot looks bent or crooked, this is a sign of a possible fracture — get medical help immediately."
+    },
+    {
+      "id": "f11",
+      "front": "Other red flags to watch for",
+      "back": "Numbness, coldness, or pale color in the foot, or severe pain that isn't improving."
+    },
+    {
+      "id": "f12",
+      "front": "Who decides when to return to play?",
+      "back": "An athletic trainer, doctor, or coach following medical guidance — never the athlete or a teammate alone."
+    }
+  ]
+}

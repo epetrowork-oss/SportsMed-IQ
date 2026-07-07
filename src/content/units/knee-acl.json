@@ -2,6 +2,8 @@
   "id": "knee-acl",
   "title": "Knee Injuries: ACL & Friends",
   "category": "Lower Extremity Injuries",
+  "strand": "knee-acl",
+  "gradeBand": "9-10",
   "summary": "The four major knee ligaments, the classic non-contact ACL tear, the 'unhappy triad,' and what to do when a knee gives out on the field.",
   "minutes": 20,
   "sections": [

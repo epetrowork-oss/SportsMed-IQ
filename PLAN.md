@@ -95,6 +95,75 @@ credits beyond review.* Good candidates to round out a semester:
 - [x] Hydration quiz fluid-replacement range fixed (64-96 → 80-96 oz,
       caught by automated PR review)
 
+### 6. The 6-year program: spiral curriculum expansion (in progress)
+
+**Direction** (user decision, 2026-07-07): SportMedIQ becomes a 7th-12th
+grade program. Most topics ("strands") get up to three units — one per
+grade band (`7-8`, `9-10`, `11-12`) — each going deeper than the last,
+rather than one flat difficulty level. See `src/content/README.md` →
+"Grade bands" for the depth/tone contract each band must follow, and
+`.claude/agents/unit-author.md`, which now reads sibling-band units before
+writing so depth genuinely increases.
+
+- [x] Foundation: `strand` + `gradeBand` fields added to the schema,
+      validator enforces both (valid band enum, no duplicate strand+band
+      pairs). All 13 existing units retrofitted as the `9-10` middle rung.
+      Home page grade filter (All / 7-8 / 9-10 / 11-12) shipped, persisted,
+      browser-verified.
+
+**Strand × band matrix** — 15 strands total (13 original + `shoulder-injuries`
++ `cold-exposure`, both authored straight at `9-10`, no MS/advanced yet).
+`x` = exists, blank = queued, `9-10` is the only band with full coverage today.
+
+| Strand | 7-8 | 9-10 | 11-12 |
+|---|---|---|---|
+| ankle-sprain | x | x | |
+| concussion | x | x | |
+| heat-illness | x | x | |
+| wound-care | x | x | |
+| emergency-action-plan | x | x | |
+| knee-acl | x | x | |
+| cold-exposure | x | x | |
+| muscle-strains | x | x | |
+| overuse-injuries | x | x | |
+| shoulder-injuries | x | x | |
+| fractures-dislocations | x | x | |
+| taping-wrapping | x | x | |
+| hydration-nutrition | x | x | |
+
+- [x] Wave 1 — `7-8` versions of the 5 highest-priority safety-critical
+      strands: concussion, heat illness, wound care, EAP/CPR-AED, ankle
+      sprain. Each independently verified to genuinely simplify (no
+      ligament names/grading system, no WBGT/clinical thresholds, no
+      tourniquets/wound taxonomy, no CPR technique/rescuer framing, etc.)
+      rather than just restate the 9-10 unit in shorter words. 18 units
+      total now; grade filter browser-verified (5 / 13 / 0 split correct).
+
+**Remaining waves** (not yet started, rough order of value):
+- [x] Wave 2 — `7-8` versions of the remaining 8 strands: knee-acl,
+      muscle-strains, overuse-injuries, cold-exposure,
+      fractures-dislocations, taping-wrapping, hydration-nutrition,
+      shoulder-injuries. Each independently verified against its 9-10
+      sibling for real depth reduction (no anatomy/grading/technique/
+      clinical thresholds). One agent hit a transient API error mid-run
+      (fractures-dislocations) and was retried cleanly with no partial
+      file left behind. All 13 strands now have both `7-8` and `9-10`
+      coverage — 26 units total. Browser-verified: grade filter (13/13/0
+      split), quiz and flashcards render correctly for new units, zero
+      console errors, no overflow at 375px.
+- [ ] Wave 3 — `11-12` versions of the 5 wave-1 strands (deeper:
+      mechanism/anatomy, grading systems, differential/decision quizzes)
+- [ ] Wave 4 — `11-12` versions of the remaining 8 strands
+- [ ] New strands not yet covered at any band, worth considering for a full
+      6-year program: eye injuries, dental/facial trauma, blisters & skin
+      issues, mental health/return-to-play psychology, nutrition for growing
+      athletes (distinct from the existing general hydration-nutrition unit),
+      strength & conditioning basics, injury prevention/warm-up science
+- [ ] Once 7-8 and 11-12 both have real coverage, revisit the Home page:
+      consider a "these grades already have this strand" cross-link on unit
+      cards (today the filter just shows/hides; no linking between a
+      strand's grade-band versions yet)
+
 ## Out of scope (intentional, unchanged)
 
 Accounts/auth, live server-based sync, assigning content.

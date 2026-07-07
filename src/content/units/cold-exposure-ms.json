@@ -1,0 +1,235 @@
+{
+  "id": "cold-exposure-ms",
+  "title": "Staying Safe in Cold Weather",
+  "category": "Environmental Emergencies",
+  "strand": "cold-exposure",
+  "gradeBand": "7-8",
+  "summary": "Learn how to dress for cold practices and games, notice the warning signs of cold-weather trouble, and know exactly who to tell.",
+  "minutes": 10,
+  "sections": [
+    {
+      "heading": "Why cold weather matters for athletes",
+      "body": [
+        "If you play a fall or winter sport — football, soccer, cross country, or anything outdoors — you'll practice or play in the cold at some point. Cold weather isn't just uncomfortable. It can hurt your body if you're not dressed right or if you stay out too long without warming up.",
+        "Your body likes to stay at about the same temperature all the time, close to 98.6°F. In cold weather, your body has to work hard to hold onto that heat. Two things can go wrong: your whole body can get too cold (called hypothermia — say it hy-po-THER-mee-uh, it just means 'body temperature dropping too low'), or a small part of your body, like your fingers or toes, can actually start to freeze (called frostbite).",
+        "The good news: both of these give warning signs before they become a real emergency. Your job is to notice the signs — in yourself or a teammate — and tell a coach, athletic trainer, or other trusted adult right away."
+      ]
+    },
+    {
+      "heading": "Dressing right so you don't get too cold",
+      "body": [
+        "The best way to handle cold weather is to prevent trouble before it starts. Getting wet makes cold way more dangerous, and so does wind — a wet, windy day feels much colder than a dry, still day at the same temperature."
+      ],
+      "list": [
+        "Wear layers instead of one thick jacket — a layer close to your skin, a warmer layer on top of that, and a jacket that blocks wind and rain on the outside.",
+        "Avoid cotton shirts under your gear — cotton soaks up sweat and stays wet against your skin, which makes you colder.",
+        "Cover your head, ears, and hands — a hat and gloves matter more than people think.",
+        "Change out of sweaty or rain-soaked clothes as soon as practice or the game ends, since you cool down fast once you stop moving.",
+        "If your team has a cold-weather plan (like shortening or moving practice indoors), follow it — coaches set those rules to keep you safe."
+      ]
+    },
+    {
+      "heading": "Warning signs your body is getting too cold",
+      "body": [
+        "Shivering is your body's way of trying to warm itself up — it's a normal first response to cold. If you or a teammate is shivering hard and can't stop, that's already a sign to get inside and tell an adult.",
+        "Here's the part that surprises people: shivering stopping is NOT a good sign. If someone was shivering hard and then suddenly goes quiet, seems confused, clumsy, or unusually sleepy, that means their body is getting worse, not better. This is more dangerous than shivering, even though the shivering has stopped."
+      ],
+      "list": [
+        "Can't stop shivering",
+        "Slurred speech or trouble talking clearly",
+        "Stumbling, tripping, or losing coordination",
+        "Fumbling with zippers, gloves, or equipment",
+        "Confused, unusually sleepy, or acting 'out of it'"
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Stopped shivering + confused = get an adult NOW",
+        "text": "A teammate who stops shivering and seems confused, very sleepy, or hard to wake up needs an adult immediately — this is a medical emergency, not a sign they're warming up. Don't wait to see if they 'shake it off.' Tell a coach or athletic trainer right away."
+      }
+    },
+    {
+      "heading": "Warning signs of frostbite",
+      "body": [
+        "Frostbite means skin (and sometimes the tissue underneath) is actually starting to freeze. It shows up most on fingers, toes, ears, nose, and cheeks — the parts of your body farthest from your warm core and easiest to expose to wind and cold.",
+        "Watch for skin that looks white, waxy, or grayish and feels numb. If you or a teammate notices this, it's time to get inside and tell an adult — do not try to warm it up yourself or wait to see if it gets better on its own."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Check on your teammates",
+        "text": "Someone with early hypothermia or frostbite might not notice their own confusion or numb fingers. Look out for each other — if a teammate seems 'off,' slurring words, or complaining their fingers feel numb, speak up and tell an adult even if they say they're fine."
+      }
+    },
+    {
+      "heading": "What to do: recognize it, tell an adult",
+      "body": [
+        "As a student athlete, your job in cold weather isn't to treat anyone — it's to recognize a problem early and get help fast. That means noticing the signs above and telling a coach, athletic trainer, or another adult right away, not waiting to see if things get better.",
+        "If you notice any of these signs in yourself, speak up immediately — don't tough it out or push through practice. If you notice them in a teammate, tell an adult even if your teammate says they're okay. Adults on your team are trained to take it from there: getting the athlete warm, dry, and safe, and calling for more help if needed."
+      ],
+      "list": [
+        "Can't stop shivering, or has stopped shivering and seems confused or very sleepy — tell an adult now",
+        "Numb, white, or waxy-looking skin on fingers, toes, ears, or nose — tell an adult now",
+        "A teammate acting confused, clumsy, or 'not themselves' in cold weather — tell an adult now"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is hypothermia?",
+      "choices": [
+        "A drop in the body's overall temperature",
+        "A sunburn on cold, windy days",
+        "A muscle cramp from cold air",
+        "A type of frostbite blister"
+      ],
+      "answerIndex": 0,
+      "explanation": "Hypothermia means the body's core temperature has dropped below normal because the cold has overwhelmed the body's ability to stay warm. It's different from frostbite, which is freezing of a specific body part."
+    },
+    {
+      "id": "q2",
+      "question": "Which layer should you avoid wearing directly against your skin in cold weather?",
+      "choices": [
+        "A wind- and water-resistant outer shell",
+        "An insulating middle layer",
+        "Cotton",
+        "A moisture-wicking base layer"
+      ],
+      "answerIndex": 2,
+      "explanation": "Cotton soaks up sweat and stays wet against the skin, which speeds up how fast you get cold. A wicking base layer, insulating middle layer, and protective outer shell work together to keep you warm and dry."
+    },
+    {
+      "id": "q3",
+      "question": "A teammate has been shivering hard for several minutes and can't stop. What should you do?",
+      "choices": [
+        "Tell them to keep playing to warm up faster",
+        "Ignore it — shivering always goes away on its own",
+        "Tell a coach or athletic trainer right away",
+        "Give them a hot drink and send them back onto the field"
+      ],
+      "answerIndex": 2,
+      "explanation": "Shivering that won't stop is a warning sign that needs an adult's attention right away. Your job is to recognize the problem and tell a trusted adult, not to decide on your own how to treat it or push through."
+    },
+    {
+      "id": "q4",
+      "question": "A teammate was shivering hard earlier, but now she has stopped shivering and seems confused and very sleepy. What does this mean?",
+      "choices": [
+        "She is warming back up and doing better",
+        "This is actually a more serious warning sign — get an adult immediately",
+        "She just needs a few minutes alone to rest",
+        "Shivering stopping is never something to worry about"
+      ],
+      "answerIndex": 1,
+      "explanation": "Stopping shivering while acting confused or very sleepy is a sign of worsening cold exposure, not recovery. This is more dangerous than shivering, and an adult needs to know immediately."
+    },
+    {
+      "id": "q5",
+      "question": "Which of these is a warning sign of frostbite?",
+      "choices": [
+        "Skin that looks white, waxy, or grayish and feels numb",
+        "Skin that is sweaty and bright red",
+        "A slight sunburn on the cheeks",
+        "Warm, itchy hands after putting on gloves"
+      ],
+      "answerIndex": 0,
+      "explanation": "Numb skin that looks white, waxy, or grayish is a classic frostbite warning sign, most common on fingers, toes, ears, nose, and cheeks. Sweaty red skin or mild itching from gloves are not frostbite signs."
+    },
+    {
+      "id": "q6",
+      "question": "You notice your own fingers feel numb and look white during a cold outdoor practice. What should you do?",
+      "choices": [
+        "Rub them together hard until they warm up",
+        "Wait until practice ends to mention it",
+        "Tell a coach or athletic trainer right away and get inside",
+        "Hold them right up against the heater in the locker room"
+      ],
+      "answerIndex": 2,
+      "explanation": "Numb, white fingers are a frostbite warning sign — tell an adult right away and get inside. Rewarming yourself (rubbing, direct heat) is adult-level care that can actually make an injury worse, so that decision belongs to a trained adult, not you."
+    },
+    {
+      "id": "q7",
+      "question": "Which body parts are most likely to show frostbite warning signs?",
+      "choices": [
+        "The chest and stomach",
+        "Fingers, toes, ears, nose, and cheeks",
+        "The knees and elbows only",
+        "The back and shoulders"
+      ],
+      "answerIndex": 1,
+      "explanation": "Fingers, toes, ears, nose, and cheeks are farthest from the body's warm core and often less covered, so they're the most common sites for frostbite. Covering these areas with gloves, hats, and warm layers helps prevent it."
+    },
+    {
+      "id": "q8",
+      "question": "What is your main job as a student athlete when it comes to cold-weather injuries?",
+      "choices": [
+        "Decide on your own whether a teammate needs to keep playing",
+        "Treat a teammate's frostbite yourself before telling anyone",
+        "Recognize the warning signs and tell a trusted adult right away",
+        "Wait until after practice to mention anything unusual"
+      ],
+      "answerIndex": 2,
+      "explanation": "As a student athlete, your job is to recognize warning signs — in yourself or a teammate — and report them to a coach or athletic trainer immediately. Treating an injury or deciding whether someone should keep playing is an adult's call, not yours."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Hypothermia",
+      "back": "When the whole body gets too cold — core body temperature drops below normal."
+    },
+    {
+      "id": "f2",
+      "front": "Frostbite",
+      "back": "When skin (and sometimes tissue underneath) actually starts to freeze, most often on fingers, toes, ears, nose, and cheeks."
+    },
+    {
+      "id": "f3",
+      "front": "Layering rule",
+      "back": "Wear a layer close to your skin, a warmer layer over it, and a wind/water-resistant layer on the outside. Avoid cotton against your skin."
+    },
+    {
+      "id": "f4",
+      "front": "Why wet and windy is worse",
+      "back": "A wet, windy day pulls heat away from your body much faster than a dry, still day at the same temperature."
+    },
+    {
+      "id": "f5",
+      "front": "Shivering that won't stop",
+      "back": "A warning sign your body is struggling to stay warm — tell an adult and get inside."
+    },
+    {
+      "id": "f6",
+      "front": "Shivering suddenly stops + confusion",
+      "back": "This is worse, not better — a sign of a serious problem. Get an adult immediately, it's an emergency."
+    },
+    {
+      "id": "f7",
+      "front": "Cold-weather warning signs to watch for",
+      "back": "Can't stop shivering, slurred speech, stumbling or clumsiness, fumbling with gear, confusion, or unusual sleepiness."
+    },
+    {
+      "id": "f8",
+      "front": "Frostbite warning signs",
+      "back": "Skin looks white, waxy, or grayish and feels numb."
+    },
+    {
+      "id": "f9",
+      "front": "Frostbite common spots",
+      "back": "Fingers, toes, ears, nose, and cheeks — the parts farthest from your warm core."
+    },
+    {
+      "id": "f10",
+      "front": "What to do if you notice a warning sign",
+      "back": "Tell a coach, athletic trainer, or other trusted adult right away — don't wait or try to handle it yourself."
+    },
+    {
+      "id": "f11",
+      "front": "Buddy system in cold weather",
+      "back": "A cold or confused teammate might not notice their own symptoms — watch out for each other and speak up."
+    },
+    {
+      "id": "f12",
+      "front": "Your job in cold weather",
+      "back": "Recognize the problem, tell a trusted adult — not to treat it or decide on your own what to do next."
+    }
+  ]
+}

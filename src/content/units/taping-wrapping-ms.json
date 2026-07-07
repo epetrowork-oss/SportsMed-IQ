@@ -1,0 +1,221 @@
+{
+  "id": "taping-wrapping-ms",
+  "title": "What Tape and Wraps Are For",
+  "category": "Acute Care & First Aid",
+  "strand": "taping-wrapping",
+  "gradeBand": "7-8",
+  "summary": "Learn why coaches and athletic trainers tape and wrap injuries, and the simple safety signs that mean a wrap is too tight.",
+  "minutes": 10,
+  "sections": [
+    {
+      "heading": "You've seen the tape. Here's why it's there.",
+      "body": [
+        "Walk into any locker room or sideline and you'll see athletic tape and stretchy wraps everywhere — on ankles, wrists, fingers, knees. They aren't there to look tough. Each one is doing a specific job.",
+        "Tape is a stiff, sticky material that limits how far a joint (like an ankle) can move in one direction. A wrap is stretchy and squeezes evenly, kind of like a firm hug for a body part.",
+        "This unit is about understanding what tape and wraps do and why. Actually applying tape the right way takes hands-on training from a coach or athletic trainer — that's a skill for later. Right now, your job is to know the purpose and the safety rules."
+      ]
+    },
+    {
+      "heading": "Three jobs tape and wraps do",
+      "body": [
+        "Almost every tape job or wrap is doing one of these three things:"
+      ],
+      "list": [
+        "Support — keeps a joint from bending too far in the direction that already got hurt, like taping an ankle so it can't roll inward again.",
+        "Compression — squeezes a swollen area evenly, which helps hold down swelling and can keep an ice pack in place.",
+        "Protection — cushions or covers a sore or healing spot so it doesn't get bumped or rubbed during practice."
+      ]
+    },
+    {
+      "heading": "Taping is an adult's job — not yours yet",
+      "body": [
+        "A coach or athletic trainer (a trained professional who works with athletes on injury prevention and care) decides if, when, and how to tape or wrap an injury. They know how tight is safe, which pattern fits which joint, and what to check for afterward.",
+        "If you or a teammate gets hurt, the right move is simple: tell an adult right away. Do not try to tape or wrap the injury yourself, and do not let a teammate talk you into doing it for them. An untrained tape job can make an injury worse instead of better."
+      ]
+    },
+    {
+      "heading": "Too tight? Speak up right away",
+      "body": [
+        "A good wrap feels snug, like a firm handshake. It should never feel painfully tight, and it should never make part of your body go numb or tingly.",
+        "If you ever have tape or a wrap on and notice numbness, tingling (a pins-and-needles feeling), or your fingers or toes turning pale, blue, or a different color than usual, that wrap is too tight. It may be squeezing off blood flow."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Tell an adult immediately if...",
+        "text": "Your fingers or toes go numb, tingle, or change color after tape or a wrap is applied. Don't wait to see if it goes away on its own — tell your coach or athletic trainer right away so they can loosen it."
+      }
+    },
+    {
+      "heading": "Tape doesn't fix an injury — and it can't hide one",
+      "body": [
+        "Tape and wraps can support a joint, but they don't heal anything by themselves. A hurt ankle still needs rest, ice, and time (and sometimes a doctor) to actually get better — tape just helps protect it along the way.",
+        "Some athletes ask to be taped tightly so a coach won't notice they're hurt and will let them keep playing. That's never okay. Pain is your body telling you something is wrong, and hiding it with tape can turn a small injury into a much bigger one."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Never use tape to hide an injury",
+        "text": "If you're hurt, say so — even if you're worried about being pulled from a game or practice. A trained adult needs to check an injury before any tape or wrap goes on."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is athletic tape mainly used for?",
+      "choices": [
+        "Limiting how far a joint can move in a direction that already got hurt",
+        "Making an athlete look tougher",
+        "Replacing the need for rest after an injury",
+        "Keeping shoes tied tighter"
+      ],
+      "answerIndex": 0,
+      "explanation": "Tape is stiff and sticky so it can limit motion at the point where a joint tends to get injured, like an ankle rolling inward. It's not decorative and it isn't a substitute for rest and healing."
+    },
+    {
+      "id": "q2",
+      "question": "Which material is stretchy and squeezes evenly, like a firm hug for a body part?",
+      "choices": [
+        "Rigid athletic tape",
+        "An elastic wrap",
+        "A foam pad",
+        "A plastic splint"
+      ],
+      "answerIndex": 1,
+      "explanation": "Elastic wraps stretch and apply even, gentle pressure — that's compression. Rigid tape doesn't stretch; it's built to limit motion instead."
+    },
+    {
+      "id": "q3",
+      "question": "Which of these is one of the three main jobs of tape and wraps?",
+      "choices": [
+        "Compression — squeezing evenly to help control swelling",
+        "Decoration — making the uniform look complete",
+        "Punishment — a consequence for getting hurt",
+        "Cooling — lowering body temperature"
+      ],
+      "answerIndex": 0,
+      "explanation": "Support, compression, and protection are the three real jobs of tape and wraps. Compression means squeezing evenly, which can help hold down swelling or keep an ice pack in place."
+    },
+    {
+      "id": "q4",
+      "question": "Who should decide if, when, and how an injury gets taped or wrapped?",
+      "choices": [
+        "The injured athlete, on their own",
+        "Any teammate willing to help",
+        "A coach or athletic trainer",
+        "Whoever has tape available first"
+      ],
+      "answerIndex": 2,
+      "explanation": "A coach or athletic trainer is trained to know when taping is appropriate and how to do it safely. Taping yourself or a teammate without that training can make an injury worse."
+    },
+    {
+      "id": "q5",
+      "question": "You get hurt at practice. What should you do first?",
+      "choices": [
+        "Wrap it yourself so you don't miss playing time",
+        "Tell an adult right away",
+        "Ask a teammate to tape it tightly",
+        "Ignore it and keep practicing"
+      ],
+      "answerIndex": 1,
+      "explanation": "Telling a trusted adult right away is always the correct first step for any injury. It is not your job to tape yourself or a teammate — that decision and skill belong to a trained adult."
+    },
+    {
+      "id": "q6",
+      "question": "Which signs mean a wrap is too tight and needs to be loosened?",
+      "choices": [
+        "It feels like a firm handshake",
+        "It stays in place during activity",
+        "Numbness, tingling, or fingers/toes changing color",
+        "It was put on by a coach"
+      ],
+      "answerIndex": 2,
+      "explanation": "Numbness, tingling, or a color change in fingers or toes are signs blood flow is being squeezed off — that means the wrap is too tight. A snug, firm feeling without those signs is normal."
+    },
+    {
+      "id": "q7",
+      "question": "If tape on your ankle makes your toes go numb, what should you do?",
+      "choices": [
+        "Wait until after the game to mention it",
+        "Take the tape off yourself quietly",
+        "Tell your coach or athletic trainer right away",
+        "Add more tape to make it feel more secure"
+      ],
+      "answerIndex": 2,
+      "explanation": "Numbness is a warning sign that needs adult attention immediately, not after the game. Telling the coach or athletic trainer lets them loosen it safely and check that everything is okay."
+    },
+    {
+      "id": "q8",
+      "question": "Why is it never okay to ask for tape specifically to hide an injury from a coach?",
+      "choices": [
+        "Because tape is too expensive to use that way",
+        "Because hiding pain can let a small injury become a much bigger one",
+        "Because tape only works on ankles",
+        "Because coaches always notice tape anyway"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pain is a signal that something is wrong. Hiding it with tape so you can keep playing can turn a minor injury into a serious one. Injuries need to be checked by a trained adult, not covered up."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Athletic tape",
+      "back": "Stiff, sticky material used to limit how far a joint can move in the direction that tends to cause injury, like an ankle rolling inward."
+    },
+    {
+      "id": "f2",
+      "front": "Elastic wrap",
+      "back": "Stretchy material that squeezes evenly — used for compression, like holding down swelling or keeping an ice pack in place."
+    },
+    {
+      "id": "f3",
+      "front": "Support (as a job of tape)",
+      "back": "Keeping a joint from bending too far in the direction that already got hurt."
+    },
+    {
+      "id": "f4",
+      "front": "Compression (as a job of a wrap)",
+      "back": "Squeezing a swollen area evenly to help control swelling or hold an ice pack in place."
+    },
+    {
+      "id": "f5",
+      "front": "Protection (as a job of tape/wrap)",
+      "back": "Cushioning or covering a sore or healing spot so it doesn't get bumped or rubbed."
+    },
+    {
+      "id": "f6",
+      "front": "Who decides if an injury gets taped?",
+      "back": "A coach or athletic trainer — a trained adult, not the athlete and not a teammate."
+    },
+    {
+      "id": "f7",
+      "front": "Athletic trainer",
+      "back": "A trained professional who works with athletes on injury prevention, first aid, and recovery."
+    },
+    {
+      "id": "f8",
+      "front": "How a wrap should feel",
+      "back": "Snug, like a firm handshake — never painfully tight."
+    },
+    {
+      "id": "f9",
+      "front": "Numbness or tingling under tape/a wrap",
+      "back": "A warning sign the wrap is too tight and may be squeezing off blood flow. Tell an adult right away."
+    },
+    {
+      "id": "f10",
+      "front": "Fingers or toes changing color under a wrap",
+      "back": "Pale, blue, or unusual color is a sign of a too-tight wrap. Tell an adult immediately so it can be loosened."
+    },
+    {
+      "id": "f11",
+      "front": "Does tape heal an injury?",
+      "back": "No. Tape supports and protects, but healing still needs rest, ice, and often time or a doctor's care."
+    },
+    {
+      "id": "f12",
+      "front": "Taping to hide pain",
+      "back": "Never okay. Hiding an injury with tape to keep playing can turn a small injury into a much bigger one — injuries need to be reported and checked first."
+    }
+  ]
+}

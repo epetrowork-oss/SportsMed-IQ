@@ -2,6 +2,8 @@
   "id": "emergency-action-plan",
   "title": "Emergency Action Plans & CPR/AED Awareness",
   "category": "Acute Care & First Aid",
+  "strand": "emergency-action-plan",
+  "gradeBand": "9-10",
   "summary": "Know what a venue's emergency plan must cover, how to recognize sudden cardiac arrest, and what a lay rescuer does in the first minutes — awareness-level, not certification.",
   "minutes": 18,
   "sections": [

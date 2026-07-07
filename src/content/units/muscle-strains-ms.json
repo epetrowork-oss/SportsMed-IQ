@@ -1,0 +1,229 @@
+{
+  "id": "muscle-strains-ms",
+  "title": "Pulled Muscles: What to Know",
+  "category": "Muscle & Soft Tissue",
+  "strand": "muscle-strains",
+  "gradeBand": "7-8",
+  "summary": "Learn to spot a pulled muscle, what to do right away, and why pushing through the pain makes it worse.",
+  "minutes": 10,
+  "sections": [
+    {
+      "heading": "Why this matters",
+      "body": [
+        "A \"pulled muscle\" — doctors call it a muscle strain — happens all the time in sports that involve running, jumping, or kicking, like track, soccer, and basketball.",
+        "You don't need to be a doctor to help. Your job is to notice it happened, know the basic first steps, and know to tell a trusted adult right away instead of guessing how bad it is."
+      ]
+    },
+    {
+      "heading": "What's actually happening",
+      "body": [
+        "Muscles are the tissue that lets your body move. When a muscle is pushed too hard, too fast, or stretched too far while it's working hard — like during a sprint or a big kick — some of the muscle fibers can overstretch or tear. That's a strain.",
+        "Strains happen most in the back of the thigh (hamstring), the front of the thigh (quad), the groin, and the calf. These are common spots because they work hard during running, jumping, and kicking."
+      ]
+    },
+    {
+      "heading": "How to spot it",
+      "body": [
+        "A pulled muscle usually shows up suddenly, during activity. Watch for:"
+      ],
+      "list": [
+        "A sudden, sharp pain during running, jumping, or kicking — the athlete may say it felt like a \"grab\" or a \"pull\"",
+        "The athlete stops suddenly, grabs the area, or starts limping",
+        "Trouble using the muscle normally afterward — running, jumping, or kicking feels weak or painful",
+        "Swelling or a bruise that shows up over the next day or two",
+        "Tightness or soreness in the area, even if it's not a sharp pain"
+      ]
+    },
+    {
+      "heading": "What to do right away",
+      "body": [
+        "If you see or feel a sudden pull in a muscle, follow these steps in order:"
+      ],
+      "list": [
+        "Stop playing. Never try to run through it or push through the pain to \"see if it loosens up.\"",
+        "Tell a coach, athletic trainer, or other trusted adult right away.",
+        "Rest — stay off the muscle and let the adult decide next steps.",
+        "Ice — a bag of ice wrapped in a thin towel, about 15-20 minutes, never straight on bare skin."
+      ]
+    },
+    {
+      "heading": "Never push through the pain",
+      "body": [
+        "It can be tempting to keep playing, especially in a big game. But pushing through a pulled muscle almost always makes it worse — a small pull can turn into a much bigger tear.",
+        "It is not your job — or a teammate's job — to decide how serious a pulled muscle is. Some pulls look small but are actually serious. Let a coach, athletic trainer, or doctor make that call."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Get an adult right away if you notice:",
+        "text": "The athlete heard or felt a \"pop,\" cannot use the muscle at all afterward, has severe pain, or has a visible dent, gap, or lump in the muscle. Any of these means: stop immediately, tell an adult, and get it checked by a doctor. Never wait and see with these signs."
+      }
+    },
+    {
+      "heading": "Getting back to sport",
+      "body": [
+        "A pulled muscle needs time to heal, even if it starts to feel better after a day or two. Going back too soon is one of the biggest reasons the same muscle gets pulled again — and the second time is often worse.",
+        "Don't decide on your own when you or a teammate can go back to play. That call belongs to an athletic trainer, coach following medical guidance, or a doctor."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is a pulled muscle (a strain)?",
+      "choices": [
+        "A break in a bone",
+        "Muscle fibers that overstretch or tear",
+        "A bruise on the skin only",
+        "A cramp that goes away in a few seconds"
+      ],
+      "answerIndex": 1,
+      "explanation": "A strain happens when muscle fibers are stretched or torn, usually during hard activity like sprinting or kicking."
+    },
+    {
+      "id": "q2",
+      "question": "Which of these body parts is a common spot for a pulled muscle in sports?",
+      "choices": [
+        "The back of the thigh (hamstring)",
+        "The eyebrow",
+        "The fingernail",
+        "The earlobe"
+      ],
+      "answerIndex": 0,
+      "explanation": "The hamstring, quad, groin, and calf are common spots for pulled muscles because they work hard during running, jumping, and kicking."
+    },
+    {
+      "id": "q3",
+      "question": "A runner suddenly grabs the back of her thigh mid-sprint and starts limping. What most likely just happened?",
+      "choices": [
+        "She probably just has a normal cramp and should keep running",
+        "She definitely broke her leg",
+        "Nothing is wrong if she can still walk",
+        "She likely pulled her hamstring muscle"
+      ],
+      "answerIndex": 3,
+      "explanation": "A sudden sharp pain and grabbing during a sprint, followed by limping, is the classic sign of a pulled hamstring muscle."
+    },
+    {
+      "id": "q4",
+      "question": "What should you do first if you feel a sudden sharp pull in a muscle during a game?",
+      "choices": [
+        "Keep playing to see if it loosens up",
+        "Stretch it out hard by yourself",
+        "Ignore it if the pain goes away for a moment",
+        "Stop playing and tell a coach or athletic trainer right away"
+      ],
+      "answerIndex": 3,
+      "explanation": "The first step is always to stop playing and get a trusted adult involved — never push through the pain or decide on your own."
+    },
+    {
+      "id": "q5",
+      "question": "Which of these is a correct first-aid step for a pulled muscle?",
+      "choices": [
+        "Ice wrapped in a thin towel for about 15-20 minutes",
+        "A hot bath right away",
+        "Running on it to \"work it out\"",
+        "Ignoring it until practice is over"
+      ],
+      "answerIndex": 0,
+      "explanation": "Rest and ice (wrapped in a thin towel, never on bare skin) are the basic first-aid steps for a fresh pulled muscle."
+    },
+    {
+      "id": "q6",
+      "question": "Why is it a bad idea to push through the pain of a pulled muscle?",
+      "choices": [
+        "It isn't a bad idea — pushing through always helps",
+        "It can turn a small pull into a much bigger, worse injury",
+        "It only affects how tired you feel, nothing else",
+        "It has no effect on healing at all"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pushing through a pulled muscle can turn a small tear into a much larger, more serious one. Stopping early protects the athlete."
+    },
+    {
+      "id": "q7",
+      "question": "Which sign means an athlete needs to see a doctor right away, not just rest at home?",
+      "choices": [
+        "Mild soreness the next morning",
+        "Slight tightness before a game",
+        "A felt or heard \"pop\" and inability to use the muscle at all",
+        "Feeling a little tired after practice"
+      ],
+      "answerIndex": 2,
+      "explanation": "A felt or heard pop, inability to use the muscle at all, severe pain, or a visible gap/lump are red flags that need a doctor right away."
+    },
+    {
+      "id": "q8",
+      "question": "Who should decide when an athlete is ready to return to play after a pulled muscle?",
+      "choices": [
+        "The athlete themselves, based on how tough they feel",
+        "A teammate who has had a similar injury before",
+        "An athletic trainer, doctor, or coach following medical guidance",
+        "Whoever is closest to the field at the time"
+      ],
+      "answerIndex": 2,
+      "explanation": "Return-to-play decisions should always come from an athletic trainer, doctor, or coach acting on medical guidance — never a self-decision or a guess by a peer."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Muscle strain (pulled muscle)",
+      "back": "When muscle fibers overstretch or tear, usually during hard activity like sprinting, jumping, or kicking."
+    },
+    {
+      "id": "f2",
+      "front": "Common spots for a pulled muscle",
+      "back": "Hamstring (back of thigh), quad (front of thigh), groin, and calf."
+    },
+    {
+      "id": "f3",
+      "front": "Signs of a pulled muscle",
+      "back": "Sudden sharp pain during activity, grabbing the area, limping, trouble using the muscle normally, and swelling or bruising later."
+    },
+    {
+      "id": "f4",
+      "front": "First step after a pulled muscle",
+      "back": "Stop playing right away — never push through the pain or try to run it off."
+    },
+    {
+      "id": "f5",
+      "front": "Second step after a pulled muscle",
+      "back": "Tell a coach, athletic trainer, or other trusted adult immediately."
+    },
+    {
+      "id": "f6",
+      "front": "Rest and Ice",
+      "back": "The basic first-aid steps for a pulled muscle: stay off it and ice it for 15-20 minutes, wrapped in a thin towel."
+    },
+    {
+      "id": "f7",
+      "front": "How to ice a pulled muscle",
+      "back": "Wrap ice in a thin towel (never bare skin) and apply for about 15-20 minutes at a time."
+    },
+    {
+      "id": "f8",
+      "front": "Why pushing through the pain is risky",
+      "back": "It can turn a small pull into a much bigger, more serious tear."
+    },
+    {
+      "id": "f9",
+      "front": "Red flag: felt or heard a \"pop\"",
+      "back": "A pop with inability to use the muscle afterward is a sign of a serious injury — get an adult and see a doctor right away."
+    },
+    {
+      "id": "f10",
+      "front": "Red flag: gap or lump in the muscle",
+      "back": "A visible dent, gap, or lump where the injury happened needs to be checked by a doctor right away."
+    },
+    {
+      "id": "f11",
+      "front": "Why bruising can show up later",
+      "back": "Bruising or swelling from a pulled muscle often doesn't show up until a day or two after the injury — that's normal, but it should still be checked."
+    },
+    {
+      "id": "f12",
+      "front": "Who decides when to return to play?",
+      "back": "An athletic trainer, doctor, or coach following medical guidance — never the athlete or a teammate alone."
+    }
+  ]
+}

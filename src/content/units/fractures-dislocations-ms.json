@@ -1,0 +1,234 @@
+{
+  "id": "fractures-dislocations-ms",
+  "title": "Broken Bones and Dislocated Joints",
+  "category": "Acute Care & First Aid",
+  "strand": "fractures-dislocations",
+  "gradeBand": "7-8",
+  "summary": "Learn to recognize a possible broken bone or dislocated joint, avoid the biggest mistakes, and get an adult right away.",
+  "minutes": 10,
+  "sections": [
+    {
+      "heading": "What's actually injured",
+      "body": [
+        "A fracture is a broken bone — it can be a tiny crack or a full break. A dislocation is different: it's when a joint (like a shoulder, finger, or knee) gets knocked out of its normal position, so the bones that are supposed to line up are now out of place.",
+        "Both usually happen from the same kinds of things — a hard fall, a direct hit, or a joint bent the wrong way. From the sideline, they can look and feel a lot alike: bad pain, swelling, and a body part that suddenly doesn't work right."
+      ]
+    },
+    {
+      "heading": "How it happens",
+      "body": [
+        "Most broken bones and dislocated joints in youth sports come from a few common situations:"
+      ],
+      "list": [
+        "Falling hard onto an arm or hand, like catching yourself after a fall in gymnastics or skateboarding",
+        "A direct hit — getting hit by a ball, bat, or another player right on an arm or leg",
+        "A finger getting jammed by a ball in basketball, volleyball, or baseball",
+        "A joint getting bent or twisted much further than it's supposed to go"
+      ]
+    },
+    {
+      "heading": "How to spot it",
+      "body": [
+        "You don't need to be a doctor to notice these signs. Watch for:"
+      ],
+      "list": [
+        "The bone or joint looks bent, crooked, or just 'wrong' compared to the other side",
+        "The athlete can't move or use the arm, leg, finger, or joint normally",
+        "Pain that is severe, right at one spot",
+        "Swelling that comes on fast and looks worse than a typical bump or bruise",
+        "In a serious case, a piece of bone poking through the skin"
+      ]
+    },
+    {
+      "heading": "What to do right away",
+      "body": [
+        "If you think someone has a broken bone or dislocated joint, your job has two parts, and that's it:"
+      ],
+      "list": [
+        "Do not touch it, move it, or try to straighten it — not even a little, and not even if it looks like an 'easy fix'",
+        "Tell a coach, athletic trainer, or other trusted adult immediately",
+        "Help keep the athlete still and calm while you wait for the adult",
+        "Do not let anyone — a teammate, a coach, or even the injured athlete — try to push a joint back into place or straighten a crooked limb"
+      ]
+    },
+    {
+      "heading": "Never try to fix it yourself",
+      "body": [
+        "It can be tempting to think a dislocated finger or shoulder is a quick fix — just push it back in, right? Don't. Popping a joint back into place is something only a doctor or other trained medical provider should ever do.",
+        "The same goes for a bent or crooked limb: never try to straighten it. Moving a broken bone or dislocated joint the wrong way can cause a lot more damage, even if it looks simple."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Get an adult immediately if you see:",
+        "text": "A limb or joint that looks bent, crooked, or out of place; a bone visible through the skin; an athlete who can't move or use the body part at all; numbness, tingling, or a hand/foot that looks pale or feels cold. Do not touch it, move it, or try to fix it. Tell an adult right away and let them take over."
+      }
+    },
+    {
+      "heading": "Getting back to sport",
+      "body": [
+        "An athlete never decides on their own when they can play again after a broken bone or dislocated joint — that decision belongs to a doctor. Only a doctor, often with an X-ray, can tell how badly something is injured and how much time it needs to heal.",
+        "Healing time is different for every injury and every person, so there's no way to guess it. Your part is done once you've helped keep the athlete safe and gotten an adult involved — the rest is up to the medical team."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is a fracture?",
+      "choices": [
+        "A stretched muscle",
+        "A broken bone",
+        "A joint that is out of place",
+        "A type of bruise"
+      ],
+      "answerIndex": 1,
+      "explanation": "A fracture is a broken bone, ranging from a small crack to a full break. A dislocation is a different injury — a joint knocked out of place."
+    },
+    {
+      "id": "q2",
+      "question": "What is a dislocation?",
+      "choices": [
+        "A joint forced out of its normal position",
+        "A bone that is completely broken in half",
+        "A sore muscle after practice",
+        "Another word for a bruise"
+      ],
+      "answerIndex": 0,
+      "explanation": "A dislocation happens when the bones that meet at a joint (like a shoulder or finger) get knocked out of their normal position. A fracture is a broken bone, which is a different injury."
+    },
+    {
+      "id": "q3",
+      "question": "Which of these is a common way athletes get a broken bone or dislocated joint?",
+      "choices": [
+        "Stretching before practice",
+        "Drinking water during a game",
+        "Falling hard onto an outstretched arm or hand",
+        "Sitting on the bench too long"
+      ],
+      "answerIndex": 2,
+      "explanation": "Falling hard onto an arm or hand, direct hits, jammed fingers, and joints bent too far are common causes of fractures and dislocations in youth sports."
+    },
+    {
+      "id": "q4",
+      "question": "Which sign suggests a possible broken bone or dislocated joint, rather than a minor bump?",
+      "choices": [
+        "A little redness that goes away in a few minutes",
+        "The limb or joint looks bent or crooked compared to the other side",
+        "Mild soreness after a hard practice",
+        "Feeling thirsty after running"
+      ],
+      "answerIndex": 1,
+      "explanation": "A limb or joint that looks bent, crooked, or 'wrong' compared to the other side is a major red flag for a fracture or dislocation, not just a normal bump."
+    },
+    {
+      "id": "q5",
+      "question": "A teammate jams a finger during a basketball game, and it looks bent sideways at the middle joint. What should you do?",
+      "choices": [
+        "Pop it back into place quickly before it swells",
+        "Tell them to shake it out and keep playing",
+        "Do not touch it — tell a coach or athletic trainer right away",
+        "Tape the finger to the one next to it and finish the game"
+      ],
+      "answerIndex": 2,
+      "explanation": "Never touch or try to fix a bent or crooked joint. The correct first step is always to get a trusted adult involved immediately — popping a joint back into place is a doctor's job only."
+    },
+    {
+      "id": "q6",
+      "question": "Why should you never try to straighten a crooked limb or push a joint back into place yourself?",
+      "choices": [
+        "It takes too long and isn't worth the effort",
+        "It could cause serious additional damage, even if it looks simple",
+        "It's actually fine as long as you're gentle",
+        "Only shoulders are dangerous to fix; fingers are safe"
+      ],
+      "answerIndex": 1,
+      "explanation": "Moving a broken bone or dislocated joint the wrong way — even carefully — can cause a lot more damage. This is true for every joint, including fingers, and it's why only a trained medical provider should ever do this."
+    },
+    {
+      "id": "q7",
+      "question": "During a football game, a player's arm looks visibly bent and a piece of bone is showing through the skin. What is the correct response?",
+      "choices": [
+        "Try to push the bone back and wrap it tightly",
+        "Have the player try to move the arm to see how bad it is",
+        "Do not touch it — get an adult and emergency help immediately",
+        "Wait a few minutes to see if the swelling goes down first"
+      ],
+      "answerIndex": 2,
+      "explanation": "A bone visible through the skin is a serious emergency. Never touch or move it — get a trusted adult and emergency medical help involved right away."
+    },
+    {
+      "id": "q8",
+      "question": "Who decides when an athlete is allowed to play again after a broken bone or dislocated joint?",
+      "choices": [
+        "The athlete, once the pain feels better",
+        "A teammate who has had a similar injury before",
+        "A doctor, based on an exam and often an X-ray",
+        "The coach, based on how important the next game is"
+      ],
+      "answerIndex": 2,
+      "explanation": "Only a doctor can determine how serious the injury is and when it's safe to return, often using an X-ray. This decision should never be made by the athlete, a teammate, or a coach."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Fracture",
+      "back": "A broken bone — can be a small crack or a complete break."
+    },
+    {
+      "id": "f2",
+      "front": "Dislocation",
+      "back": "A joint (like a shoulder or finger) forced out of its normal position."
+    },
+    {
+      "id": "f3",
+      "front": "Common causes",
+      "back": "Hard falls onto an arm or hand, direct hits, jammed fingers, or a joint bent too far."
+    },
+    {
+      "id": "f4",
+      "front": "Sign: deformity",
+      "back": "The bone or joint looks bent, crooked, or 'wrong' compared to the other side — a major warning sign."
+    },
+    {
+      "id": "f5",
+      "front": "Sign: can't move or use it",
+      "back": "The athlete cannot move or use the injured arm, leg, finger, or joint normally."
+    },
+    {
+      "id": "f6",
+      "front": "Sign: bone through the skin",
+      "back": "A piece of bone visible through a wound — a serious emergency that needs immediate adult help."
+    },
+    {
+      "id": "f7",
+      "front": "Rule #1: Do not touch it",
+      "back": "Never touch, move, or try to straighten a suspected broken bone or dislocated joint."
+    },
+    {
+      "id": "f8",
+      "front": "Rule #2: Tell an adult immediately",
+      "back": "Get a coach, athletic trainer, or other trusted adult right away — don't wait or guess."
+    },
+    {
+      "id": "f9",
+      "front": "Never pop a joint back into place",
+      "back": "Putting a dislocated joint back into place is a doctor's job only, never something a student, teammate, or coach should attempt."
+    },
+    {
+      "id": "f10",
+      "front": "Red flag: numbness or coldness",
+      "back": "A hand or foot that feels numb, tingly, pale, or cold below the injury means get an adult right away."
+    },
+    {
+      "id": "f11",
+      "front": "Your job when you spot a fracture or dislocation",
+      "back": "Recognize it, don't touch or move it, and get a trusted adult involved immediately."
+    },
+    {
+      "id": "f12",
+      "front": "Who decides return to play",
+      "back": "A doctor, using an exam and often an X-ray — never the athlete, a teammate, or a coach guessing."
+    }
+  ]
+}

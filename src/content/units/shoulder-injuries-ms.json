@@ -1,0 +1,237 @@
+{
+  "id": "shoulder-injuries-ms",
+  "title": "Shoulder Injuries: What to Watch For",
+  "category": "Upper Extremity Injuries",
+  "strand": "shoulder-injuries",
+  "gradeBand": "7-8",
+  "summary": "Learn to spot the warning signs of a serious shoulder injury after a fall or collision, and what to do right away.",
+  "minutes": 10,
+  "sections": [
+    {
+      "heading": "Why this matters",
+      "body": [
+        "The shoulder can get hurt in falls, collisions, and tackles, and also from doing the same overhead motion — like throwing or serving — over and over.",
+        "You don't need to know exactly what's wrong inside the shoulder. Your job is to notice that something looks or feels wrong, and get a trusted adult right away."
+      ]
+    },
+    {
+      "heading": "How shoulders get hurt",
+      "body": [
+        "Most shoulder injuries at your age happen one of two ways."
+      ],
+      "list": [
+        "A fall or hit — landing hard on an arm or shoulder, getting tackled, or crashing during a bike ride or on the field can jar or injure the shoulder.",
+        "Overuse — throwing, serving, or swimming with the same arm motion thousands of times can make the shoulder sore and achy over weeks, even without a single fall or hit."
+      ]
+    },
+    {
+      "heading": "Signs something's wrong",
+      "body": [
+        "After a fall, hit, or hard landing, watch for these signs that the shoulder is seriously hurt, not just bumped:"
+      ],
+      "list": [
+        "The arm is held away from the body in an odd position, and the athlete supports it with the other hand",
+        "There's an obvious bump, dent, or the shoulder looks a different shape than the other side",
+        "The athlete can't move the arm normally, or refuses to move it at all",
+        "Pain is severe, not just a little sore",
+        "Numbness or tingling in the arm or hand"
+      ]
+    },
+    {
+      "heading": "What to do right away",
+      "body": [
+        "If you see any of these signs, follow these steps:"
+      ],
+      "list": [
+        "Stop playing right away.",
+        "Tell a coach, athletic trainer, or other trusted adult immediately.",
+        "Support the arm gently in whatever position it's already in — don't try to move it, straighten it, or push it back into place.",
+        "Let the adult decide on ice, a sling, or calling for more help."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Never try to put a shoulder 'back in place'",
+        "text": "Sometimes a teammate or coach might say they can pop a shoulder back into place. Never let anyone try this, and never try it yourself. Moving an injured shoulder the wrong way can cause serious damage. Support the arm as it is, and get an adult right away."
+      }
+    },
+    {
+      "heading": "Achy shoulders from overuse",
+      "body": [
+        "Not every shoulder problem comes from a big hit. Athletes who throw, serve, or swim a lot can get a shoulder that aches, feels weak, or hurts when reaching overhead — even without ever falling or getting hit.",
+        "This kind of pain builds up slowly over practices and games instead of happening all at once. It still matters just as much as a sudden injury."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Don't push through shoulder pain",
+        "text": "If your shoulder aches during or after overhead activity like throwing, serving, or swimming, tell a coach or trusted adult instead of playing through it. Pain that keeps coming back is your body's way of asking for a break and a check-up."
+      }
+    },
+    {
+      "heading": "Getting back to sport",
+      "body": [
+        "Deciding when a shoulder injury is healed enough to play again is not something a student athlete decides on their own — that call belongs to an athletic trainer or a doctor.",
+        "Going back to throwing, hitting, or contact sports too soon, before the shoulder has had time to heal, can turn a small problem into a much bigger one."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Which of these is a sign that a shoulder injury might be serious?",
+      "choices": [
+        "The athlete holds the arm away from the body and won't move it",
+        "The athlete says the shoulder feels fine",
+        "There's no pain at all",
+        "The athlete can raise both arms normally"
+      ],
+      "answerIndex": 0,
+      "explanation": "Holding the arm away from the body and refusing to move it is a warning sign of a serious shoulder injury. Normal movement and no pain are signs that the shoulder is probably fine."
+    },
+    {
+      "id": "q2",
+      "question": "A teammate crashes during a bike ride and lands on his shoulder. He's holding his arm oddly against his body and there's a visible bump at the top of his shoulder. What should you do first?",
+      "choices": [
+        "Try to push the bump back into place",
+        "Stop, tell a trusted adult right away, and support the arm as it is",
+        "Tell him to shake it off and keep riding",
+        "Have him raise the arm overhead to test if it still works"
+      ],
+      "answerIndex": 1,
+      "explanation": "The first step is always to stop, get a trusted adult, and support the arm without moving it. Pushing on the bump or testing the arm's motion could make the injury worse."
+    },
+    {
+      "id": "q3",
+      "question": "What are the two main ways shoulders usually get hurt for athletes your age?",
+      "choices": [
+        "Only from lifting heavy weights",
+        "Only from cold weather",
+        "Falls/hits and overuse from repeated overhead motion",
+        "Shoulders can't really get injured until adulthood"
+      ],
+      "answerIndex": 2,
+      "explanation": "Most shoulder injuries come from a fall or collision, or from doing the same overhead motion (like throwing or serving) over and over. Weightlifting and cold weather aren't the typical causes at this age."
+    },
+    {
+      "id": "q4",
+      "question": "A swimmer's shoulder has been aching for two weeks, especially when she reaches overhead, but she never fell or got hit. Does this still matter?",
+      "choices": [
+        "No, it only counts as an injury if something dramatic happened",
+        "No, achy shoulders always go away on their own without telling anyone",
+        "Yes, but only if the pain becomes unbearable",
+        "Yes, she should tell a coach or trusted adult even though there was no single fall or hit"
+      ],
+      "answerIndex": 3,
+      "explanation": "Shoulder pain that builds up slowly from overuse matters just as much as a sudden injury. She should tell a coach or trusted adult, not wait for the pain to become severe or hope it fixes itself."
+    },
+    {
+      "id": "q5",
+      "question": "If someone offers to pop an injured shoulder back into place on the field, what should happen?",
+      "choices": [
+        "Never let anyone attempt this — support the arm and get an adult",
+        "Let them try it if they say they've done it before",
+        "Have the injured athlete try to pop it back in themselves",
+        "Wait until after the game to worry about it"
+      ],
+      "answerIndex": 0,
+      "explanation": "No one should ever try to move an injured shoulder back into place on the field, no matter their experience. The right move is to support the arm as found and get a trusted adult immediately."
+    },
+    {
+      "id": "q6",
+      "question": "Which of these is NOT something you should do for a suspected shoulder injury?",
+      "choices": [
+        "Tell a trusted adult right away",
+        "Straighten or reposition the arm to make it look normal",
+        "Support the arm gently in the position it's already in",
+        "Stop playing immediately"
+      ],
+      "answerIndex": 1,
+      "explanation": "You should never try to straighten or reposition an injured arm. Stopping play, telling an adult, and supporting the arm as-is are the correct first steps."
+    },
+    {
+      "id": "q7",
+      "question": "Numbness or tingling in the arm or hand after a shoulder injury means:",
+      "choices": [
+        "It's nothing to worry about",
+        "The athlete should keep playing to see if it goes away",
+        "Only ice is needed, no adult required",
+        "This is a warning sign that needs a trusted adult right away"
+      ],
+      "answerIndex": 3,
+      "explanation": "Numbness or tingling is a warning sign that something serious may be going on and needs adult attention right away, not something to wait out or manage alone."
+    },
+    {
+      "id": "q8",
+      "question": "Who should decide when an athlete's shoulder injury has healed enough to return to play?",
+      "choices": [
+        "The athlete, based on how it feels that day",
+        "A teammate who has had a shoulder injury before",
+        "An athletic trainer or doctor",
+        "Whichever adult is standing closest"
+      ],
+      "answerIndex": 2,
+      "explanation": "Return-to-play decisions after a shoulder injury should come from an athletic trainer or doctor, not the athlete's own judgment or a teammate's opinion."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Shoulder injury warning sign: arm position",
+      "back": "The arm is held away from the body in an odd position, often supported by the other hand."
+    },
+    {
+      "id": "f2",
+      "front": "Shoulder injury warning sign: shape",
+      "back": "An obvious bump, dent, or the shoulder looking a different shape compared to the other side."
+    },
+    {
+      "id": "f3",
+      "front": "Shoulder injury warning sign: movement",
+      "back": "The athlete can't move the arm normally, or refuses to move it at all."
+    },
+    {
+      "id": "f4",
+      "front": "Shoulder injury warning sign: numbness",
+      "back": "Numbness or tingling in the arm or hand — always tell a trusted adult right away."
+    },
+    {
+      "id": "f5",
+      "front": "Two main causes of shoulder injuries",
+      "back": "A fall or hit (like a tackle or crash), or overuse from repeating the same overhead motion many times."
+    },
+    {
+      "id": "f6",
+      "front": "First step after a suspected shoulder injury",
+      "back": "Stop playing right away."
+    },
+    {
+      "id": "f7",
+      "front": "Second step after a suspected shoulder injury",
+      "back": "Tell a coach, athletic trainer, or other trusted adult immediately."
+    },
+    {
+      "id": "f8",
+      "front": "How to support an injured arm",
+      "back": "Support it gently in the position it's already in. Never try to move, straighten, or reposition it."
+    },
+    {
+      "id": "f9",
+      "front": "Never do this for a shoulder injury",
+      "back": "Never try to pop or push a shoulder back into place, and never let anyone else try it either."
+    },
+    {
+      "id": "f10",
+      "front": "Overuse shoulder pain",
+      "back": "Aching or weakness that builds up over weeks from repeated throwing, serving, or swimming — no single fall or hit needed."
+    },
+    {
+      "id": "f11",
+      "front": "Don't push through shoulder pain",
+      "back": "Repeated overhead pain is a sign to tell an adult and take a break, not to keep playing."
+    },
+    {
+      "id": "f12",
+      "front": "Who decides return to play",
+      "back": "An athletic trainer or doctor decides when a shoulder injury has healed enough to play again, not the athlete or a teammate."
+    }
+  ]
+}

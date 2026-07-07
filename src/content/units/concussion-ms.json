@@ -1,0 +1,223 @@
+{
+  "id": "concussion-ms",
+  "title": "Concussions: What Every Athlete Should Know",
+  "category": "Head & Spine Injuries",
+  "strand": "concussion",
+  "gradeBand": "7-8",
+  "summary": "Learn what a concussion is, how to spot one, and why the only right move is to tell a trusted adult right away.",
+  "minutes": 15,
+  "sections": [
+    {
+      "heading": "What is a concussion?",
+      "body": [
+        "A concussion is an injury to the brain. It happens when a hit to the head, face, or body is hard enough to make the brain move around quickly inside the skull (the bones that protect your head). That movement can make the brain work the wrong way for a while.",
+        "You do NOT have to get hit directly in the head to get a concussion. A hard hit to the body — like a big tackle or a shoulder-to-shoulder collision — can also shake the brain enough to cause one.",
+        "You also do NOT have to \"black out\" (lose consciousness) to have a concussion. Most concussions happen without anyone passing out. That is one of the biggest myths in sports."
+      ]
+    },
+    {
+      "heading": "How to know if it happened",
+      "body": [
+        "You cannot see a concussion on an X-ray, and it usually does not cause any bleeding or bruise you can see. That is what makes it tricky — the only way to catch it is by noticing signs and symptoms.",
+        "A sign is something someone else notices about you. A symptom is something you feel yourself and would tell someone about."
+      ],
+      "list": [
+        "Signs others might notice: you look dazed or confused, you move clumsily, you forget the play or which team you're playing, you answer questions slowly, you can't remember what happened right before or after the hit.",
+        "Symptoms you might feel: headache, dizziness, feeling sick to your stomach, feeling foggy or \"not right,\" sensitivity to light or loud noise, and just feeling more tired than usual.",
+        "Sometimes signs and symptoms show up right away. Sometimes they don't show up until hours later — even after you get home."
+      ]
+    },
+    {
+      "heading": "What to do: tell a trusted adult right away",
+      "body": [
+        "If you get hit and something feels wrong — or you see a teammate acting strange after a hit — the rule is simple: tell a trusted adult immediately. That means your coach, your athletic trainer, a parent, or a teacher.",
+        "This is not your decision to make on your own, and it should never be. You are not expected to figure out how serious it is — that is a job for a coach, athletic trainer, or doctor. Your only job is to notice and to speak up."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "See something, say something",
+        "text": "If you notice a teammate acting confused, dazed, or \"off\" after a hit — even if they say they're fine — tell an adult. Teammates often hide symptoms so they don't have to leave the game. Speaking up for a friend could protect their brain."
+      }
+    },
+    {
+      "heading": "Why you should never hide symptoms",
+      "body": [
+        "Some athletes try to hide how they feel so they can keep playing. This is one of the most dangerous things you can do after a possible concussion.",
+        "A brain that is still healing from one hit is much more easily hurt by a second hit. In rare cases, a second hit before the brain heals can cause the brain to swell very quickly, which can be deadly. This is why coaches and athletic trainers take head hits so seriously, even when they look minor."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Emergency signs — call 911 right away",
+        "text": "Get emergency help immediately if someone who was hit in the head: cannot be woken up, has a seizure (their body shakes and they lose control), has one pupil (the black center of the eye) bigger than the other, throws up repeatedly, has a severe or worsening headache, becomes very confused or agitated, or has slurred speech, weakness, or numbness. If a neck injury is possible, do not move the person — wait for trained help."
+      }
+    },
+    {
+      "heading": "Getting better and getting back to play",
+      "body": [
+        "Most concussions get better within a few weeks, but every brain heals at its own speed. There is no way to speed it up by \"pushing through it\" — in fact, that can make it take longer.",
+        "A student who has a concussion needs rest from both sports AND schoolwork at first, then returns to schoolwork before sports. A doctor or other licensed healthcare provider — never a coach, a parent, a teammate, or the athlete — decides when it's safe to return to practice and games.",
+        "The rule athletic trainers and doctors follow is: \"When in doubt, sit them out.\" If there's any chance it's a concussion, the safe choice is always to stop playing until a healthcare provider checks it out."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is a concussion?",
+      "choices": [
+        "An injury to the brain caused by a hit that makes it move quickly inside the skull",
+        "A broken bone in the skull",
+        "A bruise you can see on the outside of the head",
+        "A type of headache that has nothing to do with hits"
+      ],
+      "answerIndex": 0,
+      "explanation": "A concussion is a brain injury — the brain moves rapidly inside the skull after a hit, which temporarily disrupts how it works. It is not a visible bruise or a broken bone."
+    },
+    {
+      "id": "q2",
+      "question": "Do you have to be hit directly in the head to get a concussion?",
+      "choices": [
+        "Yes, only a direct head hit can cause one",
+        "No — a hard hit to the body can also shake the brain enough to cause one",
+        "No, concussions only happen from falls",
+        "Yes, but only in football"
+      ],
+      "answerIndex": 1,
+      "explanation": "A hard hit anywhere — including the body — can jolt the head enough to make the brain move inside the skull. Direct contact to the head is not required."
+    },
+    {
+      "id": "q3",
+      "question": "True or false: You have to black out (lose consciousness) for it to be a concussion.",
+      "choices": [
+        "True — no blackout means no concussion",
+        "True, but only for younger athletes",
+        "False — blacking out is required for adults but not kids",
+        "False — most concussions happen without anyone losing consciousness"
+      ],
+      "answerIndex": 3,
+      "explanation": "This is a common myth. Most people who get a concussion never lose consciousness. Watching only for blackouts means missing most concussions."
+    },
+    {
+      "id": "q4",
+      "question": "Which of these is a sign a teammate might notice about you, rather than something you feel yourself?",
+      "choices": [
+        "Headache",
+        "Feeling dizzy",
+        "Looking dazed and confused",
+        "Feeling sick to your stomach"
+      ],
+      "answerIndex": 2,
+      "explanation": "Looking dazed or confused is a sign — something others observe. Headache, dizziness, and nausea are symptoms — things you feel and would need to report yourself."
+    },
+    {
+      "id": "q5",
+      "question": "A teammate gets hit during a game. Ten minutes later she tells you she has a headache and feels foggy, but she wants to keep playing and asks you not to tell anyone. What should you do?",
+      "choices": [
+        "Tell a coach or athletic trainer right away",
+        "Keep her secret since she asked you to",
+        "Tell her to just drink water and rest for a minute",
+        "Wait until after the game to mention it"
+      ],
+      "answerIndex": 0,
+      "explanation": "Any possible concussion symptom needs to go to a trusted adult immediately — not stay a secret, and not wait. Speaking up quickly is the only safe choice, even if a teammate asks you not to."
+    },
+    {
+      "id": "q6",
+      "question": "Why is it dangerous to hide concussion symptoms and keep playing?",
+      "choices": [
+        "It isn't dangerous, it just looks bad",
+        "A brain that hasn't healed is much more easily hurt by a second hit, which can be very serious",
+        "You'll just get a worse headache and nothing else",
+        "Coaches will bench you for the whole season"
+      ],
+      "answerIndex": 1,
+      "explanation": "A healing brain is especially vulnerable — a second hit before it recovers can cause dangerous, rapid brain swelling. That's why hiding symptoms to keep playing is never worth the risk."
+    },
+    {
+      "id": "q7",
+      "question": "Which of these is an emergency sign that means someone should call 911 right away?",
+      "choices": [
+        "A mild headache that goes away after a few minutes",
+        "Feeling a little tired after practice",
+        "One pupil (black center of the eye) bigger than the other",
+        "Being sensitive to bright lights"
+      ],
+      "answerIndex": 2,
+      "explanation": "Unequal pupil size is an emergency red flag that can mean serious pressure on the brain. Mild tiredness, a brief headache, and light sensitivity are common concussion symptoms but not 911 emergencies by themselves."
+    },
+    {
+      "id": "q8",
+      "question": "Who decides when an athlete is allowed to return to practice after a concussion?",
+      "choices": [
+        "The athlete themselves, once they feel okay",
+        "The head coach",
+        "A teammate or friend",
+        "A licensed healthcare provider, like a doctor or athletic trainer"
+      ],
+      "answerIndex": 3,
+      "explanation": "Only a licensed healthcare provider can clear an athlete to return. Athletes, coaches, and teammates should never make that call — the brain's healing isn't something you can judge just by how you feel."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Concussion",
+      "back": "An injury to the brain caused by a hit to the head or body that makes the brain move quickly inside the skull."
+    },
+    {
+      "id": "f2",
+      "front": "Do you need a direct head hit to get a concussion?",
+      "back": "No. A hard hit to the body can also jolt the head enough to shake the brain and cause a concussion."
+    },
+    {
+      "id": "f3",
+      "front": "Do you have to black out to have a concussion?",
+      "back": "No. Most concussions happen without ever losing consciousness."
+    },
+    {
+      "id": "f4",
+      "front": "Sign vs. symptom",
+      "back": "A sign is something someone else notices about you (like looking dazed). A symptom is something you feel yourself (like a headache)."
+    },
+    {
+      "id": "f5",
+      "front": "Two signs others might notice",
+      "back": "Looking dazed or confused, and moving clumsily or forgetting the play."
+    },
+    {
+      "id": "f6",
+      "front": "Two symptoms you might feel",
+      "back": "Headache and dizziness (also: nausea, feeling foggy, sensitivity to light or noise)."
+    },
+    {
+      "id": "f7",
+      "front": "What should you do if you think you (or a teammate) might have a concussion?",
+      "back": "Tell a trusted adult right away — a coach, athletic trainer, parent, or teacher."
+    },
+    {
+      "id": "f8",
+      "front": "Why should you never hide concussion symptoms to keep playing?",
+      "back": "A brain that hasn't healed can be badly hurt by a second hit — this can cause dangerous, rapid brain swelling."
+    },
+    {
+      "id": "f9",
+      "front": "\"When in doubt...\"",
+      "back": "\"When in doubt, sit them out.\" If there's any chance of a concussion, stop playing until a healthcare provider checks it out."
+    },
+    {
+      "id": "f10",
+      "front": "911 emergency sign after a head hit",
+      "back": "Examples: can't be woken up, has a seizure, one pupil bigger than the other, repeated vomiting, severe headache, slurred speech."
+    },
+    {
+      "id": "f11",
+      "front": "Who decides when an athlete can return to play?",
+      "back": "Only a licensed healthcare provider (like a doctor) — never a coach, parent, teammate, or the athlete themselves."
+    },
+    {
+      "id": "f12",
+      "front": "What needs rest first after a concussion?",
+      "back": "Both sports and schoolwork at first — school comes back before sports, based on a healthcare provider's guidance."
+    }
+  ]
+}

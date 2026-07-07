@@ -2,6 +2,8 @@
   "id": "concussion",
   "title": "Concussions",
   "category": "Head & Spine Injuries",
+  "strand": "concussion",
+  "gradeBand": "9-10",
   "summary": "Recognize the signs of a concussion, respond correctly on the sideline, and understand why 'when in doubt, sit them out' is the law.",
   "minutes": 25,
   "sections": [
@@ -80,7 +82,12 @@
     {
       "id": "q2",
       "question": "What is the most commonly reported concussion symptom?",
-      "choices": ["Vomiting", "Loss of consciousness", "Neck pain", "Headache"],
+      "choices": [
+        "Vomiting",
+        "Loss of consciousness",
+        "Neck pain",
+        "Headache"
+      ],
       "answerIndex": 3,
       "explanation": "Headache is the most common symptom. Loss of consciousness is actually uncommon — under 10% of cases."
     },
