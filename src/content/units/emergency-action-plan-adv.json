@@ -1,0 +1,234 @@
+{
+  "id": "emergency-action-plan-adv",
+  "title": "Running the Emergency: EAP Design and Team Response",
+  "category": "Acute Care & First Aid",
+  "strand": "emergency-action-plan",
+  "gradeBand": "11-12",
+  "summary": "For the student aide with a real role on the response team: how to audit an EAP instead of just reading it, run closed-loop team communication under stress, and reason through cardiac, spinal, heat, bleeding, and weather emergencies with legal and systems context.",
+  "minutes": 24,
+  "sections": [
+    {
+      "heading": "From plan to practice: what a complete EAP contains — and why it decays",
+      "body": [
+        "You already know an Emergency Action Plan (EAP) lists personnel, communication steps, equipment location, venue access, and roles by title. A mature EAP goes further: it names a transportation agreement (which EMS agency responds, and a backup if two emergencies happen at once across a multi-field complex), a documentation and reporting process for after the response, and a mandated annual review — most governing bodies (NATA, NFHS) recommend the full plan be reviewed and rehearsed before every season, not just written once and filed away.",
+        "A written plan is a snapshot in time, and snapshots go stale. Staff turn over — the assistant coach who knew the gate code graduated. Venues change — construction fences off the access road the plan assumes is open. Equipment ages — AED batteries and pads have expiration dates, and a plan is only as good as the device it points to. If no one has re-checked the plan since it was written, you don't actually have a plan; you have a document that used to be one."
+      ]
+    },
+    {
+      "heading": "Auditing an EAP: walk it like it's real",
+      "body": [
+        "Reading an EAP tells you what it claims. Auditing it tells you whether it's true. An audit means physically walking the entire venue against the plan, not just reviewing the paperwork at a desk.",
+        "A real audit includes running an actual AED retrieval time trial — someone walks (or jogs, if that's realistic under stress) from the field to the AED and back, stopwatch running, and the team compares that number to what survival math demands. It includes opening every gate the plan says EMS will use, at the actual times practices happen, to confirm it isn't padlocked after the front office closes. It includes standing at multiple points around the field or pool and checking cell signal, since a 'call 911' step is useless in a dead zone. And it includes confirming who currently holds the keys — not who held them when the plan was written."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Turn the audit into a drill",
+        "text": "The most useful EAP audits are timed, unannounced walk-throughs: someone calls out 'simulated collapse at midfield' and the team runs the actual sequence — retrieval, gate, radio or cell check — while someone times it. Problems found during a drill are free. The same problems found during a real emergency are not."
+      }
+    },
+    {
+      "heading": "Team response dynamics: assigning roles under stress",
+      "body": [
+        "Once an emergency starts, a group of otherwise capable people can freeze or duplicate effort unless someone assigns roles out loud, fast: a scene leader (directs the response and makes the call on next steps), a 911 caller, an AED retriever, a gate/traffic person (unlocks the access route and flags down EMS so they don't have to guess which building), someone managing the crowd and teammates so the scene stays clear, and a documenter who tracks times — when the athlete collapsed, when CPR started, when the AED was applied, how many shocks were delivered.",
+        "The single biggest failure mode in group response isn't lack of knowledge — it's diffusion of responsibility, where everyone assumes someone else already called 911 because no one was told directly. Closed-loop communication fixes this: give an instruction to a specific person, by description or name ('You, in the blue shirt — call 911 and come back and tell me what they said'), and require them to confirm back. A vague shout to the crowd ('somebody call 911!') reliably produces a room where nobody does, because everyone assumes it's covered.",
+        "When EMS arrives, whoever has been running the scene needs to hand off cleanly in the first 30 seconds: what happened and when (mechanism, time of collapse), what's been done so far (CPR start time, number of AED shocks, any medications given), and the athlete's current status. EMS is walking into a scene cold — a clear, front-loaded handoff saves them the minutes it would take to reconstruct the last several minutes themselves."
+      ]
+    },
+    {
+      "heading": "Why a young athlete's heart stops",
+      "body": [
+        "Sudden cardiac arrest (SCA) in young athletes has two broad categories of cause. Structural causes are physical abnormalities of the heart itself — hypertrophic cardiomyopathy (an abnormally thickened heart muscle) and anomalous coronary arteries (a blood vessel to the heart that runs an abnormal, easily compressed path) are the most common examples. Electrical causes are rhythm disorders in an otherwise normal-looking heart — conditions like long QT syndrome or Wolff-Parkinson-White syndrome disrupt the heart's electrical signaling and can trigger a lethal rhythm during exertion.",
+        "A third mechanism doesn't require any underlying heart condition at all: commotio cordis is sudden cardiac arrest caused by a blunt, relatively low-energy blow to the chest — a pitched ball, a hockey puck, a shoulder — that happens to land during a roughly 10-30 millisecond vulnerable window in the heart's electrical cycle, triggering a chaotic rhythm (ventricular fibrillation) in a structurally healthy heart. It's why a seemingly minor chest impact in baseball, lacrosse, or hockey can be catastrophic, and why any athlete who collapses immediately after a chest impact and stops responding needs the same CPR/AED response as any other cardiac arrest — there's no time to sort out the cause first.",
+        "This is why the resuscitation chain's time math matters as much as the diagnosis. Without any bystander action, survival from sudden cardiac arrest falls by roughly 7-10% for every minute that passes without defibrillation. High-quality bystander CPR doesn't replace defibrillation, but it slows that decline substantially by keeping oxygenated blood moving to the brain and heart until a shock can be delivered — which is the entire justification for starting compressions immediately instead of waiting for the AED or EMS to arrive."
+      ]
+    },
+    {
+      "heading": "High-quality CPR and AED nuances",
+      "body": [
+        "You already know the numbers — 100-120 compressions per minute, about 2 inches deep, full recoil between compressions. What separates adequate CPR from high-quality CPR under real conditions is minimizing interruptions. Rescuers track this as chest compression fraction — the percentage of total resuscitation time that compressions are actually happening. The target is above 60%, and well-run teams push above 80%, by keeping pauses for pulse checks, rescuer switches, and AED analysis as short as possible.",
+        "A few AED details matter once you're the one attaching pads, not just watching someone else do it. Pad placement is one pad upper-right chest below the collarbone, the other lower-left ribs at the side of the chest — the pictures on the pads show this, but knowing it before you're under stress helps. A wet chest (rain, heavy sweat, a pool deck) can short-circuit the shock across the skin instead of through the heart, so quickly wipe the chest dry before applying pads. Jewelry and metal are mostly a myth as a reason to delay — only remove a piece if it sits directly under a pad's placement, and don't waste time hunting for every chain and stud. And compressions should continue right up until the AED says 'analyzing' — you only need hands off the chest during the actual rhythm analysis and shock delivery, not before."
+      ]
+    },
+    {
+      "heading": "Beyond cardiac: other emergencies your EAP must cover",
+      "body": [
+        "A cervical spine (neck) injury — from a helmet-to-helmet hit, a dive into shallow water, a fall onto the head — carries the risk of permanent spinal cord damage if the neck is moved carelessly. The standard is spinal motion restriction: keep the head, neck, and torso as still as possible, supporting the head in the position found, until EMS arrives with the training and equipment to move the athlete safely. The only exception is a more immediate life threat — for example, needing to log-roll an unresponsive, non-breathing athlete face-up as a team to start CPR, using coordinated movement that keeps the spine aligned as a unit rather than twisting it.",
+        "Exertional heat stroke shares a real crossover with cardiac emergencies in EAP planning: both are field emergencies where the correct action starts before EMS arrives, not after. For heat stroke, the rule is cool first, transport second — whole-body cold-water immersion should begin on-site immediately, with EMS transport arranged in parallel, because a delay to 'wait for the ambulance' before cooling starts is exactly the delay that costs a life. That's why an EAP for a summer practice needs a cooling tub and ice on-site, not just a phone number.",
+        "For severe, life-threatening bleeding, direct firm pressure on the wound is the first response; a tourniquet, if trained personnel and one are available, controls bleeding that direct pressure alone can't stop on a limb. For weather, the 30-30 rule governs lightning: if the time between seeing lightning and hearing thunder is 30 seconds or less, lightning is close enough to strike your location, and everyone should already be off the field and in a safe structure; stay there until 30 minutes have passed since the last lightning or thunder observed."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Never move a suspected spinal injury to 'check' it",
+        "text": "Do not roll, sit up, or remove the helmet of an athlete with a suspected neck injury to see how they're doing — even well-meaning movement can turn a recoverable injury into a permanent one. Stabilize in place, keep them still, and wait for EMS unless an airway or breathing emergency forces immediate repositioning."
+      }
+    },
+    {
+      "heading": "Legal protection, access laws, and after the response",
+      "body": [
+        "Good Samaritan laws exist in every state to protect bystanders — including trained student aides — who act in good faith, within the limits of their training, during an emergency, from being sued for the outcome. They don't protect reckless or grossly negligent action, but they exist precisely so that fear of legal consequences never becomes a reason to hesitate before starting CPR or grabbing an AED.",
+        "Many states also have AED access laws requiring schools to have a device on-site, register its location with local EMS dispatch, and maintain it — because an AED that exists but isn't registered or maintained is only slightly better than no AED at all.",
+        "After any real emergency response, two things should happen that are easy to skip in the moment: documentation (a written record of times, actions taken, and outcome, completed as soon as possible while memory is fresh) and a debrief (the response team reviewing, without blame, what worked and what didn't). Documentation protects the athlete's ongoing care and the team legally; the debrief is how an EAP actually improves instead of staying frozen at whatever level it was written."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "During an EAP audit, a coach confirms on paper that she 'calls 911' as her assigned role — but when the team physically walks the field during the audit, her phone shows no signal at midfield. What does this reveal?",
+      "choices": [
+        "A written plan can look complete on paper yet fail in practice, which is exactly why auditing means physically walking the venue, not just reading the document",
+        "Nothing — the plan is still valid since the role is correctly assigned by title",
+        "The coach should be replaced as the 911 caller by a different staff member",
+        "Cell coverage is not something an EAP needs to account for"
+      ],
+      "answerIndex": 0,
+      "explanation": "Auditing means testing the plan against reality — walking the venue, checking signal, timing retrievals — not just confirming the paperwork reads correctly. A dead zone found during an audit is a fixable problem (a backup phone location, a landline, a radio); a dead zone discovered during a real emergency is not."
+    },
+    {
+      "id": "q2",
+      "question": "An athlete collapses and three staff members are standing nearby. What is the most effective way to get someone to call 911 immediately?",
+      "choices": [
+        "Shout 'somebody call 911!' to the group and continue assessing the athlete",
+        "Point at one specific person and say 'You, call 911 now and come back and tell me what they said'",
+        "Wait until you've finished checking breathing before assigning any tasks",
+        "Call 911 yourself only after CPR has been running for two minutes"
+      ],
+      "answerIndex": 1,
+      "explanation": "A general shout to a group reliably produces diffusion of responsibility — each person assumes someone else has it covered, so often no one calls. Closed-loop communication — a direct instruction to a named or described individual, with a request to confirm back — is what actually gets the task done under stress."
+    },
+    {
+      "id": "q3",
+      "question": "EMS arrives on scene. What information does the person who has been running the response need to hand off in the first 30 seconds?",
+      "choices": [
+        "The athlete's full medical history and insurance information",
+        "Only the athlete's name and jersey number",
+        "Nothing — EMS will assess the athlete themselves without needing a report",
+        "What happened and when, what's been done so far (CPR start time, number of AED shocks), and the athlete's current status"
+      ],
+      "answerIndex": 3,
+      "explanation": "A fast, front-loaded handoff — mechanism and timing, interventions already performed, current status — lets EMS pick up exactly where the scene left off instead of spending precious minutes reconstructing what already happened. Detailed history and paperwork can follow later; they aren't what EMS needs in the first 30 seconds."
+    },
+    {
+      "id": "q4",
+      "question": "A lacrosse player is struck in the chest by a shot, collapses immediately, and is unresponsive. He has no known heart condition. What is the most likely mechanism, and what should happen next?",
+      "choices": [
+        "This can't be cardiac arrest since he has no diagnosed heart condition — check for a concussion instead",
+        "Wait a few minutes to see if he wakes up on his own before starting CPR, since chest impacts rarely cause real cardiac arrest",
+        "This is likely commotio cordis — a low-energy chest impact timed to a vulnerable point in the heart's electrical cycle — and it requires the same immediate CPR/AED response as any other cardiac arrest",
+        "This is definitely a structural heart defect and should be treated differently from other cardiac arrests"
+      ],
+      "answerIndex": 2,
+      "explanation": "Commotio cordis causes sudden cardiac arrest in a structurally normal heart via a blunt chest impact at a vulnerable moment in the cardiac cycle — it needs the identical CPR/AED response as any other cardiac arrest. There's no time or need to diagnose the exact cause before starting compressions."
+    },
+    {
+      "id": "q5",
+      "question": "Roughly how much does survival from sudden cardiac arrest fall for each minute that passes without defibrillation, if no bystander action occurs?",
+      "choices": [
+        "About 7-10% per minute",
+        "About 1-2% per minute",
+        "About 50% per minute",
+        "Survival does not change based on time to defibrillation"
+      ],
+      "answerIndex": 0,
+      "explanation": "Survival drops roughly 7-10% for every minute defibrillation is delayed with no bystander intervention — which is why immediate CPR (which slows that decline) and the fastest possible AED retrieval are the two highest-leverage actions in the entire response chain."
+    },
+    {
+      "id": "q6",
+      "question": "You're about to attach an AED to an athlete who collapsed during a rainy practice. Her chest is wet and she's wearing a metal necklace that doesn't sit near either pad location. What should you do?",
+      "choices": [
+        "Stop CPR to remove the necklace before doing anything else, since metal jewelry always must come off first",
+        "Skip drying the chest — a little moisture doesn't affect an AED shock",
+        "Delay attaching the AED entirely until the chest is completely dry and all jewelry is removed",
+        "Quickly wipe the chest dry, apply the pads in their normal positions, leave the necklace since it's not under a pad, and keep compressions going until the device says it's analyzing"
+      ],
+      "answerIndex": 3,
+      "explanation": "A wet chest can short-circuit the shock across the skin, so drying it first matters; jewelry only needs removal if it sits directly under a pad, and hunting for every piece wastes time. Compressions should continue right up until the device begins analyzing — minimizing interruptions is a core marker of high-quality CPR."
+    },
+    {
+      "id": "q7",
+      "question": "An athlete is down after a helmet-to-helmet collision, is breathing normally, but is confused and reports numbness in his hands. What should you do until EMS arrives?",
+      "choices": [
+        "Help him sit up and remove his helmet so you can check his neck directly",
+        "Keep him as still as possible, support his head and neck in the position found, and wait for EMS — do not move him to 'check' the injury",
+        "Have teammates help him walk off the field to see if he can bear weight",
+        "Since he's breathing normally, there's no need for any spinal precautions"
+      ],
+      "answerIndex": 1,
+      "explanation": "Numbness plus confusion after a helmet-to-helmet hit is a red flag for a possible spinal injury, where careless movement risks turning a recoverable injury into permanent damage. Spinal motion restriction — keeping the athlete still and waiting for EMS — is correct unless an airway or breathing emergency forces immediate repositioning."
+    },
+    {
+      "id": "q8",
+      "question": "During an evening practice, a coach sees lightning and counts 22 seconds before hearing thunder. The head coach wants to finish the last few reps first. What is the correct action, and who has the authority to make it happen?",
+      "choices": [
+        "Finish the last reps since the storm is still several miles away",
+        "Wait until rain starts before evacuating",
+        "Evacuate immediately — a 22-second flash-to-bang gap means lightning is within striking distance — and any staff member designated in the EAP has the authority to suspend activity, a call the head coach cannot override",
+        "Only the athletic director, if physically present, can call for evacuation"
+      ],
+      "answerIndex": 2,
+      "explanation": "The 30-30 rule treats a flash-to-bang gap of 30 seconds or less as close enough to strike, requiring immediate evacuation to safe shelter for at least 30 minutes after the last lightning or thunder. A well-designed EAP names who has evacuation authority in advance specifically so that decision can't be overridden by a coach who wants to keep practice going."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Auditing an EAP",
+      "back": "Physically walking the venue to test the plan against reality — timed AED retrieval, checking gates actually open, testing cell signal, confirming current keyholders — instead of only reviewing the written document."
+    },
+    {
+      "id": "f2",
+      "front": "Closed-loop communication",
+      "back": "Giving an instruction to a specific, identified person and requiring them to confirm back, rather than shouting a general instruction to a group — prevents diffusion of responsibility under stress."
+    },
+    {
+      "id": "f3",
+      "front": "EMS handoff — first 30 seconds",
+      "back": "What happened and when (mechanism, time of collapse), what's been done so far (CPR start time, number of shocks), and current status."
+    },
+    {
+      "id": "f4",
+      "front": "Commotio cordis",
+      "back": "Sudden cardiac arrest from a blunt, low-energy chest impact landing during a roughly 10-30 millisecond vulnerable window in the heart's electrical cycle — occurs in a structurally normal heart."
+    },
+    {
+      "id": "f5",
+      "front": "Structural vs. electrical causes of sudden cardiac arrest",
+      "back": "Structural: a physical heart abnormality (e.g., hypertrophic cardiomyopathy, anomalous coronary artery). Electrical: a rhythm disorder in an otherwise normal-looking heart (e.g., long QT syndrome)."
+    },
+    {
+      "id": "f6",
+      "front": "Chest compression fraction",
+      "back": "The percentage of total resuscitation time spent actually compressing the chest. Target above 60%, ideally above 80%, by minimizing pauses for switches, checks, and AED analysis."
+    },
+    {
+      "id": "f7",
+      "front": "Survival decay without defibrillation",
+      "back": "Roughly 7-10% drop in survival per minute of delay with no bystander action; high-quality bystander CPR slows (but doesn't stop) this decline until a shock can be delivered."
+    },
+    {
+      "id": "f8",
+      "front": "Spinal motion restriction",
+      "back": "Keeping the head, neck, and torso as still as possible and supporting the head in the position found after a suspected spinal injury, until EMS can move the athlete safely."
+    },
+    {
+      "id": "f9",
+      "front": "Cool-first, transport second",
+      "back": "For exertional heat stroke, whole-body cold-water immersion should begin on-site immediately, with EMS transport arranged in parallel — waiting for the ambulance before cooling starts costs a life."
+    },
+    {
+      "id": "f10",
+      "front": "30-30 rule (lightning)",
+      "back": "If the gap between seeing lightning and hearing thunder is 30 seconds or less, evacuate to safe shelter immediately; stay there until 30 minutes have passed since the last lightning or thunder."
+    },
+    {
+      "id": "f11",
+      "front": "Good Samaritan law",
+      "back": "State laws protecting bystanders (including trained student aides) who act in good faith, within their training, during an emergency, from being sued for the outcome."
+    },
+    {
+      "id": "f12",
+      "front": "Why debrief after a real response",
+      "back": "A blame-free team review of what worked and what didn't is how an EAP actually improves over time — without it, the plan stays frozen at whatever level it was originally written."
+    }
+  ]
+}

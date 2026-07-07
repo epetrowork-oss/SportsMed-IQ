@@ -1,0 +1,236 @@
+{
+  "id": "knee-acl-adv",
+  "title": "The Knee: Injury Mechanics, Evaluation, and the ACL Epidemic",
+  "category": "Lower Extremity Injuries",
+  "strand": "knee-acl",
+  "gradeBand": "11-12",
+  "summary": "The biomechanics behind the non-contact ACL tear, how to build a differential from mechanism and exam findings, and the evidence on surgery, rehab, and prevention.",
+  "minutes": 25,
+  "sections": [
+    {
+      "heading": "How the ACL actually fails: the biomechanics behind the 'pop'",
+      "body": [
+        "You already know that roughly 70% of ACL tears are non-contact. What's worth digging into is exactly what the joint is doing in the fraction of a second before it fails. Video and force-plate analysis of real injuries show a consistent pattern, sometimes called the 'position of no return': the knee is near full extension (usually less than 30° of flexion), it collapses inward relative to the foot (dynamic valgus), the tibia is often rotated, and the trunk leans or rotates toward the injured side, shifting the body's center of mass outside the base of support.",
+        "This position doesn't happen during a straight vertical jump landing — it happens during deceleration: cutting, pivoting, and single-leg landings, where the athlete is rapidly slowing a moving body while the quadriceps fire hard to control the landing. Strong quad contraction with the knee nearly straight actually pulls the tibia forward against the ACL (anterior tibial shear), which is why deceleration and single-leg landing mechanics — not takeoff — dominate the injury data.",
+        "Understanding this matters beyond trivia: it's exactly what neuromuscular training programs (covered later in this unit) are designed to retrain."
+      ]
+    },
+    {
+      "heading": "The female athlete disparity: evidence, not stereotype",
+      "body": [
+        "The 2-8x higher ACL injury rate in female athletes compared to male athletes in comparable sports is one of the most studied disparities in sports medicine, and it's genuinely multifactorial — no single explanation accounts for it, and framing it as simple physical inferiority is both inaccurate and unhelpful.",
+        "Candidate anatomic factors include a narrower intercondylar notch (the bony tunnel the ACL passes through) and smaller ACL cross-sectional area in many female athletes, along with greater baseline knee valgus alignment (Q-angle). Candidate neuromuscular factors include a 'quad-dominant' landing strategy — greater quadriceps activation relative to hamstring co-contraction, and less hip/knee flexion on landing — which increases anterior tibial shear exactly like the mechanism above. Hormonal factors are an active and more contested area of research: estrogen fluctuation across the menstrual cycle appears to affect ligament laxity, but it does not fully explain the gap on its own.",
+        "The practical takeaway is not 'female athletes are inherently more fragile' — it's that neuromuscular training measurably narrows this gap, which points to modifiable movement patterns as a major driver."
+      ]
+    },
+    {
+      "heading": "Building a differential: reading the exam, not just the story",
+      "body": [
+        "A pop, giving-way, and rapid swelling is the classic ACL story, but several structures can produce a similar story, and effusion timing plus a few exam concepts help sort them out. Effusion within roughly two hours (hemarthrosis, bleeding into the joint) suggests a vascularized structure tore — ACL, a fracture, or a patellar dislocation. Effusion that builds gradually over many hours to a day is more typical of meniscal or synovial irritation without major bleeding.",
+        "Three named ACL tests, performed by an AT or physician, assess different things: the Lachman test (tibia pulled forward near 20-30° of knee flexion) is the most sensitive because at that angle the hamstrings can't co-contract and mask laxity the way they can at 90°, which is why the anterior drawer test (the same forward-pull concept at 90°) is less sensitive. The pivot shift test doesn't just measure laxity — it reproduces the actual rotational subluxation-and-reduction that athletes describe as their knee 'giving way' during cutting, which correlates with functional instability more than raw laxity does.",
+        "Meniscal tears have their own signature: joint line tenderness, catching or locking, and often that slower, gradual effusion pattern. The McMurray test concept combines rotation with valgus or varus stress while flexing and extending the knee, trying to mechanically trap a torn fragment and reproduce a click or pain.",
+        "Two mechanisms are useful contrasts, not lookalikes: a PCL tear classically comes from a posterior-directed force on the front of a flexed knee (the 'dashboard' mechanism) and is assessed with a posterior sag sign rather than the Lachman. Collateral ligament injuries (MCL from valgus force, LCL from varus force) are tested with side-to-side stress at 0° and 30° of flexion.",
+        "One important mimic: acute patellar dislocation can produce the same pop-giving way-rapid swelling story as an ACL tear, because the kneecap sliding out and back in also tears tissue and bleeds into the joint. Medial patellar tenderness, a history of the kneecap 'moving out of place,' and patellar apprehension on exam point toward the patella rather than the ACL — don't assume the classic story always means the ACL."
+      ]
+    },
+    {
+      "heading": "Recognizing the true emergencies",
+      "body": [
+        "Most of what's above is differential thinking for a stable-appearing knee. A subset of knee injuries are not differential puzzles — they're emergencies that override everything else.",
+        "A knee dislocation (tibiofemoral, not the kneecap) can tear the popliteal artery running directly behind the joint, even after the joint has already reduced itself back into place. A tense, rapidly expanding effusion, any asymmetry in pulses, capillary refill, skin color, or temperature below the knee, or numbness are all vascular red flags. This is a limb-threatening emergency regardless of how stable the knee looks a few minutes later."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Refer immediately — do not wait to see if it settles",
+        "text": "Call 911 for: any suspected knee dislocation history (even if it looks reduced now), a tense or rapidly expanding effusion, absent or asymmetric pulses/capillary refill below the knee, pale or cold skin, numbness, or a knee locked short of full extension. Never attempt to reduce a dislocated joint yourself, and never let vascular red flags wait for a 'let's see how it looks tomorrow' approach — popliteal artery injury is time-sensitive."
+      }
+    },
+    {
+      "heading": "The management fork: reconstruction vs. non-operative care",
+      "body": [
+        "A complete ACL tear doesn't automatically mean surgery. The decision weighs age, activity demands, and functional instability. A young athlete returning to cutting/pivoting sports with clear instability is the strongest candidate for reconstruction (surgically rebuilding the ligament with a graft). A lower-demand individual, an older adult, or someone with a partial tear and no instability in daily activity may reasonably choose a non-operative pathway — activity modification plus targeted strengthening — accepting some risk of instability episodes.",
+        "Graft choice for reconstruction is itself a trade-off, not a single right answer: autografts (the patient's own tissue) commonly come from the patellar tendon, hamstring tendons, or quadriceps tendon, while allografts use donor tissue. Each option trades differently between initial strength, donor-site pain/morbidity, and long-term re-tear rates — decisions made by the surgeon and athlete together.",
+        "The real timeline is criteria-based, not calendar-based, and runs 9 months or longer — full recovery of strength, control, and confidence simply takes that long. Returning before roughly 9 months, or being under about 20 years old, sharply raises the risk of re-tearing the graft or injuring the other knee. And regardless of surgical vs. non-operative treatment, an ACL injury measurably raises the risk of knee osteoarthritis decades later — a reason prevention matters even more than treatment."
+      ]
+    },
+    {
+      "heading": "Rehab and return: criteria, not a calendar",
+      "body": [
+        "Modern rehab progresses through criteria-based phases rather than a fixed week-by-week calendar: early phases prioritize reducing swelling and restoring full extension, middle phases rebuild strength and neuromuscular control, and late phases add sport-specific movement and progressively harder return-to-sport testing.",
+        "Two criteria deserve special attention. Quadriceps strength symmetry — comparing the surgical leg's strength to the healthy leg (a limb symmetry index, with roughly 90% commonly used as a benchmark) — predicts re-injury risk better than time since surgery alone. Psychological readiness is the other legitimate factor: fear of reinjury and low confidence in cutting or pivoting, sometimes measured with structured readiness questionnaires, are associated with higher re-injury rates even when the leg has 'passed' its physical tests. An athlete who meets strength benchmarks but is clearly still afraid of the knee is not automatically ready."
+      ]
+    },
+    {
+      "heading": "Prevention science: what actually works",
+      "body": [
+        "This is the strongest evidence base in this entire unit. Neuromuscular training (NMT) programs — FIFA 11+ is the best-studied example — have been shown in multiple trials to reduce non-contact ACL injury rates by roughly half. They work by directly retraining the mechanics from the first section of this unit: better landing mechanics (more knee/hip flexion, less dynamic valgus), stronger hamstrings relative to quads, and safer cutting and deceleration technique, along with core and balance work.",
+        "The catch is compliance. Programs only work when run correctly, every session, for a full season — real-world results consistently fall short of trial results because teams skip warm-ups, rush through them, or abandon them mid-season. As a student aide, running the warm-up program consistently, correctly, and without skipping it on busy days is one of the highest-leverage things you can do for a team's injury rate — arguably more impactful than knowing every exam test in this unit."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "The aide's real job in prevention",
+        "text": "You don't need to diagnose anything to prevent it. Running a 10-15 minute neuromuscular warm-up consistently, every practice, with correct form, is the single most evidence-backed thing a student aide can do to lower a team's ACL injury rate."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Video of a non-contact ACL injury during a cutting maneuver shows the knee near full extension, collapsing inward relative to the foot, with the trunk leaning toward the injured side just before contact. This combination is best described as:",
+      "choices": [
+        "Dynamic valgus collapse near full extension with a trunk shift toward the injured side (the 'position of no return')",
+        "The unhappy triad",
+        "The terrible triad",
+        "A positive pivot shift maneuver"
+      ],
+      "answerIndex": 0,
+      "explanation": "This is the biomechanical signature seen in real ACL injury footage: near-full extension, dynamic valgus, and a trunk shift during deceleration. The 'unhappy triad' names structures torn together (ACL/MCL/medial meniscus), not a landing position, and the pivot shift is an exam test, not a mechanism."
+    },
+    {
+      "id": "q2",
+      "question": "A basketball player plants, twists, feels a pop, and her knee rapidly swells within an hour — the classic ACL story. On exam she also has medial patellar tenderness and says the kneecap felt like it 'moved out of place.' This should raise suspicion for:",
+      "choices": [
+        "Isolated LCL sprain from a valgus blow",
+        "PCL tear from a dashboard-type mechanism",
+        "Patellar dislocation masquerading as an ACL tear",
+        "Simple quadriceps contusion"
+      ],
+      "answerIndex": 2,
+      "explanation": "Patellar dislocation can produce the exact same pop-giving way-rapid swelling story as an ACL tear because it also tears tissue and bleeds into the joint. Medial patellar tenderness and a history of the kneecap slipping out of place point to the patella, not the ACL — a classic story doesn't guarantee the classic diagnosis."
+    },
+    {
+      "id": "q3",
+      "question": "Why is the Lachman test considered more sensitive for ACL laxity than the anterior drawer test?",
+      "choices": [
+        "Lachman is performed at 90° flexion, where hamstrings are fully relaxed",
+        "Anterior drawer only assesses the PCL, not the ACL",
+        "Lachman requires no physical contact with the knee",
+        "Lachman is performed near 20-30° flexion, a position where hamstring co-contraction can't mask anterior tibial translation as effectively as it can at 90°"
+      ],
+      "answerIndex": 3,
+      "explanation": "At 90° flexion (anterior drawer position), the hamstrings can co-contract and guard against forward tibial translation, hiding true laxity. At the Lachman's 20-30° position, that guarding is far less effective, making it the more sensitive test."
+    },
+    {
+      "id": "q4",
+      "question": "The pivot shift test is most useful for demonstrating:",
+      "choices": [
+        "Posterior tibial sag at rest",
+        "The rotational subluxation-and-reduction athletes describe as their knee 'giving way' during cutting",
+        "Meniscal locking in flexion",
+        "Patellar tracking through range of motion"
+      ],
+      "answerIndex": 1,
+      "explanation": "The pivot shift reproduces the actual rotational instability event — the tibia subluxing and then reducing — that athletes report as giving way. Posterior sag tests the PCL, not the ACL."
+    },
+    {
+      "id": "q5",
+      "question": "An athlete has joint line tenderness, occasional catching, and swelling that built up gradually over the day after injury rather than within the first two hours. This pattern points most toward:",
+      "choices": [
+        "Meniscal tear",
+        "Complete ACL tear",
+        "Acute patellar dislocation",
+        "Knee dislocation with vascular injury"
+      ],
+      "answerIndex": 0,
+      "explanation": "Joint line tenderness plus catching/locking plus a delayed (non-hemarthrosis) effusion pattern is the meniscal signature, contrasting with the rapid hemarthrosis typical of ACL tears, patellar dislocations, and fractures."
+    },
+    {
+      "id": "q6",
+      "question": "A 17-year-old competitive soccer player has a complete ACL tear with clear instability during cutting. A 52-year-old recreational cyclist has a partial ACL injury with no instability in daily activity. Which statement about management is most accurate?",
+      "choices": [
+        "Both athletes should receive identical treatment regardless of age, activity level, or instability",
+        "Non-operative management is only appropriate for professional athletes",
+        "The soccer player is a stronger candidate for reconstruction given her age, cutting-sport demands, and instability; the cyclist may reasonably choose non-operative management",
+        "Reconstruction is never appropriate for anyone over age 40"
+      ],
+      "answerIndex": 2,
+      "explanation": "Reconstruction vs. non-operative care is an individualized decision weighing age, activity demands, and instability — not a one-size-fits-all rule. The soccer player's cutting-sport demands and instability favor reconstruction; the cyclist's lower demands and stability make non-operative management a reasonable choice."
+    },
+    {
+      "id": "q7",
+      "question": "At 8 months post-reconstruction, an athlete has full range of motion and no pain, but quad strength testing shows only 78% symmetry to the uninjured leg and she describes ongoing fear of cutting. What is the most appropriate call?",
+      "choices": [
+        "Clear her for full return since 8 months exceeds the commonly cited minimum timeline",
+        "Clear her but tell her to permanently avoid cutting sports",
+        "Fear of reinjury is a psychological issue and irrelevant to the return decision",
+        "Hold her from full return — she hasn't met strength-symmetry (~90%) or psychological-readiness criteria yet, even though time alone has passed"
+      ],
+      "answerIndex": 3,
+      "explanation": "Return-to-play decisions are criteria-based, not calendar-based. Falling short of the roughly 90% quad symmetry benchmark and reporting reinjury fear are both legitimate reasons to hold an athlete back even past the typical 9-month timeframe — both are linked to higher re-injury risk."
+    },
+    {
+      "id": "q8",
+      "question": "Neuromuscular training programs like FIFA 11+ can reduce non-contact ACL injury rates by roughly half in research trials, but real-world results often fall short of that. The most likely reason is:",
+      "choices": [
+        "The programs don't actually change landing mechanics when properly implemented",
+        "Poor compliance — programs are skipped, rushed, or abandoned mid-season outside controlled research settings",
+        "The programs only work for male athletes",
+        "They require expensive equipment unavailable at most schools"
+      ],
+      "answerIndex": 1,
+      "explanation": "The programs' mechanics-changing effect is well established; the real-world gap comes from inconsistent use — skipped warm-ups, rushed reps, or abandoning the program mid-season — which is exactly why consistent, correct delivery (an aide's job) matters so much."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "'Position of no return'",
+      "back": "The biomechanical signature of most non-contact ACL tears: knee near full extension (<30° flexion), dynamic valgus collapse, tibial rotation, and trunk lean/shift toward the injured side during deceleration or single-leg landing."
+    },
+    {
+      "id": "f2",
+      "front": "Quad-dominant landing strategy",
+      "back": "A neuromuscular pattern (more quadriceps activation relative to hamstring co-contraction, less hip/knee flexion on landing) that increases forward tibial shear against the ACL — more common in female athletes and a target of prevention training."
+    },
+    {
+      "id": "f3",
+      "front": "Anatomic factors in the female ACL risk gap",
+      "back": "Candidate contributors include a narrower intercondylar notch, smaller ACL cross-sectional area, and greater baseline knee valgus (Q-angle) — anatomic, not behavioral, factors."
+    },
+    {
+      "id": "f4",
+      "front": "Hormonal factor in ACL risk (concept)",
+      "back": "Estrogen fluctuation across the menstrual cycle appears to affect ligament laxity; an active, more contested research area that does not by itself explain the female risk gap."
+    },
+    {
+      "id": "f5",
+      "front": "Lachman vs. anterior drawer vs. pivot shift",
+      "back": "Lachman (~20-30° flexion): most sensitive, hamstrings can't guard. Anterior drawer (90° flexion): less sensitive, hamstrings can mask laxity. Pivot shift: reproduces the actual rotational giving-way athletes feel."
+    },
+    {
+      "id": "f6",
+      "front": "Meniscal tear signature",
+      "back": "Joint line tenderness, catching/locking, and effusion that builds gradually (hours, not the ~2-hour hemarthrosis pattern of ligament tears)."
+    },
+    {
+      "id": "f7",
+      "front": "PCL and collateral mechanisms, contrasted",
+      "back": "PCL: posterior-directed force on a flexed knee ('dashboard' injury), tested with posterior sag, not Lachman. MCL/LCL: valgus/varus stress at 0° and 30° of flexion."
+    },
+    {
+      "id": "f8",
+      "front": "Patellar dislocation as an ACL mimic",
+      "back": "Can produce the same pop + rapid swelling + giving-way story as an ACL tear. Medial patellar tenderness and apprehension point to the patella, not the ACL."
+    },
+    {
+      "id": "f9",
+      "front": "Reconstruction vs. non-operative decision factors",
+      "back": "Weighs age, activity demands (cutting/pivoting sport vs. low-demand), and functional instability — not a single rule. Graft options (autograft: patellar, hamstring, or quad tendon; or allograft) trade off strength, donor-site morbidity, and re-tear rates."
+    },
+    {
+      "id": "f10",
+      "front": "ACL return timeline and re-tear risk",
+      "back": "Criteria-based recovery of 9+ months. Returning earlier than ~9 months, or being under ~20 years old, sharply raises re-tear risk."
+    },
+    {
+      "id": "f11",
+      "front": "ACL injury and long-term osteoarthritis risk",
+      "back": "An ACL injury measurably raises the risk of knee osteoarthritis decades later, regardless of operative or non-operative treatment — a reason prevention matters as much as treatment."
+    },
+    {
+      "id": "f12",
+      "front": "Neuromuscular training (NMT) programs",
+      "back": "Programs like FIFA 11+ cut non-contact ACL injury rates by roughly half by retraining landing mechanics, hamstring strength, and cutting technique. Real-world results depend on consistent, correct compliance — the program's biggest weak link."
+    }
+  ]
+}
