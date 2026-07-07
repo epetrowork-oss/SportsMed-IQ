@@ -1,0 +1,238 @@
+{
+  "id": "skin-conditions",
+  "title": "Skin Infections: Recognition and Prevention",
+  "category": "Acute Care & First Aid",
+  "strand": "skin-conditions",
+  "gradeBand": "9-10",
+  "summary": "Recognize the contact-sport skin infections that spread fast in locker rooms and on mats, and know the rule that keeps them from spreading further.",
+  "minutes": 18,
+  "sections": [
+    {
+      "heading": "Why skin infections matter in sports",
+      "body": [
+        "Skin is the body's first line of defense against infection, but sports create the exact conditions skin infections need to spread: skin-to-skin contact, shared equipment, sweat, warm padded surfaces, and small cuts or abrasions that give germs an entry point. Wrestling, in particular, has one of the highest rates of skin infection outbreaks of any high school sport because athletes are in prolonged, close contact on a shared mat.",
+        "None of these infections are dangerous if they are caught early and treated. They become a problem when an athlete hides a lesion, self-treats it, and keeps competing — because that both delays their own treatment and spreads the infection to teammates and opponents."
+      ]
+    },
+    {
+      "heading": "Fungal infections: ringworm, athlete's foot, jock itch",
+      "body": [
+        "Ringworm (tinea corporis) is not a worm at all — it's a fungal infection of the skin. The fungus that causes it thrives on skin-to-skin contact, which is why it spreads so easily in wrestling. It gets its name from its appearance: a red, ring-shaped patch with a raised, scaly border and a clearer center, often itchy.",
+        "Athlete's foot (tinea pedis) and jock itch (tinea cruris) are caused by related fungi that grow best in warm, moist environments — inside sweaty shoes, in locker room showers, under athletic supporters. Athlete's foot causes itching, redness, and cracked or peeling skin between the toes. Jock itch causes a similar red, itchy, sometimes scaly rash in the groin."
+      ],
+      "list": [
+        "Ringworm — ring-shaped red patch, raised scaly border, clearer center, itchy",
+        "Athlete's foot — itching, redness, cracking or peeling between the toes",
+        "Jock itch — red, itchy rash in the groin and inner thigh, often with a defined edge"
+      ]
+    },
+    {
+      "heading": "Bacterial infections: impetigo and MRSA",
+      "body": [
+        "Impetigo is a bacterial skin infection that starts as small red sores or blisters, usually around the nose and mouth or on exposed skin, which break open and form a distinctive honey-colored (yellowish) crust. It is highly contagious through direct contact and spreads quickly on a wrestling mat or through shared towels.",
+        "MRSA (methicillin-resistant Staphylococcus aureus) is a strain of staph bacteria that has become resistant to many common antibiotics, which is what makes it more serious than an ordinary skin infection: it does not respond to the antibiotics that would normally clear up a typical staph or pimple-like infection, so it can spread deeper into tissue if untreated. It often looks deceptively minor at first — a red, swollen bump that looks like a pimple or spider bite — but it is frequently warm to the touch, painful out of proportion to its size, and may develop a center filled with pus. This is exactly why 'it's just a pimple' thinking is dangerous: the outside can look small while the infection underneath is serious and spreading."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Red flags — refer immediately, do not self-treat",
+        "text": "Any lesion that is rapidly spreading, red, warm, swollen, draining pus, or accompanied by fever needs to be seen by an athletic trainer or physician the same day — not covered with a bandage and played through. MRSA and other bacterial infections can worsen quickly, and 'watching it for a few days' is not an acceptable plan."
+      }
+    },
+    {
+      "heading": "The universal recognition rule",
+      "body": [
+        "You don't need to be able to name every skin condition to protect yourself and your teammates. The rule that matters is simple: any new, unusual, spreading, or worsening skin lesion — especially one that looks infected (red, warm, swollen, draining pus, or rapidly getting bigger) — gets shown to an athletic trainer, coach, or doctor before the athlete returns to practice or competition.",
+        "This means telling someone even when it's embarrassing, even when it's 'probably nothing,' and even when the athlete really wants to compete. Skin infections caught early are usually simple to treat. Skin infections that get hidden and pushed through practice get worse and spread to teammates."
+      ]
+    },
+    {
+      "heading": "Return-to-play rules for skin infections",
+      "body": [
+        "Because contact sports can spread skin infections between athletes, many sports — wrestling especially — have mandatory clearance rules before an athlete with a skin infection can return to practice or competition. A physician or athletic trainer must examine the lesion and document that it is no longer contagious, often after a set number of days on appropriate treatment.",
+        "This is different from just covering a lesion with a bandage or sleeve and going ahead. Covering a lesion can reduce transmission risk in some low-contact situations, but for many active, weeping, or bacterial infections, a covered lesion still is not cleared for contact competition — the athletic organization's return-to-play rule, not the athlete's own judgment about whether it feels covered enough, decides when it's safe to compete again."
+      ]
+    },
+    {
+      "heading": "Blister care",
+      "body": [
+        "Blisters are a friction injury, not an infection — repeated rubbing (a cleat, a new pair of shoes, a wrestling mat) separates layers of skin and fluid fills the gap. They show up most often on the hands and feet.",
+        "An intact (unbroken) blister is usually best left covered and alone; the unbroken skin is protecting the area underneath from infection. If a blister has already opened, clean the area gently, apply a simple clean, non-stick covering, and keep an eye on it.",
+        "The same universal rule applies to blisters as to any other skin lesion: if a blister — open or closed — starts showing spreading redness, warmth, swelling, or pus, that's a sign of infection, and it needs to be shown to an athletic trainer or coach, not just re-covered and ignored."
+      ]
+    },
+    {
+      "heading": "Prevention",
+      "body": [
+        "Most of these infections spread through preventable habits. Simple, consistent routines cut outbreak risk dramatically, especially on wrestling teams and in any locker room shared by a large roster."
+      ],
+      "list": [
+        "Shower with soap right after every practice and competition — don't just change clothes and leave",
+        "Never share towels, razors, water bottles, or personal grooming items",
+        "Wear sandals or shower shoes in locker rooms and shower areas rather than going barefoot",
+        "Wash and dry practice gear, mats, and pads regularly — fungi and bacteria thrive on damp, unwashed surfaces",
+        "Wear moisture-wicking socks and change out of sweaty shoes and socks as soon as possible after activity",
+        "Report any skin change to a coach or athletic trainer right away instead of covering it up and hoping it clears on its own"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What actually causes ringworm (tinea corporis)?",
+      "choices": [
+        "A parasitic worm living under the skin",
+        "A fungus, despite the name",
+        "A resistant strain of staph bacteria",
+        "An allergic reaction to mat cleaner"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ringworm is a fungal infection that gets its name from its ring-shaped appearance, not from an actual worm. Its raised, scaly, ring-shaped border with a clearer center is the classic sign."
+    },
+    {
+      "id": "q2",
+      "question": "What makes impetigo easy to recognize?",
+      "choices": [
+        "A honey-colored (yellowish) crust over broken-open sores or blisters",
+        "A ring-shaped patch with a clear center",
+        "Cracking and peeling only between the toes",
+        "A rash that only appears in the groin"
+      ],
+      "answerIndex": 0,
+      "explanation": "Impetigo starts as small red sores or blisters that break open and form a distinctive honey-colored crust. It's bacterial and highly contagious through direct contact."
+    },
+    {
+      "id": "q3",
+      "question": "What specifically makes MRSA more serious than a typical staph infection or pimple?",
+      "choices": [
+        "It only affects the feet",
+        "It is resistant to many common antibiotics, so it can worsen and spread deeper if untreated",
+        "It is caused by a fungus instead of bacteria",
+        "It never causes pain or swelling"
+      ],
+      "answerIndex": 1,
+      "explanation": "MRSA stands for methicillin-resistant Staphylococcus aureus — the 'resistant' part means the usual antibiotics don't clear it, so what looks like a minor bump can progress if it isn't identified and treated appropriately."
+    },
+    {
+      "id": "q4",
+      "question": "A wrestler notices a small, red, warm, painful bump that looks like a pimple, but it's more painful than a normal pimple should be. What is the safest response?",
+      "choices": [
+        "Pop it, clean it, and finish out the practice",
+        "Cover it with tape and wrestle as scheduled",
+        "Ignore it since it's small and probably nothing",
+        "Show it to the athletic trainer or coach before returning to practice"
+      ],
+      "answerIndex": 3,
+      "explanation": "Any lesion that looks infected — especially one that's more painful or swollen than expected — should be evaluated before returning to activity. 'It's just a pimple' thinking is exactly how early MRSA and other infections get missed."
+    },
+    {
+      "id": "q5",
+      "question": "Why does wrestling have especially high rates of skin infection outbreaks compared to many other sports?",
+      "choices": [
+        "Wrestlers sweat less than other athletes",
+        "The sport involves prolonged, close skin-to-skin contact on a shared mat",
+        "Wrestling uniforms are fully protective against skin contact",
+        "Wrestling mats are replaced after every match"
+      ],
+      "answerIndex": 1,
+      "explanation": "Wrestling involves sustained, close skin-to-skin contact and a shared surface (the mat), which is exactly the environment fungal and bacterial skin infections need to spread between athletes."
+    },
+    {
+      "id": "q6",
+      "question": "An athlete has a skin infection and simply covers the lesion with a bandage before a match. Is this enough to compete under most contact-sport rules?",
+      "choices": [
+        "Yes, any covered lesion is automatically cleared to compete",
+        "Yes, because coaches cannot require anything beyond covering a lesion",
+        "No — many sports require formal clearance from a physician or athletic trainer regardless of covering",
+        "No, because covering a lesion is never allowed under any circumstance"
+      ],
+      "answerIndex": 2,
+      "explanation": "Covering a lesion is not the same as being cleared. Many sports, wrestling especially, require documented clearance from a physician or athletic trainer confirming the infection is no longer contagious before an athlete can return to contact competition."
+    },
+    {
+      "id": "q7",
+      "question": "A closed (unbroken) blister on an athlete's heel shows no redness or swelling around it. What is the best approach?",
+      "choices": [
+        "Pop and drain it immediately before it gets worse",
+        "Leave it covered and intact — the unbroken skin protects against infection",
+        "Scrub it vigorously to toughen the skin",
+        "Apply ice directly to the blister for 20 minutes"
+      ],
+      "answerIndex": 1,
+      "explanation": "An intact blister's unbroken skin is a natural barrier against infection, so the best approach is usually to leave it covered and alone. Popping it unnecessarily creates an open wound and an infection risk."
+    },
+    {
+      "id": "q8",
+      "question": "Which of these is the single most effective daily habit for preventing the spread of skin infections on a team?",
+      "choices": [
+        "Wearing the same socks for multiple practices to 'break them in'",
+        "Sharing a single team towel to save on laundry",
+        "Showering with soap immediately after every practice and competition",
+        "Applying lotion to open wounds before practice"
+      ],
+      "answerIndex": 2,
+      "explanation": "Showering with soap right after activity removes sweat, bacteria, and fungi from the skin before they have a chance to grow or spread — one of the simplest and most effective prevention habits. Sharing towels does the opposite and directly spreads infection."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Ringworm (tinea corporis)",
+      "back": "A fungal skin infection (not an actual worm) causing a red, ring-shaped patch with a raised, scaly border and clearer center."
+    },
+    {
+      "id": "f2",
+      "front": "Impetigo",
+      "back": "A highly contagious bacterial skin infection with a distinctive honey-colored crust over broken-open sores or blisters."
+    },
+    {
+      "id": "f3",
+      "front": "MRSA",
+      "back": "Methicillin-resistant Staphylococcus aureus — a staph infection resistant to many common antibiotics, so it can worsen and spread if not properly treated. Can look like a small pimple or spider bite at first."
+    },
+    {
+      "id": "f4",
+      "front": "Athlete's foot (tinea pedis)",
+      "back": "A fungal infection causing itching, redness, and cracked or peeling skin, usually between the toes; thrives in warm, moist shoes."
+    },
+    {
+      "id": "f5",
+      "front": "Jock itch (tinea cruris)",
+      "back": "A fungal infection causing a red, itchy, sometimes scaly rash in the groin and inner thigh, related to athlete's foot and ringworm."
+    },
+    {
+      "id": "f6",
+      "front": "Why wrestling has high skin infection rates",
+      "back": "Prolonged, close skin-to-skin contact on a shared mat gives fungal and bacterial infections an easy way to spread between athletes."
+    },
+    {
+      "id": "f7",
+      "front": "The universal recognition rule",
+      "back": "Any new, unusual, spreading, or worsening skin lesion — especially one that looks infected — must be shown to an athletic trainer, coach, or doctor before returning to practice."
+    },
+    {
+      "id": "f8",
+      "front": "Red flags for an infected lesion",
+      "back": "Red, warm, swollen, draining pus, rapidly spreading, or accompanied by fever — see an athletic trainer or physician the same day."
+    },
+    {
+      "id": "f9",
+      "front": "Return-to-play clearance for skin infections",
+      "back": "Many sports (especially wrestling) require a physician or athletic trainer to formally clear a skin infection before contact competition — simply covering the lesion is often not enough."
+    },
+    {
+      "id": "f10",
+      "front": "Blister care basics",
+      "back": "Intact blisters: leave covered and alone. Already-open blisters: clean gently and apply a simple clean covering. Spreading redness around a blister means infection — tell an adult."
+    },
+    {
+      "id": "f11",
+      "front": "\"It's just a pimple\" thinking",
+      "back": "Dangerous because MRSA and other bacterial infections can look like a minor pimple on the surface while spreading seriously underneath if left untreated."
+    },
+    {
+      "id": "f12",
+      "front": "Core prevention habits",
+      "back": "Shower with soap after every practice, never share towels/razors/gear, wear sandals in shower areas, wash mats and equipment regularly, use moisture-wicking socks."
+    }
+  ]
+}
