@@ -1,0 +1,232 @@
+{
+  "id": "emergency-action-plan-ms",
+  "title": "What to Do in an Emergency",
+  "category": "Acute Care & First Aid",
+  "strand": "emergency-action-plan",
+  "gradeBand": "7-8",
+  "summary": "Learn how to recognize a real sports emergency and what your job is: get an adult fast, not handle it yourself.",
+  "minutes": 10,
+  "sections": [
+    {
+      "heading": "Your job in an emergency",
+      "body": [
+        "Sometimes at practice or a game, something seriously wrong happens to a player — they collapse, or they get hurt badly. In that moment, your job is simple and it is NOT to fix it yourself.",
+        "Your job is two things: notice that something is seriously wrong, and get an adult right away — a coach, an athletic trainer, a teacher, anyone in charge. Adults are the ones trained to call 911 and to use emergency equipment like an AED (a device that checks and, if needed, helps restart a heart). You do not need to know how to do those things. You need to know how to get an adult fast."
+      ]
+    },
+    {
+      "heading": "What a real emergency looks like",
+      "body": [
+        "Most bumps, sprains, and 'ow, that hurts' moments in sports are not emergencies — the player is talking, moving, and reacting normally. A real emergency looks different and needs an adult immediately."
+      ],
+      "list": [
+        "Someone collapses suddenly and does not get up.",
+        "Someone will not wake up, even when you shout their name or shake their shoulder.",
+        "Someone is not breathing normally — no breathing at all, or strange gasping or snoring sounds.",
+        "Someone is having a seizure (their body is shaking and they can't respond to you).",
+        "Someone is bleeding a lot and it won't stop.",
+        "Someone hit their head hard and seems very confused, can't answer simple questions, or can't stay awake."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "If you see any of these signs — get an adult NOW",
+        "text": "Do not wait to see if the person gets better on their own. Do not try to handle it by yourself. Yell for the nearest adult immediately and tell them exactly what you saw."
+      }
+    },
+    {
+      "heading": "Get an adult right now",
+      "body": [
+        "If you see one of the emergency signs, act fast: yell loudly for a coach, athletic trainer, or teacher — whoever is closest. Don't run off looking for a specific person if a different adult is right there; any trained adult can start helping and can decide who else to call.",
+        "Tell the adult exactly what you saw, in simple words: 'She collapsed and won't wake up' or 'He hit his head and can't answer questions.' The clearer and faster you are, the faster the adult can act.",
+        "Stay nearby unless the adult sends you to do something specific, like finding another adult or pointing someone toward the AED. Don't leave an unresponsive person completely alone if you can help it — send someone else for help while you stay, or go get help immediately if you're the only one around."
+      ]
+    },
+    {
+      "heading": "What is an AED?",
+      "body": [
+        "An AED (automated external defibrillator) is a machine that can help a heart that has stopped working correctly. You will see AEDs mounted on walls in gyms, hallways, and near athletic fields, often in a bright case.",
+        "AEDs are built for regular people to use, not just doctors — when an adult turns one on, it talks out loud and tells them exactly what to do, step by step. The machine checks the person's heart rhythm by itself and will only tell the rescuer to give a shock if the heart actually needs one. It cannot make a mistake and shock someone who doesn't need it.",
+        "You will not be the one operating the AED. But knowing what it is and roughly where it's kept means you can point an adult straight to it, which saves precious time."
+      ]
+    },
+    {
+      "heading": "What happens after you get an adult",
+      "body": [
+        "Once a trained adult takes over, they will decide what's needed: calling 911, starting CPR (hands-on chest compressions that help keep blood moving until paramedics arrive), or sending someone to grab the AED. All of that is the trained adult's job, not yours.",
+        "You've already done the most important part by noticing the emergency and getting help fast. Every minute matters in a real emergency, so acting quickly — even just yelling for help — can make a real difference in how things turn out."
+      ]
+    },
+    {
+      "heading": "Know your school before you need to",
+      "body": [
+        "The best time to learn where the AEDs are at your school or field is now, before anything happens — not during an emergency. Take a look around your gym, cafeteria, and athletic fields and notice the bright AED cases on the wall.",
+        "Also know who the adults in charge usually are at your practices and games — coaches, athletic trainers, or teachers — so you know exactly who to run to if you ever need to."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Practice knowing, not doing",
+        "text": "You're not expected to run an emergency by yourself. Practice noticing where AEDs are kept and who the adults in charge are, so if a real emergency happens, you can react in seconds instead of searching around confused."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A teammate suddenly collapses at practice and won't wake up. What should you do first?",
+      "choices": [
+        "Yell for the nearest coach, athletic trainer, or teacher right away",
+        "Try to wake them up by yourself for a few minutes before doing anything else",
+        "Run and search for the athletic trainer specifically, even if another adult is closer",
+        "Start looking for the AED yourself before telling any adult"
+      ],
+      "answerIndex": 0,
+      "explanation": "Your job is to get an adult fast — any trained adult nearby can start helping and decide what to do next. Waiting, searching only for one specific person, or trying to handle equipment yourself all waste time that matters."
+    },
+    {
+      "id": "q2",
+      "question": "Which of these is a sign of a real emergency, not just a normal bump or bruise?",
+      "choices": [
+        "A player says their ankle hurts after stepping wrong, but they can still talk and walk",
+        "A player is sitting out and holding an ice pack on their knee",
+        "A player is frustrated and upset after missing a shot",
+        "A player collapses and will not wake up when you shout their name"
+      ],
+      "answerIndex": 3,
+      "explanation": "Collapsing and not responding to your voice is a clear emergency sign that needs an adult immediately. Talking, walking, or being upset are normal reactions, not emergency signs."
+    },
+    {
+      "id": "q3",
+      "question": "A collapsed player is making strange gasping or snoring sounds every so often. What does this mean?",
+      "choices": [
+        "This is NOT normal breathing — it's a sign of a serious emergency, so get an adult immediately",
+        "It means they are breathing fine and just need a minute to rest",
+        "It means they are in a light sleep and should be left alone",
+        "It means they are faking an injury"
+      ],
+      "answerIndex": 0,
+      "explanation": "Strange gasping or snoring sounds after a collapse are not normal breathing — they're a warning sign of a serious emergency. Waiting to see if it stops wastes time an adult needs to start helping."
+    },
+    {
+      "id": "q4",
+      "question": "What is your role if you notice a real emergency during a game or practice?",
+      "choices": [
+        "Perform CPR on the player yourself",
+        "Decide on your own whether to call 911",
+        "Attach the AED to the player yourself",
+        "Recognize that something is seriously wrong and get an adult right away"
+      ],
+      "answerIndex": 3,
+      "explanation": "Your job is to notice and get help fast — not to call 911, perform CPR, or use the AED yourself. Those are jobs for trained adults."
+    },
+    {
+      "id": "q5",
+      "question": "What is an AED?",
+      "choices": [
+        "A first aid kit kept in the coach's office",
+        "A form that lists a student's allergies",
+        "A machine that checks a person's heart rhythm and can help a heart that isn't working correctly",
+        "A stretcher used to carry an injured player off the field"
+      ],
+      "answerIndex": 2,
+      "explanation": "An AED (automated external defibrillator) checks the heart's rhythm and can help if the heart has stopped working correctly. It talks the rescuer through every step out loud."
+    },
+    {
+      "id": "q6",
+      "question": "True or false: An AED might accidentally give someone a shock even if they don't need one.",
+      "choices": [
+        "True — that's why only doctors should ever touch one",
+        "False — the AED checks the heart rhythm itself and will not shock someone who doesn't need it",
+        "True — this happens often, so AEDs are risky to use",
+        "False — but only because it's turned off unless a doctor unlocks it"
+      ],
+      "answerIndex": 1,
+      "explanation": "The AED analyzes the heart rhythm on its own and only allows a shock when one is actually needed. This is why it's safe for a trained bystander, not just a doctor, to use one."
+    },
+    {
+      "id": "q7",
+      "question": "Why is it helpful to know where the AEDs are kept at your school or field, even though you won't operate one yourself?",
+      "choices": [
+        "So you can carry it around with you during practice",
+        "So you can point a trained adult straight to it and save time in an emergency",
+        "So you can check the battery before every game",
+        "It isn't helpful — only athletic trainers need to know that"
+      ],
+      "answerIndex": 1,
+      "explanation": "Knowing roughly where AEDs are kept lets you quickly point an adult to it, which can save important time. You're not expected to use it yourself — that's a trained adult's job."
+    },
+    {
+      "id": "q8",
+      "question": "Who calls 911 and decides on CPR or the AED during a sports emergency?",
+      "choices": [
+        "Any nearby student, as long as they're calm",
+        "The injured player's parents, once they arrive",
+        "A trained adult in charge, such as a coach or athletic trainer",
+        "Whoever finds the AED first, no matter their age"
+      ],
+      "answerIndex": 2,
+      "explanation": "Calling 911 and deciding on CPR or the AED are jobs for trained adults in charge, like coaches or athletic trainers. A middle school student's job is to recognize the emergency and get one of those adults immediately."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Your job in an emergency",
+      "back": "Notice that something is seriously wrong, and get an adult right away. Adults handle calling 911, CPR, and the AED."
+    },
+    {
+      "id": "f2",
+      "front": "AED",
+      "back": "Automated External Defibrillator — a machine that checks a person's heart rhythm and can help a heart that stopped working correctly. It talks the rescuer through every step."
+    },
+    {
+      "id": "f3",
+      "front": "Is an AED safe to use?",
+      "back": "Yes. It checks the heart rhythm itself and will only allow a shock if one is actually needed — it can't accidentally hurt someone."
+    },
+    {
+      "id": "f4",
+      "front": "Signs of a real emergency",
+      "back": "Sudden collapse, won't wake up, not breathing normally (or strange gasping sounds), seizure, heavy bleeding that won't stop, or serious confusion after a head hit."
+    },
+    {
+      "id": "f5",
+      "front": "Strange gasping or snoring after a collapse",
+      "back": "This is NOT normal breathing. It's a sign of a serious emergency — get an adult immediately, don't wait to see if it stops."
+    },
+    {
+      "id": "f6",
+      "front": "What to do first if you spot an emergency",
+      "back": "Yell for the nearest adult in charge (coach, athletic trainer, or teacher) right away."
+    },
+    {
+      "id": "f7",
+      "front": "Who calls 911?",
+      "back": "A trained adult in charge — not a student. Your job is to get that adult fast."
+    },
+    {
+      "id": "f8",
+      "front": "Who uses the AED?",
+      "back": "A trained adult. You can help by knowing roughly where the AED is kept and pointing an adult to it."
+    },
+    {
+      "id": "f9",
+      "front": "CPR (in simple terms)",
+      "back": "Hands-on chest pushes a trained rescuer does to help keep blood moving until paramedics arrive. This is an adult's job, not a student's."
+    },
+    {
+      "id": "f10",
+      "front": "Should you leave an unresponsive person alone?",
+      "back": "No — stay nearby if you can, or send someone else for help while you stay, unless you must go get help yourself."
+    },
+    {
+      "id": "f11",
+      "front": "What to tell the adult you find",
+      "back": "Say exactly what you saw in simple words, like 'She collapsed and won't wake up,' so the adult can act fast."
+    },
+    {
+      "id": "f12",
+      "front": "Why learn AED locations before an emergency",
+      "back": "So you already know where they are and can react in seconds instead of searching around confused when it actually matters."
+    }
+  ]
+}
