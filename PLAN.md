@@ -256,6 +256,117 @@ image generation happens in Claude sessions, and anatomical accuracy
 needs human vetting regardless of source. This repo's side of the
 contract is the placeholder slots + the `npm run images:shotlist` brief.
 
+## Next up: teacher feedback — home page warmth + grade-scaled lesson imagery (planned 2026-07-08, not started)
+
+Real teacher feedback after using the app: **"Needs a home page, opening up
+to a lesson is a lot. It's not aesthetically pleasing."** Plus a content
+request: **lessons should have picture space, with lower grades more
+picture-heavy and upper grades less.** No login/accounts system yet —
+still explicitly out of scope. Two decisions were confirmed with the user
+before writing this plan:
+
+- **Home page approach**: keep `/` as the existing unit grid (do not split
+  into a separate welcome route) — add a hero/intro banner on top of it
+  instead. Lighter lift, no nav/routing change, but note this only
+  partially addresses "opening up to a lesson is a lot" per se — the grid
+  is still the very next thing on the page. Revisit a fuller landing-page
+  split later if the hero banner alone doesn't move the feedback enough.
+- **Image backfill**: seed image slots across all 54 existing units now
+  (not just document the rule for future content), so the shot-list brief
+  handed to the external image author (ChatGPT) is complete immediately
+  rather than growing unit-by-unit over time.
+
+### 1. Home page hero banner
+
+Add a welcoming header section to `src/pages/HomePage.jsx`, above the
+existing grade-band picker/search row, without moving or restructuring the
+grid below it:
+
+- App identity + a one-line warm welcome (not just "Units" as the page
+  `<h1>`), friendlier tone than the current bare heading.
+- Give the existing `ContinueCard` more visual prominence when present —
+  it's currently a plain card in the flow; consider making it read as
+  clearly the "primary" thing on the page for a returning student.
+- A hero image slot using the existing `ImagePlaceholder` pipeline
+  (new purpose `"home hero image"`, e.g. `home-hero.webp`, wide ratio
+  like `21:9` or `16:9`) so it's automatically picked up by
+  `scripts/list-image-slots.mjs` and the ChatGPT brief — no new plumbing
+  needed, it's the same component/pattern already used for category icons
+  and unit thumbnails.
+- This is layout + a bit of new copy in `HomePage.jsx`; no schema changes,
+  no new routes.
+
+### 2. Grade-band picture-density guideline (documentation)
+
+Add an explicit picture-density rule to `src/content/README.md`'s
+grade-band table (extends the existing tone/depth contract, doesn't
+replace it) — something like:
+
+| Band | Picture density |
+|---|---|
+| `7-8` | Image-heavy: aim for a diagram/illustration in most sections — roughly 3-5 per unit. Supports readers who benefit from visual anchors; matches this band's "short, concrete, recognize-it" tone. |
+| `9-10` | Moderate: images in key/complex sections only — anatomy, mechanism-of-injury, technique. Roughly 1-3 per unit (close to today's ad hoc usage on the two seeded units). |
+| `11-12` | Minimal: only genuinely necessary diagrams — grading systems, differential/comparison charts. Roughly 0-2 per unit; text/vocabulary-forward per this band's existing depth contract. |
+
+Once documented, this becomes part of the authoring contract the
+`unit-author` agent already reads, so it applies automatically to any
+future new unit — the backfill below is only needed for the 54 units that
+predate this rule.
+
+### 3. Backfill image slots across all 54 existing units
+
+Content-only work (add `image` objects to existing `sections` entries in
+unit JSON), gated by `npm run validate:content` — no component code
+changes, since the `image` field and its rendering already exist and are
+already grade-band-filterable via the unit's existing `gradeBand` field.
+
+- Rough scope: 18 `7-8` units need bringing up to ~3-5 images each
+  (currently ~0 — none have been seeded yet). 18 `9-10` units need light
+  seeding to ~1-3 each (2 already seeded: ankle-sprain, knee-acl). 18
+  `11-12` units need minimal, targeted seeding (~0-2 each, only where a
+  real diagram earns its place — e.g. a grading-system chart).
+  Roughly 60-90 new placeholder slots in total.
+- Each `image` needs a genuinely useful `description`/`alt` derived from
+  that section's actual content (same bar as the two seeded examples) —
+  not filler. This is the same judgment `unit-author` already exercises
+  when writing lesson text.
+- Routing: batch as `unit-author`-style Sonnet agent tasks grouped by
+  strand or band (keeps each batch small enough to review), each running
+  `validate:content` before reporting back. Orchestrator reviews the
+  diffs + validator output, doesn't re-derive each description by hand.
+- After backfill, re-run `npm run images:shotlist` to regenerate the full,
+  now-complete brief for the external image author.
+
+### 4. Aesthetic pass (visual design, not the status-icon consistency work already done)
+
+The earlier "app-wide status styling pass" (`611f291`) made progress
+*state* (✓/●/○/⚠) read consistently — this is different: the app still
+looks flat/boxy/text-only overall, which is the other half of "not
+aesthetically pleasing." Two sub-phases, sequenced differently:
+
+- **4a — structural, doable now, no dependency on real art**: card
+  elevation (subtle shadow vs. today's flat border-only cards), spacing
+  rhythm, typography scale (more weight/size contrast on headings vs.
+  body), general polish pass on `src/styles.css`. Can run any time,
+  including alongside item 3's content backfill.
+- **4b — revisit once real images exist**: once ChatGPT-produced WebP
+  files start landing in `public/images/…` and get swapped into the
+  placeholder slots (hero, category icons, unit thumbnails, lesson
+  diagrams via the `src` prop), the visual weight of the page changes
+  substantially — worth a second look at spacing/card sizing once real
+  imagery is actually present rather than guessing at layout now. Also
+  when this happens: revisit the precache-size decision already flagged
+  in the section above (lazy-load vs. eager, per-image budget).
+
+### Suggested sequencing
+
+1. Home hero banner (item 1) — smallest, most directly answers the
+   teacher's "opening up is a lot" complaint.
+2. Picture-density guideline doc update (item 2) — quick, unlocks item 3.
+3. Backfill content pass (item 3) — biggest lift, delegate in batches.
+4. 4a structural CSS pass — can overlap with 3.
+5. 4b revisit — later, blocked on real images actually landing.
+
 ## Out of scope (intentional, unchanged)
 
 Accounts/auth, live server-based sync, assigning content.
