@@ -196,6 +196,125 @@ writing so depth genuinely increases.
       cards (today the filter just shows/hides; no linking between a
       strand's grade-band versions yet)
 
+## Next up: teacher dashboard UI + image pipeline (agreed 2026-07-08, not started)
+
+**Content work is done for now** (54 units, 18 fully-spiraled strands).
+User feedback: content quality is good; UI has "major issues," expected
+since it hasn't been the design focus — particularly the teacher
+dashboard. This section is the agreed plan for the next phase, meant to
+be picked up in a **fresh session/thread** (user's explicit choice) rather
+than continued here. Read this whole section before starting.
+
+### 1. Teacher dashboard: three-way drill-down
+
+Current state (`src/pages/TeacherPage.jsx`): a flat HTML `<table>`, one
+row per student, one column per unit, click a row to expand a full
+per-unit breakdown inline. Problems per user feedback: doesn't scale
+past a handful of students, no way to see class-wide patterns (e.g.
+"is everyone stuck on the same unit"), dense/table-heavy with no visual
+hierarchy.
+
+**Agreed replacement**: a three-button toggle at the top of the page —
+**By Unit / By Lesson / By Student** — each a different top-level pivot
+into the same underlying drill-down, ending at the same lesson-level
+detail view (reading time, scroll depth, flag reasons, quiz score/attempt
+history, flashcard status — roughly what today's expand-row already
+shows, just reached via navigation instead of always-visible).
+
+- **By Student**: roster list → click a student → drops down to their
+  units (grouped like Home page's category/grade-band grouping) → click a
+  unit → drops down to lesson-level detail.
+- **By Unit**: reverse pivot — list of units → click a unit → drops down
+  to the roster of students on that unit → click a student → same detail
+  view. This is the "did the whole class get this" view.
+- **By Lesson**: third button, distinct from Unit. **Open question for
+  the new thread to resolve before building**: this app's data model
+  already has `strand` (a topic, e.g. "ankle-sprain") and `gradeBand`
+  (7-8/9-10/11-12) as separate concepts — each strand has up to 3 actual
+  unit files. The natural reading, given that existing model, is: **"Unit"
+  = strand** (one row per topic, spanning all its grade-band versions)
+  and **"Lesson" = one specific grade-band unit file** within a strand.
+  That reuses `strand`/`gradeBand` directly rather than inventing a new
+  concept. Confirm this interpretation with the user before implementing
+  — don't assume silently.
+
+Visual/styling changes that go with this: replace the `<table>` with a
+card/accordion/tree layout (indentation + disclosure triangles, not table
+cells); status conveyed by color + icon, not just small text pills; a
+grade-band grouping/filter here equivalent to the Home page's picker,
+since "Units"/"Lessons" now number 54 across 3 bands.
+
+### 2. Broader ease-of-access (lower priority, same underlying issue)
+
+Student-facing Home page has the same scaling problem in miniature — a
+flat grid of 54 units. Once the teacher-dashboard rebuild establishes the
+visual language (cards, grouping, filtering patterns), consider applying
+it to Home too: search/filter beyond just grade band, a "continue where
+you left off" shortcut. Not requested directly but flagged as the same
+root cause.
+
+### 3. Image placeholder / marker system
+
+User is generating actual images via ChatGPT (ChatGPT/Codex has separate
+repo access), not via this Claude session — no image-generation tool
+exists in this environment, and general-purpose AI image generators are
+unreliable enough on anatomical accuracy that medical-illustration content
+specifically needs real vetting regardless of source. Division of labor:
+ChatGPT produces the image files, this app's UI gets built with clearly
+labeled placeholder slots so layout doesn't have to be reworked once real
+images land, and the placeholders double as the content brief handed to
+ChatGPT.
+
+**Placeholder metadata schema (ChatGPT's suggestion, adopt as-is)** — every
+placeholder instance should carry:
+- **Asset name** — e.g. `ankle-sprain-lateral-view.webp`
+- **Purpose** — unit card thumbnail, lesson diagram, hero image, category
+  icon, etc.
+- **Dimensions / aspect ratio** — e.g. `1200×800`, `1:1`, `16:9`
+- **Background** — transparent, white, or dark navy (match card/theme bg)
+- **Visual description** — body position, injury highlighted, viewing angle
+- **Text inside image** — preferably none (avoids localization/resize breakage)
+- **File location** — e.g. `public/images/units/ankle/`
+- **Alt text** — for accessibility
+
+**Implementation approach**: a small reusable placeholder component (name
+TBD) rendering a bordered/dashed box that visibly shows its own label +
+ratio in the browser — no network fetch, so it doesn't break the
+offline-first requirement or PWA precache. Swapping in the real `<img>`
+later should be a one-line change per slot. Because every instance carries
+its full metadata as props/attributes, the codebase can be grepped at any
+time to regenerate the complete shot list for ChatGPT — one artifact, two
+audiences (dev layout + image brief).
+
+**Where images likely apply** (seed list, new thread should audit for
+real needs, not exhaustive): unit category icons (7 categories), unit
+card thumbnails/hero images per strand, anatomy/mechanism diagrams for
+the more visual units (ankle-sprain, knee-acl, shoulder-injuries,
+concussion, fractures-dislocations are strong candidates), possibly a
+Home page hero image, teacher-dashboard status iconography.
+
+**Technical consideration to flag for the new thread**: the app is
+offline-first with the whole bundle precached by the service worker
+(currently ~1MB for 54 units of pure JSON/JS/CSS, zero content images).
+Real images — especially several anatomy diagrams per unit across 54
+units — could meaningfully inflate precache size and first-load/install
+time. Decide deliberately on a strategy (lazy-load non-critical images
+vs. eager-precache, file size budget per image, WebP as ChatGPT's
+suggested format already helps) rather than defaulting to "precache
+everything" once images start landing.
+
+### Agreed execution order
+
+1. Teacher dashboard IA rebuild (three-button drill-down) — the actual
+   pain point named.
+2. Image placeholder system — foundational scaffolding, worth doing
+   early/alongside #1 since the teacher dashboard and Home page are both
+   likely to want image slots (icons at minimum).
+3. Visual/status styling pass, made consistent app-wide (not just the
+   teacher page, so the app doesn't end up looking like two apps stitched
+   together).
+4. Student Home page ease-of-access — same problem, lower urgency.
+
 ## Out of scope (intentional, unchanged)
 
 Accounts/auth, live server-based sync, assigning content.
