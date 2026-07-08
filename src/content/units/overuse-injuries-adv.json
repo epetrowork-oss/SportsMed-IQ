@@ -26,7 +26,15 @@
         "The flat '10% per week' rule you learned before is a reasonable guardrail, but it has a blind spot: it only looks at the change in volume, not at how that change compares to what the athlete's tissues are actually adapted to handle. Sports science has moved toward the acute:chronic workload ratio (ACWR) — comparing an athlete's most recent week of training load (acute) to their rolling 4-week average (chronic, the load their tissues have adapted to).",
         "'Training load' isn't just mileage — it factors intensity, duration, and frequency together (a hard interval week can load tissue as much as a much longer easy-mileage week). A ratio between roughly 0.8 and 1.3 is the sweet spot where load is being maintained or progressed sustainably. A ratio spiking above about 1.5 — a sudden jump relative to that athlete's own recent baseline — sharply raises injury risk, regardless of whether the absolute volume is still lower than a teammate's.",
         "The practical implication: 'safe' training load isn't an absolute number, it's relative to the individual's own recent history. This is also why returning from injury, illness, or an off-season break is a spike risk even at training levels the athlete easily handled before — time off resets chronic tolerance down, so the 'old normal' volume is now a spike."
-      ]
+      ],
+      "image": {
+        "asset": "overuse-injuries-acwr-graph.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Line graph with 'weeks' on the x-axis and 'acute:chronic workload ratio' on the y-axis, showing a shaded 'sweet spot' band between about 0.8 and 1.3, and a warning-colored zone above about 1.5 labeled 'spike — sharply elevated injury risk.' A sample athlete's ratio line is plotted rising from within the sweet spot up into the danger zone after a sudden training jump, with an annotation 'returning from break or rapid mileage increase.' Clean scientific-chart style, labeled axes.",
+        "alt": "Graph of the acute:chronic workload ratio showing a safe sweet-spot zone between 0.8 and 1.3 and a high-risk spike zone above 1.5.",
+        "location": "public/images/units/overuse-injuries/"
+      }
     },
     {
       "heading": "Tendinopathy: the failed-healing model",
@@ -48,6 +56,14 @@
         "Site matters enormously, and it comes down to blood supply and mechanical forces. High-risk sites sit on the tension side of a bone or in a watershed zone (an area with naturally poor blood supply): the femoral neck (tension/superior side), the tarsal navicular (a watershed vascular zone in the foot), and the anterior tibial cortex (tension side — sometimes called the 'dreaded black line' on X-ray for its poor healing tendency). These sites are prone to progressing to complete or displaced fracture, delayed union, or even needing surgical fixation, so they demand urgent, aggressive management. Low-risk sites — the posteromedial tibia, the fibular shaft, most metatarsal shafts (excluding the base of the 2nd metatarsal) — sit on the compression side with good blood supply and reliably heal with relative rest alone.",
         "Night pain and pain at rest are not just 'more of the same' — they signal escalation along this continuum toward true fracture, and they warrant urgent referral no matter the site."
       ],
+      "image": {
+        "asset": "overuse-injuries-bone-stress-continuum.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Horizontal four-stage continuum diagram of bone stress injury, each stage bar taller/darker than the last: 1) 'Bone strain' — subclinical, no imaging findings. 2) 'Stress reaction' — bone marrow edema visible on MRI, no fracture line. 3) 'Stress fracture' — visible fracture line. 4) 'Complete/displaced fracture.' Beneath the continuum, a small body outline marks high-risk sites (femoral neck, tarsal navicular, anterior tibial cortex) in a warning color versus low-risk sites (posteromedial tibia, fibula, metatarsal shafts) in a neutral color. Clean instructional-illustration style.",
+        "alt": "Diagram of the bone stress injury continuum from bone strain through stress reaction, stress fracture, to complete fracture, with high-risk and low-risk anatomical sites marked on a body outline.",
+        "location": "public/images/units/overuse-injuries/"
+      },
       "callout": {
         "type": "warning",
         "title": "High-risk site + progressing pain = urgent, not routine, referral",
