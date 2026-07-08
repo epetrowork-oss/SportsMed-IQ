@@ -1,4 +1,4 @@
-# Plan — pick up here (next session starts ~12:00)
+# Plan — pick up here (ALPHA SPRINT Jul 8-10 in progress, see that section)
 
 This file is the handoff between sessions. Read it first, keep it updated:
 check items off as they land, and add anything newly discovered. The working
@@ -256,7 +256,164 @@ image generation happens in Claude sessions, and anatomical accuracy
 needs human vetting regardless of source. This repo's side of the
 contract is the placeholder slots + the `npm run images:shotlist` brief.
 
-## Next up: teacher feedback — home page warmth + grade-scaled lesson imagery (planned 2026-07-08, not started)
+## ALPHA SPRINT — Wed Jul 8 → Fri Jul 10, 2026 (CURRENT FOCUS — read this first)
+
+**Goal:** by end of Friday Jul 10, the app is an **alpha** the user can hand
+to trusted teachers (he and his wife teach; they have a review network) for
+weekend feedback. That means: hosted at a URL, walkable end-to-end by a
+teacher with zero instructions from us beyond a one-page guide, and covering
+the four things the user asked for on Jul 8 — a real home page, teacher
+lesson assignment, California standards tagging, and a visual glow-up.
+
+**Why this replaces the previous section's plan:** PR #11/#12 landed the
+hero-banner approach (hero atop the existing grid + density guideline +
+~90 image slots backfilled across all 54 units). **User verdict: not what
+was wanted** — "we didn't really get a new page… a new tab to go to."
+The banner-on-grid compromise is dead; `/` becomes a true landing page and
+the unit grid moves to its own route. Image-slot backfill from #12 stands
+and feeds this sprint.
+
+### Research inputs (done 2026-07-08, orchestrator)
+
+- **Standards**: California HS sports medicine courses run under the
+  **CTE Model Curriculum Standards, Health Science & Medical Technology
+  sector, Patient Care pathway** — "B" pathway standards (official ID
+  format `CTE.HSMT.B.x.y`, e.g. B4.5 "connect patient data to the
+  appropriate system of care") plus 11 cross-sector anchor standards.
+  For the 7-8 band, the **CA Health Education Content Standards (2008),
+  Injury Prevention & Safety content area** is the right frame. NOTE:
+  cde.ca.gov is unreachable from this container (network policy), so the
+  catalog is drafted from knowledge + verified snippets and **must be
+  human-verified by the user against the official PDFs** before we tell
+  teachers the alignments are real.
+- **Assignment-without-accounts is a proven pattern**: Nearpod (5-letter
+  join code, student-paced mode), Quizlet student passes, Blooket homework
+  links — students never create accounts. Teachers already know and trust
+  the "join code" mental model; ours is the same move on top of the
+  existing sync-code machinery.
+- **Engagement (Khan Academy classroom redesign, ed-UX writing)**: the
+  single highest-leverage pattern is a student dashboard that answers
+  "what should I do next" with a short queue instead of the whole
+  library; plus immediate feedback and light progress celebration. This
+  matches the user's own reasoning for hiding the full lesson list
+  (fast kids run out; overwhelmed kids shut down).
+
+### Decisions (recommended defaults — user can override async)
+
+1. **Library visibility**: with no assignment imported, students see the
+   full library (needed for self-study + demo). Once an assignment code is
+   imported, the default student view becomes "My Lessons" (the assigned
+   queue) and the Library tab hides unassigned units behind the
+   assignment's `mode`: `"focus"` (default — hidden, with a "your teacher
+   assigns lessons here" note) or `"open"` (browse everything). Teacher
+   picks the mode when generating the code.
+2. **Standards frameworks**: tag units against BOTH CTE HSMT Patient Care
+   (9-10/11-12 bands) and CA Health Ed Injury Prevention & Safety (7-8
+   band); catalog entries carry `verified: false` until the user checks
+   them against the official documents.
+3. **Hosting**: GitHub Pages via an Actions workflow on `main` (static
+   PWA, no backend — Pages is free and fits). Needs Pages enabled on the
+   repo (user or orchestrator via API).
+
+### Day 1 — Wed Jul 8: structure (home split + standards foundation)
+
+*Routing: orchestrator writes specs + the standards catalog; everything
+else is `implementer` (Sonnet).*
+
+- [ ] **True landing page + Library split** (`implementer`): `/` becomes a
+      welcoming home — app identity, hero image slot (reuse the existing
+      `home-hero` placeholder), prominent Continue card, "jump back in /
+      start here" CTA, small how-it-works strip (student: read → quiz →
+      flashcards → share code; teacher: pointer to Teacher tab), NO unit
+      grid. Grid + grade filter + search move intact to `/lessons`
+      ("Library" nav tab). Nav order: Home · Library · Sync · Teacher.
+      All existing deep links (`/unit/:id` etc.) unchanged. 404 for
+      stale routes still works. Verify at 375/768/desktop.
+- [ ] **Standards schema + display** (`implementer`): `standards: [id]`
+      optional per unit; `src/content/standards.json` catalog
+      (id → framework, code, text, verified flag); validator errors on
+      unknown ids, warns on units with none; Unit page shows an
+      expandable "Standards alignment" line; teacher CSV gains a
+      standards column. No per-card badges yet (visual pass is Friday).
+- [ ] **Standards catalog drafted** (orchestrator — accuracy judgment):
+      CTE HSMT anchor + Patient Care B standards relevant to our 18
+      strands, CA Health Ed 7-8 Injury Prevention codes. Marked
+      unverified; hand the user a verification checklist.
+- [ ] **Standards backfill kicked off** (Sonnet agents, batched by band,
+      3 batches of 18): tag all 54 units; each batch runs
+      `validate:content` before reporting. Orchestrator reviews mapping
+      judgment, not each line.
+
+### Day 2 — Thu Jul 9: assignments end-to-end (the big feature)
+
+*Routing: orchestrator specs the code format + merge semantics first
+(share.js is subtle); UI builds are `implementer` tasks.*
+
+- [ ] **Assignment code format** (`src/lib/assignments.js`): `SMIQA1.` +
+      deflate-raw base64url (same plumbing as SMIQ2), payload
+      `{name, unitIds[], mode, due?, createdAt}`. Multiple assignments
+      can coexist; re-importing the same name updates it. Stored in the
+      progress store but NOT in the student progress-code schema (codes
+      stay compatible; completion is derivable from unit progress).
+      Known alpha limitation to document: assignments don't follow a
+      student who moves devices via progress code.
+- [ ] **Teacher: assignment builder** on Teacher page: pick units
+      (grouped by strand × band, with grade-band filter), name it, pick
+      focus/open mode, optional due date, generate + copy code. Roster
+      gains per-assignment completion (% of assigned units complete per
+      student) alongside existing columns.
+- [ ] **Student: import + My Lessons**: paste code on Sync (and a
+      low-friction "have a class code?" entry on Home); "My Lessons"
+      becomes the primary home-page module when assignments exist —
+      Khan-style short queue ("next up" = first incomplete assigned
+      unit), due date shown, per-assignment progress bar; Library obeys
+      focus/open mode per decision 1.
+- [ ] **Browser-verify the full loop as both roles**: teacher builds code
+      → student imports → queue + focus mode correct → student completes
+      a unit → exports progress code → teacher roster shows assignment
+      completion. Garbage/truncated assignment codes → friendly errors.
+
+### Day 3 — Fri Jul 10: look, ship, and hand off
+
+- [ ] **Aesthetic pass** (orchestrator sets direction — palette,
+      type scale, category accent colors; `implementer` executes):
+      landing hero treatment, card elevation/hover, lesson reading
+      layout (measure, section rhythm, callout styling), quiz/flashcard
+      polish, and upgrade student-facing `ImagePlaceholder` boxes from
+      "dashed dev box" to a presentable illustrated-tile look (soft
+      gradient + icon + label) so the alpha doesn't look unfinished
+      before real images land.
+- [ ] **Deploy**: GitHub Pages workflow (build on push to `main`),
+      Vite `base` set correctly, SW/manifest verified on the deployed
+      URL (installability + offline reload on the real host, not just
+      preview).
+- [ ] **QA sweep** (orchestrator drives): fresh-profile walkthroughs as
+      student and teacher at 375/768/desktop; zero console errors;
+      validator + build green; sync codes (SMIQ1/SMIQ2/SMIQA1) all
+      round-trip.
+- [ ] **Alpha kit for testers**: seeded demo assignment code + demo
+      roster the user can share; `TESTERS.md` one-pager (what to try,
+      known gaps incl. unverified standards + placeholder images, where
+      to send feedback). Regenerate `npm run images:shotlist` after the
+      hero/landing rework so the ChatGPT image brief is current.
+
+### Alpha bar (definition of done for Friday)
+
+A teacher with the URL and the one-pager can: land on a real home page
+that explains the app → browse the library → read a lesson, take a quiz,
+flip flashcards → build an assignment code for a picked set of units →
+watch a (demo or real) student's progress land in the roster with
+standards + assignment columns in the CSV. All offline-capable, phone
+through desktop, nothing that looks like scaffolding.
+
+### Explicitly deferred past alpha (so the sprint stays a sprint)
+
+Real images (user + ChatGPT pipeline, slots are ready), strand
+cross-links between grade-band siblings, `UnitCard` pill-logic cleanup,
+gamification beyond the queue (streaks/badges), fuller standards
+coverage reporting for teachers, accounts/live sync (permanently out).
+
+## Previous plan (hero-banner approach) — SUPERSEDED 2026-07-08, kept for context
 
 Real teacher feedback after using the app: **"Needs a home page, opening up
 to a lesson is a lot. It's not aesthetically pleasing."** Plus a content
@@ -367,6 +524,8 @@ aesthetically pleasing." Two sub-phases, sequenced differently:
 4. 4a structural CSS pass — can overlap with 3.
 5. 4b revisit — later, blocked on real images actually landing.
 
-## Out of scope (intentional, unchanged)
+## Out of scope (intentional)
 
-Accounts/auth, live server-based sync, assigning content.
+Accounts/auth and live server-based sync remain permanently out. Assigning
+content moved IN scope 2026-07-08 (via offline assignment codes — see the
+alpha sprint above); it is no longer on this list.
