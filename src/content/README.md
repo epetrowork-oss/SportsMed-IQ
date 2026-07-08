@@ -103,6 +103,23 @@ other band(s) of that strand first (find them via matching `strand`) so
 depth actually increases instead of just restating the same content in
 different words.
 
+### Picture density by band
+
+Grade band should also drive how many section `image` slots a unit carries,
+not just its reading level:
+
+| Band | Picture density |
+|---|---|
+| `7-8` | Image-heavy: aim for a diagram/illustration in most sections — roughly 3-5 per unit. Supports readers who benefit from visual anchors; matches this band's "short, concrete, recognize-it" tone. |
+| `9-10` | Moderate: images in key/complex sections only — anatomy, mechanism-of-injury, technique. Roughly 1-3 per unit. |
+| `11-12` | Minimal: only genuinely necessary diagrams — grading systems, differential/comparison charts. Roughly 0-2 per unit; text/vocabulary-forward per this band's existing depth contract. |
+
+These are targets for new content, not a description of what's already
+there — most existing units predate this guideline, and backfilling their
+`image` fields to match it is a separate, in-progress piece of work. Going
+forward, a unit's use of the `image` field (see the schema above) should
+follow this density.
+
 Not every strand needs all three bands filled immediately — a strand with
 only a `9-10` unit today is a normal, valid, incomplete state while the
 library fills in. `PLAN.md` tracks which strand/band combinations exist and

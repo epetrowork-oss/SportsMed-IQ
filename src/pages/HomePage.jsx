@@ -162,8 +162,24 @@ export default function HomePage() {
 
   return (
     <div className="page">
-      <h1>Units</h1>
-      {continueUnit && <ContinueCard unit={continueUnit} />}
+      <section className="home-hero">
+        <div className="home-hero-text">
+          <h1>Welcome to SportMedIQ</h1>
+          <p className="home-hero-tagline">Learn sports medicine skills, one lesson at a time.</p>
+        </div>
+        <div className="home-hero-image">
+          <ImagePlaceholder
+            asset="home-hero.webp"
+            purpose="home hero image"
+            ratio="21:9"
+            background="white"
+            description="A student athletic trainer taping an ankle on the sideline, first-aid kit open nearby — welcoming, hands-on scene that sets the tone for the app."
+            location="public/images/home/"
+            alt="A student athletic trainer taping an athlete's ankle on the sideline"
+          />
+        </div>
+        {continueUnit && <ContinueCard unit={continueUnit} />}
+      </section>
       <div className="home-filters">
         <div className="grade-band-picker" role="group" aria-label="Filter by grade">
           {GRADE_BANDS.map((band) => (
