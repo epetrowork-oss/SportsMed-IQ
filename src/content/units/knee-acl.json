@@ -34,7 +34,15 @@
         "Around 70% of ACL tears are non-contact: the athlete plants, cuts, pivots, or lands from a jump with the knee nearly straight and collapsing inward — no opponent involved. The athlete typically hears or feels a 'pop,' the knee gives way, and swelling develops fast, usually within 2 hours, because the torn ligament bleeds into the joint (hemarthrosis).",
         "Female athletes tear their ACLs at roughly 2–8 times the rate of male athletes in comparable sports — factors include landing mechanics, anatomy, and neuromuscular control. This is why jump-landing training programs matter for injury prevention.",
         "The classic contact pattern is a blow to the outside of a planted knee, driving it inward. When that force is big enough, it can produce the 'unhappy triad': torn ACL + MCL + medial meniscus."
-      ]
+      ],
+      "image": {
+        "asset": "knee-acl-noncontact-landing-mechanism.webp",
+        "ratio": "4:3",
+        "background": "transparent",
+        "description": "An athlete captured mid-landing from a jump, knee nearly straight and collapsing inward (valgus) toward the midline while the foot stays planted, torso leaning away from the knee. Use a motion/force arrow at the knee to show the inward collapse. No opponent in frame, emphasizing this is a non-contact mechanism. Simple athletic-illustration style.",
+        "alt": "Illustration of the classic non-contact ACL injury mechanism: a knee collapsing inward while landing from a jump.",
+        "location": "public/images/units/knee-acl/"
+      }
     },
     {
       "heading": "Recognizing a serious knee injury on the field",

@@ -40,7 +40,15 @@
         "About 85% of ankle sprains are inversion sprains: the foot rolls inward (sole turns toward the midline), usually while plantarflexed (toes pointed down) — think landing on another player's foot after a rebound. This stretches the lateral ligaments, tearing the ATFL first, then the CFL if the force continues.",
         "Eversion sprains (foot rolls outward) are rarer because the deltoid ligament is strong and the fibula physically blocks extreme eversion — but when they happen they are often more severe and can involve a fibula fracture.",
         "High ankle (syndesmotic) sprains typically come from forced external rotation of a planted foot, common in football and skiing."
-      ]
+      ],
+      "image": {
+        "asset": "ankle-sprain-inversion-mechanism.webp",
+        "ratio": "4:3",
+        "background": "transparent",
+        "description": "Side view of a right foot and lower leg mid-inversion, sole rolling inward and toes pointed slightly down, weight coming down on the outer edge of the foot after a landing. Use a motion arrow to show the foot rolling inward relative to the leg, and shade the lateral ligaments under tension. Simple athletic-illustration style, no background clutter.",
+        "alt": "Diagram of an ankle inversion sprain mechanism, showing the foot rolling inward under body weight during a landing.",
+        "location": "public/images/units/ankle-sprain/"
+      }
     },
     {
       "heading": "Grading sprains",
@@ -51,7 +59,15 @@
         "Grade I (mild) — ligament stretched, no significant tear. Mild swelling and tenderness, little or no bruising, athlete can usually bear weight. Return to play often 1–2 weeks.",
         "Grade II (moderate) — partial tear. Obvious swelling and bruising, painful weight bearing, some joint laxity. Return commonly 3–6 weeks.",
         "Grade III (severe) — complete rupture. Significant swelling, bruising, and instability; weight bearing is very painful or impossible. Needs physician management; recovery can take several months."
-      ]
+      ],
+      "image": {
+        "asset": "ankle-sprain-grading-comparison.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Three-panel side-by-side comparison of a lateral ankle, one panel per grade. Grade I: ligament fibers stretched but intact, mild puffiness. Grade II: ligament partially torn (visible frayed fibers), moderate swelling and a light bruise shading. Grade III: ligament completely torn with a visible gap, pronounced swelling and bruising, joint sitting slightly out of normal alignment. Label each panel with its grade number and one-line severity descriptor. Clean medical-illustration style.",
+        "alt": "Comparison diagram of Grade I, II, and III ankle sprains showing increasing ligament damage, swelling, and bruising.",
+        "location": "public/images/units/ankle-sprain/"
+      }
     },
     {
       "heading": "On-field evaluation",

@@ -12,7 +12,15 @@
       "body": [
         "Exertional heat stroke is one of the leading causes of sudden death in high school sports — and it is almost always survivable when recognized and cooled immediately. Most deaths happen in August football practices, but any sport in heat and humidity carries risk.",
         "Heat illness is a spectrum: heat cramps → heat exhaustion → heat stroke. An athlete can also jump straight to heat stroke without warning stages, so treat the spectrum as a triage tool, not a guaranteed sequence."
-      ]
+      ],
+      "image": {
+        "asset": "heat-illness-spectrum-triage.webp",
+        "ratio": "16:9",
+        "background": "transparent",
+        "description": "Horizontal spectrum graphic with three connected stages in increasing severity order: 'Heat cramps' (muscle spasm icon), 'Heat exhaustion' (sweating figure, normal mental status noted), 'Heat stroke' (collapsed figure, core temp above 104°F and confusion noted). Add a dashed arrow skipping directly from the start to 'Heat stroke' labeled 'can happen without warning stages.' Clean flat infographic style.",
+        "alt": "Spectrum diagram showing heat illness progressing from heat cramps to heat exhaustion to heat stroke, with a note that heat stroke can occur without warning stages.",
+        "location": "public/images/units/heat-illness/"
+      }
     },
     {
       "heading": "How the body handles heat",
@@ -48,6 +56,14 @@
         "A classic trap: skin may be wet OR dry. Athletes with exertional heat stroke are often still sweating heavily — do not rule it out because the skin is moist.",
         "The definitive treatment is immediate whole-body cold water immersion: a tub of ice water, cooling the athlete as fast as possible. The guiding rule is 'cool first, transport second' — survival is excellent when cooling starts within 10 minutes, and every minute of delay above 104°F damages organs."
       ],
+      "image": {
+        "asset": "heat-illness-cold-water-immersion-technique.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "An athlete seated in a large tub filled with ice water, submerged from the shoulders down, with two rescuers supporting the head and shoulders above the waterline and a bag of ice being added. A small clock icon in the corner reads 'within 10 minutes of collapse.' Clean instructional-illustration style, no distressing detail.",
+        "alt": "Diagram of whole-body cold water immersion, the definitive field treatment for exertional heat stroke.",
+        "location": "public/images/units/heat-illness/"
+      },
       "callout": {
         "type": "warning",
         "title": "Suspected heat stroke — act now",

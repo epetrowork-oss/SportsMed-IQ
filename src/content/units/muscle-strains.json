@@ -25,7 +25,15 @@
         "Groin/adductors — cutting, skating, and change-of-direction sports.",
         "Calf, especially gastrocnemius (crosses knee and ankle) — push-off injuries, common in older athletes ('tennis leg').",
         "Risk factors: inadequate warm-up, fatigue, prior strain of the same muscle (the biggest one), muscle imbalance, and poor flexibility."
-      ]
+      ],
+      "image": {
+        "asset": "muscle-strains-two-joint-muscles-map.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Front and back outline of a human body with the four commonly strained two-joint muscle groups highlighted and labeled: hamstrings (back of thigh, crossing hip and knee), rectus femoris (front of thigh, crossing hip and knee), groin/adductors (inner thigh), and gastrocnemius (calf, crossing knee and ankle). Use a consistent highlight color for all four with small joint-crossing icons at each end. Clean medical-illustration style.",
+        "alt": "Body diagram highlighting the hamstrings, rectus femoris, groin/adductors, and calf — the muscle groups most often strained because they cross two joints.",
+        "location": "public/images/units/muscle-strains/"
+      }
     },
     {
       "heading": "Grading strains",
@@ -34,6 +42,14 @@
         "Grade II (moderate) — partial tear. Sudden sharp pain ('felt a grab or pull'), pain with contraction and stretch, notable strength loss, swelling, often bruising that appears a day or two later and drifts downward with gravity. Weeks to 2 months.",
         "Grade III (severe) — complete rupture of the muscle or tendon. Sometimes a felt/heard pop, immediate loss of function, and possibly a visible or palpable gap or a balled-up muscle. Needs physician care; may require surgery."
       ],
+      "image": {
+        "asset": "muscle-strains-grading-comparison.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Three-panel comparison of a muscle belly (e.g., hamstring) cross-section, one panel per grade. Grade I: a few individual fibers frayed, muscle shape intact. Grade II: a visible partial tear through part of the muscle width, mild retraction. Grade III: a complete tear all the way through with a visible gap and the two ends balled up, plus a downstream bruise shading. Label each panel with its grade number. Clean medical-illustration style.",
+        "alt": "Comparison diagram of Grade I, II, and III muscle strains showing increasing fiber damage from a few stretched fibers to a complete rupture.",
+        "location": "public/images/units/muscle-strains/"
+      },
       "callout": {
         "type": "warning",
         "title": "Refer to a physician",

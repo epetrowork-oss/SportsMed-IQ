@@ -70,7 +70,15 @@
       "body": [
         "For a teen or adult in cardiac arrest, lay rescuers should perform hands-only (compression-only) CPR — chest compressions without rescue breaths. This is easier to remember under stress and current guidelines show it works as well as conventional CPR for lay rescuers in the first minutes.",
         "Technique: kneel beside the athlete, place the heel of one hand on the center of the chest (the lower half of the breastbone), the other hand on top, and push hard and fast — about 2 inches deep, at a rate of 100 to 120 compressions per minute — allowing the chest to fully recoil between compressions. Keep going without stopping until the AED is ready to analyze or EMS takes over; if a second trained rescuer is present, switch every 2 minutes to avoid fatigue-related shallow compressions."
-      ]
+      ],
+      "image": {
+        "asset": "eap-cpr-hand-placement.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "A rescuer kneeling beside a collapsed athlete lying on their back, hands correctly stacked with the heel of one hand on the center of the chest (lower half of the breastbone) and the other hand layered on top, elbows locked straight, shoulders directly over the hands. Include a small depth indicator (about 2 inches) beside the chest. Clean instructional-illustration style, no distressing detail.",
+        "alt": "Diagram of correct hand placement and body position for hands-only CPR chest compressions.",
+        "location": "public/images/units/emergency-action-plan/"
+      }
     },
     {
       "heading": "Using the AED",
@@ -78,7 +86,15 @@
         "An AED is designed for bystanders: turn it on and it talks you through every step in plain language. It analyzes the heart's rhythm and will only advise or deliver a shock if the rhythm is one a shock can actually fix (a 'shockable rhythm'). If the rhythm doesn't need a shock, the device will say so and tell you to continue CPR instead.",
         "You cannot hurt someone by attaching or using an AED, even if it turns out they didn't need a shock — the device does the deciding, not the rescuer. The only job of the rescuer is to expose the chest, attach the pads where the pictures show, and make sure everyone is clear of the body when the device analyzes or shocks.",
         "Getting an AED attached and delivering a shock within about 3 to 5 minutes of collapse dramatically increases the chance of survival — for every minute defibrillation is delayed, the odds of survival drop sharply. This is exactly why AED location and a clear path to retrieve it are core parts of every EAP."
-      ]
+      ],
+      "image": {
+        "asset": "eap-aed-pad-placement.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Front view of a torso showing the two AED pad placement locations: one pad on the upper right chest below the collarbone, one pad on the lower left side of the ribcage, with a dashed line suggesting the shock pathway between them. Include a small AED device icon beside the torso with a 'follow the voice prompts' label. Clean instructional-illustration style, no distressing detail.",
+        "alt": "Diagram showing correct AED pad placement on the chest: upper right below the collarbone and lower left side of the ribcage.",
+        "location": "public/images/units/emergency-action-plan/"
+      }
     },
     {
       "heading": "Rehearsal: the plan only works if you've practiced it",

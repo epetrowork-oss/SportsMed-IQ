@@ -24,7 +24,15 @@
         "Stage 2: pain during activity that doesn't limit performance — time to modify training.",
         "Stage 3: pain during activity that DOES limit performance — needs intervention and load reduction now.",
         "Stage 4: pain with daily life or at rest/night — stop and refer; this is where stress fractures live."
-      ]
+      ],
+      "image": {
+        "asset": "overuse-injuries-pain-stage-progression.webp",
+        "ratio": "16:9",
+        "background": "transparent",
+        "description": "Horizontal four-step severity ladder, each step taller and darker-shaded than the last. Stage 1: 'Pain after activity only.' Stage 2: 'Pain during activity, not limiting.' Stage 3: 'Pain during activity, limiting performance.' Stage 4: 'Pain at rest / night — stop and refer.' Use a rising arrow beneath the steps to show escalating urgency. Clean flat infographic style.",
+        "alt": "Four-stage severity ladder showing overuse injury pain progression from pain after activity only to pain at rest requiring referral.",
+        "location": "public/images/units/overuse-injuries/"
+      }
     },
     {
       "heading": "Shin splints (medial tibial stress syndrome)",
@@ -32,7 +40,15 @@
         "Diffuse aching pain along the inner (medial) border of the tibia, brought on by running and jumping — the most common overuse complaint in runners and court-sport athletes, especially early in a season.",
         "The key exam distinction: shin splints hurt over a DIFFUSE area (several centimeters of the inner shin) and usually ease as the athlete warms up. A stress fracture hurts at a PINPOINT spot, gets worse through activity, and may ache at night or with hopping on one leg.",
         "Care: reduce running load (relative rest — bike and pool work keep fitness), ice after activity, address footwear and training errors, and strengthen the calf and foot. Pushing through worsening shin pain is how shin splints graduate into stress fractures."
-      ]
+      ],
+      "image": {
+        "asset": "overuse-injuries-shin-splints-vs-stress-fracture.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Front view of a lower leg with two shaded pain-location overlays side by side. Left overlay labeled 'Shin splints': a broad, diffuse shaded band running several centimeters along the inner border of the tibia. Right overlay labeled 'Stress fracture': a single small, sharply defined pinpoint dot at one spot on the tibia. Include a short caption under each: 'eases with warm-up' vs. 'worsens through activity, may ache at night.' Clean medical-illustration style.",
+        "alt": "Comparison diagram of shin splints (diffuse pain along the inner shin) versus a stress fracture (pinpoint bone pain).",
+        "location": "public/images/units/overuse-injuries/"
+      }
     },
     {
       "heading": "Tendinopathy",

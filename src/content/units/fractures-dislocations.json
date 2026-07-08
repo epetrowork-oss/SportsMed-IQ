@@ -12,7 +12,15 @@
       "body": [
         "A fracture is a break in a bone — anything from a hairline crack to a bone snapped completely in two. A dislocation is different: it's a joint injury, where the bones that meet at a joint are forced out of their normal alignment (for example, the ball of the shoulder popping out of its socket). Both can happen from the same kind of forces — a hard fall, a direct blow, or a joint bent past its normal range — and both can look and feel similar on the sideline: pain, swelling, and a limb that doesn't work right.",
         "Fractures and dislocations sometimes happen together (a 'fracture-dislocation'), and either one can also injure the ligaments, blood vessels, and nerves running past the joint. This unit focuses on what you can safely recognize and do in the first few minutes — not on telling a fracture apart from a dislocation, which often isn't possible without an X-ray anyway."
-      ]
+      ],
+      "image": {
+        "asset": "fractures-dislocations-bone-vs-joint-diagram.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-panel comparison at a shoulder joint. Left panel: a fracture — a break line through the humerus bone itself, with the joint still properly seated. Right panel: a dislocation — the humeral head displaced completely out of its socket, with the bone itself intact. Label each panel 'Fracture' and 'Dislocation.' Clean medical-illustration style, no graphic detail.",
+        "alt": "Comparison diagram of a bone fracture versus a joint dislocation at the shoulder.",
+        "location": "public/images/units/fractures-dislocations/"
+      }
     },
     {
       "heading": "How they happen",
@@ -45,7 +53,15 @@
       "body": [
         "A closed fracture is one where the skin is intact — the bone is broken underneath, but nothing is exposed. An open fracture (also called a compound fracture) is one where the broken bone has torn through the skin, or a wound overlies the fracture site so bone may be exposed to the air. Open fractures are medical emergencies: they carry a high risk of serious bleeding and infection, since the wound gives bacteria a direct path to the bone.",
         "For an open fracture, your job is to control bleeding without disturbing the injury. Cover the wound with a clean dressing and apply gentle pressure around — not directly on top of — any visible bone fragment. Never push exposed bone back under the skin; that's not first aid, it's a way to cause more damage and introduce infection. Splint the limb in the position you found it and activate your school or team's Emergency Action Plan (EAP) immediately."
-      ]
+      ],
+      "image": {
+        "asset": "fractures-dislocations-open-vs-closed.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Two-panel cross-section comparison of a broken lower leg. Left panel: closed fracture — the break line is visible through a translucent skin overlay, but the skin surface is intact. Right panel: open fracture — a wound in the skin with the edge of the bone visible at the wound margin, and a dressing with gentle pressure being applied around (not on top of) the exposed bone. Label each panel 'Closed' and 'Open.' Clean clinical-illustration style, non-graphic.",
+        "alt": "Comparison diagram of a closed fracture (skin intact) and an open fracture (bone exposed through a wound).",
+        "location": "public/images/units/fractures-dislocations/"
+      }
     },
     {
       "heading": "Immediate response",

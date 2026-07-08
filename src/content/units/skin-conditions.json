@@ -24,7 +24,15 @@
         "Ringworm — ring-shaped red patch, raised scaly border, clearer center, itchy",
         "Athlete's foot — itching, redness, cracking or peeling between the toes",
         "Jock itch — red, itchy rash in the groin and inner thigh, often with a defined edge"
-      ]
+      ],
+      "image": {
+        "asset": "skin-conditions-fungal-infection-comparison.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Three-panel comparison of common fungal skin infections, each shown on a small patch of skin. Panel 1 'Ringworm': a ring-shaped red patch with a raised, scaly border and a clearer center. Panel 2 'Athlete's foot': redness and peeling skin between the toes. Panel 3 'Jock itch': a red, itchy rash with a defined edge in the groin/inner-thigh area (shown modestly, non-graphic). Label each panel. Clean medical-illustration style.",
+        "alt": "Comparison diagram of three fungal skin infections: ringworm, athlete's foot, and jock itch.",
+        "location": "public/images/units/skin-conditions/"
+      }
     },
     {
       "heading": "Bacterial infections: impetigo and MRSA",
@@ -32,6 +40,14 @@
         "Impetigo is a bacterial skin infection that starts as small red sores or blisters, usually around the nose and mouth or on exposed skin, which break open and form a distinctive honey-colored (yellowish) crust. It is highly contagious through direct contact and spreads quickly on a wrestling mat or through shared towels.",
         "MRSA (methicillin-resistant Staphylococcus aureus) is a strain of staph bacteria that has become resistant to many common antibiotics, which is what makes it more serious than an ordinary skin infection: it does not respond to the antibiotics that would normally clear up a typical staph or pimple-like infection, so it can spread deeper into tissue if untreated. It often looks deceptively minor at first — a red, swollen bump that looks like a pimple or spider bite — but it is frequently warm to the touch, painful out of proportion to its size, and may develop a center filled with pus. This is exactly why 'it's just a pimple' thinking is dangerous: the outside can look small while the infection underneath is serious and spreading."
       ],
+      "image": {
+        "asset": "skin-conditions-bacterial-infection-signs.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-panel comparison of bacterial skin infections. Left panel 'Impetigo': small sores/blisters that have broken open and formed a distinctive honey-colored (yellowish) crust, typically near the nose/mouth. Right panel 'MRSA': a red, swollen bump resembling a pimple or spider bite, with small icons noting 'warm to touch' and 'pain out of proportion to size.' Label each panel. Clean medical-illustration style, non-graphic.",
+        "alt": "Comparison diagram of impetigo (honey-colored crusted sores) and MRSA (a swollen, painful bump resembling a pimple).",
+        "location": "public/images/units/skin-conditions/"
+      },
       "callout": {
         "type": "warning",
         "title": "Red flags — refer immediately, do not self-treat",

@@ -63,6 +63,14 @@
         "Know it isn't your job to be their therapist. Being a supportive friend and being a mental health professional are different roles. Carrying that weight alone isn't fair to you or safe for them.",
         "Connect them to a trusted adult — a coach, athletic trainer, school counselor, or parent. Offer to go with them the first time if that helps."
       ],
+      "image": {
+        "asset": "sports-psychology-supportive-conversation.webp",
+        "ratio": "4:3",
+        "background": "transparent",
+        "description": "Two teammates in practice gear sitting together on a bench off to the side of a field or court, one leaning in and listening attentively with open, calm body language while the other talks. Warm, low-key scene with no text, no visible score or crowd — the focus is entirely on the supportive one-on-one conversation. Simple, gentle illustration style, nothing clinical or distressing.",
+        "alt": "Illustration of one teammate listening supportively while another talks, depicting a peer-support conversation.",
+        "location": "public/images/units/sports-psychology/"
+      },
       "callout": {
         "type": "tip",
         "title": "Starting the conversation",

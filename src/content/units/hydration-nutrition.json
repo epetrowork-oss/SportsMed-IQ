@@ -56,6 +56,14 @@
         "More water is not always better. Drinking far beyond what thirst and sweat losses call for — especially plain water over several hours during a long event like a cross-country meet, marathon, or all-day tournament — can dilute the sodium in the blood. This condition, called hyponatremia, can cause confusion, nausea, swelling, seizures, and in rare severe cases can be fatal.",
         "The practical takeaway for students: hydration guidance is about matching fluid to losses, not maximizing fluid intake. 'Drink when thirsty, and use body weight changes as a check' protects against both dehydration and overhydration."
       ],
+      "image": {
+        "asset": "hydration-nutrition-hyponatremia-vs-dehydration.webp",
+        "ratio": "16:9",
+        "background": "transparent",
+        "description": "Two-panel side-by-side comparison. Left panel labeled 'Dehydration': thirst, dry mouth, dark urine, fatigue icons. Right panel labeled 'Overhydration / Hyponatremia': confusion, worsening headache, vomiting, swollen hands/feet icons. Add a small caption under the right panel: 'More water makes this WORSE, not better.' Clean flat infographic style.",
+        "alt": "Comparison diagram of dehydration signs versus overhydration (hyponatremia) signs during long endurance events.",
+        "location": "public/images/units/hydration-nutrition/"
+      },
       "callout": {
         "type": "warning",
         "title": "Red flag — refer out",
@@ -79,7 +87,15 @@
         "3-4 hours before: a larger, balanced meal with carbs, moderate protein, and lower fat/fiber (which digest slowly and can cause GI discomfort during exercise) — for example chicken, rice, and vegetables.",
         "1-2 hours before: a lighter carb-focused snack if a full meal isn't possible — a banana, granola bar, or toast with jam.",
         "Within about 30-60 minutes after a hard session: a combined carb + protein snack to jump-start recovery — chocolate milk, a turkey sandwich, or yogurt with fruit — followed by a normal meal."
-      ]
+      ],
+      "image": {
+        "asset": "hydration-nutrition-fueling-timeline.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Horizontal timeline graphic centered on a practice/game icon, with markers at '3-4 hours before' (balanced meal icon: chicken, rice, vegetables), '1-2 hours before' (light snack icon: banana or granola bar), and '30-60 minutes after' (recovery snack icon: chocolate milk or sandwich), followed by 'normal meal.' Clean flat infographic timeline style.",
+        "alt": "Timeline diagram of pre-activity and post-activity meal and snack timing for athletes.",
+        "location": "public/images/units/hydration-nutrition/"
+      }
     },
     {
       "heading": "Myths worth unlearning",

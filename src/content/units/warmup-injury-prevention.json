@@ -21,6 +21,14 @@
         "These two are easy to confuse but do different jobs. Dynamic stretching moves a joint actively through its range of motion — leg swings, walking lunges, high knees, arm circles. It stretches muscle while also raising heart rate and rehearsing movement patterns the athlete is about to use. This is the right kind of stretching for before activity.",
         "Static stretching means holding a stretch in one position without moving — for example, holding a hamstring stretch for 20-30 seconds. It's a valuable habit, but the timing matters. Research has repeatedly found that static stretching immediately before intense activity does not reduce injury risk the way many athletes assume, and it can even cause a brief, temporary dip in muscular power right afterward. That doesn't mean static stretching is bad — it means it belongs at a different point in the session."
       ],
+      "image": {
+        "asset": "warmup-injury-prevention-dynamic-vs-static.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-panel comparison. Left panel labeled 'Dynamic (before activity)': an athlete mid-motion in a walking lunge or leg swing, with a motion arrow showing active movement through the range. Right panel labeled 'Static (after activity)': an athlete holding a still hamstring stretch, with a stopwatch icon reading '20-30 seconds.' Clean instructional-illustration style.",
+        "alt": "Comparison diagram of dynamic stretching (active movement before activity) and static stretching (held position after activity).",
+        "location": "public/images/units/warmup-injury-prevention/"
+      },
       "callout": {
         "type": "tip",
         "title": "Save the long holds for after",
@@ -36,7 +44,15 @@
         "General warm-up — a few minutes of light, easy cardio (jogging, jumping jacks, biking) to raise heart rate and start increasing muscle temperature before anything more demanding.",
         "Dynamic stretching and mobility — leg swings, walking lunges, high knees, carioca, arm circles — actively moving joints through the ranges of motion the sport will demand.",
         "Sport-specific movement — drills that rehearse the actual patterns of the sport at increasing intensity. A soccer warm-up should include short passes, first-touch control, and cutting — not just jogging in a straight line, since jogging alone never rehearses the sharp direction changes that cause most non-contact injuries."
-      ]
+      ],
+      "image": {
+        "asset": "warmup-injury-prevention-three-phase-structure.webp",
+        "ratio": "16:9",
+        "background": "transparent",
+        "description": "Horizontal flow diagram with three connected boxes and arrows showing increasing intensity left to right: 'General warm-up' (light jogging icon), 'Dynamic stretching & mobility' (leg swing icon), 'Sport-specific movement' (cutting/passing icon). Add a small intensity gradient bar beneath the boxes rising from low to high. Clean flat infographic style.",
+        "alt": "Flow diagram of the three-phase warm-up structure: general warm-up, dynamic stretching and mobility, then sport-specific movement.",
+        "location": "public/images/units/warmup-injury-prevention/"
+      }
     },
     {
       "heading": "Structured injury-prevention programs",
