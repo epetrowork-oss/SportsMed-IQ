@@ -10,6 +10,7 @@ import {
   PASS_THRESHOLD,
 } from '../lib/progress.js'
 import NotFoundPage from './NotFoundPage.jsx'
+import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
 
 // Accumulate reading time while the lesson is open AND the tab is visible.
 // Each delta is capped so a laptop waking from sleep can't credit hours.
@@ -138,6 +139,19 @@ export default function UnitPage() {
               </ul>
             )}
             {section.callout && <Callout callout={section.callout} />}
+            {section.image && (
+              <div className="lesson-image">
+                <ImagePlaceholder
+                  asset={section.image.asset}
+                  purpose="lesson diagram"
+                  ratio={section.image.ratio}
+                  background={section.image.background}
+                  description={section.image.description}
+                  location={section.image.location}
+                  alt={section.image.alt}
+                />
+              </div>
+            )}
           </section>
         ))}
       </article>

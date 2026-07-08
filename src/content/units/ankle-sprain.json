@@ -24,7 +24,15 @@
         "Lateral (outside) ligaments — anterior talofibular ligament (ATFL), calcaneofibular ligament (CFL), and posterior talofibular ligament (PTFL). The ATFL is the weakest and the most commonly sprained ligament in the body.",
         "Medial (inside) ligament — the deltoid ligament, a strong fan-shaped ligament that resists eversion. It is injured far less often.",
         "Syndesmosis — the tissue binding the tibia and fibula together just above the ankle. Injury here is called a 'high ankle sprain' and heals slowly."
-      ]
+      ],
+      "image": {
+        "asset": "ankle-sprain-lateral-ligaments.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Lateral (outside) view of a right ankle joint showing the tibia, fibula, and talus with the lateral malleolus labeled. Highlight the three lateral ligaments in a distinct color: ATFL (anterior talofibular), CFL (calcaneofibular), and PTFL (posterior talofibular), each labeled with its full name and abbreviation. Clean medical-illustration style, neutral foot position.",
+        "alt": "Diagram of the lateral ankle ligaments — ATFL, CFL, and PTFL — connecting the fibula to the talus and calcaneus.",
+        "location": "public/images/units/ankle-sprain/"
+      }
     },
     {
       "heading": "Mechanism of injury",

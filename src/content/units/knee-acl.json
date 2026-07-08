@@ -18,7 +18,15 @@
         "MCL (medial collateral ligament) — inside edge of the knee; resists force pushing the knee inward (valgus). Most commonly injured by a blow to the OUTSIDE of the knee.",
         "LCL (lateral collateral ligament) — outside edge; resists force from the inside. Least commonly injured.",
         "Menisci (medial and lateral) — two C-shaped fibrocartilage pads between femur and tibia that absorb shock and distribute load. Torn by twisting on a planted foot, often along with ligament injuries."
-      ]
+      ],
+      "image": {
+        "asset": "knee-acl-anatomy-mechanism.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Anterior view of a right knee joint with the patella removed to show internal anatomy: femur above, tibia below, and the four major ligaments labeled in distinct colors — ACL and PCL crossing inside the joint, MCL along the inner edge, LCL along the outer edge — plus the medial and lateral menisci shown as C-shaped pads between femur and tibia. Clean medical-illustration style, no text other than labels.",
+        "alt": "Diagram of the knee joint showing the ACL, PCL, MCL, and LCL ligaments and the medial and lateral menisci.",
+        "location": "public/images/units/knee-acl/"
+      }
     },
     {
       "heading": "How ACL tears happen",

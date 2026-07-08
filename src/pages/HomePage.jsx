@@ -2,6 +2,17 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getUnitsByCategory } from '../content/index.js'
 import { useProgress, getUnitProgress, isUnitComplete } from '../lib/progress.js'
+import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
+
+// Shared with scripts/list-image-slots.mjs, which reconstructs these same
+// slots from the content JSON to build the image author's shot list.
+function slugify(s) {
+  return s
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
+}
 
 const GRADE_BAND_KEY = 'sportmediq:gradeBand'
 const GRADE_BANDS = [
@@ -20,9 +31,21 @@ function GradeBandLabel({ gradeBand }) {
 function UnitCard({ unit, showGradeBand }) {
   const p = getUnitProgress(unit.id)
   const complete = isUnitComplete(unit.id)
+  const strand = unit.strand ?? unit.id
 
   return (
     <Link to={`/unit/${unit.id}`} className="unit-card">
+      <div className="unit-card-thumb">
+        <ImagePlaceholder
+          asset={`unit-${strand}-hero.webp`}
+          purpose="unit card thumbnail"
+          ratio="3:2"
+          background="white"
+          description={`Illustrative thumbnail for ${unit.title}: ${unit.summary}`}
+          location={`public/images/units/${strand}/`}
+          alt={`Thumbnail illustration for ${unit.title}`}
+        />
+      </div>
       <div className="unit-card-top">
         <h3>{unit.title}</h3>
         {complete ? (
@@ -92,7 +115,20 @@ export default function HomePage() {
       )}
       {groups.map(({ category, units }) => (
         <section key={category} className="category-group">
-          <h2>{category}</h2>
+          <div className="category-heading">
+            <div className="category-icon-slot">
+              <ImagePlaceholder
+                asset={`category-${slugify(category)}.webp`}
+                purpose="category icon"
+                ratio="1:1"
+                background="transparent"
+                description={`Simple flat icon representing ${category}`}
+                location="public/images/categories/"
+                alt={`${category} icon`}
+              />
+            </div>
+            <h2>{category}</h2>
+          </div>
           <div className="unit-grid">
             {units.map((unit) => (
               <UnitCard key={unit.id} unit={unit} showGradeBand={gradeBand === 'all'} />

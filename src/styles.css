@@ -674,6 +674,112 @@ h2 {
   color: var(--red);
 }
 
+/* Image placeholders — see src/components/ImagePlaceholder.jsx.
+   Dashed, muted boxes that stand in for real images until they land;
+   swapping in a real <img> (via the `src` prop) reuses the same
+   `.image-slot` sizing so layout never has to be reworked. */
+
+.image-slot {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.image-slot-real {
+  object-fit: cover;
+}
+
+.image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  border: 2px dashed var(--line);
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--ink-soft);
+  overflow: hidden;
+}
+
+.image-placeholder-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.image-placeholder-asset {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.68rem;
+  word-break: break-word;
+}
+
+.image-placeholder-meta {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.image-placeholder-bg-transparent {
+  background-image:
+    linear-gradient(45deg, var(--line) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--line) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--line) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--line) 75%);
+  background-size: 14px 14px;
+  background-position: 0 0, 0 7px, 7px -7px, -7px 0;
+  background-color: var(--card);
+  opacity: 0.85;
+}
+
+.image-placeholder-bg-white {
+  background: #fff;
+}
+
+.image-placeholder-bg-dark {
+  background: var(--brand);
+  border-color: var(--brand-light);
+  color: var(--brand-light);
+}
+
+/* Category icon slots on the home page. */
+.category-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.category-icon-slot {
+  flex: none;
+  width: 2.5rem;
+}
+
+.category-icon-slot .image-placeholder {
+  padding: 0.15rem;
+}
+
+.category-icon-slot .image-placeholder-asset,
+.category-icon-slot .image-placeholder-meta {
+  display: none;
+}
+
+/* Unit card thumbnails. */
+.unit-card-thumb {
+  margin: -1rem -1rem 0.75rem;
+  border-radius: 0.7rem 0.7rem 0 0;
+}
+
+.unit-card-thumb .image-placeholder-asset,
+.unit-card-thumb .image-placeholder-meta {
+  font-size: 0.62rem;
+}
+
+/* Lesson diagrams inside a unit section. */
+.lesson-image {
+  max-width: 26rem;
+  margin: 0.75rem 0;
+}
+
 /* Sync page & code boxes */
 
 .text-input {
