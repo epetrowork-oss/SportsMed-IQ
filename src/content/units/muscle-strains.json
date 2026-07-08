@@ -6,6 +6,7 @@
   "gradeBand": "9-10",
   "summary": "Pulled hamstrings, groins, and quads: how muscles tear, how to grade and treat strains, and why athletes re-injure the same muscle.",
   "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.Anchor.6"],
   "sections": [
     {
       "heading": "Strain vs. sprain — get the words right",

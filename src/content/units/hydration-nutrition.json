@@ -6,6 +6,7 @@
   "gradeBand": "9-10",
   "summary": "Fuel and fluid strategy that actually holds up at practice and on tournament day — plus the myths worth unlearning.",
   "minutes": 15,
+  "standards": ["CTE.HSMT.Anchor.6", "CTE.HSMT.B.1.2", "CTE.HSMT.B.4.5"],
   "sections": [
     {
       "heading": "Why hydration and fueling matter",

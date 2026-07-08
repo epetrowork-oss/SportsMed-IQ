@@ -6,6 +6,7 @@
   "gradeBand": "9-10",
   "summary": "Recognize the signs of a concussion, respond correctly on the sideline, and understand why 'when in doubt, sit them out' is the law.",
   "minutes": 25,
+  "standards": ["CTE.HSMT.B.1.0", "CTE.HSMT.B.2.3", "CTE.HSMT.B.4.5"],
   "sections": [
     {
       "heading": "What a concussion is",

@@ -6,6 +6,7 @@
   "gradeBand": "9-10",
   "summary": "Recognize hypothermia and frostbite before they become emergencies — and know why wet, windy cold is more dangerous than a colder, dry day.",
   "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.3", "CTE.HSMT.B.2.4", "CTE.HSMT.Anchor.6"],
   "sections": [
     {
       "heading": "Why cold exposure matters",

@@ -6,6 +6,7 @@
   "gradeBand": "9-10",
   "summary": "Recognize the contact-sport skin infections that spread fast in locker rooms and on mats, and know the rule that keeps them from spreading further.",
   "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.3", "CTE.HSMT.Anchor.6", "CTE.HSMT.B.4.5"],
   "sections": [
     {
       "heading": "Why skin infections matter in sports",

@@ -6,6 +6,7 @@
   "gradeBand": "9-10",
   "summary": "Recognize a broken bone or a joint out of place, protect the athlete, and know the one thing you must never try to fix yourself.",
   "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.3", "CTE.HSMT.B.2.4", "CTE.HSMT.B.4.5"],
   "sections": [
     {
       "heading": "What's actually injured",

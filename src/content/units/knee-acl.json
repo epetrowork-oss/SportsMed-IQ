@@ -6,6 +6,7 @@
   "gradeBand": "9-10",
   "summary": "The four major knee ligaments, the classic non-contact ACL tear, the 'unhappy triad,' and what to do when a knee gives out on the field.",
   "minutes": 20,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.B.1.0"],
   "sections": [
     {
       "heading": "Anatomy: four ligaments, two menisci",

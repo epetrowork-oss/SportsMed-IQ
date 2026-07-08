@@ -6,6 +6,7 @@
   "gradeBand": "9-10",
   "summary": "Tell a minor eye irritation from a sight-threatening injury, and know exactly what to do — and not do — in the first minute.",
   "minutes": 15,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.Anchor.6"],
   "sections": [
     {
       "heading": "Why eye injuries deserve their own protocol",

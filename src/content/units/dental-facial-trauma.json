@@ -6,6 +6,7 @@
   "gradeBand": "9-10",
   "summary": "Recognize and manage knocked-out teeth, cuts, nosebleeds, and possible facial fractures — and know the minutes that decide whether a tooth can be saved.",
   "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.4", "CTE.HSMT.B.4.5", "CTE.HSMT.Anchor.6"],
   "sections": [
     {
       "heading": "Why the mouth and face are high-stakes",
