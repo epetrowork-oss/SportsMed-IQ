@@ -13,6 +13,7 @@
   --green-bg: #e2f3e9;
   --red: #b3372f;
   --red-bg: #fbe9e7;
+  --amber: #a05a00;
   --amber-bg: #fdf3d8;
 }
 
@@ -115,6 +116,16 @@ body {
     padding: 0.3rem 0.5rem;
     font-size: 0.88rem;
   }
+
+  .home-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-field {
+    flex-basis: auto;
+    width: 100%;
+  }
 }
 
 .app-main {
@@ -202,6 +213,9 @@ h2 {
 }
 
 .pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
   font-size: 0.72rem;
   font-weight: 700;
   padding: 0.15rem 0.55rem;
@@ -209,14 +223,17 @@ h2 {
   white-space: nowrap;
 }
 
+/* Same green/amber language as the teacher dashboard's .status-done /
+   .status-progress (see "Status dots/icons" below) — reuses the same
+   custom properties rather than duplicating colors. */
 .pill-done {
   background: var(--green-bg);
   color: var(--green);
 }
 
 .pill-progress {
-  background: var(--brand-light);
-  color: var(--brand);
+  background: var(--amber-bg);
+  color: var(--amber);
 }
 
 .pill-grade {
@@ -256,6 +273,107 @@ h2 {
 
 .empty-note {
   color: var(--ink-soft);
+}
+
+/* "Continue where you left off" — sits above the filters, ignores them. */
+
+.continue-card {
+  display: block;
+  background: var(--brand-light);
+  border: 1.5px solid var(--brand);
+  border-radius: 0.7rem;
+  padding: 1rem 1.15rem;
+  margin-bottom: 1.25rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.continue-card:hover {
+  border-color: var(--brand);
+}
+
+.continue-kicker {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--brand);
+}
+
+.continue-title {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.continue-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.continue-meta .pill-grade {
+  margin-top: 0;
+}
+
+.continue-summary {
+  margin: 0.5rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+/* Home filters: grade-band picker + search, side by side above the grid. */
+
+.home-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-filters .grade-band-picker {
+  margin-bottom: 0;
+}
+
+.search-field {
+  flex: 0 1 16rem;
+}
+
+.search-input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.5rem 0.9rem;
+  font: inherit;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--ink);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--brand);
+}
+
+.search-count {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  margin: 0 0 0.75rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Buttons */
@@ -414,6 +532,10 @@ h2 {
   color: var(--green);
 }
 
+.quiz-score-progress {
+  color: var(--amber);
+}
+
 /* Flashcards */
 
 .flashcard {
@@ -470,109 +592,185 @@ h2 {
   background: var(--card);
 }
 
-.table-wrap {
-  overflow-x: auto;
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 0.7rem;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  font-size: 0.92rem;
-}
-
-th,
-td {
-  text-align: left;
-  padding: 0.6rem 0.85rem;
-  border-bottom: 1px solid var(--line);
-  white-space: nowrap;
-}
-
-tbody tr:last-child td {
-  border-bottom: none;
-}
-
-th {
-  background: var(--brand-light);
-  color: var(--brand);
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.cell-done {
-  color: var(--green);
-  font-weight: 700;
-}
-
-.cell-progress {
-  color: var(--ink-soft);
-}
-
-.cell-flag {
-  color: #a05a00;
-  background: var(--amber-bg);
-}
-
 .read-time-note {
   color: var(--ink-soft);
   font-size: 0.9rem;
   margin: 0;
 }
 
-.roster-row {
+/* Status dots/icons — generic, reused wherever completion status shows up. */
+
+.status-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.status-done {
+  color: var(--green);
+}
+
+.status-progress {
+  color: var(--amber);
+}
+
+.status-none {
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.status-flag {
+  color: var(--amber);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Drill-down accordion (teacher dashboard's three pivots) */
+
+.drill-list {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+
+.drill-group:not(:last-child) {
+  border-bottom: 1px solid var(--line);
+}
+
+.drill-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 0.6rem;
+  row-gap: 0.25rem;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  padding-left: calc(0.75rem + var(--level, 0) * 1.1rem);
+  border: none;
+  border-top: 1px solid var(--line);
+  background: var(--card);
+  font: inherit;
+  text-align: left;
+  color: inherit;
   cursor: pointer;
 }
 
-.roster-row:hover {
+.drill-group > .drill-row:first-child {
+  border-top: none;
+}
+
+.drill-row:hover {
   background: var(--brand-light);
 }
 
-.roster-row-expanded {
+.drill-row-expanded {
   background: var(--brand-light);
 }
 
-.detail-row td {
-  padding: 0;
-  background: var(--bg);
+.drill-caret {
+  display: inline-block;
+  flex: none;
+  width: 0.9rem;
+  color: var(--ink-soft);
+  transition: transform 0.15s;
 }
 
-.student-detail {
-  overflow-x: auto;
-  padding: 0.75rem 0.85rem;
+.drill-caret-open {
+  transform: rotate(90deg);
 }
 
-.student-detail-table {
-  border-collapse: collapse;
-  width: 100%;
-  font-size: 0.88rem;
+.drill-label {
+  flex: 1 1 auto;
+  min-width: 8rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
 }
 
-.student-detail-table th,
-.student-detail-table td {
-  text-align: left;
-  padding: 0.4rem 0.6rem;
-  border-bottom: 1px solid var(--line);
+.drill-right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.drill-row-right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.drill-stat {
   white-space: normal;
 }
 
-.student-detail-table tbody tr:last-child td {
+.drill-children {
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+
+.drill-category-heading {
+  margin: 0;
+  padding: 0.6rem 0.75rem 0.3rem;
+  padding-left: calc(0.75rem + var(--level, 0) * 1.1rem);
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+.drill-detail-wrap {
+  padding: 0.6rem 0.85rem 0.9rem;
+  padding-left: calc(0.75rem + var(--level, 0) * 1.1rem);
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+
+.lesson-detail {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0;
+  max-width: 32rem;
+}
+
+.lesson-detail-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.3rem 0.75rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px dashed var(--line);
+}
+
+.lesson-detail-row:last-child {
   border-bottom: none;
 }
 
-.student-detail-table th {
-  background: none;
+.lesson-detail-row dt {
   color: var(--ink-soft);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  flex: 1 1 9rem;
+}
+
+.lesson-detail-row dd {
+  margin: 0;
+  flex: 2 1 12rem;
+  text-align: right;
 }
 
 .detail-flag {
-  color: #a05a00;
+  color: var(--amber);
   font-weight: 600;
   margin-top: 0.15rem;
 }
@@ -595,6 +793,112 @@ th {
 .remove-button:hover {
   background: var(--red-bg);
   color: var(--red);
+}
+
+/* Image placeholders — see src/components/ImagePlaceholder.jsx.
+   Dashed, muted boxes that stand in for real images until they land;
+   swapping in a real <img> (via the `src` prop) reuses the same
+   `.image-slot` sizing so layout never has to be reworked. */
+
+.image-slot {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.image-slot-real {
+  object-fit: cover;
+}
+
+.image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  border: 2px dashed var(--line);
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--ink-soft);
+  overflow: hidden;
+}
+
+.image-placeholder-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.image-placeholder-asset {
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.68rem;
+  word-break: break-word;
+}
+
+.image-placeholder-meta {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.image-placeholder-bg-transparent {
+  background-image:
+    linear-gradient(45deg, var(--line) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--line) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--line) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--line) 75%);
+  background-size: 14px 14px;
+  background-position: 0 0, 0 7px, 7px -7px, -7px 0;
+  background-color: var(--card);
+  opacity: 0.85;
+}
+
+.image-placeholder-bg-white {
+  background: #fff;
+}
+
+.image-placeholder-bg-dark {
+  background: var(--brand);
+  border-color: var(--brand-light);
+  color: var(--brand-light);
+}
+
+/* Category icon slots on the home page. */
+.category-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.category-icon-slot {
+  flex: none;
+  width: 2.5rem;
+}
+
+.category-icon-slot .image-placeholder {
+  padding: 0.15rem;
+}
+
+.category-icon-slot .image-placeholder-asset,
+.category-icon-slot .image-placeholder-meta {
+  display: none;
+}
+
+/* Unit card thumbnails. */
+.unit-card-thumb {
+  margin: -1rem -1rem 0.75rem;
+  border-radius: 0.7rem 0.7rem 0 0;
+}
+
+.unit-card-thumb .image-placeholder-asset,
+.unit-card-thumb .image-placeholder-meta {
+  font-size: 0.62rem;
+}
+
+/* Lesson diagrams inside a unit section. */
+.lesson-image {
+  max-width: 26rem;
+  margin: 0.75rem 0;
 }
 
 /* Sync page & code boxes */

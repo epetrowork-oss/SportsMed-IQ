@@ -15,6 +15,7 @@ const emptyUnit = () => ({
   quizAttempts: 0,
   readSeconds: 0, // accumulated time on the lesson page while visible
   scrollPct: 0, // deepest point of the lesson ever seen, 0-100
+  touchedAt: 0, // Date.now() of the last mutation, for "continue where you left off"
 })
 
 function load() {
@@ -45,7 +46,7 @@ function updateUnit(unitId, patch) {
   const current = state.units[unitId] ?? emptyUnit()
   save({
     ...state,
-    units: { ...state.units, [unitId]: { ...current, ...patch } },
+    units: { ...state.units, [unitId]: { ...current, ...patch, touchedAt: Date.now() } },
   })
 }
 

@@ -30,6 +30,18 @@ never requires touching component code** — drop a new `*.json` file into
         "type": "warning",       // "warning" (red flags / refer out) or "tip" (field tips)
         "title": "Red flags — refer to a physician",
         "text": "Callout body text."
+      },
+      "image": {                 // optional lesson diagram, rendered after the section's
+                                  // paragraphs/list/callout via <ImagePlaceholder> until a
+                                  // real image lands. Purpose is implicitly "lesson diagram"
+                                  // and noText is always true — omit the field entirely if a
+                                  // section has no diagram.
+        "asset": "ankle-sprain-lateral-ligaments.webp",  // filename, must end in ".webp"
+        "ratio": "4:3",                                   // aspect ratio, must match "\d+:\d+"
+        "background": "white",                            // "transparent" | "white" | "dark"
+        "description": "Visual description for the image author: body position, angle, what's highlighted.",
+        "alt": "Accessibility alt text describing the image.",
+        "location": "public/images/units/ankle-sprain/"   // target dir, must start with "public/images/"
       }
     }
   ],
@@ -58,6 +70,15 @@ Rules:
 - `strand` + `gradeBand` together must be unique — a strand can have at most
   one unit per band.
 - Every quiz question needs at least 2 choices and a valid `answerIndex`.
+- A section's optional `image` object, when present, must have all six fields
+  (`asset`, `ratio`, `background`, `description`, `alt`, `location`) as
+  non-empty strings, `ratio` matching `\d+:\d+`, `asset` ending in `.webp`,
+  and `location` starting with `public/images/` — enforced by
+  `scripts/validate-content.mjs`. Real image files land later in
+  `public/images/`; until then the slot renders as a labeled placeholder
+  (`src/components/ImagePlaceholder.jsx`). `node scripts/list-image-slots.mjs`
+  scans every unit (plus the home page's category/unit-card slots) to
+  regenerate the full image shot list.
 - The loader (`src/content/index.js`) validates units at startup and logs a
   clear error for malformed files instead of crashing the app.
 - `scripts/validate-content.mjs` (`npm run validate:content`) is the strict

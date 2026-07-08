@@ -58,6 +58,19 @@ function checkUnit(unit, file) {
         if (!isNonEmptyString(s.callout.title) || !isNonEmptyString(s.callout.text))
           err(`sections[${i}] callout needs "title" and "text"`)
       }
+      if (s.image !== undefined) {
+        const img = s.image
+        const fields = ['asset', 'ratio', 'background', 'description', 'alt', 'location']
+        for (const field of fields) {
+          if (!isNonEmptyString(img[field])) err(`sections[${i}] image missing "${field}"`)
+        }
+        if (isNonEmptyString(img.ratio) && !/^\d+:\d+$/.test(img.ratio))
+          err(`sections[${i}] image "ratio" must look like "16:9"`)
+        if (isNonEmptyString(img.asset) && !img.asset.endsWith('.webp'))
+          err(`sections[${i}] image "asset" must end in ".webp"`)
+        if (isNonEmptyString(img.location) && !img.location.startsWith('public/images/'))
+          err(`sections[${i}] image "location" must start with "public/images/"`)
+      }
     })
   }
 

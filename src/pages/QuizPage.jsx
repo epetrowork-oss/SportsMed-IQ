@@ -49,7 +49,8 @@ export default function QuizPage() {
           <Link to="/">Units</Link> / <Link to={`/unit/${unit.id}`}>{unit.title}</Link> / Quiz
         </nav>
         <h1>Quiz results</h1>
-        <p className={`quiz-score ${passed ? 'quiz-score-pass' : ''}`}>
+        <p className={`quiz-score ${passed ? 'quiz-score-pass' : 'quiz-score-progress'}`}>
+          <span aria-hidden="true">{passed ? '✓' : '●'}</span>{' '}
           {correctCount} / {questions.length} correct ({Math.round(score * 100)}%)
         </p>
         <p>

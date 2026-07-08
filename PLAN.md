@@ -196,124 +196,65 @@ writing so depth genuinely increases.
       cards (today the filter just shows/hides; no linking between a
       strand's grade-band versions yet)
 
-## Next up: teacher dashboard UI + image pipeline (agreed 2026-07-08, not started)
+## Teacher dashboard UI + image pipeline — EXECUTED 2026-07-08 (PR #8 follow-through)
 
-**Content work is done for now** (54 units, 18 fully-spiraled strands).
-User feedback: content quality is good; UI has "major issues," expected
-since it hasn't been the design focus — particularly the teacher
-dashboard. This section is the agreed plan for the next phase, meant to
-be picked up in a **fresh session/thread** (user's explicit choice) rather
-than continued here. Read this whole section before starting.
+All four phases below landed on `claude/pr-8-execution-noj9vu`, each
+implemented by an `implementer` (Sonnet) agent from an orchestrator spec,
+browser-verified against the built app, and committed separately:
 
-### 1. Teacher dashboard: three-way drill-down
+- [x] **Teacher dashboard three-way drill-down** (`6f316ef`). **User
+      decision (differs from the strand reading speculated in the original
+      plan): "Unit" = category (the 7 content categories), "Lesson" = one
+      unit file (the 54 grade-band files).** By Unit / By Lesson /
+      By Student pivot toggle (persisted), card/accordion rows with
+      disclosure carets replacing the `<table>`, all pivots ending at a
+      shared lesson detail panel (min:sec reading time, scroll %,
+      spelled-out flag reasons, quiz score/attempts, flashcards, status).
+      By Lesson adds a grade-band filter matching Home's picker. Status is
+      color + icon (green ✓ / amber ● / muted ○ / amber ⚠). CSV export,
+      sort, add/remove student, mock roster all preserved.
+- [x] **Image placeholder system** (`ed7d2b2`). `src/components/
+      ImagePlaceholder.jsx` renders a labeled dashed box (pure CSS/DOM,
+      zero network, zero precache weight) carrying full metadata as
+      props/data-attributes; passing `src` later swaps in the real
+      `<img>` — one-prop change per slot. Seeded: 7 category icons +
+      per-strand 3:2 card thumbnails on Home, plus optional per-section
+      `image` objects in unit JSON (validator-enforced; seeded in
+      ankle-sprain + knee-acl 9-10). `npm run images:shotlist` prints the
+      complete 27-asset markdown brief for the ChatGPT image author.
+      Schema documented in `src/content/README.md`.
+- [x] **App-wide status styling pass** (`611f291`). Status vocabulary
+      extracted to `src/lib/status.js` + `src/components/StatusIcon.jsx`
+      (teacher page behavior unchanged); Home pills, Unit-page completion
+      marks, and quiz pass/fail results all use the same green/amber
+      icon + color language.
+- [x] **Home ease-of-access** (`2c96324`). "Continue where you left off"
+      card (driven by a new device-local `touchedAt` stamped in
+      `progress.js`'s `updateUnit`; deliberately NOT in the sync-code
+      schema, and `mergeProgress` doesn't fake recency) + a search box
+      matching title/summary/category/strand, AND-combined with the
+      grade-band filter, with a live "N of 54 units" count.
 
-Current state (`src/pages/TeacherPage.jsx`): a flat HTML `<table>`, one
-row per student, one column per unit, click a row to expand a full
-per-unit breakdown inline. Problems per user feedback: doesn't scale
-past a handful of students, no way to see class-wide patterns (e.g.
-"is everyone stuck on the same unit"), dense/table-heavy with no visual
-hierarchy.
+**Follow-ups for later sessions:**
+- Real images: as WebP files land in `public/images/…`, swap each slot by
+  passing `src` to its `ImagePlaceholder`. Regenerate the brief anytime
+  with `npm run images:shotlist`. Before many images land, decide the
+  precache strategy (lazy-load vs eager, per-image size budget) — bundle
+  is ~1MB today with zero images.
+- `HomePage.jsx`'s `UnitCard` still has its own inline pill logic that
+  duplicates `status.js` rules — candidate for a small cleanup.
+- Original plan's ideas not yet built: strand cross-links between a
+  unit's grade-band siblings on Home; teacher-dashboard status
+  iconography images.
 
-**Agreed replacement**: a three-button toggle at the top of the page —
-**By Unit / By Lesson / By Student** — each a different top-level pivot
-into the same underlying drill-down, ending at the same lesson-level
-detail view (reading time, scroll depth, flag reasons, quiz score/attempt
-history, flashcard status — roughly what today's expand-row already
-shows, just reached via navigation instead of always-visible).
+The original planning notes for this phase (superseded by the above) are
+kept in PR #8's description/history.
 
-- **By Student**: roster list → click a student → drops down to their
-  units (grouped like Home page's category/grade-band grouping) → click a
-  unit → drops down to lesson-level detail.
-- **By Unit**: reverse pivot — list of units → click a unit → drops down
-  to the roster of students on that unit → click a student → same detail
-  view. This is the "did the whole class get this" view.
-- **By Lesson**: third button, distinct from Unit. **Open question for
-  the new thread to resolve before building**: this app's data model
-  already has `strand` (a topic, e.g. "ankle-sprain") and `gradeBand`
-  (7-8/9-10/11-12) as separate concepts — each strand has up to 3 actual
-  unit files. The natural reading, given that existing model, is: **"Unit"
-  = strand** (one row per topic, spanning all its grade-band versions)
-  and **"Lesson" = one specific grade-band unit file** within a strand.
-  That reuses `strand`/`gradeBand` directly rather than inventing a new
-  concept. Confirm this interpretation with the user before implementing
-  — don't assume silently.
-
-Visual/styling changes that go with this: replace the `<table>` with a
-card/accordion/tree layout (indentation + disclosure triangles, not table
-cells); status conveyed by color + icon, not just small text pills; a
-grade-band grouping/filter here equivalent to the Home page's picker,
-since "Units"/"Lessons" now number 54 across 3 bands.
-
-### 2. Broader ease-of-access (lower priority, same underlying issue)
-
-Student-facing Home page has the same scaling problem in miniature — a
-flat grid of 54 units. Once the teacher-dashboard rebuild establishes the
-visual language (cards, grouping, filtering patterns), consider applying
-it to Home too: search/filter beyond just grade band, a "continue where
-you left off" shortcut. Not requested directly but flagged as the same
-root cause.
-
-### 3. Image placeholder / marker system
-
-User is generating actual images via ChatGPT (ChatGPT/Codex has separate
-repo access), not via this Claude session — no image-generation tool
-exists in this environment, and general-purpose AI image generators are
-unreliable enough on anatomical accuracy that medical-illustration content
-specifically needs real vetting regardless of source. Division of labor:
-ChatGPT produces the image files, this app's UI gets built with clearly
-labeled placeholder slots so layout doesn't have to be reworked once real
-images land, and the placeholders double as the content brief handed to
-ChatGPT.
-
-**Placeholder metadata schema (ChatGPT's suggestion, adopt as-is)** — every
-placeholder instance should carry:
-- **Asset name** — e.g. `ankle-sprain-lateral-view.webp`
-- **Purpose** — unit card thumbnail, lesson diagram, hero image, category
-  icon, etc.
-- **Dimensions / aspect ratio** — e.g. `1200×800`, `1:1`, `16:9`
-- **Background** — transparent, white, or dark navy (match card/theme bg)
-- **Visual description** — body position, injury highlighted, viewing angle
-- **Text inside image** — preferably none (avoids localization/resize breakage)
-- **File location** — e.g. `public/images/units/ankle/`
-- **Alt text** — for accessibility
-
-**Implementation approach**: a small reusable placeholder component (name
-TBD) rendering a bordered/dashed box that visibly shows its own label +
-ratio in the browser — no network fetch, so it doesn't break the
-offline-first requirement or PWA precache. Swapping in the real `<img>`
-later should be a one-line change per slot. Because every instance carries
-its full metadata as props/attributes, the codebase can be grepped at any
-time to regenerate the complete shot list for ChatGPT — one artifact, two
-audiences (dev layout + image brief).
-
-**Where images likely apply** (seed list, new thread should audit for
-real needs, not exhaustive): unit category icons (7 categories), unit
-card thumbnails/hero images per strand, anatomy/mechanism diagrams for
-the more visual units (ankle-sprain, knee-acl, shoulder-injuries,
-concussion, fractures-dislocations are strong candidates), possibly a
-Home page hero image, teacher-dashboard status iconography.
-
-**Technical consideration to flag for the new thread**: the app is
-offline-first with the whole bundle precached by the service worker
-(currently ~1MB for 54 units of pure JSON/JS/CSS, zero content images).
-Real images — especially several anatomy diagrams per unit across 54
-units — could meaningfully inflate precache size and first-load/install
-time. Decide deliberately on a strategy (lazy-load non-critical images
-vs. eager-precache, file size budget per image, WebP as ChatGPT's
-suggested format already helps) rather than defaulting to "precache
-everything" once images start landing.
-
-### Agreed execution order
-
-1. Teacher dashboard IA rebuild (three-button drill-down) — the actual
-   pain point named.
-2. Image placeholder system — foundational scaffolding, worth doing
-   early/alongside #1 since the teacher dashboard and Home page are both
-   likely to want image slots (icons at minimum).
-3. Visual/status styling pass, made consistent app-wide (not just the
-   teacher page, so the app doesn't end up looking like two apps stitched
-   together).
-4. Student Home page ease-of-access — same problem, lower urgency.
+**Image division of labor (unchanged):** the actual image files are
+produced by the user via ChatGPT (which has its own repo access) — no
+image generation happens in Claude sessions, and anatomical accuracy
+needs human vetting regardless of source. This repo's side of the
+contract is the placeholder slots + the `npm run images:shotlist` brief.
 
 ## Out of scope (intentional, unchanged)
 
