@@ -27,6 +27,14 @@
         "Someone is bleeding a lot and it won't stop.",
         "Someone hit their head hard and seems very confused, can't answer simple questions, or can't stay awake."
       ],
+      "image": {
+        "asset": "eap-collapsed-athlete-scene.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Simple illustration of a sports field scene: one athlete lying still on the ground, another athlete nearby noticing them with a concerned expression, about to react. Clean, non-graphic, plain illustration style for middle schoolers, no injury detail shown.",
+        "alt": "A teammate noticing another athlete lying still on the field and reacting to an emergency.",
+        "location": "public/images/units/emergency-action-plan/"
+      },
       "callout": {
         "type": "warning",
         "title": "If you see any of these signs — get an adult NOW",
@@ -39,7 +47,15 @@
         "If you see one of the emergency signs, act fast: yell loudly for a coach, athletic trainer, or teacher — whoever is closest. Don't run off looking for a specific person if a different adult is right there; any trained adult can start helping and can decide who else to call.",
         "Tell the adult exactly what you saw, in simple words: 'She collapsed and won't wake up' or 'He hit his head and can't answer questions.' The clearer and faster you are, the faster the adult can act.",
         "Stay nearby unless the adult sends you to do something specific, like finding another adult or pointing someone toward the AED. Don't leave an unresponsive person completely alone if you can help it — send someone else for help while you stay, or go get help immediately if you're the only one around."
-      ]
+      ],
+      "image": {
+        "asset": "eap-yell-for-help-scene.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple illustration of a student athlete on a field or court, one arm raised and waving, calling out toward a coach standing on the sideline. Clean, flat, friendly illustration style, no text in the image.",
+        "alt": "Student athlete waving and calling out to get a coach's attention on the sideline.",
+        "location": "public/images/units/emergency-action-plan/"
+      }
     },
     {
       "heading": "What is an AED?",
@@ -47,7 +63,15 @@
         "An AED (automated external defibrillator) is a machine that can help a heart that has stopped working correctly. You will see AEDs mounted on walls in gyms, hallways, and near athletic fields, often in a bright case.",
         "AEDs are built for regular people to use, not just doctors — when an adult turns one on, it talks out loud and tells them exactly what to do, step by step. The machine checks the person's heart rhythm by itself and will only tell the rescuer to give a shock if the heart actually needs one. It cannot make a mistake and shock someone who doesn't need it.",
         "You will not be the one operating the AED. But knowing what it is and roughly where it's kept means you can point an adult straight to it, which saves precious time."
-      ]
+      ],
+      "image": {
+        "asset": "eap-aed-wall-case.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple illustration of an AED (automated external defibrillator) device inside its bright wall-mounted case in a gym hallway, with the cabinet door open showing the device. Clean, flat illustration style, minimal detail.",
+        "alt": "An AED device shown inside its bright wall-mounted case in a gym hallway.",
+        "location": "public/images/units/emergency-action-plan/"
+      }
     },
     {
       "heading": "What happens after you get an adult",
@@ -62,6 +86,14 @@
         "The best time to learn where the AEDs are at your school or field is now, before anything happens — not during an emergency. Take a look around your gym, cafeteria, and athletic fields and notice the bright AED cases on the wall.",
         "Also know who the adults in charge usually are at your practices and games — coaches, athletic trainers, or teachers — so you know exactly who to run to if you ever need to."
       ],
+      "image": {
+        "asset": "eap-know-your-school-map.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple overhead-style map illustration of a school gym and athletic field layout, with a small AED icon marked at its wall location and a small icon marking where a coach or athletic trainer is typically found. Clean, flat map style, minimal labels.",
+        "alt": "Simple map of a gym and field showing the AED location and where coaches are typically found.",
+        "location": "public/images/units/emergency-action-plan/"
+      },
       "callout": {
         "type": "tip",
         "title": "Practice knowing, not doing",

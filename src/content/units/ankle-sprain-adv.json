@@ -31,7 +31,15 @@
       "list": [
         "Squeeze test — compressing the tibia and fibula together at mid-calf; pain at the ankle syndesmosis (away from where you're squeezing) is a positive sign",
         "External rotation (Kleiger) test — stabilizing the leg and externally rotating the foot; syndesmotic pain reproduces the injury"
-      ]
+      ],
+      "image": {
+        "asset": "ankle-sprain-syndesmosis-anatomy.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Anterior view of the distal tibia and fibula just above the ankle joint, highlighting the syndesmosis structures in a distinct color: the anterior inferior tibiofibular ligament (AITFL), posterior inferior tibiofibular ligament (PITFL), interosseous ligament, and interosseous membrane binding the two bones together. Small inset arrows show the squeeze test (hands compressing tibia and fibula together at mid-calf) and the external rotation (Kleiger) test. Clean medical-illustration style, labeled structures.",
+        "alt": "Diagram of the ankle syndesmosis — AITFL, PITFL, interosseous ligament and membrane binding the tibia and fibula — with squeeze-test and external-rotation-test insets.",
+        "location": "public/images/units/ankle-sprain/"
+      }
     },
     {
       "heading": "Structured evaluation: HOPS and special tests",
@@ -59,6 +67,14 @@
         "type": "warning",
         "title": "Refer beyond \"it's just a sprain\" when you see:",
         "text": "Bony tenderness meeting Ottawa criteria, any suspicion of a syndesmotic (high ankle) sprain, snapping or pain posterior to the lateral malleolus (possible peroneal tendon subluxation), pain and swelling not following the expected timeline (possible osteochondral lesion), point tenderness over a growth plate in a younger athlete, or any numbness, coldness, or gross deformity. Understanding these patterns doesn't put you in charge of the diagnosis — it means you flag them precisely and get the athlete to the supervising athletic trainer or physician sooner rather than later."
+      },
+      "image": {
+        "asset": "ankle-sprain-differential-diagnosis.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Three-panel comparison illustration of ankle-sprain differentials. Panel 1, 'Peroneal tendon subluxation': lateral ankle with tendons highlighted snapping out of their groove posterior to the lateral malleolus. Panel 2, 'Osteochondral lesion of the talus': cross-section of the talar dome with a shaded defect where cartilage/bone has sheared off. Panel 3, 'Growth-plate (Salter-Harris) injury': a skeletally immature ankle with the distal fibular growth plate highlighted as the point of failure instead of the ligament. Label each panel with its name and the one distinguishing exam finding. Clean medical-illustration style, non-graphic.",
+        "alt": "Three-panel comparison of ankle-sprain differentials: peroneal tendon subluxation, osteochondral lesion of the talus, and a growth-plate injury in a younger athlete.",
+        "location": "public/images/units/ankle-sprain/"
       }
     },
     {

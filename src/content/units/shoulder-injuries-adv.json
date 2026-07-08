@@ -23,6 +23,14 @@
         "AMBRI sits at the other end of the spectrum: Atraumatic, Multidirectional, often Bilateral, managed first with Rehabilitation, with an Inferior capsular shift as the surgical option if rehab fails. This is the loose-jointed athlete (think swimmers or gymnasts) whose capsule and ligaments are simply more lax than average in more than one direction, without a specific dislocating event or a Bankart lesion to blame. Recognizing which end of the spectrum an athlete's presentation fits changes the whole management conversation, which is why a physician's exam and imaging — not the sideline picture alone — decides where a given shoulder falls.",
         "Two special tests come up constantly in this conversation, and you should recognize what they test even though performing them on an acutely injured shoulder is the athletic trainer's or physician's job, not yours: the apprehension test positions the arm abducted and externally rotated to see if the athlete feels the shoulder is about to slip out (reproducing the fear, not necessarily pain), and the relocation test applies a posteriorly directed force during that same position — if apprehension eases, it supports anterior instability as the cause."
       ],
+      "image": {
+        "asset": "shoulder-injuries-bankart-hill-sachs.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-panel diagram of an anterior shoulder dislocation's residual lesions. Left panel 'Bankart lesion': the glenoid socket viewed from the side showing the anterior-inferior labrum torn away from the rim, with the inferior glenohumeral ligament's attachment point lost. Right panel 'Hill-Sachs lesion': the posterior humeral head showing a compression divot where it impacted the front of the glenoid rim during the dislocation. Label both structures. Clean medical-illustration style.",
+        "alt": "Diagram of a Bankart lesion (torn anterior-inferior labrum) and a Hill-Sachs lesion (compression divot in the humeral head) from an anterior shoulder dislocation.",
+        "location": "public/images/units/shoulder-injuries/"
+      },
       "callout": {
         "type": "warning",
         "title": "First-time dislocation still means refer, every time",
@@ -36,7 +44,15 @@
         "This is also where internal impingement differs from the classic impingement you may already associate with rotator cuff overuse. Classic (outlet/subacromial) impingement pinches the rotator cuff tendon between the humeral head and the bony arch overhead (the acromion and coracoacromial ligament) during overhead reaching — it's the more common story in swimmers and the general overhead-athlete population. Internal impingement is specific to the throwing position: in maximal abduction and external rotation, the undersurface of the posterior rotator cuff (supraspinatus/infraspinatus) gets pinched against the posterior-superior labrum and glenoid rim itself, from the inside of the joint. It's a normal, low-grade contact in every throwing shoulder — it becomes pathological when repetitive throwing volume, poor mechanics, or instability increase how hard and how often that contact happens.",
         "Glenohumeral internal rotation deficit (GIRD) is the throwing shoulder's signature adaptation: internal rotation range of motion at the throwing shoulder measured smaller than the non-throwing shoulder, largely from posterior capsule and posterior cuff tightness built up by repetitive deceleration loading. Some GIRD is expected and not itself a red flag — what matters more is the total rotational arc (internal rotation plus external rotation added together) compared side-to-side. A throwing shoulder that has lost internal rotation but gained a matching amount of external rotation may be fine; one where the total arc is meaningfully smaller than the non-throwing side is the pattern athletic trainers flag for posterior capsule mobility work, because that pattern is linked to a higher injury rate.",
         "A SLAP tear (Superior Labrum, Anterior to Posterior) is a tear of the labrum at the top of the socket, where the biceps tendon anchors — a common companion injury in throwers dealing with internal impingement and instability, rather than a completely separate problem. It's worth knowing the name and the general location at this level; diagnosing it from symptoms alone is unreliable even for professionals, which is exactly why persistent deep shoulder pain, catching, or a 'dead arm' sensation during throwing gets sent for a full evaluation rather than guessed at on the sideline."
-      ]
+      ],
+      "image": {
+        "asset": "shoulder-injuries-internal-vs-classic-impingement.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-panel comparison of shoulder impingement mechanisms. Left panel 'Classic (outlet/subacromial) impingement': the rotator cuff tendon pinched between the humeral head and the acromial arch overhead during arm reaching, common in swimmers. Right panel 'Internal impingement': the arm in the throwing position (maximally abducted and externally rotated), with the undersurface of the posterior rotator cuff contacting the posterior-superior labrum from inside the joint. Label each panel with its mechanism and the athlete population most affected. Clean medical-illustration style.",
+        "alt": "Comparison diagram of classic subacromial impingement (cuff pinched against the acromion during overhead reaching) versus internal impingement (posterior cuff contacting the posterior-superior labrum in the throwing position).",
+        "location": "public/images/units/shoulder-injuries/"
+      }
     },
     {
       "heading": "Youth pitching load and Little League shoulder",

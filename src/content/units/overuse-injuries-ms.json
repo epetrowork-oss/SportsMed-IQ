@@ -12,7 +12,15 @@
       "body": [
         "Some injuries happen in one moment — you land wrong, you get hit, you feel a sudden pop. Those are easy to notice because you can point to exactly when it happened.",
         "Other injuries build up slowly. This is called an overuse injury — pain caused by doing the same motion over and over (running, jumping, throwing) without enough time to rest and recover in between. There's no single moment you can point to. It just gets a little worse, practice after practice."
-      ]
+      ],
+      "image": {
+        "asset": "overuse-injuries-sudden-vs-gradual.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Split-scene illustration: on the left, an athlete tumbles hard while landing, with a single sharp motion line marking one exact moment of injury; on the right, a runner appears several times faded and repeated along a practice-calendar-like strip, with a small ache mark on the shin getting slightly darker each time to show pain building up gradually. Clean, simple illustration style for middle schoolers, no gore.",
+        "alt": "Split illustration comparing a sudden injury from one hard landing to pain that gradually builds up over repeated practices.",
+        "location": "public/images/units/overuse-injuries/"
+      }
     },
     {
       "heading": "What it can look like",
@@ -24,7 +32,15 @@
         "Heel pain in athletes who run and jump a lot, especially during a growth spurt.",
         "Knee pain right below the kneecap, common in jumping sports.",
         "Elbow or shoulder soreness in pitchers and other throwing athletes."
-      ]
+      ],
+      "image": {
+        "asset": "overuse-injuries-common-spots.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple outline of a young athlete's body from the front, with four common overuse pain spots highlighted in a bright color: the shin, the heel, just below the kneecap, and the elbow/shoulder. Clean, simple illustration style for middle schoolers, minimal labels.",
+        "alt": "Diagram of a young athlete's body highlighting the shin, heel, knee, and elbow/shoulder as common overuse pain spots.",
+        "location": "public/images/units/overuse-injuries/"
+      }
     },
     {
       "heading": "Why this matters more while you're growing",
@@ -48,6 +64,14 @@
         "type": "warning",
         "title": "Tell an adult right away if...",
         "text": "You are limping, the pain wakes you up at night, the pain is there even when you're just sitting or walking around, or the same spot has hurt for more than a few days. These are signs to speak up immediately — don't wait to see if it goes away on its own."
+      },
+      "image": {
+        "asset": "overuse-injuries-warning-signs.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Illustration of a young athlete limping off the field, favoring one leg, with a small calendar icon in the corner showing several practice days marked to show the pain has repeated over time. Clean, simple illustration style for middle schoolers, no gore.",
+        "alt": "Illustration of an athlete limping off the field, showing pain that has repeated over several practices.",
+        "location": "public/images/units/overuse-injuries/"
       }
     },
     {
@@ -70,7 +94,15 @@
         "Try more than one sport or activity across the year instead of doing the exact same motions year-round.",
         "Wear shoes and gear that fit and aren't worn out.",
         "Treat pain like information: pain that fades by the next day is normal training; pain that keeps coming back and getting worse is a signal to tell someone."
-      ]
+      ],
+      "image": {
+        "asset": "overuse-injuries-prevention-habits.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Illustration of a young athlete warming up with light jogging, next to a small calendar showing a marked rest day and two different sport icons (like a soccer ball and a basketball) to show mixing up activities. Clean, friendly illustration style for middle schoolers.",
+        "alt": "Illustration showing an athlete warming up, a marked rest day on a calendar, and icons for playing more than one sport.",
+        "location": "public/images/units/overuse-injuries/"
+      }
     }
   ],
   "quiz": [

@@ -32,6 +32,14 @@
         "For most practices, plain water is all you need. Sports drinks (like Gatorade) can help on very long or very hot, sweaty days, but they aren't needed for a normal practice.",
         "Energy drinks are different from sports drinks. Energy drinks (like Red Bull or Monster) are made for a caffeine buzz, not for hydration."
       ],
+      "image": {
+        "asset": "hydration-nutrition-drink-comparison.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Simple illustration comparing three drinks side by side: a water bottle with a green checkmark, a sports drink bottle with a small checkmark labeled 'sometimes,' and an energy drink can with a red X over it. Clean, flat icon style, minimal text.",
+        "alt": "Comparison of a water bottle, a sports drink, and an energy drink with checkmark and X symbols.",
+        "location": "public/images/units/hydration-nutrition/"
+      },
       "callout": {
         "type": "warning",
         "title": "Energy drinks are not for hydration",
@@ -48,7 +56,15 @@
         "Before practice: eat a meal or snack a couple of hours ahead of time — a banana, toast, or a granola bar works well if you're short on time.",
         "After practice: have a snack or meal with some carbs and protein, like chocolate milk or a sandwich, to help your body recover.",
         "Don't skip breakfast on game day — your body needs that fuel."
-      ]
+      ],
+      "image": {
+        "asset": "hydration-nutrition-meal-plate.webp",
+        "ratio": "1:1",
+        "background": "white",
+        "description": "Simple illustration of a plate divided into two sections showing a balanced pre/post-practice snack: fruit or toast on one side (carbs) and a small protein item like eggs or yogurt on the other side. Clean, flat food-illustration style, no text in the image.",
+        "alt": "A plate showing a balanced snack with fruit or toast and a small protein item.",
+        "location": "public/images/units/hydration-nutrition/"
+      }
     },
     {
       "heading": "Signs you need more water or food",
@@ -60,6 +76,14 @@
         "Feeling unusually tired, dizzy, or getting a headache during or after activity.",
         "Feeling weak, cramping, or noticing you can't focus like usual."
       ],
+      "image": {
+        "asset": "hydration-nutrition-urine-color-chart.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Simple horizontal color gradient chart showing urine color from pale yellow (like lemonade) on the left to dark amber on the right, with a small checkmark icon at the pale end and a small warning icon at the dark end. Clean, minimal, flat chart style, no realistic imagery.",
+        "alt": "Color gradient chart from pale yellow to dark amber showing hydration level.",
+        "location": "public/images/units/hydration-nutrition/"
+      },
       "callout": {
         "type": "tip",
         "title": "See it, say it",
@@ -75,7 +99,15 @@
         "Pack a refillable water bottle and a healthy snack, like fruit, crackers, or a granola bar.",
         "Bring an extra shirt or socks — staying dry helps your body regulate its temperature.",
         "Plan a real meal for after a long day of games so your body can recover."
-      ]
+      ],
+      "image": {
+        "asset": "hydration-nutrition-game-day-bag.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple illustration of an open sports bag packed with a refillable water bottle, a piece of fruit or a granola bar, and a folded extra shirt. Clean, flat illustration style, no text in the image.",
+        "alt": "An open sports bag packed with a water bottle, a snack, and an extra shirt.",
+        "location": "public/images/units/hydration-nutrition/"
+      }
     }
   ],
   "quiz": [

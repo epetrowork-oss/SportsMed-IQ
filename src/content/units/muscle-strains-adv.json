@@ -29,6 +29,14 @@
         "type": "tip",
         "title": "Reading a sprint mechanism report",
         "text": "When a sprinter says the pull happened \"right before my foot hit the ground\" rather than during push-off, that detail is diagnostically useful — it's consistent with the classic terminal-swing eccentric mechanism and points you toward the hamstring specifically."
+      },
+      "image": {
+        "asset": "muscle-strains-terminal-swing-mechanism.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Side-view illustration of a sprinter's leg captured at the terminal swing phase of the gait cycle, just before foot strike: hip shown flexed forward, knee shown extending rapidly, with the hamstring muscle highlighted and stretched to near-maximum length while a contraction arrow shows it working eccentrically to decelerate the shank. Label 'terminal swing — peak length + peak eccentric force' beneath the figure. Clean biomechanical-illustration style.",
+        "alt": "Diagram of the terminal swing phase of sprinting, showing the hamstring stretched to near-maximum length while contracting eccentrically to decelerate the leg just before foot strike.",
+        "location": "public/images/units/muscle-strains/"
       }
     },
     {
@@ -59,7 +67,15 @@
         "Contusion (bruise) — a direct blunt blow to the muscle (a knee to the thigh, a helmet to the quad), not an eccentric-loading event; diffuse tenderness centered at the impact site rather than a single tender point; can still cause significant swelling and strength loss despite the different mechanism.",
         "Cramp — a sudden, painful, involuntary contraction; the muscle feels visibly hard or knotted; typically resolves within minutes with gentle stretching and rehydration; associated with fatigue and fluid/electrolyte status rather than tissue damage.",
         "Delayed onset muscle soreness (DOMS) — diffuse, usually bilateral and symmetric soreness that builds gradually and peaks 24-72 hours after unaccustomed or unusually intense eccentric exercise (the first day of two-a-days is the classic trigger); no single traumatic moment, no acute point tenderness at onset, and it resolves on its own within days without treatment."
-      ]
+      ],
+      "image": {
+        "asset": "muscle-strains-differential-chart.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Four-column comparison chart, one per condition: 'Strain' (a discrete eccentric-loading moment, localized sharp pain, one tender point), 'Contusion' (a direct blunt blow, diffuse tenderness at the impact site), 'Cramp' (sudden involuntary contraction, muscle feels hard/knotted, resolves in minutes), 'DOMS' (bilateral, gradual onset 24-72 hours after unaccustomed exercise, no single traumatic moment). Each column has a small icon and its distinguishing mechanism/onset/distribution. Clean instructional-chart style.",
+        "alt": "Comparison chart of four muscle-pain presentations — strain, contusion, cramp, and delayed onset muscle soreness (DOMS) — by mechanism, onset, and pain distribution.",
+        "location": "public/images/units/muscle-strains/"
+      }
     },
     {
       "heading": "The contusion trap: myositis ossificans",

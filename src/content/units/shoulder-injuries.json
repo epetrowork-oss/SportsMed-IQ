@@ -17,7 +17,15 @@
         "Rotator cuff (SITS muscles) — four muscles (supraspinatus, infraspinatus, teres minor, subscapularis) that wrap around the ball of the joint and work as a team to hold the humeral head centered in the socket during every arm motion. Think of the rotator cuff as a group — the joint's 'dynamic stabilizer' — rather than four muscles to memorize separately.",
         "Labrum — a rim of cartilage around the glenoid that deepens the socket slightly and helps the ball stay seated.",
         "AC joint (acromioclavicular joint) — a separate joint from the ball-and-socket, where the collarbone (clavicle) meets the tip of the shoulder blade (acromion). It has its own ligaments and its own common injury."
-      ]
+      ],
+      "image": {
+        "asset": "shoulder-injuries-glenohumeral-anatomy.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Anterior view of the right shoulder with the humeral head seated in the shallow glenoid socket of the scapula. Label the glenohumeral joint, the labrum as a thin rim of cartilage around the socket edge, the four rotator cuff muscles (supraspinatus, infraspinatus, teres minor, subscapularis) wrapping the humeral head in a distinct color, and the AC joint where the clavicle meets the acromion, shown as a separate small joint above. Clean medical-illustration style.",
+        "alt": "Diagram of the shoulder's glenohumeral joint showing the shallow glenoid socket, labrum, rotator cuff muscles, and the separate AC joint.",
+        "location": "public/images/units/shoulder-injuries/"
+      }
     },
     {
       "heading": "How shoulders get hurt: mechanisms",
@@ -55,6 +63,14 @@
         "Grade II — partial tear, mild step-off deformity, more pain with arm movement.",
         "Grade III — complete tear, obvious step-off ('bump') deformity, significant pain and weakness."
       ],
+      "image": {
+        "asset": "shoulder-injuries-dislocation-vs-ac-sprain.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-panel comparison of an injured right shoulder from the front. Left panel labeled 'Dislocation': arm held away from the body and supported by the other hand, shoulder contour looking squared-off instead of rounded. Right panel labeled 'AC sprain (separation)': arm hanging naturally at the side, with a visible step-off bump at the very top of the shoulder where the collarbone rides up. Clean medical-illustration style, non-graphic.",
+        "alt": "Comparison diagram of a shoulder dislocation (arm held away, squared-off contour) versus an AC joint sprain (arm hangs normally, step-off bump at the shoulder tip).",
+        "location": "public/images/units/shoulder-injuries/"
+      },
       "callout": {
         "type": "tip",
         "title": "Dislocation or separation? Ask two questions",

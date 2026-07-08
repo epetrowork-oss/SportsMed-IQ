@@ -27,7 +27,15 @@
         "Incision — a clean, straight cut, typically from something sharp. Edges line up well but can bleed freely.",
         "Puncture — a small entry hole from a pointed object (spike, nail). Deceptively minor-looking; deep contamination and tetanus risk.",
         "Avulsion — skin or tissue torn partially or completely away. Preserve any torn tissue; control bleeding."
-      ]
+      ],
+      "image": {
+        "asset": "wound-care-open-wound-types.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Five small side-by-side panels, each illustrating one open wound type on a forearm: abrasion (scraped, shallow, dirty-looking surface), laceration (jagged-edged cut), incision (clean straight cut with edges lining up), puncture (small deep entry hole), avulsion (a flap of skin torn partially away). Label each panel with its name. Clean medical-illustration style, non-graphic.",
+        "alt": "Diagram comparing five open wound types: abrasion, laceration, incision, puncture, and avulsion.",
+        "location": "public/images/units/wound-care/"
+      }
     },
     {
       "heading": "Controlling bleeding",
@@ -36,6 +44,14 @@
         "If blood soaks through, add more gauze ON TOP — never peel off the soaked layer, because that tears away the forming clot. Keep pressing.",
         "Severe, life-threatening limb bleeding that direct pressure cannot control (spurting blood, rapid pooling) calls for a tourniquet applied 2–3 inches above the wound (not over a joint), tightened until bleeding stops, with the application time written down. Tourniquets are a 911-level intervention — once on, only medical professionals remove them."
       ],
+      "image": {
+        "asset": "wound-care-direct-pressure-technique.webp",
+        "ratio": "4:3",
+        "background": "transparent",
+        "description": "A rescuer's gloved hands pressing firmly on a gauze pad over a forearm wound, with a small inset diagram showing a tourniquet band placed 2-3 inches above the wound (not over a joint) with a note reading 'time applied: __' as the secondary, severe-bleeding-only option. Clean instructional-illustration style, non-graphic.",
+        "alt": "Diagram of firm direct pressure on a wound with gauze, and a tourniquet placed 2-3 inches above the wound for severe, uncontrolled bleeding.",
+        "location": "public/images/units/wound-care/"
+      },
       "callout": {
         "type": "warning",
         "title": "Call 911 / refer immediately",

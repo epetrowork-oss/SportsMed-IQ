@@ -25,7 +25,15 @@
         "A cut on the lip, cheek, or tongue",
         "A nosebleed",
         "A hard hit to the jaw or cheek that might mean a broken bone"
-      ]
+      ],
+      "image": {
+        "asset": "dental-trauma-injury-types-overview.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple front-view illustration of a young athlete's face and mouth area with four numbered callout points: one pointing to a tooth (knocked-out or chipped tooth), one to the lip (cut lip), one to the nose (nosebleed), and one to the jaw (hard hit/possible break). Clean, flat overview style, minimal labels.",
+        "alt": "Illustration of a face with callouts pointing to a tooth, lip, nose, and jaw showing different injury types.",
+        "location": "public/images/units/dental-facial-trauma/"
+      }
     },
     {
       "heading": "A knocked-out tooth: the most important skill",
@@ -39,6 +47,14 @@
         "Do not rinse it, scrub it, or wrap it in a dry tissue or paper towel.",
         "Get an adult right away. The tooth and the athlete need to get to a dentist fast — every minute matters."
       ],
+      "image": {
+        "asset": "dental-trauma-tooth-crown-root.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple diagram of a single tooth with the crown (white top part) and root (narrow part that was inside the gum) clearly labeled and color-coded. Next to it, a small illustration of a hand holding the tooth by the crown only, lowering it into a small cup of milk. Clean, plain illustration style for middle schoolers.",
+        "alt": "Diagram of a tooth's crown and root, next to a hand placing the tooth by its crown into a cup of milk.",
+        "location": "public/images/units/dental-facial-trauma/"
+      },
       "callout": {
         "type": "warning",
         "title": "Baby teeth are different",
@@ -64,14 +80,30 @@
         "Have the athlete sit up and lean forward a little — never tilt the head back. Tilting back lets blood run down the throat.",
         "Pinch the soft part of the nose, just below the bony part, and hold steady pressure for about 10 minutes without letting go to check.",
         "If the bleeding doesn't stop after a while, or there's a lot of blood, tell an adult so they can get medical help."
-      ]
+      ],
+      "image": {
+        "asset": "dental-trauma-nosebleed-position.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple illustration of an athlete sitting upright on a bench, leaning slightly forward, using two fingers to pinch the soft lower part of the nose. Clean, calm, plain illustration style for middle schoolers, minimal detail.",
+        "alt": "Athlete sitting upright and leaning forward slightly while pinching the soft part of the nose for a nosebleed.",
+        "location": "public/images/units/dental-facial-trauma/"
+      }
     },
     {
       "heading": "Prevention: mouthguards",
       "body": [
         "A mouthguard is a simple way to protect your teeth and mouth during sports. It cushions your teeth and jaw from a hit.",
         "Wear a mouthguard every time you play a sport where it's required or recommended, like football, hockey, lacrosse, wrestling, or basketball. It's one of the easiest ways to prevent a knocked-out tooth in the first place."
-      ]
+      ],
+      "image": {
+        "asset": "dental-trauma-mouthguard.webp",
+        "ratio": "1:1",
+        "background": "white",
+        "description": "Simple illustration showing a mouthguard on its own next to a young athlete wearing it with a slight smile, showing how it fits over the teeth. Clean, flat, friendly illustration style, no text in the image.",
+        "alt": "A mouthguard shown on its own and being worn by an athlete.",
+        "location": "public/images/units/dental-facial-trauma/"
+      }
     }
   ],
   "quiz": [

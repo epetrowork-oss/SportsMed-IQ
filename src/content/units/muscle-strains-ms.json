@@ -19,7 +19,15 @@
       "body": [
         "Muscles are the tissue that lets your body move. When a muscle is pushed too hard, too fast, or stretched too far while it's working hard — like during a sprint or a big kick — some of the muscle fibers can overstretch or tear. That's a strain.",
         "Strains happen most in the back of the thigh (hamstring), the front of the thigh (quad), the groin, and the calf. These are common spots because they work hard during running, jumping, and kicking."
-      ]
+      ],
+      "image": {
+        "asset": "muscle-strains-common-spots.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple front and back outline of a runner's legs with four common strain spots highlighted in a bright color: the back of the thigh (hamstring), the front of the thigh (quad), the groin, and the calf. Clean, simple illustration style for middle schoolers, minimal labels.",
+        "alt": "Diagram of a runner's legs highlighting the hamstring, quad, groin, and calf as common spots for pulled muscles.",
+        "location": "public/images/units/muscle-strains/"
+      }
     },
     {
       "heading": "How to spot it",
@@ -32,7 +40,15 @@
         "Trouble using the muscle normally afterward — running, jumping, or kicking feels weak or painful",
         "Swelling or a bruise that shows up over the next day or two",
         "Tightness or soreness in the area, even if it's not a sharp pain"
-      ]
+      ],
+      "image": {
+        "asset": "muscle-strains-warning-signs.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Illustration of a sprinter suddenly stopping mid-stride, grabbing the back of their thigh with a pained expression, one leg trailing behind mid-limp. Clean, simple illustration style for middle schoolers, no gore.",
+        "alt": "Illustration of a runner suddenly stopping and grabbing the back of their thigh in pain.",
+        "location": "public/images/units/muscle-strains/"
+      }
     },
     {
       "heading": "What to do right away",
@@ -44,7 +60,15 @@
         "Tell a coach, athletic trainer, or other trusted adult right away.",
         "Rest — stay off the muscle and let the adult decide next steps.",
         "Ice — a bag of ice wrapped in a thin towel, about 15-20 minutes, never straight on bare skin."
-      ]
+      ],
+      "image": {
+        "asset": "muscle-strains-rice-steps.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple illustration of an athlete sitting on a bench, resting their leg, with an ice pack wrapped in a thin towel placed on the back of their thigh. Clean, friendly illustration style, no text in the image.",
+        "alt": "Athlete sitting and resting with an ice pack wrapped in a towel on a pulled thigh muscle.",
+        "location": "public/images/units/muscle-strains/"
+      }
     },
     {
       "heading": "Never push through the pain",
@@ -56,6 +80,14 @@
         "type": "warning",
         "title": "Get an adult right away if you notice:",
         "text": "The athlete heard or felt a \"pop,\" cannot use the muscle at all afterward, has severe pain, or has a visible dent, gap, or lump in the muscle. Any of these means: stop immediately, tell an adult, and get it checked by a doctor. Never wait and see with these signs."
+      },
+      "image": {
+        "asset": "muscle-strains-severe-warning.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-by-side illustration comparing a normal thigh muscle outline to one with a visible dent or gap where the muscle tore, drawn with a warning-colored outline around the injured area to signal danger. Clean, non-graphic illustration style for middle schoolers.",
+        "alt": "Comparison drawing of a normal thigh muscle next to one with a visible dent marking a severe muscle tear warning sign.",
+        "location": "public/images/units/muscle-strains/"
       }
     },
     {

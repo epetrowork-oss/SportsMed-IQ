@@ -40,7 +40,15 @@
         "The closed basket weave (sometimes called a 'closed basketweave' or gibney) is the classic supportive ankle taping pattern, used to limit inversion (the foot rolling inward) after a mild sprain or as prophylactic support for an athlete with a history of sprains.",
         "In words, the pattern builds in this order: two anchor strips (one around the lower leg above the ankle, one around the arch of the foot) to give later strips something to stick to. Then alternating 'stirrups' (vertical strips running up one side of the ankle, under the heel, and up the other side) and 'horseshoes' (horizontal strips around the ankle, low to high) are layered one at a time, each overlapping the last by about half its width, working from the inside of the ankle first since inversion is what you're limiting.",
         "The weave finishes with closing strips called 'figure-8s' and 'heel locks' that wrap diagonally across the top of the foot and around the heel to lock the whole structure together, followed by a few more circumferential strips to smooth and secure the edges."
-      ]
+      ],
+      "image": {
+        "asset": "taping-wrapping-basket-weave-pattern.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Step diagram of a closed basket weave ankle taping job on a right ankle, shown as a build-up sequence: anchor strips (one around the lower leg, one around the arch), alternating stirrups (vertical strips up one side, under the heel, up the other) and horseshoes (horizontal strips low to high), and finishing figure-8 and heel-lock strips crossing diagonally over the foot and around the heel. Use numbered layers or a light color gradient to show build order. Clean instructional-illustration style.",
+        "alt": "Step diagram of the closed basket weave ankle taping pattern, showing anchors, stirrups, horseshoes, and finishing figure-8/heel-lock strips.",
+        "location": "public/images/units/taping-wrapping/"
+      }
     },
     {
       "heading": "Elastic wraps: spirals and figure-8s",
@@ -57,6 +65,14 @@
         "Check capillary refill: press a toenail or fingernail bed (whichever is distal to the wrap) until it turns white, release, and count how long the pink color takes to return — normally under 2 seconds. Also ask the athlete directly whether they feel any numbness, tingling, or increasing pain, and look at skin color for pale, blue, or dusky tone and at temperature for coolness compared to the other limb.",
         "Any of these findings — capillary refill slower than 2 seconds, numbness or tingling, pale/blue/cool skin, or increasing throbbing pain — means the wrap is too tight. Unwrap it immediately and reapply with less tension. When in doubt, redo it looser; you can always add another layer, but you cannot un-cut off circulation after the fact."
       ],
+      "image": {
+        "asset": "taping-wrapping-capillary-refill-check.webp",
+        "ratio": "4:3",
+        "background": "transparent",
+        "description": "Close-up of a hand pressing on a toenail bed distal to a wrapped ankle, with a small two-step sequence: step 1 shows the nail turning white under pressure, step 2 shows the nail released with a stopwatch icon reading 'under 2 seconds' as color returns. Clean instructional-illustration style.",
+        "alt": "Diagram of the capillary refill check: pressing a toenail bed until white, then timing how quickly pink color returns.",
+        "location": "public/images/units/taping-wrapping/"
+      },
       "callout": {
         "type": "tip",
         "title": "Field tip: check, don't guess",

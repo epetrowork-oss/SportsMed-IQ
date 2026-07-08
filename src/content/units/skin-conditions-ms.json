@@ -27,14 +27,30 @@
         "A spot with pus (thick white or yellow fluid) or a crusty, oozing surface",
         "Itching, redness, or peeling skin between your toes or in your groin area",
         "A sore that hurts a lot more than a normal bump or bug bite should"
-      ]
+      ],
+      "image": {
+        "asset": "skin-conditions-warning-signs.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple illustration of a forearm with a small labeled-free callout circle zooming in on a red, slightly swollen skin spot, next to a normal patch of skin for comparison. Clean, non-graphic illustration style for middle schoolers, no real medical imagery.",
+        "alt": "Illustration comparing a normal patch of skin to a red, swollen skin spot that needs an adult's attention.",
+        "location": "public/images/units/skin-conditions/"
+      }
     },
     {
       "heading": "Why this matters in sports",
       "body": [
         "Sports like wrestling, football, and basketball involve close contact, sweat, and shared gear like mats, towels, and pads. That's exactly the kind of setting where skin problems can spread from one athlete to another.",
         "A skin problem that gets caught early is usually simple to take care of. A skin problem that gets hidden and played through can get worse and spread to teammates."
-      ]
+      ],
+      "image": {
+        "asset": "skin-conditions-shared-gear-risk.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Illustration of two wrestlers in close contact on a wrestling mat, with a folded towel and water bottle sitting nearby on a bench, showing the kind of close-contact, shared-gear setting where skin problems can spread. Clean, simple illustration style for middle schoolers.",
+        "alt": "Illustration of wrestlers in close contact on a mat near shared towels and gear.",
+        "location": "public/images/units/skin-conditions/"
+      }
     },
     {
       "heading": "What to do if you notice something",
@@ -54,7 +70,15 @@
         "A blister is a bubble of fluid under the skin, usually caused by rubbing — a new pair of shoes, a mat, a glove. It is not the same as an infection.",
         "If the blister is still closed (unbroken skin), leave it alone and keep it covered. The unbroken skin is protecting what's underneath.",
         "If a blister looks red and swollen around the edges, or has pus coming out of it, that's a sign it's infected. Tell an adult — don't just re-cover it and ignore it."
-      ]
+      ],
+      "image": {
+        "asset": "skin-conditions-blister-care.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-by-side illustration comparing a closed, unbroken blister on a heel that is simply covered with a bandage, next to a blister that looks red and swollen around the edges, marked with a warning-colored outline to show it needs an adult's attention. Clean, non-graphic illustration style for middle schoolers.",
+        "alt": "Comparison drawing of a normal covered blister next to a red, swollen blister that needs an adult's attention.",
+        "location": "public/images/units/skin-conditions/"
+      }
     },
     {
       "heading": "Simple habits that keep skin healthy",
@@ -67,7 +91,15 @@
         "Wear sandals or shower shoes in locker rooms and showers instead of going barefoot",
         "Change out of sweaty clothes and shoes as soon as you can",
         "Wash your practice gear regularly instead of leaving it damp in a bag"
-      ]
+      ],
+      "image": {
+        "asset": "skin-conditions-locker-room-habits.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Illustration of a locker room scene showing a student wearing shower sandals heading to a shower stall, with their own labeled towel and water bottle beside them, separate from a teammate's things. Clean, friendly illustration style for middle schoolers.",
+        "alt": "Illustration of a student wearing shower sandals in a locker room with their own separate towel and water bottle.",
+        "location": "public/images/units/skin-conditions/"
+      }
     }
   ],
   "quiz": [

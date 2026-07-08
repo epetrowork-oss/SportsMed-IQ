@@ -13,7 +13,15 @@
         "You already know from the 9-10 unit that warming up raises muscle temperature and makes tissue more elastic. Here's the actual mechanism: muscle and tendon are viscoelastic materials — they behave partly like a viscous fluid (resistant to being deformed quickly) and partly like an elastic solid (able to stretch and spring back). Temperature shifts the balance between those two properties.",
         "As tissue temperature rises, the viscosity component drops — collagen fibers within tendon, and the connective tissue surrounding muscle fibers, become more pliable and offer less internal resistance to being stretched. On a stress-strain curve (a plot of the force applied to a tissue against how much it deforms), warmer tissue shifts the curve so the failure point — where fibers actually tear — arrives at a greater strain. That's the real reason a cold hamstring is more likely to strain during a sudden sprint than a warm one: it isn't that cold muscle is 'weaker,' it's that its failure point arrives sooner, at a shorter length and lower force.",
         "This is also why the target isn't just 'some warming.' Research generally points to raising muscle temperature by roughly 1-2°C (about 2-4°F) above resting to meaningfully shift tissue properties. A few light jogging strides don't reliably get there; a sustained several-minute raise phase does."
-      ]
+      ],
+      "image": {
+        "asset": "warmup-injury-prevention-stress-strain-curve.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Line graph with 'strain' (tissue deformation) on the x-axis and 'stress' (force) on the y-axis, showing two curves: a 'cold tissue' curve reaching its failure point (marked with an X) at a shorter strain, and a 'warm tissue' curve (raised ~1-2°C) reaching its failure point further along the strain axis, illustrating that warmer tissue tolerates more stretch before fibers tear. Clean scientific-diagram style, labeled axes and failure points.",
+        "alt": "Stress-strain graph comparing cold and warm tissue, showing that warm tissue reaches its failure (tearing) point at a greater strain than cold tissue.",
+        "location": "public/images/units/warmup-injury-prevention/"
+      }
     },
     {
       "heading": "Neuromuscular activation and post-activation potentiation: warm-up as a performance tool, not just protection",
@@ -22,6 +30,14 @@
         "The leading explanation involves two changes at the muscle and nervous-system level: a brief, sufficiently intense contraction phosphorylates (chemically primes) the myosin regulatory light chains inside muscle fibers, making the fiber more sensitive to the calcium signal that triggers a contraction, and it increases the excitability of the motor neurons recruiting those fibers, so a subsequent effort recruits more motor units, faster. The practical effect: a short bout of heavy or explosive loading — a few sets of heavy squats, loaded jumps, or short maximal sprints — followed by several minutes of rest, can measurably improve a subsequent sprint or jump.",
         "PAP and fatigue are competing effects from the same stimulus, which is why timing matters: too little rest after the activating bout and fatigue still dominates; too much rest and the potentiation effect fades. Most athletes see the window open somewhere in the roughly 5-12 minute range after the activating bout, though it varies by individual training status."
       ],
+      "image": {
+        "asset": "warmup-injury-prevention-pap-window-graph.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Line graph with 'time since activating bout' on the x-axis and 'performance relative to baseline' on the y-axis, showing two overlapping curves: a declining 'fatigue' curve starting high and dropping, and a rising-then-fading 'potentiation' curve, with their combined net-effect curve dipping below baseline briefly then rising above baseline in a shaded 'PAP window' band roughly at the 5-12 minute mark before fading back to baseline. Clean scientific-chart style, labeled axes and shaded window.",
+        "alt": "Graph showing the post-activation potentiation window: performance dips from fatigue immediately after an activating bout, then rises above baseline in a window roughly 5-12 minutes later before fading.",
+        "location": "public/images/units/warmup-injury-prevention/"
+      },
       "callout": {
         "type": "warning",
         "title": "Potentiation work needs real supervision",

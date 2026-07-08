@@ -20,7 +20,15 @@
         "The body sheds heat to its environment in a few basic ways. Two matter most for athletes: conduction (direct heat loss into something colder that's touching the skin, like wet clothing, cold ground, or cold water) and convection (heat carried away by moving air, like wind stripping away the thin layer of warm air the body builds up next to the skin).",
         "This is why 'wind chill' is a useful idea even without the physics: wind doesn't change the actual air temperature, but it dramatically increases how fast the body loses heat by convection. A windy, wet 40°F day can pull heat away from an athlete faster than a still, dry 20°F day.",
         "That's also why wet-and-windy conditions are more dangerous than dry cold at the same temperature. Water conducts heat away from skin far faster than air does, and wind multiplies that effect. Rain-soaked football and soccer games, cold-water swim training, and windy mountain slopes are higher-risk than a calm, dry cold day — even if the thermometer reads about the same."
-      ]
+      ],
+      "image": {
+        "asset": "cold-exposure-conduction-convection.webp",
+        "ratio": "16:9",
+        "background": "transparent",
+        "description": "Two-panel diagram of an athlete outdoors in cold weather. Left panel: conduction — wet clothing clinging to skin with small arrows showing heat leaving the body directly into the wet fabric. Right panel: convection — wind lines blowing past the same athlete, arrows showing the thin warm air layer near the skin being stripped away. Label each panel 'Conduction' and 'Convection.' Clean instructional-illustration style.",
+        "alt": "Diagram comparing conduction (wet clothing) and convection (wind) as the two main ways an athlete loses body heat in cold weather.",
+        "location": "public/images/units/cold-exposure/"
+      }
     },
     {
       "heading": "Recognizing mild hypothermia — the umbles",
@@ -54,7 +62,15 @@
         "Frostbite is different from hypothermia: it's the freezing of skin and, in more serious cases, the tissue underneath — not a drop in core temperature. It happens most often at the body's extremities and exposed skin, farthest from the warm core and often less insulated: fingers, toes, ears, nose, and cheeks.",
         "Superficial frostbite affects the skin: it looks white, waxy, or grayish, and feels numb. The surface may feel hard or frozen, but the tissue underneath still feels soft and pliable when gently pressed.",
         "Deep frostbite extends into the tissue below the skin. The area is hard and cold all the way through, may look mottled or blue-white, and can blister. Deep frostbite is a medical emergency that needs hospital care — the tissue can be permanently damaged."
-      ]
+      ],
+      "image": {
+        "asset": "cold-exposure-frostbite-severity.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Two-panel comparison of frostbitten fingers. Left panel: superficial frostbite — skin looks white, waxy, or grayish, with a caption noting the tissue underneath still feels soft when pressed. Right panel: deep frostbite — skin is mottled, blue-white, with a blister and a caption noting the tissue is hard and cold throughout. Label each panel 'Superficial' and 'Deep.' Clean medical-illustration style, no graphic detail.",
+        "alt": "Comparison diagram of superficial frostbite (white, waxy skin) and deep frostbite (mottled, blistered skin) on the fingers.",
+        "location": "public/images/units/cold-exposure/"
+      }
     },
     {
       "heading": "Responding to frostbite",

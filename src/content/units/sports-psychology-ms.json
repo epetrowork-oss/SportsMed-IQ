@@ -13,7 +13,15 @@
         "Sports bring big feelings. Winning feels great. Losing can feel awful. Getting hurt can feel even worse — especially if it means sitting out and watching your team play without you.",
         "Feeling sad, frustrated, or worried sometimes is completely normal for an athlete. This is true even for the toughest players on the team. Having these feelings doesn't mean something is wrong with you.",
         "It's okay to talk about these feelings. Talking about them is not weak or babyish. It's a normal, healthy thing to do — the same way you'd tell a coach about a sore ankle instead of hiding it and hoping it goes away."
-      ]
+      ],
+      "image": {
+        "asset": "sports-psychology-range-of-feelings.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Split scene of two young athletes on the same team: one celebrating happily after a win, arms raised; the other sitting quietly on the bench looking down after a tough loss or an injury. Both are shown as normal, relatable moments, not exaggerated. Clean, warm illustration style for middle schoolers.",
+        "alt": "Illustration of one athlete celebrating a win and another sitting quietly after a tough moment, showing that both feelings are normal.",
+        "location": "public/images/units/sports-psychology/"
+      }
     },
     {
       "heading": "Signs a teammate might be struggling",
@@ -27,7 +35,15 @@
         "Gets snappy or upset more easily than usual.",
         "Stops seeming to enjoy the sport they used to love.",
         "Says things like \"nothing matters\" or \"what's even the point,\" even if it sounds like a joke."
-      ]
+      ],
+      "image": {
+        "asset": "sports-psychology-recognize-withdrawal.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Illustration of a team of athletes chatting and laughing together in a group off to one side, while one teammate sits alone a short distance away, not joining in, looking down. A gentle, non-alarming scene showing withdrawal from the group as something a teammate might notice. Clean, warm illustration style for middle schoolers.",
+        "alt": "Illustration of a teammate sitting apart from a group of chatting friends, showing a sign of withdrawal to notice.",
+        "location": "public/images/units/sports-psychology/"
+      }
     },
     {
       "heading": "Getting hurt can hurt your feelings too",
@@ -35,7 +51,15 @@
         "Getting injured doesn't just hurt your body. It can hurt your feelings too. Missing practices, games, and time with the team is a real loss, not just an inconvenience.",
         "It's normal to feel frustrated, sad, or worried when you're hurt and can't play. A lot of athletes feel this way. That doesn't mean you're being dramatic — it means you care about your sport and your team.",
         "If you're hurt and feeling down about it, telling a trusted adult how you feel is a smart move, just like reporting the injury itself."
-      ]
+      ],
+      "image": {
+        "asset": "sports-psychology-injured-sidelines.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Illustration of an athlete on crutches sitting on the sideline bench, watching their team practice in the background, with a thoughtful, slightly sad expression. A gentle, relatable scene, no medical detail. Clean, warm illustration style for middle schoolers.",
+        "alt": "Illustration of an injured athlete on crutches watching their team practice from the sideline, looking a little down.",
+        "location": "public/images/units/sports-psychology/"
+      }
     },
     {
       "heading": "What to do if you notice these signs",
@@ -51,6 +75,14 @@
         "type": "tip",
         "title": "You don't have to have the answers",
         "text": "You are not expected to know what's wrong or how to fix it. Your job is to notice, care, and tell a trusted adult. That's enough — you don't have to decide how serious it is on your own."
+      },
+      "image": {
+        "asset": "sports-psychology-listening-scene.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Illustration of one teammate sitting beside another on a bench, listening calmly and supportively while the other talks, with a coach visible approaching nearby in the background to show the next step of getting a trusted adult involved. Warm, reassuring illustration style for middle schoolers.",
+        "alt": "Illustration of a teammate listening supportively to another, with a coach approaching in the background.",
+        "location": "public/images/units/sports-psychology/"
       }
     },
     {

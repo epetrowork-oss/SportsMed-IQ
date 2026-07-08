@@ -12,7 +12,15 @@
       "body": [
         "Your knee is one of the biggest joints in your body. It has to bend, straighten, and handle your whole body weight while you run, jump, and cut side to side.",
         "Inside the knee are strong bands of tissue that hold the bones together and pads that cushion the joint. You don't need to know their names for this lesson — you just need to know that a hard twist, a sudden stop, or a hit to the knee can hurt those inside parts, even if nothing looks broken from the outside."
-      ]
+      ],
+      "image": {
+        "asset": "knee-acl-inside-the-knee.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple side-view cutaway of a knee joint showing the thigh bone and shin bone meeting, with thick strap-like ligaments connecting them and a soft cushioning pad between the bones. Highlight one ligament in a bright color to show it holds the bones together. Clean, simple illustration style for middle schoolers, minimal labels, no gore.",
+        "alt": "Simple diagram of the inside of a knee joint showing ligaments connecting the bones and a cushioning pad.",
+        "location": "public/images/units/knee-acl/"
+      }
     },
     {
       "heading": "How it usually happens",
@@ -20,7 +28,15 @@
         "Most serious knee injuries in sports happen without anyone even touching the athlete. A player plants a foot, twists, cuts sharply, or lands from a jump, and the knee buckles or twists the wrong way.",
         "It can also happen from contact — getting hit or tackled on the side of the knee while the foot is planted on the ground.",
         "Either way, the athlete often feels or hears something happen inside the knee right when it occurs."
-      ]
+      ],
+      "image": {
+        "asset": "knee-acl-planting-twist-mechanism.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Illustration of a soccer or basketball player planting one foot on the ground and twisting their body, with the knee shown bending awkwardly to the side and no other player nearby to touch them. Motion lines show the sudden twisting movement. Clean, simple illustration style for middle schoolers, no gore.",
+        "alt": "Illustration of an athlete planting a foot and twisting, showing how a non-contact knee injury can happen.",
+        "location": "public/images/units/knee-acl/"
+      }
     },
     {
       "heading": "Signs something is wrong",
@@ -34,7 +50,15 @@
         "The athlete can't put normal weight on that leg",
         "The knee won't fully straighten or fully bend like the other one",
         "The athlete says it just feels 'wrong' compared to normal, even without obvious swelling"
-      ]
+      ],
+      "image": {
+        "asset": "knee-acl-warning-signs.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Illustration of an athlete sitting on the ground holding their knee, with a swollen, puffy knee shown next to a normal knee for comparison. Simple, clean illustration style, no gore, no text in the image.",
+        "alt": "Illustration comparing a normal knee to a swollen knee with an athlete holding it in pain.",
+        "location": "public/images/units/knee-acl/"
+      }
     },
     {
       "heading": "What to do right away",
@@ -46,6 +70,14 @@
         "type": "warning",
         "title": "Get an adult immediately",
         "text": "If the knee looks bent out of shape, the athlete cannot bear any weight on it, the leg below the knee looks pale, cold, or numb, or the athlete cannot move their foot or toes, this is an emergency. Get an adult and call 911 right away. Never try to straighten or push a badly deformed knee back into place yourself."
+      },
+      "image": {
+        "asset": "knee-acl-deformity-emergency.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-by-side illustration comparing a normal knee to a knee that looks bent out of shape after a serious injury, drawn with a warning-colored outline around the injured knee to signal an emergency. Clean, non-graphic illustration style for middle schoolers.",
+        "alt": "Comparison drawing of a normal knee next to a deformed knee marked as an emergency warning sign.",
+        "location": "public/images/units/knee-acl/"
       }
     },
     {

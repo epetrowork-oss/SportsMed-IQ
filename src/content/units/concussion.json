@@ -12,7 +12,15 @@
       "body": [
         "A concussion is a mild traumatic brain injury caused by a bump, blow, or jolt to the head — or to the body — that makes the brain move rapidly inside the skull. The sudden movement stretches brain cells and triggers chemical changes that temporarily disrupt normal brain function.",
         "Two things surprise most students: a concussion does not require a direct hit to the head (a hard body check can do it), and loss of consciousness happens in fewer than 10% of concussions. Most concussed athletes never black out."
-      ]
+      ],
+      "image": {
+        "asset": "concussion-brain-movement-mechanism.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-view cross-section of a head and skull, showing the brain shifted and rotated inside the skull after a sudden jolt, with a motion arrow indicating the rapid movement and a soft highlighted region where brain tissue stretches against the inner skull wall. Include a small inset showing the same jolt originating from a body hit (arrow into the torso) rather than only a direct head strike. Clean medical-illustration style.",
+        "alt": "Diagram showing the brain moving and rotating rapidly inside the skull after a jolt to the head or body, causing a concussion.",
+        "location": "public/images/units/concussion/"
+      }
     },
     {
       "heading": "Signs and symptoms",
@@ -59,6 +67,14 @@
         "Most concussions resolve in 1–4 weeks with adolescents typically taking longer than adults. Recovery starts with 24–48 hours of relative rest (light activity is fine; total dark-room isolation is outdated), followed by a gradual return to school first, then sport.",
         "Return to play follows a stepwise progression, each stage at least 24 hours apart: light aerobic exercise → sport-specific exercise → non-contact drills → full-contact practice → competition. Any symptom return means dropping back a stage. Written medical clearance is required before contact."
       ],
+      "image": {
+        "asset": "concussion-return-to-play-stages.webp",
+        "ratio": "16:9",
+        "background": "transparent",
+        "description": "Horizontal five-step progression graphic with arrows connecting each stage in order: 1) light aerobic exercise, 2) sport-specific exercise, 3) non-contact drills, 4) full-contact practice, 5) competition. Under the arrow between each pair of stages, note '24+ hours, symptom-free.' Include a small looping arrow showing that any symptom return sends the athlete back a stage. Clean flat infographic style.",
+        "alt": "Five-stage return-to-play progression after a concussion, from light aerobic exercise through full competition, with 24-hour symptom-free gaps between stages.",
+        "location": "public/images/units/concussion/"
+      },
       "callout": {
         "type": "tip",
         "title": "Baseline testing",

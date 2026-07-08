@@ -51,7 +51,15 @@
         "Rigid athletic tape (zinc-oxide-backed, essentially non-stretch) provides true mechanical restriction: it resists elongation, which is exactly why it can block a joint from moving into an injury-prone end range. Elastic athletic tape stretches and conforms better to muscle bellies and larger contours, trading some rigid restriction for comfort and range of motion — useful where you want support without a hard block, like wrapping around a muscle belly rather than locking a joint. Cohesive wrap (self-adherent wrap that sticks only to itself, not to skin) adds secure compression over other tape or wraps without any adhesive on the skin, which makes it easy to remove without skin trauma — but it has essentially no independent motion-restriction value; it's a compression and securing layer, not a support layer.",
         "Kinesiology tape is thin, highly elastic, and applied with the goal of moving with the skin rather than restricting it. It's marketed heavily around claims like \"lifting the skin to improve lymphatic drainage,\" reducing pain, and improving muscle activation or blood flow.",
         "The honest evidence summary: systematic reviews of kinesiology tape research consistently find weak and inconsistent evidence for pain reduction, swelling reduction, or performance benefits beyond what a placebo or simple skin-contact effect would produce. It does not provide meaningful mechanical restriction the way rigid tape does — its elasticity is the entire design, which is the opposite property you want if a joint truly needs blocked from an end range. Any real benefit is most plausibly proprioceptive: light, continuous skin stimulation appears to give the nervous system an extra cue about where a joint is in space. That's worth knowing, and it's very different from what the marketing claims. Read taping-product marketing the way you'd read any other health claim: separate what's testable (does range of motion actually decrease under load — yes, for rigid tape; measurably, for kinesiology tape, generally no) from what sounds good but isn't backed by comparable evidence (\"lifts fascia,\" \"increases circulation\")."
-      ]
+      ],
+      "image": {
+        "asset": "taping-wrapping-materials-comparison.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Four-column reference chart, one per material: 'Rigid athletic tape' (non-stretch, true mechanical restriction), 'Elastic athletic tape' (stretches, conforms to muscle bellies, comfort over hard restriction), 'Cohesive wrap' (sticks to itself only, compression/securing layer, no independent motion restriction), 'Kinesiology tape' (thin, highly elastic, moves with skin, weak evidence beyond proprioceptive cueing). Each column shows a small tape-roll icon and its one-line mechanism. Clean instructional-chart style.",
+        "alt": "Comparison chart of four taping materials — rigid tape, elastic tape, cohesive wrap, and kinesiology tape — by mechanism and what each actually does.",
+        "location": "public/images/units/taping-wrapping/"
+      }
     },
     {
       "heading": "The evidence layer: how long does taping actually work?",
@@ -79,6 +87,14 @@
         "Tape removal technique deserves the same care as application. Ripping tape straight off pulls the adhesive away from skin faster than the skin's own attachment can release, which can tear the epidermis (outer skin layer) — a real risk for an athlete taped daily over a season, since repeated minor trauma accumulates. Correct technique is to peel back slowly, low and close to the skin, while using your other hand to press the underlying skin down and away from the direction of pull (peel-back with skin support), or to cut the tape with tape scissors along the safe side of the limb rather than pulling it. Adhesive remover wipes reduce both the pulling force needed and leftover residue.",
         "Wound-adjacent taping has a simple rule: never place tape directly over an open wound, road rash, a fresh blister, or a suture line. Tape can be applied near a wound that is already properly cleaned and dressed, but it must not overlap the compromised skin or the dressing edge itself, since removing tape that has adhered across a wound edge can reopen it."
       ],
+      "image": {
+        "asset": "taping-wrapping-dermatitis-vs-blister.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-panel comparison of tape-related skin reactions. Left panel 'Contact dermatitis': redness and small itchy bumps tracing the exact outline of tape strips across a wide area, labeled 'appears hours to a day after application.' Right panel 'Friction blister': a single raised blister concentrated at one bony pressure point or crossover point, labeled 'appears at a specific hot spot during activity.' Clean medical-illustration style, non-graphic.",
+        "alt": "Comparison diagram of contact dermatitis (a rash tracing the tape's outline) versus a friction blister (localized to one pressure point).",
+        "location": "public/images/units/taping-wrapping/"
+      },
       "callout": {
         "type": "warning",
         "title": "Refer out — don't manage these yourself",

@@ -45,6 +45,14 @@
         "Extrusion — the tooth is partially pulled out of the socket lengthwise, so it looks longer than its neighbors and is usually very mobile.",
         "Avulsion — the tooth is completely out of the socket."
       ],
+      "image": {
+        "asset": "dental-trauma-luxation-spectrum.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Six-panel horizontal spectrum diagram of tooth luxation injuries in order of severity, each panel showing the same front tooth in a different position relative to its neighbors and the gumline: 1) Concussion — tooth in normal position, small tenderness icon, no visible displacement. 2) Subluxation — tooth slightly loose with a subtle wobble arrow, still in normal position. 3) Lateral luxation — tooth tilted sideways, wedged against bone. 4) Intrusion — tooth pushed up, appearing shorter than neighbors. 5) Extrusion — tooth pulled down/out, appearing longer and loose. 6) Avulsion — socket empty, tooth completely out. Label each panel with its name and one-line distinguishing feature. Clean medical-illustration style, non-graphic.",
+        "alt": "Six-panel diagram of tooth luxation injuries from least to most severe: concussion, subluxation, lateral luxation, intrusion, extrusion, and avulsion.",
+        "location": "public/images/units/dental-facial-trauma/"
+      },
       "callout": {
         "type": "tip",
         "title": "The pattern to remember",
@@ -79,6 +87,14 @@
         "Numbness of the lower lip or chin — the inferior alveolar nerve runs through a canal inside the body of the mandible and exits at the chin as the mental nerve. A fracture through that canal can bruise or shear the nerve, producing numbness in exactly that distribution — a highly specific sign that's easy to check for and easy to miss if you don't think to ask.",
         "Visible asymmetry, step-off deformity (a palpable irregularity in the normally smooth line of the jaw), drooling or reluctance to swallow (pain with jaw movement), and bleeding inside the mouth along the gumline."
       ],
+      "image": {
+        "asset": "dental-trauma-mandible-ring-anatomy.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Front/lower view of the mandible (lower jawbone) illustrated as a continuous ring shape running from one temporomandibular joint (TMJ), around the chin, to the other TMJ, with the ring outline highlighted. Show one example fracture at the chin (body of the mandible) with a second, dashed-line fracture marked at the opposite condyle near the ear, connected by a curved arrow indicating force transmission around the ring. Label the mental nerve's path exiting near the chin. Clean medical-illustration style.",
+        "alt": "Diagram of the mandible as a structural ring from TMJ to TMJ, showing how a fracture at the chin can transmit force to cause a second fracture at the opposite condyle.",
+        "location": "public/images/units/dental-facial-trauma/"
+      },
       "callout": {
         "type": "warning",
         "title": "Ring logic in practice",

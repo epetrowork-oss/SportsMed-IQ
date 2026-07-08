@@ -13,7 +13,15 @@
         "A warm-up is a few minutes of easy movement before you play hard — before a game, a practice, or any activity where you'll be sprinting, jumping, or cutting at full speed.",
         "Warming up gets your muscles ready to work. Cold muscles are stiffer, kind of like a rubber band left in the freezer. Moving around raises your body temperature and gets blood flowing to your muscles, which makes them looser and more ready to handle sudden sprints, jumps, and quick turns.",
         "A warm-up also wakes up your brain and body together, so your reactions and coordination are sharper once the whistle blows, instead of your body still catching up a few minutes into the game."
-      ]
+      ],
+      "image": {
+        "asset": "warmup-injury-prevention-cold-vs-warm-muscle.webp",
+        "ratio": "1:1",
+        "background": "white",
+        "description": "Side-by-side icon-style illustration: a stiff, straight rubber band on the left labeled as cold, next to a looser, slightly stretched rubber band on the right that flows more easily, to visually explain the cold-muscle-versus-warm-muscle metaphor. Clean, simple illustration style for middle schoolers.",
+        "alt": "Illustration comparing a stiff rubber band to a looser one, showing how cold muscles are stiffer than warm muscles.",
+        "location": "public/images/units/warmup-injury-prevention/"
+      }
     },
     {
       "heading": "What a warm-up looks like",
@@ -23,7 +31,15 @@
       "list": [
         "A little easy jogging or light cardio first — enough to get your heart beating faster and your body feeling warm, not out of breath.",
         "Then move your body in the ways you're about to use it in the game or practice — swing your arms and legs, do some easy lunges, skip, or jog while lifting your knees high. This gets your joints and muscles moving through the same motions you're about to need."
-      ]
+      ],
+      "image": {
+        "asset": "warmup-injury-prevention-warmup-steps.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-panel illustration on a field: first panel shows a group of athletes doing an easy jog together; second panel shows the same athletes doing dynamic movements like arm swings, lunges, and high knees. Clean, energetic illustration style for middle schoolers.",
+        "alt": "Two-panel illustration showing athletes first jogging easily, then doing dynamic movements like lunges and high knees.",
+        "location": "public/images/units/warmup-injury-prevention/"
+      }
     },
     {
       "heading": "Don't stretch and hold cold muscles",
@@ -35,6 +51,14 @@
         "type": "tip",
         "title": "Move first, hold later",
         "text": "Before you play: move — light jogging, then swinging your arms and legs. After you play: that's the time for holding a stretch still for 20-30 seconds."
+      },
+      "image": {
+        "asset": "warmup-injury-prevention-move-vs-hold.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Split scene: on the left, before playing, an athlete is shown mid-motion doing arm swings and light jogging under a sun icon labeled 'before'; on the right, after playing, an athlete sits and holds a toe-touch stretch still under a moon or checkmark icon labeled 'after'. Clean, simple illustration style for middle schoolers.",
+        "alt": "Illustration comparing moving warm-up exercises done before playing to a held stretch done after playing.",
+        "location": "public/images/units/warmup-injury-prevention/"
       }
     },
     {
@@ -47,6 +71,14 @@
         "type": "warning",
         "title": "Cold weather makes this more important, not less",
         "text": "On a cold day, your muscles start out even stiffer than usual. That's exactly when it's most tempting to skip the warm-up and get moving fast — but it's also when skipping it is most likely to lead to an injury."
+      },
+      "image": {
+        "asset": "warmup-injury-prevention-cold-weather.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Illustration of an athlete warming up outdoors on a chilly day, wearing a light jacket, with visible breath in the cold air, doing arm swings before practice. Clean, simple illustration style for middle schoolers.",
+        "alt": "Illustration of an athlete warming up outdoors on a cold day, with visible breath in the cold air.",
+        "location": "public/images/units/warmup-injury-prevention/"
       }
     },
     {

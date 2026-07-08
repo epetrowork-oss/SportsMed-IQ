@@ -39,6 +39,14 @@
         "type": "warning",
         "title": "Double vision on up/down gaze after orbital trauma",
         "text": "This is a specific, teachable red flag for orbital floor fracture with possible muscle entrapment — a genuine surgical time-sensitivity, not a routine 'see a doctor this week' referral. Treat it with the same urgency as any other serious eye red flag: refer for immediate evaluation."
+      },
+      "image": {
+        "asset": "eye-injuries-orbital-blowout-entrapment.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Front cross-section of the orbit showing the thin orbital floor fractured with the inferior rectus muscle caught ('trapdoor') in the fracture line, while the surrounding orbital rim stays intact. Include a small inset showing the eye's restricted upward gaze compared to the unaffected eye, illustrating the double-vision finding. Label the orbital floor, inferior rectus muscle, and infraorbital nerve. Clean medical-illustration style.",
+        "alt": "Diagram of an orbital blowout fracture with the inferior rectus muscle entrapped in the orbital floor, and an inset showing restricted upward eye movement.",
+        "location": "public/images/units/eye-injuries/"
       }
     },
     {
@@ -67,7 +75,15 @@
         "Two very different findings can both show up as 'redness' after a hit to the face, and telling them apart is a core differential skill at this level.",
         "Subconjunctival hemorrhage is a small blood vessel breaking under the conjunctiva (the clear membrane covering the white of the eye), producing a flat, bright-red patch on the sclera with a sharp border. It looks dramatic to an untrained observer, but it's superficial: painless or only mildly irritating, no effect on vision, no blood pooling in front of the iris, and it resolves on its own over one to two weeks, the same way a bruise fades. Hyphema, by contrast, is blood inside the anterior chamber itself — you're often looking at a visible fluid level in front of the iris/pupil rather than a flat red patch on the white, it's frequently associated with pain and light sensitivity, and it can blur or dim vision depending on how much of the chamber fills.",
         "The fast field distinction: does the red area sit flat on the white of the eye with a normal-looking pupil and colored iris underneath (favors subconjunctival hemorrhage), or is there blood layered in front of the iris/pupil itself, with pain, light sensitivity, or vision change (favors hyphema)? When genuinely uncertain, or when there was significant trauma rather than something like a hard cough or sneeze, the safe default is always to treat it as the more serious finding and refer."
-      ]
+      ],
+      "image": {
+        "asset": "eye-injuries-subconjunctival-vs-hyphema.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-panel side-by-side comparison of a red eye after trauma. Left panel 'Subconjunctival hemorrhage': a flat, sharply-bordered bright-red patch on the white of the eye, normal-looking pupil and iris underneath, labeled 'painless, self-resolves in 1-2 weeks.' Right panel 'Hyphema': a visible layer of blood settled in front of the lower iris/pupil inside the anterior chamber, labeled 'painful, light-sensitive, urgent referral.' Clean medical-illustration style, non-graphic.",
+        "alt": "Comparison diagram of subconjunctival hemorrhage (a flat red patch on the white of the eye) and hyphema (blood layered in front of the iris) after trauma.",
+        "location": "public/images/units/eye-injuries/"
+      }
     },
     {
       "heading": "Return-to-play: the vision-change rule",

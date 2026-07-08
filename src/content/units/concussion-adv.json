@@ -20,7 +20,15 @@
         "The stretching of brain cells triggers what's called the neurometabolic cascade — a chain reaction of chemical events, not a single moment of damage. Stretched neurons dump potassium out of the cell and let calcium flood in. To fix that ionic imbalance, the cell's sodium-potassium pumps go into overdrive, and those pumps run on ATP (the cell's energy currency), so glucose demand spikes sharply.",
         "Here's the problem: at the same time demand spikes, cerebral blood flow — the supply side — actually drops. You get a mismatch between a brain that suddenly needs much more fuel and one that's receiving less. Athletic trainers call this the 'energy crisis.' Calcium flooding into mitochondria (the cell's energy-producing structures) makes it worse by impairing their ability to produce ATP at all.",
         "This mismatch can persist for days to weeks — often longer than symptoms last. That's the key concept this unit builds toward: a brain can look and feel recovered on the surface while still running on a strained metabolic budget underneath. It's the biological reason conservative, stepwise return-to-play timelines exist even after symptoms clear, not just an overcautious rule."
-      ]
+      ],
+      "image": {
+        "asset": "concussion-neurometabolic-cascade.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Horizontal flow diagram illustrating the neurometabolic cascade inside a stretched neuron: Step 1, potassium ions leaving the cell and calcium flooding in; Step 2, sodium-potassium pumps working overtime, consuming ATP; Step 3, a widening gap between rising glucose demand (up arrow) and falling cerebral blood flow (down arrow), labeled 'the energy crisis'; Step 4, calcium impairing mitochondria's ATP production. Use simple cell-level iconography (ion arrows, a mitochondrion icon) rather than gore. Clean diagrammatic style with labeled steps and arrows.",
+        "alt": "Flow diagram of the neurometabolic cascade after a concussion: ion imbalance, ATP-consuming pump overdrive, and the resulting mismatch between glucose demand and blood flow (the energy crisis).",
+        "location": "public/images/units/concussion/"
+      }
     },
     {
       "heading": "Second impact syndrome",
@@ -59,6 +67,14 @@
         "type": "warning",
         "title": "Findings that escalate to 911, not sideline monitoring",
         "text": "Call EMS immediately for: a pupil that's unequal or non-reactive to light, a headache that is severe or clearly worsening rather than steady, repeated vomiting, seizure activity, slurred speech, declining level of consciousness or increasing difficulty waking someone, weakness/numbness (especially one-sided), or any neck pain, midline spine tenderness, or numbness/tingling in the limbs after axial-loading mechanisms (like a helmet-first or head-first impact). Suspected spine involvement means spinal motion restriction — do not move the athlete or remove equipment; wait for trained EMS."
+      },
+      "image": {
+        "asset": "concussion-lucid-interval-timeline.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two stacked timeline graphs comparing symptom trajectory in the hours after a head impact. Top timeline, 'Typical concussion': symptom severity starts elevated at time of injury and gradually declines over the following hours. Bottom timeline, 'Lucid interval (possible structural bleed)': symptom severity dips briefly to near-normal right after the hit, then rises sharply beginning some minutes later, marked with a warning-colored zone and label 'deterioration — call 911.' Simple line-graph style, x-axis labeled 'time since impact,' y-axis labeled 'symptom severity.'",
+        "alt": "Comparison of two symptom timelines after a head impact: typical gradual concussion improvement versus a lucid interval followed by rapid deterioration suggesting a structural bleed.",
+        "location": "public/images/units/concussion/"
       }
     },
     {

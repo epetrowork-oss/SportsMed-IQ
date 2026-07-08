@@ -27,6 +27,14 @@
         "You can see blood in the white part of the eye",
         "Something is stuck in or sticking out of the eye"
       ],
+      "image": {
+        "asset": "eye-injuries-warning-signs.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-by-side illustration comparing a normal eye and an injured eye, with the injured eye showing mild redness in the white part and slight swelling around it. Simple, clean, non-graphic style appropriate for middle schoolers, minimal labels.",
+        "alt": "Comparison drawing of a normal eye next to an injured eye with redness and swelling.",
+        "location": "public/images/units/eye-injuries/"
+      },
       "callout": {
         "type": "warning",
         "title": "See any of these signs? Stop and get an adult now",
@@ -45,6 +53,14 @@
         "Never try to pull out or remove anything stuck in the eye",
         "Never try to force the eyelid open if it won't open"
       ],
+      "image": {
+        "asset": "eye-injuries-do-not-touch.webp",
+        "ratio": "1:1",
+        "background": "white",
+        "description": "Simple icon-style illustration of a hand held near an eye with a red circle-and-slash 'no' symbol overlaid, showing 'do not touch or rub the eye.' Plain, flat icon style, minimal detail, no text in the image.",
+        "alt": "Icon showing a hand near an eye with a red no symbol, meaning do not touch the eye.",
+        "location": "public/images/units/eye-injuries/"
+      },
       "callout": {
         "type": "warning",
         "title": "Never touch an injured eye",
@@ -56,14 +72,30 @@
       "body": [
         "Sometimes dust, an eyelash, or a bit of dirt blows into the eye and it just feels scratchy or waters a little. There was no hit, and vision is normal.",
         "In that case, blinking a lot can help tears wash it out on their own. An adult can also gently rinse the eye with clean water. If it still feels scratchy after that, or if it starts to hurt more, tell an adult — it's time for a doctor to look at it, not to keep trying to fix it yourself."
-      ]
+      ],
+      "image": {
+        "asset": "eye-injuries-minor-irritation-rinse.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple, calm illustration of an adult gently rinsing an athlete's eye with clean water poured from a small cup, the athlete leaning slightly forward and tilting their head. Clean, plain illustration style for middle schoolers.",
+        "alt": "An adult gently rinsing an athlete's eye with clean water from a small cup.",
+        "location": "public/images/units/eye-injuries/"
+      }
     },
     {
       "heading": "Prevention: wear the right eyewear",
       "body": [
         "The best way to deal with a serious eye injury is to never get one. Sports like racquetball, hockey, and lacrosse require athletes to wear protective eyewear made for that sport, and for good reason — a ball or stick can hit the eye faster than you can blink away.",
         "Regular glasses or sunglasses are not the same thing. Sports eyewear is built to not shatter and to keep objects away from your eye. If your sport has protective eyewear, wear it every time, not just when you remember."
-      ]
+      ],
+      "image": {
+        "asset": "eye-injuries-protective-eyewear.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple front-facing illustration of an athlete wearing sport-specific protective eyewear, like wraparound goggles suited for a sport such as hockey or racquetball. Clean, flat, friendly illustration style.",
+        "alt": "Athlete wearing sport-specific protective wraparound eyewear.",
+        "location": "public/images/units/eye-injuries/"
+      }
     }
   ],
   "quiz": [

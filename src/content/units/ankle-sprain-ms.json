@@ -19,7 +19,15 @@
       "body": [
         "Your ankle is held together by ligaments — strong bands of tissue that connect bone to bone, kind of like sturdy rubber straps. They keep your ankle from moving too far in any one direction.",
         "When your foot rolls or twists too hard — usually inward, so the bottom of your foot turns toward your other foot — those ligaments get stretched too far or torn. That stretch or tear is what we call a sprain."
-      ]
+      ],
+      "image": {
+        "asset": "ankle-sprain-ligament-basics.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple side view of an ankle showing the ligaments as sturdy strap-like bands connecting the shin bone and foot bone. Highlight one ligament in red on the outside of the ankle, shown stretched and slightly torn, to illustrate what a sprain is. Clean, simple illustration style for middle schoolers, minimal labels.",
+        "alt": "Simple diagram of ankle ligaments, with one shown stretched and torn on the outside of the ankle.",
+        "location": "public/images/units/ankle-sprain/"
+      }
     },
     {
       "heading": "How to spot it",
@@ -32,7 +40,15 @@
         "Swelling — the ankle starts to puff up, sometimes within minutes",
         "Bruising that shows up later (not always right away)",
         "Limping, favoring the ankle, or not wanting to put weight on it"
-      ]
+      ],
+      "image": {
+        "asset": "ankle-sprain-swelling-signs.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-by-side illustration comparing a normal ankle and a sprained ankle with visible puffy swelling and light bruising around the outside bone. Simple, clean line-and-color style appropriate for middle schoolers, no gore.",
+        "alt": "Comparison drawing of a normal ankle next to a swollen, bruised sprained ankle.",
+        "location": "public/images/units/ankle-sprain/"
+      }
     },
     {
       "heading": "What to do right away",
@@ -45,7 +61,15 @@
         "Rest — stay off the ankle and let the adult decide next steps.",
         "Ice — a bag of ice wrapped in a thin towel, about 15-20 minutes, never straight on bare skin.",
         "Elevate — prop the ankle up higher than the heart when sitting or lying down, if possible."
-      ]
+      ],
+      "image": {
+        "asset": "ankle-sprain-rice-steps.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple illustration of an athlete sitting on a bench with an ice pack wrapped in a thin towel on their ankle, the leg propped up on a pillow above heart level. Clean, friendly illustration style, no text in the image.",
+        "alt": "Athlete sitting with an ice pack on a wrapped ankle propped up above heart level.",
+        "location": "public/images/units/ankle-sprain/"
+      }
     },
     {
       "heading": "Red flags — this might be more than a sprain",
@@ -56,6 +80,14 @@
         "type": "warning",
         "title": "Get an adult and see a doctor if you notice:",
         "text": "The athlete cannot put any weight on the foot at all (not even a little), the ankle or foot looks bent or crooked (deformity), the foot feels numb or looks pale/cold, or the pain is severe and not improving. Any of these means: stop, tell an adult immediately, and get it checked by a doctor. Never wait and see with these signs."
+      },
+      "image": {
+        "asset": "ankle-sprain-deformity-warning.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-by-side illustration comparing a normal ankle to one with an obvious bent or crooked deformity, drawn simply with a warning-colored outline around the injured ankle to signal danger. Clean, non-graphic style for middle schoolers.",
+        "alt": "Comparison drawing of a normal ankle next to a bent, deformed ankle marked as a warning sign.",
+        "location": "public/images/units/ankle-sprain/"
       }
     },
     {

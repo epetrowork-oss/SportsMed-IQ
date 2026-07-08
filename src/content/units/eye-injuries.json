@@ -24,7 +24,15 @@
         "Cornea — clear front window; easily scratched, very pain-sensitive",
         "Iris and pupil — colored ring and the opening it controls",
         "Orbit — the bony socket that houses and protects the eyeball"
-      ]
+      ],
+      "image": {
+        "asset": "eye-injuries-anatomy-cross-section.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side cross-section of a human eye seated in its bony orbit, with the sclera, cornea, iris, pupil, and orbit each labeled with a leader line. Use distinct colors for the sclera (white), cornea (clear, outlined), and iris (colored ring around the pupil). Clean medical-illustration style, neutral gaze.",
+        "alt": "Cross-section diagram of the eye showing the sclera, cornea, iris, pupil, and bony orbit.",
+        "location": "public/images/units/eye-injuries/"
+      }
     },
     {
       "heading": "How eye injuries happen",
@@ -59,7 +67,15 @@
       "body": [
         "The first-aid goal is simple: protect the eye from any further pressure or disturbance and get the athlete to medical care fast. Several common instincts are actually dangerous here.",
         "Never press on, rub, or apply direct pressure to an injured eyeball — pressure on a globe that may already be ruptured or weakened can force fluid out and worsen the injury. Never try to remove an object that is embedded in the eye; pulling it out can cause more damage and more bleeding. If something is sticking out, loosely tape a rigid shield (like the bottom of a paper cup) over the bones around the eye so nothing touches the eye itself — do not use a flat patch that could press on the globe. Keep the athlete calm and still, keep both eyes covered if possible (covering the uninjured eye reduces linked eye movement), and get to a doctor or ER urgently."
-      ]
+      ],
+      "image": {
+        "asset": "eye-injuries-rigid-shield-technique.webp",
+        "ratio": "4:3",
+        "background": "transparent",
+        "description": "Side view of a face with a rigid shield (the cut-off bottom of a paper cup) taped over the bony rim surrounding the eye, resting on the brow bone and cheekbone without touching the eye itself. Tape strips shown running from the shield to the forehead and cheek, well clear of the eye. Include a small crossed-out icon of a flat gauze patch pressing directly on the eye to show what NOT to do. Clean instructional-illustration style, no graphic detail.",
+        "alt": "Diagram showing a rigid shield taped over the bony rim around an injured eye, resting on surrounding bone rather than the eye itself.",
+        "location": "public/images/units/eye-injuries/"
+      }
     },
     {
       "heading": "Minor irritation: what's safe to try",

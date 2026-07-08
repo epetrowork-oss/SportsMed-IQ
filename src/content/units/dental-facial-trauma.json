@@ -40,6 +40,14 @@
         "If reinsertion isn't possible (athlete is disoriented, the tooth won't seat, you're not confident doing it), store the tooth in cold milk. Milk has the right chemistry and temperature to keep the root cells alive. If milk isn't available, the athlete's own saliva (holding the tooth inside the cheek, not swallowing it) or a commercial tooth-preservation product both work. Never store it in tap water — water's chemistry damages the root cells on contact.",
         "Get the athlete and the tooth to a dentist or emergency room within 30-60 minutes. This is a race against time — call ahead if possible so they're ready."
       ],
+      "image": {
+        "asset": "dental-trauma-tooth-anatomy-handling.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Cross-section of a tooth showing the crown (white chewing surface, labeled) above the gumline and the root (labeled) below it, wrapped in a thin highlighted layer representing the periodontal ligament. Beside it, a small inset shows a hand correctly holding an avulsed tooth by the crown only, fingers not touching the root. Clean medical-illustration style.",
+        "alt": "Diagram of a tooth's crown and root with the periodontal ligament highlighted, and a hand correctly holding a knocked-out tooth by the crown only.",
+        "location": "public/images/units/dental-facial-trauma/"
+      },
       "callout": {
         "type": "warning",
         "title": "Primary (baby) teeth are different",
@@ -60,7 +68,15 @@
         "Have the athlete sit up and lean slightly forward, not tilt the head back. Tilting back lets blood run down the throat, which can cause choking, gagging, or swallowed blood that upsets the stomach and can be mistaken for a bigger bleed than it is.",
         "Pinch the soft part of the nose (just below the bony bridge) firmly between thumb and finger and hold steady, uninterrupted pressure for a full 10-15 minutes by the clock. Resist the urge to check early — releasing pressure to peek restarts the bleeding. Ice on the bridge of the nose can help too.",
         "If bleeding hasn't slowed after 15-20 minutes of correct pressure, or it's heavy enough that the athlete is swallowing large amounts of blood, refer for medical care."
-      ]
+      ],
+      "image": {
+        "asset": "dental-trauma-nosebleed-technique.webp",
+        "ratio": "4:3",
+        "background": "transparent",
+        "description": "An athlete seated upright, torso leaning slightly forward from the hips (not tilting the head back), pinching the soft lower part of the nose with thumb and finger just below the bony bridge. Add a small crossed-out icon showing the incorrect head-tilted-back position beside it. Simple instructional-illustration style.",
+        "alt": "Diagram of correct nosebleed positioning: sitting upright and leaning slightly forward while pinching the soft part of the nose.",
+        "location": "public/images/units/dental-facial-trauma/"
+      }
     },
     {
       "heading": "Red flags: when it's more than a dentist can handle",
