@@ -6,6 +6,7 @@
   "gradeBand": "7-8",
   "summary": "A few minutes of moving before you play hard helps your body work better and lowers your chance of getting hurt — skipping it to save time is a bad trade.",
   "minutes": 9,
+  "standards": ["CAHE.7-8.S.Behaviors", "CAHE.7-8.S.SafetyPlan"],
   "sections": [
     {
       "heading": "What a warm-up does for you",

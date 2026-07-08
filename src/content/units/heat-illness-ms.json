@@ -6,6 +6,7 @@
   "gradeBand": "7-8",
   "summary": "Learn the warning signs your body gives you in hot weather, and what to do about them: tell an adult, get water, get shade.",
   "minutes": 12,
+  "standards": ["CAHE.7-8.S.Environment", "CAHE.7-8.S.SelfOthers", "CAHE.7-8.S.SafetyPlan"],
   "sections": [
     {
       "heading": "Why hot weather can be dangerous",

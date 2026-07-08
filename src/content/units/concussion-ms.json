@@ -6,6 +6,7 @@
   "gradeBand": "7-8",
   "summary": "Learn what a concussion is, how to spot one, and why the only right move is to tell a trusted adult right away.",
   "minutes": 15,
+  "standards": ["CAHE.7-8.S.ValidInfo", "CAHE.7-8.S.SelfOthers", "CAHE.7-8.S.Decisions"],
   "sections": [
     {
       "heading": "What is a concussion?",

@@ -6,6 +6,7 @@
   "gradeBand": "7-8",
   "summary": "Not every injury comes from one big hit — pain that slowly builds up over practices and games is a real injury too, and it's a sign to tell a trusted adult.",
   "minutes": 10,
+  "standards": ["CAHE.7-8.S.Behaviors", "CAHE.7-8.S.SelfOthers", "CAHE.7-8.S.SafetyPlan"],
   "sections": [
     {
       "heading": "Two kinds of injuries",
