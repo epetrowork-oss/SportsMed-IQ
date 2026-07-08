@@ -14,7 +14,15 @@
         "An adult has roughly 5 liters of blood. Losing about 15-20% of it (roughly 1 liter) starts to produce measurable signs of shock — a compensatory rise in heart rate and pale, cool skin as the body shunts blood to the brain and heart. Losing closer to 40% is life-threatening within minutes, not hours. That narrow window is why hemorrhage — heavy or uncontrolled bleeding — is treated as a 911-level emergency before almost anything else at an athletic event, including obvious fractures or head injuries.",
         "The type of vessel torn changes the picture. Capillary bleeding (the smallest vessels) oozes slowly and is rarely dangerous alone. Venous bleeding flows steadily, dark red, and responds well to pressure because veins are low-pressure. Arterial bleeding is bright red (fully oxygenated) and often spurts in sync with the pulse — it's high-pressure and can empty a significant blood volume in minutes if a major artery is involved, which is exactly why it jumps to the top of the escalation ladder in the next section.",
         "The body's own defense is hemostasis: platelets clump at the injury site and a fibrin mesh forms a clot, sealing the vessel. That process takes several minutes of stability to complete. This is the mechanism behind a rule you've already learned: lifting a dressing to 'check' on a wound tears the half-formed fibrin mesh apart and bleeding restarts from zero. Every time you peek, you reset hemostasis's clock."
-      ]
+      ],
+      "image": {
+        "asset": "wound-care-bleeding-type-comparison.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Three-panel comparison of bleeding types from a wound. Panel 1 'Capillary': slow, oozing dark-red bleeding, labeled 'rarely dangerous alone.' Panel 2 'Venous': steady, dark-red flow, labeled 'low pressure, responds well to direct pressure.' Panel 3 'Arterial': bright-red blood spurting in sync with a pulse icon, labeled 'high pressure, life-threatening within minutes.' Clean medical-illustration style, non-graphic.",
+        "alt": "Comparison diagram of capillary, venous, and arterial bleeding by color, flow pattern, and urgency.",
+        "location": "public/images/units/wound-care/"
+      }
     },
     {
       "heading": "The bleeding-control escalation ladder",
@@ -22,7 +30,15 @@
         "Direct pressure is still step one, but 'apply pressure' undersells the technique. Effective pressure is focused — concentrated over the specific bleeding point, not spread across the whole wound — and sustained, meaning you lean your body weight through your hands for a full, uninterrupted period rather than pumping or checking. Two minutes of steady, focused weight-bearing pressure controls more bleeding than ten minutes of light, distracted pressure.",
         "Some wounds won't respond to surface pressure because the bleeding vessel is deep and the wound tract doesn't allow force to reach it directly — this is common in junctional wounds, injuries at the 'junctions' where a limb meets the torso (groin, armpit, high on the thigh or neck) where a tourniquet can't be applied. For these, lay-rescuer training in the Stop the Bleed model teaches wound packing: firmly stuffing gauze (or the cleanest available cloth) directly into the wound cavity, packing layer over layer while holding pressure, so that pressure is applied at the source of bleeding rather than only at the skin surface. Packing is uncomfortable for the athlete and looks aggressive to bystanders — it's supposed to. Timid packing doesn't work.",
         "A pressure dressing — gauze held under tension with an elastic wrap, tight enough to maintain compression but not so tight it cuts off circulation to the rest of the limb — lets you maintain focused pressure hands-free once bleeding is controlled, which matters when you need to call 911 or manage other injuries."
-      ]
+      ],
+      "image": {
+        "asset": "wound-care-junctional-wound-packing.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Cross-section illustration of a deep junctional wound (at the groin/thigh junction) with gloved hands packing gauze firmly layer by layer into the wound cavity while maintaining downward pressure, with a small inset labeling 'junctional area — limb meets torso, tourniquet cannot be applied here.' Clean instructional-illustration style, non-graphic.",
+        "alt": "Diagram of wound packing technique for a deep junctional wound, showing gauze packed layer by layer into the wound cavity with sustained pressure.",
+        "location": "public/images/units/wound-care/"
+      }
     },
     {
       "heading": "Tourniquets: lay-rescuer scope",
