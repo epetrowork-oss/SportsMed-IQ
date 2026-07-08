@@ -12,7 +12,15 @@
       "body": [
         "You already know a fracture is a break in a bone. To reason about fractures the way an athletic trainer does, start with what kind of bone actually broke. Cortical bone is the dense, compact outer shell of a bone shaft — stiff, strong, and slow to remodel. Cancellous bone (also called trabecular or spongy bone) is the honeycomb-like tissue inside the ends of long bones and inside vertebrae — more elastic, more blood supply, and it heals faster. A shaft fracture through dense cortical bone and a compression fracture through cancellous bone at a joint end behave differently and heal on different timelines, which is part of why physicians image and classify fractures instead of treating 'a broken bone' as one category.",
         "The pattern a fracture takes on an X-ray is a readable record of the force that caused it. A transverse fracture — a clean break straight across the bone — comes from a direct, perpendicular blow. An oblique fracture, angled across the bone, comes from a diagonal or bending force. A spiral fracture wraps around the shaft in a corkscrew pattern and implies rotational (twisting) force — think of a planted foot with the body rotating over it, a classic skiing or football mechanism. A comminuted fracture shatters into three or more pieces, usually from high-energy trauma like a direct helmet-to-helmet hit or a car crash. Two patterns are specific to younger, more pliable bone: a greenstick fracture bends and cracks on one side without breaking all the way through (like snapping a green tree branch), and a buckle (torus) fracture compresses and bulges the bone's surface without a clean break line at all. Both reflect that immature bone has more plasticity than adult bone, which is why they show up almost exclusively in younger athletes with growing skeletons."
-      ]
+      ],
+      "image": {
+        "asset": "fractures-dislocations-pattern-classification.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Six-panel diagram of fracture patterns on a long bone shaft, each panel showing the same bone segment with a different break line: 1) Transverse — a straight break perpendicular to the shaft. 2) Oblique — a diagonal break line. 3) Spiral — a corkscrew break wrapping around the shaft. 4) Comminuted — three or more bone fragments. 5) Greenstick — a partial break with bending on one side, unbroken cortex on the other (pediatric bone). 6) Buckle (torus) — a compressed bulge in the bone surface with no clean break line (pediatric bone). Label each panel with its name and a one-word mechanism cue (direct blow, bending, twisting, high-energy, pediatric bending, pediatric compression). Clean medical-illustration style.",
+        "alt": "Six-panel classification diagram of fracture patterns: transverse, oblique, spiral, comminuted, greenstick, and buckle.",
+        "location": "public/images/units/fractures-dislocations/"
+      }
     },
     {
       "heading": "Stress fractures and growth-plate injuries: two exceptions worth flagging",
@@ -88,7 +96,15 @@
         "Patellar dislocation (kneecap slides out, usually to the outside of the knee) versus true knee (tibiofemoral) dislocation are very different emergencies that can look similar to a panicked bystander. A patellar dislocation is painful and dramatic but rarely limb-threatening. A true knee dislocation — the shin bone and thigh bone separating at the knee joint itself — is a vascular emergency: the popliteal artery runs directly behind the knee and can be stretched, kinked, or torn even in dislocations that partially reduce on their own before you arrive. Any suspected knee dislocation (not kneecap) gets emergent CSM checks and immediate EMS activation regardless of how much deformity remains visible.",
         "Finger dislocations are common and often reduced in urgent care rather than by an on-field physician, but the rule is sequence, not skip: splint as found, get it evaluated and imaged, and only after a physician confirms no fracture and performs or clears the reduction does buddy-taping to an adjacent finger become appropriate for return to activity. Buddy-taping an unevaluated jammed finger skips the step that catches the associated fractures physicians see routinely with this injury.",
         "Posterior hip dislocation, seen in high-energy mechanisms (a knee-to-dashboard-style force, or a football pileup driving a flexed hip backward), has a recognizable position: the hip held flexed, adducted (pulled toward the midline), and internally rotated ('toe pointing in'), with the leg looking shorter than the other side. This is a load-and-go emergency — the femoral head's blood supply is at direct risk the longer it stays out of the socket — recognize the position, do not attempt any movement of the leg, and activate EMS immediately."
-      ]
+      ],
+      "image": {
+        "asset": "fractures-dislocations-patellar-vs-knee-dislocation.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-panel comparison at the knee. Left panel 'Patellar dislocation': the kneecap displaced to the outside of the knee, femur and tibia still aligned, labeled 'painful and dramatic, rarely limb-threatening.' Right panel 'True knee (tibiofemoral) dislocation': the tibia and femur separated at the joint itself, with the popliteal artery highlighted running directly behind the joint and shown compressed/kinked, labeled 'vascular emergency — immediate EMS.' Clean medical-illustration style, non-graphic.",
+        "alt": "Comparison diagram of a patellar (kneecap) dislocation versus a true tibiofemoral knee dislocation, highlighting the popliteal artery's vascular risk in the latter.",
+        "location": "public/images/units/fractures-dislocations/"
+      }
     }
   ],
   "quiz": [
