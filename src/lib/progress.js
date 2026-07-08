@@ -22,10 +22,17 @@ function load() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     const parsed = raw ? JSON.parse(raw) : {}
-    return { name: parsed.name ?? '', units: parsed.units ?? {} }
+    return {
+      name: parsed.name ?? '',
+      units: parsed.units ?? {},
+      // Teacher-issued class codes imported on this device. Deliberately NOT
+      // part of the student progress-code export (share.js) — assignments
+      // don't follow a student between devices, only their unit progress does.
+      assignments: Array.isArray(parsed.assignments) ? parsed.assignments : [],
+    }
   } catch {
     // Corrupt or unavailable storage: start fresh rather than crash.
-    return { name: '', units: {} }
+    return { name: '', units: {}, assignments: [] }
   }
 }
 
@@ -112,7 +119,29 @@ export function mergeProgress(name, importedUnits) {
       scrollPct: Math.max(cur.scrollPct ?? 0, imp.scrollPct ?? 0),
     }
   }
-  save({ name: state.name || name, units: merged })
+  save({ ...state, name: state.name || name, units: merged })
+}
+
+// --- assignments (teacher-issued class codes, imported on this device) ---
+
+// Upsert keyed by case-insensitive trimmed name: re-importing the same name
+// replaces the existing entry in place (array order preserved) rather than
+// adding a duplicate.
+export function importAssignment(assignment) {
+  const key = assignment.name.trim().toLowerCase()
+  const existingIndex = state.assignments.findIndex((a) => a.name.trim().toLowerCase() === key)
+  const assignments = [...state.assignments]
+  if (existingIndex >= 0) {
+    assignments[existingIndex] = assignment
+  } else {
+    assignments.push(assignment)
+  }
+  save({ ...state, assignments })
+}
+
+export function removeAssignment(name) {
+  const key = name.trim().toLowerCase()
+  save({ ...state, assignments: state.assignments.filter((a) => a.name.trim().toLowerCase() !== key) })
 }
 
 // --- reads ---
@@ -137,4 +166,8 @@ function subscribe(fn) {
 
 export function useProgress() {
   return useSyncExternalStore(subscribe, () => state)
+}
+
+export function useAssignments() {
+  return useSyncExternalStore(subscribe, () => state.assignments)
 }

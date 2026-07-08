@@ -12,13 +12,17 @@
 const PREFIX_V2 = 'SMIQ2.'
 const PREFIX_V1 = 'SMIQ1.'
 
-function toBase64Url(bytes) {
+// The base64url + deflate-raw helpers below are exported so
+// src/lib/assignments.js (SMIQA1 class codes) can reuse the exact same
+// compression plumbing instead of duplicating it.
+
+export function toBase64Url(bytes) {
   let binary = ''
   bytes.forEach((b) => (binary += String.fromCharCode(b)))
   return btoa(binary).replaceAll('+', '-').replaceAll('/', '_').replace(/=+$/, '')
 }
 
-function fromBase64UrlBytes(b64) {
+export function fromBase64UrlBytes(b64) {
   const padded = b64.replaceAll('-', '+').replaceAll('_', '/')
   const binary = atob(padded + '='.repeat((4 - (padded.length % 4)) % 4))
   return Uint8Array.from(binary, (c) => c.charCodeAt(0))
@@ -28,12 +32,12 @@ function fromBase64Url(b64) {
   return new TextDecoder().decode(fromBase64UrlBytes(b64))
 }
 
-async function deflate(bytes) {
+export async function deflate(bytes) {
   const stream = new Blob([bytes]).stream().pipeThrough(new CompressionStream('deflate-raw'))
   return new Uint8Array(await new Response(stream).arrayBuffer())
 }
 
-async function inflate(bytes) {
+export async function inflate(bytes) {
   const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream('deflate-raw'))
   return new Uint8Array(await new Response(stream).arrayBuffer())
 }
@@ -74,6 +78,10 @@ export async function decodeProgressCode(code) {
     } catch {
       throw new Error('Code is damaged or incomplete — copy the whole code and try again.')
     }
+  } else if (trimmed.startsWith('SMIQA1.')) {
+    throw new Error(
+      'That looks like a class code, not a progress code — paste it in the "Class code" box instead.'
+    )
   } else {
     throw new Error('That does not look like a SportMedIQ code (should start with SMIQ1 or SMIQ2).')
   }

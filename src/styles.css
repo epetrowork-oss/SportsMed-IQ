@@ -504,6 +504,12 @@ h3 {
   color: #fff;
 }
 
+.button-danger {
+  background: var(--red-bg);
+  border-color: var(--red);
+  color: var(--red);
+}
+
 .unit-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1099,6 +1105,26 @@ h3 {
 .import-error {
   color: var(--red);
   font-weight: 600;
+}
+
+.assignment-list {
+  margin-top: 1.25rem;
+}
+
+.assignment-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.assignment-item-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
 }
 
 .add-student {
