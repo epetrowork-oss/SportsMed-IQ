@@ -320,7 +320,7 @@ and feeds this sprint.
 *Routing: orchestrator writes specs + the standards catalog; everything
 else is `implementer` (Sonnet).*
 
-- [ ] **True landing page + Library split** (`implementer`): `/` becomes a
+- [x] **True landing page + Library split** (`implementer`): `/` becomes a
       welcoming home — app identity, hero image slot (reuse the existing
       `home-hero` placeholder), prominent Continue card, "jump back in /
       start here" CTA, small how-it-works strip (student: read → quiz →
@@ -329,20 +329,22 @@ else is `implementer` (Sonnet).*
       ("Library" nav tab). Nav order: Home · Library · Sync · Teacher.
       All existing deep links (`/unit/:id` etc.) unchanged. 404 for
       stale routes still works. Verify at 375/768/desktop.
-- [ ] **Standards schema + display** (`implementer`): `standards: [id]`
+- [x] **Standards schema + display** (`implementer`): `standards: [id]`
       optional per unit; `src/content/standards.json` catalog
       (id → framework, code, text, verified flag); validator errors on
       unknown ids, warns on units with none; Unit page shows an
       expandable "Standards alignment" line; teacher CSV gains a
       standards column. No per-card badges yet (visual pass is Friday).
-- [ ] **Standards catalog drafted** (orchestrator — accuracy judgment):
+- [x] **Standards catalog drafted** (orchestrator — accuracy judgment):
       CTE HSMT anchor + Patient Care B standards relevant to our 18
       strands, CA Health Ed 7-8 Injury Prevention codes. Marked
       unverified; hand the user a verification checklist.
-- [ ] **Standards backfill kicked off** (Sonnet agents, batched by band,
-      3 batches of 18): tag all 54 units; each batch runs
-      `validate:content` before reporting. Orchestrator reviews mapping
-      judgment, not each line.
+- [x] **Standards backfill DONE** (3 parallel Sonnet agents, one per
+      band): all 54 units tagged 2-4 ids each, validator green with zero
+      warnings, zero band mismatches. Mapping rationales reviewed per
+      batch. NOTE for the user: `docs/STANDARDS-VERIFICATION.md` is the
+      10-20 min human pass to confirm codes against the official CDE
+      docs and flip `verified` flags.
 
 ### Day 2 — Thu Jul 9: assignments end-to-end (the big feature)
 
