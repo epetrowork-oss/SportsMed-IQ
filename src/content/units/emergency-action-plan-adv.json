@@ -32,7 +32,15 @@
         "Once an emergency starts, a group of otherwise capable people can freeze or duplicate effort unless someone assigns roles out loud, fast: a scene leader (directs the response and makes the call on next steps), a 911 caller, an AED retriever, a gate/traffic person (unlocks the access route and flags down EMS so they don't have to guess which building), someone managing the crowd and teammates so the scene stays clear, and a documenter who tracks times — when the athlete collapsed, when CPR started, when the AED was applied, how many shocks were delivered.",
         "The single biggest failure mode in group response isn't lack of knowledge — it's diffusion of responsibility, where everyone assumes someone else already called 911 because no one was told directly. Closed-loop communication fixes this: give an instruction to a specific person, by description or name ('You, in the blue shirt — call 911 and come back and tell me what they said'), and require them to confirm back. A vague shout to the crowd ('somebody call 911!') reliably produces a room where nobody does, because everyone assumes it's covered.",
         "When EMS arrives, whoever has been running the scene needs to hand off cleanly in the first 30 seconds: what happened and when (mechanism, time of collapse), what's been done so far (CPR start time, number of AED shocks, any medications given), and the athlete's current status. EMS is walking into a scene cold — a clear, front-loaded handoff saves them the minutes it would take to reconstruct the last several minutes themselves."
-      ]
+      ],
+      "image": {
+        "asset": "eap-team-role-assignment.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Overhead diagram of a field emergency scene with a collapsed athlete at center, surrounded by labeled role icons connected by dotted lines radiating outward: 'Scene leader' (directing), '911 caller' (on phone, confirming back), 'AED retriever' (running toward a wall-mounted AED icon), 'Gate/traffic person' (unlocking a gate and flagging an ambulance icon), 'Crowd control' (keeping teammates back), 'Documenter' (writing on a clipboard, noting times). Clean flat instructional-illustration style, non-graphic.",
+        "alt": "Diagram of six assigned emergency-response roles positioned around a collapsed athlete: scene leader, 911 caller, AED retriever, gate/traffic person, crowd control, and documenter.",
+        "location": "public/images/units/emergency-action-plan/"
+      }
     },
     {
       "heading": "Why a young athlete's heart stops",
@@ -40,7 +48,15 @@
         "Sudden cardiac arrest (SCA) in young athletes has two broad categories of cause. Structural causes are physical abnormalities of the heart itself — hypertrophic cardiomyopathy (an abnormally thickened heart muscle) and anomalous coronary arteries (a blood vessel to the heart that runs an abnormal, easily compressed path) are the most common examples. Electrical causes are rhythm disorders in an otherwise normal-looking heart — conditions like long QT syndrome or Wolff-Parkinson-White syndrome disrupt the heart's electrical signaling and can trigger a lethal rhythm during exertion.",
         "A third mechanism doesn't require any underlying heart condition at all: commotio cordis is sudden cardiac arrest caused by a blunt, relatively low-energy blow to the chest — a pitched ball, a hockey puck, a shoulder — that happens to land during a roughly 10-30 millisecond vulnerable window in the heart's electrical cycle, triggering a chaotic rhythm (ventricular fibrillation) in a structurally healthy heart. It's why a seemingly minor chest impact in baseball, lacrosse, or hockey can be catastrophic, and why any athlete who collapses immediately after a chest impact and stops responding needs the same CPR/AED response as any other cardiac arrest — there's no time to sort out the cause first.",
         "This is why the resuscitation chain's time math matters as much as the diagnosis. Without any bystander action, survival from sudden cardiac arrest falls by roughly 7-10% for every minute that passes without defibrillation. High-quality bystander CPR doesn't replace defibrillation, but it slows that decline substantially by keeping oxygenated blood moving to the brain and heart until a shock can be delivered — which is the entire justification for starting compressions immediately instead of waiting for the AED or EMS to arrive."
-      ]
+      ],
+      "image": {
+        "asset": "eap-sca-cause-comparison.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Three-column comparison chart of sudden cardiac arrest causes in young athletes. Column 1 'Structural': a simplified heart icon with a thickened wall region highlighted (hypertrophic cardiomyopathy) and a compressed vessel path (anomalous coronary artery). Column 2 'Electrical': a heart icon with an erratic ECG waveform overlay, labeled 'long QT syndrome, Wolff-Parkinson-White.' Column 3 'Commotio cordis': a heart icon with a small chest-impact arrow timed to a highlighted narrow window on an ECG waveform, labeled '10-30 ms vulnerable window, structurally normal heart.' Footer note: 'All three require the same immediate CPR/AED response.' Clean medical-illustration style, non-graphic.",
+        "alt": "Comparison chart of three causes of sudden cardiac arrest in young athletes: structural heart abnormalities, electrical rhythm disorders, and commotio cordis.",
+        "location": "public/images/units/emergency-action-plan/"
+      }
     },
     {
       "heading": "High-quality CPR and AED nuances",
