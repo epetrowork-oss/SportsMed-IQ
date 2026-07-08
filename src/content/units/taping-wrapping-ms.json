@@ -13,7 +13,15 @@
         "Walk into any locker room or sideline and you'll see athletic tape and stretchy wraps everywhere — on ankles, wrists, fingers, knees. They aren't there to look tough. Each one is doing a specific job.",
         "Tape is a stiff, sticky material that limits how far a joint (like an ankle) can move in one direction. A wrap is stretchy and squeezes evenly, kind of like a firm hug for a body part.",
         "This unit is about understanding what tape and wraps do and why. Actually applying tape the right way takes hands-on training from a coach or athletic trainer — that's a skill for later. Right now, your job is to know the purpose and the safety rules."
-      ]
+      ],
+      "image": {
+        "asset": "taping-wrapping-tape-vs-wrap.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-by-side illustration comparing a roll of stiff, sticky athletic tape applied firmly around an ankle to a stretchy elastic wrap coiled and wrapped snugly around a forearm, showing the different textures and uses. Clean, simple illustration style for middle schoolers, minimal labels.",
+        "alt": "Comparison drawing of stiff athletic tape on an ankle next to a stretchy elastic wrap on a forearm.",
+        "location": "public/images/units/taping-wrapping/"
+      }
     },
     {
       "heading": "Three jobs tape and wraps do",
@@ -24,7 +32,15 @@
         "Support — keeps a joint from bending too far in the direction that already got hurt, like taping an ankle so it can't roll inward again.",
         "Compression — squeezes a swollen area evenly, which helps hold down swelling and can keep an ice pack in place.",
         "Protection — cushions or covers a sore or healing spot so it doesn't get bumped or rubbed during practice."
-      ]
+      ],
+      "image": {
+        "asset": "taping-wrapping-three-jobs.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Three small side-by-side illustrations in one image: a taped ankle with an arrow showing it can't roll inward (support), a wrapped, slightly swollen knee with an ice pack held in place (compression), and a padded, taped elbow (protection). Clean, simple illustration style for middle schoolers, one short label under each.",
+        "alt": "Three-panel illustration showing tape supporting an ankle, a wrap compressing a knee with an ice pack, and tape protecting an elbow.",
+        "location": "public/images/units/taping-wrapping/"
+      }
     },
     {
       "heading": "Taping is an adult's job — not yours yet",
@@ -43,6 +59,14 @@
         "type": "warning",
         "title": "Tell an adult immediately if...",
         "text": "Your fingers or toes go numb, tingle, or change color after tape or a wrap is applied. Don't wait to see if it goes away on its own — tell your coach or athletic trainer right away so they can loosen it."
+      },
+      "image": {
+        "asset": "taping-wrapping-too-tight-warning.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-by-side illustration comparing a normal, healthy-colored set of toes below an ankle wrap to a set of toes that look pale or bluish below a too-tight wrap, marked with a warning-colored outline. Clean, non-graphic illustration style for middle schoolers.",
+        "alt": "Comparison drawing of normal toes below a wrap next to pale, unusually colored toes warning that a wrap is too tight.",
+        "location": "public/images/units/taping-wrapping/"
       }
     },
     {
@@ -55,6 +79,14 @@
         "type": "warning",
         "title": "Never use tape to hide an injury",
         "text": "If you're hurt, say so — even if you're worried about being pulled from a game or practice. A trained adult needs to check an injury before any tape or wrap goes on."
+      },
+      "image": {
+        "asset": "taping-wrapping-dont-hide-pain.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Illustration of an athletic trainer taping an athlete's ankle while the athlete winces slightly in pain but stays quiet, with a small thought bubble showing the athlete wanting to keep playing. A gentle visual reminder to speak up rather than mask pain. Clean, simple illustration style for middle schoolers.",
+        "alt": "Illustration of an athlete wincing while getting taped, showing why hiding pain from an adult is not okay.",
+        "location": "public/images/units/taping-wrapping/"
       }
     }
   ],

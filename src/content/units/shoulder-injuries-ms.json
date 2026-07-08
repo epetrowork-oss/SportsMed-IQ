@@ -22,7 +22,15 @@
       "list": [
         "A fall or hit — landing hard on an arm or shoulder, getting tackled, or crashing during a bike ride or on the field can jar or injure the shoulder.",
         "Overuse — throwing, serving, or swimming with the same arm motion thousands of times can make the shoulder sore and achy over weeks, even without a single fall or hit."
-      ]
+      ],
+      "image": {
+        "asset": "shoulder-injuries-two-causes.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Split-scene illustration: on the left, an athlete lands hard on an outstretched arm during a fall; on the right, a different athlete throws a ball overhead in a repeated motion, shown a few times faded behind them to suggest doing it over and over. Clean, simple illustration style for middle schoolers, no gore.",
+        "alt": "Split illustration showing a fall onto an outstretched arm next to an athlete repeating an overhead throwing motion.",
+        "location": "public/images/units/shoulder-injuries/"
+      }
     },
     {
       "heading": "Signs something's wrong",
@@ -35,7 +43,15 @@
         "The athlete can't move the arm normally, or refuses to move it at all",
         "Pain is severe, not just a little sore",
         "Numbness or tingling in the arm or hand"
-      ]
+      ],
+      "image": {
+        "asset": "shoulder-injuries-warning-signs.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Illustration of an athlete holding their injured arm close against their body with the other hand, shoulder looking a slightly different shape than the uninjured side, pained expression. Clean, simple illustration style for middle schoolers, no gore.",
+        "alt": "Illustration of an athlete holding an injured arm against their body, supporting it with the other hand.",
+        "location": "public/images/units/shoulder-injuries/"
+      }
     },
     {
       "heading": "What to do right away",
@@ -52,6 +68,14 @@
         "type": "warning",
         "title": "Never try to put a shoulder 'back in place'",
         "text": "Sometimes a teammate or coach might say they can pop a shoulder back into place. Never let anyone try this, and never try it yourself. Moving an injured shoulder the wrong way can cause serious damage. Support the arm as it is, and get an adult right away."
+      },
+      "image": {
+        "asset": "shoulder-injuries-support-the-arm.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Illustration of a coach or athletic trainer kneeling next to a seated athlete, gently supporting the athlete's injured arm in the position it's already in without moving it, while the athlete stays still. Clean, friendly illustration style, no text in the image.",
+        "alt": "Illustration of an adult gently supporting an athlete's injured arm in place without moving it.",
+        "location": "public/images/units/shoulder-injuries/"
       }
     },
     {
@@ -64,6 +88,14 @@
         "type": "tip",
         "title": "Don't push through shoulder pain",
         "text": "If your shoulder aches during or after overhead activity like throwing, serving, or swimming, tell a coach or trusted adult instead of playing through it. Pain that keeps coming back is your body's way of asking for a break and a check-up."
+      },
+      "image": {
+        "asset": "shoulder-injuries-overhead-ache.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Illustration of a swimmer or pitcher reaching overhead with a wincing expression and a small highlighted ache mark on the shoulder, showing discomfort during a repeated overhead motion rather than a sudden fall. Clean, simple illustration style for middle schoolers.",
+        "alt": "Illustration of an athlete wincing while reaching overhead, showing shoulder pain that builds up from overuse.",
+        "location": "public/images/units/shoulder-injuries/"
       }
     },
     {

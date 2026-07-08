@@ -26,7 +26,15 @@
         "A minor scrape or cut is small, close to the surface of the skin, and only oozes a little blood. Think of a scraped knee from falling on the track, or a small cut from a fingernail.",
         "Anything bigger than that is not something to handle yourself. That includes a deep cut, a wound that is bleeding a lot, or a cut with something stuck in it, like a splinter or a piece of glass.",
         "When you're not sure if a wound is minor, treat it like it isn't. Get an adult to look at it."
-      ]
+      ],
+      "image": {
+        "asset": "wound-care-minor-vs-serious.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-by-side illustration comparing a small, shallow scraped knee with light oozing to a deeper cut on a forearm with a warning-colored outline around it, showing the difference between a wound you can handle yourself and one that needs an adult. Clean, non-graphic illustration style for middle schoolers.",
+        "alt": "Comparison drawing of a minor scraped knee next to a deeper cut marked as needing an adult's attention.",
+        "location": "public/images/units/wound-care/"
+      }
     },
     {
       "heading": "Caring for your own minor scrape",
@@ -36,7 +44,15 @@
         "Rinse the scrape gently with clean water to wash away dirt.",
         "Cover it with a bandage.",
         "Tell an adult about it, even if it seems small — they can check it and help if it needs more care."
-      ]
+      ],
+      "image": {
+        "asset": "wound-care-self-care-steps.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Four small step illustrations in one image: hands being washed at a sink, a clean cloth pressed on a scraped knee, the knee being rinsed with water from a bottle, and the knee covered with a bandage. Clean, simple illustration style for middle schoolers, no gore.",
+        "alt": "Four-step illustration showing washing hands, pressing a cloth on a scrape, rinsing it, and covering it with a bandage.",
+        "location": "public/images/units/wound-care/"
+      }
     },
     {
       "heading": "Get an adult right away",
@@ -55,7 +71,15 @@
         "Keep the bandage clean and dry, and change it if it gets wet or dirty.",
         "Check it each day. If the skin around it turns more red, feels warm, swells up, or has pus, that's a sign of infection — germs growing in the wound. Tell an adult right away so a doctor can check it.",
         "A fever along with a healing scrape is also a reason to tell an adult right away."
-      ]
+      ],
+      "image": {
+        "asset": "wound-care-infection-signs.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-by-side illustration comparing a healing scrape with a fresh bandage and normal-colored skin around it to a scrape with a bandage removed showing red, swollen skin around the edges, marked with a warning-colored outline. Clean, non-graphic illustration style for middle schoolers.",
+        "alt": "Comparison drawing of a normally healing bandaged scrape next to one with red, swollen skin showing signs of infection.",
+        "location": "public/images/units/wound-care/"
+      }
     },
     {
       "heading": "Nosebleeds",
@@ -63,7 +87,15 @@
         "Sit up and lean slightly forward — don't tilt your head back, because that lets blood run down your throat.",
         "Pinch the soft part of your nose and hold it for a full 10 minutes without letting go to check.",
         "If it doesn't stop after 10 minutes, or it happened after a hit to the head, tell an adult right away."
-      ]
+      ],
+      "image": {
+        "asset": "wound-care-nosebleed-position.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Illustration of a student sitting upright and leaning slightly forward, pinching the soft part of their nose with a tissue, clearly not tilting their head back. Clean, simple illustration style for middle schoolers, no gore.",
+        "alt": "Illustration of a student sitting up and leaning slightly forward while pinching their nose for a nosebleed.",
+        "location": "public/images/units/wound-care/"
+      }
     }
   ],
   "quiz": [
