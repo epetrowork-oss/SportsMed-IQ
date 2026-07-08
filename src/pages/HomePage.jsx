@@ -1,34 +1,9 @@
-import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getAllUnits, getUnitsByCategory } from '../content/index.js'
-import { useProgress, getUnitProgress, isUnitComplete } from '../lib/progress.js'
+import { getAllUnits } from '../content/index.js'
+import { useProgress, getUnitProgress } from '../lib/progress.js'
 import { isComplete } from '../lib/status.js'
 import StatusIcon from '../components/StatusIcon.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
-
-// Shared with scripts/list-image-slots.mjs, which reconstructs these same
-// slots from the content JSON to build the image author's shot list.
-function slugify(s) {
-  return s
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '')
-}
-
-const GRADE_BAND_KEY = 'sportmediq:gradeBand'
-const GRADE_BANDS = [
-  { id: 'all', label: 'All grades' },
-  { id: '7-8', label: '7th–8th' },
-  { id: '9-10', label: '9th–10th' },
-  { id: '11-12', label: '11th–12th' },
-]
-
-function GradeBandLabel({ gradeBand }) {
-  const band = GRADE_BANDS.find((b) => b.id === gradeBand)
-  if (!band) return null
-  return <span className="pill pill-grade">{band.label} grade</span>
-}
 
 // "started" = touched in some way but not (yet) complete. Same rule used by
 // StatusIcon/status.js's statusInfo().
@@ -42,6 +17,13 @@ function progressSummary(p) {
   parts.push(p.quizAttempts > 0 ? `quiz ${Math.round((p.bestQuizScore ?? 0) * 100)}%` : 'quiz pending')
   parts.push(p.flashcardsReviewed ? 'cards done' : 'cards pending')
   return parts.join(' · ')
+}
+
+const GRADE_BANDS = {
+  'all': 'All grades',
+  '7-8': '7th–8th grade',
+  '9-10': '9th–10th grade',
+  '11-12': '11th–12th grade',
 }
 
 // Most recently touched unit that's been started but isn't complete yet.
@@ -62,12 +44,13 @@ function findContinueUnit() {
 
 function ContinueCard({ unit }) {
   const p = getUnitProgress(unit.id)
+  const gradeLabel = GRADE_BANDS[unit.gradeBand]
   return (
     <Link to={`/unit/${unit.id}`} className="continue-card">
       <span className="continue-kicker">Continue where you left off</span>
       <h2 className="continue-title">{unit.title}</h2>
       <div className="continue-meta">
-        <GradeBandLabel gradeBand={unit.gradeBand} />
+        {gradeLabel && <span className="pill pill-grade">{gradeLabel}</span>}
         <StatusIcon progress={p} />
       </div>
       <p className="continue-summary">{progressSummary(p)}</p>
@@ -75,98 +58,23 @@ function ContinueCard({ unit }) {
   )
 }
 
-function unitMatchesSearch(unit, term) {
-  if (!term) return true
-  const haystack = [unit.title, unit.summary, unit.category, unit.strand]
-    .filter(Boolean)
-    .join(' ')
-    .toLowerCase()
-  return haystack.includes(term)
-}
-
-function UnitCard({ unit, showGradeBand }) {
-  const p = getUnitProgress(unit.id)
-  const complete = isUnitComplete(unit.id)
-  const strand = unit.strand ?? unit.id
-
+function StartCard() {
   return (
-    <Link to={`/unit/${unit.id}`} className="unit-card">
-      <div className="unit-card-thumb">
-        <ImagePlaceholder
-          asset={`unit-${strand}-hero.webp`}
-          purpose="unit card thumbnail"
-          ratio="3:2"
-          background="white"
-          description={`Illustrative thumbnail for ${unit.title}: ${unit.summary}`}
-          location={`public/images/units/${strand}/`}
-          alt={`Thumbnail illustration for ${unit.title}`}
-        />
-      </div>
-      <div className="unit-card-top">
-        <h3>{unit.title}</h3>
-        {complete ? (
-          <span className="pill pill-done">
-            <span aria-hidden="true">✓</span> Complete
-          </span>
-        ) : p.lessonRead || p.quizAttempts > 0 || p.flashcardsReviewed ? (
-          <span className="pill pill-progress">
-            <span aria-hidden="true">●</span> In progress
-          </span>
-        ) : null}
-      </div>
-      <p className="unit-summary">{unit.summary}</p>
-      <div className="unit-meta">
-        <span>{unit.minutes ? `~${unit.minutes} min` : ''}</span>
-        <span>
-          {unit.quiz.length} quiz questions · {unit.flashcards.length} flashcards
-        </span>
-      </div>
-      {showGradeBand && <GradeBandLabel gradeBand={unit.gradeBand} />}
+    <Link to="/lessons" className="continue-card">
+      <span className="continue-kicker">Get started</span>
+      <h2 className="continue-title">Start your first lesson</h2>
+      <p className="continue-summary">Browse the library to pick a topic and dive in.</p>
     </Link>
   )
 }
 
 export default function HomePage() {
   useProgress() // re-render when progress changes
-  const [gradeBand, setGradeBand] = useState(() => {
-    try {
-      return localStorage.getItem(GRADE_BAND_KEY) || 'all'
-    } catch {
-      return 'all'
-    }
-  })
-  const [search, setSearch] = useState('')
-
-  useEffect(() => {
-    try {
-      localStorage.setItem(GRADE_BAND_KEY, gradeBand)
-    } catch {
-      // Storage full or blocked — filter still works for this session.
-    }
-  }, [gradeBand])
-
   const continueUnit = findContinueUnit()
-  const searchTerm = search.trim().toLowerCase()
-  const totalUnits = getAllUnits().length
-
-  const groups = getUnitsByCategory()
-    .map(({ category, units }) => ({
-      category,
-      units: units.filter(
-        (u) => (gradeBand === 'all' || u.gradeBand === gradeBand) && unitMatchesSearch(u, searchTerm)
-      ),
-    }))
-    .filter((g) => g.units.length > 0)
-
-  const matchedCount = groups.reduce((sum, g) => sum + g.units.length, 0)
 
   return (
     <div className="page">
       <section className="home-hero">
-        <div className="home-hero-text">
-          <h1>Welcome to SportMedIQ</h1>
-          <p className="home-hero-tagline">Learn sports medicine skills, one lesson at a time.</p>
-        </div>
         <div className="home-hero-image">
           <ImagePlaceholder
             asset="home-hero.webp"
@@ -178,72 +86,37 @@ export default function HomePage() {
             alt="A student athletic trainer taping an athlete's ankle on the sideline"
           />
         </div>
-        {continueUnit && <ContinueCard unit={continueUnit} />}
-      </section>
-      <div className="home-filters">
-        <div className="grade-band-picker" role="group" aria-label="Filter by grade">
-          {GRADE_BANDS.map((band) => (
-            <button
-              key={band.id}
-              className={gradeBand === band.id ? 'grade-band-button grade-band-button-active' : 'grade-band-button'}
-              onClick={() => setGradeBand(band.id)}
-              aria-pressed={gradeBand === band.id}
-            >
-              {band.label}
-            </button>
-          ))}
+        <div className="home-hero-text">
+          <h1>SportMedIQ</h1>
+          <p className="home-hero-tagline">
+            Learn sports medicine skills, one lesson at a time — read a lesson, quiz yourself, and
+            review flashcards, all saved right on your device.
+          </p>
         </div>
-        <div className="search-field">
-          <label htmlFor="unit-search" className="sr-only">
-            Search units
-          </label>
-          <input
-            id="unit-search"
-            type="search"
-            className="search-input"
-            placeholder="Search units…"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
+      </section>
+
+      {continueUnit ? <ContinueCard unit={continueUnit} /> : <StartCard />}
+
+      <Link to="/lessons" className="button button-primary home-browse-button">
+        Browse the Library
+      </Link>
+
+      <div className="how-it-works">
+        <div className="how-it-works-card">
+          <h3>For students</h3>
+          <p>
+            Read the lesson, take the quiz, and review the flashcards. When you're ready to hand in
+            proof of progress, share your progress code from <Link to="/sync">Sync</Link>.
+          </p>
+        </div>
+        <div className="how-it-works-card">
+          <h3>For teachers</h3>
+          <p>
+            Add student codes on the <Link to="/teacher">Teacher</Link> tab to see a class view of
+            who's finished what.
+          </p>
         </div>
       </div>
-      {searchTerm && matchedCount > 0 && (
-        <p className="search-count">
-          {matchedCount} of {totalUnits} units
-        </p>
-      )}
-      {groups.length === 0 && (
-        <p className="empty-note">
-          {searchTerm
-            ? <>No units match &ldquo;{search.trim()}&rdquo;.</>
-            : gradeBand === 'all'
-            ? <>No units yet. Add a JSON file to <code>src/content/units/</code> to create one.</>
-            : `No units yet for ${GRADE_BANDS.find((b) => b.id === gradeBand)?.label} grade.`}
-        </p>
-      )}
-      {groups.map(({ category, units }) => (
-        <section key={category} className="category-group">
-          <div className="category-heading">
-            <div className="category-icon-slot">
-              <ImagePlaceholder
-                asset={`category-${slugify(category)}.webp`}
-                purpose="category icon"
-                ratio="1:1"
-                background="transparent"
-                description={`Simple flat icon representing ${category}`}
-                location="public/images/categories/"
-                alt={`${category} icon`}
-              />
-            </div>
-            <h2>{category}</h2>
-          </div>
-          <div className="unit-grid">
-            {units.map((unit) => (
-              <UnitCard key={unit.id} unit={unit} showGradeBand={gradeBand === 'all'} />
-            ))}
-          </div>
-        </section>
-      ))}
     </div>
   )
 }

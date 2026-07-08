@@ -108,7 +108,7 @@ export default function UnitPage() {
   return (
     <div className="page page-narrow">
       <nav className="breadcrumb">
-        <Link to="/">Units</Link> / {unit.title}
+        <Link to="/lessons">Units</Link> / {unit.title}
       </nav>
       <h1>{unit.title}</h1>
       <p className="unit-summary">{unit.summary}</p>

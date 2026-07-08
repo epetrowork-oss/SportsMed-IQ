@@ -41,7 +41,7 @@ export default function FlashcardsPage() {
   return (
     <div className="page page-narrow">
       <nav className="breadcrumb">
-        <Link to="/">Units</Link> / <Link to={`/unit/${unit.id}`}>{unit.title}</Link> /
+        <Link to="/lessons">Units</Link> / <Link to={`/unit/${unit.id}`}>{unit.title}</Link> /
         Flashcards
       </nav>
       <p className="quiz-progress">
