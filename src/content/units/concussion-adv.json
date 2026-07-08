@@ -4,6 +4,7 @@
   "category": "Head & Spine Injuries",
   "strand": "concussion",
   "gradeBand": "11-12",
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.4.5", "CTE.HSMT.B.1.0"],
   "summary": "Go beyond recognize-and-remove: the neurometabolic cascade behind second impact syndrome, what a SCAT-style sideline evaluation actually screens for, differential red flags, and the return-to-play/return-to-learn science.",
   "minutes": 30,
   "sections": [

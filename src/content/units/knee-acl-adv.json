@@ -4,6 +4,7 @@
   "category": "Lower Extremity Injuries",
   "strand": "knee-acl",
   "gradeBand": "11-12",
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.4.5", "CTE.HSMT.B.1.0"],
   "summary": "The biomechanics behind the non-contact ACL tear, how to build a differential from mechanism and exam findings, and the evidence on surgery, rehab, and prevention.",
   "minutes": 25,
   "sections": [

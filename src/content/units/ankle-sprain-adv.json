@@ -4,6 +4,7 @@
   "category": "Lower Extremity Injuries",
   "strand": "ankle-sprain",
   "gradeBand": "11-12",
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.B.1.0"],
   "summary": "Go beyond ligament names and PRICE: mechanism-specific injury patterns, the high ankle sprain, evaluation reasoning, differential thinking, and the evidence behind modern rehab and prevention.",
   "minutes": 25,
   "sections": [

@@ -4,6 +4,7 @@
   "category": "Upper Extremity Injuries",
   "strand": "shoulder-injuries",
   "gradeBand": "11-12",
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.B.1.0"],
   "summary": "Go beyond dislocation vs. AC sprain vs. rotator cuff strain — instability classification, the throwing shoulder's specific pathologies, and the reasoning behind return-to-throw decisions.",
   "minutes": 24,
   "sections": [

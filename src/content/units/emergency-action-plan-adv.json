@@ -4,6 +4,7 @@
   "category": "Acute Care & First Aid",
   "strand": "emergency-action-plan",
   "gradeBand": "11-12",
+  "standards": ["CTE.HSMT.B.4.5", "CTE.HSMT.B.1.0", "CTE.HSMT.Anchor.6"],
   "summary": "For the student aide with a real role on the response team: how to audit an EAP instead of just reading it, run closed-loop team communication under stress, and reason through cardiac, spinal, heat, bleeding, and weather emergencies with legal and systems context.",
   "minutes": 24,
   "sections": [
