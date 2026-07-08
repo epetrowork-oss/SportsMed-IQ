@@ -116,11 +116,26 @@ export default function UnitPage() {
       <div className="unit-actions">
         <Link className="button" to={`/unit/${unit.id}/quiz`}>
           Take quiz
-          {p.bestQuizScore != null &&
-            ` · best ${Math.round(p.bestQuizScore * 100)}%${passed ? ' ✓' : ''}`}
+          {p.bestQuizScore != null && (
+            <>
+              {` · best ${Math.round(p.bestQuizScore * 100)}%`}
+              {passed && (
+                <span className="status-done" aria-hidden="true">
+                  {' '}
+                  ✓
+                </span>
+              )}
+            </>
+          )}
         </Link>
         <Link className="button" to={`/unit/${unit.id}/flashcards`}>
-          Flashcards{p.flashcardsReviewed ? ' ✓' : ''}
+          Flashcards
+          {p.flashcardsReviewed && (
+            <span className="status-done" aria-hidden="true">
+              {' '}
+              ✓
+            </span>
+          )}
         </Link>
       </div>
 

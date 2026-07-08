@@ -49,9 +49,13 @@ function UnitCard({ unit, showGradeBand }) {
       <div className="unit-card-top">
         <h3>{unit.title}</h3>
         {complete ? (
-          <span className="pill pill-done">Complete</span>
+          <span className="pill pill-done">
+            <span aria-hidden="true">✓</span> Complete
+          </span>
         ) : p.lessonRead || p.quizAttempts > 0 || p.flashcardsReviewed ? (
-          <span className="pill pill-progress">In progress</span>
+          <span className="pill pill-progress">
+            <span aria-hidden="true">●</span> In progress
+          </span>
         ) : null}
       </div>
       <p className="unit-summary">{unit.summary}</p>

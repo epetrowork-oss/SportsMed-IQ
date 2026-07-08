@@ -203,6 +203,9 @@ h2 {
 }
 
 .pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
   font-size: 0.72rem;
   font-weight: 700;
   padding: 0.15rem 0.55rem;
@@ -210,14 +213,17 @@ h2 {
   white-space: nowrap;
 }
 
+/* Same green/amber language as the teacher dashboard's .status-done /
+   .status-progress (see "Status dots/icons" below) — reuses the same
+   custom properties rather than duplicating colors. */
 .pill-done {
   background: var(--green-bg);
   color: var(--green);
 }
 
 .pill-progress {
-  background: var(--brand-light);
-  color: var(--brand);
+  background: var(--amber-bg);
+  color: var(--amber);
 }
 
 .pill-grade {
@@ -413,6 +419,10 @@ h2 {
 
 .quiz-score-pass {
   color: var(--green);
+}
+
+.quiz-score-progress {
+  color: var(--amber);
 }
 
 /* Flashcards */
