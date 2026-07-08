@@ -13,7 +13,15 @@
         "You already know that roughly 70% of ACL tears are non-contact. What's worth digging into is exactly what the joint is doing in the fraction of a second before it fails. Video and force-plate analysis of real injuries show a consistent pattern, sometimes called the 'position of no return': the knee is near full extension (usually less than 30° of flexion), it collapses inward relative to the foot (dynamic valgus), the tibia is often rotated, and the trunk leans or rotates toward the injured side, shifting the body's center of mass outside the base of support.",
         "This position doesn't happen during a straight vertical jump landing — it happens during deceleration: cutting, pivoting, and single-leg landings, where the athlete is rapidly slowing a moving body while the quadriceps fire hard to control the landing. Strong quad contraction with the knee nearly straight actually pulls the tibia forward against the ACL (anterior tibial shear), which is why deceleration and single-leg landing mechanics — not takeoff — dominate the injury data.",
         "Understanding this matters beyond trivia: it's exactly what neuromuscular training programs (covered later in this unit) are designed to retrain."
-      ]
+      ],
+      "image": {
+        "asset": "knee-acl-position-of-no-return.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Illustration of an athlete decelerating during a cutting maneuver, captured at the instant of ACL failure: knee near full extension, collapsing inward (dynamic valgus) relative to the planted foot, tibia shown rotated relative to the femur with a small rotation arrow, and the trunk leaning/rotating toward the injured side shifting the center of mass outside the base of support. Label each contributing factor with a leader line: 'near-full extension,' 'dynamic valgus,' 'tibial rotation,' 'trunk lean.' Clean biomechanical-illustration style, no opponent in frame to emphasize non-contact mechanism.",
+        "alt": "Diagram of the 'position of no return' biomechanics behind a non-contact ACL tear: knee near full extension, dynamic valgus collapse, tibial rotation, and trunk lean during deceleration.",
+        "location": "public/images/units/knee-acl/"
+      }
     },
     {
       "heading": "The female athlete disparity: evidence, not stereotype",
@@ -31,7 +39,15 @@
         "Meniscal tears have their own signature: joint line tenderness, catching or locking, and often that slower, gradual effusion pattern. The McMurray test concept combines rotation with valgus or varus stress while flexing and extending the knee, trying to mechanically trap a torn fragment and reproduce a click or pain.",
         "Two mechanisms are useful contrasts, not lookalikes: a PCL tear classically comes from a posterior-directed force on the front of a flexed knee (the 'dashboard' mechanism) and is assessed with a posterior sag sign rather than the Lachman. Collateral ligament injuries (MCL from valgus force, LCL from varus force) are tested with side-to-side stress at 0° and 30° of flexion.",
         "One important mimic: acute patellar dislocation can produce the same pop-giving way-rapid swelling story as an ACL tear, because the kneecap sliding out and back in also tears tissue and bleeds into the joint. Medial patellar tenderness, a history of the kneecap 'moving out of place,' and patellar apprehension on exam point toward the patella rather than the ACL — don't assume the classic story always means the ACL."
-      ]
+      ],
+      "image": {
+        "asset": "knee-acl-differential-comparison-chart.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Comparison table/chart with five columns, one per structure: 'ACL tear,' 'Meniscal tear,' 'PCL tear,' 'MCL/LCL sprain,' 'Patellar dislocation.' Each column lists its characteristic mechanism, effusion timing (rapid hemarthrosis vs. gradual), and one hallmark exam finding (Lachman-positive, joint line tenderness/locking, posterior sag, valgus/varus laxity, medial patellar tenderness/apprehension). Clean instructional-chart style, icon per column.",
+        "alt": "Comparison chart of five knee injuries — ACL tear, meniscal tear, PCL tear, MCL/LCL sprain, and patellar dislocation — by mechanism, swelling timing, and hallmark exam finding.",
+        "location": "public/images/units/knee-acl/"
+      }
     },
     {
       "heading": "Recognizing the true emergencies",

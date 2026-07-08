@@ -13,7 +13,15 @@
         "You already know carbohydrate and fat both fuel exercise. Here's the part that matters for training and race planning: the mix between them shifts with intensity, a pattern exercise physiologists call the crossover concept. At low intensity (an easy jog, warm-up pace), fat oxidation supplies most of the energy. As intensity climbs, the body relies increasingly on carbohydrate, because carbohydrate metabolism can generate ATP (the cell's usable energy currency) fast enough to match a harder work rate — fat oxidation is comparatively slow and simply can't keep pace once effort gets hard enough. Past that crossover point, carbohydrate becomes the dominant fuel even though fat is never used at zero.",
         "Carbohydrate isn't unlimited, though. It's stored as glycogen — roughly 80-100g in the liver and 300-500g in muscle, depending on training status and body size — and that's a finite tank. \"Hitting the wall\" or \"bonking\" is what happens when glycogen runs critically low during prolonged exercise: pace collapses because fat oxidation alone can't sustain the intensity the athlete was holding, no matter how much willpower is left.",
         "This is why daily carbohydrate needs aren't one fixed number for every athlete — they scale with training volume and intensity. A two-a-day preseason week burns through glycogen faster and more completely than a light in-season maintenance week, so carbohydrate intake should flex with the work being done, not stay locked at whatever a generic chart says."
-      ]
+      ],
+      "image": {
+        "asset": "hydration-nutrition-fuel-crossover-graph.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Line graph with 'exercise intensity' on the x-axis (low to high) and 'percentage of energy contribution' on the y-axis. Two crossing lines: a downward-sloping line labeled 'Fat oxidation' starting high at low intensity and declining, and an upward-sloping line labeled 'Carbohydrate oxidation' starting low and rising, crossing at a marked 'crossover point' partway up the intensity axis. Add a small annotation at the far right: 'glycogen depletion here = bonking.' Clean scientific-diagram style, labeled axes.",
+        "alt": "Graph showing the crossover concept: fat oxidation dominates at low exercise intensity while carbohydrate oxidation becomes dominant past a crossover point as intensity increases.",
+        "location": "public/images/units/hydration-nutrition/"
+      }
     },
     {
       "heading": "Protein: synthesis, timing, and realistic targets",
