@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { getAllUnits, getUnitsByCategory } from '../content/index.js'
+import { getAllUnits, getUnitsByCategory, getStandardsForUnit } from '../content/index.js'
 import { useProgress, getUnitProgress, PASS_THRESHOLD } from '../lib/progress.js'
 import { useRoster, addStudentFromCode, removeStudent } from '../lib/roster.js'
 import { isComplete, isFlagged, flagReasons, formatMinSec, statusInfo } from '../lib/status.js'
@@ -44,7 +44,25 @@ function buildCsv(rows, units) {
     }
     return cells.map(esc).join(',')
   })
-  return [header.map(esc).join(','), ...lines].join('\n')
+
+  // Appended reference section (not part of the per-student table above) so
+  // a teacher can see which California standards each unit is tagged with
+  // without widening every student row by another column per unit. Only
+  // units with at least one resolvable standard get a line.
+  const standardsRows = units
+    .map((u) => ({ unit: u, standards: getStandardsForUnit(u) }))
+    .filter(({ standards }) => standards.length > 0)
+    .map(({ unit, standards }) =>
+      [unit.title, standards.map((s) => `${s.framework.shortName} ${s.officialCode}`).join('; ')]
+        .map(esc)
+        .join(',')
+    )
+  const standardsSection =
+    standardsRows.length > 0
+      ? ['', 'Standards reference', ['Unit', 'Standards'].map(esc).join(','), ...standardsRows]
+      : []
+
+  return [header.map(esc).join(','), ...lines, ...standardsSection].join('\n')
 }
 
 function downloadCsv(rows, units) {
