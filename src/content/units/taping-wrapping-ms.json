@@ -6,6 +6,7 @@
   "gradeBand": "7-8",
   "summary": "Learn why coaches and athletic trainers tape and wrap injuries, and the simple safety signs that mean a wrap is too tight.",
   "minutes": 10,
+  "standards": ["CAHE.7-8.S.SelfOthers", "CAHE.7-8.S.ValidInfo", "CAHE.7-8.S.Decisions"],
   "sections": [
     {
       "heading": "You've seen the tape. Here's why it's there.",

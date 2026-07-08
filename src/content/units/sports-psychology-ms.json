@@ -6,6 +6,7 @@
   "gradeBand": "7-8",
   "summary": "Learn that it's normal to feel sad, frustrated, or worried in sports, how to notice when a teammate might need help, and why telling a trusted adult is always the right move — including when it's serious.",
   "minutes": 12,
+  "standards": ["CAHE.7-8.S.SelfOthers", "CAHE.7-8.S.Decisions", "CAHE.7-8.S.ValidInfo"],
   "sections": [
     {
       "heading": "Feelings are part of playing sports",

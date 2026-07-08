@@ -4,6 +4,7 @@
   "category": "Acute Care & First Aid",
   "strand": "wound-care",
   "gradeBand": "11-12",
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.B.4.5"],
   "summary": "Go beyond direct pressure: hemorrhage physiology, the full bleeding-control escalation ladder including packing and tourniquets, closure decisions, and bloodborne pathogen protocol at a student-aide level.",
   "minutes": 24,
   "sections": [

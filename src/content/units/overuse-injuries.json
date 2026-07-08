@@ -6,6 +6,7 @@
   "gradeBand": "9-10",
   "summary": "Shin splints, tendinopathy, and stress fractures: injuries that build up from training load, and the warning signs that separate soreness from damage.",
   "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.3", "CTE.HSMT.B.2.4", "CTE.HSMT.B.4.5"],
   "sections": [
     {
       "heading": "Acute vs. overuse",

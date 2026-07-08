@@ -6,6 +6,7 @@
   "gradeBand": "7-8",
   "summary": "Learn to spot the warning signs of a serious shoulder injury after a fall or collision, and what to do right away.",
   "minutes": 10,
+  "standards": ["CAHE.7-8.S.SelfOthers", "CAHE.7-8.S.Decisions", "CAHE.7-8.S.Behaviors"],
   "sections": [
     {
       "heading": "Why this matters",

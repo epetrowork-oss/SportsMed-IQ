@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { getUnit } from '../content/index.js'
+import { getUnit, getStandardsForUnit } from '../content/index.js'
 import {
   useProgress,
   getUnitProgress,
@@ -94,6 +94,37 @@ function Callout({ callout }) {
   )
 }
 
+// Expandable "Standards alignment" disclosure — only rendered when the unit
+// has at least one standards id that resolves against the catalog (unknown
+// ids are dropped by getStandardsForUnit, so a bad ref just disappears here
+// rather than breaking the page).
+function StandardsAlignment({ unit }) {
+  const standards = getStandardsForUnit(unit)
+  if (standards.length === 0) return null
+  const hasDraft = standards.some((s) => !s.verified)
+  return (
+    <details className="standards-alignment">
+      <summary>Standards alignment</summary>
+      <ul className="standards-list">
+        {standards.map((s) => (
+          <li key={s.id} className="standards-item">
+            <span className="standards-code">
+              {s.framework.shortName} {s.officialCode}
+            </span>
+            {!s.verified && <span className="pill pill-draft">draft</span>}
+            <p className="standards-text">{s.text}</p>
+          </li>
+        ))}
+      </ul>
+      {hasDraft && (
+        <p className="standards-footnote">
+          Draft alignments — pending verification against the official CDE documents.
+        </p>
+      )}
+    </details>
+  )
+}
+
 export default function UnitPage() {
   const { unitId } = useParams()
   useProgress()
@@ -108,7 +139,7 @@ export default function UnitPage() {
   return (
     <div className="page page-narrow">
       <nav className="breadcrumb">
-        <Link to="/">Units</Link> / {unit.title}
+        <Link to="/lessons">Units</Link> / {unit.title}
       </nav>
       <h1>{unit.title}</h1>
       <p className="unit-summary">{unit.summary}</p>
@@ -170,6 +201,8 @@ export default function UnitPage() {
           </section>
         ))}
       </article>
+
+      <StandardsAlignment unit={unit} />
 
       <div className="lesson-footer">
         {formatReadTime(p.readSeconds) && (

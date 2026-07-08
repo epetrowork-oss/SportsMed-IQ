@@ -6,6 +6,7 @@
   "gradeBand": "7-8",
   "summary": "Learn to recognize a possible broken bone or dislocated joint, avoid the biggest mistakes, and get an adult right away.",
   "minutes": 10,
+  "standards": ["CAHE.7-8.S.SelfOthers", "CAHE.7-8.S.Decisions"],
   "sections": [
     {
       "heading": "What's actually injured",

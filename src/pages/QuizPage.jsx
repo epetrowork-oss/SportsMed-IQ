@@ -46,7 +46,7 @@ export default function QuizPage() {
     return (
       <div className="page page-narrow">
         <nav className="breadcrumb">
-          <Link to="/">Units</Link> / <Link to={`/unit/${unit.id}`}>{unit.title}</Link> / Quiz
+          <Link to="/lessons">Units</Link> / <Link to={`/unit/${unit.id}`}>{unit.title}</Link> / Quiz
         </nav>
         <h1>Quiz results</h1>
         <p className={`quiz-score ${passed ? 'quiz-score-pass' : 'quiz-score-progress'}`}>
@@ -97,7 +97,7 @@ export default function QuizPage() {
   return (
     <div className="page page-narrow">
       <nav className="breadcrumb">
-        <Link to="/">Units</Link> / <Link to={`/unit/${unit.id}`}>{unit.title}</Link> / Quiz
+        <Link to="/lessons">Units</Link> / <Link to={`/unit/${unit.id}`}>{unit.title}</Link> / Quiz
       </nav>
       <p className="quiz-progress">
         Question {index + 1} of {questions.length}

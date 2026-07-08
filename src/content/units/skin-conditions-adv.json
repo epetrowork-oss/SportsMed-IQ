@@ -4,6 +4,7 @@
   "category": "Acute Care & First Aid",
   "strand": "skin-conditions",
   "gradeBand": "11-12",
+  "standards": ["CTE.HSMT.B.2.3", "CTE.HSMT.B.2.4", "CTE.HSMT.Anchor.6"],
   "summary": "Go beyond recognition to the reasoning athletic trainers use: why pathogen type drives treatment, what real clearance criteria require, and how to catch an outbreak before it spreads through a roster.",
   "minutes": 20,
   "sections": [

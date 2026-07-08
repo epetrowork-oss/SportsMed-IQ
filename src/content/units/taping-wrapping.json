@@ -6,6 +6,7 @@
   "gradeBand": "9-10",
   "summary": "Learn why athletic tape and elastic wraps are used, the core patterns behind them, and the safety checks that keep a taped or wrapped limb safe.",
   "minutes": 16,
+  "standards": ["CTE.HSMT.Anchor.6", "CTE.HSMT.B.5.0"],
   "sections": [
     {
       "heading": "Why we tape and wrap",

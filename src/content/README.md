@@ -20,6 +20,17 @@ never requires touching component code** — drop a new `*.json` file into
   "summary": "One-sentence description shown on the unit card.",
   "minutes": 15,                 // rough study time estimate
 
+  // OPTIONAL: California standards this unit aligns to, as an array of
+  // catalog ids from `src/content/standards.json` (e.g. "CTE.HSMT.B.2.0").
+  // Only use ids that already exist in that catalog — never invent one.
+  // Prefer ids whose framework `appliesTo` includes this unit's gradeBand
+  // (the validator warns, not errors, if it doesn't — some cross-band
+  // alignment is fine, e.g. an anchor standard). Typical count is 2-4 per
+  // unit. Omit the field entirely (or leave it an empty array) for units
+  // not yet tagged — that's the current state for most of the library and
+  // just produces a transition warning, not an error.
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.Anchor.6"],
+
   // Lesson content, rendered in order.
   "sections": [
     {
@@ -83,6 +94,15 @@ Rules:
   clear error for malformed files instead of crashing the app.
 - `scripts/validate-content.mjs` (`npm run validate:content`) is the strict
   gate — schema, house-style minimums, and grade-band rules below.
+- `standards` ids must exist in `src/content/standards.json` (ERROR if not,
+  ERROR on duplicates within a unit, ERROR if the field is present but not
+  an array of strings) — enforced by `scripts/validate-content.mjs`, which
+  also checks the catalog itself (every standard's `framework` key must
+  exist in `frameworks`). Use `getStandard(id)` / `getStandardsForUnit(unit)`
+  from `src/content/index.js` to resolve ids to their catalog entry
+  (framework + officialCode + text) rather than reading the catalog
+  directly — both are lenient and drop unresolvable ids instead of
+  throwing, matching the rest of the loader's crash-avoidance behavior.
 
 ## Grade bands: a spiral curriculum, 7th-12th grade
 

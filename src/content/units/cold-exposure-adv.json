@@ -4,6 +4,7 @@
   "category": "Environmental Emergencies",
   "strand": "cold-exposure",
   "gradeBand": "11-12",
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.B.4.5", "CTE.HSMT.Anchor.6"],
   "summary": "Go beyond the umbles and the mild/moderate/severe ladder: the physiology behind heat conservation, why rough handling can kill a cold heart, the science of frostbite injury, and how to tell hypothermia apart from hypoglycemia or a concussion.",
   "minutes": 25,
   "sections": [

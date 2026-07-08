@@ -5,7 +5,7 @@ export default function NotFoundPage() {
     <div className="page page-narrow">
       <h1>Not found</h1>
       <p>That page or unit doesn't exist.</p>
-      <Link className="button" to="/">
+      <Link className="button" to="/lessons">
         Back to units
       </Link>
     </div>

@@ -4,6 +4,7 @@
   "category": "Head & Spine Injuries",
   "strand": "eye-injuries",
   "gradeBand": "11-12",
+  "standards": ["CTE.HSMT.B.2.3", "CTE.HSMT.B.4.5", "CTE.HSMT.B.2.4"],
   "summary": "Go beyond shield-don't-patch: classify trauma by mechanism, tell a benign red eye from a hyphema, catch orbital fracture entrapment and retinal detachment red flags, and run a chemical-exposure protocol correctly.",
   "minutes": 25,
   "sections": [

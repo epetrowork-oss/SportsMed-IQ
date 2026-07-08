@@ -11,7 +11,8 @@ import { readdir, readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const unitsDir = path.join(path.dirname(fileURLToPath(import.meta.url)), '../src/content/units')
+const contentDir = path.join(path.dirname(fileURLToPath(import.meta.url)), '../src/content')
+const unitsDir = path.join(contentDir, 'units')
 
 const VALID_CALLOUT_TYPES = ['warning', 'tip']
 const VALID_GRADE_BANDS = ['7-8', '9-10', '11-12']
@@ -20,7 +21,7 @@ function isNonEmptyString(v) {
   return typeof v === 'string' && v.trim().length > 0
 }
 
-function checkUnit(unit, file) {
+function checkUnit(unit, file, standardsCatalog) {
   const errors = []
   const warnings = []
   const err = (msg) => errors.push(msg)
@@ -128,11 +129,61 @@ function checkUnit(unit, file) {
     })
   }
 
+  // California standards alignment (optional, transitioning in — see
+  // "standards" in src/content/README.md). No `standards` field or an
+  // empty one just warns for now, since the backfill hasn't landed yet.
+  if (unit.standards === undefined || (Array.isArray(unit.standards) && unit.standards.length === 0)) {
+    warn('missing "standards" (California standards alignment not yet tagged — backfill pending)')
+  } else if (!Array.isArray(unit.standards) || !unit.standards.every(isNonEmptyString)) {
+    err('"standards" must be an array of catalog id strings')
+  } else {
+    const seen = new Set()
+    for (const id of unit.standards) {
+      if (seen.has(id)) {
+        err(`"standards" has duplicate id "${id}"`)
+        continue
+      }
+      seen.add(id)
+      const standard = standardsCatalog.standardsById.get(id)
+      if (!standard) {
+        err(`"standards" references unknown id "${id}" (not in src/content/standards.json)`)
+        continue
+      }
+      const framework = standardsCatalog.frameworks[standard.framework]
+      if (framework && isNonEmptyString(unit.gradeBand) && !framework.appliesTo.includes(unit.gradeBand)) {
+        warn(
+          `"standards" id "${id}" belongs to framework "${standard.framework}" whose appliesTo (${framework.appliesTo.join(', ')}) does not include this unit's gradeBand (${unit.gradeBand})`
+        )
+      }
+    }
+  }
+
   return { errors, warnings }
 }
 
-const files = (await readdir(unitsDir)).filter((f) => f.endsWith('.json')).sort()
+function checkStandardsCatalog(catalog) {
+  const errors = []
+  for (const standard of catalog.standards ?? []) {
+    if (!catalog.frameworks?.[standard.framework]) {
+      errors.push(`standard "${standard.id}" references unknown framework "${standard.framework}"`)
+    }
+  }
+  return errors
+}
+
+const standardsCatalogRaw = JSON.parse(await readFile(path.join(contentDir, 'standards.json'), 'utf8'))
+const standardsCatalog = {
+  frameworks: standardsCatalogRaw.frameworks ?? {},
+  standardsById: new Map((standardsCatalogRaw.standards ?? []).map((s) => [s.id, s])),
+}
+
 let errorCount = 0
+for (const e of checkStandardsCatalog(standardsCatalogRaw)) {
+  console.error(`✗ standards.json: ${e}`)
+  errorCount++
+}
+
+const files = (await readdir(unitsDir)).filter((f) => f.endsWith('.json')).sort()
 const seenIds = new Set()
 const seenStrandBands = new Set()
 
@@ -145,7 +196,7 @@ for (const file of files) {
     errorCount++
     continue
   }
-  const { errors, warnings } = checkUnit(unit, file)
+  const { errors, warnings } = checkUnit(unit, file, standardsCatalog)
   if (isNonEmptyString(unit.id)) {
     if (seenIds.has(unit.id)) errors.push(`duplicate unit id "${unit.id}"`)
     seenIds.add(unit.id)

@@ -6,6 +6,7 @@
   "gradeBand": "9-10",
   "summary": "Tell heat cramps, heat exhaustion, and heat stroke apart — and act fast, because exertional heat stroke is a race against the clock.",
   "minutes": 20,
+  "standards": ["CTE.HSMT.B.1.0", "CTE.HSMT.B.2.3", "CTE.HSMT.Anchor.6"],
   "sections": [
     {
       "heading": "Why heat illness matters",

@@ -28,8 +28,9 @@ export default function Layout() {
         </NavLink>
         <nav className="app-nav">
           <NavLink to="/" end>
-            Study
+            Home
           </NavLink>
+          <NavLink to="/lessons">Library</NavLink>
           <NavLink to="/sync">Sync</NavLink>
           <NavLink to="/teacher">Teacher</NavLink>
         </nav>

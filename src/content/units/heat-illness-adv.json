@@ -4,6 +4,7 @@
   "category": "Environmental Emergencies",
   "strand": "heat-illness",
   "gradeBand": "11-12",
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.B.4.5", "CTE.HSMT.Anchor.6"],
   "summary": "Go beyond recognition: the physiology behind heat dissipation, why core temperature is measured the way it is, and how to tell exertional heat stroke apart from other causes of collapse.",
   "minutes": 26,
   "sections": [

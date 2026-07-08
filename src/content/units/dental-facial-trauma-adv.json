@@ -4,6 +4,7 @@
   "category": "Head & Spine Injuries",
   "strand": "dental-facial-trauma",
   "gradeBand": "11-12",
+  "standards": ["CTE.HSMT.B.2.4", "CTE.HSMT.B.2.3", "CTE.HSMT.B.4.5"],
   "summary": "Go beyond avulsion first aid: fracture and luxation classification, the cell biology behind storage media, mandible fracture recognition, and when facial trauma becomes an airway emergency.",
   "minutes": 22,
   "sections": [

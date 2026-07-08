@@ -1,18 +1,37 @@
 import { useEffect, useState } from 'react'
 import {
   useProgress,
+  useAssignments,
   setStudentName,
   mergeProgress,
+  importAssignment,
+  removeAssignment,
 } from '../lib/progress.js'
 import { encodeProgress, decodeProgressCode } from '../lib/share.js'
+import { decodeAssignment } from '../lib/assignments.js'
 import { getUnit } from '../content/index.js'
+
+function formatDueDate(due) {
+  // due is "YYYY-MM-DD"; parse as local date, not UTC midnight, so it never
+  // displays a day early/late depending on timezone.
+  const [y, m, d] = due.split('-').map(Number)
+  return new Date(y, m - 1, d).toLocaleDateString(undefined, {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  })
+}
 
 export default function SyncPage() {
   const { name, units } = useProgress()
+  const assignments = useAssignments()
   const [copied, setCopied] = useState(false)
   const [pasted, setPasted] = useState('')
   const [importResult, setImportResult] = useState(null) // { ok, message }
   const [code, setCode] = useState('')
+  const [classPasted, setClassPasted] = useState('')
+  const [classImportResult, setClassImportResult] = useState(null) // { ok, message }
+  const [confirmRemove, setConfirmRemove] = useState(null) // assignment name pending confirmation
 
   useEffect(() => {
     let cancelled = false
@@ -49,6 +68,26 @@ export default function SyncPage() {
       setPasted('')
     } catch (err) {
       setImportResult({ ok: false, message: err.message })
+    }
+  }
+
+  async function importClassCode() {
+    try {
+      const assignment = await decodeAssignment(classPasted)
+      importAssignment(assignment)
+      const titles = assignment.unitIds.map((id) => getUnit(id)?.title).filter(Boolean)
+      const parts = [
+        `${titles.length} lesson${titles.length === 1 ? '' : 's'}`,
+        assignment.mode === 'focus' ? 'focus mode' : 'open mode',
+      ]
+      if (assignment.due) parts.push(`due ${formatDueDate(assignment.due)}`)
+      setClassImportResult({
+        ok: true,
+        message: `Imported "${assignment.name}" — ${parts.join(', ')}. Lessons: ${titles.join(', ')}.`,
+      })
+      setClassPasted('')
+    } catch (err) {
+      setClassImportResult({ ok: false, message: err.message })
     }
   }
 
@@ -111,6 +150,84 @@ export default function SyncPage() {
           <p className={importResult.ok ? 'import-ok' : 'import-error'} role="status">
             {importResult.message}
           </p>
+        )}
+      </section>
+
+      <section>
+        <h2>Class code</h2>
+        <p className="field-hint">
+          If your teacher gave you a class code, paste it here to load your assigned lessons.
+        </p>
+        <textarea
+          className="code-box"
+          placeholder="Paste a class code here (starts with SMIQA1)"
+          value={classPasted}
+          onChange={(e) => {
+            setClassPasted(e.target.value)
+            setClassImportResult(null)
+          }}
+          rows={4}
+        />
+        <div className="unit-actions">
+          <button
+            className="button button-primary"
+            onClick={importClassCode}
+            disabled={!classPasted.trim()}
+          >
+            Import class code
+          </button>
+        </div>
+        {classImportResult && (
+          <p className={classImportResult.ok ? 'import-ok' : 'import-error'} role="status">
+            {classImportResult.message}
+          </p>
+        )}
+
+        {assignments.length > 0 && (
+          <div className="assignment-list">
+            <h3>Your assignments</h3>
+            {assignments.map((a) => {
+              const titles = a.unitIds.map((id) => getUnit(id)?.title).filter(Boolean)
+              return (
+                <div key={a.name} className="assignment-item">
+                  <div className="assignment-item-main">
+                    <strong>{a.name}</strong>
+                    <span className="field-hint">
+                      {titles.length} lesson{titles.length === 1 ? '' : 's'} &middot;{' '}
+                      {a.mode === 'focus' ? 'Focus mode' : 'Open mode'}
+                      {a.due ? ` · Due ${formatDueDate(a.due)}` : ''}
+                    </span>
+                    <span className="field-hint">{titles.join(', ')}</span>
+                  </div>
+                  {confirmRemove === a.name ? (
+                    <span className="unit-actions">
+                      <button
+                        className="button button-danger"
+                        onClick={() => {
+                          removeAssignment(a.name)
+                          setConfirmRemove(null)
+                        }}
+                      >
+                        Confirm remove
+                      </button>
+                      <button className="button" onClick={() => setConfirmRemove(null)}>
+                        Cancel
+                      </button>
+                    </span>
+                  ) : (
+                    <button
+                      className="remove-button"
+                      onClick={() => setConfirmRemove(a.name)}
+                      aria-label={`Remove ${a.name}`}
+                      title={`Remove ${a.name}`}
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
+              )
+            })}
+          </div>
         )}
       </section>
     </div>

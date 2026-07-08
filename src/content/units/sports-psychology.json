@@ -6,6 +6,7 @@
   "gradeBand": "9-10",
   "summary": "Recognize the mental health pressures that come with being an athlete, spot the signs a teammate is struggling, and learn how to connect them to help — including when it's a crisis.",
   "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.3", "CTE.HSMT.B.4.5", "CTE.HSMT.B.1.2"],
   "sections": [
     {
       "heading": "Why mental health matters in sports",

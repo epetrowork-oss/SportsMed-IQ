@@ -4,6 +4,7 @@
   "category": "Muscle & Soft Tissue",
   "strand": "overuse-injuries",
   "gradeBand": "11-12",
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.Anchor.6"],
   "summary": "The mechanisms behind overuse injury — tissue adaptation science, the tendinopathy model, the bone stress injury spectrum, growth-plate traction injuries, and RED-S — for a student aide thinking about the biology, not just the checklist.",
   "minutes": 24,
   "sections": [

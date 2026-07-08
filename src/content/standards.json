@@ -1,0 +1,117 @@
+{
+  "_comment": "California standards catalog. Every entry is a DRAFT: codes and text were compiled from secondary sources because the official CDE PDFs are not reachable from the dev environment. verified stays false until a human checks the entry against the official document (see docs/STANDARDS-VERIFICATION.md). UI must present unverified alignments as drafts.",
+  "frameworks": {
+    "CTE-HSMT": {
+      "name": "California CTE Model Curriculum Standards — Health Science & Medical Technology sector, Patient Care pathway",
+      "shortName": "CA CTE Health Science (Patient Care)",
+      "source": "https://www.cde.ca.gov/ci/ct/sf/documents/healthmedical.pdf",
+      "appliesTo": ["9-10", "11-12"]
+    },
+    "CA-HE": {
+      "name": "California Health Education Content Standards (2008) — Injury Prevention & Safety, grades 7-8",
+      "shortName": "CA Health Ed 7-8 (Injury Prevention & Safety)",
+      "source": "https://www.cde.ca.gov/be/st/ss/documents/healthstandmar08.pdf",
+      "appliesTo": ["7-8"]
+    }
+  },
+  "standards": [
+    {
+      "id": "CTE.HSMT.Anchor.6",
+      "framework": "CTE-HSMT",
+      "officialCode": "Anchor 6.0",
+      "text": "Health and Safety: demonstrate health and safety practices, policies, and procedures, including the prevention of injury.",
+      "verified": false
+    },
+    {
+      "id": "CTE.HSMT.B.1.0",
+      "framework": "CTE-HSMT",
+      "officialCode": "B1.0",
+      "text": "Recognize the integrated systems approach to health care delivery services: prevention, diagnosis, pathology, treatment, and rehabilitation.",
+      "verified": false
+    },
+    {
+      "id": "CTE.HSMT.B.1.2",
+      "framework": "CTE-HSMT",
+      "officialCode": "B1.2",
+      "text": "Understand the range of care from prevention through diagnosis, pathology, and treatment.",
+      "verified": false
+    },
+    {
+      "id": "CTE.HSMT.B.2.0",
+      "framework": "CTE-HSMT",
+      "officialCode": "B2.0",
+      "text": "Understand the basic structure and function of the human body and relate normal function to common disorders.",
+      "verified": false
+    },
+    {
+      "id": "CTE.HSMT.B.2.3",
+      "framework": "CTE-HSMT",
+      "officialCode": "B2.3",
+      "text": "Recognize common diseases and disorders of the human body.",
+      "verified": false
+    },
+    {
+      "id": "CTE.HSMT.B.2.4",
+      "framework": "CTE-HSMT",
+      "officialCode": "B2.4",
+      "text": "Compare normal function of the human body to the diagnosis and treatment of disease and injury.",
+      "verified": false
+    },
+    {
+      "id": "CTE.HSMT.B.4.5",
+      "framework": "CTE-HSMT",
+      "officialCode": "B4.5",
+      "text": "Evaluate information gathered and connect patient data to the appropriate system of care.",
+      "verified": false
+    },
+    {
+      "id": "CTE.HSMT.B.5.0",
+      "framework": "CTE-HSMT",
+      "officialCode": "B5.0",
+      "text": "Know the definition, spelling, pronunciation, and use of appropriate terminology in health care.",
+      "verified": false
+    },
+    {
+      "id": "CAHE.7-8.S.SelfOthers",
+      "framework": "CA-HE",
+      "officialCode": "7-8: Essential Concepts (1.x.S — exact sub-number TBD)",
+      "text": "Analyze the role of self and others in causing or preventing injuries.",
+      "verified": false
+    },
+    {
+      "id": "CAHE.7-8.S.Behaviors",
+      "framework": "CA-HE",
+      "officialCode": "7-8: Essential Concepts (1.x.S — exact sub-number TBD)",
+      "text": "Analyze personal behaviors that may lead to injuries or cause harm.",
+      "verified": false
+    },
+    {
+      "id": "CAHE.7-8.S.Environment",
+      "framework": "CA-HE",
+      "officialCode": "7-8: Essential Concepts (1.x.S — exact sub-number TBD)",
+      "text": "Describe hazards related to sun, water, and ice (environmental conditions).",
+      "verified": false
+    },
+    {
+      "id": "CAHE.7-8.S.ValidInfo",
+      "framework": "CA-HE",
+      "officialCode": "7-8: Accessing Valid Information (3.x.S — exact sub-number TBD)",
+      "text": "Identify accurate sources of information about injury prevention and safety.",
+      "verified": false
+    },
+    {
+      "id": "CAHE.7-8.S.Decisions",
+      "framework": "CA-HE",
+      "officialCode": "7-8: Decision Making (5.x.S — exact sub-number TBD)",
+      "text": "Use a decision-making process to determine a safe course of action in risky situations.",
+      "verified": false
+    },
+    {
+      "id": "CAHE.7-8.S.SafetyPlan",
+      "framework": "CA-HE",
+      "officialCode": "7-8: Goal Setting (6.x.S — exact sub-number TBD)",
+      "text": "Develop a personal plan to remain safe and injury-free.",
+      "verified": false
+    }
+  ]
+}

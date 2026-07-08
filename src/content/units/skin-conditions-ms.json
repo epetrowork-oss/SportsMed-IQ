@@ -6,6 +6,7 @@
   "gradeBand": "7-8",
   "summary": "Learn how to spot a new bump, rash, or sore on your skin that needs an adult's attention — and simple habits that keep skin problems from spreading on a team.",
   "minutes": 10,
+  "standards": ["CAHE.7-8.S.SelfOthers", "CAHE.7-8.S.Behaviors", "CAHE.7-8.S.SafetyPlan"],
   "sections": [
     {
       "heading": "Your skin protects you",

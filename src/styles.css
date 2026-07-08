@@ -166,8 +166,9 @@ h3 {
   color: var(--brand);
 }
 
-/* Home hero — welcome copy + hero image + (when present) the continue
-   card, all above the grade-band/search filters. */
+/* Home hero — landing-page hero image + app identity/welcome copy. The
+   continue-where-you-left-off card (or the start-your-first-lesson
+   fallback) and the browse-library button sit just below it. */
 
 .home-hero {
   margin: 0.25rem 0 1.75rem;
@@ -315,8 +316,8 @@ h3 {
   color: var(--ink-soft);
 }
 
-/* "Continue where you left off" — now lives inside the home hero, so it
-   reads as the hero's featured action rather than a plain bordered card. */
+/* "Continue where you left off" (or its start-your-first-lesson fallback)
+   — the landing page's featured action, just below the hero. */
 
 .continue-card {
   display: block;
@@ -324,7 +325,7 @@ h3 {
   border: 1.5px solid var(--brand);
   border-radius: 0.8rem;
   padding: 1.25rem 1.4rem;
-  margin-top: 1.25rem;
+  margin: 0 0 1.25rem;
   color: #fff;
   text-decoration: none;
   box-shadow: 0 4px 14px rgba(15, 76, 92, 0.25);
@@ -380,6 +381,41 @@ h3 {
   color: #fff;
   opacity: 0.85;
   font-size: 0.9rem;
+}
+
+.home-browse-button {
+  margin: 0 0 1.75rem;
+}
+
+/* Landing page "how it works" strip: one card for students, one for
+   teachers. Plain bordered cards, same visual language as unit cards. */
+
+.how-it-works {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.how-it-works-card {
+  flex: 1 1 14rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  padding: 1rem 1.1rem;
+}
+
+.how-it-works-card h3 {
+  margin: 0 0 0.35rem;
+}
+
+.how-it-works-card p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.library-intro {
+  color: var(--ink-soft);
+  margin: 0 0 1.25rem;
 }
 
 /* Home filters: grade-band picker + search, side by side above the grid. */
@@ -468,6 +504,12 @@ h3 {
   color: #fff;
 }
 
+.button-danger {
+  background: var(--red-bg);
+  border-color: var(--red);
+  color: var(--red);
+}
+
 .unit-actions {
   display: flex;
   flex-wrap: wrap;
@@ -507,6 +549,59 @@ h3 {
 
 .callout-tip strong {
   color: var(--brand);
+}
+
+/* Standards alignment — expandable disclosure below the lesson, before the
+   completion/footer area. */
+
+.standards-alignment {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.standards-alignment summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.standards-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.standards-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.5rem;
+}
+
+.standards-code {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.standards-text {
+  flex-basis: 100%;
+  margin: 0.1rem 0 0;
+}
+
+.pill-draft {
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+
+.standards-footnote {
+  margin: 0.75rem 0 0;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  font-style: italic;
 }
 
 .lesson-footer {
@@ -1010,6 +1105,26 @@ h3 {
 .import-error {
   color: var(--red);
   font-weight: 600;
+}
+
+.assignment-list {
+  margin-top: 1.25rem;
+}
+
+.assignment-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.assignment-item-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
 }
 
 .add-student {

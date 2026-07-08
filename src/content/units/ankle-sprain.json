@@ -6,6 +6,7 @@
   "gradeBand": "9-10",
   "summary": "Recognize, grade, and manage the most common athletic injury — and know when an ankle needs more than tape.",
   "minutes": 20,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.Anchor.6"],
   "sections": [
     {
       "heading": "Why ankle sprains matter",

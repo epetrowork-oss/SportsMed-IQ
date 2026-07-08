@@ -6,6 +6,7 @@
   "gradeBand": "9-10",
   "summary": "Manage cuts, abrasions, and serious bleeding safely — gloves on, pressure first, and know which wounds need more than a bandage.",
   "minutes": 18,
+  "standards": ["CTE.HSMT.Anchor.6", "CTE.HSMT.B.4.5", "CTE.HSMT.B.2.4"],
   "sections": [
     {
       "heading": "Protect yourself first",

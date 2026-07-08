@@ -1,7 +1,12 @@
 // Content loader: every JSON file in ./units becomes a unit in the app.
 // Content is bundled at build time, so it is always available offline.
 
+import standardsCatalog from './standards.json'
+
 const modules = import.meta.glob('./units/*.json', { eager: true })
+
+// id -> standard entry, for O(1) lookups from getStandard/getStandardsForUnit.
+const standardsById = new Map(standardsCatalog.standards.map((s) => [s.id, s]))
 
 function validateUnit(unit, path) {
   const problems = []
@@ -53,4 +58,23 @@ export function getUnitsByCategory() {
     groups.get(key).push(unit)
   }
   return [...groups.entries()].map(([category, list]) => ({ category, units: list }))
+}
+
+// A catalog standard joined with its framework, or null if the id (or its
+// framework) doesn't exist — callers never need to know about the raw
+// catalog shape or guard against dangling framework references themselves.
+export function getStandard(id) {
+  const standard = standardsById.get(id)
+  if (!standard) return null
+  const framework = standardsCatalog.frameworks[standard.framework]
+  if (!framework) return null
+  return { ...standard, framework }
+}
+
+// Resolved standards for a unit's `standards` id list. Lenient by design:
+// a bad or unknown id is silently dropped rather than crashing the app —
+// the strict validator is what catches that at content-review time.
+export function getStandardsForUnit(unit) {
+  if (!Array.isArray(unit?.standards)) return []
+  return unit.standards.map((id) => getStandard(id)).filter((s) => s !== null)
 }

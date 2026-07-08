@@ -4,6 +4,7 @@
   "category": "Muscle & Soft Tissue",
   "strand": "muscle-strains",
   "gradeBand": "11-12",
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.B.1.0"],
   "summary": "Beyond grading strains: the mechanical reason the musculotendinous junction fails, the biology of how torn muscle actually heals, hamstring injury science, and the differentials — contusion, cramp, DOMS, and rupture — that change management.",
   "minutes": 24,
   "sections": [

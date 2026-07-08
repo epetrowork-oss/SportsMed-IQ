@@ -4,6 +4,7 @@
   "category": "Acute Care & First Aid",
   "strand": "fractures-dislocations",
   "gradeBand": "11-12",
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.B.4.5"],
   "summary": "Go beyond splint-and-refer: read fracture patterns from mechanism, apply CSM checks correctly, and recognize the complications that turn a broken bone into a limb- or life-threatening emergency.",
   "minutes": 24,
   "sections": [

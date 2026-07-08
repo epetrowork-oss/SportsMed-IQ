@@ -6,6 +6,7 @@
   "gradeBand": "9-10",
   "summary": "The body's most mobile joint is also its least stable — tell a dislocation, a separated shoulder, and an overuse rotator cuff injury apart, and know what to do first.",
   "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.B.4.5"],
   "sections": [
     {
       "heading": "Anatomy: the most mobile, least stable joint",

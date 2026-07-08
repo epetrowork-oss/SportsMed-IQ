@@ -6,6 +6,7 @@
   "gradeBand": "7-8",
   "summary": "Learn how to notice a serious eye injury during a game or practice and why you should never touch, rub, or press on it yourself.",
   "minutes": 10,
+  "standards": ["CAHE.7-8.S.SelfOthers", "CAHE.7-8.S.Decisions", "CAHE.7-8.S.SafetyPlan"],
   "sections": [
     {
       "heading": "Why eyes need special care",
