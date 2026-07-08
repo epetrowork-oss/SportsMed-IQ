@@ -13,7 +13,15 @@
         "If you play a fall or winter sport — football, soccer, cross country, or anything outdoors — you'll practice or play in the cold at some point. Cold weather isn't just uncomfortable. It can hurt your body if you're not dressed right or if you stay out too long without warming up.",
         "Your body likes to stay at about the same temperature all the time, close to 98.6°F. In cold weather, your body has to work hard to hold onto that heat. Two things can go wrong: your whole body can get too cold (called hypothermia — say it hy-po-THER-mee-uh, it just means 'body temperature dropping too low'), or a small part of your body, like your fingers or toes, can actually start to freeze (called frostbite).",
         "The good news: both of these give warning signs before they become a real emergency. Your job is to notice the signs — in yourself or a teammate — and tell a coach, athletic trainer, or other trusted adult right away."
-      ]
+      ],
+      "image": {
+        "asset": "cold-exposure-hypothermia-frostbite-overview.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple outline illustration of an athlete's body from the front. Highlight the whole torso/core in one color with a small label icon for hypothermia (whole body getting too cold), and highlight the fingers, toes, ears, nose, and cheeks in a second color with a label icon for frostbite (a body part freezing). Clean, flat, non-graphic style for middle schoolers.",
+        "alt": "Body outline showing the core highlighted for hypothermia risk and the fingers, toes, ears, and nose highlighted for frostbite risk.",
+        "location": "public/images/units/cold-exposure/"
+      }
     },
     {
       "heading": "Dressing right so you don't get too cold",
@@ -26,7 +34,15 @@
         "Cover your head, ears, and hands — a hat and gloves matter more than people think.",
         "Change out of sweaty or rain-soaked clothes as soon as practice or the game ends, since you cool down fast once you stop moving.",
         "If your team has a cold-weather plan (like shortening or moving practice indoors), follow it — coaches set those rules to keep you safe."
-      ]
+      ],
+      "image": {
+        "asset": "cold-exposure-layering-basics.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple exploded-view illustration of an athlete showing three clothing layers: a snug base layer close to the skin, a warmer insulating middle layer, and a wind- and water-resistant outer jacket, plus a hat and gloves. Each layer drawn slightly separated with small arrows showing the order they go on. Clean, flat illustration style.",
+        "alt": "Illustration of an athlete's three cold-weather clothing layers, plus a hat and gloves.",
+        "location": "public/images/units/cold-exposure/"
+      }
     },
     {
       "heading": "Warning signs your body is getting too cold",
@@ -41,6 +57,14 @@
         "Fumbling with zippers, gloves, or equipment",
         "Confused, unusually sleepy, or acting 'out of it'"
       ],
+      "image": {
+        "asset": "cold-exposure-shivering-signs.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple illustration of an athlete standing outdoors in cold-weather gear, arms wrapped around themselves and shoulders hunched to show shivering, with a couple of small motion lines to suggest shaking. Clean, plain illustration style, no text in the image.",
+        "alt": "Athlete outdoors shown shivering, arms wrapped around themselves in the cold.",
+        "location": "public/images/units/cold-exposure/"
+      },
       "callout": {
         "type": "warning",
         "title": "Stopped shivering + confused = get an adult NOW",
@@ -53,6 +77,14 @@
         "Frostbite means skin (and sometimes the tissue underneath) is actually starting to freeze. It shows up most on fingers, toes, ears, nose, and cheeks — the parts of your body farthest from your warm core and easiest to expose to wind and cold.",
         "Watch for skin that looks white, waxy, or grayish and feels numb. If you or a teammate notices this, it's time to get inside and tell an adult — do not try to warm it up yourself or wait to see if it gets better on its own."
       ],
+      "image": {
+        "asset": "cold-exposure-frostbite-signs.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Close-up side-by-side illustration of a hand with fingers showing normal skin tone next to a hand with fingers showing pale, white/waxy, grayish skin color to illustrate frostbite. Simple, clean, non-graphic comparison style for middle schoolers.",
+        "alt": "Comparison of a normal hand next to a hand showing pale, white, waxy frostbite-affected fingers.",
+        "location": "public/images/units/cold-exposure/"
+      },
       "callout": {
         "type": "tip",
         "title": "Check on your teammates",

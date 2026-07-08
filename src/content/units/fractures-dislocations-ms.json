@@ -12,7 +12,15 @@
       "body": [
         "A fracture is a broken bone — it can be a tiny crack or a full break. A dislocation is different: it's when a joint (like a shoulder, finger, or knee) gets knocked out of its normal position, so the bones that are supposed to line up are now out of place.",
         "Both usually happen from the same kinds of things — a hard fall, a direct hit, or a joint bent the wrong way. From the sideline, they can look and feel a lot alike: bad pain, swelling, and a body part that suddenly doesn't work right."
-      ]
+      ],
+      "image": {
+        "asset": "fractures-dislocations-fracture-vs-dislocation.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple side-by-side diagram: left side shows a forearm bone with a break highlighted in red (a fracture); right side shows a shoulder joint with the bones out of their normal alignment (a dislocation). Clean, labeled, non-graphic medical-illustration style for middle schoolers.",
+        "alt": "Side-by-side diagram comparing a broken forearm bone to a dislocated shoulder joint.",
+        "location": "public/images/units/fractures-dislocations/"
+      }
     },
     {
       "heading": "How it happens",
@@ -37,7 +45,15 @@
         "Pain that is severe, right at one spot",
         "Swelling that comes on fast and looks worse than a typical bump or bruise",
         "In a serious case, a piece of bone poking through the skin"
-      ]
+      ],
+      "image": {
+        "asset": "fractures-dislocations-warning-signs.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple side-by-side illustration comparing a normal arm to an injured arm that looks bent, crooked, and swollen, with a couple of small arrows pointing to the deformity and swelling. Clean, non-graphic style for middle schoolers.",
+        "alt": "Comparison drawing of a normal arm next to an arm with a crooked, swollen deformity.",
+        "location": "public/images/units/fractures-dislocations/"
+      }
     },
     {
       "heading": "What to do right away",
@@ -49,7 +65,15 @@
         "Tell a coach, athletic trainer, or other trusted adult immediately",
         "Help keep the athlete still and calm while you wait for the adult",
         "Do not let anyone — a teammate, a coach, or even the injured athlete — try to push a joint back into place or straighten a crooked limb"
-      ]
+      ],
+      "image": {
+        "asset": "fractures-dislocations-do-not-move.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple icon-style illustration showing two hands hovering just above an injured limb without touching it, with a small red 'no' symbol, plus a small icon of a person pointing or calling for an adult nearby. Flat, plain icon style, minimal detail.",
+        "alt": "Icon illustration of hands hovering near an injured limb without touching it, with a call-for-adult icon.",
+        "location": "public/images/units/fractures-dislocations/"
+      }
     },
     {
       "heading": "Never try to fix it yourself",
@@ -68,7 +92,15 @@
       "body": [
         "An athlete never decides on their own when they can play again after a broken bone or dislocated joint — that decision belongs to a doctor. Only a doctor, often with an X-ray, can tell how badly something is injured and how much time it needs to heal.",
         "Healing time is different for every injury and every person, so there's no way to guess it. Your part is done once you've helped keep the athlete safe and gotten an adult involved — the rest is up to the medical team."
-      ]
+      ],
+      "image": {
+        "asset": "fractures-dislocations-doctor-xray-decision.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple, calm illustration of a doctor in a clinic looking at an X-ray image of a bone displayed on a lightbox or screen, showing that a doctor is the one who decides when an athlete can return to play. Clean, flat illustration style.",
+        "alt": "A doctor looking at an X-ray image of a bone in a clinic.",
+        "location": "public/images/units/fractures-dislocations/"
+      }
     }
   ],
   "quiz": [

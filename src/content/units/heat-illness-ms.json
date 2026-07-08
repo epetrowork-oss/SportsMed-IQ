@@ -20,6 +20,14 @@
         "When you exercise, your muscles make heat. Your body's main way to get rid of that heat is sweating. As sweat dries (evaporates) off your skin, it carries heat away with it.",
         "That's why drinking water matters so much. If you wait until you feel thirsty, you're already running low on fluid. Drink water regularly, even before you feel thirsty."
       ],
+      "image": {
+        "asset": "heat-illness-sweat-cooling.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple illustration of an athlete running or playing outdoors with visible sweat droplets on the skin and a few small motion/heat-wave lines rising off the skin, showing heat leaving the body as sweat evaporates. Clean, flat illustration style, no text in the image.",
+        "alt": "Athlete running outdoors with sweat droplets and heat lines showing the body cooling itself.",
+        "location": "public/images/units/heat-illness/"
+      },
       "callout": {
         "type": "tip",
         "title": "Sip on a schedule",
@@ -40,7 +48,15 @@
         "Skin looking pale or feeling clammy",
         "Suddenly NOT sweating anymore, even though it's hot",
         "Acting confused, or saying things that don't make sense"
-      ]
+      ],
+      "image": {
+        "asset": "heat-illness-warning-signs.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple illustration of an athlete sitting on the sideline in hot weather, looking pale and clammy, head resting in their hands, with small clean icon callouts nearby showing a headache icon and a dizziness icon. Flat, friendly illustration style, minimal detail.",
+        "alt": "Athlete sitting on the sideline looking pale and dizzy in hot weather, with headache and dizziness icons.",
+        "location": "public/images/units/heat-illness/"
+      }
     },
     {
       "heading": "What to do if you notice these signs",
@@ -65,6 +81,14 @@
         "Heat stroke is when the body gets so overheated that it stops working right, especially the brain. This is the most serious kind of heat illness.",
         "The biggest red flags for heat stroke are confusion (acting strange, not making sense, not knowing where they are) and passing out. A person with heat stroke might still be sweating, so don't assume someone is fine just because they're wet with sweat."
       ],
+      "image": {
+        "asset": "heat-illness-heat-stroke-emergency.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Simple illustration of an athlete who has collapsed on the field in hot weather, with a teammate kneeling beside them and waving toward the sideline to call an adult. Clean, non-graphic emergency scene, plain illustration style for middle schoolers.",
+        "alt": "A teammate calling for help after another athlete collapses in hot weather.",
+        "location": "public/images/units/heat-illness/"
+      },
       "callout": {
         "type": "warning",
         "title": "Confusion or passing out in the heat = call 911",
@@ -82,7 +106,15 @@
         "Take breaks in the shade when you can.",
         "Speak up early — tell an adult as soon as you notice a warning sign, not after it gets worse.",
         "On very hot or humid days, coaches and athletic trainers may shorten practice or add extra breaks — that's a good thing, not a punishment."
-      ]
+      ],
+      "image": {
+        "asset": "heat-illness-prevention-habits.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Simple row of four flat icons showing hot-weather prevention habits: a water bottle, a shade umbrella, a small figure wearing light-colored loose clothing, and a clock showing scheduled breaks. Clean, flat icon style, minimal text.",
+        "alt": "Row of icons showing water bottle, shade, light clothing, and scheduled breaks as heat-illness prevention habits.",
+        "location": "public/images/units/heat-illness/"
+      }
     }
   ],
   "quiz": [

@@ -13,7 +13,15 @@
         "A concussion is an injury to the brain. It happens when a hit to the head, face, or body is hard enough to make the brain move around quickly inside the skull (the bones that protect your head). That movement can make the brain work the wrong way for a while.",
         "You do NOT have to get hit directly in the head to get a concussion. A hard hit to the body — like a big tackle or a shoulder-to-shoulder collision — can also shake the brain enough to cause one.",
         "You also do NOT have to \"black out\" (lose consciousness) to have a concussion. Most concussions happen without anyone passing out. That is one of the biggest myths in sports."
-      ]
+      ],
+      "image": {
+        "asset": "concussion-brain-in-skull.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple side-view cross-section illustration of a head, showing the skull as an outer outline and the brain as a soft shape inside it, with a couple of light motion lines showing the brain shifting after an impact. Clean, non-graphic, simple medical-illustration style for middle schoolers, minimal labels (skull, brain).",
+        "alt": "Cross-section diagram of a head showing the brain moving inside the skull after an impact.",
+        "location": "public/images/units/concussion/"
+      }
     },
     {
       "heading": "How to know if it happened",
@@ -25,7 +33,15 @@
         "Signs others might notice: you look dazed or confused, you move clumsily, you forget the play or which team you're playing, you answer questions slowly, you can't remember what happened right before or after the hit.",
         "Symptoms you might feel: headache, dizziness, feeling sick to your stomach, feeling foggy or \"not right,\" sensitivity to light or loud noise, and just feeling more tired than usual.",
         "Sometimes signs and symptoms show up right away. Sometimes they don't show up until hours later — even after you get home."
-      ]
+      ],
+      "image": {
+        "asset": "concussion-warning-signs.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple illustration of an athlete sitting on the sideline looking dazed and confused, with small clean icon callouts around them: a headache icon, a dizziness icon (swirl), and a question-mark icon for confusion. Flat, friendly illustration style, minimal detail.",
+        "alt": "Athlete on the sideline looking dazed, with icons showing headache, dizziness, and confusion.",
+        "location": "public/images/units/concussion/"
+      }
     },
     {
       "heading": "What to do: tell a trusted adult right away",
@@ -45,6 +61,14 @@
         "Some athletes try to hide how they feel so they can keep playing. This is one of the most dangerous things you can do after a possible concussion.",
         "A brain that is still healing from one hit is much more easily hurt by a second hit. In rare cases, a second hit before the brain heals can cause the brain to swell very quickly, which can be deadly. This is why coaches and athletic trainers take head hits so seriously, even when they look minor."
       ],
+      "image": {
+        "asset": "concussion-second-impact-risk.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Simple two-panel icon-style illustration. Left panel: a head/brain icon with a small bandage or healing icon labeled 'still healing.' Right panel: the same head icon receiving a second hit, with a warning triangle symbol. Flat, non-graphic icon style appropriate for middle schoolers, minimal text.",
+        "alt": "Two-panel icon illustration showing a healing brain, then a warning symbol for a second hit before it recovers.",
+        "location": "public/images/units/concussion/"
+      },
       "callout": {
         "type": "warning",
         "title": "Emergency signs — call 911 right away",
@@ -57,7 +81,15 @@
         "Most concussions get better within a few weeks, but every brain heals at its own speed. There is no way to speed it up by \"pushing through it\" — in fact, that can make it take longer.",
         "A student who has a concussion needs rest from both sports AND schoolwork at first, then returns to schoolwork before sports. A doctor or other licensed healthcare provider — never a coach, a parent, a teammate, or the athlete — decides when it's safe to return to practice and games.",
         "The rule athletic trainers and doctors follow is: \"When in doubt, sit them out.\" If there's any chance it's a concussion, the safe choice is always to stop playing until a healthcare provider checks it out."
-      ]
+      ],
+      "image": {
+        "asset": "concussion-return-to-play-steps.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Simple left-to-right step illustration with four flat icons connected by an arrow path: a bed/rest icon, a schoolbook icon, a doctor with a checkmark icon, and a sports ball icon last, showing the order rest comes first, then school, then a doctor's okay, then sports. Clean flat icon style, minimal text.",
+        "alt": "Four-step icon illustration showing the return-to-play order: rest, school, doctor checkup, then sports.",
+        "location": "public/images/units/concussion/"
+      }
     }
   ],
   "quiz": [
