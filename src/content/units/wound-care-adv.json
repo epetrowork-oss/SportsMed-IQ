@@ -19,7 +19,7 @@
         "asset": "wound-care-bleeding-type-comparison.webp",
         "ratio": "16:9",
         "background": "white",
-        "description": "Three-panel comparison of bleeding types from a wound. Panel 1 'Capillary': slow, oozing dark-red bleeding, labeled 'rarely dangerous alone.' Panel 2 'Venous': steady, dark-red flow, labeled 'low pressure, responds well to direct pressure.' Panel 3 'Arterial': bright-red blood spurting in sync with a pulse icon, labeled 'high pressure, life-threatening within minutes.' Clean medical-illustration style, non-graphic.",
+        "description": "Three-panel comparison of bleeding types from a wound. Panel 1 'Capillary': slow, superficial oozing from a scraped/abraded surface (road-rash style), lighter and less pooled than the other two panels, labeled 'rarely dangerous alone.' Panel 2 'Venous': steady, dark-red flow, labeled 'low pressure, responds well to direct pressure.' Panel 3 'Arterial': bright-red blood spurting in sync with a pulse icon, labeled 'high pressure, life-threatening within minutes.' Clean medical-illustration style, non-graphic.",
         "alt": "Comparison diagram of capillary, venous, and arterial bleeding by color, flow pattern, and urgency.",
         "location": "public/images/units/wound-care/"
       }
