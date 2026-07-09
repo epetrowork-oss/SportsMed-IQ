@@ -112,6 +112,41 @@
       "officialCode": "7-8: Goal Setting (6.x.S — exact sub-number TBD)",
       "text": "Develop a personal plan to remain safe and injury-free.",
       "verified": false
+    },
+    {
+      "id": "CTE.HSMT.Anchor.2",
+      "framework": "CTE-HSMT",
+      "officialCode": "Anchor 2.0",
+      "text": "Communications: acquire and accurately use health science and medical technology sector terminology and protocols for communicating clearly.",
+      "verified": false
+    },
+    {
+      "id": "CTE.HSMT.Anchor.3",
+      "framework": "CTE-HSMT",
+      "officialCode": "Anchor 3.0",
+      "text": "Career Planning and Management: integrate multiple sources of career information to plan and manage careers in the health science and medical technology sector.",
+      "verified": false
+    },
+    {
+      "id": "CTE.HSMT.Anchor.5",
+      "framework": "CTE-HSMT",
+      "officialCode": "Anchor 5.0",
+      "text": "Problem Solving and Critical Thinking: solve predictable and unpredictable work-related problems using critical thinking skills, independently and in teams.",
+      "verified": false
+    },
+    {
+      "id": "CTE.HSMT.Anchor.8",
+      "framework": "CTE-HSMT",
+      "officialCode": "Anchor 8.0",
+      "text": "Ethics and Legal Responsibilities: practice professional, ethical, and legal behavior consistent with applicable laws, regulations, and organizational norms.",
+      "verified": false
+    },
+    {
+      "id": "CTE.HSMT.Anchor.9",
+      "framework": "CTE-HSMT",
+      "officialCode": "Anchor 9.0",
+      "text": "Leadership and Teamwork: work with peers and professionals in a variety of health care settings, demonstrating leadership and effective teamwork.",
+      "verified": false
     }
   ]
 }

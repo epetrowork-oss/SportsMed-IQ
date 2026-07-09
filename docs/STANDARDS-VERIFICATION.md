@@ -41,5 +41,15 @@ check the Patient Care pathway list for:
 - [ ] The 7-8 **first aid** essential concept (wound care, ankle sprain
       7-8 units) — the 2008 doc likely has one; add its real code.
 
+## Added 2026-07-09 for the professional-skills strands
+
+Five more CTE anchor standards (2.0 Communications, 3.0 Career Planning,
+5.0 Problem Solving, 8.0 Ethics & Legal, 9.0 Leadership & Teamwork) were
+added for the content expansion's clinical-skills and profession strands
+(careers, legal/ethical, documentation, sports-medicine team, etc.). The
+eleven anchor standards are shared across all CA CTE sectors, so the
+codes are near-certain, but verify the paraphrased text against the HSMT
+document like every other entry.
+
 After editing, run `npm run validate:content` (it checks every unit's
 standards references against the catalog) and commit.

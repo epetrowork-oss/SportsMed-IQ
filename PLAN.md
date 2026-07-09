@@ -351,29 +351,38 @@ else is `implementer` (Sonnet).*
 *Routing: orchestrator specs the code format + merge semantics first
 (share.js is subtle); UI builds are `implementer` tasks.*
 
-- [ ] **Assignment code format** (`src/lib/assignments.js`): `SMIQA1.` +
+- [x] **Assignment code format** (`src/lib/assignments.js`): `SMIQA1.` +
       deflate-raw base64url (same plumbing as SMIQ2), payload
       `{name, unitIds[], mode, due?, createdAt}`. Multiple assignments
-      can coexist; re-importing the same name updates it. Stored in the
-      progress store but NOT in the student progress-code schema (codes
-      stay compatible; completion is derivable from unit progress).
-      Known alpha limitation to document: assignments don't follow a
+      coexist; re-importing the same name updates it. Stored in the
+      progress store but NOT in the student progress-code schema. Landed
+      via PR #13 along with the Sync-page import UI. Known alpha
+      limitation to document in TESTERS.md: assignments don't follow a
       student who moves devices via progress code.
-- [ ] **Teacher: assignment builder** on Teacher page: pick units
-      (grouped by strand × band, with grade-band filter), name it, pick
-      focus/open mode, optional due date, generate + copy code. Roster
-      gains per-assignment completion (% of assigned units complete per
-      student) alongside existing columns.
-- [ ] **Student: import + My Lessons**: paste code on Sync (and a
-      low-friction "have a class code?" entry on Home); "My Lessons"
-      becomes the primary home-page module when assignments exist —
-      Khan-style short queue ("next up" = first incomplete assigned
-      unit), due date shown, per-assignment progress bar; Library obeys
-      focus/open mode per decision 1.
-- [ ] **Browser-verify the full loop as both roles**: teacher builds code
-      → student imports → queue + focus mode correct → student completes
-      a unit → exports progress code → teacher roster shows assignment
-      completion. Garbage/truncated assignment codes → friendly errors.
+- [x] **Teacher: assignment builder** (`ce65b7b`): unit picker grouped by
+      category with grade-band filter (filtering never clears
+      selections), focus/open mode, optional due date, generate + copy
+      code; saved assignments persist on the teacher device
+      (`sportmediq:teacherAssignments:v1`), re-generate-by-same-name
+      updates in place, re-copy/remove. By Student drill-down shows
+      per-assignment "x/y complete (NN%)"; CSV gains one percent column
+      per assignment.
+- [x] **Student: import + My Lessons** (`388b3d2`): "Have a class code?"
+      entry on Home (plus the existing Sync import); My Lessons is the
+      primary home module when assignments exist — per-assignment card
+      with due date, progress bar, "Next up" link to first incomplete
+      assigned unit, All-done state; Library focus mode hides unassigned
+      units (any focus-mode assignment wins; union of all assigned ids;
+      deep links still work) with a "your teacher assigns lessons here"
+      note.
+- [x] **Full loop browser-verified** (orchestrator, 19/20 scripted checks
+      — the one "fail" was a toast-timing race in the test script, with
+      the add proven by the next assertions): teacher builds code →
+      student imports on Home → queue + focus mode correct → student
+      completes wound-care through the real UI → exports SMIQ2 code →
+      teacher roster shows «assignment» 1/3 (33%) on screen and "33" in
+      the CSV. Truncated class code → friendly error; garbage/wrong-type
+      errors covered by agent verification. Zero console errors.
 
 ### Day 3 — Fri Jul 10: look, ship, and hand off
 
@@ -414,6 +423,82 @@ Real images (user + ChatGPT pipeline, slots are ready), strand
 cross-links between grade-band siblings, `UnitCard` pill-logic cleanup,
 gamification beyond the queue (streaks/badges), fuller standards
 coverage reporting for teachers, accounts/live sync (permanently out).
+
+## Content tripling — 36 new strands (user go-ahead Thu Jul 9, in progress)
+
+**User decision (2026-07-09):** triple the content while the external
+ChatGPT image pipeline works on the existing 54 units' images. Target:
+18 → 54 strands, 54 → ~162 units. The alpha sprint's Day 3 items
+(aesthetic pass, deploy, QA, tester kit) stay the priority — content
+batches run in parallel because they only touch `src/content/units/`.
+
+**Routing:** every unit is a `unit-author` (Sonnet) task, batched ~6 at a
+time (all 9-10 baselines first, sibling bands in later waves, mirroring
+how the original spiral was built). Each agent tags 2-4 standards ids
+from the catalog. Orchestrator reviews diffs + validator output and
+personally reads anything sensitive (crisis/mental-health adjacent,
+emergency guidance). Standards catalog was extended with CTE anchors
+2/3/5/8/9 for the profession/clinical strands (drafted, unverified —
+same human-verification pass as the rest, see
+`docs/STANDARDS-VERIFICATION.md`).
+
+**Known follow-ons as batches land:** image-slot counts grow (regenerate
+`npm run images:shotlist` — the brief for already-shipped units doesn't
+change, new units only append), and the teacher CSV widens (4 columns
+per unit — fine for Sheets; revisit only if teachers complain).
+
+New categories: **Assessment & Clinical Skills**, **Medical Conditions &
+Special Populations**, **The Sports Medicine Profession** (existing 7
+categories keep their names exactly).
+
+| # | Strand | Category | 9-10 | 7-8 | 11-12 |
+|---|---|---|---|---|---|
+| 1 | injury-evaluation | Assessment & Clinical Skills | | | |
+| 2 | vital-signs | Assessment & Clinical Skills | | | |
+| 3 | medical-terminology | Assessment & Clinical Skills | | | |
+| 4 | anatomy-foundations | Assessment & Clinical Skills | | | |
+| 5 | therapeutic-modalities | Assessment & Clinical Skills | | | |
+| 6 | rehab-return-to-play | Assessment & Clinical Skills | | | |
+| 7 | splinting-immobilization | Assessment & Clinical Skills | | | |
+| 8 | documentation-recordkeeping | Assessment & Clinical Skills | | | |
+| 9 | kinesiology-movement | Assessment & Clinical Skills | | | |
+| 10 | cardiac-conditions | Medical Conditions & Special Populations | | | |
+| 11 | asthma-respiratory | Medical Conditions & Special Populations | | | |
+| 12 | diabetes-athletes | Medical Conditions & Special Populations | | | |
+| 13 | seizure-disorders | Medical Conditions & Special Populations | | | |
+| 14 | sickle-cell-trait | Medical Conditions & Special Populations | | | |
+| 15 | allergies-anaphylaxis | Medical Conditions & Special Populations | | | |
+| 16 | infectious-disease | Medical Conditions & Special Populations | | | |
+| 17 | female-athlete-health | Medical Conditions & Special Populations | | | |
+| 18 | adaptive-athletes | Medical Conditions & Special Populations | | | |
+| 19 | growth-development | Medical Conditions & Special Populations | | | |
+| 20 | medication-safety | Medical Conditions & Special Populations | | | |
+| 21 | spine-injuries | Head & Spine Injuries | | | |
+| 22 | hip-pelvis-injuries | Lower Extremity Injuries | | | |
+| 23 | foot-conditions | Lower Extremity Injuries | | | |
+| 24 | elbow-forearm-injuries | Upper Extremity Injuries | | | |
+| 25 | wrist-hand-injuries | Upper Extremity Injuries | | | |
+| 26 | chest-abdominal-injuries | Acute Care & First Aid | | | |
+| 27 | shock-recognition | Acute Care & First Aid | | | |
+| 28 | lightning-safety | Environmental Emergencies | | | |
+| 29 | air-quality | Environmental Emergencies | | | |
+| 30 | strength-conditioning | Prevention & Performance | | | |
+| 31 | sleep-recovery | Prevention & Performance | | | |
+| 32 | supplements-banned-substances | Prevention & Performance | | | |
+| 33 | protective-equipment | Prevention & Performance | | | |
+| 34 | careers-sports-medicine | The Sports Medicine Profession | | | |
+| 35 | legal-ethical-issues | The Sports Medicine Profession | | | |
+| 36 | sports-medicine-team | The Sports Medicine Profession | | | |
+
+Batch log (mark `x` in the table as units land):
+- [ ] Batch 1 (9-10): cardiac-conditions, spine-injuries,
+      injury-evaluation, vital-signs, strength-conditioning,
+      lightning-safety — launched Thu Jul 9.
+
+Band judgment note: a few profession/clinical strands may not merit a
+real `7-8` unit (e.g. documentation-recordkeeping, legal-ethical-issues)
+— decide per strand at sibling-wave time rather than forcing filler; the
+spiral contract is "up to three units per strand", not "exactly three".
 
 ## Previous plan (hero-banner approach) — SUPERSEDED 2026-07-08, kept for context
 
