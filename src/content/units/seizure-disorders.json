@@ -1,0 +1,284 @@
+{
+  "id": "seizure-disorders",
+  "title": "Seizures & Epilepsy: What To Do (and Not Do)",
+  "category": "Medical Conditions & Special Populations",
+  "strand": "seizure-disorders",
+  "gradeBand": "9-10",
+  "summary": "Recognize a seizure, respond correctly on the sideline, and unlearn the folk first aid that actually hurts people.",
+  "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.3", "CTE.HSMT.Anchor.6", "CTE.HSMT.B.4.5"],
+  "sections": [
+    {
+      "heading": "What a seizure actually is",
+      "body": [
+        "A seizure is a burst of abnormal electrical activity in the brain. Normally, brain cells (neurons) fire in organized, controlled patterns to run the body. During a seizure, a group of neurons — or sometimes the whole brain — fires in a sudden, disorganized surge. That electrical storm is what produces the movements, blank staring, or altered awareness you actually see.",
+        "Epilepsy is a diagnosis for someone who has recurring seizures, usually confirmed after two or more unprovoked seizures. It is a neurological condition, not a mental illness and not a character flaw, and in most cases it is well-controlled with daily anti-seizure medication. An athlete with epilepsy is not fragile — with their condition managed, most participate fully in most sports. A single seizure caused by something obvious (a high fever in a young child, a severe head injury, low blood sugar) does not by itself mean someone has epilepsy."
+      ]
+    },
+    {
+      "heading": "Recognizing a generalized (tonic-clonic) seizure",
+      "body": [
+        "The seizure type most people picture — and the one this unit focuses on — is the generalized tonic-clonic seizure, sometimes still called a 'grand mal' seizure. It usually has two phases.",
+        "The tonic phase comes first: the body suddenly stiffens, the athlete may cry out as air is pushed past a tightened throat, and they fall if standing. This is quick, often just a few seconds. The clonic phase follows: rhythmic, jerking movements of the arms and legs. Breathing can look irregular or even stop briefly during the seizure, and the skin may look pale or slightly bluish — that's from the muscles working hard and breathing being interrupted, and it typically resolves once the jerking stops and normal breathing resumes."
+      ],
+      "list": [
+        "Sudden stiffening (tonic phase) — body goes rigid, may fall.",
+        "Rhythmic jerking (clonic phase) — arms and legs shake in a repeated pattern.",
+        "Possible loss of bladder control, biting the tongue or cheek, or brief irregular breathing.",
+        "Confusion, drowsiness, or gradual return to normal awareness afterward — this recovery period is called the postictal state and can last minutes."
+      ],
+      "image": {
+        "asset": "seizure-disorders-tonic-clonic-phases.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Simple three-panel instructional illustration of a generalized tonic-clonic seizure timeline on a gym floor. Panel 1 labeled 'Tonic phase': an athlete's body shown rigid and stiffened, falling. Panel 2 labeled 'Clonic phase': the athlete on the ground with arms and legs shown mid-jerk with small motion lines indicating rhythmic movement. Panel 3 labeled 'Postictal (recovery)': the athlete lying calmly on their side (recovery position) with a rescuer kneeling nearby, looking drowsy but breathing normally. Clean, non-graphic athletic-training illustration style, no distressing facial expressions.",
+        "alt": "Three-panel diagram showing the tonic phase (stiffening), clonic phase (jerking), and postictal recovery phase of a generalized tonic-clonic seizure.",
+        "location": "public/images/units/seizure-disorders/"
+      }
+    },
+    {
+      "heading": "Not every seizure looks like that",
+      "body": [
+        "It's worth knowing that tonic-clonic seizures are not the only type. An absence seizure is a brief seizure — usually just a few seconds — where a person suddenly stops what they're doing and stares blankly, unresponsive to their name or a tap on the shoulder, then resumes as if nothing happened. There's no falling and no jerking, which is exactly why absence seizures are so often mistaken for daydreaming, zoning out, or not paying attention.",
+        "You are not expected to diagnose seizure types on the sideline. The point of knowing absence seizures exist is awareness: if a teammate repeatedly 'blanks out' for a few seconds at a time and doesn't remember what happened during those moments, that pattern is worth mentioning to the athletic trainer or a parent — it's a recognize-and-report situation, not something to manage yourself."
+      ]
+    },
+    {
+      "heading": "What triggers a seizure",
+      "body": [
+        "Most people with epilepsy have no single obvious trigger for any given seizure — it's simply how their brain's electrical activity behaves, sometimes made more likely by missed medication, illness, dehydration, extreme heat, or lack of sleep. Some seizures, though, have a clear athletic cause that changes how you respond.",
+        "A seizure that happens after a hit to the head is a major exception to everything else in this unit. That is not a routine seizure to manage on the sideline — it is a sign of a possible serious brain injury and must be treated as the medical emergency it is."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Seizure after a head impact = treat as a head injury emergency",
+        "text": "If a seizure happens during or right after a blow to the head, call 911 immediately and treat it as a possible serious traumatic brain injury, not routine epilepsy. This overlaps with concussion and head-injury emergency care (see the Concussions unit) — don't wait to see if the athlete 'seems fine' afterward, and don't let them return to play that day under any circumstances."
+      }
+    },
+    {
+      "heading": "The DOs: correct response during a seizure",
+      "body": [
+        "If you see someone having a generalized seizure, your job is protection, not intervention. You cannot stop a seizure once it starts — it has to run its course. What you can control is keeping the person safe and getting help moving."
+      ],
+      "list": [
+        "Time it — check a clock or start a phone timer the moment it begins. The exact duration is critical information for 911 and for the athletic trainer.",
+        "Clear the area — move hard or sharp objects (chairs, equipment, water bottles) away from the person so they can't strike them while jerking.",
+        "Cushion the head — place something soft and flat, like a folded jacket or a hand, under the head to prevent it from hitting the ground repeatedly.",
+        "Turn them on their side once the jerking movements stop — this is the recovery position, and it keeps the airway clear and lets fluid drain out of the mouth instead of down the throat.",
+        "Stay with them the entire time, including through the confused recovery period afterward, and send someone to get the athletic trainer or another adult right away."
+      ],
+      "image": {
+        "asset": "seizure-disorders-recovery-position.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Overhead-angle illustration of a person lying on their side on a gym or field surface in the recovery position: top leg bent forward for stability, top arm bent and supporting the head, head tilted slightly down and to the side so the mouth points toward the ground. A rescuer's hands shown gently guiding the shoulder and hip into position. Clean athletic-training instructional style, simple labels for 'head tilted down' and 'top leg bent for stability.'",
+        "alt": "Diagram of the recovery position: lying on the side with the top leg bent for stability and the head tilted down to keep the airway clear.",
+        "location": "public/images/units/seizure-disorders/"
+      }
+    },
+    {
+      "heading": "The DON'Ts: busting the myths",
+      "body": [
+        "More people get hurt by bad seizure first aid than by the seizure itself. These myths are common, they are taught by well-meaning people, and every one of them is wrong.",
+        "The biggest myth: a person having a seizure CANNOT swallow their own tongue. It is physically not possible — the tongue is attached and cannot fall back far enough to block the airway on its own. This single myth is responsible for countless people getting spoons, fingers, and wallets shoved into a seizing person's mouth, which is exactly what causes the injuries people wrongly blame on the seizure."
+      ],
+      "list": [
+        "DON'T hold them down or try to stop the jerking movements — you cannot stop a seizure by force, and restraining someone can injure their joints or muscles, or cause a fracture.",
+        "DON'T put ANYTHING in their mouth — not a spoon, not your fingers, not a bite guard. They cannot swallow their tongue, and forcing an object into a clenched, jerking jaw can break teeth, cut the mouth, or cause choking on the object itself.",
+        "DON'T give food, water, or anything to swallow until they are fully alert and acting like themselves again — swallowing reflexes are unreliable during the confused postictal period, and giving something to drink too soon risks choking."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Never restrain, never insert anything in the mouth",
+        "text": "Holding a seizing person down and putting objects in their mouth are the two most common and most harmful seizure first-aid mistakes. Neither one helps — both cause injuries that a hands-off, protect-and-time approach would have prevented."
+      }
+    },
+    {
+      "heading": "When it's a 911 emergency",
+      "body": [
+        "A single seizure in a student with known, well-controlled epilepsy that runs its normal course and ends with the person returning to their baseline usually does not need an ambulance — but it always needs the athletic trainer or a supervising adult notified, and the parents informed, following that athlete's individual seizure action plan (a written plan on file describing their typical seizures and exactly what to do). Not calling 911 is never your decision to make alone; it follows the plan or the AT's call, not a guess."
+      ],
+      "list": [
+        "The seizure lasts longer than 5 minutes, or you're not sure how long it's been.",
+        "A second seizure starts before the person has recovered from the first (repeated seizures).",
+        "It is the person's first-ever seizure.",
+        "The person was injured during the seizure (hit their head, fell from height, injury during the fall).",
+        "The seizure happens in water.",
+        "The person has trouble breathing normally after the jerking stops, or their color doesn't improve.",
+        "The person does not return to normal awareness, or does not wake up, within a reasonable time after the seizure ends."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "When in doubt, call",
+        "text": "You are not expected to judge borderline cases perfectly. If you're unsure whether a seizure meets one of these criteria, call 911 — a false alarm costs a phone call; a missed emergency does not."
+      }
+    },
+    {
+      "heading": "Sport-specific considerations and prevention",
+      "body": [
+        "For most athletes with well-controlled epilepsy, participation guidelines focus on supervision in specific higher-risk settings rather than restriction from sport altogether. Swimming and other water sports need a one-on-one supervision plan (never swimming alone) because a seizure in water is an immediate drowning risk. Activities at height — climbing, gymnastics apparatus, diving — need similar individualized supervision plans worked out in advance with the athletic trainer, coach, and the athlete's physician.",
+        "The core framework for this entire unit, like every medical emergency in this program, is recognize, protect, refer: recognize what's happening and whether it crosses into emergency territory, protect the athlete from injury during the event using the DOs above, and refer to 911 or the athletic trainer/parents according to the criteria in this unit. Students never diagnose seizure type, adjust medication, or clear an athlete to return to play — those are always an adult's and a physician's call."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is a seizure?",
+      "choices": [
+        "A burst of abnormal electrical activity in the brain",
+        "A sudden drop in blood sugar",
+        "A muscle cramp caused by dehydration",
+        "A panic response to sudden pain"
+      ],
+      "answerIndex": 0,
+      "explanation": "A seizure is a sudden, disorganized surge of electrical activity among brain cells (neurons). That electrical storm is what produces the movements, staring, or altered awareness observed from the outside."
+    },
+    {
+      "id": "q2",
+      "question": "How is epilepsy best described?",
+      "choices": [
+        "A mental illness that requires isolation from team activities",
+        "A condition defined by recurring seizures, usually well-controlled with medication, that does not stop most athletes from playing most sports",
+        "Any single seizure a person ever has in their lifetime",
+        "A contagious condition triggered by stress from teammates"
+      ],
+      "answerIndex": 1,
+      "explanation": "Epilepsy is a neurological condition diagnosed after recurring, unprovoked seizures. It's not a mental illness, and with medication management most athletes with epilepsy participate fully in sport — a single seizure with an obvious cause does not, by itself, mean someone has epilepsy."
+    },
+    {
+      "id": "q3",
+      "question": "A teammate suddenly stiffens and falls, then her arms and legs begin rhythmic jerking for about a minute before she goes still and confused. What are these two phases called, in order?",
+      "choices": [
+        "Postictal, then tonic",
+        "Clonic, then tonic",
+        "Tonic, then clonic",
+        "Absence, then tonic"
+      ],
+      "answerIndex": 2,
+      "explanation": "The tonic phase (sudden stiffening) comes first, followed by the clonic phase (rhythmic jerking). The confused, drowsy period afterward is called postictal — it comes after both, not between them."
+    },
+    {
+      "id": "q4",
+      "question": "A seizure begins during practice. What should you do first?",
+      "choices": [
+        "Try to hold the person's arms and legs still",
+        "Time the seizure and clear hard or sharp objects out of the way",
+        "Put a rolled towel between their teeth to protect their tongue",
+        "Give them water to help them calm down"
+      ],
+      "answerIndex": 1,
+      "explanation": "The first correct actions are protection, not intervention: start timing the seizure and clear the area of anything the person could strike. You cannot stop a seizure by holding someone down, nothing goes in the mouth, and nothing to drink until they're fully alert."
+    },
+    {
+      "id": "q5",
+      "question": "Why should you never put anything in the mouth of someone having a seizure?",
+      "choices": [
+        "They cannot physically swallow their own tongue, so the object itself becomes the injury risk — broken teeth, cut mouth, or choking",
+        "It could make them vomit immediately",
+        "It's fine to do it, but only with a soft object like a folded cloth",
+        "It's only dangerous if the person is a child"
+      ],
+      "answerIndex": 0,
+      "explanation": "A seizing person cannot swallow their tongue — it's physically impossible. Objects forced into a clenched, jerking jaw are what actually cause broken teeth, cut gums, or a choking hazard, which is exactly why this old myth is actively harmful advice."
+    },
+    {
+      "id": "q6",
+      "question": "When should you turn a seizing athlete onto their side into the recovery position?",
+      "choices": [
+        "As soon as they hit the ground, before the jerking starts",
+        "Once the jerking movements have stopped",
+        "Only if they ask you to",
+        "Never — leave them exactly as they fell"
+      ],
+      "answerIndex": 1,
+      "explanation": "The recovery position is used once the clonic (jerking) movements have stopped. Turning them on their side then keeps the airway clear and lets fluid drain out of the mouth instead of toward the throat during the confused recovery period."
+    },
+    {
+      "id": "q7",
+      "question": "A student with well-controlled epilepsy has a typical seizure that lasts about a minute and a half, and within a few minutes she is talking normally and knows where she is. According to her seizure action plan, no other red flags are present. What is the correct next step?",
+      "choices": [
+        "Call 911 immediately — any seizure is always an ambulance-level emergency",
+        "Do nothing further; no one else needs to know since she recovered fine",
+        "Let her return to play right away since she seems back to normal",
+        "No ambulance is required, but the athletic trainer/supervising adult must be notified and her parents informed per her action plan"
+      ],
+      "answerIndex": 3,
+      "explanation": "A known epilepsy seizure that runs its normal course and ends with a return to baseline usually doesn't need 911, but it always needs the AT/adult notified and parents informed following the athlete's plan — that's a required step, not optional, and it's not the same as immediate return to play, which still needs the AT/plan to decide."
+    },
+    {
+      "id": "q8",
+      "question": "Which of these seizure situations does NOT, by itself, require calling 911?",
+      "choices": [
+        "A brief, typical seizure in a known epilepsy patient that resolves normally within its usual pattern, with no injury and a full return to awareness",
+        "A first-ever seizure in an athlete with no seizure history",
+        "A seizure lasting longer than 5 minutes",
+        "A seizure that happens while the athlete is in the pool"
+      ],
+      "answerIndex": 0,
+      "explanation": "A brief, typical seizure that resolves within a known pattern and ends with normal awareness restored usually doesn't need an ambulance — it still needs the AT/adult and parents notified, just not necessarily 911. A seizure over 5 minutes, a first-ever seizure, and a seizure in water are all listed 911 criteria."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Seizure",
+      "back": "A burst of abnormal electrical activity in the brain, causing sudden changes in movement, awareness, or behavior."
+    },
+    {
+      "id": "f2",
+      "front": "Epilepsy",
+      "back": "A condition defined by recurring, unprovoked seizures — usually well-controlled with daily medication. Most athletes with epilepsy participate in most sports."
+    },
+    {
+      "id": "f3",
+      "front": "Tonic phase",
+      "back": "The first phase of a generalized tonic-clonic seizure — sudden body stiffening, often with a fall."
+    },
+    {
+      "id": "f4",
+      "front": "Clonic phase",
+      "back": "The second phase of a generalized tonic-clonic seizure — rhythmic jerking of the arms and legs."
+    },
+    {
+      "id": "f5",
+      "front": "Postictal state",
+      "back": "The confused, drowsy recovery period after a seizure ends, which can last several minutes before awareness fully returns."
+    },
+    {
+      "id": "f6",
+      "front": "Absence seizure",
+      "back": "A brief seizure (a few seconds) of blank staring and unresponsiveness with no falling or jerking — often mistaken for daydreaming."
+    },
+    {
+      "id": "f7",
+      "front": "DO: Time it and clear the area",
+      "back": "Start timing the seizure immediately and move hard or sharp objects away so the person can't strike them while moving."
+    },
+    {
+      "id": "f8",
+      "front": "DO: Recovery position",
+      "back": "Once jerking movements stop, turn the person onto their side to keep the airway clear and let fluid drain out of the mouth."
+    },
+    {
+      "id": "f9",
+      "front": "DON'T hold them down",
+      "back": "You cannot stop a seizure by force — restraining someone can injure joints, muscles, or cause a fracture."
+    },
+    {
+      "id": "f10",
+      "front": "The tongue-swallowing myth",
+      "back": "False — a person cannot swallow their own tongue during a seizure. Never put anything in their mouth; it causes the injuries people wrongly blame on the seizure."
+    },
+    {
+      "id": "f11",
+      "front": "911 criteria for a seizure",
+      "back": "Longer than 5 minutes, repeated seizures, first-ever seizure, injury during the seizure, happens in water, trouble breathing after, or no return to normal awareness."
+    },
+    {
+      "id": "f12",
+      "front": "Seizure after a head impact",
+      "back": "A red flag — treat as a possible serious head/brain injury emergency, call 911, and never let the athlete return to play that day."
+    }
+  ]
+}

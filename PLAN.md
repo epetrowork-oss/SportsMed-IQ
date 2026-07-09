@@ -463,11 +463,11 @@ categories keep their names exactly).
 | 8 | documentation-recordkeeping | Assessment & Clinical Skills | | | |
 | 9 | kinesiology-movement | Assessment & Clinical Skills | | | |
 | 10 | cardiac-conditions | Medical Conditions & Special Populations | x | | |
-| 11 | asthma-respiratory | Medical Conditions & Special Populations | | | |
-| 12 | diabetes-athletes | Medical Conditions & Special Populations | | | |
-| 13 | seizure-disorders | Medical Conditions & Special Populations | | | |
-| 14 | sickle-cell-trait | Medical Conditions & Special Populations | | | |
-| 15 | allergies-anaphylaxis | Medical Conditions & Special Populations | | | |
+| 11 | asthma-respiratory | Medical Conditions & Special Populations | x | | |
+| 12 | diabetes-athletes | Medical Conditions & Special Populations | x | | |
+| 13 | seizure-disorders | Medical Conditions & Special Populations | x | | |
+| 14 | sickle-cell-trait | Medical Conditions & Special Populations | x | | |
+| 15 | allergies-anaphylaxis | Medical Conditions & Special Populations | x | | |
 | 16 | infectious-disease | Medical Conditions & Special Populations | | | |
 | 17 | female-athlete-health | Medical Conditions & Special Populations | | | |
 | 18 | adaptive-athletes | Medical Conditions & Special Populations | | | |
@@ -479,7 +479,7 @@ categories keep their names exactly).
 | 24 | elbow-forearm-injuries | Upper Extremity Injuries | | | |
 | 25 | wrist-hand-injuries | Upper Extremity Injuries | | | |
 | 26 | chest-abdominal-injuries | Acute Care & First Aid | | | |
-| 27 | shock-recognition | Acute Care & First Aid | | | |
+| 27 | shock-recognition | Acute Care & First Aid | x | | |
 | 28 | lightning-safety | Environmental Emergencies | x | | |
 | 29 | air-quality | Environmental Emergencies | | | |
 | 30 | strength-conditioning | Prevention & Performance | x | | |
@@ -501,9 +501,19 @@ Batch log (mark `x` in the table as units land):
       built app: 60 units, 18/24/18 grade split, both new categories
       render, all six units' lesson/quiz/flashcards/standards line work,
       zero console errors.
-- [ ] Batch 2 (9-10, medical-emergency cluster): asthma-respiratory,
+- [x] Batch 2 (9-10, medical-emergency cluster): asthma-respiratory,
       diabetes-athletes, allergies-anaphylaxis, sickle-cell-trait,
-      seizure-disorders, shock-recognition — launched Thu Jul 9.
+      seizure-disorders, shock-recognition — all validator-clean, zero
+      warnings. Orchestrator read every emergency-response section
+      word-for-word (inhaler/medication boundary, epi-then-911 + biphasic,
+      seizure DON'Ts + 5-minute rule, hypoglycemia nothing-by-mouth,
+      sickling never-push-through, shock response); trimmed the outdated
+      injection-site-massage step from the anaphylaxis auto-injector
+      list. Browser-verified: 66 units, 18/30/18 split, all six render
+      end-to-end, zero console errors.
+- [ ] Batch 3 (9-10): infectious-disease, female-athlete-health,
+      growth-development, medication-safety, adaptive-athletes,
+      medical-terminology — launched Thu Jul 9.
 
 Band judgment note: a few profession/clinical strands may not merit a
 real `7-8` unit (e.g. documentation-recordkeeping, legal-ethical-issues)

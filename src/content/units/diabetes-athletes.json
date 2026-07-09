@@ -1,0 +1,284 @@
+{
+  "id": "diabetes-athletes",
+  "title": "Diabetes in Athletes: Highs, Lows & Sideline Awareness",
+  "category": "Medical Conditions & Special Populations",
+  "strand": "diabetes-athletes",
+  "gradeBand": "9-10",
+  "summary": "Recognize a type 1 diabetes low blood sugar emergency before it's mistaken for a concussion or heat illness, and know exactly what helps.",
+  "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.3", "CTE.HSMT.Anchor.6", "CTE.HSMT.B.4.5"],
+  "sections": [
+    {
+      "heading": "What is type 1 diabetes?",
+      "body": [
+        "About 1 in 400 kids and teens in the U.S. lives with type 1 diabetes, so it's one of the more common chronic conditions you'll run into on a team roster. Understanding what's actually happening inside the body is the first step to helping a teammate who has it.",
+        "In type 1 diabetes, the immune system mistakenly attacks and destroys the beta cells in the pancreas — the cells that make insulin, a hormone that acts like a key, letting glucose (sugar) move out of the bloodstream and into cells for energy. Without insulin, glucose can't get where it needs to go: it builds up in the blood while muscles and organs run short on fuel.",
+        "Because the body can no longer make its own insulin, everything insulin used to handle automatically now has to be managed by hand — checking blood glucose, giving insulin by injection or pump, and balancing food, activity, and stress around it, every single day."
+      ],
+      "list": [
+        "Type 1 diabetes: the body makes little or no insulin at all — insulin has to be replaced manually, for life.",
+        "Type 2 diabetes: the body still makes insulin but doesn't use it well — different cause, different management, and not the focus of this unit."
+      ]
+    },
+    {
+      "heading": "Why exercise throws blood sugar off",
+      "body": [
+        "In someone without diabetes, the body automatically fine-tunes insulin and glucose release to match activity. An athlete with type 1 diabetes doesn't have that automatic system — so exercise, while great for overall health, is also one of the biggest day-to-day management challenges.",
+        "Working muscle pulls glucose out of the bloodstream for fuel, and it does this efficiently even without much insulin on board during activity. On top of that, muscle stays more sensitive to insulin for hours after the activity stops — so blood glucose can keep dropping well after practice ends, sometimes into the evening or overnight.",
+        "That's why an athlete with type 1 diabetes might check blood glucose before, during, and after practice, eat extra carbohydrate around a hard workout, or adjust an insulin dose. It also means low-blood-sugar emergencies aren't limited to the middle of practice — they can show up hours later."
+      ],
+      "image": {
+        "asset": "diabetes-athletes-exercise-glucose-curve.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "A simple line graph titled 'Blood glucose during and after exercise' with time on the x-axis (practice start, practice end, +2 hours, +6 hours, overnight) and blood glucose level on the y-axis. Show a line that dips during exercise, partially recovers, then dips again several hours later into the overnight period, with a shaded 'low blood sugar' zone along the bottom of the chart. Clean, textbook-chart style, easy to read at a glance.",
+        "alt": "Line graph showing an athlete's blood glucose dropping during exercise and again several hours later, including overnight.",
+        "location": "public/images/units/diabetes-athletes/"
+      }
+    },
+    {
+      "heading": "Recognizing low blood sugar: the sideline emergency",
+      "body": [
+        "Low blood sugar (hypoglycemia) is the diabetes emergency you're most likely to see on a field or court, and it can develop in minutes. Blood glucose dropping below roughly 70 mg/dL starves the brain of fuel, and the brain is what shows it first."
+      ],
+      "list": [
+        "Shakiness or trembling",
+        "Sweating — often heavy, out of proportion to the heat",
+        "Confusion or trouble concentrating",
+        "Sudden irritability or a mood change",
+        "Slurred speech",
+        "Looking dazed, glassy-eyed, or 'drunk'",
+        "Weakness or unsteadiness on their feet"
+      ],
+      "image": {
+        "asset": "diabetes-athletes-hypo-vs-hyper-chart.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "A two-column comparison chart. Left column labeled 'Low blood sugar (hypoglycemia) — fast onset, minutes' listing shakiness, sweating, confusion, irritability, slurred speech, and a dazed look, with a downward arrow icon. Right column labeled 'High blood sugar (hyperglycemia) — slow onset, hours' listing thirst, frequent urination, fatigue, and blurred vision, with an upward arrow icon. Clean infographic style, high contrast, easy to scan on a phone screen.",
+        "alt": "Side-by-side comparison chart of hypoglycemia (fast-onset) versus hyperglycemia (slow-onset) signs and symptoms.",
+        "location": "public/images/units/diabetes-athletes/"
+      }
+    },
+    {
+      "heading": "Why teammates need to know",
+      "body": [
+        "Here's the catch: every sign of low blood sugar can also show up in a concussion or heat illness. A teammate who looks 'out of it' after a big hit, or dazed on a hot afternoon, might actually be having a low blood sugar episode instead — or on top of it.",
+        "This is exactly why it matters that coaches and teammates know ahead of time which athletes have type 1 diabetes. That knowledge is often what turns a confusing, scary moment into a fast, correct response instead of a dangerous guess. Athletes with diabetes typically carry fast-acting sugar supplies with them (in a bag, pocket, or locker) specifically so a teammate or coach can grab them in an emergency."
+      ]
+    },
+    {
+      "heading": "Responding to low blood sugar",
+      "body": [
+        "If the athlete is awake, alert enough to follow simple instructions, and can swallow safely: give fast-acting sugar immediately, from the athlete's own diabetes supplies if possible — glucose tablets, glucose gel, or juice. Regular soda or juice works; diet or sugar-free drinks do not, because they don't raise blood glucose.",
+        "Tell the coach or athletic trainer right away, and never leave the athlete alone. Many teams use the 15-15 rule: give about 15 grams of fast sugar, wait 15 minutes, and recheck how the athlete is doing (or recheck blood glucose if a meter or CGM is available) — repeating if they're still low."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Unresponsive or can't swallow? Nothing by mouth — call 911",
+        "text": "If the athlete is unresponsive, having a seizure, or cannot swallow safely, do not give anything by mouth — the choking risk is too high. Activate your team's Emergency Action Plan and call 911 immediately. Severe lows sometimes require glucagon, an emergency medication that raises blood sugar fast, but it is given only by trained personnel (athletic trainer, EMS, or someone specifically trained for that athlete) — never by a student aide. A student aide's job is to recognize, protect, and refer, not to administer insulin or glucagon."
+      }
+    },
+    {
+      "heading": "High blood sugar: slower but still serious",
+      "body": [
+        "High blood sugar (hyperglycemia) is the flip side — glucose builds up in the blood instead of getting into cells. It usually develops over hours rather than minutes, so it's less likely to blindside you on the sideline, but it still needs adult attention."
+      ],
+      "list": [
+        "Excessive thirst",
+        "Frequent urination",
+        "Fatigue or sluggishness",
+        "Blurred vision"
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Fruity breath, vomiting, rapid breathing — get help now",
+        "text": "If high blood sugar goes unmanaged long enough it can lead to diabetic ketoacidosis (DKA), a genuine medical emergency. Fruity-smelling breath, nausea, vomiting, or rapid/deep breathing alongside the signs above mean: get the athlete to medical care immediately, the same as any other emergency."
+      }
+    },
+    {
+      "heading": "CGMs, insulin pumps & the teammate rule",
+      "body": [
+        "Diabetes management today usually involves wearable technology. A continuous glucose monitor (CGM) is a small sensor, often worn on the arm or abdomen, that tracks glucose around the clock and sends readings to a phone or receiver — many are set to alarm before a low or high gets dangerous. An insulin pump is a small device that delivers insulin through a thin tube under the skin, programmed by the athlete (or, for younger athletes, their family) to match meals and activity.",
+        "These devices are common on rosters at every level, and they're a big part of why so many athletes manage type 1 diabetes safely through practices, games, and tournaments."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "One rule for everyone else",
+        "text": "If you're not the athlete managing their own diabetes, don't touch their CGM or insulin pump — don't silence an alarm, don't remove it, don't adjust a setting. If a device alarms, make sure the athlete and a coach or athletic trainer know. Your job is to notice and report, not to operate someone else's medical equipment."
+      }
+    },
+    {
+      "heading": "Diabetes and sports: prevention & team prep",
+      "body": [
+        "Well-managed type 1 diabetes is fully compatible with sports at every level — recreational, high school, college, even the Olympics. The key word is managed: a little team-level preparation goes a long way toward keeping that management working smoothly under the stress of competition.",
+        "The role of a student aide is the same here as anywhere else in sports medicine: recognize the signs, protect the athlete in the moment, and refer to a coach, athletic trainer, or 911. You're never expected to diagnose, adjust a device, or give medication — getting the right adult involved fast is the whole job."
+      ],
+      "list": [
+        "Know which teammates have type 1 diabetes and where they keep their supplies (glucose tabs/gel, juice, meter).",
+        "Make sure the athlete's emergency action plan is on file with the coach or athletic trainer, and know the basics of it.",
+        "Encourage routine glucose checks around practice — before, sometimes during, and after — since that's how lows and highs get caught early.",
+        "Never assume a dazed or confused teammate is 'just tired' or 'faking it' — treat it as a possible emergency until an adult says otherwise."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What causes type 1 diabetes?",
+      "choices": [
+        "Eating too much sugar as a child",
+        "The pancreas making too much insulin",
+        "The immune system destroys the cells in the pancreas that make insulin",
+        "A virus that permanently raises blood glucose"
+      ],
+      "answerIndex": 2,
+      "explanation": "Type 1 diabetes is an autoimmune condition — the immune system mistakenly attacks and destroys the beta cells in the pancreas that produce insulin. It isn't caused by diet or sugar intake, and it isn't the same as type 2 diabetes, where the body still makes insulin but has trouble using it."
+    },
+    {
+      "id": "q2",
+      "question": "Why can a hard practice cause an athlete with type 1 diabetes to have low blood sugar even hours after practice ends?",
+      "choices": [
+        "Working muscle keeps pulling glucose from the blood and stays more insulin-sensitive for hours afterward, sometimes into the night",
+        "Exercise permanently shuts off the pancreas",
+        "Sweating removes glucose directly from the blood",
+        "Insulin pumps automatically increase their dose during exercise"
+      ],
+      "answerIndex": 0,
+      "explanation": "Working muscle takes up glucose for fuel and repair, and stays more sensitive to insulin for hours after activity stops — so blood glucose can keep dropping well after practice, even overnight. That delayed-drop effect is exactly why exercise commonly triggers low blood sugar in athletes with diabetes. Sweat doesn't remove glucose, and pumps don't auto-adjust like that."
+    },
+    {
+      "id": "q3",
+      "question": "During conditioning drills, a teammate with known type 1 diabetes starts looking dazed, is sweating heavily, and slurs her words when she answers you — but she's still awake and can swallow. What should you do first?",
+      "choices": [
+        "Have her lie down and wait to see if it passes on its own",
+        "Give her fast-acting sugar from her own diabetes supplies and immediately tell the coach or athletic trainer",
+        "Send her to run it off, since exercise lowers blood sugar anyway",
+        "Give her water and tell her to sit in the shade"
+      ],
+      "answerIndex": 1,
+      "explanation": "These are classic low blood sugar (hypoglycemia) signs. Because she's awake and can swallow safely, fast-acting sugar from her own supplies is the right first step, paired with getting an adult involved right away. Waiting it out, exercising through it, or treating it like heat illness could let it get worse."
+    },
+    {
+      "id": "q4",
+      "question": "Why is it important for teammates and coaches to know that an athlete has type 1 diabetes, even though it's personal medical information?",
+      "choices": [
+        "So teammates can control her diet during the season",
+        "So the team can post it publicly for awareness",
+        "So coaches can decide when she is allowed to play",
+        "Low blood sugar can look like a concussion or heat illness, and knowing the diagnosis ahead of time helps everyone respond correctly and quickly"
+      ],
+      "answerIndex": 3,
+      "explanation": "Confusion, slurred speech, and looking 'out of it' show up in low blood sugar, concussions, and heat illness alike. If teammates and coaches already know an athlete has diabetes, they're far more likely to recognize a low and treat it fast instead of assuming it's something else. It's about faster, correct recognition — not diet control or public disclosure."
+    },
+    {
+      "id": "q5",
+      "question": "An athlete with known type 1 diabetes is found on the ground, unresponsive, during a suspected low blood sugar episode. What is the correct action?",
+      "choices": [
+        "Give nothing by mouth and activate the emergency action plan (call 911) immediately",
+        "Pour juice into his mouth right away since he needs sugar fast",
+        "Give him his insulin dose since he's diabetic",
+        "Wait a few minutes to see if he wakes up before doing anything"
+      ],
+      "answerIndex": 0,
+      "explanation": "An unresponsive athlete can't safely swallow — anything given by mouth risks choking. Nothing goes in the mouth; activate the EAP and call 911 immediately. Giving insulin here would be dangerous and wrong, since insulin lowers blood sugar even further — a student aide never administers insulin or glucagon."
+    },
+    {
+      "id": "q6",
+      "question": "Which symptom points specifically toward a high blood sugar emergency (diabetic ketoacidosis) rather than a low blood sugar emergency?",
+      "choices": [
+        "Shakiness and sweating",
+        "Slurred speech",
+        "Fruity-smelling breath with nausea and vomiting",
+        "Sudden irritability"
+      ],
+      "answerIndex": 2,
+      "explanation": "Fruity-smelling breath, nausea, and vomiting are signs of diabetic ketoacidosis (DKA), a high-blood-sugar emergency that develops over hours, not minutes. Shakiness, sweating, slurred speech, and irritability are the fast-onset signs of low blood sugar instead."
+    },
+    {
+      "id": "q7",
+      "question": "A teammate's insulin pump starts beeping during a game. As a student aide, what should you do?",
+      "choices": [
+        "Silence the alarm so it doesn't distract the team",
+        "Tell the athlete it's beeping and get an adult (coach/AT) involved — never touch or adjust the device yourself",
+        "Remove the pump so it stops beeping",
+        "Ignore it since it's not your device"
+      ],
+      "answerIndex": 1,
+      "explanation": "Devices like insulin pumps and CGMs belong to the athlete and are managed only by them or their trained supervising adult. The right move is making sure the athlete and an adult know it's alarming — never silence, remove, or adjust someone else's device, and never ignore it either."
+    },
+    {
+      "id": "q8",
+      "question": "Which statement about type 1 diabetes and sports is accurate?",
+      "choices": [
+        "Athletes with type 1 diabetes should avoid competitive sports to stay safe",
+        "Type 1 diabetes only affects younger athletes, not high schoolers",
+        "Insulin pumps make exercise unnecessary for blood sugar control",
+        "With good management, type 1 diabetes is fully compatible with sports at every level, from recreational to elite"
+      ],
+      "answerIndex": 3,
+      "explanation": "Plenty of high school, college, and even professional athletes manage type 1 diabetes successfully. It takes planning — checking glucose, adjusting food and insulin around activity — but it does not have to limit participation or level of competition."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Type 1 diabetes",
+      "back": "An autoimmune condition where the immune system destroys the insulin-producing beta cells in the pancreas, so the body can't make its own insulin."
+    },
+    {
+      "id": "f2",
+      "front": "Insulin's job",
+      "back": "The hormone that lets glucose (sugar) move out of the blood and into cells for energy. Without it, glucose builds up in the blood while cells go without fuel."
+    },
+    {
+      "id": "f3",
+      "front": "Hypoglycemia (low blood sugar)",
+      "back": "Blood glucose dropping too low, generally below about 70 mg/dL — a fast-developing sideline emergency."
+    },
+    {
+      "id": "f4",
+      "front": "Signs of low blood sugar",
+      "back": "Shakiness, sweating, confusion, irritability, slurred speech, looking dazed or 'drunk.'"
+    },
+    {
+      "id": "f5",
+      "front": "Why exercise causes lows",
+      "back": "Activity pulls glucose into working muscle and increases insulin sensitivity for hours afterward — lows can hit during exercise or hours later, even overnight."
+    },
+    {
+      "id": "f6",
+      "front": "Treating a mild low (athlete awake, can swallow)",
+      "back": "Give fast-acting sugar from the athlete's own supplies (juice, glucose tabs), tell the coach/AT immediately, and never leave the athlete alone."
+    },
+    {
+      "id": "f7",
+      "front": "Unresponsive or can't swallow safely",
+      "back": "Nothing by mouth — choking risk. Activate the EAP and call 911 immediately."
+    },
+    {
+      "id": "f8",
+      "front": "Hyperglycemia (high blood sugar)",
+      "back": "Blood glucose running too high; develops more slowly than a low. Signs include thirst, frequent urination, and fatigue."
+    },
+    {
+      "id": "f9",
+      "front": "Diabetic ketoacidosis (DKA) red flag",
+      "back": "Fruity-smelling breath with nausea/vomiting — a high blood sugar emergency; get medical help right away."
+    },
+    {
+      "id": "f10",
+      "front": "CGM (continuous glucose monitor)",
+      "back": "A small sensor worn on the skin that continuously tracks blood glucose and sends readings to a phone or receiver, often with alarms for highs/lows."
+    },
+    {
+      "id": "f11",
+      "front": "Insulin pump",
+      "back": "A small device that delivers insulin continuously through a thin tube under the skin, programmed by the athlete or their care team."
+    },
+    {
+      "id": "f12",
+      "front": "Golden rule for teammates/aides",
+      "back": "Never touch, silence, or adjust another athlete's CGM or insulin pump, and never give insulin or glucagon yourself — recognize, protect, refer."
+    }
+  ]
+}

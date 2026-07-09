@@ -1,0 +1,272 @@
+{
+  "id": "allergies-anaphylaxis",
+  "title": "Allergies & Anaphylaxis: When Minutes Matter",
+  "category": "Medical Conditions & Special Populations",
+  "strand": "allergies-anaphylaxis",
+  "gradeBand": "9-10",
+  "summary": "Tell a mild local allergic reaction apart from life-threatening anaphylaxis, and know why epinephrine — given fast — is the only thing that stops it.",
+  "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.3", "CTE.HSMT.Anchor.5", "CTE.HSMT.Anchor.6"],
+  "sections": [
+    {
+      "heading": "The allergy spectrum: from itchy bump to whole-body emergency",
+      "body": [
+        "An allergic reaction happens when the immune system — the body's defense system against germs and foreign substances — mistakes something harmless, like a bee sting or a peanut, for a threat and overreacts to it. Most allergic reactions seen around sports are mild and local: a few hives (raised, itchy, red welts on the skin) around a sting site, some redness and swelling right where the trigger touched the skin, maybe some sneezing. Uncomfortable, but it stays in one part of the body and isn't dangerous.",
+        "Anaphylaxis (an-uh-fuh-LAK-sis) is a different animal: it's a severe, whole-body allergic reaction that can involve multiple organ systems at once and turn life-threatening within minutes. The same trigger that gives one athlete a small itchy bump can send another athlete into anaphylaxis — a known allergy history raises the odds, but a first-ever reaction can also be anaphylaxis with no warning.",
+        "The key distinction in this unit isn't how uncomfortable a reaction looks — it's whether it stays local (one system, one spot) or spreads to involve two or more body systems at once. That distinction decides everything about how you respond, and it's covered in detail below."
+      ]
+    },
+    {
+      "heading": "Where these reactions show up in sports",
+      "body": [
+        "A handful of triggers account for most sports-related allergic reactions, and each one shows up in a predictable setting:"
+      ],
+      "list": [
+        "Insect stings — bees, wasps, hornets, and fire ants on outdoor fields, courses, and courts. A sting during a meet or practice is one of the most common anaphylaxis triggers a student aide will encounter.",
+        "Food — at team meals, tailgates, shared snacks, or postgame spreads, especially with unlabeled or mystery ingredients. Someone with a peanut or shellfish allergy may not know a dish contains a trigger until symptoms start.",
+        "Exercise-induced anaphylaxis — much less common, but real: for a small number of athletes, exercise itself (sometimes only when combined with a food eaten beforehand) can trigger a true anaphylactic reaction. You don't need to diagnose this on the spot — just know it exists and that a reaction can start during activity with no obvious sting or snack to blame."
+      ]
+    },
+    {
+      "heading": "Recognizing anaphylaxis: two or more body systems",
+      "body": [
+        "The clinical rule student aides should know: anaphylaxis is diagnosed when symptoms show up in two or more of the body's systems at the same time, following exposure to a likely trigger. Hives alone are usually a mild local reaction. Hives plus wheezing, or vomiting plus dizziness after a sting, is anaphylaxis until proven otherwise.",
+        "Watch across these systems:"
+      ],
+      "list": [
+        "Skin — widespread hives (not just at the sting site), flushing, itching, or swelling of the lips, face, tongue, or eyes.",
+        "Airway/breathing — throat tightness, a hoarse or raspy voice, trouble swallowing, wheezing (a high-pitched whistling sound when breathing), persistent coughing, or visible trouble catching a breath. Airway swelling is what makes anaphylaxis a true emergency.",
+        "Gut — vomiting, stomach cramping, or diarrhea showing up shortly after a known trigger (a sting, a bite of food).",
+        "Circulation/nervous system — dizziness, fainting or near-fainting, a weak or rapid pulse, confusion, or sudden collapse."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Two systems, minutes to act",
+        "text": "Symptoms in two or more of these systems after a likely trigger — for example widespread hives plus wheezing, or vomiting plus dizziness after a sting — means anaphylaxis. It can develop within minutes of exposure, so this is not a 'wait and see' situation."
+      },
+      "image": {
+        "asset": "allergies-anaphylaxis-body-systems.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple front-view outline of a young athlete's body with four body systems highlighted in distinct colors and callout labels: skin (hives icon near arms/torso), airway (throat/lungs icon with a wavy 'wheeze' line), gut (stomach icon), and circulation/nervous system (heart + a small dizzy-spiral icon near the head). Each label lists 2-3 short example symptoms. Clean medical-illustration style, no distressing detail, captioned 'Anaphylaxis: 2 or more systems at once.'",
+        "alt": "Diagram of a body with four systems highlighted — skin, airway, gut, and circulation/nervous system — each labeled with example anaphylaxis symptoms.",
+        "location": "public/images/units/allergies-anaphylaxis/"
+      }
+    },
+    {
+      "heading": "Epinephrine is the treatment — delay is the classic fatal mistake",
+      "body": [
+        "Epinephrine (also called adrenaline) is the only medication that reverses anaphylaxis. It tightens blood vessels to support blood pressure, relaxes the muscles around the airway, and reduces swelling — all within minutes of injection. It's delivered with an epinephrine auto-injector, a spring-loaded device (widely known by the brand name EpiPen) that pushes a preset dose into the outer thigh muscle through a short needle, even through clothing.",
+        "Antihistamines, like Benadryl, can ease itching and hives, but they do not stop airway swelling or a dropping blood pressure — they are far too slow and far too weak to treat true anaphylaxis on their own. Waiting to see if an antihistamine works, or waiting to see if symptoms get worse before using the auto-injector, is the single most common and most fatal mistake in anaphylaxis response.",
+        "The rule: if anaphylaxis is suspected, give epinephrine right away. The risk of a needless dose in someone who turns out fine is small; the risk of untreated anaphylaxis is not."
+      ],
+      "list": [
+        "1. Remove the safety cap.",
+        "2. Swing and press the injector firmly against the outer thigh (through clothing is fine) until it clicks.",
+        "3. Hold in place for the count printed on the device (commonly about 3 seconds).",
+        "4. Remove the injector and note the time it was given.",
+        "5. Call 911 / activate the EAP immediately — never after 'waiting to see.'"
+      ],
+      "image": {
+        "asset": "allergies-anaphylaxis-epipen-technique.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Step-by-step instructional illustration in 3 panels showing correct epinephrine auto-injector technique on a person's outer thigh: panel 1 removing the safety cap, panel 2 pressing the injector firmly against the outer thigh through athletic shorts until it clicks, panel 3 holding it in place with a small on-image timer/count indicator. Clean, non-graphic instructional style matching a first-aid manual, no visible needle.",
+        "alt": "Three-step diagram of epinephrine auto-injector technique: remove cap, press firmly into outer thigh, hold for a count.",
+        "location": "public/images/units/allergies-anaphylaxis/"
+      }
+    },
+    {
+      "heading": "Who gives it — and your job as a student aide",
+      "body": [
+        "An athlete with a known allergy who is able to should self-administer their own prescribed auto-injector at the first sign of anaphylaxis. If they can't act fast enough themselves, a trained adult — a coach, athletic trainer, or staff member trained and authorized under the school's policy and the athlete's written anaphylaxis action plan — gives it instead. Many states allow trained school staff to use a student's own device or a stock epinephrine device this way.",
+        "As a student aide, you are not expected to make the call to inject epinephrine yourself unless you are specifically trained and authorized to do so. Your job when you spot the signs of anaphylaxis is simple and just as critical:"
+      ],
+      "list": [
+        "Get the auto-injector — the athlete's own device is usually kept with their gear bag or on file with the athletic trainer.",
+        "Get the adult — find the coach, athletic trainer, or other trained/authorized staff member immediately.",
+        "Call for help — 911 and your venue's Emergency Action Plan (EAP, the written plan for exactly this kind of emergency) get activated right away, not after waiting to see how things go."
+      ]
+    },
+    {
+      "heading": "After epinephrine: the response isn't over",
+      "body": [
+        "Even if the athlete feels dramatically better within a couple of minutes of the injection, 911 and the EAP still get activated, and the athlete still gets transported for medical evaluation — every time, no exceptions. Feeling better is not the same as being fixed.",
+        "The reason: a biphasic reaction. In a biphasic reaction, anaphylaxis symptoms can return — sometimes hours later — even without any second exposure to the trigger and even after the first round of symptoms fully resolved. An athlete who looks fine and goes home without being evaluated has no way to know a second wave is coming.",
+        "While waiting for EMS, position the athlete based on their main symptom: lying down with the legs raised if they're dizzy or feel faint (this helps blood flow to the heart and brain), or sitting up if they're struggling to breathe (this makes breathing easier). Never let the athlete stand up or walk around suddenly — a quick change to standing can cause a dangerous, sudden drop in blood pressure."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Feeling better is not the finish line",
+        "text": "Always call 911 and activate the EAP after epinephrine is given, even if the athlete looks and feels completely normal minutes later. A biphasic reaction can bring symptoms back later with no new exposure, which is exactly why every anaphylaxis event needs professional evaluation, not just relief on the sideline."
+      }
+    },
+    {
+      "heading": "Prevention and the action plan",
+      "body": [
+        "Athletes with a known severe allergy should have a written anaphylaxis action plan on file — it lists their specific triggers, their individual warning signs, and the exact steps to take, and it should travel with their auto-injector to every practice and game, not stay locked in an office.",
+        "On the prevention side: know which teammates have a known allergy and where their auto-injector is kept, double-check ingredients before team meals when someone has a food allergy, stay alert for stinging insects at outdoor practice sites, and never encourage an athlete to 'push through' or 'wait it out' after a known trigger. Return to activity after any anaphylaxis event requires medical clearance — students and coaches never make that call on their own."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What actually separates anaphylaxis from a mild, local allergic reaction?",
+      "choices": [
+        "Anaphylaxis always includes a fever",
+        "Anaphylaxis involves two or more body systems at once, not just one localized spot",
+        "Anaphylaxis only happens after eating shellfish",
+        "Anaphylaxis only happens in athletes who already have asthma"
+      ],
+      "answerIndex": 1,
+      "explanation": "The defining feature is spread across two or more body systems (like skin plus airway) rather than staying in one local spot. Fever isn't a feature of either type, and while food and asthma history matter for risk, neither one defines whether a given reaction is anaphylaxis."
+    },
+    {
+      "id": "q2",
+      "question": "Which of these is a common sports-relevant trigger of anaphylaxis you should watch for at an outdoor practice?",
+      "choices": [
+        "Turf paint",
+        "Sunscreen",
+        "Insect stings from bees, wasps, or fire ants",
+        "Sweat"
+      ],
+      "answerIndex": 2,
+      "explanation": "Insect stings on outdoor fields are one of the most common sports-related anaphylaxis triggers. Turf paint, sunscreen, and sweat are not typical anaphylaxis triggers, even though they can occasionally cause minor skin irritation."
+    },
+    {
+      "id": "q3",
+      "question": "At a team pasta dinner, a player suddenly develops hives across her chest AND says her throat feels tight with a hoarse voice. What is most likely happening?",
+      "choices": [
+        "Anaphylaxis — two body systems, skin and airway, are involved at once",
+        "A mild food allergy — give her water and keep watching for now",
+        "Heartburn from eating too fast",
+        "Normal nervousness before a big game"
+      ],
+      "answerIndex": 0,
+      "explanation": "Hives (skin) plus throat tightness and voice changes (airway) is symptoms in two systems at once — the definition of anaphylaxis — and needs an immediate emergency response, not a 'watch and wait' approach. Heartburn and nervousness don't explain hoarseness plus widespread hives together."
+      },
+    {
+      "id": "q4",
+      "question": "A teammate with a known bee allergy is stung during an outdoor meet and quickly starts wheezing and breaking out in hives. Antihistamine tablets are nearby in the team bag. What should happen first?",
+      "choices": [
+        "Give the antihistamine tablets and wait about 10 minutes to see if it helps",
+        "Have the athlete walk to the athletic trainer's room on their own",
+        "Wait to see if the symptoms get worse before doing anything",
+        "Get the athlete's epinephrine auto-injector administered right away, then call 911/activate the EAP"
+      ],
+      "answerIndex": 3,
+      "explanation": "Wheezing plus hives after a known sting trigger is anaphylaxis, and epinephrine given immediately is the only treatment that reverses it — antihistamines are too slow and weak, and waiting for symptoms to worsen wastes critical minutes. Having the athlete walk unassisted is also unsafe if they become dizzy or their breathing worsens."
+    },
+    {
+      "id": "q5",
+      "question": "Which statement about antihistamines like Benadryl during a true anaphylactic reaction is accurate?",
+      "choices": [
+        "They can ease itching and hives but do not stop airway swelling or a dropping blood pressure — they don't replace epinephrine",
+        "They are the first-line treatment and can stop anaphylaxis on their own",
+        "They work faster than epinephrine",
+        "They should be given instead of epinephrine to avoid side effects"
+      ],
+      "answerIndex": 0,
+      "explanation": "Antihistamines only address itching and hives; they can't reverse the airway swelling or blood pressure drop that make anaphylaxis dangerous. Treating them as a substitute for epinephrine — or expecting them to work faster — is exactly the delay that turns a treatable reaction into a fatal one."
+    },
+    {
+      "id": "q6",
+      "question": "A student aide who is not trained or authorized to give epinephrine recognizes a teammate showing signs of anaphylaxis. What is the aide's job?",
+      "choices": [
+        "Do nothing, since only a doctor can help at this point",
+        "Give the injection anyway, because seconds matter most",
+        "Retrieve the athlete's auto-injector, get a trained/authorized adult, and call 911/activate the EAP right away",
+        "Tell the athlete to sit down and rest until the symptoms pass on their own"
+      ],
+      "answerIndex": 2,
+      "explanation": "An untrained aide's role is recognize, get the device, get the trained adult, and call for help — not diagnose or inject on their own. Doing nothing or waiting for symptoms to pass wastes the minutes that matter most in anaphylaxis."
+    },
+    {
+      "id": "q7",
+      "question": "An athlete receives epinephrine for anaphylaxis and feels noticeably better within a couple of minutes. What should still happen?",
+      "choices": [
+        "Nothing further is needed — the epinephrine already fixed the problem",
+        "911 and the EAP should still be activated, and the athlete should still be transported for medical evaluation, because symptoms can return later (a biphasic reaction)",
+        "The athlete can return to practice once the hives clear up",
+        "A second dose of epinephrine should be given immediately regardless of how the athlete feels"
+      ],
+      "answerIndex": 1,
+      "explanation": "Feeling better isn't the finish line — a biphasic reaction can bring anaphylaxis symptoms back, sometimes hours later, even with no new exposure, so every case still needs 911/EAP activation and medical evaluation. Returning to practice or assuming it's over skips that safety check; giving a second dose isn't automatic just because the athlete feels fine."
+    },
+    {
+      "id": "q8",
+      "question": "An athlete who just received epinephrine for anaphylaxis is dizzy and lightheaded but breathing fine while waiting for EMS. How should they be positioned?",
+      "choices": [
+        "Standing up and walking around to keep blood moving",
+        "Lying down with the legs raised",
+        "Sitting straight up with legs hanging off a table",
+        "Face-down on the ground"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lying down with the legs raised helps blood flow to the heart and brain when dizziness or faintness is the main problem; sitting up is reserved for athletes struggling to breathe instead. Sudden standing or walking can cause a dangerous drop in blood pressure and should always be avoided."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Allergic reaction (mild/local)",
+      "back": "The immune system overreacts to a harmless trigger in one localized spot — e.g., hives and swelling right at a sting site. Uncomfortable but not dangerous."
+    },
+    {
+      "id": "f2",
+      "front": "Anaphylaxis",
+      "back": "A severe, whole-body allergic reaction involving two or more body systems at once; it can become life-threatening within minutes of exposure."
+    },
+    {
+      "id": "f3",
+      "front": "The two-system rule",
+      "back": "Symptoms in two or more body systems after a likely trigger (e.g., hives + wheezing, or vomiting + dizziness after a sting) means anaphylaxis, not a mild reaction."
+    },
+    {
+      "id": "f4",
+      "front": "Common sports triggers",
+      "back": "Insect stings (outdoor fields), food (team meals/shared snacks), and — rarely — exercise-induced anaphylaxis, where exercise itself is the trigger."
+    },
+    {
+      "id": "f5",
+      "front": "Exercise-induced anaphylaxis",
+      "back": "A rare form of anaphylaxis triggered by exercise itself, sometimes only when combined with a food eaten beforehand. Uncommon, but it exists — don't rule out anaphylaxis just because there was no sting or snack."
+    },
+    {
+      "id": "f6",
+      "front": "Key anaphylaxis symptoms to know",
+      "back": "Throat tightness, hoarse voice, trouble swallowing, wheezing, widespread hives, vomiting/cramping after a trigger, and dizziness or collapse."
+    },
+    {
+      "id": "f7",
+      "front": "Epinephrine",
+      "back": "Also called adrenaline; the only medication that reverses anaphylaxis, given via an auto-injector into the outer thigh. Nothing else substitutes for it."
+    },
+    {
+      "id": "f8",
+      "front": "Why antihistamines aren't enough",
+      "back": "Antihistamines (like Benadryl) ease itching and hives but do not stop airway swelling or a dropping blood pressure — waiting on them instead of giving epinephrine is the classic fatal mistake."
+    },
+    {
+      "id": "f9",
+      "front": "Who administers epinephrine",
+      "back": "The athlete self-administers if able, or a trained adult authorized under school policy and the athlete's anaphylaxis action plan gives it instead."
+    },
+    {
+      "id": "f10",
+      "front": "The student aide's job",
+      "back": "Get the auto-injector, get the trained adult, call for help (911/EAP) — recognize and act fast, don't diagnose or inject unless trained and authorized."
+    },
+    {
+      "id": "f11",
+      "front": "Biphasic reaction",
+      "back": "Anaphylaxis symptoms that return — sometimes hours later — with no new exposure, even after the first symptoms fully went away. Why 911/EAP is activated every time, even if the athlete feels fine after epinephrine."
+    },
+    {
+      "id": "f12",
+      "front": "Positioning after epinephrine",
+      "back": "Lying down with legs raised if dizzy/faint; sitting up if struggling to breathe. Never let the athlete stand or walk suddenly — it can cause a dangerous blood pressure drop."
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "id": "shock-recognition",
+  "title": "Shock: Recognizing the Body in Crisis",
+  "category": "Acute Care & First Aid",
+  "strand": "shock-recognition",
+  "gradeBand": "9-10",
+  "summary": "Learn the medical meaning of shock, the injuries that trigger it, and the pattern of vital signs that means the body is failing to deliver enough blood to itself.",
+  "minutes": 16,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.4.5", "CTE.HSMT.Anchor.6"],
+  "sections": [
+    {
+      "heading": "What shock really means",
+      "body": [
+        "In everyday language, \"shock\" means being startled or surprised — hearing bad news, seeing something unexpected. That is NOT what the word means in medicine, and mixing the two up can be dangerous on the sideline.",
+        "Medically, shock is a life-threatening condition in which the circulatory system fails to deliver enough oxygen-rich blood to the body's organs and tissues. The circulatory system is the heart, blood vessels, and blood working together to move oxygen and nutrients everywhere the body needs them. When that delivery system breaks down — whatever the cause — organs like the brain, kidneys, and heart itself start running short of what they need to function, and if it isn't corrected, they begin to fail.",
+        "Shock is not an injury by itself. It is what can happen AFTER a serious injury or medical event, which is why this unit connects to several others you will study: severe bleeding, fractures, severe allergic reactions, heat stroke, and spinal cord injury can all lead to shock if they go unmanaged."
+      ]
+    },
+    {
+      "heading": "Why shock happens: the pump, the pipes, and the fluid",
+      "body": [
+        "A simple way to understand shock's causes is to think of the circulatory system as a pump (the heart), a network of pipes (the blood vessels), and the fluid moving through them (the blood). Shock happens when the pump fails, the pipes fail, or the fluid runs low — and different injuries you'll study elsewhere in this program cause it in different ways.",
+        "Fluid loss (hemorrhagic shock) is the most common cause on a sports field: severe external or internal bleeding reduces the amount of blood available to circulate. A visible wound isn't required — a broken femur (thigh bone) can bleed heavily into the thigh with no cut on the skin at all, and a hard blow to the abdomen can cause internal bleeding you can't see. Controlling bleeding you CAN see and control is covered in the wound care unit; recognizing suspected fractures is covered in the fractures and dislocations unit.",
+        "Pipe failure happens when blood vessels suddenly widen (dilate) far more than normal, so even a normal amount of blood can't fill the system and maintain pressure. Anaphylaxis — a severe, whole-body allergic reaction — does this by flooding the body with chemicals that cause vessels to dilate and leak fluid within minutes. A spinal cord injury can do something similar: the nerve signals that normally keep vessels appropriately narrow get disrupted, covered further in the spine injuries unit.",
+        "Pump failure means the heart itself can't move blood effectively, seen in some cardiac emergencies. Heat stroke can push the circulatory system toward shock through a combination of fluid loss (sweating, dehydration) and the extreme strain overheating puts on the heart — more on this in the heat illness unit."
+      ],
+      "image": {
+        "asset": "shock-recognition-pump-pipes-fluid-model.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "A simple three-icon diagram across the top: a heart labeled 'Pump,' a branching network of tubes labeled 'Pipes,' and a droplet labeled 'Fluid.' Below each icon, list 1-2 example causes in small text: under Pump, 'cardiac emergency'; under Pipes, 'anaphylaxis, spinal cord injury'; under Fluid, 'severe bleeding, fracture, dehydration.' Clean, uncluttered medical-illustration style with a simple arrow motif showing all three feeding into a central box labeled 'Shock: not enough oxygen-rich blood reaching organs.'",
+        "alt": "Diagram of the pump-pipes-fluid model of shock, showing how heart failure, blood vessel dilation, and fluid loss can each lead to shock.",
+        "location": "public/images/units/shock-recognition/"
+      }
+    },
+    {
+      "heading": "Recognizing the pattern",
+      "body": [
+        "Whatever the cause, shock produces a recognizable pattern, because the body reacts to falling blood delivery in a fairly predictable way: it speeds up the heart, tightens blood vessels near the skin to save blood for vital organs, and speeds up breathing to grab more oxygen.",
+        "This is exactly why the vital signs unit matters here — shock is the case where several \"worrying vitals\" show up together and all point the same direction, rather than one single abnormal number."
+      ],
+      "list": [
+        "Skin: pale, gray, or ashen; cool to the touch; clammy (moist) — blood is being shunted away from the skin toward the organs that need it most.",
+        "Pulse: rapid and weak or \"thready\" — the heart beating faster to compensate, but each beat is putting out less force.",
+        "Breathing: rapid and shallow.",
+        "Mental status: anxious, restless, or agitated at first — the brain is one of the first organs to notice reduced blood flow.",
+        "Other early signs: nausea, and thirst.",
+        "Later stages: as shock progresses without treatment, the athlete becomes increasingly drowsy, then unresponsive — a sign the body's compensation is failing and the emergency is escalating fast."
+      ],
+      "image": {
+        "asset": "shock-recognition-vital-signs-comparison.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-column comparison chart. Left column headed 'Normal': skin icon shown warm pink tone, pulse icon labeled 'strong, regular,' breathing icon labeled 'normal rate and depth,' mental-status icon labeled 'calm, oriented.' Right column headed 'Shock pattern': skin icon shown pale/gray with sheen (clammy), pulse icon labeled 'rapid, weak,' breathing icon labeled 'rapid, shallow,' mental-status icon labeled 'anxious/restless → confused → drowsy.' Clean, simple medical-illustration style, side-by-side layout for easy comparison.",
+        "alt": "Side-by-side comparison chart of normal vital signs versus the shock pattern across skin, pulse, breathing, and mental status.",
+        "location": "public/images/units/shock-recognition/"
+      }
+    },
+    {
+      "heading": "Why shock is deceptive",
+      "body": [
+        "One of the most dangerous things about shock is that it can be invisible at first. The body's early compensation — a faster heart, tighter vessels — can hold blood pressure close to normal for a while, especially in young, fit athletes with strong hearts. That means an athlete with a serious injury can look and act mostly fine in the first few minutes, joking with teammates or insisting they're okay, and then deteriorate quickly once compensation starts to fail.",
+        "This is exactly why any athlete with a serious mechanism of injury — heavy bleeding, a suspected fracture, a possible severe allergic reaction, heat stroke, or a possible spinal injury — gets continuously monitored rather than checked once and left alone. Shock can develop minutes after the injury itself, not only in the first instant."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Trust the mechanism, not just the moment",
+        "text": "If the injury was serious enough to cause major bleeding, a major fracture, a severe allergic reaction, heat stroke, or a possible spinal injury, treat that athlete as at risk for shock even if they look fine right now. Keep checking, don't walk away, and get help moving toward the scene."
+      }
+    },
+    {
+      "heading": "Immediate response",
+      "body": [
+        "Shock is always a 911 / Emergency Action Plan (EAP)-level emergency — never a \"watch and see\" situation on the sideline. If you recognize the pattern, or suspect it's coming based on the mechanism of injury, act right away."
+      ],
+      "list": [
+        "Call 911 or activate your team's EAP immediately — do this first, don't wait to see if signs worsen.",
+        "Treat the cause you're able to treat. For example, control visible external bleeding with firm direct pressure, as covered in the wound care unit — you can't fix internal bleeding on the sideline, but you can often stop what's bleeding on the surface.",
+        "Lay the athlete flat.",
+        "Keep them warm — a blanket, jackets, anything available, and insulate them from cold ground if possible. Shock impairs the body's ability to regulate its own temperature, and getting cold makes shock worse.",
+        "Give nothing to eat or drink, even if they ask for it — there's a real risk of vomiting, and if they need surgery, an empty stomach matters.",
+        "Monitor responsiveness and breathing continuously until EMS arrives. Be ready to begin CPR if a trained rescuer is present and the athlete stops breathing normally or loses a pulse."
+      ]
+    },
+    {
+      "heading": "Positioning: keep it simple",
+      "body": [
+        "Older first aid training taught elevating an injured person's legs about 8-12 inches as a standard step for shock, on the idea that it would push more blood toward the core. Current lay-rescuer guidelines have dropped that as a universal rule — it hasn't been shown to reliably improve outcomes, and it can actively cause harm if the athlete has a leg fracture, a suspected spinal injury, or trouble breathing, since raising the legs can worsen all three.",
+        "The modern, simpler approach: lay the person flat, keep them warm, treat the cause you can treat, and get help moving fast. You don't need to remember a special leg position to give good first aid for shock — position, warmth, treating the cause, and calling for help cover what a lay rescuer needs to do."
+      ]
+    },
+    {
+      "heading": "Red flags — call 911 immediately",
+      "body": [
+        "Some situations should make you think \"shock risk\" the moment you see them, before you even finish checking vital signs. Treat any of the following as a 911/EAP emergency."
+      ],
+      "list": [
+        "Skin turning pale, gray, or ashen, and cool or clammy.",
+        "A rapid, weak pulse, or rapid, shallow breathing.",
+        "Increasing anxiety, restlessness, or confusion after an injury.",
+        "Any drowsiness or loss of responsiveness following an injury or illness.",
+        "A serious mechanism of injury — heavy bleeding, a suspected major fracture, a possible severe allergic reaction, heat stroke, or a possible spinal injury — even if the athlete currently looks okay."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Recognize, protect, refer",
+        "text": "Shock is never something a student assistant manages alone. The moment you recognize the pattern — or suspect it's coming from a serious mechanism of injury — call 911 or activate the EAP, treat the cause you can treat, lay the athlete flat, keep them warm, give nothing by mouth, and monitor continuously until EMS takes over."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What does \"shock\" mean in a medical context?",
+      "choices": [
+        "Feeling emotionally surprised or startled",
+        "The circulatory system failing to deliver enough oxygen-rich blood to the body's organs and tissues",
+        "A brief fainting spell from standing up too fast",
+        "An irregular heartbeat"
+      ],
+      "answerIndex": 1,
+      "explanation": "Medical shock is a life-threatening breakdown in the circulatory system's ability to deliver oxygen-rich blood to organs — a very different meaning from the everyday sense of being emotionally startled."
+    },
+    {
+      "id": "q2",
+      "question": "A soccer player breaks her femur (thigh bone) in a hard tackle, with no open wound on the skin. Why does the athletic trainer still watch closely for shock?",
+      "choices": [
+        "All fractures automatically cause shock within seconds",
+        "Shock only happens when there is visible external bleeding",
+        "Pain alone is enough to cause shock in most athletes",
+        "Femur fractures can cause significant internal bleeding into the thigh, even without an open wound"
+      ],
+      "answerIndex": 3,
+      "explanation": "A closed fracture can still bleed heavily into surrounding tissue. That hidden blood loss can trigger shock even though nothing is visibly bleeding on the skin — which is exactly why fractures are on the shock-risk list."
+    },
+    {
+      "id": "q3",
+      "question": "Which athlete is most likely showing signs of shock?",
+      "choices": [
+        "An athlete who is pale, cool, and clammy, breathing fast and shallow, with a rapid weak pulse after a hard fall",
+        "An athlete who is red-faced, sweating heavily, and breathing hard right after wind sprints, but recovers within a few minutes",
+        "An athlete who twisted an ankle, is hopping on one foot, and is talking normally",
+        "An athlete who is nervous before a big game but has normal-colored, warm, dry skin"
+      ],
+      "answerIndex": 0,
+      "explanation": "Pale, cool, clammy skin with a rapid weak pulse and rapid shallow breathing after a significant injury is the classic shock pattern. The other athletes show normal post-exertion recovery, an isolated injury without shock signs, or normal pre-game nerves — none matching that pattern."
+    },
+    {
+      "id": "q4",
+      "question": "You suspect an athlete is going into shock after a serious injury. What should you do first?",
+      "choices": [
+        "Give them water to prevent dehydration",
+        "Elevate both legs on a stack of gear right away",
+        "Call 911 or activate the EAP",
+        "Wait five minutes to see if they improve on their own"
+      ],
+      "answerIndex": 2,
+      "explanation": "Shock is always a 911/EAP-level emergency, not a wait-and-see situation. Calling for help comes first — food, drink, and any positioning step come after, and waiting to see if it resolves on its own risks losing critical time."
+    },
+    {
+      "id": "q5",
+      "question": "As untreated shock progresses beyond its early stage, which finding is most concerning?",
+      "choices": [
+        "The athlete becomes more talkative and energetic",
+        "The athlete becomes increasingly drowsy or unresponsive",
+        "The athlete's skin turns pink and warm",
+        "The athlete's pulse becomes slow and very strong"
+      ],
+      "answerIndex": 1,
+      "explanation": "Increasing drowsiness or loss of responsiveness signals that the body's early compensation is failing — a late, more dangerous stage of shock. The other findings would actually suggest improvement, not worsening."
+    },
+    {
+      "id": "q6",
+      "question": "An athlete takes a hard hit and has an obviously deformed forearm, but seems fine at first, joking with teammates. Ten minutes later he becomes pale, anxious, and clammy. What does this best illustrate?",
+      "choices": [
+        "Shock can be hidden early on because the body compensates, then can appear suddenly — which is why serious-mechanism injuries need continuous monitoring, not a one-time check",
+        "He must have been faking the injury at first",
+        "His vitals weren't worth checking early on since he looked fine",
+        "Shock only ever shows up in the first 30 seconds after an injury"
+      ],
+      "answerIndex": 0,
+      "explanation": "Early compensation can mask shock for several minutes, especially in young, fit athletes. That deceptive delay is exactly why a serious mechanism of injury calls for ongoing monitoring, not a single check-and-move-on."
+    },
+    {
+      "id": "q7",
+      "question": "What does current lay first-aid guidance say about positioning someone showing signs of shock?",
+      "choices": [
+        "Always elevate both legs 8-12 inches, regardless of the injury",
+        "Sit the person upright to help them breathe more easily",
+        "Lay them flat, treat the cause you can treat, keep them warm, and get help fast — without an automatic leg-elevation step",
+        "Give small sips of a sports drink to keep them hydrated"
+      ],
+      "answerIndex": 2,
+      "explanation": "The old universal leg-elevation rule has been dropped from current lay-rescuer guidance because it hasn't been shown to reliably help and can worsen fractures, spinal injuries, or breathing problems. The simple, current approach is: flat, warm, treat the cause, call for help fast."
+    },
+    {
+      "id": "q8",
+      "question": "A player has a deep, actively bleeding cut on the thigh and is starting to look pale and clammy. What should you do?",
+      "choices": [
+        "Elevate the legs first and deal with the bleeding afterward",
+        "Apply firm direct pressure to control the bleeding, call 911/activate the EAP, lay the athlete flat, and keep them warm",
+        "Let the athlete eat something for quick energy while you wait",
+        "Only monitor from a distance — don't touch the wound until EMS arrives"
+      ],
+      "answerIndex": 1,
+      "explanation": "Controlling bleeding you can reach, activating emergency response, laying the athlete flat, and keeping them warm are all part of the immediate response to shock — and they can be done together. Leaving active, controllable bleeding untreated only pushes the athlete further toward shock."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Shock (medical definition)",
+      "back": "A life-threatening condition in which the circulatory system fails to deliver enough oxygen-rich blood to the body's organs and tissues — not the same as being emotionally startled."
+    },
+    {
+      "id": "f2",
+      "front": "Pump, pipes, fluid model of shock",
+      "back": "Pump failure (heart can't move blood effectively), pipe failure (blood vessels dilate too wide — anaphylaxis, spinal cord injury), fluid loss (severe bleeding, fractures, dehydration, heat stroke)."
+    },
+    {
+      "id": "f3",
+      "front": "Skin signs of shock",
+      "back": "Pale, gray, or ashen; cool to the touch; clammy (moist) — blood is being shunted away from the skin toward vital organs."
+    },
+    {
+      "id": "f4",
+      "front": "Pulse and breathing pattern in shock",
+      "back": "Rapid, weak (\"thready\") pulse; rapid, shallow breathing — the body compensating for reduced blood delivery."
+    },
+    {
+      "id": "f5",
+      "front": "Mental status changes in shock",
+      "back": "Early: anxious, restless, or agitated. Late: increasingly drowsy, then unresponsive — a sign compensation is failing."
+    },
+    {
+      "id": "f6",
+      "front": "Why shock is deceptive",
+      "back": "Early compensation (faster heart, tighter vessels) can keep an injured athlete looking and feeling okay at first — shock can develop minutes later, which is why serious-mechanism injuries need continuous monitoring."
+    },
+    {
+      "id": "f7",
+      "front": "Injuries/conditions that can lead to shock",
+      "back": "Severe bleeding, major fractures, anaphylaxis (severe allergic reaction), heat stroke, and spinal cord injury — covered in more depth in their own units."
+    },
+    {
+      "id": "f8",
+      "front": "First action for suspected shock",
+      "back": "Call 911 or activate the EAP immediately — shock is never a \"watch and wait\" situation."
+    },
+    {
+      "id": "f9",
+      "front": "\"Treat the cause\" for shock",
+      "back": "Manage what you're able to on the sideline — for example, control visible external bleeding with firm direct pressure — while emergency responders are on the way."
+    },
+    {
+      "id": "f10",
+      "front": "Body position for shock (current guidance)",
+      "back": "Lay the person flat. There is no automatic leg-elevation step in current lay first aid — keep it simple: flat, warm, treat the cause, get help fast."
+    },
+    {
+      "id": "f11",
+      "front": "Warmth and shock",
+      "back": "Keep the person warm with a blanket or jackets. Shock impairs the body's ability to regulate its own temperature, and getting cold makes shock worse."
+    },
+    {
+      "id": "f12",
+      "front": "Food and drink during suspected shock",
+      "back": "Give nothing to eat or drink, even if the athlete asks — risk of vomiting, and an empty stomach matters if surgery is needed."
+    }
+  ]
+}

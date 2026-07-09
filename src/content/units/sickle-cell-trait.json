@@ -1,0 +1,275 @@
+{
+  "id": "sickle-cell-trait",
+  "title": "Sickle Cell Trait & Exertional Collapse",
+  "category": "Medical Conditions & Special Populations",
+  "strand": "sickle-cell-trait",
+  "gradeBand": "9-10",
+  "summary": "Know what sickle cell trait is, how it can turn an all-out conditioning effort dangerous, and how to recognize and respond to exertional sickling collapse.",
+  "minutes": 16,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.3", "CTE.HSMT.Anchor.6", "CTE.HSMT.B.5.0"],
+  "sections": [
+    {
+      "heading": "What is sickle cell trait?",
+      "body": [
+        "Hemoglobin is the protein inside red blood cells that carries oxygen from the lungs to every working muscle in the body. Most people have typical hemoglobin. Some people are born with a gene for a different form called hemoglobin S.",
+        "Sickle cell trait (SCT) means a person inherited one copy of the hemoglobin S gene from one parent. Sickle cell disease (SCD) is a separate, more serious condition: it means someone inherited two copies (one from each parent) and needs regular, lifelong medical care. Sickle cell trait is not a mild version of sickle cell disease — it is a different situation, and the large majority of people with the trait feel completely normal and show no symptoms in everyday life.",
+        "Sickle cell trait is more common among people with African, Mediterranean, Middle Eastern, and Indian ancestry — roughly 1 in 13 Black or African American people in the U.S. carry it, according to the CDC. That is simply a matter of how the gene is distributed in some family lines, not a statement about who is more athletic or less healthy. Anyone, of any ancestry, can carry the trait, and the only way to know for sure is a simple blood test."
+      ],
+      "list": [
+        "Sickle cell trait (SCT) — one gene copy, usually symptom-free day to day, but relevant during extreme exertion (this unit's focus).",
+        "Sickle cell disease (SCD) — two gene copies, a separate and more serious lifelong condition managed with its own ongoing medical care."
+      ],
+      "image": {
+        "asset": "sickle-cell-trait-rbc-comparison.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple two-panel biology diagram. Left panel: several normal red blood cells shown as smooth, flexible discs flowing easily through a small capillary, labeled 'Normal red blood cells.' Right panel: red blood cells shown distorted into rigid, crescent (sickle) shapes clumping together and partially blocking a capillary, labeled 'Sickled red blood cells (under extreme exertion/low oxygen).' Clean textbook-illustration style, no distressing detail.",
+        "alt": "Diagram comparing normal disc-shaped red blood cells flowing freely through a capillary with rigid, crescent-shaped sickled red blood cells clumping and blocking a capillary.",
+        "location": "public/images/units/sickle-cell-trait/"
+      }
+    },
+    {
+      "heading": "Why it matters in sports: exertional sickling",
+      "body": [
+        "Normal red blood cells are soft, flexible discs that squeeze easily through even the smallest blood vessels. In someone with sickle cell trait, hemoglobin S can distort red blood cells into a rigid, crescent ('sickle') shape when oxygen levels in the blood drop sharply — and that is exactly what can happen deep in working muscles during extreme, sustained, all-out exertion.",
+        "Sickled cells are stiff and sticky. They can clump together and partially block blood flow in the working muscles, which cuts off oxygen delivery even further — a feedback loop that can build over just a couple of minutes of maximal effort. This is called exertional sickling, and when it causes an athlete to go down, it's called exertional sickling collapse. It is a real, sudden medical emergency, not just an athlete having a bad rep."
+      ],
+      "list": [
+        "Highest-risk situations: all-out efforts lasting several minutes without a break — mile-time trials, suicides/gassers, and timed conditioning tests.",
+        "Extra risk factors: heat, high altitude, dehydration, fever or recent illness, and asthma."
+      ]
+    },
+    {
+      "heading": "Recognizing a sickling collapse",
+      "body": [
+        "One reason this topic matters is that a sickling collapse can look, at a glance, like other sideline emergencies — but the classic teaching points help tell them apart, and getting it right changes how fast help is called and what happens next.",
+        "Whatever the cause turns out to be, a collapsed athlete always gets treated as an emergency. The distinctions below are about recognizing the pattern, not about deciding which one to ignore."
+      ],
+      "list": [
+        "Sickling collapse — the athlete slumps or goes down with legs that feel weak and heavy rather than locked into a hard, tight cramp. They are usually still conscious and able to talk at first. It often happens early in an intense, sustained conditioning effort (the first few minutes), not late in a long practice.",
+        "Cardiac arrest — sudden collapse with no response to voice or touch, and breathing that is absent or abnormal (including gasping). This is the most time-critical possibility and is treated as cardiac arrest immediately, no matter what else is suspected.",
+        "Heat stroke — more often shows up later in a long, hot session, with confusion, disorientation, or other altered mental status, and skin that is very hot to the touch."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "When in doubt, treat the worst case",
+        "text": "If a collapsed athlete is ever unresponsive or not breathing normally, treat it as cardiac arrest and start your Emergency Action Plan (call 911, get the AED) immediately. Never spend time trying to figure out exactly which condition it is before calling for help — recognize the emergency first."
+      },
+      "image": {
+        "asset": "sickle-cell-trait-collapse-comparison-chart.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Three-column comparison chart/infographic, one column each for 'Exertional sickling collapse,' 'Cardiac arrest,' and 'Heat stroke.' Each column lists 3-4 short recognition bullet points (consciousness level, muscle feel/legs, typical timing during a session, breathing) using simple icons (e.g. a clock icon for timing, a alert/eye icon for consciousness). Clean instructional-infographic style with a distinct header color per column, no distressing imagery.",
+        "alt": "Three-column comparison chart of recognition signs for exertional sickling collapse, cardiac arrest, and heat stroke, covering consciousness, muscle feel, and typical timing.",
+        "location": "public/images/units/sickle-cell-trait/"
+      }
+    },
+    {
+      "heading": "Immediate response: recognize, protect, refer",
+      "body": [
+        "A sickling collapse is a true medical emergency, not something to shake off. Stop the athlete immediately — do not let them 'finish the rep' or walk it off. Both of those keep the muscles working and demanding oxygen at the exact moment the goal is to reduce that demand and let blood flow return to normal.",
+        "Cool the athlete if they are hot (shade, remove excess gear), call for help right away through your venue's Emergency Action Plan and 911, and stay with the athlete monitoring breathing and responsiveness until help arrives. High-flow oxygen is something EMS or an athletic trainer administers with their own equipment — a student assistant's job is to recognize, protect, and refer, not to try to deliver oxygen or treat the underlying cause."
+      ],
+      "list": [
+        "Stop all activity immediately — no finishing the set, no walking it off.",
+        "Call your athletic trainer, activate the EAP, and call 911.",
+        "Cool the athlete if they are hot; move to shade and remove excess gear.",
+        "Stay with the athlete, monitoring breathing and responsiveness until help arrives.",
+        "Let EMS or the athletic trainer provide oxygen and further care — that's outside a student assistant's role."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Never push through it",
+        "text": "Telling an athlete showing these signs to 'finish the rep' or 'walk it off' is one of the most dangerous mistakes on a conditioning field. Stop the activity and start your emergency response the moment you suspect a sickling collapse."
+      }
+    },
+    {
+      "heading": "Know your status",
+      "body": [
+        "The NCAA requires that college athletes either be tested for sickle cell trait or, after being informed, sign a waiver declining the test — the goal is making sure the athlete and the athletic staff both know the status before it matters on the field. Many U.S. states also screen for sickle cell trait as part of routine newborn screening panels, so a lot of athletes already have this information on record well before high school sports.",
+        "Knowing your status does not limit what you can do in sports. It changes how coaches and athletic trainers plan conditioning and how fast they recognize and respond if something goes wrong — which is exactly why telling them matters."
+      ],
+      "list": [
+        "If you know you carry sickle cell trait, tell your athletic trainer and coach at the start of every season and make sure it's on your emergency medical card.",
+        "If you don't know your status, ask a parent or guardian, or ask a doctor — newborn screening records or a simple blood test can confirm it."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Know your status, precautions work",
+        "text": "Athletes with sickle cell trait compete and win at every level of sport, including professional leagues like the NFL. Knowing your status and following sensible precautions during hard conditioning is what keeps it that way."
+      }
+    },
+    {
+      "heading": "Prevention and participation",
+      "body": [
+        "Sickle cell trait does not bar anyone from playing sports. What changes is how conditioning is built and run for every athlete — especially early in a season, after a break, and during intense timed tests, when exertional sickling risk is highest."
+      ],
+      "list": [
+        "Gradual conditioning progression — build up intensity and duration over weeks rather than jumping straight into max-effort testing, especially in the first days of a season or after time off.",
+        "Self-pacing during intense sets — athletes, especially those with known trait, should be allowed to set their own pace and take breaks during hard conditioning rather than being forced to match the group's exact pace.",
+        "Hydration — drink water before, during, and after conditioning; dehydration raises sickling risk.",
+        "Extra caution in heat and at altitude — build in more rest, more fluids, and a slower progression when training in hot weather or at elevation."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is sickle cell trait (SCT)?",
+      "choices": [
+        "An inherited condition where a person carries one copy of the sickle cell gene, usually with no symptoms in daily life",
+        "The same condition as sickle cell disease, just a milder name for it",
+        "A temporary blood change caused by dehydration during a hard workout",
+        "A contagious blood disorder spread through close contact with a teammate"
+      ],
+      "answerIndex": 0,
+      "explanation": "SCT means one inherited copy of the hemoglobin S gene, and most people with it feel completely normal day to day. It is not the same as sickle cell disease (two copies, a separate and more serious lifelong condition), it isn't caused by a single workout, and it isn't contagious."
+    },
+    {
+      "id": "q2",
+      "question": "Sickle cell trait is more common among people with which ancestry — a fact used to guide screening and awareness, not to single anyone out?",
+      "choices": [
+        "Only Northern European ancestry",
+        "Only East Asian ancestry",
+        "African, Mediterranean, Middle Eastern, and Indian ancestry",
+        "It affects every ancestry group at exactly the same rate, so ancestry gives no useful information"
+      ],
+      "answerIndex": 2,
+      "explanation": "Sickle cell trait is more common in people with African, Mediterranean, Middle Eastern, and Indian ancestry due to how the gene is distributed in some family lines — but anyone, of any background, can carry it, and a blood test is the only way to know for sure."
+    },
+    {
+      "id": "q3",
+      "question": "During an all-out timed conditioning run, an athlete slumps to the ground about a minute in. His legs feel weak rather than locked in a hard cramp, and he's still talking to the coach. What should this presentation make you think of first?",
+      "choices": [
+        "Sudden cardiac arrest",
+        "Exertional sickling collapse",
+        "A season-ending ACL tear",
+        "Heat stroke"
+      ],
+      "answerIndex": 1,
+      "explanation": "Weak, heavy (not tightly locked) legs, staying conscious and able to talk at first, and onset early in an intense sustained effort are the classic pattern of exertional sickling collapse — different from cardiac arrest (unresponsive, abnormal breathing) and heat stroke (more often later, with altered mental status)."
+    },
+    {
+      "id": "q4",
+      "question": "You suspect an athlete is having an exertional sickling collapse during a conditioning test. What is the correct first action?",
+      "choices": [
+        "Encourage him to push through and finish the last few reps",
+        "Tell him to walk it off on the sideline",
+        "Stop the activity immediately and treat it as a medical emergency, activating your EAP and calling for help",
+        "Give him salt tablets and send him back in"
+      ],
+      "answerIndex": 2,
+      "explanation": "A sickling collapse is a true emergency — stopping activity immediately reduces the muscles' oxygen demand and buys time until help arrives. Pushing through, walking it off, or sending the athlete back in all keep the muscles working exactly when the goal is to reduce that demand."
+    },
+    {
+      "id": "q5",
+      "question": "What's the key difference between a sickling collapse and sudden cardiac arrest in the first moments after an athlete goes down?",
+      "choices": [
+        "Sickling always happens at the very end of practice; cardiac arrest always happens early",
+        "A sickling athlete is usually still conscious and can talk at first; cardiac arrest means sudden collapse with no response and abnormal or absent breathing",
+        "There is no meaningful difference — both look and are treated exactly the same",
+        "Cardiac arrest only affects athletes who also have sickle cell trait"
+      ],
+      "answerIndex": 1,
+      "explanation": "A sickling athlete typically stays conscious and responsive at first, while cardiac arrest means sudden collapse, no response to voice or touch, and breathing that is absent or abnormal. Either way, an unresponsive or non-breathing athlete is always treated as cardiac arrest first — recognition helps you understand what you're seeing, but it never delays calling for help."
+    },
+    {
+      "id": "q6",
+      "question": "Which finding points more toward heat stroke than an exertional sickling collapse?",
+      "choices": [
+        "Weak, cramping legs early in an intense conditioning effort",
+        "Confusion or altered mental status with very hot skin, often later in a long, hot session",
+        "Athlete remains alert and can describe how their legs feel",
+        "Collapse in the first few minutes of an all-out sprint set"
+      ],
+      "answerIndex": 1,
+      "explanation": "Heat stroke more often shows up later in a long, hot session and includes altered mental status (confusion, disorientation) with very hot skin. Weak legs, staying alert, and early onset during a sprint set fit the sickling pattern instead."
+    },
+    {
+      "id": "q7",
+      "question": "Which statement about sickle cell trait screening and status is accurate?",
+      "choices": [
+        "The NCAA requires athletes to be tested for sickle cell trait or show documented status, and many states also screen newborns",
+        "Only professional athletes are ever tested for sickle cell trait",
+        "An athlete's sickle cell trait status is not useful information for a coach or athletic trainer to know",
+        "Sickle cell trait testing is illegal in the United States"
+      ],
+      "answerIndex": 0,
+      "explanation": "The NCAA requires testing or documented status, and many U.S. states include sickle cell trait in routine newborn screening — both exist so athletes and staff already know the status before it matters during hard conditioning."
+    },
+    {
+      "id": "q8",
+      "question": "An athlete is diagnosed with sickle cell trait. What does this mean for their sports future?",
+      "choices": [
+        "They can still play at every level, including professionally, with sensible precautions like gradual conditioning and self-pacing during hard workouts",
+        "They must permanently avoid all conditioning drills",
+        "They are automatically disqualified from competitive sports",
+        "They must switch to a non-contact sport"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sickle cell trait does not bar sports participation — athletes with the trait compete at every level, including professionally. The precautions in this unit (gradual conditioning, self-pacing, hydration, heat/altitude awareness) are what make that safe, not sitting out."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Sickle cell trait (SCT)",
+      "back": "An inherited condition — one copy of the hemoglobin S gene from one parent. Usually completely symptom-free in daily life."
+    },
+    {
+      "id": "f2",
+      "front": "Sickle cell trait vs. sickle cell disease",
+      "back": "Trait (SCT) = one gene copy, generally symptom-free. Disease (SCD) = two gene copies, a separate and more serious lifelong condition needing regular medical care."
+    },
+    {
+      "id": "f3",
+      "front": "Sickling mechanism",
+      "back": "Hemoglobin S can distort red blood cells into rigid, crescent ('sickle') shapes when oxygen levels drop sharply, as can happen in working muscles during extreme, sustained exertion."
+    },
+    {
+      "id": "f4",
+      "front": "Ancestry & prevalence note",
+      "back": "More common among people of African, Mediterranean, Middle Eastern, and Indian ancestry — about 1 in 13 Black or African American people in the U.S. carry it (CDC). Anyone can carry it; a blood test confirms status."
+    },
+    {
+      "id": "f5",
+      "front": "Exertional sickling collapse",
+      "back": "A sudden medical emergency where sickled red blood cells clump and block blood flow in working muscles during extreme, sustained exertion."
+    },
+    {
+      "id": "f6",
+      "front": "Highest-risk situations for sickling",
+      "back": "All-out efforts lasting several minutes without a break (mile time trials, suicides/gassers), plus heat, high altitude, dehydration, illness/fever, and asthma."
+    },
+    {
+      "id": "f7",
+      "front": "Sickling collapse vs. cardiac arrest",
+      "back": "Sickling: athlete usually stays conscious, can talk, legs feel weak/heavy. Cardiac arrest: sudden collapse, unresponsive, breathing absent or abnormal — always the emergency to assume first if unsure."
+    },
+    {
+      "id": "f8",
+      "front": "Sickling collapse vs. heat stroke",
+      "back": "Sickling often happens early in an intense effort with the athlete alert. Heat stroke often happens later in a long, hot session with confusion/altered mental status and very hot skin."
+    },
+    {
+      "id": "f9",
+      "front": "Timing clue for sickling collapse",
+      "back": "Often occurs early in a hard, sustained conditioning effort (the first few minutes) rather than late in a long practice."
+    },
+    {
+      "id": "f10",
+      "front": "Immediate response to suspected sickling collapse",
+      "back": "Stop activity immediately, cool if hot, call EAP/911, stay with the athlete monitoring breathing and responsiveness — never let them finish the rep or walk it off."
+    },
+    {
+      "id": "f11",
+      "front": "Sickle cell trait screening",
+      "back": "The NCAA requires testing or documented status; many U.S. states also screen for it on routine newborn screening panels."
+    },
+    {
+      "id": "f12",
+      "front": "Prevention culture for conditioning",
+      "back": "Gradual conditioning progression, self-pacing during intense sets, hydration, and extra caution in heat/altitude — protects every athlete, and SCT does not bar sports participation."
+    }
+  ]
+}
