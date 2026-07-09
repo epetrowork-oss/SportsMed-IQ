@@ -455,11 +455,11 @@ categories keep their names exactly).
 |---|---|---|---|---|---|
 | 1 | injury-evaluation | Assessment & Clinical Skills | x | | |
 | 2 | vital-signs | Assessment & Clinical Skills | x | | |
-| 3 | medical-terminology | Assessment & Clinical Skills | | | |
-| 4 | anatomy-foundations | Assessment & Clinical Skills | | | |
-| 5 | therapeutic-modalities | Assessment & Clinical Skills | | | |
+| 3 | medical-terminology | Assessment & Clinical Skills | x | | |
+| 4 | anatomy-foundations | Assessment & Clinical Skills | x | | |
+| 5 | therapeutic-modalities | Assessment & Clinical Skills | x | | |
 | 6 | rehab-return-to-play | Assessment & Clinical Skills | | | |
-| 7 | splinting-immobilization | Assessment & Clinical Skills | | | |
+| 7 | splinting-immobilization | Assessment & Clinical Skills | x | | |
 | 8 | documentation-recordkeeping | Assessment & Clinical Skills | | | |
 | 9 | kinesiology-movement | Assessment & Clinical Skills | | | |
 | 10 | cardiac-conditions | Medical Conditions & Special Populations | x | | |
@@ -470,9 +470,9 @@ categories keep their names exactly).
 | 15 | allergies-anaphylaxis | Medical Conditions & Special Populations | x | | |
 | 16 | infectious-disease | Medical Conditions & Special Populations | x | | |
 | 17 | female-athlete-health | Medical Conditions & Special Populations | x | | |
-| 18 | adaptive-athletes | Medical Conditions & Special Populations | | | |
+| 18 | adaptive-athletes | Medical Conditions & Special Populations | x | | |
 | 19 | growth-development | Medical Conditions & Special Populations | x | | |
-| 20 | medication-safety | Medical Conditions & Special Populations | | | |
+| 20 | medication-safety | Medical Conditions & Special Populations | x | | |
 | 21 | spine-injuries | Head & Spine Injuries | x | | |
 | 22 | hip-pelvis-injuries | Lower Extremity Injuries | | | |
 | 23 | foot-conditions | Lower Extremity Injuries | | | |
@@ -511,29 +511,38 @@ Batch log (mark `x` in the table as units land):
       injection-site-massage step from the anaphylaxis auto-injector
       list. Browser-verified: 66 units, 18/30/18 split, all six render
       end-to-end, zero console errors.
-- [~] Batch 3 (9-10): infectious-disease, female-athlete-health,
+- [x] Batch 3 (9-10): infectious-disease, female-athlete-health,
       growth-development LANDED (validator-clean, zero warnings;
       RED-S unit's disordered-eating framing read word-for-word —
       recognize/support/refer, never comment/confront/diagnose). These
-      three agents hit the 12pm-UTC session limit at their final report
-      step but had written complete valid files, salvaged + committed by
-      the orchestrator. medication-safety, medical-terminology, and
-      adaptive-athletes FAILED before writing any file (same session
-      limit) — **RE-QUEUE these three first when the limit resets.**
-      Library now 69 units.
+      three agents hit the first session limit at their final report step
+      but had written complete valid files, salvaged + committed. The
+      other three (medication-safety, medical-terminology,
+      adaptive-athletes) failed before writing and were re-queued in
+      batch 4.
+- [x] Batch 4 (9-10): medical-terminology, anatomy-foundations,
+      therapeutic-modalities, splinting-immobilization (Assessment &
+      Clinical Skills) + medication-safety, adaptive-athletes (Medical
+      Conditions). All validator-clean, zero warnings. Safety boundaries
+      read word-for-word: medication never-administer (no OTC/emergency
+      exceptions), autonomic dysreflexia as an always-activate emergency,
+      splinting never-reduce + CSM-before-and-after. **Library now 75
+      units. Assessment & Clinical Skills is 7/9 strands (rehab-return-
+      to-play, documentation-recordkeeping, kinesiology-movement left);
+      Medical Conditions & Special Populations is COMPLETE (11/11).**
 
-**Session limit hit 2026-07-09 (~pre-12pm UTC).** Content batches paused.
-Still-pending 9-10 baselines to author (21 strands): medical-terminology,
-anatomy-foundations, therapeutic-modalities, rehab-return-to-play,
-splinting-immobilization, documentation-recordkeeping, kinesiology-movement,
-adaptive-athletes, medication-safety, hip-pelvis-injuries, foot-conditions,
-elbow-forearm-injuries, wrist-hand-injuries, chest-abdominal-injuries,
-air-quality, sleep-recovery, supplements-banned-substances,
-protective-equipment, careers-sports-medicine, legal-ethical-issues,
-sports-medicine-team. Then the 7-8 and 11-12 sibling waves for all 36 new
-strands. **Sprint priority still comes first**: Day 3 (aesthetic pass,
-GitHub Pages deploy, QA sweep, TESTERS.md) is due Fri Jul 10 and outranks
-finishing the content triple.
+Still-pending 9-10 baselines (15 strands): rehab-return-to-play,
+documentation-recordkeeping, kinesiology-movement, hip-pelvis-injuries,
+foot-conditions, elbow-forearm-injuries, wrist-hand-injuries,
+chest-abdominal-injuries, air-quality, sleep-recovery,
+supplements-banned-substances, protective-equipment,
+careers-sports-medicine, legal-ethical-issues, sports-medicine-team. Then
+the 7-8 and 11-12 sibling waves for all 36 new strands. **Sprint priority
+still comes first**: Day 3 (aesthetic pass, GitHub Pages deploy, QA sweep,
+TESTERS.md) is due Fri Jul 10 and outranks finishing the content triple.
+- [ ] Batch 5 (9-10): rehab-return-to-play, documentation-recordkeeping,
+      kinesiology-movement, hip-pelvis-injuries, foot-conditions,
+      elbow-forearm-injuries — launched Thu Jul 9.
 
 Band judgment note: a few profession/clinical strands may not merit a
 real `7-8` unit (e.g. documentation-recordkeeping, legal-ethical-issues)
