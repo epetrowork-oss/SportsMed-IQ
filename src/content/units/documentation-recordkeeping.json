@@ -1,0 +1,262 @@
+{
+  "id": "documentation-recordkeeping",
+  "title": "Documentation & Medical Records",
+  "category": "Assessment & Clinical Skills",
+  "strand": "documentation-recordkeeping",
+  "gradeBand": "9-10",
+  "summary": "Learn why sports medicine teams write everything down, the basic records a student aide will encounter (including the SOAP note), and why guarding an athlete's privacy is non-negotiable.",
+  "minutes": 16,
+  "standards": ["CTE.HSMT.Anchor.2", "CTE.HSMT.Anchor.8", "CTE.HSMT.B.4.5", "CTE.HSMT.B.5.0"],
+  "sections": [
+    {
+      "heading": "Why documentation matters",
+      "body": [
+        "Every time an athlete is evaluated, treated, or held out of practice, someone writes it down. That habit is called documentation — creating a written or electronic record of what happened, when, and by whom. It's easy to think of documentation as paperwork that gets in the way of the real work, but in sports medicine it is part of the real work.",
+        "Good records exist for four connected reasons: continuity of care, tracking recovery, communication among the athletic health care team, and legal protection."
+      ],
+      "list": [
+        "Continuity of care — the next provider who sees this athlete (a physician, a different athletic trainer, a physical therapist) needs to know what already happened, instead of starting from zero.",
+        "Tracking recovery — comparing today's findings to last week's findings is how the athletic training staff knows whether an injury is actually improving.",
+        "Team communication — coaches, parents, athletic trainers, and physicians all rely on the same written record instead of a game of telephone.",
+        "Legal protection — for the athlete and for the athletic training staff, a clear record proves what care was given and when."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "\"If it wasn't documented, it wasn't done\"",
+        "text": "This is a common saying in health care, and it's worth remembering: from a legal and professional standpoint, care that isn't written down can't be proven to have happened — even if you remember doing it clearly. That's one reason records get written at the time, not from memory the next day."
+      }
+    },
+    {
+      "heading": "Records you'll encounter",
+      "body": [
+        "As a student aide, you may see or help maintain several different kinds of sports medicine records. Each one serves a different purpose."
+      ],
+      "list": [
+        "Injury report — a written account of a specific injury: what happened, what was found, and what was done about it, usually completed the same day.",
+        "SOAP note — a structured note format used to document an evaluation or a treatment visit. Covered in detail in the next section.",
+        "Pre-participation physical form — collects an athlete's health history and physical exam findings before the season starts, used to clear them to play and to flag existing conditions (like asthma or a prior concussion) the staff should know about.",
+        "Emergency information card — a quick-reference card or file with an athlete's emergency contacts, known allergies, medications, and existing medical conditions, kept where it can be grabbed fast during an emergency."
+      ],
+      "image": {
+        "asset": "documentation-recordkeeping-emergency-card.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "A simple mock-up of an athlete emergency information card, laid out like an index card or half-page form. Show clearly labeled fields: athlete name, sport, emergency contact name and phone number, known allergies, current medications, and existing medical conditions. Clean, legible, form-style illustration with placeholder text only, no real names.",
+        "alt": "Sample emergency information card showing fields for an athlete's emergency contacts, allergies, medications, and medical conditions.",
+        "location": "public/images/units/documentation-recordkeeping/"
+      }
+    },
+    {
+      "heading": "The SOAP note: a common documentation format",
+      "body": [
+        "One of the most common documentation formats in sports medicine and other health care fields is the SOAP note. SOAP is an acronym for four sections, always written in this order."
+      ],
+      "list": [
+        "Subjective (S) — what the athlete tells you, in their own words: how the injury happened, what hurts, what it feels like. This is their report, not your interpretation of it.",
+        "Objective (O) — what you or the athletic trainer can measure or observe directly: swelling, range of motion, a specific tender spot, vital signs. Facts, not guesses.",
+        "Assessment (A) — the athletic trainer's or physician's professional judgment about what's going on, built from the Subjective and Objective information. Writing the Assessment is a licensed clinician's call, not a student aide's.",
+        "Plan (P) — what happens next: treatment, referral, follow-up, return-to-play steps."
+      ],
+      "image": {
+        "asset": "documentation-recordkeeping-soap-note-layout.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "A simple four-box diagram showing the SOAP note structure stacked top to bottom, each box labeled with its letter and full word: S — Subjective, O — Objective, A — Assessment, P — Plan. Include one short example phrase inside each box (S: 'Athlete reports sharp pain...', O: 'Swelling and tenderness noted...', A: 'Grade I ankle sprain', P: 'Ice, compression, refer for follow-up'). Clean, form-style medical-illustration layout, easy to read.",
+        "alt": "Diagram of the SOAP note format showing the four sections — Subjective, Objective, Assessment, and Plan — each with a short example.",
+        "location": "public/images/units/documentation-recordkeeping/"
+      }
+    },
+    {
+      "heading": "What good documentation looks like",
+      "body": [
+        "Not all writing counts as good documentation. Sports medicine records are held to a higher standard than a personal notebook, because other people rely on them and they can matter later — even in court."
+      ],
+      "list": [
+        "Accurate and objective — write down what the athlete said and what you actually observed, not your opinion about what's wrong or how bad it is. \"Athlete reports sharp pain on the outside of the ankle\" is objective; \"athlete has a bad sprain\" is a guess.",
+        "Timely — write it down as soon as possible, ideally right after the evaluation. Memory fades and details blur by the next day.",
+        "Legible — if no one else can read it, it doesn't help anyone. Print clearly, especially on paper forms.",
+        "Corrected the right way — if you make a mistake on a paper record, draw a single line through the error so the original is still visible, write the correction next to it, and initial it. Never scribble it out or use correction fluid; an altered-looking record raises questions about what else might have changed."
+      ]
+    },
+    {
+      "heading": "Confidentiality is not optional",
+      "body": [
+        "Everything in an athlete's medical record — an injury, a diagnosis, a medication, a mental health concern — is private health information. Protecting it isn't a suggestion; it's a legal and ethical requirement, and it applies to you as a student aide the same as it applies to the athletic trainer.",
+        "Two federal laws set the baseline. HIPAA (Health Insurance Portability and Accountability Act) protects the privacy of health information generally. FERPA (Family Educational Rights and Privacy Act) protects student education records, which can include school-based health and injury records. You don't need to memorize the legal details — you need to know these laws exist and that they mean an athlete's health information does not get shared casually."
+      ],
+      "list": [
+        "Only access records you are authorized to see as part of your specific role — not out of curiosity, and not for a teammate's record just because you can.",
+        "Never discuss an athlete's injury or medical information with teammates, other parents, or anyone outside the sports medicine team who doesn't need to know.",
+        "Never post about an athlete's injury, diagnosis, or medical status on social media — not even something that feels harmless, like a \"get well soon\" post with details attached.",
+        "If you're unsure whether you're allowed to share something, don't — ask the athletic trainer first."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Confidentiality breach — treat it as a real violation",
+        "text": "Talking about an athlete's injury outside the sports medicine team, or posting about it on social media — even with good intentions — is a confidentiality breach. It can violate HIPAA/FERPA protections, damage the athlete's trust, and has real consequences for you, up to losing your role. When in doubt, say nothing."
+      }
+    },
+    {
+      "heading": "Your role as a student aide",
+      "body": [
+        "Documentation is a place where a student aide's role is very specific: help maintain accurate records under the supervision of the athletic trainer, and protect the privacy of every record you touch, without exception."
+      ],
+      "list": [
+        "Record observations, not conclusions. Write what you saw, heard, and measured — never a diagnosis, and never a guess about how serious an injury is or when the athlete will return to play.",
+        "Follow the same accuracy, timeliness, and legibility standards as everyone else on the sports medicine team — there's no lower bar for a student aide's entries.",
+        "If you're not sure whether something belongs in the record, or whether you're allowed to write in a particular form, ask before you write.",
+        "Confidentiality applies to every record, every time — a routine ankle sprain note deserves the same privacy as a more serious diagnosis."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "In a SOAP note, which section contains what the athlete tells you about the injury in their own words — how it happened, what it feels like?",
+      "choices": ["Objective", "Subjective", "Assessment", "Plan"],
+      "answerIndex": 1,
+      "explanation": "Subjective is the athlete's own report — their words, not measurements. Objective is what you observe or measure directly; Assessment and Plan come after, built on both."
+    },
+    {
+      "id": "q2",
+      "question": "An athletic trainer records that an athlete's ankle is swollen, has limited range of motion, and shows point tenderness over the ATFL. Which part of a SOAP note does this information belong in?",
+      "choices": ["Subjective", "Assessment", "Objective", "Plan"],
+      "answerIndex": 2,
+      "explanation": "Swelling, range of motion, and tenderness are direct, measurable or observed findings — exactly what belongs in Objective. The athlete's own description of the injury would go in Subjective instead."
+    },
+    {
+      "id": "q3",
+      "question": "Who is responsible for writing the Assessment section of a SOAP note?",
+      "choices": [
+        "Any team member who is present",
+        "The student aide, since they saw the injury happen",
+        "The athlete, describing what they think is wrong",
+        "The athletic trainer or physician, based on their professional judgment"
+      ],
+      "answerIndex": 3,
+      "explanation": "Assessment is a professional judgment about what's going on, built from the Subjective and Objective information — that call belongs to a licensed clinician. A student aide contributes Subjective and Objective information, never the Assessment."
+    },
+    {
+      "id": "q4",
+      "question": "What does the saying \"If it wasn't documented, it wasn't done\" mean in sports medicine?",
+      "choices": [
+        "Paperwork is more important than patient care",
+        "An undocumented action can't be proven to have happened, even if it did",
+        "Records only matter once an injury becomes serious",
+        "Documentation is optional as long as you remember what happened"
+      ],
+      "answerIndex": 1,
+      "explanation": "The saying is about proof and accountability, not about paperwork outranking care — without a written record, there's no way for anyone else (or you later) to confirm what was actually done. That's part of why records matter legally, not just clinically."
+    },
+    {
+      "id": "q5",
+      "question": "What is the main purpose of a pre-participation physical form?",
+      "choices": [
+        "To collect an athlete's health history and exam findings before the season starts",
+        "To document a specific injury on the day it happens",
+        "To list emergency contacts for quick reference during a crisis",
+        "To record an athlete's SOAP note after treatment"
+      ],
+      "answerIndex": 0,
+      "explanation": "The pre-participation physical happens before the season and screens for existing conditions the staff should know about. An injury report documents a specific incident, and an emergency card is for fast reference during a crisis — different tools for different moments."
+    },
+    {
+      "id": "q6",
+      "question": "You notice you wrote the wrong date on a paper injury report. What's the correct way to fix it?",
+      "choices": [
+        "Erase it completely and rewrite it so it looks clean",
+        "Scribble over it heavily so it can't be read at all",
+        "Use correction fluid to cover the mistake",
+        "Draw a single line through the error, write the correction next to it, and initial it"
+      ],
+      "answerIndex": 3,
+      "explanation": "A single line through the mistake keeps the original visible while showing the correction — that's the accepted method for fixing paper records. Erasing, scribbling out, or using correction fluid makes a record look altered, which raises questions about what else might have changed."
+    },
+    {
+      "id": "q7",
+      "question": "A friend who doesn't work with the sports medicine team asks how the star quarterback's knee injury is doing. What should you do?",
+      "choices": [
+        "Give a general update since it's common knowledge around school",
+        "Tell them only the recovery timeline, not the diagnosis",
+        "Politely decline — that information is confidential and it's not your friend's role to know it",
+        "Ask the athletic trainer for permission to share it with your friend"
+      ],
+      "answerIndex": 2,
+      "explanation": "An athlete's medical information is confidential regardless of how well-known the athlete is or how curious people are. Your friend doesn't have a role-based need to know, so the answer is simply no — not a partial share, and not something to ask permission to hand off casually."
+    },
+    {
+      "id": "q8",
+      "question": "After a teammate gets hurt at a game, you consider posting about it on social media with a supportive \"get well soon\" message that names the injury. What's the problem with this?",
+      "choices": [
+        "There's no problem, since the post is supportive",
+        "It's fine as long as the athlete's last name is left out",
+        "It's a confidentiality breach — medical information shouldn't be shared publicly, even with good intentions",
+        "It's only a problem if the athletic trainer posts it, not a student aide"
+      ],
+      "answerIndex": 2,
+      "explanation": "Good intentions don't change the fact that this shares an athlete's medical information publicly without authorization — that's a confidentiality breach under the same standard that protects any health record. The safe rule is: don't post about an athlete's injury or medical status at all."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "SOAP note",
+      "back": "A structured format for documenting an evaluation or treatment visit: Subjective, Objective, Assessment, Plan — always in that order."
+    },
+    {
+      "id": "f2",
+      "front": "Subjective (S)",
+      "back": "What the athlete reports in their own words — how it happened, what it feels like. Their report, not your interpretation."
+    },
+    {
+      "id": "f3",
+      "front": "Objective (O)",
+      "back": "What you observe or measure directly — swelling, range of motion, tenderness, vital signs. Facts, not guesses."
+    },
+    {
+      "id": "f4",
+      "front": "Assessment (A)",
+      "back": "The clinician's professional judgment about what's going on, built from Subjective and Objective findings. Only a licensed clinician writes this — never a student aide."
+    },
+    {
+      "id": "f5",
+      "front": "Plan (P)",
+      "back": "What happens next — treatment, referral, follow-up, return-to-play steps."
+    },
+    {
+      "id": "f6",
+      "front": "Injury report",
+      "back": "A written account of a specific injury: what happened, what was found, and what was done, usually completed the same day."
+    },
+    {
+      "id": "f7",
+      "front": "Pre-participation physical form",
+      "back": "Collects an athlete's health history and exam findings before the season starts, used to clear them to play and flag existing conditions."
+    },
+    {
+      "id": "f8",
+      "front": "Emergency information card",
+      "back": "A quick-reference record of an athlete's emergency contacts, allergies, medications, and existing medical conditions."
+    },
+    {
+      "id": "f9",
+      "front": "\"If it wasn't documented, it wasn't done\"",
+      "back": "A health care saying capturing why records matter legally: care that isn't written down can't be proven to have happened."
+    },
+    {
+      "id": "f10",
+      "front": "Qualities of good documentation",
+      "back": "Accurate and objective, timely, legible, and corrected the right way (single line through an error, not erased)."
+    },
+    {
+      "id": "f11",
+      "front": "HIPAA",
+      "back": "Health Insurance Portability and Accountability Act — a federal law protecting the privacy of health information."
+    },
+    {
+      "id": "f12",
+      "front": "FERPA",
+      "back": "Family Educational Rights and Privacy Act — a federal law protecting student education records, including school-based health records."
+    }
+  ]
+}

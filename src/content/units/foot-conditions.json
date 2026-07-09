@@ -1,0 +1,301 @@
+{
+  "id": "foot-conditions",
+  "title": "Foot Injuries & Conditions in Athletes",
+  "category": "Lower Extremity Injuries",
+  "strand": "foot-conditions",
+  "gradeBand": "9-10",
+  "summary": "Recognize the foot conditions that sideline athletes — plantar fasciitis, Achilles problems, turf toe, stress fractures, and blister/nail trouble — and know which ones need more than rest.",
+  "minutes": 20,
+  "standards": ["CTE.HSMT.B.2.3", "CTE.HSMT.B.4.5", "CTE.HSMT.Anchor.6"],
+  "sections": [
+    {
+      "heading": "Foot anatomy: built for shock absorption",
+      "body": [
+        "The foot has 26 bones — more bones packed into a small area than almost anywhere else in the body — plus dozens of joints, ligaments, and one long band of connective tissue that ties the whole structure together. The ankle-sprain unit covers the ankle joint itself (tibia, fibula, talus) and the ligaments that stabilize it. This unit covers everything below that joint: the foot itself.",
+        "Anatomists divide the foot into three regions. The hindfoot is the back of the foot — the calcaneus (heel bone) and the talus, which also forms part of the ankle joint. The midfoot is a cluster of small bones (the navicular, cuboid, and three cuneiforms) that form the arch. The forefoot is the front of the foot — the five metatarsals (the long bones leading to each toe) and the phalanges (the toe bones themselves).",
+        "Running along the sole from heel to toes is the plantar fascia, a thick, tough band of connective tissue that supports the arch and acts like a spring, storing and releasing energy with every step and absorbing shock when the foot strikes the ground. Nearly every condition in this unit traces back to one of these structures being asked to absorb more load than it can handle."
+      ],
+      "list": [
+        "Hindfoot — calcaneus (heel bone) and talus",
+        "Midfoot — navicular, cuboid, and cuneiform bones, forming the arch",
+        "Forefoot — five metatarsals and the phalanges (toe bones)",
+        "Plantar fascia — the connective-tissue band along the sole that supports the arch and absorbs shock"
+      ],
+      "image": {
+        "asset": "foot-conditions-anatomy-regions.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Medial (inside) view of a right foot skeleton showing the arch, standing on a ground line. Shade the hindfoot (calcaneus, talus), midfoot (navicular, cuboid, cuneiforms), and forefoot (metatarsals, phalanges) each in a distinct color with a small legend. Overlay a bold line tracing the plantar fascia from the underside of the calcaneus along the sole to the base of the toes, labeled. Clean medical-illustration style.",
+        "alt": "Diagram of the foot's three regions — hindfoot, midfoot, and forefoot — with the plantar fascia traced along the sole from heel to toes.",
+        "location": "public/images/units/foot-conditions/"
+      }
+    },
+    {
+      "heading": "Plantar fasciitis: the classic first-step pain",
+      "body": [
+        "Plantar fasciitis is irritation and micro-tearing of the plantar fascia where it attaches to the front of the heel bone. It's the most common cause of heel and arch pain in athletes, and it's an overuse injury — it builds up from repetitive load rather than one specific play (see the overuse-injuries unit for the pattern in general).",
+        "It shows up in runners and jumping-sport athletes, and the usual setup is a sudden increase in mileage or jump volume, tight calf muscles that pull extra tension through the fascia, very high or very flat arches, or worn-out shoes that no longer cushion the heel strike.",
+        "The hallmark symptom is sharp pain in the heel or arch with the very first steps in the morning or after sitting for a while — the fascia tightens at rest and gets stretched painfully with the first weight-bearing steps. Pain often eases somewhat once the athlete is warmed up, then returns by the end of practice or the end of the day. On exam, the tender spot is usually right at the front of the heel bone, where the fascia attaches."
+      ],
+      "list": [
+        "Care: reduce running/jumping load (relative rest, not necessarily total rest), ice the heel after activity, stretch the calf and the plantar fascia itself, and use supportive footwear or an arch support insert.",
+        "Most cases improve over weeks to a few months with consistent load management — pushing through the pain and skipping the stretching routine is the most common reason it drags on."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "The stretch that helps most",
+        "text": "Rolling the arch over a frozen water bottle or tennis ball, plus calf stretches against a wall, done daily, are the simplest field-level tools for plantar fasciitis — they address the two biggest contributors: fascia tightness and calf tightness."
+      }
+    },
+    {
+      "heading": "Achilles tendon: tendinopathy vs. the can't-miss rupture",
+      "body": [
+        "The Achilles tendon is the largest tendon in the body, connecting the calf muscles (gastrocnemius and soleus) to the calcaneus. It's what lets an athlete push off, rise onto their toes, or sprint — every step relies on it transmitting the calf's pull into the foot.",
+        "Achilles tendinopathy follows the same overuse pattern as other tendon injuries: stiffness and pain at the start of activity that warms up and fades, then returns worse afterward, with tenderness felt directly on the tendon a couple of inches above the heel. Like other tendinopathies, it responds to load management and progressive strengthening, not total rest.",
+        "An Achilles rupture is a different problem entirely — a complete tear of the tendon, and it needs to be recognized immediately. The classic story: a sudden, forceful push-off or a hard stop-and-cut, and the athlete feels or hears a pop and describes it as feeling like someone kicked them in the back of the leg or hit them with a ball — even though nobody was near them. Sharp pain and sudden weakness follow immediately, and the athlete cannot push off or rise onto their toes on that side. Deceptively, they may still be able to walk somewhat flat-footed, which can make the injury look less serious than it is."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Refer now — suspected Achilles rupture",
+        "text": "A felt or heard pop with a sensation of being kicked in the calf, sudden sharp pain, and inability to push off or rise onto the toes on that side means: stop the athlete, do not let them try to 'walk it off,' protect the leg, and refer for immediate evaluation. A missed or delayed-treated rupture has a much worse outcome than one caught right away."
+      },
+      "image": {
+        "asset": "foot-conditions-achilles-tendinopathy-vs-rupture.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-panel comparison of the back of a lower leg and heel, Achilles tendon highlighted. Left panel 'Tendinopathy': tendon shown thickened and slightly frayed-looking a few inches above the heel, with a small icon showing 'stiff at start, warms up, worse after.' Right panel 'Rupture': tendon shown with a visible complete gap/tear, with icons noting 'pop felt/heard,' 'sudden sharp pain,' and 'cannot rise onto toes.' Label each panel clearly. Clean medical-illustration style, non-graphic.",
+        "alt": "Comparison diagram of Achilles tendinopathy, showing a thickened irritated tendon, versus an Achilles rupture, showing a complete tear with a visible gap.",
+        "location": "public/images/units/foot-conditions/"
+      }
+    },
+    {
+      "heading": "Turf toe: hyperextension of the big toe",
+      "body": [
+        "Turf toe is a sprain of the big toe's metatarsophalangeal (MTP) joint — the joint where the big toe meets the first metatarsal — caused by forceful hyperextension (the toe bending upward, back toward the shin, beyond its normal range). It's especially common on artificial turf and other hard, unforgiving surfaces, and more likely in flexible-soled shoes that let the forefoot bend too easily.",
+        "The typical mechanism: the foot is planted with the toes down and another player's weight comes down on the heel, or a forceful push-off drives the big toe into extreme hyperextension. That force strains or tears the ligaments and plantar plate (a thick stabilizing structure) under the joint.",
+        "Signs include pain, swelling, and bruising at the base of the big toe, reduced range of motion, and pain with push-off or even ordinary walking. Like ankle sprains, turf toe is graded by severity."
+      ],
+      "list": [
+        "Grade I — ligament stretched, mild tenderness and swelling, can usually keep playing.",
+        "Grade II — partial tear, more swelling and bruising, painful and limited push-off, several days to a couple of weeks out.",
+        "Grade III — complete tear, severe pain and swelling, unable to push off; may need weeks and physician management."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Field care",
+        "text": "Protect, ice, and limit motion at the joint — buddy-taping the big toe to the second toe, or using a stiffer-soled shoe or a turf toe insert, reduces painful bending during walking or light activity while it heals."
+      }
+    },
+    {
+      "heading": "Metatarsal stress fractures: the \"march fracture\"",
+      "body": [
+        "A stress fracture is bone failing under repetitive load — not one specific hit, but microdamage building up faster than the bone can repair itself (see the overuse-injuries unit for the general pattern). In the foot, the second metatarsal is the most common site. It's nicknamed the 'march fracture' because it was first described in military recruits after long marches, but today it shows up most in runners and court-sport athletes after a sudden jump in mileage or jump volume.",
+        "Risk climbs with a rapid training increase, worn-out or unsupportive shoes, hard training surfaces, and low bone density — which is why recurrent stress fractures, especially alongside menstrual changes, should prompt a look at energy availability and bone health, covered in the female-athlete-health unit.",
+        "Recognition: pain builds gradually rather than starting from one moment, sits at a pinpoint spot on top of the foot, and gets worse with activity rather than easing with warm-up. As it progresses, the pain may persist after activity or even ache at rest. On exam, there's focal, point tenderness — and sometimes mild swelling — directly over one specific metatarsal."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Refer — progressively worsening focal bone pain",
+        "text": "Pinpoint forefoot pain that keeps getting worse despite rest and ice, pain that doesn't improve after several days, pain that shows up at night or at rest, or pain reproduced by hopping on that foot are all signs of a possible stress fracture. These need physician evaluation and imaging — continuing to run or jump on a stress fracture risks it progressing to a complete fracture."
+      },
+      "image": {
+        "asset": "foot-conditions-metatarsal-stress-fracture-site.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Top (dorsal) view of a right foot skeleton, forefoot in focus. Highlight the second metatarsal with a small shaded crack/fracture line partway along its shaft, and label it 'most common stress fracture site.' Include a small caption box: 'gradual onset, pinpoint pain, worsens with activity.' Clean medical-illustration style.",
+        "alt": "Diagram of the foot skeleton highlighting a stress fracture on the second metatarsal, the most common site for a metatarsal stress fracture.",
+        "location": "public/images/units/foot-conditions/"
+      }
+    },
+    {
+      "heading": "Blisters, calluses, and ingrown toenails",
+      "body": [
+        "A blister is a fluid-filled pocket that forms under the skin from repeated friction — commonly on the heel or toes from new, wet, or ill-fitting shoes. As covered in the wound-care unit, an intact blister is its own sterile dressing: leave it alone and pad around it rather than popping it. If it must be drained because it's preventing an athlete from playing, use sterile technique and never remove the roof of skin — it protects the raw skin underneath.",
+        "A callus is an area of thickened skin from repeated friction or pressure. Unlike a blister, a callus is usually protective, but a thick or dry callus can crack and split, which opens a path for infection.",
+        "An ingrown toenail happens when the corner or edge of a nail grows into the surrounding skin, causing redness, swelling, and pain — usually the big toe. Tight shoes and nails trimmed with rounded corners (instead of straight across) are the most common causes."
+      ],
+      "list": [
+        "Prevention: moisture-wicking socks, properly fitted shoes with room in the toe box, keeping feet clean and dry, and trimming toenails straight across rather than rounding the corners.",
+        "Infection signs to watch for in any blister, callus crack, or ingrown nail: increasing redness spreading outward, warmth, swelling, pus or drainage, red streaking toward the ankle, or fever — any of these needs the same physician referral covered in the wound-care unit, not more time and a bandage."
+      ]
+    },
+    {
+      "heading": "Footwear: the best prevention you control",
+      "body": [
+        "Most of the conditions in this unit are directly linked to footwear, which makes shoe fit and type one of the highest-value prevention tools an athlete has. A shoe with too little room in the toe box drives turf toe and ingrown toenails; a shoe with a worn-out heel or no arch support drives plantar fasciitis and stress fractures; a shoe that's too flexible in the forefoot lets the big toe hyperextend too easily.",
+        "As in the overuse-injuries unit, running shoes should be replaced roughly every 300–500 miles even if they still look fine — the cushioning breaks down long before the outside shows it."
+      ],
+      "list": [
+        "Toe box: about a thumb's width of space between the longest toe and the end of the shoe.",
+        "Arch support matched to foot type — flat, neutral, or high — reduces plantar fascia strain.",
+        "Sport-appropriate stiffness: a stiffer forefoot sole for cutting/turf sports helps prevent turf toe.",
+        "Snug heel fit with no slipping — a heel that slides is a blister generator."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "A quick shoe check",
+        "text": "Press a thumb into the heel cushioning and the midsole — if it feels flat and doesn't spring back, or the tread is visibly worn smooth, it's time for new shoes regardless of how many months old they are."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is the plantar fascia?",
+      "choices": [
+        "A ligament connecting the tibia and fibula",
+        "The tendon connecting the calf muscles to the heel bone",
+        "A band of connective tissue along the sole that supports the arch and absorbs shock",
+        "The joint where the big toe meets the first metatarsal"
+      ],
+      "answerIndex": 2,
+      "explanation": "The plantar fascia runs along the sole from the heel to the base of the toes, supporting the arch and absorbing shock with each step. The calf-to-heel connection described in choice 2 is the Achilles tendon, a separate structure."
+    },
+    {
+      "id": "q2",
+      "question": "A runner says her heel and arch hurt sharply with her very first steps out of bed each morning, then ease up once she's moving. What does this pattern most likely indicate?",
+      "choices": [
+        "Achilles rupture",
+        "Plantar fasciitis",
+        "Turf toe",
+        "A metatarsal stress fracture"
+      ],
+      "answerIndex": 1,
+      "explanation": "First-step pain after rest that eases with movement is the hallmark symptom of plantar fasciitis — the fascia tightens overnight and gets stretched painfully with the first weight-bearing steps."
+    },
+    {
+      "id": "q3",
+      "question": "During a sprint, an athlete suddenly feels like someone kicked her in the back of the calf, hears a pop, and can no longer rise up onto her toes on that side. What should happen next?",
+      "choices": [
+        "Have her walk it off since she can still walk flat-footed",
+        "Tape the ankle and let her finish the game",
+        "Ice it for 20 minutes and re-test in a few minutes",
+        "Stop her, protect the leg, and refer immediately for suspected Achilles rupture"
+      ],
+      "answerIndex": 3,
+      "explanation": "A felt/heard pop, a 'kicked in the calf' sensation, and inability to push off or rise onto the toes are the classic signs of a complete Achilles rupture. The ability to still walk flat-footed is deceptive, not reassuring — this needs immediate protection and referral, not play-through."
+    },
+    {
+      "id": "q4",
+      "question": "Which mechanism describes turf toe?",
+      "choices": [
+        "Forceful hyperextension of the big toe's MTP joint, often on a hard surface",
+        "The foot rolling inward under body weight",
+        "Repetitive impact overloading a metatarsal bone",
+        "Friction between the skin and the inside of a shoe"
+      ],
+      "answerIndex": 0,
+      "explanation": "Turf toe is a sprain of the big toe's metatarsophalangeal (MTP) joint from forceful hyperextension — commonly when a planted foot takes weight from another player's fall, and it's more common on hard, unforgiving surfaces."
+    },
+    {
+      "id": "q5",
+      "question": "A basketball player who recently doubled her practice volume develops gradually worsening, pinpoint pain on top of her foot that gets worse as practice goes on. What should you suspect, and what's the appropriate response?",
+      "choices": [
+        "A blister — pad around it and continue",
+        "Turf toe — buddy-tape the toe and continue",
+        "A possible metatarsal stress fracture — refer for evaluation, don't push through it",
+        "Plantar fasciitis — stretch the calf and continue"
+      ],
+      "answerIndex": 2,
+      "explanation": "Gradual-onset, pinpoint forefoot pain that worsens with activity after a training load spike is the classic stress fracture pattern. It needs physician evaluation, since continuing to load the bone risks progressing to a complete fracture."
+    },
+    {
+      "id": "q6",
+      "question": "What is the correct field approach to an intact blister on an athlete's heel?",
+      "choices": [
+        "Remove the roof of skin so it can dry out",
+        "Leave it intact and pad around it — it's acting as its own sterile dressing",
+        "Pop it immediately with the nearest sharp object available",
+        "Ignore it completely and provide no protection"
+      ],
+      "answerIndex": 1,
+      "explanation": "An intact blister protects the raw skin underneath, functioning like a natural sterile dressing. It should be left alone and padded around; draining is reserved for blisters preventing play, and even then the roof of skin should be preserved."
+    },
+    {
+      "id": "q7",
+      "question": "Which nail-trimming habit helps prevent ingrown toenails?",
+      "choices": [
+        "Trimming nails straight across rather than rounding the corners",
+        "Rounding the corners as closely as possible",
+        "Leaving toenails untrimmed between seasons",
+        "Trimming nails only after they become painful"
+      ],
+      "answerIndex": 0,
+      "explanation": "Rounding the corners of a toenail encourages the edge to dig into the surrounding skin as it grows. Trimming straight across, along with properly fitted shoes, is the main prevention for ingrown toenails."
+    },
+    {
+      "id": "q8",
+      "question": "When fitting running shoes to help prevent turf toe and ingrown toenails, what's the guideline for the toe box?",
+      "choices": [
+        "The toes should touch the front of the shoe for a snug fit",
+        "About a thumb's width of space between the longest toe and the end of the shoe",
+        "Toe box size doesn't affect these conditions",
+        "The tighter the toe box, the more support it provides"
+      ],
+      "answerIndex": 1,
+      "explanation": "A shoe with too little toe room drives both turf toe (no room for the toe to move without jamming) and ingrown/black toenails (repeated pressure on the nail). A thumb's width of space at the toe box is the standard fit check."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Three regions of the foot",
+      "back": "Hindfoot (calcaneus, talus), midfoot (navicular, cuboid, cuneiforms — the arch), forefoot (metatarsals and phalanges)."
+    },
+    {
+      "id": "f2",
+      "front": "Plantar fascia",
+      "back": "A thick band of connective tissue running from the heel along the sole to the base of the toes; supports the arch and absorbs shock with each step."
+    },
+    {
+      "id": "f3",
+      "front": "Plantar fasciitis hallmark symptom",
+      "back": "Sharp heel/arch pain with the first steps in the morning or after sitting, easing with movement then returning by end of activity — an overuse condition."
+    },
+    {
+      "id": "f4",
+      "front": "Achilles tendon",
+      "back": "The body's largest tendon, connecting the calf muscles (gastrocnemius, soleus) to the calcaneus (heel bone); lets an athlete push off and rise onto the toes."
+    },
+    {
+      "id": "f5",
+      "front": "Achilles rupture red flags",
+      "back": "A felt/heard pop, sensation of being kicked in the calf, sudden sharp pain, and inability to push off or rise onto the toes — refer immediately, even if the athlete can still walk flat-footed."
+    },
+    {
+      "id": "f6",
+      "front": "Turf toe",
+      "back": "A sprain of the big toe's metatarsophalangeal (MTP) joint from forceful hyperextension, common on hard surfaces like turf; graded I-III like ankle sprains."
+    },
+    {
+      "id": "f7",
+      "front": "Metatarsal stress fracture (\"march fracture\")",
+      "back": "Bone failure from repetitive load, most common at the second metatarsal; gradual-onset, pinpoint forefoot pain that worsens with activity, after a training load spike."
+    },
+    {
+      "id": "f8",
+      "front": "Stress fracture refer signs",
+      "back": "Pinpoint bone pain that worsens with activity, doesn't improve with rest/ice, pain at night or rest, or pain with hopping on that foot — needs physician evaluation and imaging."
+    },
+    {
+      "id": "f9",
+      "front": "Intact blister care rule",
+      "back": "Leave it intact and pad around it — it acts as its own sterile dressing. Drain only if it prevents play, using sterile technique, and never remove the roof of skin."
+    },
+    {
+      "id": "f10",
+      "front": "Ingrown toenail prevention",
+      "back": "Trim toenails straight across (not rounded corners) and wear properly fitted shoes with room in the toe box."
+    },
+    {
+      "id": "f11",
+      "front": "Foot infection warning signs",
+      "back": "Increasing redness spreading outward, warmth, swelling, pus/drainage, red streaking, or fever on a blister, cracked callus, or ingrown nail — refer, don't self-treat."
+    },
+    {
+      "id": "f12",
+      "front": "Footwear fit and replacement",
+      "back": "About a thumb's width of toe-box room, arch support matched to foot type, snug non-slipping heel; replace running shoes roughly every 300-500 miles."
+    }
+  ]
+}

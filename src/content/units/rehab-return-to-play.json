@@ -1,0 +1,269 @@
+{
+  "id": "rehab-return-to-play",
+  "title": "Rehabilitation & Return to Play",
+  "category": "Assessment & Clinical Skills",
+  "strand": "rehab-return-to-play",
+  "gradeBand": "9-10",
+  "summary": "Understand how an injured athlete safely gets back to sport — the phases of rehab, criteria-based progression, and exactly why that final call never belongs to a student, a coach, or the athlete themselves.",
+  "minutes": 16,
+  "standards": ["CTE.HSMT.B.1.0", "CTE.HSMT.B.1.2", "CTE.HSMT.Anchor.6"],
+  "sections": [
+    {
+      "heading": "What 'rehab' and 'return to play' actually mean",
+      "body": [
+        "Getting hurt is only half of the story that matters to an athlete — getting back is the other half, and it's where a lot of both good and bad decisions get made. Rehabilitation ('rehab') is the structured process of restoring an injured athlete's movement, strength, and ability to perform their sport safely. Return to play (RTP) is the decision that an athlete is ready to fully participate in practice or competition again.",
+        "This unit is about understanding how that process generally works — not about learning to run it yourself. The RTP decision belongs to a physician or athletic trainer (AT), a licensed professional trained to evaluate healing tissue and functional readiness. As a student aide, teammate, or even the injured athlete, you don't get to make that call — no matter how good the intentions behind it."
+      ]
+    },
+    {
+      "heading": "The phases of rehab: each one builds on the last",
+      "body": [
+        "Every rehab plan looks a little different depending on the injury, but most follow the same general shape — four phases, each one setting up the next. Skipping ahead doesn't save time; it usually costs more of it later, because the next phase can't safely build on ground that isn't solid yet."
+      ],
+      "list": [
+        "Control pain and swelling — the earliest goal. An angry, swollen joint or muscle can't be safely stretched or loaded, so this phase focuses on protecting the area and calming inflammation down.",
+        "Restore range of motion (ROM) — once pain and swelling are under control, the joint or limb needs to regain its full, pain-free movement before it's asked to do real work.",
+        "Rebuild strength — with full pain-free motion back, strengthening exercises progressively load the muscle and joint, working toward matching the uninjured side.",
+        "Restore sport-specific function and confidence — the final phase: practicing the actual movements the sport demands (cutting, jumping, sprinting, throwing) without pain or compensation, while also rebuilding the athlete's trust in their own body."
+      ],
+      "image": {
+        "asset": "rehab-four-phase-progression.webp",
+        "ratio": "16:9",
+        "background": "transparent",
+        "description": "Horizontal four-step progression graphic with arrows connecting each phase in order: 1) Control pain & swelling, 2) Restore range of motion, 3) Rebuild strength, 4) Restore sport-specific function. Under each arrow, note a short label like 'advance only when criteria are met.' Clean flat infographic style, consistent with other stepwise-progression graphics used elsewhere in this app.",
+        "alt": "Four-phase rehab progression diagram: control pain and swelling, restore range of motion, rebuild strength, restore sport-specific function, connected by arrows.",
+        "location": "public/images/units/rehab-return-to-play/"
+      }
+    },
+    {
+      "heading": "Criteria-based, not calendar-based",
+      "body": [
+        "It's tempting to think of rehab like a countdown — 'six weeks for a sprain, four months for a tear' — but real rehab doesn't run on a fixed calendar. It's criteria-based: an athlete moves from one phase to the next when they meet specific, measurable benchmarks for that phase, whether that takes less time or more time than the original estimate.",
+        "This is why two athletes with what looks like the 'same' injury can come back on very different timelines. One person's tissue heals faster, or they hit their strength benchmarks sooner, or their sport demands more explosive cutting than the other's does. The plan adjusts to the person — the person doesn't get forced to fit the plan."
+      ]
+    },
+    {
+      "heading": "A familiar pattern: graduated, step-wise return",
+      "body": [
+        "You've likely already seen this principle in action if you've studied concussions: return to play after a concussion follows a graduated, step-wise progression — light aerobic activity, then sport-specific exercise, then non-contact drills, then full-contact practice, then competition — with the athlete only advancing after meeting criteria at the current stage, and dropping back a stage if problems return.",
+        "That same general pattern — gradually raising the demand placed on the body, in stages, only moving forward once each stage is tolerated — shows up across nearly every kind of rehab, not just concussions. A knee recovering from a ligament injury or a shoulder recovering from a dislocation follows the same logic: light, controlled work first, sport-specific movement later, full-speed and full-contact last."
+      ]
+    },
+    {
+      "heading": "Functional readiness: what 'ready' actually looks like",
+      "body": [
+        "\"It doesn't hurt anymore\" is not the same thing as ready. The physician or athletic trainer clearing an athlete is looking at functional readiness — a combination of findings, not a single feeling."
+      ],
+      "list": [
+        "Pain-free full range of motion — no pain limiting how far the joint moves.",
+        "Strength close to matching the uninjured side — not just 'able to move it,' but able to produce comparable force.",
+        "Sport-specific movements performed without compensating or guarding — cutting, jumping, landing, and sprinting look like the athlete's normal mechanics, not a limp or a favoring pattern dressed up as normal.",
+        "Confidence to move naturally — not hesitating, slowing down, or avoiding a movement out of fear."
+      ],
+      "image": {
+        "asset": "rehab-functional-readiness-test.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "An athletic trainer supervising an athlete performing a single-leg hop or cutting-movement test on a field or in a training room, watching closely for form and any compensation. Show the athlete's uninjured leg lightly marked or highlighted as a side-by-side comparison reference, and the athletic trainer holding a clipboard and observing rather than the athlete testing themselves alone. Clean sideline/training-room illustration style, no distressing detail.",
+        "alt": "An athletic trainer supervising an athlete performing a sport-specific movement test as part of assessing functional readiness to return to play.",
+        "location": "public/images/units/rehab-return-to-play/"
+      }
+    },
+    {
+      "heading": "The psychology of coming back",
+      "body": [
+        "The body isn't the only thing that has to recover. Fear of re-injury is a well-documented, real part of returning from a significant injury — an athlete can be fully medically cleared and still hesitate to cut hard, jump, or tackle the way they used to. That hesitation isn't a lack of toughness; it's a normal response worth taking seriously, the same way it's covered in the sports psychology unit.",
+        "Pressure to come back — from the athlete's own drive, from a coach who needs them in the lineup, from teammates who miss them, or just from missing the sport themselves — can push someone to rush a return before their body or their confidence is actually ready. Recognizing that pressure, in yourself or a teammate, is part of protecting a safe recovery."
+      ]
+    },
+    {
+      "heading": "Why returning too soon backfires",
+      "body": [
+        "Rushing back is not a shortcut — it's the single biggest risk factor for re-injury. A body that hasn't met its criteria yet is a body that's still vulnerable, even if it feels fine standing still or jogging in a straight line."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Red flag — returning too soon",
+        "text": "Going back before the body meets its readiness criteria significantly raises the risk of re-injury — and a repeat injury is often worse and takes longer to heal than the original one. The only people who can clear an athlete to return are a physician or athletic trainer. Not a coach, not a teammate, and not the athlete's own gut feeling that they're 'probably fine.'"
+      }
+    },
+    {
+      "heading": "Your role in someone else's comeback",
+      "body": [
+        "As a student aide or teammate, you have a real job during someone's rehab and return — support the plan. That means encouraging them to stick with the exercises the athletic trainer gave them, even the boring or frustrating ones, and not pushing them (or letting them push themselves) to skip steps or 'test it out' early.",
+        "If you notice something that doesn't match what 'cleared' should look like — a limp, obvious guarding, an athlete who seems scared to move normally — say something to the athletic trainer. Reporting a concern is part of your role. Clearing an athlete, un-clearing them, or telling them to push through their plan is not."
+      ],
+      "list": [
+        "Do: encourage adherence to the rehab program, even when it's slow or tedious.",
+        "Do: report what you observe to the athletic trainer, including signs that don't match a 'cleared' status.",
+        "Don't: tell an athlete they're ready, or that they should push past what their plan says.",
+        "Don't: let pressure from a coach, teammates, or the athlete's own impatience talk you into agreeing they're fine when that isn't your call to make."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "A simple way to help",
+        "text": "You don't need medical knowledge to help someone through rehab — just consistency. Check in before their rehab session, celebrate them hitting a milestone in their plan, and avoid asking 'are you playing this week?' which adds pressure. Let the plan set the pace, not the schedule."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is the general order of the four rehab phases covered in this unit?",
+      "choices": [
+        "Control pain and swelling → restore range of motion → rebuild strength → restore sport-specific function",
+        "Rebuild strength → control pain and swelling → restore sport-specific function → restore range of motion",
+        "Restore sport-specific function → restore range of motion → rebuild strength → control pain and swelling",
+        "Restore range of motion → rebuild strength → control pain and swelling → restore sport-specific function"
+      ],
+      "answerIndex": 0,
+      "explanation": "Rehab moves through pain/swelling control first (you can't safely stretch or strengthen an angry joint), then range of motion, then strength, then sport-specific function — each phase depends on the one before it. Reversing the order works against the healing process, not with it."
+    },
+    {
+      "id": "q2",
+      "question": "What does it mean for rehab to be 'criteria-based' rather than calendar-based?",
+      "choices": [
+        "An athlete moves to the next phase once a fixed number of days on the calendar has passed",
+        "An athlete moves to the next phase once they meet specific functional criteria for that phase, no matter how many days that takes",
+        "An athlete moves to the next phase once the coach needs them back for a big game",
+        "An athlete moves to the next phase once swelling first appears"
+      ],
+      "answerIndex": 1,
+      "explanation": "Criteria-based progression means specific, measurable benchmarks — not a date on a calendar — decide when it's safe to advance. Two athletes with the 'same' injury can take very different amounts of time because their bodies meet criteria at different rates."
+    },
+    {
+      "id": "q3",
+      "question": "Which of these best describes functional readiness for return to play?",
+      "choices": [
+        "Swelling has gone down and the athlete says they feel mostly okay",
+        "The athlete can jog in a straight line without pain",
+        "Pain-free full range of motion, strength close to matching the uninjured side, and sport movements performed without compensating or guarding",
+        "The athlete has completed six weeks of physical therapy appointments"
+      ],
+      "answerIndex": 2,
+      "explanation": "Functional readiness is a combination of findings — full pain-free motion, strength close to symmetric, and the ability to actually perform sport movements normally, not just jog — not a single feeling, a single ability, or a number of appointments attended."
+    },
+    {
+      "id": "q4",
+      "question": "An athlete's rehab plan said 6 weeks, and 6 weeks have now passed — but during cutting drills they're still visibly favoring the injured leg. Are they ready to return?",
+      "choices": [
+        "Yes — once the planned number of weeks has passed, they're automatically ready",
+        "Yes — visible favoring is normal and always resolves on its own once cleared",
+        "No — but only a coach can decide whether to hold them out",
+        "No — favoring/guarding during sport movement means functional criteria haven't been met yet, regardless of how much time has passed"
+      ],
+      "answerIndex": 3,
+      "explanation": "Time on a calendar is not one of the readiness criteria — visible compensation during sport-specific movement is a sign the body isn't ready yet, no matter how many weeks have gone by. And this isn't a coach's call either — it belongs to the physician or athletic trainer running the rehab plan."
+    },
+    {
+      "id": "q5",
+      "question": "The concussion unit uses a stepwise return-to-play progression — light activity, then sport-specific activity, then non-contact drills, then full contact — dropping back a stage if problems return. Why does this same general pattern show up in rehab for injuries like a sprained knee or a shoulder, too?",
+      "choices": [
+        "It gradually raises how much the body is asked to do, so each stage can prove it's tolerated before more demand is added",
+        "It's a rule that only applies to brain injuries and doesn't transfer to joint or muscle injuries",
+        "It lets an athlete skip straight to competition if they're motivated enough",
+        "It removes the need for a physician or athletic trainer to be involved in the decision"
+      ],
+      "answerIndex": 0,
+      "explanation": "Graduated, step-wise progression is a general rehab principle, not something unique to concussions — raising demand gradually, one proven stage at a time, applies to knees, shoulders, and ankles just as much as it does to the brain. It doesn't replace medical oversight; if anything, it depends on it."
+    },
+    {
+      "id": "q6",
+      "question": "An athlete is fully medically cleared after a knee injury but hesitates and slows down every time a drill calls for a hard cut or jump. What is this most likely, and what should happen?",
+      "choices": [
+        "It means the knee isn't actually healed and the diagnosis was wrong",
+        "Fear of re-injury — a real, common part of recovery that's worth mentioning to the athletic trainer, not something to just push through alone",
+        "A lack of effort that a coach should call out in front of the team",
+        "Nothing significant — hesitation after clearance never matters"
+      ],
+      "answerIndex": 1,
+      "explanation": "Fear of re-injury is a well-documented part of the psychological side of coming back, and it can persist even after the body is fully cleared — it's not proof the injury is unhealed, and it's not a motivation problem to call out. It's worth flagging to the athletic trainer, who can loop in additional support if needed."
+    },
+    {
+      "id": "q7",
+      "question": "A teammate tells you, 'The athletic trainer cleared me,' but you notice they're still limping during warmups. What's your role as a student aide?",
+      "choices": [
+        "Tell them to sit out — you're overriding the clearance because you don't think they look ready",
+        "Say nothing — once someone's cleared, it's not your business anymore",
+        "Encourage them to push through it since a limp right after warmups is normal",
+        "Mention what you're seeing to the athletic trainer — clearance doesn't mean you stop watching, even though you don't get to overrule it yourself"
+      ],
+      "answerIndex": 3,
+      "explanation": "Your role is to support the plan and flag concerns, not to make an independent call in either direction — overriding the clearance yourself and staying silent are both outside your scope. Reporting what you observe lets the person who actually made the clearance decision take another look."
+    },
+    {
+      "id": "q8",
+      "question": "What's the biggest risk of returning to play too soon, and who is actually allowed to clear an athlete to do it?",
+      "choices": [
+        "The risk is minor stiffness; any team captain can clear an athlete once symptoms fade",
+        "The risk is a slower comeback story; the head coach clears athletes based on the schedule",
+        "The risk is re-injury, which is often worse and takes longer to heal than the original injury; only a physician or athletic trainer clears an athlete to return",
+        "The risk is losing playing time; the athlete can clear themselves once they feel ready"
+      ],
+      "answerIndex": 2,
+      "explanation": "Returning before the body meets readiness criteria raises the risk of re-injury — and a repeat injury is frequently more severe and slower to heal than the first one. That decision belongs to a physician or athletic trainer, never a teammate, coach, or the athlete's own self-assessment of 'feeling ready.'"
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Rehabilitation (rehab)",
+      "back": "The structured process of restoring an injured athlete's movement, strength, and ability to perform their sport safely, guided by a physician or athletic trainer's plan."
+    },
+    {
+      "id": "f2",
+      "front": "Return to play (RTP)",
+      "back": "The decision that an athlete is ready to fully participate in practice or competition again. Made only by a physician or athletic trainer."
+    },
+    {
+      "id": "f3",
+      "front": "Four general phases of rehab",
+      "back": "Control pain and swelling → restore range of motion → rebuild strength → restore sport-specific function. Each phase builds on the one before it."
+    },
+    {
+      "id": "f4",
+      "front": "Phase 1: Control pain and swelling",
+      "back": "The earliest rehab goal — protecting the injured area and calming inflammation before adding motion or load."
+    },
+    {
+      "id": "f5",
+      "front": "Phase 2: Restore range of motion (ROM)",
+      "back": "Regaining full, pain-free movement at the joint before strengthening work begins."
+    },
+    {
+      "id": "f6",
+      "front": "Phase 3: Rebuild strength",
+      "back": "Progressively loading the muscle and joint once motion is pain-free, working toward matching the uninjured side."
+    },
+    {
+      "id": "f7",
+      "front": "Phase 4: Restore sport-specific function",
+      "back": "Practicing the actual movements of the sport — cutting, jumping, sprinting — without pain or compensation, while rebuilding confidence."
+    },
+    {
+      "id": "f8",
+      "front": "Criteria-based progression",
+      "back": "Advancing to the next rehab phase because specific functional benchmarks are met — not because a set number of calendar days has passed."
+    },
+    {
+      "id": "f9",
+      "front": "Functional readiness",
+      "back": "Pain-free full range of motion, strength close to matching the uninjured side, and the ability to perform sport movements without compensating or guarding."
+    },
+    {
+      "id": "f10",
+      "front": "Graduated (step-wise) return-to-play progression",
+      "back": "Gradually increasing demand in stages — like the concussion protocol's light activity → sport-specific → non-contact → full contact — dropping back a stage if problems return."
+    },
+    {
+      "id": "f11",
+      "front": "Fear of re-injury",
+      "back": "A real, common psychological barrier where a medically cleared athlete still hesitates on cutting or jumping. Not a lack of toughness — a normal part of recovery."
+    },
+    {
+      "id": "f12",
+      "front": "Who clears an athlete to return to play",
+      "back": "A physician or athletic trainer only — never a coach, teammate, or the athlete's own self-assessment. Returning too soon risks re-injury that's often worse and longer than the original."
+    }
+  ]
+}
