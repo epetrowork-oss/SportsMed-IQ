@@ -1,0 +1,257 @@
+{
+  "id": "legal-ethical-issues",
+  "title": "Legal & Ethical Issues in Sports Medicine",
+  "category": "The Sports Medicine Profession",
+  "strand": "legal-ethical-issues",
+  "gradeBand": "9-10",
+  "summary": "Learn the boundaries that govern everyone on a sports medicine team — scope of practice, consent, confidentiality, and the ethical duty to put athlete health above winning.",
+  "minutes": 17,
+  "standards": ["CTE.HSMT.Anchor.8", "CTE.HSMT.Anchor.6", "CTE.HSMT.Anchor.2"],
+  "sections": [
+    {
+      "heading": "Every role has a boundary: scope of practice",
+      "body": [
+        "Scope of practice is the set of tasks a person is trained, licensed, and authorized to perform in their role. It applies to everyone on a sports medicine team — a student aide, an athletic trainer, a team physician — and it's different for each one. A physician can diagnose and prescribe. An athletic trainer can evaluate an injury and clear an athlete to return under a physician's protocols. A student aide can do neither.",
+        "This isn't red tape. Scope of practice exists because training and authority are supposed to match the risk of the task. A licensed athletic trainer has years of coursework and supervised practice behind an evaluation; a student aide does not — so a student aide's scope is intentionally narrow, and staying inside it is what keeps athletes safe."
+      ],
+      "list": [
+        "A student aide's scope generally includes: recognizing signs and symptoms, basic first aid under supervision, assisting with taping and equipment, documenting observations, and getting a trained adult fast.",
+        "A student aide's scope does not include: diagnosing an injury, administering any medication, clearing an athlete to return to play, or reducing (realigning) a dislocation — each of these is covered as its own boundary elsewhere in this program, and every one of them is outside a student aide's scope everywhere it appears."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Doing more than you're allowed to isn't helping — it's a liability",
+        "text": "Stepping outside your scope of practice, even with good intentions, doesn't make you more helpful — it makes you a danger to the athlete and creates legal liability for you and for the program. Never diagnose (that's covered in documentation-recordkeeping — writing an Assessment is a clinician's call). Never administer medication, not even a single OTC tablet (covered fully in medication-safety). Never clear an athlete to return to play (covered in rehab-return-to-play). Never attempt to reduce a dislocation or straighten a deformity (covered in fractures-dislocations and splinting-immobilization). If a task feels outside what you were trained to do, it is — stop and get the athletic trainer."
+      }
+    },
+    {
+      "heading": "Negligence and standard of care",
+      "body": [
+        "Standard of care is what a reasonable, similarly trained person would do in the same situation. Negligence is failing to meet that standard — either by doing something a reasonable person in your role wouldn't do, or by failing to do something a reasonable person in your role should have done — and it causes harm as a result.",
+        "Negligence has two directions, and both matter for a student aide. Acting beyond your training is one form (attempting to tape a suspected fracture into 'playing shape' instead of getting help). Failing to act is the other form (noticing an athlete is clearly concussed and saying nothing because you don't want to make a scene). Standard of care for a student aide isn't 'do everything a physician would do' — it's 'do exactly what a trained, responsible student aide in your role is supposed to do: recognize, protect, refer.'"
+      ],
+      "list": [
+        "Doing too much: performing a task outside your scope, like assessing whether a joint is 'probably fine' and waving an athlete back onto the field yourself.",
+        "Doing too little: recognizing a red flag and staying quiet instead of reporting it, because you're unsure or don't want to overreact."
+      ]
+    },
+    {
+      "heading": "Good Samaritan protection and the duty to act",
+      "body": [
+        "Good Samaritan laws exist in every U.S. state, at an awareness level: they offer legal protection to someone who provides reasonable emergency help in good faith, within the limits of their training, without expecting payment. The core idea is that the law shouldn't punish someone for trying to help in an emergency — as long as the help given stays within what that person is actually trained to do and isn't reckless.",
+        "That protection is exactly why scope of practice still matters in an emergency. 'I was trying to help' protects you when you act within your training; it does not cover attempting something you were never trained or authorized to do, like giving a medication or trying to pop a dislocated joint back into place.",
+        "In a school or team setting, a student aide who has taken on a designated first-aid role generally has a duty to act — an expectation to respond and help within their training once an emergency is recognized, rather than walking away. This is different from a random bystander with no assigned role, who in most places has no legal duty to step in at all."
+      ]
+    },
+    {
+      "heading": "Consent: who can say yes to care",
+      "body": [
+        "Informed consent means a patient (or their parent/guardian, for a minor) understands what a proposed evaluation or treatment involves — including its purpose and reasonable risks — and agrees to it before it happens. It's a basic right in health care: no one gets evaluated or treated without agreeing to it first, except in a true emergency.",
+        "Because most high school athletes are minors (under 18), they generally cannot give full legal consent for medical care themselves — a parent or guardian gives consent on their behalf, usually through the same pre-participation and emergency-information forms covered in the documentation-recordkeeping unit. That's why every athlete on a team needs a signed emergency-information form on file before the season starts: it authorizes emergency care and lists who to contact, so care doesn't have to wait on a phone call that can't be answered in time.",
+        "Emergency consent is the exception: if a minor is seriously injured or unconscious and a parent/guardian can't be reached, emergency responders and the school's Emergency Action Plan (EAP, the written plan for medical emergencies) can act to prevent loss of life or limb without waiting for consent. This is called implied consent — the reasonable assumption that a person would want life-saving care if they could ask for it."
+      ],
+      "image": {
+        "asset": "legal-ethical-issues-consent-flow.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Simple flow diagram with two branches from a central question 'Does the athlete need evaluation or treatment?' Branch 1, labeled 'Non-emergency': parent/guardian consent obtained in advance via signed forms, arrow to 'Care may proceed.' Branch 2, labeled 'Emergency, guardian unreachable': arrow labeled 'Implied consent' to 'EAP activates — care proceeds to prevent loss of life or limb.' Clean flowchart style, neutral icons (a form/clipboard icon, an emergency-cross icon), no real names or photos.",
+        "alt": "Flowchart showing that non-emergency care requires parent or guardian consent obtained in advance, while a true emergency with an unreachable guardian proceeds under implied consent.",
+        "location": "public/images/units/legal-ethical-issues/"
+      }
+    },
+    {
+      "heading": "Confidentiality: private information stays private",
+      "body": [
+        "As covered in documentation-recordkeeping, an athlete's medical information — an injury, a diagnosis, a medication, a mental health concern — is protected by federal law. HIPAA (Health Insurance Portability and Accountability Act) protects health information generally; FERPA (Family Educational Rights and Privacy Act) protects student education records, which can include school-based health and injury records. You don't need the legal details memorized — you need to know these laws exist and that they mean medical information does not get shared casually, by anyone, including a student aide.",
+        "The ethical piece sits right alongside the legal one: even when no law is being cited, gossiping about an athlete's injury, posting about it online, or telling a curious classmate 'just this once' is a breach of trust that damages the athlete-caregiver relationship the whole system depends on."
+      ],
+      "list": [
+        "Only access or discuss a record if your role actually needs to know it.",
+        "Never post about an athlete's injury or medical status on social media, even with good intentions.",
+        "If you're unsure whether something is okay to share, don't — ask the athletic trainer first."
+      ]
+    },
+    {
+      "heading": "Ethics: the values behind the rules",
+      "body": [
+        "Laws set a legal floor. Ethics is the broader set of values that guide right conduct even when no one would catch you doing otherwise. In sports medicine, four ethical principles come up constantly.",
+        "Honesty means the record and the report match reality — you never cover up an injury, downplay what you saw to avoid a hassle, or falsify a record to make a situation look better than it was. A record that isn't honest is worse than no record at all, because people make decisions based on it.",
+        "Athlete health above winning is the ethical spine of this entire field. Coaches, parents, and even the athlete themselves can put real pressure on a sports medicine team to clear someone who isn't ready — a star player before a championship game, a senior in their last season, a kid whose parent is convinced 'it's not that bad.' The job of everyone on the sports medicine team, at every level, is to hold the same standard regardless of who's asking or how much is riding on the outcome.",
+        "Fairness means every athlete gets the same standard of evaluation and care — no shortcuts for a starter and no lesser attention for a backup.",
+        "Reporting concerns up the chain means that if you see something that worries you — a coach pushing an injured athlete to play, a peer cutting corners on safety, a piece of equipment that looks unsafe — you tell the athletic trainer or another trusted adult rather than staying quiet or trying to handle it yourself."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "The question that cuts through pressure",
+        "text": "When you feel pressure to bend a rule — hand out medication, wave someone back onto the field, stay quiet about something you saw — ask: 'Am I still inside my scope, and would a reasonable, trained person in my role do this?' If the honest answer is no, the answer to the pressure is no too, regardless of who's asking."
+      }
+    },
+    {
+      "heading": "Why this protects you, too",
+      "body": [
+        "Staying inside your scope of practice, documenting honestly, protecting confidentiality, and refusing to bend under pressure aren't just rules to avoid getting in trouble — they're what keeps athletes safe and what protects you legally and professionally if something ever goes wrong. An aide who stayed in their lane, reported clearly, and followed the plan has a very different legal and ethical position than one who improvised.",
+        "The unifying idea of this whole unit: know your boundaries, and stay inside them, every time — not just when it's convenient."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What does 'scope of practice' mean?",
+      "choices": [
+        "The list of sports a school's athletic training program covers",
+        "The set of tasks a person is trained, licensed, and authorized to perform in their role",
+        "The hours during which an athletic trainer is on duty",
+        "The equipment a team is allowed to use during practice"
+      ],
+      "answerIndex": 1,
+      "explanation": "Scope of practice is about authorized tasks matched to training and licensure — it's different for a student aide, an athletic trainer, and a physician. It has nothing to do with sports covered, duty hours, or equipment."
+    },
+    {
+      "id": "q2",
+      "question": "It's the third quarter of a playoff game and the team's best player has a knee that gave out and swelled fast. The coach says, 'She says she's fine, just tape it and get her back out there — we need her.' What should you do?",
+      "choices": [
+        "Tape it tightly and send her back in since the coach and the athlete both want it",
+        "Make the call yourself since you've seen plenty of knee injuries before",
+        "Report what you observed to the athletic trainer and let them make the return-to-play call — clearing an athlete is outside your scope regardless of what's at stake in the game",
+        "Quietly ignore the coach's request and say nothing to anyone"
+      ],
+      "answerIndex": 2,
+      "explanation": "Coach or athlete pressure doesn't change scope of practice — clearing an athlete to return is never a student aide's call, no matter how important the game is. The right move is reporting your observation to the athletic trainer, not deciding yourself and not staying silent."
+    },
+    {
+      "id": "q3",
+      "question": "A teammate asks you for an ibuprofen from the first-aid kit for a headache before a game. What's the correct response, and why?",
+      "choices": [
+        "Give her one tablet — it's just OTC medication, so it's low-risk",
+        "Say no — administering any medication, including a single OTC tablet, is outside a student aide's scope of practice",
+        "Give her two tablets since a headache before a game is understandable",
+        "Tell her to ask a teammate instead, since it's not your problem"
+      ],
+      "answerIndex": 1,
+      "explanation": "Administering medication — prescription or OTC — is outside a student aide's scope of practice with no exceptions. Refusing and redirecting her to her own medication or an authorized adult is the correct, in-scope response."
+    },
+    {
+      "id": "q4",
+      "question": "Which situation best describes negligence?",
+      "choices": [
+        "An athletic trainer evaluates an ankle sprain using standard tests and refers the athlete for an X-ray per the Ottawa Ankle Rules",
+        "A student aide notices an athlete is disoriented and confused after a hit to the head but says nothing because they don't want to make a scene",
+        "A physician diagnoses a fracture and prescribes treatment within their license",
+        "A student aide reports a suspected injury to the athletic trainer and documents what they observed"
+      ],
+      "answerIndex": 1,
+      "explanation": "Negligence is failing to meet the standard of care expected of your role — here, staying silent about clear red flags instead of reporting them. The other choices describe people acting appropriately within their scope."
+    },
+    {
+      "id": "q5",
+      "question": "What is the basic idea behind Good Samaritan laws?",
+      "choices": [
+        "They require every bystander to attempt medical care in any emergency",
+        "They guarantee a person cannot be sued for any action taken during an emergency, regardless of training",
+        "They offer legal protection to someone who provides reasonable emergency help, in good faith, within the limits of their training",
+        "They only apply to licensed medical professionals, not students or bystanders"
+      ],
+      "answerIndex": 2,
+      "explanation": "Good Samaritan protection covers reasonable, good-faith help given within a person's actual training — it does not create a universal duty to act, and it does not protect actions far outside someone's training, like giving medication or attempting to reduce a dislocation."
+    },
+    {
+      "id": "q6",
+      "question": "Why do most high school athletes need a parent or guardian's signed consent on file before the season, rather than giving consent themselves?",
+      "choices": [
+        "Because schools prefer extra paperwork for legal record-keeping only",
+        "Because most high school athletes are minors and generally cannot give full legal consent for their own medical care",
+        "Because coaches are legally required to approve all medical decisions",
+        "Because consent forms replace the need for an Emergency Action Plan"
+      ],
+      "answerIndex": 1,
+      "explanation": "Minors generally cannot give full legal consent for medical care, so a parent or guardian consents on their behalf, typically through pre-participation and emergency-information forms signed before the season. Those forms work alongside the EAP, not instead of it."
+    },
+    {
+      "id": "q7",
+      "question": "An athlete collapses at practice and is unconscious. Their parent/guardian cannot be reached by phone. Under what concept can emergency responders provide life-saving care anyway?",
+      "choices": [
+        "Negligence",
+        "Scope of practice",
+        "Implied consent",
+        "Good Samaritan protection only"
+      ],
+      "answerIndex": 2,
+      "explanation": "Implied consent is the reasonable assumption that a person would want life-saving care if they could ask for it, which allows care to proceed in a true emergency when a guardian can't be reached in time. Negligence and scope of practice describe different concepts, and Good Samaritan protection is about the helper's legal shielding, not about authorizing the care itself."
+    },
+    {
+      "id": "q8",
+      "question": "A teammate begs you not to tell the athletic trainer about a shoulder injury because she's worried about losing her starting spot. What's the right response, and which value is most directly at stake?",
+      "choices": [
+        "Agree to stay quiet since it's her body and her choice to make",
+        "Tell her you'll only mention it if it looks worse later — fairness to her request",
+        "Report it to the athletic trainer regardless of her request — honesty and putting athlete health above winning or status come first",
+        "Tell her to hide it from the athletic trainer but be more careful during practice"
+      ],
+      "answerIndex": 2,
+      "explanation": "Covering up an injury, even at an athlete's own request, violates the honesty principle and the core ethical commitment to put health above competitive outcomes like playing time. A student aide's job is to report what they know, not to help conceal it."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Scope of practice",
+      "back": "The set of tasks a person is trained, licensed, and authorized to perform in their role — different for a student aide, athletic trainer, and physician."
+    },
+    {
+      "id": "f2",
+      "front": "A student aide's scope excludes",
+      "back": "Diagnosing an injury, administering any medication, clearing an athlete to return to play, and reducing a dislocation — always outside scope, no exceptions."
+    },
+    {
+      "id": "f3",
+      "front": "Standard of care",
+      "back": "What a reasonable, similarly trained person would do in the same situation — the benchmark negligence is measured against."
+    },
+    {
+      "id": "f4",
+      "front": "Negligence",
+      "back": "Failing to meet the standard of care for your role, either by doing something a reasonable person in your role wouldn't do, or by failing to do something they should have — causing harm."
+    },
+    {
+      "id": "f5",
+      "front": "Good Samaritan laws",
+      "back": "Laws offering legal protection to someone who gives reasonable emergency help in good faith, within their training — they do not cover actions far outside that training."
+    },
+    {
+      "id": "f6",
+      "front": "Duty to act",
+      "back": "An expectation to respond within your training once an emergency is recognized, if you hold a designated first-aid role — different from a bystander with no assigned role."
+    },
+    {
+      "id": "f7",
+      "front": "Informed consent",
+      "back": "A patient (or parent/guardian, for a minor) understanding a proposed evaluation or treatment's purpose and risks, and agreeing to it before it happens."
+    },
+    {
+      "id": "f8",
+      "front": "Why minors need guardian consent",
+      "back": "Most high school athletes can't give full legal consent themselves, so a parent/guardian consents in advance via signed pre-participation and emergency-information forms."
+    },
+    {
+      "id": "f9",
+      "front": "Implied consent",
+      "back": "The reasonable assumption that a person would want life-saving care if they could ask for it — allows emergency care to proceed when a guardian can't be reached in time."
+    },
+    {
+      "id": "f10",
+      "front": "HIPAA and FERPA",
+      "back": "HIPAA protects health information generally; FERPA protects student education records, including school-based health records. Both mean medical information isn't shared casually."
+    },
+    {
+      "id": "f11",
+      "front": "Athlete health above winning",
+      "back": "The ethical spine of sports medicine: hold the same safety standard regardless of pressure from coaches, parents, or the athlete — even a star player before a big game."
+    },
+    {
+      "id": "f12",
+      "front": "Core ethics in sports medicine",
+      "back": "Honesty (never falsify a record or cover up an injury), athlete health above winning, fairness (same standard for every athlete), and reporting concerns up the chain."
+    }
+  ]
+}

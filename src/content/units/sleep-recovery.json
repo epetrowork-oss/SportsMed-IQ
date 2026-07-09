@@ -1,0 +1,264 @@
+{
+  "id": "sleep-recovery",
+  "title": "Sleep & Recovery for Athletes",
+  "category": "Prevention & Performance",
+  "strand": "sleep-recovery",
+  "gradeBand": "9-10",
+  "summary": "The body doesn't get stronger during practice — it gets stronger during recovery, and sleep is the recovery tool most teen athletes shortchange.",
+  "minutes": 16,
+  "standards": ["CTE.HSMT.Anchor.6", "CTE.HSMT.B.2.0", "CTE.HSMT.B.1.2"],
+  "sections": [
+    {
+      "heading": "Why recovery is part of training, not a break from it",
+      "body": [
+        "Every hard practice or lift creates a small amount of stress on muscle, tendon, and bone. That stress is the signal that tells the body to adapt — but the actual adapting, the rebuilding of tissue slightly stronger than before, happens afterward, during recovery. Training without recovery is just accumulating stress with nothing to turn it into fitness.",
+        "Recovery isn't one thing. It's a set of habits working together: sleep, planned rest days, nutrition and hydration timing, and active recovery. Sleep is the biggest piece of that set, and the one most student-athletes shortchange first when the schedule gets tight — which is exactly backwards, because sleep is when most of the actual repair work gets done."
+      ]
+    },
+    {
+      "heading": "What sleep actually does for an athlete's body and brain",
+      "body": [
+        "Sleep happens in cycles of different stages, repeating several times a night. Two stages matter most for athletes.",
+        "During deep sleep (also called slow-wave sleep), the body releases most of its daily growth hormone in large pulses. Growth hormone drives tissue repair and muscle protein rebuilding — the literal construction work that turns a hard practice into a stronger body. Skimp on deep sleep and that construction crew shows up short-staffed.",
+        "During REM sleep (the stage where most dreaming happens) and deep sleep, the brain consolidates memory — including motor skills. A new play run in practice, a corrected shooting form, a defensive read: the reps that make a skill 'stick' as automatic memory happen while an athlete sleeps that night, not just while they're doing them. Sleep also supports immune function; the immune system uses sleep time to produce and regulate infection-fighting cells, which is part of why athletes who are chronically under-slept get sick more often."
+      ],
+      "image": {
+        "asset": "sleep-recovery-sleep-stages.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Simple horizontal timeline/cycle diagram of a night's sleep showing repeating cycles labeled with stages: Light sleep, Deep sleep (slow-wave), REM. Under Deep sleep, a callout icon/label reads 'Growth hormone release — tissue repair.' Under REM, a callout icon/label reads 'Memory & skill consolidation.' Clean flat infographic style, no clutter.",
+        "alt": "Diagram of a night's sleep cycle showing deep sleep linked to growth hormone release and tissue repair, and REM sleep linked to memory and skill consolidation.",
+        "location": "public/images/units/sleep-recovery/"
+      }
+    },
+    {
+      "heading": "How much sleep teens actually need — and the gap",
+      "body": [
+        "Major sleep and pediatric health guidelines agree: teenagers (roughly ages 13-18) need about 8-10 hours of sleep per night. That's not a soft suggestion — it's the range where the body reliably gets enough deep and REM sleep to do the repair and consolidation work covered above.",
+        "The reality for most student-athletes falls well short of that. Between early practices, homework, phones, and late-night travel from away games, many high schoolers average closer to 6.5-7.5 hours on school nights. That gap between sleep needed and sleep actually gotten is called sleep debt, and it doesn't just disappear — sleeping in for one long weekend helps a little, but it does not fully repay a week of short nights."
+      ],
+      "list": [
+        "8-10 hours per night — general guideline for teen athletes (13-18 years old).",
+        "6.5-7.5 hours — roughly what many student-athletes actually average on school nights.",
+        "Sleep debt accumulates across the week and is only partly repaid by sleeping in."
+      ]
+    },
+    {
+      "heading": "What under-sleeping costs an athlete",
+      "body": [
+        "Chronic short sleep doesn't just make an athlete feel tired — it measurably changes how the body and brain perform.",
+        "Reaction time slows and decision-making gets worse: reading a defense, judging whether to cut or pull up, reacting to a ball off the bat all get slower and less accurate on too little sleep. Coordination and fine motor skill — the exact things practice is meant to sharpen — also decline, so tired reps train in sloppier habits instead of better ones.",
+        "There's also real evidence connecting short sleep to injury risk: research on high school athletes has found that those who consistently sleep less than about 8 hours a night are notably more likely to be injured over a season than teammates who sleep more. It isn't the only factor in injury risk, but the pattern shows up across multiple studies and is one more reason coaches and athletic trainers take sleep seriously.",
+        "On top of the physical effects, chronic short sleep worsens mood and irritability, weakens the immune system (more colds, more missed practice time), and blunts training gains — the growth-hormone-driven repair work from the last section simply has less time to happen, so the same hard training produces less improvement."
+      ]
+    },
+    {
+      "heading": "Recovery beyond sleep",
+      "body": [
+        "Sleep is the biggest recovery lever, but three other pieces work alongside it.",
+        "Rest days and periodized load: the same stress-then-rebuild cycle that governs a single workout also governs a training week and season — training plans that alternate hard and easy days, and include real rest days, give tissue time to adapt instead of just piling up stress. Skipping rest days is a leading driver of overuse injuries like stress fractures and tendinopathy, covered in more depth in the overuse injuries unit, and the strength & conditioning unit covers why that stress-rebuild cycle needs recovery time to actually produce strength gains.",
+        "Nutrition and hydration timing: refueling with carbohydrate and protein in the hours after a hard session, and staying on top of fluid replacement, gives the body the raw materials recovery requires — see the hydration & nutrition unit for the specifics on timing and amounts.",
+        "Active recovery: light, low-intensity movement on an off day — an easy walk, a light swim, gentle mobility work — increases blood flow to tired tissue without adding new training stress, which can help an athlete feel less stiff than doing nothing at all."
+      ],
+      "image": {
+        "asset": "sleep-recovery-recovery-pillars.webp",
+        "ratio": "4:3",
+        "background": "transparent",
+        "description": "Simple four-piece pyramid or four-panel infographic labeled 'Recovery,' with sleep as the largest/base panel (icon: crescent moon) and three smaller supporting panels: 'Rest days & training load' (icon: calendar), 'Nutrition & hydration timing' (icon: fork and water drop), 'Active recovery' (icon: person walking/stretching). Clean flat infographic style.",
+        "alt": "Infographic showing sleep as the largest pillar of athletic recovery alongside rest days and training load, nutrition and hydration timing, and active recovery.",
+        "location": "public/images/units/sleep-recovery/"
+      }
+    },
+    {
+      "heading": "Sleep hygiene: habits that actually move the needle",
+      "body": [
+        "Sleep hygiene means the habits and environment that make good sleep more likely. A few changes matter more than most people expect.",
+        "Keep a consistent sleep and wake time, including weekends — a body that goes to bed and wakes up around the same time every day falls asleep faster and sleeps more deeply than one on a constantly shifting schedule. Keep the bedroom dark and cool (most guidelines suggest somewhere around 65-68°F) — light and heat both interfere with the body's natural sleep signals.",
+        "Screens are a real obstacle: the light from phones and tablets can delay the brain's release of melatonin, the hormone that signals it's time to sleep, and scrolling itself is mentally stimulating right when the brain needs to wind down. Caffeine is another — it can stay active in the body for several hours, so an afternoon energy drink or soda can still be interfering with sleep at bedtime."
+      ],
+      "list": [
+        "Same sleep and wake time every day, weekends included.",
+        "Dark, cool, quiet room.",
+        "Screens off (or on a wind-down mode) for the last 30-60 minutes before bed.",
+        "No caffeine in the afternoon or evening — it can stay active in the body for hours."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "The early-practice / travel problem",
+        "text": "6 a.m. practices and late-night bus rides home from away games are real obstacles, not excuses to ignore. When a full night isn't possible, a short nap (20-30 minutes, not 2 hours, and not right before bed) can take the edge off. On travel days, protect sleep on the nights before and after the trip, and try to keep the wake-up time as close to normal as the schedule allows."
+      }
+    },
+    {
+      "heading": "When fatigue is a warning sign, not just tiredness",
+      "body": [
+        "Everyone feels tired during a hard training block. The difference between normal training fatigue and a real problem is whether rest fixes it.",
+        "Persistent fatigue that doesn't improve with a normal night's sleep or a rest day, performance that declines even though effort and training haven't changed, noticeable mood changes or irritability, and getting sick more often than usual are the classic pattern of overtraining or burnout — a state where training load has outpaced the body's ability to recover, covered in more depth in the overuse injuries and sports psychology units. Trying to power through that pattern with more caffeine or energy drinks doesn't fix the underlying recovery deficit — it just masks the fatigue signal while the body stays behind."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Tell an adult — don't try to caffeine your way through it",
+        "text": "An athlete showing the overtraining pattern above (persistent fatigue, dropping performance, mood changes, frequent illness) needs a coach or athletic trainer to know — this is a load and recovery problem, not something to push through alone. Reaching for extra caffeine or energy drinks to force through chronic exhaustion is a red flag on its own: it doesn't restore recovery, and stacking stimulants on top of an already under-rested, stressed body carries real risks (see the medication safety unit on energy drinks and stimulants). Recognize the pattern, say something, and let a coach or athletic trainer adjust the plan."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "When does most of the actual physical adaptation from a hard practice happen?",
+      "choices": [
+        "During recovery afterward, especially sleep",
+        "During the practice itself, while muscles are working",
+        "Only during the pre-practice warm-up",
+        "Adaptation happens equally at all times regardless of rest"
+      ],
+      "answerIndex": 0,
+      "explanation": "Practice creates the stress signal, but the actual rebuilding of tissue slightly stronger than before happens afterward, during recovery — sleep is the biggest piece of that recovery window."
+    },
+    {
+      "id": "q2",
+      "question": "About how many hours of sleep per night do major guidelines recommend for teenage athletes?",
+      "choices": [
+        "5-6 hours",
+        "6-7 hours",
+        "8-10 hours",
+        "11-12 hours"
+      ],
+      "answerIndex": 2,
+      "explanation": "Teenagers (roughly 13-18) generally need about 8-10 hours of sleep per night. Most student-athletes fall short of this, often averaging closer to 6.5-7.5 hours on school nights."
+    },
+    {
+      "id": "q3",
+      "question": "Growth hormone, which drives muscle and tissue repair, is released mainly during which part of the sleep cycle?",
+      "choices": [
+        "The moment an athlete first falls asleep",
+        "Deep sleep (slow-wave sleep)",
+        "REM sleep only",
+        "It is released at a constant rate throughout the day, not tied to sleep"
+      ],
+      "answerIndex": 1,
+      "explanation": "The body releases most of its daily growth hormone in pulses during deep, slow-wave sleep. Skimping on deep sleep means less of that repair signal reaches tired muscle and tendon."
+    },
+    {
+      "id": "q4",
+      "question": "A point guard spends extra time each practice drilling a new offensive play. Which explanation best describes why that play becomes 'automatic' by the next practice?",
+      "choices": [
+        "Skill memory consolidates during sleep that night, especially in REM and deep sleep",
+        "Repetition alone locks in a skill regardless of sleep",
+        "Skills only improve through game-day adrenaline",
+        "Muscle memory forms exclusively during the warm-up before the next practice"
+      ],
+      "answerIndex": 0,
+      "explanation": "The brain consolidates motor memory — including new plays and corrected technique — during sleep, particularly REM and deep sleep. Sleep is part of how a rep becomes an automatic skill, not just the repetition itself."
+    },
+    {
+      "id": "q5",
+      "question": "A cross-country runner has been averaging about 5.5 hours of sleep a night for two weeks. Based on the evidence covered in this unit, what is a reasonable concern?",
+      "choices": [
+        "None — sleep amount has no connection to injury risk",
+        "Only their mood will be affected, not their physical performance",
+        "They are at meaningfully higher risk of injury, on top of slower reaction time and blunted training gains",
+        "Extra caffeine in the morning fully offsets the lost sleep"
+      ],
+      "answerIndex": 2,
+      "explanation": "Research on high school athletes links consistently sleeping under about 8 hours to a notably higher injury rate, along with slower reaction time, worse decision-making, and reduced training gains. Caffeine doesn't replace the repair work sleep provides."
+    },
+    {
+      "id": "q6",
+      "question": "An athlete wants better sleep hygiene but still scrolls on their phone in bed and drinks a soda with dinner most nights. Which change would most directly help them fall asleep faster?",
+      "choices": [
+        "Switching from soda to an energy drink at dinner",
+        "Turning screens off 30-60 minutes before bed and avoiding caffeine in the afternoon/evening",
+        "Sleeping in an extra hour on Saturday to compensate",
+        "Keeping the room brightly lit so they can see their phone easily"
+      ],
+      "answerIndex": 1,
+      "explanation": "Screen light can delay melatonin release, and caffeine can stay active in the body for hours — both directly interfere with falling asleep. Sleeping in on the weekend helps a little but doesn't fully repay lost sleep, and a brighter room or more caffeine make the problem worse."
+    },
+    {
+      "id": "q7",
+      "question": "Besides sleep, which of the following is part of a complete recovery plan?",
+      "choices": [
+        "Rest days built into training, proper nutrition/hydration timing, and active recovery",
+        "Training at full intensity every single day with no scheduled rest",
+        "Skipping meals after hard practices to avoid feeling sluggish",
+        "Replacing sleep entirely with caffeine to save time"
+      ],
+      "answerIndex": 0,
+      "explanation": "Recovery is a set of habits working together: sleep, planned rest days/periodized load, nutrition and hydration timing, and active recovery. Training every day at full intensity or skipping recovery nutrition undermines the same adaptation process recovery is meant to support."
+    },
+    {
+      "id": "q8",
+      "question": "A teammate has seemed exhausted for weeks despite normal sleep and rest days, their performance has dropped even though their effort hasn't changed, and they've been sick twice this month. What is the best response?",
+      "choices": [
+        "Tell them to push through it — fatigue always resolves on its own",
+        "Suggest they drink an energy drink before each practice to compensate",
+        "Ignore it — getting sick occasionally is unrelated to training",
+        "Recognize this as a possible overtraining/burnout pattern and tell a coach or athletic trainer"
+      ],
+      "answerIndex": 3,
+      "explanation": "Persistent fatigue, declining performance despite steady effort, and frequent illness are the classic overtraining/burnout pattern, and it needs a coach or athletic trainer to adjust the training plan. Pushing through or using stimulants to mask the fatigue doesn't fix the underlying recovery deficit."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Recovery (in training)",
+      "back": "The process by which the body repairs and adapts to training stress; most of it happens during rest, especially sleep — not during the workout itself."
+    },
+    {
+      "id": "f2",
+      "front": "Growth hormone and sleep",
+      "back": "Most daily growth hormone is released in pulses during deep (slow-wave) sleep, driving tissue repair and muscle rebuilding."
+    },
+    {
+      "id": "f3",
+      "front": "Sleep and skill consolidation",
+      "back": "Motor skills and plays practiced during the day get 'locked in' as memory during sleep, especially REM and deep sleep — practice sticks overnight."
+    },
+    {
+      "id": "f4",
+      "front": "Recommended teen sleep",
+      "back": "About 8-10 hours per night for teenagers (roughly ages 13-18), per major sleep and pediatric health guidelines."
+    },
+    {
+      "id": "f5",
+      "front": "Sleep debt",
+      "back": "The gap between sleep needed and sleep actually gotten. It accumulates across the week and is only partly repaid by sleeping in."
+    },
+    {
+      "id": "f6",
+      "front": "Effects of chronic short sleep",
+      "back": "Slower reaction time, worse decision-making and skill execution, higher injury risk, worse mood, weaker immune function, and blunted training gains."
+    },
+    {
+      "id": "f7",
+      "front": "Sleep and injury risk (evidence)",
+      "back": "Studies on high school athletes link consistently sleeping under about 8 hours a night to a notably higher rate of injury over a season."
+    },
+    {
+      "id": "f8",
+      "front": "Active recovery",
+      "back": "Light, low-intensity movement (easy walk, light swim, mobility work) on an off day — increases blood flow to tired tissue without adding training stress."
+    },
+    {
+      "id": "f9",
+      "front": "Sleep hygiene",
+      "back": "Habits and environment that support good sleep: consistent sleep/wake schedule, dark and cool room, limited screens and caffeine before bed."
+    },
+    {
+      "id": "f10",
+      "front": "Why caffeine before bed matters",
+      "back": "Caffeine can stay active in the body for several hours, so afternoon or evening caffeine (including energy drinks) can still be interfering with sleep at bedtime."
+    },
+    {
+      "id": "f11",
+      "front": "Overtraining/burnout warning signs",
+      "back": "Persistent fatigue that rest doesn't fix, performance decline despite steady effort, mood changes, and getting sick more often — tell a coach or athletic trainer."
+    },
+    {
+      "id": "f12",
+      "front": "Rest days and periodized load",
+      "back": "Planning hard and easy training days/weeks so the body has time to adapt; rest days are part of the training plan, not the absence of training."
+    }
+  ]
+}

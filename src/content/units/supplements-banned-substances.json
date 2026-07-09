@@ -1,0 +1,254 @@
+{
+  "id": "supplements-banned-substances",
+  "title": "Supplements & Banned Substances",
+  "category": "Prevention & Performance",
+  "strand": "supplements-banned-substances",
+  "gradeBand": "9-10",
+  "summary": "Why 'natural' and 'on the shelf' don't mean safe or tested — and how to think critically about the pills, powders, and promises marketed to teen athletes.",
+  "minutes": 16,
+  "standards": ["CTE.HSMT.Anchor.8", "CTE.HSMT.Anchor.6", "CTE.HSMT.Anchor.5"],
+  "sections": [
+    {
+      "heading": "What 'dietary supplement' actually means",
+      "body": [
+        "A dietary supplement is any product — pill, powder, gummy, drink mix — meant to add to what someone eats: vitamins, minerals, protein powder, creatine, herbal blends, and the huge category of 'performance' and 'fat-burner' products sold at supplement stores, pharmacies, and online. Teen athletes are a heavily marketed audience for these products, with ads and influencers promising faster results than food and training alone can deliver.",
+        "Here is the regulatory reality every athlete should know: in the United States, dietary supplements are not reviewed or approved for safety or effectiveness before they go on sale, the way prescription and over-the-counter medications are (see the medication-safety unit). A supplement company can put a product on the shelf without first proving it works or proving what's actually inside the bottle matches the label. 'Natural,' 'on the shelf next to the vitamins,' and 'legal to buy' are statements about how a product is sold — not proof that it is safe, effective, or honestly labeled."
+      ]
+    },
+    {
+      "heading": "The contamination problem",
+      "body": [
+        "Because supplements aren't pre-approved, testing of store-bought and online supplements has repeatedly found products contaminated with ingredients that never appear on the label — including anabolic steroids (drugs that mimic testosterone, covered below) and banned stimulants. Sometimes this is manufacturing contamination; sometimes an ingredient is deliberately added, undisclosed, because it makes the product 'work' better and faster than a legitimate supplement ever could.",
+        "This creates two separate dangers. First, a health danger: an athlete has no real way of knowing what they're actually putting in their body, including doses of substances they never chose to take. Second, for any athlete in organized, tested sport (school sports with drug testing, college recruiting, NCAA, Olympic-pathway sports), a contaminated supplement can cause a positive drug test — and 'I didn't know it was in there' is not a defense that undoes a failed test. Athletic governing bodies generally hold the athlete responsible for whatever is in their own body, regardless of intent."
+      ],
+      "image": {
+        "asset": "supplements-contamination-pathway.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Simple flat infographic showing a supplement bottle on a store shelf with a dotted arrow pointing to two outcome icons: a body/health-warning icon labeled 'Undisclosed ingredients can harm health' and a clipboard/positive-test icon labeled 'Can cause a failed drug test — even unknowingly.' Caption underneath both: 'The label is not guaranteed to be accurate.' Clean flat infographic style, no photographic realism.",
+        "alt": "Infographic showing a supplement bottle with two possible hidden-contamination outcomes: health harm and a failed drug test.",
+        "location": "public/images/units/supplements-banned-substances/"
+      },
+      "callout": {
+        "type": "warning",
+        "title": "Contaminated supplements are a real, documented risk",
+        "text": "Independent testing has repeatedly found store-bought and online supplements contaminated with banned substances not listed on the label. There is no reliable way for an athlete to visually inspect a pill or powder and know it's clean. Taking any supplement carries some unknown risk — both to health and to eligibility — that food does not carry."
+      }
+    },
+    {
+      "heading": "Food first: the foundation almost nothing beats",
+      "body": [
+        "As covered in the hydration-nutrition unit, whole food — carbohydrates, protein, fat, vitamins, and minerals eaten across regular meals — covers what a growing teen athlete's body needs to train, recover, and grow, in a way no pill or powder replicates. Food also comes with built-in quality control: a chicken breast doesn't need a lab test to prove what's in it.",
+        "Sleep matters just as much as food, even though it's easy to overlook. Recovery — the repair and rebuilding that happens between practices — depends heavily on getting enough good sleep, and no supplement compensates for a teen athlete who is chronically underslept. Before reaching for a product, the honest first questions are: is this athlete eating enough real food, drinking enough fluid, and sleeping enough? For most teen athletes, fixing those three things does more for performance than any supplement on the market."
+      ]
+    },
+    {
+      "heading": "Commonly hyped categories: an awareness tour",
+      "body": [
+        "This section is awareness-level only — recognizing what these products are and their general risk picture, not a guide to using them. Deciding whether any supplement is appropriate for a specific teen athlete is a conversation for a physician, registered dietitian (RD, a nutrition professional with clinical training), or athletic trainer — never a decision to make alone based on a label, a teammate, or an online ad.",
+        "Protein powder and creatine are the most widely used sports supplements and have more research behind them than most other categories — but 'widely used' and 'more researched' do not mean 'automatically appropriate for every teenager.' Dosing, timing, product quality, and whether a given teen even needs them at all are exactly the kind of questions that belong in front of an informed adult, not guessed at from a label or a friend's routine.",
+        "Pre-workout powders and energy drinks are built around high doses of caffeine and other stimulants, often well beyond what's in a cup of coffee, marketed with promises of energy and focus. As covered in the hydration-nutrition unit, these products aren't hydration tools — and high caffeine intake in a teenager can also mean real cardiovascular strain (racing or irregular heartbeat, elevated blood pressure — see the cardiac-conditions unit) plus disrupted sleep that undercuts the exact recovery a teen athlete needs."
+      ],
+      "image": {
+        "asset": "supplements-category-risk-overview.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Three-column flat infographic. Column 1 'Protein / Creatine' with a caution icon labeled 'Widely used, more researched — still needs an informed adult conversation for a teen.' Column 2 'Pre-workout / Energy drinks' with a heart-and-lightning icon labeled 'High caffeine/stimulants — cardiovascular and sleep risk.' Column 3 'Anabolic steroids / banned stimulants' with a stop-sign icon labeled 'Serious health harm, illegal without a prescription, banned in organized sport.' Clean flat infographic style, no photographic realism, no dosage numbers anywhere.",
+        "alt": "Three-column infographic comparing risk awareness levels for protein/creatine, pre-workout/energy drinks, and anabolic steroids/banned stimulants.",
+        "location": "public/images/units/supplements-banned-substances/"
+      }
+    },
+    {
+      "heading": "The genuinely dangerous categories: steroids, stimulants, and banned lists",
+      "body": [
+        "Anabolic steroids are drugs that mimic the hormone testosterone, sometimes used illegally to try to build muscle faster than training alone allows. In a fully grown adult they carry serious health harms; in a still-growing teenager the harms are worse, because steroid use can disrupt the hormonal signals that control normal growth and development — including the growth plates covered in the growth-development unit — on top of harms to the heart, liver, and mood. Anabolic steroid use without a legitimate medical prescription is illegal, and steroids are banned in essentially every organized sport at every level.",
+        "Beyond steroids, organized sport (from high school athletic associations up through the NCAA and Olympic-level competition) maintains a banned-substance list — a published list of drug categories, including certain stimulants, that athletes are not allowed to use in competition. You are not expected to memorize this list as a student; the concept to know is that such lists exist, that they apply broadly (including to supplements contaminated with a banned ingredient), and that an athlete in a tested sport is responsible for knowing what they put in their body."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Red flag — never take something because someone told you to",
+        "text": "Never start any supplement or performance product because a teammate, coach, or someone online said it worked for them. Be especially suspicious of any product promising dramatic, fast results — real muscle, strength, and performance gains from safe training and nutrition take months, not days. If something sounds too good to be true, or if a teammate offers you a pill or powder before a workout, say no and talk to a physician, registered dietitian, or athletic trainer first."
+      }
+    },
+    {
+      "heading": "Your role as a student aide: never supply, never recommend",
+      "body": [
+        "The same boundary you've seen in the medication-safety unit applies here: a student athletic training aide never gives, hands out, or recommends any supplement or performance product to another athlete — not a 'harmless' protein bar substitute, not a scoop of a pre-workout mix, not a personal opinion on what worked for you. You don't know a teammate's full health history, what they're already taking, or how a product might affect them, and recommending a supplement is outside a student aide's role no matter how confident you feel about it.",
+        "If a teammate asks you about a supplement, a product they saw advertised, or something a coach or another athlete suggested, the correct response is the same every time: direct them to a physician, registered dietitian, or the athletic trainer. That's not passing the buck — it's recognizing that this decision belongs with someone trained to weigh an individual athlete's health, sport, and testing status."
+      ]
+    },
+    {
+      "heading": "Questions worth asking before anything goes in your body",
+      "body": [
+        "A little healthy skepticism protects athletes better than any single fact. Before considering any supplement, an athlete (with a trusted adult) should be able to answer:"
+      ],
+      "list": [
+        "Have I talked to a physician, registered dietitian, or athletic trainer about this specific product — not just 'supplements in general'?",
+        "Am I already covering the basics — enough food, fluid, and sleep — before adding anything else?",
+        "Does this product's marketing promise fast, dramatic results? That's a red flag, not a selling point.",
+        "If I compete in a tested sport, could this product put my eligibility at risk, even if the label looks clean?",
+        "Am I considering this because someone else told me to, rather than because a trusted professional recommended it for me specifically?"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What does it mean that dietary supplements are not \"pre-approved\" the way medications are?",
+      "choices": [
+        "Supplement companies can sell a product without first proving it's safe, effective, or that the label matches what's inside",
+        "Supplements are actually tested more strictly than prescription drugs",
+        "It means supplements cannot legally be sold in stores",
+        "It only applies to supplements sold online, not in stores"
+      ],
+      "answerIndex": 0,
+      "explanation": "Unlike prescription and OTC medications, dietary supplements can reach store shelves without prior proof of safety, effectiveness, or accurate labeling. Being sold in a store or online doesn't mean a supplement has been verified in any of those ways."
+    },
+    {
+      "id": "q2",
+      "question": "Why doesn't \"I didn't know it was in there\" work as a defense after a supplement causes a failed drug test?",
+      "choices": [
+        "Because drug tests are always wrong and results don't matter",
+        "Because all supplements are already banned in every sport",
+        "Because only prescription drugs can cause a positive test",
+        "Because athletic governing bodies generally hold the athlete responsible for what's in their own body, regardless of intent, and contamination is a known, documented risk"
+      ],
+      "answerIndex": 3,
+      "explanation": "Testing has repeatedly found supplements contaminated with undisclosed banned substances, and governing bodies typically hold athletes responsible for whatever is in their body — intent doesn't undo a positive result. That's exactly why an informed adult conversation matters before taking anything."
+    },
+    {
+      "id": "q3",
+      "question": "A teammate offers you a scoop of her pre-workout powder before practice, saying it gives her a great energy boost. What's the best response?",
+      "choices": [
+        "Take it since she uses it all the time with no problems",
+        "Take half a scoop to be safe",
+        "Decline, and if you're curious about pre-workout products, talk to a physician, registered dietitian, or athletic trainer first",
+        "Take it, but only right before a game, never before practice"
+      ],
+      "answerIndex": 2,
+      "explanation": "Taking a product because a teammate offered it — without knowing its full contents, your own health history, or a trained professional's input — is exactly the pattern this unit warns against. High-caffeine pre-workout products also carry real cardiovascular and sleep risks worth discussing with an adult first."
+    },
+    {
+      "id": "q4",
+      "question": "An online ad promises a supplement will add noticeable muscle in one week with zero training changes needed. How should a student athlete read this claim?",
+      "choices": [
+        "Trust it, since companies aren't allowed to advertise false claims",
+        "Be highly suspicious — dramatic, fast results are a red flag, not a sign of a legitimate, safe product",
+        "Assume it's true only if the product is expensive",
+        "Assume it's true because it's sold in a well-known store"
+      ],
+      "answerIndex": 1,
+      "explanation": "Real strength and muscle gains from safe training and nutrition take months, not days. A promise of dramatic, fast results — especially without any change in training — is a hallmark of a product not to trust, regardless of where it's sold."
+    },
+    {
+      "id": "q5",
+      "question": "Why is anabolic steroid use considered more harmful for a teenager than for a fully grown adult?",
+      "choices": [
+        "Steroid use can disrupt the hormonal signals controlling normal growth and development, including growth plates, on top of harms shared with adults",
+        "It isn't — the harms are identical at every age",
+        "Teenagers metabolize steroids faster, so the drugs simply leave the body before causing harm",
+        "Steroids only affect athletes over age 18"
+      ],
+      "answerIndex": 0,
+      "explanation": "A teenager's body is still growing, and anabolic steroids can interfere with the hormonal signals that control that growth — including growth plates — in addition to the heart, liver, and mood effects that affect users of any age."
+    },
+    {
+      "id": "q6",
+      "question": "What should a student athletic training aide do if a teammate asks whether they should try a specific supplement?",
+      "choices": [
+        "Recommend whichever product the aide has heard good things about",
+        "Say no supplements are ever necessary and end the conversation",
+        "Give them a sample from the aide's own supply to try first",
+        "Direct the teammate to a physician, registered dietitian, or the athletic trainer rather than giving a personal recommendation"
+      ],
+      "answerIndex": 3,
+      "explanation": "Just like the never-administer boundary for medication, a student aide never supplies or recommends supplements to another athlete. The correct move is directing the question to a trained professional who can weigh that athlete's individual health and situation."
+    },
+    {
+      "id": "q7",
+      "question": "Which best describes the relationship between food/sleep and supplements for a teen athlete?",
+      "choices": [
+        "Supplements should always come first, then food and sleep can be adjusted later",
+        "Food and sleep only matter for endurance athletes, not strength athletes",
+        "Food, fluid, and sleep are the foundation that supplements can't replace — most performance gains come from getting those basics right",
+        "Supplements make food and sleep unnecessary if dosed correctly"
+      ],
+      "answerIndex": 2,
+      "explanation": "Whole food, adequate fluid, and enough sleep cover what a growing athlete's body needs far more reliably than any supplement. Before considering a product, the honest first check is whether those basics are already being met."
+    },
+    {
+      "id": "q8",
+      "question": "What is a \"banned-substance list\" in organized sport?",
+      "choices": [
+        "A list of foods athletes are told never to eat",
+        "A published list of drug categories, including certain stimulants and steroids, that athletes in tested sport are not allowed to use in competition",
+        "A list only professional athletes need to know about",
+        "A marketing term supplement companies use to promote their products"
+      ],
+      "answerIndex": 1,
+      "explanation": "Athletic governing bodies from high school associations up through college and Olympic-level sport maintain published banned-substance lists. Athletes in tested sport are responsible for knowing what they put in their body, including supplements that might be contaminated with a listed substance."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Dietary supplement",
+      "back": "Any product meant to add to what someone eats — pills, powders, gummies, drink mixes — including vitamins, protein powder, creatine, and 'performance' products."
+    },
+    {
+      "id": "f2",
+      "front": "Key regulatory fact about supplements",
+      "back": "In the U.S., dietary supplements are not reviewed or approved for safety or effectiveness before sale, unlike medications. 'Natural' and 'on the shelf' don't mean safe or tested."
+    },
+    {
+      "id": "f3",
+      "front": "The contamination problem",
+      "back": "Testing has repeatedly found supplements contaminated with undisclosed substances, including banned stimulants and anabolic steroids — a health risk and an eligibility risk."
+    },
+    {
+      "id": "f4",
+      "front": "\"I didn't know it was in there\" — does it work?",
+      "back": "No. Athletic governing bodies generally hold the athlete responsible for what's in their own body regardless of intent — contamination doesn't undo a failed drug test."
+    },
+    {
+      "id": "f5",
+      "front": "Food-first principle",
+      "back": "Whole food, adequate fluid, and enough sleep cover what a growing teen athlete's body needs better than any supplement — the foundation almost nothing beats."
+    },
+    {
+      "id": "f6",
+      "front": "Protein powder / creatine — the honest take",
+      "back": "The most widely used and researched sports supplements, but still not automatically appropriate for every teen — needs an informed conversation with a physician, RD, or athletic trainer."
+    },
+    {
+      "id": "f7",
+      "front": "Pre-workout / energy drink risks",
+      "back": "High caffeine and stimulant doses can cause cardiovascular strain (racing/irregular heartbeat, high blood pressure) and disrupt sleep, undercutting recovery."
+    },
+    {
+      "id": "f8",
+      "front": "Anabolic steroids",
+      "back": "Drugs that mimic testosterone, sometimes used illegally to build muscle. In teens they can disrupt hormonal signals controlling growth (including growth plates), plus harm the heart, liver, and mood. Illegal without a prescription; banned in organized sport."
+    },
+    {
+      "id": "f9",
+      "front": "Banned-substance list",
+      "back": "A published list of drug categories (including certain stimulants and steroids) that athletes in tested organized sport may not use in competition."
+    },
+    {
+      "id": "f10",
+      "front": "Red flag for any supplement product",
+      "back": "Promises of dramatic, fast results. Real gains from safe training and nutrition take months, not days."
+    },
+    {
+      "id": "f11",
+      "front": "Registered dietitian (RD)",
+      "back": "A nutrition professional with clinical training — one of the trained adults (along with a physician or athletic trainer) an athlete should talk to before starting any supplement."
+    },
+    {
+      "id": "f12",
+      "front": "A student aide's boundary on supplements",
+      "back": "Never supply or recommend a supplement to another athlete — same principle as the never-administer medication rule. Direct questions to a physician, RD, or athletic trainer."
+    }
+  ]
+}

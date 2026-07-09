@@ -1,0 +1,255 @@
+{
+  "id": "air-quality",
+  "title": "Air Quality & Outdoor Exercise",
+  "category": "Environmental Emergencies",
+  "strand": "air-quality",
+  "gradeBand": "9-10",
+  "summary": "Understand what's actually in bad air, read the Air Quality Index, and know your role in recognizing and reporting when outdoor practice needs to change.",
+  "minutes": 16,
+  "standards": ["CTE.HSMT.Anchor.6", "CTE.HSMT.B.2.3", "CTE.HSMT.B.1.0"],
+  "sections": [
+    {
+      "heading": "Why air quality matters for outdoor athletes",
+      "body": [
+        "During hard exercise, breathing rate and depth increase dramatically — a distance runner or soccer player working hard can move 15 to 20 times more air per minute than the same person sitting still. That means an outdoor athlete inhales far more of whatever is in the air than a coach standing on the sideline.",
+        "Much of that air also moves in through the mouth during hard effort, skipping the nose's natural filtering and warming. On a bad air-quality day, this turns an already demanding workout into an added respiratory stress test — the harder an athlete is working, the more polluted air they're taking in.",
+        "Wildfire smoke has made this a fast-growing concern for outdoor sports across much of the country in recent years. Smoke from a fire hundreds of miles away can blanket a practice field for days, sometimes when the sky only looks a little hazy rather than obviously smoky."
+      ]
+    },
+    {
+      "heading": "What's actually in the air",
+      "body": [
+        "\"Bad air quality\" isn't one single thing — a few different pollutants matter most for outdoor athletes.",
+        "Particulate matter (PM2.5) refers to tiny solid and liquid particles floating in the air that are 2.5 micrometers or smaller — roughly 30 times smaller than the width of a human hair. Because they're so small, PM2.5 particles aren't stopped by the nose or upper airway the way larger dust is; they travel deep into the lungs, and the smallest of them can even pass into the bloodstream. PM2.5 is the main harmful ingredient in both wildfire smoke and general urban smog.",
+        "Ozone (smog) at ground level is a gas formed when vehicle and industrial emissions react with sunlight. It builds up over the course of a sunny day and typically peaks in the afternoon, especially on hot, still days with little wind to clear it out — which is exactly when many practices happen. Ozone irritates the airways directly on contact.",
+        "Wildfire smoke is the big one for many regions: a complex mixture of PM2.5 plus irritant gases that can travel hundreds of miles from the actual fire on the wind. It's become one of the most common reasons outdoor practices get modified or moved indoors during fire season."
+      ],
+      "image": {
+        "asset": "air-quality-pm25-particle-size.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Simple scale comparison illustration showing three circles side by side with size labels: a large circle labeled 'human hair, about 70 micrometers wide,' a medium circle labeled 'PM10 (coarse dust), 10 micrometers,' and a tiny circle labeled 'PM2.5, 2.5 micrometers or smaller — small enough to reach deep into the lungs.' Clean flat infographic style with a simple ruler or scale icon underneath for reference.",
+        "alt": "Size comparison diagram showing PM2.5 particles as far smaller than a human hair, illustrating why they travel deep into the lungs.",
+        "location": "public/images/units/air-quality/"
+      }
+    },
+    {
+      "heading": "The Air Quality Index (AQI)",
+      "body": [
+        "The Air Quality Index (AQI) is a standardized 0–500 scale, published by government air-monitoring agencies, that converts measured pollution levels into a single number and a color category — so anyone can check it and quickly judge whether outdoor conditions are safe. Numbers and colors run from green (best) through yellow, orange, red, purple, and maroon (worst).",
+        "The AQI is checked using a real-time monitoring site or app (such as AirNow) that pulls from local air-quality sensors, or through a school or athletic program's own designated method for checking conditions before outdoor practice. It should be checked before practice starts, not assumed from what the sky looks like — smoke and haze can be present even under a sky that still looks mostly clear."
+      ],
+      "list": [
+        "Green / Yellow (0–100, Good / Moderate): Air quality is acceptable for outdoor activity for essentially everyone.",
+        "Orange (101–150, Unhealthy for Sensitive Groups): Athletes with asthma or other respiratory conditions should have practice modified — lighter effort, more rest breaks, closer monitoring.",
+        "Red (151–200, Unhealthy): Everyone should modify — shortened practice, more breaks, or moving indoors — not just sensitive groups.",
+        "Purple / Maroon (201+, Very Unhealthy / Hazardous): Outdoor practice should not happen at this level, for anyone."
+      ],
+      "image": {
+        "asset": "air-quality-aqi-scale-chart.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Horizontal AQI scale bar divided into six color-coded segments labeled left to right: Green 'Good (0-50)', Yellow 'Moderate (51-100)', Orange 'Unhealthy for Sensitive Groups (101-150)', Red 'Unhealthy (151-200)', Purple 'Very Unhealthy (201-300)', Maroon 'Hazardous (301-500)'. Below each segment, a short icon/phrase: Green/Yellow 'OK for outdoor activity', Orange 'sensitive groups modify', Red 'everyone modifies or moves indoors', Purple/Maroon 'no outdoor practice'. Clean flat infographic style, high contrast, easy to read at a glance.",
+        "alt": "Color-coded Air Quality Index scale from Good (green) to Hazardous (maroon), with the recommended action at each level.",
+        "location": "public/images/units/air-quality/"
+      },
+      "callout": {
+        "type": "warning",
+        "title": "Red, purple, and maroon are not judgment calls",
+        "text": "At AQI 151 and above (red), outdoor practice must be modified or moved indoors for the entire team, not just athletes with known conditions. At AQI 201 and above (purple or maroon), there should be no outdoor practice at all. These thresholds exist because the risk at that point applies to healthy lungs too, not only sensitive ones."
+      }
+    },
+    {
+      "heading": "Who's at the highest risk",
+      "body": [
+        "Athletes with asthma or other respiratory conditions are the group most affected by poor air quality — their airways are already more sensitive than average, so wildfire smoke or high ozone adds another trigger on top of exercise itself. (The Asthma & Breathing Problems in Athletes unit covers what an asthma flare looks like and how to respond; the same recognition applies here, just with air quality as the trigger instead of cold air.)",
+        "Beyond athletes with a diagnosed condition, sport type matters too. Athletes doing hard, sustained aerobic effort — distance running, soccer, cross-country — breathe far more total air over a long practice than athletes in short-burst sports, which means more total exposure to whatever is in that air on a given day."
+      ]
+    },
+    {
+      "heading": "Recognizing when air quality is affecting practice",
+      "body": [
+        "One athlete coughing partway through a hard set could just mean they're winded. The signal that air quality itself is the problem is a pattern: multiple athletes showing similar symptoms around the same time, on a day when the AQI is elevated."
+      ],
+      "list": [
+        "Coughing — persistent or unusual coughing across several athletes, not just one.",
+        "Chest tightness — athletes describing their chest as tight or hard to fill with air.",
+        "Unusual shortness of breath — breathing trouble that seems out of proportion to the effort level.",
+        "Eye or throat irritation — burning, watery eyes or a scratchy throat affecting multiple people at once."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "A group pattern is the tell",
+        "text": "Several athletes showing the same symptoms at the same time on a smoky or high-AQI day is a much stronger signal than any one athlete's individual complaint — it points to the air itself, not just one person's conditioning."
+      }
+    },
+    {
+      "heading": "The response: monitoring, modifying, and who decides",
+      "body": [
+        "Good air-quality planning works the same way lightning planning does: a venue's Emergency Action Plan should name a specific person responsible for checking the AQI before and during outdoor practice — a role that parallels the designated weather watcher used for lightning. That person's job is tracking conditions, not coaching at the same time.",
+        "When conditions call for it, the response is to modify: shorten practice, add more rest breaks, reduce intensity, move indoors, or cancel outdoor activity outright at the highest AQI levels. And exactly as with lightning, one specific person needs standing authority to make that call and have it stick — not a group debate in the moment while a practice is already underway.",
+        "Your role as a student athletic trainer, aide, or teammate is awareness, monitoring, and reporting — not making the modification call yourself. Check the AQI when asked, watch for the symptom pattern described above, and report what you notice to a coach or athletic trainer immediately. The decision to modify or move practice belongs to the adults following the venue's plan."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is the Air Quality Index (AQI)?",
+      "choices": [
+        "A standardized 0–500 scale that converts measured air pollution levels into a single number and color category",
+        "A measure of temperature and humidity combined",
+        "A pollen count used only during allergy season",
+        "A test of an individual athlete's lung capacity"
+      ],
+      "answerIndex": 0,
+      "explanation": "The AQI converts real-time pollution measurements into one easy-to-read number and color, published by air-monitoring agencies. It has nothing to do with heat/humidity (that's WBGT), pollen counts specifically, or an individual's lung function."
+    },
+    {
+      "id": "q2",
+      "question": "What makes PM2.5 particles especially dangerous compared to ordinary dust?",
+      "choices": [
+        "They are large particles that only irritate the eyes",
+        "They only exist indoors and are never present in wildfire smoke",
+        "They only affect people with seasonal allergies",
+        "They are tiny enough — about 30 times smaller than a human hair — to travel deep into the lungs and even into the bloodstream"
+      ],
+      "answerIndex": 3,
+      "explanation": "PM2.5's small size is exactly what makes it harmful: it bypasses the nose's normal filtering and reaches deep into the lungs, with the smallest particles able to cross into the bloodstream. It's a major component of both wildfire smoke and urban smog, not something limited to indoor air or allergy season."
+    },
+    {
+      "id": "q3",
+      "question": "When does ground-level ozone (smog) typically peak, and why?",
+      "choices": [
+        "Overnight, when the air is coolest",
+        "In the late afternoon on hot, sunny, still days, because ozone forms when emissions react with sunlight",
+        "Only during wildfire season, since ozone comes exclusively from smoke",
+        "Right before dawn, before the sun rises"
+      ],
+      "answerIndex": 1,
+      "explanation": "Ozone forms through a sunlight-driven chemical reaction, so it builds through the day and typically peaks in the afternoon on hot, sunny, low-wind days — often exactly when practices are scheduled. It's a separate pollutant from wildfire smoke, not a byproduct of it."
+    },
+    {
+      "id": "q4",
+      "question": "Before practice, the AQI reads 120 (orange, \"Unhealthy for Sensitive Groups\"). What is the appropriate response?",
+      "choices": [
+        "Nothing changes — orange is essentially the same as green",
+        "Cancel the season until air quality improves",
+        "Athletes with asthma or other respiratory conditions should have practice modified — lighter effort, more breaks, closer monitoring — while the general team continues with awareness",
+        "Move the entire team indoors immediately, the same as at red"
+      ],
+      "answerIndex": 2,
+      "explanation": "Orange specifically flags risk for sensitive groups, so the modification targets athletes with asthma or other respiratory conditions first. It doesn't mean 'no change at all' (that's green/yellow), and it isn't severe enough yet to require moving the whole team indoors (that's red and above)."
+    },
+    {
+      "id": "q5",
+      "question": "The AQI reads 210 (purple, \"Very Unhealthy\") before an afternoon practice. What should happen?",
+      "choices": [
+        "Move practice indoors or reschedule it — outdoor practice shouldn't happen at this level for anyone",
+        "Continue as normal, since 210 isn't yet in the \"hazardous\" maroon range",
+        "Only athletes with asthma need to go inside; everyone else can practice outdoors as usual",
+        "Wait until the sky visibly looks smoky before making a decision"
+      ],
+      "answerIndex": 0,
+      "explanation": "At purple (201+), the risk applies to everyone, not just sensitive groups — outdoor practice shouldn't happen at all at this level. The AQI number itself is the signal to act; a smoky-looking sky isn't required, and 'not yet maroon' isn't a reason to wait."
+    },
+    {
+      "id": "q6",
+      "question": "During a hazy, high-AQI practice, several athletes across the team start coughing, complain of chest tightness, and have watery, irritated eyes within the same ten minutes. What does this most likely indicate, and what should you do?",
+      "choices": [
+        "It's normal end-of-practice fatigue — keep going as planned",
+        "It's a coincidence unrelated to air quality, since only one athlete on the team has diagnosed asthma",
+        "Each athlete should individually decide on their own whether to keep practicing",
+        "Air quality is likely affecting the group — recognize the pattern and report it to a coach or athletic trainer immediately"
+      ],
+      "answerIndex": 3,
+      "explanation": "Multiple athletes showing similar symptoms at the same time on a high-AQI day points to the air itself as the cause, not individual fitness or one athlete's diagnosis. A student's job is to recognize that pattern and report it right away — not to decide independently whether practice continues."
+    },
+    {
+      "id": "q7",
+      "question": "Which athlete carries the highest added risk from poor air quality, and why?",
+      "choices": [
+        "A sprinter whose races last under 15 seconds",
+        "A golfer walking the course at an easy pace",
+        "A distance runner with diagnosed asthma — sustained hard effort means more total air inhaled, and asthma makes the airways extra sensitive to irritants",
+        "A student watching practice from the sideline"
+      ],
+      "answerIndex": 2,
+      "explanation": "Sustained, high-intensity aerobic effort means far more total air moved over a practice, and an existing respiratory condition adds extra sensitivity to irritants like smoke and ozone — the combination is what raises risk most. Short-burst effort, easy-paced activity, and not exercising at all all involve far less exposure."
+    },
+    {
+      "id": "q8",
+      "question": "Where should air quality be checked before outdoor practice, and who ultimately decides whether to modify or move it?",
+      "choices": [
+        "Guess based on how the sky looks; whichever coach arrives first decides in the moment",
+        "A real-time AQI source (such as a monitoring site or app), checked by a designated person as part of the venue's plan, with modification decisions made by coaches or athletic staff following that plan",
+        "Ask a random parent in the stands for their opinion",
+        "There's no way to check air quality in advance — only react once athletes start showing symptoms"
+      ],
+      "answerIndex": 1,
+      "explanation": "Just like lightning monitoring, air quality should be checked ahead of time from a real reference source by a designated person, with a specific authority making the modification call — not guessed from appearance or decided informally in the moment. Waiting for symptoms to appear means the exposure has already happened."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "AQI (Air Quality Index)",
+      "back": "A standardized 0–500 scale, color-coded, that converts real-time measured air pollution into a single number so anyone can quickly judge outdoor air safety."
+    },
+    {
+      "id": "f2",
+      "front": "PM2.5",
+      "back": "Fine particulate matter 2.5 micrometers or smaller — about 30 times smaller than a human hair — small enough to travel deep into the lungs and even into the bloodstream."
+    },
+    {
+      "id": "f3",
+      "front": "Ozone (smog)",
+      "back": "A ground-level gas formed when vehicle/industrial emissions react with sunlight; builds through the day and typically peaks on hot, sunny, still afternoons."
+    },
+    {
+      "id": "f4",
+      "front": "Wildfire smoke",
+      "back": "A complex mix of PM2.5 and irritant gases that can travel hundreds of miles from the actual fire — one of the most common reasons outdoor practices get modified today."
+    },
+    {
+      "id": "f5",
+      "front": "AQI Green / Yellow (0–100)",
+      "back": "Good / Moderate — outdoor activity is acceptable for essentially everyone."
+    },
+    {
+      "id": "f6",
+      "front": "AQI Orange (101–150)",
+      "back": "Unhealthy for Sensitive Groups — athletes with asthma or other respiratory conditions should have practice modified (lighter effort, more breaks, closer monitoring)."
+    },
+    {
+      "id": "f7",
+      "front": "AQI Red (151–200)",
+      "back": "Unhealthy — everyone modifies: shortened practice, more breaks, or moving indoors, not just sensitive groups."
+    },
+    {
+      "id": "f8",
+      "front": "AQI Purple / Maroon (201–500)",
+      "back": "Very Unhealthy / Hazardous — no outdoor practice at this level, for anyone."
+    },
+    {
+      "id": "f9",
+      "front": "Why exercise increases exposure",
+      "back": "Hard exercise can increase the air moved per minute 15–20x over resting, much of it inhaled through the mouth — so the harder an athlete works, the more polluted air they take in."
+    },
+    {
+      "id": "f10",
+      "front": "Group symptom pattern",
+      "back": "Multiple athletes coughing, with chest tightness, unusual shortness of breath, or eye/throat irritation at the same time signals air quality affecting the group — not just one athlete's fitness."
+    },
+    {
+      "id": "f11",
+      "front": "Air quality and asthma flares",
+      "back": "Poor air quality (wildfire smoke, high ozone) can trigger an asthma flare on top of exercise — see the Asthma & Breathing Problems unit for flare recognition and response."
+    },
+    {
+      "id": "f12",
+      "front": "Student's role with air quality",
+      "back": "Monitor the AQI when asked, recognize the symptom pattern, and report immediately to a coach or athletic trainer — the modify/move-indoors decision belongs to the adults following the venue's plan."
+    }
+  ]
+}
