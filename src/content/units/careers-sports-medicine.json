@@ -1,0 +1,274 @@
+{
+  "id": "careers-sports-medicine",
+  "title": "Careers in Sports Medicine",
+  "category": "The Sports Medicine Profession",
+  "strand": "careers-sports-medicine",
+  "gradeBand": "9-10",
+  "summary": "Meet the professionals who make up the sports medicine team — from athletic trainers to physical therapists to EMTs — and the education path to each one.",
+  "minutes": 18,
+  "standards": ["CTE.HSMT.Anchor.3", "CTE.HSMT.Anchor.2", "CTE.HSMT.B.5.0"],
+  "sections": [
+    {
+      "heading": "Why sports medicine is a career, not just a class",
+      "body": [
+        "Every time an athlete gets taped before a game, sees a doctor for a knee injury, or works with a coach on a return-to-play plan, a whole team of trained professionals is behind the scenes. This course is a window into that world — the skills you're learning (evaluating an injury, applying first aid, understanding anatomy) are the same skills real sports medicine professionals use every day, just at a beginner level.",
+        "\"Sports medicine\" isn't one job — it's a field made up of many careers that work together to prevent, diagnose, treat, and rehabilitate injuries and illnesses related to physical activity. Some of these careers need a two-year degree; others need a decade of school after high school. Knowing the full range now — while you're still choosing classes and activities — helps you plan a path toward whichever one fits you."
+      ]
+    },
+    {
+      "heading": "The athletic trainer: the profession closest to this course",
+      "body": [
+        "The athletic trainer (AT) is the healthcare professional this course connects to most directly. An AT is trained to prevent, recognize, evaluate, treat, and rehabilitate injuries, working under the direction of a supervising physician. On a given day an AT might tape an ankle before practice, evaluate a player who just got hit, run an emergency action plan for a collapsed athlete, guide someone through weeks of rehab after surgery, and decide — using physician-set guidelines — whether an athlete is ready to return to play.",
+        "ATs don't only work at high schools. You'll find them in:"
+      ],
+      "list": [
+        "Secondary schools and colleges — covering practices, games, and the athletic training room",
+        "Professional and Olympic sports teams",
+        "Outpatient clinics and physician offices, often alongside physical therapists",
+        "Industrial and occupational settings — preventing and treating injuries for workers with physically demanding jobs",
+        "The military and performing arts (dance, theater production) — anywhere physical performance carries injury risk"
+      ],
+      "image": {
+        "asset": "careers-at-work-settings.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "A clean infographic-style illustration showing five small scene icons in a row, each representing a different athletic trainer work setting: a high school gym/field, a college stadium, a professional team locker room, an outpatient clinic with a treatment table, and a factory/industrial floor. Each icon has a one- or two-word label underneath (High School, College, Pro Team, Clinic, Industrial/Military). Simple flat icon style, consistent color palette, no clutter.",
+        "alt": "Icons showing five settings where athletic trainers work: high school, college, professional sports, clinics, and industrial or military settings.",
+        "location": "public/images/units/careers-sports-medicine/"
+      }
+    },
+    {
+      "heading": "Becoming an athletic trainer: education and credentials",
+      "body": [
+        "Becoming an AT takes more school than many people assume. The profession's accrediting body, the Commission on Accreditation of Athletic Training Education (CAATE), now requires a CAATE-accredited master's degree — a bachelor's degree alone is no longer enough to enter the field. After finishing that degree, a graduate must pass a national exam given by the Board of Certification (BOC) to earn the credential \"ATC\" (Athletic Trainer, Certified).",
+        "Passing the BOC exam isn't the last step, either. Almost every state also requires ATs to hold a state license (rules vary by state), and ATs must complete continuing education throughout their career to keep both their certification and license current."
+      ],
+      "list": [
+        "Step 1 — Complete a CAATE-accredited bachelor's degree, then a CAATE-accredited master's degree",
+        "Step 2 — Pass the BOC exam to earn the ATC credential",
+        "Step 3 — Obtain a state license to legally practice (requirements vary by state)",
+        "Step 4 — Complete ongoing continuing education to maintain certification and licensure"
+      ],
+      "image": {
+        "asset": "careers-at-education-pathway.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "A simple left-to-right flowchart with four connected boxes and arrows: 'CAATE-accredited bachelor's degree' → 'CAATE-accredited master's degree' → 'Pass BOC exam (earn ATC credential)' → 'Obtain state license'. Below the flowchart, a small looping arrow icon labeled 'Continuing education' pointing back to the license box. Clean flat infographic style, one accent color, easy to read at a glance.",
+        "alt": "Flowchart of the athletic trainer education pathway: accredited bachelor's degree, accredited master's degree, BOC exam for the ATC credential, then state licensure, with ongoing continuing education.",
+        "location": "public/images/units/careers-sports-medicine/"
+      },
+      "callout": {
+        "type": "warning",
+        "title": "Athletic trainer is not the same as \"personal trainer\"",
+        "text": "These titles sound alike, but they are not interchangeable. An athletic trainer is a licensed healthcare professional who completes an accredited degree, passes a national exam, and works under physician direction with real medical scope of practice. A personal trainer's certification, by contrast, can often be earned in a short course with no health-science degree required, and does not include a medical scope of practice. If someone calls themselves a \"trainer,\" it's worth asking which one they are — and verifying their actual credentials — before trusting them with an injury."
+      }
+    },
+    {
+      "heading": "Careers on the medical and rehab side",
+      "body": [
+        "The athletic trainer works as part of a larger medical team. Some of these careers require a doctoral-level degree and a decade of school; others open the door in two to four years. Here's who else might be involved in an athlete's care, from more schooling to less:"
+      ],
+      "list": [
+        "Physician / sports medicine physician (MD or DO) — medical school plus a residency, often followed by a one-year sports medicine fellowship; diagnoses conditions, orders imaging and lab tests, prescribes medication, and directs the athlete's overall care.",
+        "Orthopedic surgeon (MD or DO) — medical school plus a multi-year surgical residency, often plus a sports medicine fellowship; performs surgery on bones, joints, and ligaments, such as reconstructing a torn ACL.",
+        "Physician assistant (PA) — a master's-level program (about two to three years after a bachelor's degree) plus a national exam; examines, diagnoses, and treats patients in collaboration with a supervising physician.",
+        "Physical therapist (PT) — a Doctor of Physical Therapy (DPT) degree; designs and directs the exercise-based rehab program that restores strength, motion, and function after an injury or surgery.",
+        "Physical therapist assistant (PTA) — a two-year associate degree; carries out the treatment plan a PT designs, a faster path into hands-on rehab work.",
+        "Registered nurse (RN) — an associate or bachelor's nursing degree plus a licensing exam; provides medical care and patient education, and can specialize in orthopedics or sports medicine.",
+        "EMT and paramedic — EMTs complete a certificate program of a few months; paramedics complete more advanced training of about one to two years with a wider treatment scope. Both provide emergency medical response — and, for paramedics, more advanced on-site treatment — at games, meets, and events."
+      ]
+    },
+    {
+      "heading": "Careers on the performance and wellness side",
+      "body": [
+        "Not every sports medicine career centers on treating injury after it happens. Some focus on building performance and preventing problems in the first place:"
+      ],
+      "list": [
+        "Exercise physiologist — a bachelor's or master's degree; studies how the body responds to exercise and designs conditioning or cardiac-rehab programs.",
+        "Strength and conditioning coach — typically a bachelor's degree plus the CSCS (Certified Strength and Conditioning Specialist) credential from the National Strength and Conditioning Association; builds training programs that improve performance and reduce injury risk.",
+        "Registered dietitian (RD or RDN) — a bachelor's degree, supervised practice hours, and a national exam; sports dietitians specialize in fueling, hydration, and recovery nutrition for athletes (see the Hydration & Nutrition unit).",
+        "Physical education or health teacher — a bachelor's degree plus a teaching credential; teaches lifetime fitness and health literacy to every student, and often coaches as well."
+      ]
+    },
+    {
+      "heading": "What these careers have in common",
+      "body": [
+        "However different the degrees and timelines, these careers share a foundation. On the academic side, that means science coursework — biology, chemistry, and especially anatomy and physiology (how the body is built and how it works). Strong grades in those classes now keep every one of these doors open later, no matter which one you eventually choose.",
+        "On the human side, every one of these jobs is built on people skills: communicating clearly with an anxious athlete, a worried parent, and a coach who wants a lineup decision, staying calm under pressure, and working as part of a team rather than alone. A brilliant diagnosis doesn't help anyone if you can't explain it clearly or work with the people around you.",
+        "You can also start building real credentials now. A CPR/AED and first aid certification — often available through your school or community — is a genuine, resume-worthy first step that every one of these careers values, and some student-aide programs require it."
+      ]
+    },
+    {
+      "heading": "Your first step: start now",
+      "body": [
+        "You don't need to wait until college to start exploring. Many high schools run a sports medicine or athletic training student aide program, where students shadow the school's AT at practices and games, help with tasks like water and equipment under direct supervision, and get a firsthand look at the job. It's the single most realistic first step available to you right now.",
+        "Beyond that, look for CPR/first aid certification courses, a school CTE health science pathway or HOSA (Health Occupations Students of America) chapter, volunteer opportunities at community races or youth sports events, and chances to job-shadow a PT, EMT, or other professional you're curious about. Every one of these builds both real experience and a stronger college or program application."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Explore before you commit",
+        "text": "You don't have to pick one career today. Talk to your school's athletic trainer, ask what a typical day looks like, and ask what they wish they'd known in high school. After each shadowing or volunteer experience, jot down what you liked and didn't — that running list is the most useful career-planning tool you have."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is the primary role of an athletic trainer (AT)?",
+      "choices": [
+        "Designing strength programs only, with no injury-care duties",
+        "Preventing, recognizing, evaluating, treating, and rehabilitating injuries, working under the direction of a physician",
+        "Selling supplements and personalized fitness plans",
+        "Diagnosing diseases and prescribing medication independently"
+      ],
+      "answerIndex": 1,
+      "explanation": "An AT's core role spans the full arc of injury care — prevention through rehab — always under a supervising physician's direction. ATs don't sell products, and unlike physicians they don't independently diagnose disease or prescribe medication."
+    },
+    {
+      "id": "q2",
+      "question": "Which describes the current standard education path to become a certified athletic trainer (ATC)?",
+      "choices": [
+        "A weekend certification course, with no college required",
+        "A two-year associate degree in fitness",
+        "A CAATE-accredited master's degree, followed by passing the BOC exam",
+        "A bachelor's degree in any major, with no exam needed"
+      ],
+      "answerIndex": 2,
+      "explanation": "CAATE (the accrediting body) now requires the professional degree to be at the master's level, and graduates must still pass the BOC's national exam to earn the ATC credential. A bachelor's alone, an associate degree, or a weekend course are not enough."
+    },
+    {
+      "id": "q3",
+      "question": "Which statement correctly distinguishes an athletic trainer from a personal trainer?",
+      "choices": [
+        "An athletic trainer is a licensed healthcare professional with an accredited degree and a national exam; a personal trainer's certification can often be earned without a health-science degree and carries no medical scope of practice.",
+        "The two titles are interchangeable, and any gym membership includes both.",
+        "A personal trainer requires state licensure, while an athletic trainer does not.",
+        "Athletic trainers only work with professional athletes, while personal trainers work with the general public."
+      ],
+      "answerIndex": 0,
+      "explanation": "AT is a regulated healthcare credential (accredited degree, national exam, usually state license); personal trainer certifications vary widely and don't grant medical scope of practice. Licensure actually applies to ATs, not personal trainers, and ATs work in far more settings than just pro sports."
+    },
+    {
+      "id": "q4",
+      "question": "A clinician holds a Doctor of Physical Therapy (DPT) degree, works in an outpatient clinic, and designs the exercise program that restores an athlete's strength and range of motion after ACL surgery. What is this professional's title?",
+      "choices": [
+        "Physician assistant",
+        "Athletic trainer",
+        "Physical therapist (PT)",
+        "Exercise physiologist"
+      ],
+      "answerIndex": 2,
+      "explanation": "The DPT degree and clinic-based rehab-program design point specifically to a physical therapist. A PA examines and treats but doesn't hold a DPT; an AT more often works sideline/return-to-play with a physician's guidelines; an exercise physiologist studies exercise response rather than directing post-surgical clinical rehab."
+    },
+    {
+      "id": "q5",
+      "question": "Which professional completes medical school plus a surgical residency (often followed by a sports medicine fellowship) and personally performs procedures like ACL reconstruction?",
+      "choices": [
+        "Physician assistant",
+        "Athletic trainer",
+        "Physical therapist assistant (PTA)",
+        "Orthopedic surgeon"
+      ],
+      "answerIndex": 3,
+      "explanation": "Only the orthopedic surgeon's training includes medical school and a surgical residency, and only surgeons perform the operation itself. PAs, ATs, and PTAs are all valuable members of the care team, but none of them perform surgery."
+    },
+    {
+      "id": "q6",
+      "question": "At a track meet, an athlete collapses and needs emergency medical care and possible transport to a hospital. Which professional is specifically trained for on-site emergency response and transport?",
+      "choices": [
+        "Registered dietitian",
+        "EMT/paramedic",
+        "Strength and conditioning coach",
+        "PE teacher"
+      ],
+      "answerIndex": 1,
+      "explanation": "EMTs and paramedics train specifically for emergency response and transport, with paramedics able to provide more advanced on-site treatment. The other roles are valuable parts of the sports medicine team but aren't trained for emergency transport."
+    },
+    {
+      "id": "q7",
+      "question": "A 9th grader wants real experience in sports medicine before choosing a college major. What is a realistic first step available now?",
+      "choices": [
+        "Become a sports medicine student aide, shadow the athletic trainer at games and practices, and get CPR/first aid certified",
+        "Skip science classes now, since none of these careers require them",
+        "Wait until after earning a bachelor's degree to explore any options",
+        "Independently evaluate injuries and clear teammates to return to play to build a resume"
+      ],
+      "answerIndex": 0,
+      "explanation": "Student aide programs, shadowing, and early certifications like CPR/first aid are realistic, supervised first steps. Science classes build the foundation every one of these careers needs; waiting until after a degree wastes years of exploration time; and making independent return-to-play calls is never a student's role — that decision belongs to the credentialed professional."
+    },
+    {
+      "id": "q8",
+      "question": "Which nutrition credential requires a bachelor's degree, supervised practice hours, and passing a national exam, and often includes athletes among its specialty clients?",
+      "choices": [
+        "Certified Strength and Conditioning Specialist (CSCS)",
+        "Emergency Medical Technician (EMT)",
+        "Board of Certification Athletic Trainer (ATC)",
+        "Registered Dietitian (RD/RDN)"
+      ],
+      "answerIndex": 3,
+      "explanation": "The RD/RDN credential is earned through a bachelor's degree, supervised practice, and a national exam; sports dietitians are RDs who specialize in fueling athletes. CSCS is a strength-and-conditioning credential, EMT is emergency medical training, and ATC is the athletic trainer credential — none are nutrition-specific."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Athletic trainer (AT)",
+      "back": "Healthcare professional who prevents, recognizes, evaluates, treats, and rehabilitates injuries, working under a physician's direction; credentialed as \"ATC\" after passing the BOC exam."
+    },
+    {
+      "id": "f2",
+      "front": "ATC",
+      "back": "Athletic Trainer, Certified — the credential earned by passing the Board of Certification (BOC) exam after completing an accredited degree."
+    },
+    {
+      "id": "f3",
+      "front": "CAATE",
+      "back": "Commission on Accreditation of Athletic Training Education — accredits AT degree programs, now required at the master's level."
+    },
+    {
+      "id": "f4",
+      "front": "BOC",
+      "back": "Board of Certification — administers the national exam that grants the ATC credential; ATs must also hold a state license to practice."
+    },
+    {
+      "id": "f5",
+      "front": "Athletic trainer vs. personal trainer",
+      "back": "AT = licensed healthcare professional with an accredited degree and national exam. Personal trainer = a fitness certification that can be earned without a health-science degree and carries no medical scope of practice."
+    },
+    {
+      "id": "f6",
+      "front": "Physical therapist (PT)",
+      "back": "Doctoral-level (DPT) clinician who designs and directs rehab programs that restore movement and function after injury or surgery."
+    },
+    {
+      "id": "f7",
+      "front": "Physical therapist assistant (PTA)",
+      "back": "Associate-degree clinician who carries out the treatment plan a PT designs, under the PT's direction."
+    },
+    {
+      "id": "f8",
+      "front": "Orthopedic surgeon",
+      "back": "MD/DO who completes medical school and a surgical residency (often plus a sports medicine fellowship) and performs surgery on bones, joints, and ligaments."
+    },
+    {
+      "id": "f9",
+      "front": "Physician assistant (PA)",
+      "back": "Master's-level clinician who examines, diagnoses, and treats patients, working in collaboration with a supervising physician."
+    },
+    {
+      "id": "f10",
+      "front": "EMT vs. paramedic",
+      "back": "EMT = certificate-level training (a few months) in emergency response. Paramedic = advanced training (about one to two years) with a wider treatment scope."
+    },
+    {
+      "id": "f11",
+      "front": "Strength & conditioning coach (CSCS)",
+      "back": "Designs training programs to improve performance and reduce injury risk. CSCS = Certified Strength and Conditioning Specialist, a credential from the National Strength and Conditioning Association."
+    },
+    {
+      "id": "f12",
+      "front": "Registered dietitian (RD/RDN)",
+      "back": "Bachelor's degree, supervised practice hours, and a national exam; sports dietitians specialize in fueling, hydration, and recovery nutrition for athletes."
+    }
+  ]
+}
