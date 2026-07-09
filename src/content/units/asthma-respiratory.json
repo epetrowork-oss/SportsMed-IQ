@@ -1,0 +1,272 @@
+{
+  "id": "asthma-respiratory",
+  "title": "Asthma & Breathing Problems in Athletes",
+  "category": "Medical Conditions & Special Populations",
+  "strand": "asthma-respiratory",
+  "gradeBand": "9-10",
+  "summary": "Tell an asthma flare apart from ordinary being-out-of-breath, know your limited role with a rescue inhaler, and recognize when a breathing problem is an emergency.",
+  "minutes": 16,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.3", "CTE.HSMT.Anchor.6", "CTE.HSMT.B.5.0"],
+  "sections": [
+    {
+      "heading": "What asthma actually is",
+      "body": [
+        "Asthma is a chronic (long-term, ongoing) condition of the airways — the tubes that carry air into and out of the lungs. Someone with asthma has airways that are more sensitive than average and can react strongly to certain triggers.",
+        "During an asthma flare (also called an attack or exacerbation), three things happen inside the airways at once: the lining swells with inflammation (irritation and puffiness of the tissue), the ring of muscle wrapped around the airway tightens — this is called bronchoconstriction — and the airway produces extra mucus. All three narrow the space air has to move through, which is why breathing suddenly gets harder and often makes a whistling or wheezing sound.",
+        "Asthma varies a lot from person to person. Some athletes only ever notice it during hard exercise; others manage daily symptoms with medication prescribed by a doctor. Either way, the underlying airways are the same — just reacting to different triggers."
+      ],
+      "image": {
+        "asset": "asthma-airway-narrowing.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-by-side cross-section comparison of two airway tubes. Left panel: a normal, open airway with a thin smooth lining and a clear central passage for air, labeled 'Normal airway.' Right panel: a narrowed airway showing a visibly swollen, thickened inner lining, a layer of tightened muscle squeezing the tube from outside, and a thin strip of mucus lining the inside, leaving only a small central opening, labeled 'Airway during an asthma flare — swelling, tightened muscle, mucus.' Clean medical-illustration style, simple labels, no distressing detail.",
+        "alt": "Cross-section comparison of a normal open airway and a narrowed airway during an asthma flare, showing swelling, tightened muscle, and mucus.",
+        "location": "public/images/units/asthma-respiratory/"
+      }
+    },
+    {
+      "heading": "Exercise-induced bronchoconstriction (EIB)",
+      "body": [
+        "Exercise-induced bronchoconstriction (EIB) is temporary airway narrowing triggered specifically by physical activity. Most athletes with asthma experience it, and some athletes get EIB during hard exercise even without a full asthma diagnosis.",
+        "Here's why exercise sets it off: during hard effort, you breathe faster and deeper, and much of that air moves in through the mouth instead of the nose. Normally the nose warms and moistens incoming air before it reaches the lungs — mouth-breathing skips that step, so the airways get hit with air that's cooler and drier than they're used to. In sensitive airways, that dryness and temperature change is enough to trigger the same swelling-and-tightening reaction as any other asthma trigger. Symptoms typically show up a few minutes into hard exercise or in the minutes right after stopping, which is why EIB is sometimes mistaken for just being out of shape."
+      ],
+      "list": [
+        "Cold, dry air — a major trigger, which is why indoor ice rinks and outdoor winter sports (hockey, cross-country skiing, distance running in winter) are especially high risk.",
+        "Poor air quality — wildfire smoke, high ozone days, and heavy pollen counts irritate sensitive airways on top of the exercise trigger.",
+        "High-intensity, sustained effort — sports with long, continuous hard exertion (soccer, distance running, basketball) trigger EIB more than short burst-and-rest sports. Swimming's warm, humid air is often better tolerated.",
+        "A recent cold or respiratory infection — airways stay extra sensitive for days to weeks afterward, raising flare risk during that window."
+      ]
+    },
+    {
+      "heading": "Recognizing a flare vs. ordinary being out of breath",
+      "body": [
+        "Every athlete gets winded during hard practice — that's normal and expected. Telling ordinary breathlessness apart from an asthma flare comes down to two things: what it sounds like, and whether it recovers with rest.",
+        "Ordinary being-out-of-breath: heavy, fast breathing after a hard sprint or drill, but no wheeze or persistent cough, and it steadily calms down within a few minutes of stopping to rest. The athlete can speak in full sentences again once they've caught their breath.",
+        "An asthma flare looks and sounds different, and rest alone doesn't fix it the way it fixes ordinary breathlessness."
+      ],
+      "list": [
+        "Wheezing — a whistling or musical sound, usually loudest when breathing out.",
+        "A cough that won't stop — persistent coughing that doesn't ease up with rest, sometimes the only obvious sign.",
+        "Chest tightness — the athlete describes their chest as tight, squeezed, or hard to fill with air.",
+        "Can't speak in full sentences — having to stop mid-sentence to catch a breath, or only getting out a few words at a time.",
+        "Doesn't settle down with rest — unlike ordinary breathlessness, symptoms continue or keep the athlete uncomfortable even sitting still."
+      ],
+      "image": {
+        "asset": "asthma-flare-vs-breathless-chart.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-column comparison chart. Left column headed 'Ordinary out of breath' with icons/short lines for: heavy fast breathing, no wheeze, calms down within a few minutes of rest, can speak in full sentences once resting. Right column headed 'Asthma flare' with icons/short lines for: audible wheeze, persistent cough, chest tightness, can't finish a sentence, does not settle with rest. Clean infographic style, high contrast, simple icons, no photographic realism.",
+        "alt": "Comparison chart contrasting ordinary post-exercise breathlessness with the signs of an asthma flare.",
+        "location": "public/images/units/asthma-respiratory/"
+      }
+    },
+    {
+      "heading": "Responding: rescue inhalers and your role",
+      "body": [
+        "A rescue inhaler (also called a quick-relief inhaler) is a small device that delivers fast-acting medication straight to the airways. It works by relaxing the tightened muscle around the airway within minutes, easing the wheeze and tightness of a flare. Every athlete with diagnosed asthma should keep their own rescue inhaler with their gear at every practice and game — not left in a locker or at home.",
+        "Your role as a student athletic trainer, aide, or teammate has a firm boundary: the athlete uses their own inhaler on themselves. You never give medication — including someone else's inhaler — to another person, and you never operate an inhaler for them. What you can do is act fast in support: recognize the signs, help the athlete get to their own inhaler quickly, get an adult (coach or athletic trainer) immediately, and help the athlete sit upright in a calm, comfortable position while they use it."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Medication is the athlete's — and only the athlete's — to use",
+        "text": "Never administer another person's inhaler for them, and never let one athlete borrow or share another athlete's inhaler, even in an emergency. Your job is to recognize the problem, get the athlete to their own medication, and get an adult — not to make medical decisions or hand out medication yourself."
+      }
+    },
+    {
+      "heading": "When a flare becomes an emergency",
+      "body": [
+        "Most flares improve within several minutes of the athlete using their rescue inhaler and resting. But some signs mean the flare is turning into a medical emergency and the response needs to go beyond the inhaler alone."
+      ],
+      "list": [
+        "No improvement — or symptoms getting worse — after using the rescue inhaler.",
+        "Blue or gray lips or fingertips — called cyanosis, a sign the body isn't getting enough oxygen.",
+        "Can't speak at all, or is struggling to breathe even sitting still and resting.",
+        "Extreme distress, confusion, or drowsiness along with the breathing struggle."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Any one of these = activate the EAP and call 911",
+        "text": "If a flare doesn't improve with the rescue inhaler, or you see blue/gray lips or fingertips, inability to speak, or struggling to breathe at rest, treat it as a life-threatening emergency immediately: activate your venue's Emergency Action Plan, call 911, and stay with the athlete in a calm, upright, supported position until help arrives. Don't wait to see if 'one more try' with the inhaler helps first."
+      }
+    },
+    {
+      "heading": "Well-controlled asthma and managing triggers",
+      "body": [
+        "Well-controlled asthma — managed with a doctor's treatment plan, taken as prescribed — is compatible with full sports participation. Many elite and Olympic athletes have asthma and compete at the highest level; a diagnosis is not a reason to sit an athlete out. The goal for every athlete with asthma is full, normal participation, with a plan in place for the rare flare rather than a plan to avoid exercise.",
+        "Poorly controlled asthma looks different: frequent flares, symptoms that limit daily activity, or needing the rescue inhaler multiple times a week. That pattern isn't something to push through — it's a signal the athlete needs to see their doctor to adjust their management plan, not a normal part of playing a sport.",
+        "Alongside medical management, some simple field habits reduce how often triggers cause trouble in the first place."
+      ],
+      "list": [
+        "A proper warm-up before hard exercise has a protective effect — a gradual, progressive warm-up can reduce how severe EIB is once full-intensity effort starts.",
+        "In cold weather, breathing through the nose when possible, or wearing a scarf or mask over the mouth and nose, warms and humidifies the air before it reaches the airways.",
+        "On poor air-quality days (wildfire smoke, high ozone or pollen alerts), be aware that outdoor practice may need to be shortened, moved indoors, or modified — that call belongs to coaches and athletic staff following school guidance, not to students.",
+        "Avoid pushing through hard exercise while sick with a cold or respiratory infection, since airways are already extra sensitive during that window."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Warm-up is a real prevention tool",
+        "text": "A gradual warm-up before the main work of practice isn't just about muscles — for an athlete with EIB, it's one of the simplest, most effective ways to blunt how hard exercise hits the airways later in the session."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is happening inside the airways during an asthma flare?",
+      "choices": [
+        "The airway lining swells, the muscle around it tightens, and extra mucus is produced — all narrowing the space for air",
+        "The airway walls become permanently stiff and stop moving air at all",
+        "The lungs themselves shrink in size",
+        "The heart rate slows down, reducing the need for oxygen"
+      ],
+      "answerIndex": 0,
+      "explanation": "A flare combines swelling (inflammation), tightened muscle (bronchoconstriction), and extra mucus — together narrowing the airway. The narrowing is temporary and reversible with treatment, not a permanent stiffening, and it isn't about lung size or heart rate."
+    },
+    {
+      "id": "q2",
+      "question": "What is exercise-induced bronchoconstriction (EIB)?",
+      "choices": [
+        "A permanent lung injury caused by years of intense training",
+        "Temporary airway narrowing triggered specifically by physical activity, often worsened by cold, dry air",
+        "A cramp in the diaphragm muscle during a sprint",
+        "Shortness of breath caused only by poor cardiovascular fitness"
+      ],
+      "answerIndex": 1,
+      "explanation": "EIB is airway narrowing set off by exercise itself, especially when breathing fast, dry, cold air through the mouth — most athletes with asthma experience it, and it isn't the same thing as a muscle cramp or simply being out of shape."
+    },
+    {
+      "id": "q3",
+      "question": "During a hard ice-rink practice, a hockey player is breathing heavily after a long shift. Which finding would tell you this is an asthma flare rather than ordinary being out of breath?",
+      "choices": [
+        "She is breathing fast and heavily right after the shift",
+        "She calms down within a couple minutes once she sits on the bench",
+        "She can speak in full sentences again once she catches her breath",
+        "She has an audible wheeze and still can't get out a full sentence several minutes after sitting down"
+      ],
+      "answerIndex": 3,
+      "explanation": "Ordinary breathlessness settles with a few minutes of rest and doesn't come with wheezing or an inability to speak. Persistent wheeze plus inability to finish a sentence even after resting points to a flare, not normal exertion."
+    },
+    {
+      "id": "q4",
+      "question": "A teammate starts wheezing and coughing during a run and says her chest feels tight, but she left her rescue inhaler in her locker. What should you do first?",
+      "choices": [
+        "Offer her your own inhaler or another teammate's since it's the same medication",
+        "Tell her to keep running it off — it will probably pass",
+        "Have her sit down, help her get to an adult right away, and get her own inhaler brought to her",
+        "Wait a few minutes to see if the wheeze goes away on its own before doing anything"
+      ],
+      "answerIndex": 2,
+      "explanation": "The right move is getting the athlete to her own medication and getting an adult involved immediately — sharing someone else's inhaler is never appropriate, and pushing through or waiting risks the flare getting worse."
+    },
+    {
+      "id": "q5",
+      "question": "Who should physically use an athlete's rescue inhaler during a flare?",
+      "choices": [
+        "The athletic trainer or coach, since they're trained in emergency response",
+        "Only the athlete themselves — a teammate or student aide should never administer it for them",
+        "Any teammate who is closest and can move fastest",
+        "Whoever is holding the athlete's bag at the time"
+      ],
+      "answerIndex": 1,
+      "explanation": "The athlete self-administers their own medication. A student aide's job is to recognize the problem, help the athlete reach their inhaler, and get an adult — not to give the medication to them, no matter how urgent the moment feels."
+    },
+    {
+      "id": "q6",
+      "question": "An athlete uses his rescue inhaler during a flare, but a few minutes later his lips look bluish-gray and he still can't speak. What does this mean, and what should happen?",
+      "choices": [
+        "This is a normal part of recovering from a flare — just keep waiting",
+        "These are emergency warning signs — activate the EAP and call 911 immediately",
+        "Have him try the inhaler two more times before doing anything else",
+        "Send him to walk it off in the fresh air outside"
+      ],
+      "answerIndex": 1,
+      "explanation": "No improvement after the inhaler plus blue/gray lips (a sign of low oxygen) and inability to speak are emergency red flags — this calls for immediate EAP activation and a 911 call, not more waiting or self-directed action."
+    },
+    {
+      "id": "q7",
+      "question": "What does 'well-controlled' asthma generally mean for an athlete?",
+      "choices": [
+        "They should avoid competitive sports entirely to stay safe",
+        "They can only participate in low-intensity, short-burst sports like swimming sprints",
+        "Full sports participation is the norm — many elite and Olympic athletes compete at the highest level with well-controlled asthma",
+        "They no longer need to carry a rescue inhaler to practice"
+      ],
+      "answerIndex": 2,
+      "explanation": "With a doctor's management plan followed as prescribed, full participation is the expected norm, not the exception — asthma is not a reason to sit out. A rescue inhaler should still be on hand at every practice and game regardless of how well-controlled symptoms usually are."
+    },
+    {
+      "id": "q8",
+      "question": "Which pattern should push an athlete to see their doctor about their asthma plan, rather than just continuing as usual?",
+      "choices": [
+        "Needing the rescue inhaler multiple times per week",
+        "Using a scarf over the mouth on a cold-weather practice day",
+        "Doing a gradual warm-up before a hard interval workout",
+        "Feeling normally winded after a hard sprint that recovers in a couple minutes"
+      ],
+      "answerIndex": 0,
+      "explanation": "Needing rescue medication several times a week is a sign of poorly controlled asthma that needs a doctor's attention, not something to push through as normal. A scarf in cold air, a proper warm-up, and ordinary post-sprint breathlessness are all expected, healthy habits or responses."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Asthma",
+      "back": "A chronic condition of the airways that are more sensitive than average and can react to triggers with swelling, tightening, and extra mucus."
+    },
+    {
+      "id": "f2",
+      "front": "Bronchoconstriction",
+      "back": "Tightening of the ring of muscle around an airway, narrowing it — one of the three things happening during an asthma flare, along with swelling and mucus."
+    },
+    {
+      "id": "f3",
+      "front": "Exercise-induced bronchoconstriction (EIB)",
+      "back": "Temporary airway narrowing triggered specifically by physical activity, worsened by breathing fast, cold, dry air through the mouth during hard exercise."
+    },
+    {
+      "id": "f4",
+      "front": "EIB triggers",
+      "back": "Cold/dry air, poor air quality (wildfire smoke, ozone, pollen), sustained high-intensity effort, and recent colds/respiratory infections."
+    },
+    {
+      "id": "f5",
+      "front": "Ordinary being out of breath vs. asthma flare",
+      "back": "Ordinary: heavy breathing that calms within a few minutes of rest, no wheeze, can speak normally once recovered. Flare: wheeze, persistent cough, chest tightness, can't finish sentences, doesn't settle with rest."
+    },
+    {
+      "id": "f6",
+      "front": "Wheezing",
+      "back": "A whistling or musical sound, usually loudest breathing out, caused by air squeezing through a narrowed airway."
+    },
+    {
+      "id": "f7",
+      "front": "Rescue inhaler",
+      "back": "A device delivering fast-acting medication that relaxes tightened airway muscle within minutes — kept with the athlete's own gear at every practice and game."
+    },
+    {
+      "id": "f8",
+      "front": "Student aide's role during a flare",
+      "back": "Recognize the signs, help the athlete reach their own inhaler, get an adult immediately — never administer medication, including someone else's inhaler, for another person."
+    },
+    {
+      "id": "f9",
+      "front": "Cyanosis",
+      "back": "Blue or gray discoloration of the lips or fingertips — a sign the body isn't getting enough oxygen and an emergency warning sign during a flare."
+    },
+    {
+      "id": "f10",
+      "front": "Emergency signs during a flare",
+      "back": "No improvement after the rescue inhaler, blue/gray lips or fingertips, can't speak, or struggling to breathe at rest — activate the EAP and call 911."
+    },
+    {
+      "id": "f11",
+      "front": "Well-controlled vs. poorly-controlled asthma",
+      "back": "Well-controlled: full sports participation is the norm. Poorly-controlled: frequent flares or needing the rescue inhaler multiple times a week — a signal to see a doctor and adjust the plan."
+    },
+    {
+      "id": "f12",
+      "front": "Warm-up's protective effect",
+      "back": "A gradual, progressive warm-up before hard exercise can reduce the severity of exercise-induced bronchoconstriction once full intensity starts."
+    }
+  ]
+}
