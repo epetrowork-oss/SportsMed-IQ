@@ -1,0 +1,266 @@
+{
+  "id": "hip-pelvis-injuries",
+  "title": "Hip & Pelvis Injuries in Sports",
+  "category": "Lower Extremity Injuries",
+  "strand": "hip-pelvis-injuries",
+  "gradeBand": "9-10",
+  "summary": "Recognize the common hip flexor, groin, and hip pointer injuries in athletes — and the red flags, like worsening groin pain, that mean more than a strain.",
+  "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.3", "CTE.HSMT.B.4.5", "CTE.HSMT.Anchor.6"],
+  "sections": [
+    {
+      "heading": "Why hip and pelvis injuries matter",
+      "body": [
+        "Hip and groin injuries show up constantly in sprinting, kicking, and cutting sports — soccer, hockey, football, track, and dance all have them near the top of the injury list. They rarely make highlight reels the way a torn ACL does, but a bad groin strain can sideline an athlete just as long, and getting the recognition wrong can turn a two-week injury into a two-month one.",
+        "This unit covers the injuries you'll actually see on a sideline: hip flexor and groin (adductor) strains, the hip pointer (a bruise, not a strain), snapping hip, and growth-related overuse pain in younger athletes. It also covers the small set of red flags that mean an injury needs a doctor, not more practice."
+      ]
+    },
+    {
+      "heading": "Quick anatomy review: the hip joint and pelvis",
+      "body": [
+        "The hip is a ball-and-socket joint: the rounded head of the femur (thigh bone) sits inside the acetabulum, a deep cup formed by the pelvis. (For a refresher on joint types, see the anatomy foundations unit — the shoulder is the body's other ball-and-socket joint, but the hip's socket is much deeper, which makes the hip far more stable and far less likely to dislocate.)",
+        "The pelvis is a ring of bone connecting the spine to the legs, and a few bony landmarks matter for this unit. The iliac crest is the top rim of the pelvis, easy to feel at your waistline — it's the site of the hip pointer, covered below. The ASIS (anterior superior iliac spine) is the bony point at the front of that rim. The ischial tuberosity ('sit bones') is what you feel under you when sitting on a hard bench. The greater trochanter is the bony bump you can feel on the outside of the hip.",
+        "Two muscle groups matter most here. The hip flexors — mainly the iliopsoas and the rectus femoris (which also crosses the knee as part of the quadriceps) — pull the thigh forward and up, the motion of driving the knee up while sprinting. The adductors, commonly called the groin muscles, run along the inner thigh and pull the leg back toward the midline — the motion of squeezing the knees together or planting hard to cut."
+      ],
+      "image": {
+        "asset": "hip-pelvis-injuries-anatomy-landmarks.webp",
+        "ratio": "3:4",
+        "background": "white",
+        "description": "Front view of the pelvis and upper thighs in anatomical position. Show the ball-and-socket hip joint with the femoral head seated in the acetabulum on one side (small cutaway view). Label the bony landmarks on the pelvis: iliac crest (top rim), ASIS (front bony point), ischial tuberosity (labeled with a dashed indicator since it's on the underside), and greater trochanter (outer hip bump). Shade and label the hip flexor group (iliopsoas, rectus femoris) in one color running down the front of the thigh, and the adductor group in a contrasting color running down the inner thigh. Clean medical-illustration style with a small legend.",
+        "alt": "Diagram of the pelvis and hip showing the ball-and-socket hip joint, bony landmarks (iliac crest, ASIS, ischial tuberosity, greater trochanter), and the hip flexor and adductor muscle groups.",
+        "location": "public/images/units/hip-pelvis-injuries/"
+      }
+    },
+    {
+      "heading": "Hip flexor and groin (adductor) strains",
+      "body": [
+        "A strain is a stretch or tear of a muscle or its tendon (full grading framework in the Muscle Strains unit — the short version: Grade I is a mild stretch, Grade II a partial tear with swelling and weakness, Grade III a complete tear needing a physician). Hip flexor and adductor strains follow that same pattern; what's different here is where they happen and what causes them.",
+        "Hip flexor strains happen during forceful, fast hip flexion — the explosive knee-drive of a sprint start, a hard kick, or an overstretched lunge. Athletes usually feel a sudden sharp pull in the front of the hip or upper thigh, with pain when they try to lift the knee against resistance.",
+        "Adductor (groin) strains happen during cutting, a sudden change of direction, or the skating push-off in hockey — anything that forcefully stretches or loads the inner thigh. Athletes feel a sharp pull or tearing sensation in the groin or inner thigh, with pain when they try to squeeze their knees together or when the leg is stretched out to the side."
+      ],
+      "list": [
+        "Sudden sharp pain at the moment of injury, often described as a 'pull' or 'grab'",
+        "Tenderness right along the muscle — front of the hip for a flexor strain, inner thigh for an adductor strain",
+        "Pain when the muscle contracts against resistance (lifting the knee for a flexor strain, squeezing the knees together for a groin strain)",
+        "Swelling and, with a more severe strain, bruising that can appear a day or two later and track down the thigh"
+      ],
+      "image": {
+        "asset": "hip-pelvis-injuries-strain-mechanism.webp",
+        "ratio": "4:3",
+        "background": "transparent",
+        "description": "Side-by-side illustration of two athletes mid-motion. Left panel: a sprinter exploding out of the blocks with the front leg's knee driven high, hip flexor muscles (front of hip/thigh) shaded and shown under tension with a small strain/tear icon. Right panel: a soccer or hockey athlete mid-cut or push-off with the leg extended out to the side, adductor muscles (inner thigh) shaded and shown under tension with a small strain/tear icon. Simple athletic-illustration style, motion arrows on each leg.",
+        "alt": "Diagram of two injury mechanisms: a sprinter's hip flexor strained during an explosive knee drive, and an athlete's adductor (groin) strained during a hard cut or skating push-off.",
+        "location": "public/images/units/hip-pelvis-injuries/"
+      }
+    },
+    {
+      "heading": "Hip pointer: a bruise, not a strain",
+      "body": [
+        "A hip pointer is a contusion — a bruise from a direct blow, not a stretch or tear like a strain or sprain — to the iliac crest, usually from a hard hit by a shoulder, knee, helmet, or the ground itself. It's common in football, hockey, rugby, and lacrosse, anywhere athletes collide or fall hard onto their side.",
+        "A hip pointer hurts out of proportion to how minor the hit can look, because the iliac crest has only a thin layer of muscle and fat covering it, and several muscles — including the abdominal muscles and hip flexors — attach right at that bony ridge. Almost any movement of the trunk or hip, including twisting, coughing, or laughing, tugs on the bruised area and reproduces the pain."
+      ],
+      "list": [
+        "Point tenderness directly over the iliac crest at the site of the hit",
+        "Visible swelling and, over the following day or two, bruising",
+        "Sharp pain with trunk rotation, bending, or hip movement — even coughing or laughing can hurt",
+        "A limp or a guarded, hunched-over posture as the athlete tries to avoid moving the area"
+      ]
+    },
+    {
+      "heading": "Snapping hip and overuse pain in growing athletes",
+      "body": [
+        "Snapping hip syndrome is a felt or audible 'snap' or 'pop' at the hip during movement, most often caused by a tendon — commonly the iliopsoas tendon at the front of the hip — catching and sliding over a bony prominence as the hip bends and straightens. It's common in dancers, gymnasts, and hurdlers. Some snapping hips are painless (a curiosity more than an injury); others become painful with repeated friction and need rest and evaluation.",
+        "Growing athletes have another overuse pattern worth knowing: apophysitis. An apophysis is a growth-plate attachment site where a tendon anchors onto bone, and the pelvis has several — including at the ASIS and the ischial tuberosity. Repeated forceful pulling from sprinting or kicking can irritate these sites, causing pain right at the attachment point. In rare cases, one hard, forceful contraction — an explosive sprint start, a hard kick — can actually pull a small piece of that growth plate off the bone, an avulsion fracture. Both patterns deserve real evaluation, not a shrug and 'it's just growing pains.' (See the Growing Athletes unit for why growth plates are the skeleton's weak link, and the Overuse Injuries unit for how training load drives injuries like this.)"
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Ask what changed in training",
+        "text": "Like most overuse injuries, apophysitis and painful snapping hip usually trace back to a recent jump in sprint volume, kicking reps, or hurdle work. Asking 'what changed in the last few weeks?' is often more useful than asking 'what hurts?'"
+      }
+    },
+    {
+      "heading": "Red flags — when hip or groin pain is more than a strain",
+      "body": [
+        "Most hip flexor strains, groin strains, and hip pointers heal well with standard care. But a small set of findings mean the injury is not a simple strain, and pushing through it can turn a minor injury into a serious one."
+      ],
+      "list": [
+        "Inability to bear weight or stand on the injured leg.",
+        "Deep pain in the groin or front of the hip that keeps getting worse with running instead of improving, even with rest days. This is the classic pattern of a femoral neck stress fracture — a crack in the neck of the thigh bone from repetitive load. It's a 'can't-miss' injury: if it's missed and the athlete keeps training on it, the stress fracture can progress to a complete fracture that needs surgery. Groin pain that keeps getting worse with running needs a doctor, not more training. (See the Overuse Injuries unit for how stress fractures build up over time.)",
+        "Numbness, tingling, or weakness in the leg.",
+        "Any hip or pelvis pain after a big fall, hard tackle, or collision — especially with severe pain, inability to move the leg, or a leg that looks shortened or rotated compared to the other side. This can signal a pelvis fracture, which is rare in youth sports but serious, and needs emergency evaluation."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Red flags — refer to a physician",
+        "text": "Refer immediately for: inability to bear weight, groin or front-of-hip pain that keeps getting worse with running instead of improving (possible femoral neck stress fracture), numbness or tingling down the leg, or any hip/pelvis pain after a big fall or collision, especially with a shortened or rotated-looking leg (possible pelvis fracture). When in doubt, refer out — students never diagnose or clear an athlete to return."
+      }
+    },
+    {
+      "heading": "Immediate care and return to play",
+      "body": [
+        "For a suspected hip flexor strain, groin strain, or hip pointer, the plan is the same simple one used across sports medicine: Protect the area (stop the activity), Rest, Ice for 15–20 minutes at a time over a barrier (never directly on skin), and refer for evaluation before returning. There's no special field maneuver or stretch that fixes a strain or a bone bruise faster — don't try to 'test it out' by pushing through the pain, and don't perform special orthopedic tests on an injured teammate; that's the athletic trainer's or physician's job.",
+        "Return to play only happens once a supervising professional clears the athlete, with full pain-free range of motion, strength close to the other side, and the ability to sprint, cut, and kick at full speed without pain. Returning early on a groin or hip flexor strain is one of the most common ways athletes turn a two-week injury into a recurring, season-long problem."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What type of joint is the hip?",
+      "choices": [
+        "Hinge joint — bends in one direction only",
+        "Pivot joint — rotates around a single axis",
+        "Ball-and-socket joint — a rounded femoral head seated in the pelvis's socket",
+        "Gliding joint — small bones sliding past each other"
+      ],
+      "answerIndex": 2,
+      "explanation": "The hip is a ball-and-socket joint, like the shoulder, but its socket (the acetabulum) is much deeper — which makes the hip more stable and far less likely to dislocate."
+    },
+    {
+      "id": "q2",
+      "question": "A sprinter suddenly feels a sharp pull in the front of her hip while exploding out of the blocks. What is this most likely?",
+      "choices": [
+        "Hip flexor strain — the muscle that drives the knee forward torn during forceful hip flexion",
+        "Hip pointer — a contusion to the iliac crest",
+        "Snapping hip syndrome",
+        "Adductor (groin) strain"
+      ],
+      "answerIndex": 0,
+      "explanation": "The explosive knee-drive of a sprint start forcefully loads the hip flexors (iliopsoas, rectus femoris) — a classic hip flexor strain mechanism. A hip pointer requires a direct blow, and adductor strains involve the inner thigh, not the front of the hip."
+    },
+    {
+      "id": "q3",
+      "question": "A hockey player pushes hard off her inside edge to skate and feels a sharp pain in her inner thigh. Which muscle group is most likely strained?",
+      "choices": [
+        "Quadriceps strain",
+        "Hamstring strain",
+        "Adductor (groin) strain — the inner-thigh muscles that pull the leg toward the midline",
+        "Gluteal strain"
+      ],
+      "answerIndex": 2,
+      "explanation": "The skating push-off forcefully loads the adductors, the inner-thigh muscles that pull the leg toward the midline — the classic 'hockey groin' mechanism. The quadriceps, hamstrings, and glutes are located elsewhere and load differently."
+    },
+    {
+      "id": "q4",
+      "question": "A football player takes a hard helmet hit to the top rim of his pelvis. Now it hurts to twist his trunk or even laugh, and there's a tender bruise right over the bone. What is this?",
+      "choices": [
+        "A groin strain from a kicking motion",
+        "Hip pointer — a contusion to the iliac crest, painful because muscles attaching there pull on the bruise with almost any trunk or hip movement",
+        "A snapping hip from tendon friction",
+        "A hip flexor strain from sprinting"
+      ],
+      "answerIndex": 1,
+      "explanation": "A direct blow to the iliac crest producing a tender bruise that hurts with trunk movement is a hip pointer — a contusion, not a strain. Strains come from forceful stretching under load, not a direct hit."
+    },
+    {
+      "id": "q5",
+      "question": "What is snapping hip syndrome?",
+      "choices": [
+        "A tendon (often the iliopsoas) sliding and catching over a bony prominence at the hip, causing a snap or pop with movement",
+        "A complete tear of the adductor muscle",
+        "A fracture through the femoral neck",
+        "Inflammation of the knee's IT band only"
+      ],
+      "answerIndex": 0,
+      "explanation": "Snapping hip syndrome is a tendon — commonly the iliopsoas — catching and sliding over a bony prominence as the hip moves, producing a felt or heard snap. It can be painless or, with repeated friction, become painful and need evaluation."
+    },
+    {
+      "id": "q6",
+      "question": "A distance runner's groin pain has been getting worse every week despite cutting her mileage and adding rest days. What should happen next?",
+      "choices": [
+        "Ice it more and cut mileage by half again",
+        "Add extra groin stretches before every run",
+        "Tape the hip and keep racing since it's 'probably just tight'",
+        "Refer to a physician — persistent, worsening groin/hip pain despite rest is a red flag for a femoral neck stress fracture"
+      ],
+      "answerIndex": 3,
+      "explanation": "Groin or front-of-hip pain that keeps getting worse with running despite rest is the classic warning sign of a femoral neck stress fracture — a can't-miss injury that needs a doctor, not more training or a stretching routine."
+    },
+    {
+      "id": "q7",
+      "question": "A rugby player takes a hard hit to the pelvis, can't stand or bear weight, and her leg looks shorter and rotated compared to the other side. What's the priority?",
+      "choices": [
+        "Help her stand and walk it off to see if she can bear weight",
+        "Have her attempt a squat to test her hip range of motion",
+        "Tape the hip and let her try to return in a few minutes",
+        "Do not move her — activate your emergency action plan and treat this as a possible pelvis fracture"
+      ],
+      "answerIndex": 3,
+      "explanation": "Inability to bear weight after a hard hit, plus a leg that looks shortened or rotated, are red flags for a pelvis fracture. This calls for immediate emergency care, not walking, testing range of motion, or taping and returning."
+    },
+    {
+      "id": "q8",
+      "question": "A 14-year-old sprinter has pain right at the bony point at the front of his hip that's worsened over several weeks of increased sprint training. What does this most likely represent?",
+      "choices": [
+        "A torn ACL from cutting",
+        "Apophysitis — irritation of a growth-plate attachment site (like the ASIS) from repeated pulling by hip flexor muscles",
+        "A complete adductor rupture",
+        "A dislocated hip joint"
+      ],
+      "answerIndex": 1,
+      "explanation": "A growing athlete's pelvis has open apophyses — growth-plate attachment sites like the ASIS — where repeated forceful muscle pulling from sprinting can cause apophysitis. This is an overuse pattern tied to training load, not a ligament tear, muscle rupture, or dislocation."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Hip joint type",
+      "back": "Ball-and-socket: the femoral head sits in the acetabulum, a deep cup formed by the pelvis — deeper and more stable than the shoulder's socket."
+    },
+    {
+      "id": "f2",
+      "front": "Iliac crest",
+      "back": "The top rim of the pelvis, easy to feel at the waistline. The site of a hip pointer contusion."
+    },
+    {
+      "id": "f3",
+      "front": "Adductors (groin muscles)",
+      "back": "Inner-thigh muscles (adductor longus, brevis, magnus, gracilis) that pull the leg toward the midline. Strained by cutting, skating push-offs, and kicking."
+    },
+    {
+      "id": "f4",
+      "front": "Hip flexors",
+      "back": "Iliopsoas and rectus femoris — pull the thigh/knee forward and up. Strained by sprinting starts and kicking."
+    },
+    {
+      "id": "f5",
+      "front": "Hip pointer",
+      "back": "A contusion (bruise) to the iliac crest from a direct blow — not a strain. Hurts out of proportion to the hit because many trunk/hip muscles attach right at that bony ridge."
+    },
+    {
+      "id": "f6",
+      "front": "Strain grading (I / II / III)",
+      "back": "Same framework as the Muscle Strains unit: I = mild stretch, II = partial tear (swelling, weakness), III = complete tear — refer to a physician."
+    },
+    {
+      "id": "f7",
+      "front": "Snapping hip syndrome",
+      "back": "A tendon (often the iliopsoas) catching and sliding over a bony prominence at the hip, producing a felt or heard snap. Can be painless or, with friction, painful."
+    },
+    {
+      "id": "f8",
+      "front": "Apophysitis (hip/pelvis)",
+      "back": "Overuse irritation at a growth-plate attachment site (like the ASIS or ischial tuberosity) in a growing athlete, from repeated muscle pulling during sprinting or kicking."
+    },
+    {
+      "id": "f9",
+      "front": "Femoral neck stress fracture red flag",
+      "back": "Deep groin/front-of-hip pain that keeps getting worse with running instead of improving, even with rest. Refer to a physician — don't keep training through it."
+    },
+    {
+      "id": "f10",
+      "front": "Pelvis fracture red flags",
+      "back": "Inability to bear weight after a big fall or collision, severe pain, or a leg that looks shortened or rotated. Protect and get emergency help — don't move or test the athlete."
+    },
+    {
+      "id": "f11",
+      "front": "Numbness or tingling after a hip/pelvis injury",
+      "back": "A red flag regardless of how minor the injury looks — refer for evaluation immediately."
+    },
+    {
+      "id": "f12",
+      "front": "Immediate care for hip/groin injuries",
+      "back": "Protect, Rest, Ice (15–20 minutes over a barrier), refer for evaluation before returning. No aggressive stretching or 'testing it out' through pain."
+    }
+  ]
+}
