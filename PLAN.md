@@ -477,18 +477,18 @@ categories keep their names exactly).
 | 22 | hip-pelvis-injuries | Lower Extremity Injuries | x | | |
 | 23 | foot-conditions | Lower Extremity Injuries | x | | |
 | 24 | elbow-forearm-injuries | Upper Extremity Injuries | x | | |
-| 25 | wrist-hand-injuries | Upper Extremity Injuries | | | |
-| 26 | chest-abdominal-injuries | Acute Care & First Aid | | | |
+| 25 | wrist-hand-injuries | Upper Extremity Injuries | x | | |
+| 26 | chest-abdominal-injuries | Acute Care & First Aid | x | | |
 | 27 | shock-recognition | Acute Care & First Aid | x | | |
 | 28 | lightning-safety | Environmental Emergencies | x | | |
-| 29 | air-quality | Environmental Emergencies | | | |
+| 29 | air-quality | Environmental Emergencies | x | | |
 | 30 | strength-conditioning | Prevention & Performance | x | | |
-| 31 | sleep-recovery | Prevention & Performance | | | |
-| 32 | supplements-banned-substances | Prevention & Performance | | | |
-| 33 | protective-equipment | Prevention & Performance | | | |
-| 34 | careers-sports-medicine | The Sports Medicine Profession | | | |
-| 35 | legal-ethical-issues | The Sports Medicine Profession | | | |
-| 36 | sports-medicine-team | The Sports Medicine Profession | | | |
+| 31 | sleep-recovery | Prevention & Performance | x | | |
+| 32 | supplements-banned-substances | Prevention & Performance | x | | |
+| 33 | protective-equipment | Prevention & Performance | x | | |
+| 34 | careers-sports-medicine | The Sports Medicine Profession | x | | |
+| 35 | legal-ethical-issues | The Sports Medicine Profession | x | | |
+| 36 | sports-medicine-team | The Sports Medicine Profession | x | | |
 
 Batch log (mark `x` in the table as units land):
 - [x] Batch 1 (9-10): cardiac-conditions, spine-injuries,
@@ -548,12 +548,34 @@ TESTERS.md) is due Fri Jul 10 and outranks finishing the content triple.
       walk it off", femoral-neck stress fracture, elbow vascular emergency
       + young-thrower medial elbow pain. **Assessment & Clinical Skills
       COMPLETE (9/9). Library now 81 units.**
-- [ ] Batch 6 (9-10, final baseline batch — 9 strands): wrist-hand-injuries,
+- [x] Batch 6 (9-10, final baseline batch — 9 strands): wrist-hand-injuries,
       chest-abdominal-injuries, air-quality, sleep-recovery,
       supplements-banned-substances, protective-equipment,
       careers-sports-medicine, legal-ethical-issues, sports-medicine-team —
-      launched Thu Jul 9. Completes all 36 new-strand 9-10 baselines; after
-      this the spiral moves to 7-8 and 11-12 sibling waves.
+      all validator-clean, zero warnings. Safety/ethics callouts read
+      word-for-word: scaphoid "not just a sprain", chest/abdominal internal-
+      bleeding 911 red flags, supplement contamination/steroid danger +
+      never-supply boundary, helmet-doesn't-prevent-concussion + never-
+      remove-gear-from-spine-injury, scope-of-practice liability, coach-
+      doesn't-decide-medical/RTP. **ALL 36 NEW-STRAND 9-10 BASELINES DONE.
+      Library now 90 units across 10 categories.**
+
+**Milestone (Thu Jul 9): 9-10 baseline layer complete — 90 units, 36 new
+strands + the original 18, all with a 9-10 rung.** Next content phase is
+the spiral fill: 7-8 and 11-12 sibling waves for the 36 new strands
+(~72 more units to reach a full 3-band spiral; apply the "up to three,
+not exactly three" judgment for profession/clinical strands where a 7-8
+unit would be filler — e.g. documentation-recordkeeping, legal-ethical-
+issues, medical-terminology). **BUT sprint Day 3 outranks this**: aesthetic
+pass, GitHub Pages deploy, QA sweep, TESTERS.md are the Fri Jul 10 alpha
+bar and should come before any sibling-wave batches.
+
+Still TODO before more content batches:
+- Browser-verify the 90-unit library: grade filter still 36/90/0-ish
+  split correct (all new units are 9-10), the 3 new categories render on
+  Library + Teacher, a few new units load lesson/quiz/flashcards/standards
+  end-to-end, zero console errors, no 375px overflow.
+- Regenerate `npm run images:shotlist` — 36 new units added image slots.
 
 Band judgment note: a few profession/clinical strands may not merit a
 real `7-8` unit (e.g. documentation-recordkeeping, legal-ethical-issues)
