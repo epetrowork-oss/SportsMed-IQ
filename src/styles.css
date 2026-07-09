@@ -387,6 +387,107 @@ h3 {
   margin: 0 0 1.75rem;
 }
 
+/* "My Lessons" — the primary module on Home once a student has imported at
+   least one assignment. Sits above the Continue/Start card. */
+
+.my-lessons {
+  margin-bottom: 1.25rem;
+}
+
+.my-lessons h2 {
+  margin: 0 0 0.7rem;
+}
+
+.assignment-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.assignment-card {
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: 0.8rem;
+  padding: 1rem 1.2rem;
+}
+
+.assignment-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem 0.9rem;
+}
+
+.assignment-card-header h3 {
+  margin: 0;
+}
+
+.assignment-card-done {
+  margin: 0.6rem 0 0;
+  font-size: 0.85rem;
+}
+
+.assignment-progress-bar {
+  margin-top: 0.6rem;
+  height: 0.6rem;
+  border-radius: 999px;
+  background: var(--brand-light);
+  overflow: hidden;
+}
+
+.assignment-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--brand);
+  transition: width 0.2s;
+}
+
+.assignment-progress-text {
+  margin: 0.4rem 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.assignment-next-up {
+  display: inline-flex;
+  margin-top: 0.8rem;
+}
+
+/* Low-friction class-code entry shown on Home when a student has no
+   assignments yet — quiet bordered card, not a hero. */
+
+.class-code-entry {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  padding: 1rem 1.1rem;
+  margin: 0 0 1.75rem;
+}
+
+.class-code-entry h3 {
+  margin: 0 0 0.6rem;
+}
+
+.class-code-entry-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.class-code-entry-row .text-input {
+  flex: 1 1 14rem;
+  max-width: none;
+}
+
+.class-code-entry .import-error {
+  margin: 0.6rem 0 0;
+}
+
+.library-focus-note {
+  margin: -0.5rem 0 1rem;
+}
+
 /* Landing page "how it works" strip: one card for students, one for
    teachers. Plain bordered cards, same visual language as unit cards. */
 

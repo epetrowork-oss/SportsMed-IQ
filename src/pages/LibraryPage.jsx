@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getAllUnits, getUnitsByCategory } from '../content/index.js'
-import { useProgress, getUnitProgress, isUnitComplete } from '../lib/progress.js'
+import { useProgress, useAssignments, getUnitProgress, isUnitComplete } from '../lib/progress.js'
+import { assignedUnitIds, hasFocusAssignment } from '../lib/assignments.js'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
 
 // Shared with scripts/list-image-slots.mjs, which reconstructs these same
@@ -81,6 +82,9 @@ function UnitCard({ unit, showGradeBand }) {
 
 export default function LibraryPage() {
   useProgress() // re-render when progress changes
+  const assignments = useAssignments()
+  const focusMode = hasFocusAssignment(assignments)
+  const focusedIds = focusMode ? new Set(assignedUnitIds(assignments)) : null
   const [gradeBand, setGradeBand] = useState(() => {
     try {
       return localStorage.getItem(GRADE_BAND_KEY) || 'all'
@@ -99,14 +103,16 @@ export default function LibraryPage() {
   }, [gradeBand])
 
   const searchTerm = search.trim().toLowerCase()
-  const totalUnits = getAllUnits().length
+  const totalUnits = focusMode ? focusedIds.size : getAllUnits().length
 
   const groups = getUnitsByCategory()
     .map(({ category, units }) => ({
       category,
-      units: units.filter(
-        (u) => (gradeBand === 'all' || u.gradeBand === gradeBand) && unitMatchesSearch(u, searchTerm)
-      ),
+      units: units
+        .filter((u) => !focusMode || focusedIds.has(u.id))
+        .filter(
+          (u) => (gradeBand === 'all' || u.gradeBand === gradeBand) && unitMatchesSearch(u, searchTerm)
+        ),
     }))
     .filter((g) => g.units.length > 0)
 
@@ -115,7 +121,17 @@ export default function LibraryPage() {
   return (
     <div className="page">
       <h1>Library</h1>
-      <p className="library-intro">Browse every lesson, filter by grade band, or search by topic.</p>
+      <p className="library-intro">
+        {focusMode
+          ? 'Browse your assigned lessons, filter by grade band, or search by topic.'
+          : 'Browse every lesson, filter by grade band, or search by topic.'}
+      </p>
+      {focusMode && (
+        <p className="empty-note library-focus-note">
+          Showing your assigned lessons. Your teacher assigns lessons here — new ones appear when
+          you import a class code on the <Link to="/sync">Sync page</Link>.
+        </p>
+      )}
       <div className="home-filters">
         <div className="grade-band-picker" role="group" aria-label="Filter by grade">
           {GRADE_BANDS.map((band) => (
