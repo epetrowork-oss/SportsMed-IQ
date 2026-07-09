@@ -1,0 +1,274 @@
+{
+  "id": "anatomy-foundations",
+  "title": "Body Systems & Structures: An Athletic Trainer's Foundation",
+  "category": "Assessment & Clinical Skills",
+  "strand": "anatomy-foundations",
+  "gradeBand": "9-10",
+  "summary": "A working map of the body's systems — bones, joints, and muscles first, then the systems that keep an athlete breathing, circulating, sensing, and protected.",
+  "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.1.0", "CTE.HSMT.B.5.0"],
+  "sections": [
+    {
+      "heading": "From Cells to Systems: How the Body Is Organized",
+      "body": [
+        "Every structure in the human body — bone, muscle, skin, blood vessel — is built from the same starting point: the cell, the basic unit of life. Groups of similar cells working together form a tissue. Muscle tissue, for example, is made of cells specialized to contract and shorten.",
+        "Tissues combine to build organs — structures made of two or more tissue types working as a unit, like the heart (muscle tissue, connective tissue, and nervous tissue, all in one organ) or a single bone (bone tissue, connective tissue, and blood vessels). Organs that work together toward a shared job form an organ system — the skeletal system, the cardiovascular system, and so on. This unit tours those systems, spending the most time on the one you'll use every day in sports medicine: the musculoskeletal system."
+      ],
+      "list": [
+        "Cells — the basic living unit",
+        "Tissues — groups of similar cells (e.g., muscle tissue, connective tissue)",
+        "Organs — structures built from multiple tissue types (e.g., the heart, a single bone)",
+        "Organ systems — organs working together toward a shared job (e.g., the skeletal system)"
+      ]
+    },
+    {
+      "heading": "The Skeleton: Your Body's Framework",
+      "body": [
+        "The adult skeleton is built from about 206 bones, and it does more than hold you upright. Bones support the body's shape, protect vital organs (the skull shields the brain, the rib cage shields the heart and lungs), and act as rigid levers that muscles pull on to create movement. Bones also manufacture blood cells: the soft tissue inside certain bones, called red bone marrow, produces red blood cells, white blood cells, and platelets — a job no other system performs.",
+        "Anatomists split the skeleton into two regions. The axial skeleton is the body's central axis — skull, vertebral column (spine), rib cage, and sternum (breastbone). The appendicular skeleton is everything attached to that axis — the arms, legs, shoulder girdle (clavicle and scapula), and pelvis. You'll see both terms in athletic training notes; for now, just know which bones belong to which group.",
+        "Long bones — like the femur (thigh) or humerus (upper arm) — share a common structure worth learning now, before you study specific fractures:"
+      ],
+      "list": [
+        "Diaphysis — the long shaft of the bone",
+        "Epiphysis — each rounded end of the bone",
+        "Growth plate (epiphyseal plate) — cartilage near the ends where a young athlete's bones lengthen; a common youth injury site because it's softer than mature bone",
+        "Periosteum — the tough outer membrane covering the bone, important for healing",
+        "Medullary cavity — the hollow center where marrow is stored"
+      ],
+      "image": {
+        "asset": "anatomy-foundations-skeleton-overview.webp",
+        "ratio": "3:4",
+        "background": "white",
+        "description": "Full-body anterior view of the human skeleton, standing in anatomical position. Color the axial skeleton (skull, vertebral column, rib cage, sternum) in one shade and the appendicular skeleton (arms, legs, clavicles, scapulae, pelvis) in a contrasting shade, with a small legend identifying each region by name. Clean medical-illustration style, no shading beyond the two-color regions.",
+        "alt": "Full skeleton diagram with the axial skeleton (skull, spine, rib cage, sternum) shaded one color and the appendicular skeleton (arms, legs, shoulder girdle, pelvis) shaded a contrasting color.",
+        "location": "public/images/units/anatomy-foundations/"
+      }
+    },
+    {
+      "heading": "Joints: Where Movement Happens",
+      "body": [
+        "A joint is any point where two or more bones meet. Joints vary widely in how much and what kind of motion they allow — determined by the shapes of the bones involved and the ligaments and cartilage around them. Four types show up constantly in sports medicine:"
+      ],
+      "list": [
+        "Hinge joint — moves in one plane, like a door hinge (bending and straightening only). The elbow and knee are hinge joints — think of the knee bending during a soccer kick or a basketball layup.",
+        "Ball-and-socket joint — a rounded end of one bone sits in a cup-shaped socket, allowing motion in almost every direction. The shoulder and hip are ball-and-socket joints — a pitcher's windmill arm circle uses the shoulder's full range of motion.",
+        "Pivot joint — one bone rotates around another, like a doorknob turning. The joint at the top of the neck (between the first two vertebrae) is a pivot joint — it's what lets a shortstop turn her head to check a runner without turning her shoulders.",
+        "Gliding (plane) joint — small, relatively flat bone surfaces slide past each other for limited, cushioning motion. The small bones of the wrist and foot form gliding joints — they help absorb shock when an athlete lands from a jump."
+      ],
+      "image": {
+        "asset": "anatomy-foundations-joint-types.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Four-panel comparison diagram, one panel per joint type. Panel 1: elbow or knee shown mid-bend with a single motion arrow (hinge). Panel 2: shoulder or hip shown with the rounded bone end seated in its socket and multi-directional motion arrows (ball-and-socket). Panel 3: the top two neck vertebrae (atlas and axis) shown from above with a rotational arrow (pivot). Panel 4: a cluster of small wrist (carpal) bones with short sliding arrows between them (gliding). Label each panel with the joint type name and one real sport example. Clean medical-illustration style, consistent color palette across panels.",
+        "alt": "Four-panel diagram comparing hinge, ball-and-socket, pivot, and gliding joints, each labeled with a sport example.",
+        "location": "public/images/units/anatomy-foundations/"
+      }
+    },
+    {
+      "heading": "Muscles, Tendons, and Ligaments",
+      "body": [
+        "Skeletal muscle is the tissue that actually creates movement. A muscle attaches on either side of a joint and, when its fibers contract, pulls the bones closer together — muscles can only pull, never push, which is why moving a joint in more than one direction requires opposing muscles working in pairs.",
+        "That pairing has a name: the agonist is the muscle contracting to cause a movement, and the antagonist is the muscle on the opposite side that relaxes and lengthens to let it happen smoothly. When the biceps (agonist) contracts to bend the elbow, the triceps (antagonist) relaxes; to straighten the elbow back out, the triceps becomes the agonist and the biceps becomes the antagonist. Every joint has at least one agonist-antagonist pair working it.",
+        "Two other connective tissues get mixed up constantly, so learn the difference now: a tendon connects muscle to bone (it's what lets a muscle's pull actually move a bone), and a ligament connects bone to bone (it stabilizes a joint and limits how far it can move). A torn Achilles tendon and a torn ACL (anterior cruciate ligament) are both serious injuries, but they are completely different structures with different symptoms and recoveries — mixing up the words changes what an athletic trainer or physician thinks is hurt."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Tendon vs. ligament — a way to keep it straight",
+        "text": "Tendon = Tie muscle To bone. Ligament = Link bone to bone. If the injured structure crosses from a muscle onto a bone, it's a tendon; if it connects one bone straight to another, it's a ligament."
+      },
+      "image": {
+        "asset": "anatomy-foundations-tendon-ligament.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side (lateral) view of a right knee joint. Show the quadriceps muscle running down the thigh, narrowing into the patellar tendon, and crossing the patella to attach onto the tibia — label this tendon and color it one shade. Separately show the ACL and MCL running bone-to-bone inside and beside the joint (femur to tibia) — label these ligaments and color them a contrasting shade. Include a small caption box: 'Tendon: muscle to bone. Ligament: bone to bone.' Clean medical-illustration style.",
+        "alt": "Diagram of a knee showing the patellar tendon connecting the quadriceps muscle to the tibia, and the ACL/MCL ligaments connecting the femur to the tibia, in contrasting colors labeled tendon and ligament.",
+        "location": "public/images/units/anatomy-foundations/"
+      }
+    },
+    {
+      "heading": "Cardiovascular and Respiratory Systems: Fueling the Athlete",
+      "body": [
+        "Working muscle needs a constant supply of oxygen, and two systems deliver it. The cardiovascular system is built from the heart (a four-chambered muscular pump), blood vessels (arteries carrying oxygen-rich blood away from the heart, veins returning blood to it, and capillaries — tiny vessels where oxygen and nutrients actually pass into tissue), and the blood itself, which also carries away waste products like carbon dioxide. This is the system you're checking when you take a pulse or blood pressure — covered in depth in the vital-signs unit — and the one behind sudden cardiac emergencies covered in the cardiac-conditions unit.",
+        "The respiratory system brings the oxygen in. Air travels down the airway — through the trachea (windpipe) and into progressively smaller branching tubes called bronchi — to reach the lungs, where it fills millions of tiny air sacs called alveoli. Gas exchange happens across the thin walls of the alveoli: oxygen moves into the bloodstream and carbon dioxide moves out to be exhaled. When that airway narrows or gets irritated, as in an asthma attack, gas exchange suffers fast — which is why the asthma-respiratory unit is worth knowing well."
+      ]
+    },
+    {
+      "heading": "Nervous and Integumentary Systems: Command and Protection",
+      "body": [
+        "The nervous system controls and senses everything the body does. It has two parts: the central nervous system (CNS) — the brain and spinal cord, protected by the skull and vertebral column — and the peripheral nervous system, the network of nerves branching out to the rest of the body. Nerves carry two kinds of messages: motor signals telling muscles to contract, and sensory signals carrying information like pain, touch, and joint position back to the brain. Injury to the brain (covered in the concussion unit) or spinal cord (covered in the spine-injuries unit) can disrupt movement and sensation well beyond the injury site itself, which is exactly why those injuries get such cautious on-field handling.",
+        "The integumentary system is the skin, and it's easy to overlook because it's always visible — but it's the body's first line of defense. The outer layer, the epidermis, is a tough, mostly waterproof barrier against pathogens and the outside world; the deeper layer, the dermis, holds nerve endings, blood vessels, and sweat glands that help regulate body temperature. Because skin is on the outside, it's also usually the first tissue to show visible signs of injury — abrasions, lacerations, bruising — which the wound-care and skin-conditions units cover in detail."
+      ]
+    },
+    {
+      "heading": "Describing the Body: Anatomical Position and Direction",
+      "body": [
+        "Athletic trainers describe injuries using a shared reference point called anatomical position: the body standing upright, facing forward, arms at the sides, palms facing forward. Every directional term is defined relative to this position — regardless of how the athlete was actually positioned when they got hurt. A short shared vocabulary of directional terms — superior/inferior, anterior/posterior, medial/lateral, proximal/distal, and more — lets anyone on a sideline describe exactly where an injury is without pointing or guessing. That vocabulary, along with the rest of the body's medical terminology system of prefixes, suffixes, and root words, is covered in full in the medical-terminology unit; this section just gives you the reference points you'll use constantly from here on."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Landmarks guide the exam — they don't replace it",
+        "text": "Feeling a bony bump, tracing a muscle belly, or locating a joint line by feel are useful starting points for describing an injury, but they are not a diagnosis. Surface anatomy can hide what's happening underneath — a ligament can be torn without a visible mark, and a fracture can sit beneath normal-looking skin. Always report what you observe and feel accurately, and let the athletic trainer or physician determine what it means."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Put these levels of body organization in order from smallest to largest.",
+      "choices": [
+        "Cells → Tissues → Organs → Organ systems",
+        "Tissues → Cells → Organ systems → Organs",
+        "Organs → Tissues → Cells → Organ systems",
+        "Cells → Organs → Tissues → Organ systems"
+      ],
+      "answerIndex": 0,
+      "explanation": "Cells are the basic living unit; similar cells form tissues; tissues combine into organs; organs working together form an organ system. The other orderings scramble that sequence."
+    },
+    {
+      "id": "q2",
+      "question": "Which of these is NOT one of the skeleton's main jobs?",
+      "choices": [
+        "Producing hormones that control digestion",
+        "Supporting the body's overall framework",
+        "Protecting internal organs like the brain and heart",
+        "Producing blood cells in the bone marrow"
+      ],
+      "answerIndex": 0,
+      "explanation": "The skeleton supports, protects, enables movement (as levers muscles pull on), and produces blood cells in red marrow — but it doesn't produce digestive hormones; that's the job of organs like the stomach and pancreas."
+    },
+    {
+      "id": "q3",
+      "question": "A femur (thigh bone) belongs to which division of the skeleton?",
+      "choices": [
+        "Axial skeleton",
+        "Appendicular skeleton",
+        "Central skeleton",
+        "Peripheral skeleton"
+      ],
+      "answerIndex": 1,
+      "explanation": "The appendicular skeleton is the limbs and their attachments — arms, legs, shoulder girdle, and pelvis. The axial skeleton is the body's central axis: skull, spine, rib cage, and sternum."
+    },
+    {
+      "id": "q4",
+      "question": "Because young athletes are still growing, coaches and athletic trainers pay close attention to injuries near the ____, the site of new bone growth near the end of a long bone.",
+      "choices": [
+        "Diaphysis",
+        "Periosteum",
+        "Growth plate (epiphyseal plate)",
+        "Medullary cavity"
+      ],
+      "answerIndex": 2,
+      "explanation": "The growth plate is cartilage near the ends of a long bone where lengthening happens; it's softer than mature bone, making it a common injury site in youth athletes. The diaphysis is the shaft, the periosteum is the outer membrane, and the medullary cavity is the marrow-filled center."
+    },
+    {
+      "id": "q5",
+      "question": "A shortstop shakes her head to signal 'no' to the pitcher. Which joint type allows this rotating motion at the top of the neck?",
+      "choices": [
+        "Hinge joint",
+        "Ball-and-socket joint",
+        "Gliding joint",
+        "Pivot joint"
+      ],
+      "answerIndex": 3,
+      "explanation": "A pivot joint lets one bone rotate around another, like a doorknob turning — that's the motion at the joint between the top two neck vertebrae. Hinge joints only bend and straighten, ball-and-socket joints move in many directions, and gliding joints allow small sliding motions."
+    },
+    {
+      "id": "q6",
+      "question": "Which structure connects the quadriceps muscle to the tibia, allowing the knee to extend?",
+      "choices": [
+        "Patellar tendon",
+        "Anterior cruciate ligament (ACL)",
+        "Medial collateral ligament (MCL)",
+        "Iliotibial band"
+      ],
+      "answerIndex": 0,
+      "explanation": "The patellar tendon connects the quadriceps muscle to the tibia — a tendon always attaches muscle to bone. The ACL and MCL are ligaments, connecting bone to bone (femur to tibia), and stabilize the joint rather than creating movement."
+    },
+    {
+      "id": "q7",
+      "question": "When the biceps contracts to bend (flex) the elbow, the triceps relaxes to let the motion happen smoothly. The biceps and triceps in this pair are called...",
+      "choices": [
+        "A synergist pair",
+        "An agonist-antagonist pair",
+        "A ligament pair",
+        "A pivot pair"
+      ],
+      "answerIndex": 1,
+      "explanation": "The agonist is the muscle contracting to cause the movement (biceps, here); the antagonist relaxes to allow it (triceps). Every joint movement relies on a pair like this working opposite each other."
+    },
+    {
+      "id": "q8",
+      "question": "An athletic trainer notes 'point tenderness over the ATFL' on an injured ankle. Using anatomical directional terms, the ATFL sits on which side of the ankle?",
+      "choices": [
+        "Medial (toward the midline)",
+        "Anterior (toward the front only)",
+        "Lateral (away from the midline)",
+        "Posterior (toward the back only)"
+      ],
+      "answerIndex": 2,
+      "explanation": "The anterior talofibular ligament (ATFL) is on the lateral (outside) ankle, away from the body's midline. Medial and lateral describe position relative to the midline in anatomical position, regardless of which way the ankle was pointing when it was injured."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Levels of body organization",
+      "back": "Cells → Tissues → Organs → Organ systems → Organism, each level built from the one before it."
+    },
+    {
+      "id": "f2",
+      "front": "Skeleton's four main jobs",
+      "back": "Support, protection, movement (bones act as levers), and blood cell production (in red marrow). The adult skeleton has about 206 bones."
+    },
+    {
+      "id": "f3",
+      "front": "Axial vs. appendicular skeleton",
+      "back": "Axial = skull, vertebral column, rib cage, sternum (the body's central axis). Appendicular = arms, legs, shoulder girdle, pelvis (the limbs and their attachments)."
+    },
+    {
+      "id": "f4",
+      "front": "Long bone parts",
+      "back": "Diaphysis (shaft), epiphysis (each end), growth plate/epiphyseal plate (site of growth), periosteum (outer covering), medullary cavity (marrow-filled center)."
+    },
+    {
+      "id": "f5",
+      "front": "Four joint types, with a sport example",
+      "back": "Hinge (knee bending in a kick), ball-and-socket (shoulder in a pitching windmill), pivot (top of neck turning to check a runner), gliding (wrist bones absorbing a landing)."
+    },
+    {
+      "id": "f6",
+      "front": "Tendon vs. ligament",
+      "back": "Tendon connects muscle to bone. Ligament connects bone to bone. Mixing these up points evaluators to check the wrong structure."
+    },
+    {
+      "id": "f7",
+      "front": "Agonist vs. antagonist",
+      "back": "Agonist = the muscle contracting to cause a movement. Antagonist = the opposing muscle that relaxes and lengthens to allow it."
+    },
+    {
+      "id": "f8",
+      "front": "Cardiovascular system",
+      "back": "Heart, blood vessels, and blood — delivers oxygen and nutrients to tissue and carries away waste like carbon dioxide."
+    },
+    {
+      "id": "f9",
+      "front": "Respiratory system and gas exchange",
+      "back": "Airway (trachea, bronchi) plus lungs; gas exchange — oxygen in, carbon dioxide out — happens across the alveoli, tiny air sacs in the lungs."
+    },
+    {
+      "id": "f10",
+      "front": "Nervous system",
+      "back": "Central nervous system (brain + spinal cord) plus peripheral nerves; carries motor signals to muscles and sensory signals (pain, touch, position) back to the brain."
+    },
+    {
+      "id": "f11",
+      "front": "Integumentary system",
+      "back": "The skin — epidermis (tough outer barrier) and dermis (nerves, blood vessels, sweat glands). The body's first line of defense and often the first tissue to show visible injury."
+    },
+    {
+      "id": "f12",
+      "front": "Anatomical position",
+      "back": "Standing upright, facing forward, arms at the sides, palms facing forward — the fixed reference point for every directional term (superior/inferior, medial/lateral, proximal/distal, anterior/posterior)."
+    }
+  ]
+}
