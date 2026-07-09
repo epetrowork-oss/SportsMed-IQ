@@ -1,0 +1,299 @@
+{
+  "id": "chest-abdominal-injuries",
+  "title": "Chest & Abdominal Injuries in Sports",
+  "category": "Acute Care & First Aid",
+  "strand": "chest-abdominal-injuries",
+  "gradeBand": "9-10",
+  "summary": "Torso injuries are rare compared to sprains and strains, but a few of them are true emergencies — learn to recognize the red flags fast and get the athlete help immediately.",
+  "minutes": 17,
+  "standards": ["CTE.HSMT.B.2.3", "CTE.HSMT.B.4.5", "CTE.HSMT.Anchor.6"],
+  "sections": [
+    {
+      "heading": "Why chest and abdominal injuries get special attention",
+      "body": [
+        "Compared to ankle sprains, muscle strains, and other limb injuries, chest and abdominal ('torso') injuries are relatively rare in sports. But the organs sitting inside the chest and abdomen include some of the most important — and most easily damaged — structures in the body, so a small number of these injuries turn into genuine emergencies. The goal of this unit isn't to make you diagnose what's wrong inside someone's chest or belly — that takes imaging and a physician. It's to make you fast and confident at recognizing the signs that something serious might be happening underneath, and getting the athlete help immediately.",
+        "The chest is protected by the rib cage — the sternum (breastbone) in front, the spine in back, and 12 pairs of ribs curving around the sides (reviewed in more depth in the anatomy-foundations unit). Inside that bony cage sit the heart and lungs — the organs that keep blood moving and oxygen flowing to every other tissue in the body.",
+        "The abdomen doesn't have the same complete bony protection. Only the upper abdomen gets partial cover from the lower ribs; below that, the abdominal organs are shielded mainly by muscle. Key organs to know: the spleen (upper left abdomen, tucked under the lower left ribs — it filters blood and is one of the most easily injured organs in a blunt hit), the liver (upper right abdomen, also partly under the lower right ribs — the body's largest solid organ), and the kidneys (one on each side, toward the back, protected somewhat by the lower ribs and the muscles of the back)."
+      ],
+      "list": [
+        "Chest: heart and lungs — protected by the rib cage and sternum",
+        "Upper left abdomen: spleen — partly under the lower left ribs",
+        "Upper right abdomen: liver — partly under the lower right ribs",
+        "Back/flank: kidneys — one on each side, near the spine"
+      ],
+      "image": {
+        "asset": "chest-abdominal-injuries-protected-organs-overview.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Front view of a torso in anatomical position with the rib cage rendered semi-transparent over the chest, showing the heart and lungs nestled inside. Below the rib cage, label the abdomen in quadrants: upper left showing the spleen tucked under the lower left ribs, upper right showing the liver tucked under the lower right ribs, and a small inset or back view showing the kidneys near the spine at flank level. Clean medical-illustration style, each organ labeled with its name.",
+        "alt": "Diagram of a torso showing the heart and lungs protected inside the rib cage, and the spleen, liver, and kidneys in the upper abdomen and flank.",
+        "location": "public/images/units/chest-abdominal-injuries/"
+      }
+    },
+    {
+      "heading": "Rib contusions and fractures",
+      "body": [
+        "The ribs are common targets for direct blows — a helmet, a knee, an elbow, a fall onto equipment, a batted ball. Most of these blows cause a rib contusion (bruise) — the soft tissue over the rib is bruised, but the bone itself is intact. A harder or more direct blow can actually crack or break a rib: a rib fracture.",
+        "Both a contusion and a fracture cause similar symptoms at first: sharp, localized pain right over the injury, made worse by taking a deep breath, coughing, laughing, or twisting the torso — because the rib cage moves with every breath. The clue that points toward a fracture rather than a bruise is pain that stays sharply localized to one small spot on a single rib (point tenderness), rather than a broader, achier area.",
+        "The reason a rib fracture gets taken seriously goes beyond the pain: a broken rib has a sharp edge, and that edge sits right next to the lung (upper and middle ribs) or the spleen, liver, and kidneys (lower ribs). A displaced rib fracture can bruise or puncture whatever is underneath it, so any suspected rib fracture needs a physician evaluation — not just rest and ice."
+      ],
+      "list": [
+        "Point tenderness directly over one rib, worse with deep breathing or coughing → raises concern for a fracture.",
+        "Broader, achy soreness over a wider area, less sharp with breathing → more consistent with a contusion.",
+        "Pain when the rib cage is gently compressed from front-to-back or side-to-side, away from the point of injury → another sign pointing toward a fracture."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "You can't tell contusion from fracture by feel alone",
+        "text": "Even athletic trainers can't always tell a rib contusion from a fracture on physical exam alone — an X-ray is often needed to be sure. Your job on the sideline isn't to make that call; it's to recognize a suspicious rib injury and get it evaluated rather than assuming it's 'just a bruise.'"
+      }
+    },
+    {
+      "heading": "Getting the wind knocked out of you",
+      "body": [
+        "A hard blow to the stomach or solar plexus (the area just below the sternum where a cluster of nerves sits) can cause the diaphragm — the large, dome-shaped muscle beneath the lungs that does most of the work of breathing — to go into a brief spasm. When that happens, it temporarily can't contract normally, and the athlete feels like they can't get a breath in at all, even though nothing is actually blocking their airway. This is what people mean by 'getting the wind knocked out of you.'",
+        "It's alarming to watch and terrifying to experience, but in the vast majority of cases it is self-limited — the spasm passes and normal breathing returns within about 30 to 90 seconds, sometimes up to a couple of minutes. The biggest danger in the moment usually isn't the injury itself; it's panic making it worse."
+      ],
+      "list": [
+        "Stay calm yourself — the athlete will take their cue from you.",
+        "Encourage them to relax rather than fight for air; short, calm breaths work better than one big gasp.",
+        "Loosen any tight equipment around the waist or chest.",
+        "Reassure them out loud: 'This will pass in a few seconds, you're okay.'"
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Winded, or something else?",
+        "text": "A normal 'wind knocked out' recovery gets steadily easier by the second and is back to normal within a minute or two. If breathing isn't improving, is getting worse, or the athlete looks pale/clammy or is in severe pain rather than just short of breath, stop treating it as routine and move to the red flags in the next section."
+      }
+    },
+    {
+      "heading": "Breathing trouble and chest pain: never wait it out",
+      "body": [
+        "Some chest injuries are true emergencies from the first second. A single hard blow to the chest, timed to a very specific instant in the heartbeat, can trigger a fatal heart rhythm called commotio cordis in an athlete with a completely normal heart — covered in full in the cardiac-conditions unit. Any collapse immediately after a direct chest impact is treated as a cardiac emergency, not a rib injury.",
+        "Short of that extreme, several other chest signs mean stop and get help immediately rather than watching and waiting:"
+      ],
+      "list": [
+        "Difficulty breathing that doesn't improve, or gets worse rather than better",
+        "Severe chest pain, or chest pain that is worsening rather than easing",
+        "Breathing that looks uneven — one side of the chest rising less than the other",
+        "Coughing up blood",
+        "Signs of shock — pale, cool, clammy skin, rapid weak pulse, rapid shallow breathing, increasing anxiety or confusion (covered in depth in the shock-recognition unit)"
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Red flags — chest trauma is a 911 situation",
+        "text": "Any of the signs above after a chest injury — breathing trouble that isn't improving, severe or worsening chest pain, uneven breathing, coughing blood, or shock signs — means calling 911 or activating the EAP immediately. Do not wait to see if it passes like a normal 'winded' recovery."
+      }
+    },
+    {
+      "heading": "Abdominal red flags: the organs you can't see",
+      "body": [
+        "A blunt blow to the abdomen — a knee, a helmet, the ground on a hard fall — can bruise or tear an internal organ without leaving much of a mark on the skin. That makes abdominal injuries deceptive: the outside can look almost normal while there's a real problem underneath.",
+        "The spleen is the organ injured most often this way, especially from a blow to the left side of the ribs or upper abdomen. A ruptured or bleeding spleen can cause a hard, rigid, board-like abdomen; pain that keeps getting worse rather than better; and sometimes pain that radiates to the left shoulder — called Kehr's sign, caused by blood irritating a nerve that also serves the shoulder. One important aside: an enlarged spleen, most commonly from mono (infectious mononucleosis, a viral illness), is far more fragile and can rupture from a much lighter hit than a normal spleen — which is exactly why an athlete recovering from mono needs a physician's clearance before returning to contact sports, not just 'feeling better.'",
+        "A blow to the right upper abdomen can injure the liver in a similar way. A blow to the back or flank (the side of the torso between the ribs and the hip) can injure a kidney — the clearest warning sign here is blood in the urine (visible, or reported by the athlete as pink, red, or tea-colored urine) in the hours after the hit."
+      ],
+      "list": [
+        "Abdomen that is hard, rigid, or board-like to gentle touch",
+        "Abdominal pain that is severe or steadily getting worse, not easing",
+        "Pain radiating to the left shoulder after a blow to the left side (possible spleen injury)",
+        "Blood in the urine after a blow to the back or flank (possible kidney injury)",
+        "Nausea, vomiting, or dizziness that develops after an abdominal blow"
+      ],
+      "image": {
+        "asset": "chest-abdominal-injuries-abdominal-quadrants-red-flags.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Front view of a bare torso divided into abdominal quadrants with a dashed grid line. Highlight the spleen in the upper left quadrant with a small warning icon and the text 'blow to left side -> possible spleen injury,' the liver in the upper right quadrant with the text 'blow to right side -> possible liver injury,' and a back/posterior inset showing both kidneys at flank level with the text 'blow to back/flank -> check for blood in urine.' Include a small curved arrow from the spleen icon to the left shoulder labeled 'referred pain (Kehr's sign).' Clean instructional-illustration style, no distressing detail.",
+        "alt": "Diagram of abdominal quadrants showing the spleen, liver, and kidneys with red-flag notes for blows to the left side, right side, and back/flank, including referred left-shoulder pain from spleen injury.",
+        "location": "public/images/units/chest-abdominal-injuries/"
+      },
+      "callout": {
+        "type": "warning",
+        "title": "Red flags — abdominal trauma is a 911 situation",
+        "text": "A rigid or worsening abdomen, blood in the urine, or any sign of shock after a blow to the torso means calling 911 or activating the EAP immediately — treat these as internal bleeding until proven otherwise, and never manage them alone."
+      }
+    },
+    {
+      "heading": "Immediate response: recognize, activate, monitor",
+      "body": [
+        "For chest and abdominal injuries, your job has the same shape every time: recognize the signs, activate the EAP or call 911 the moment any red flag appears, and monitor continuously until help arrives. You are never expected to figure out which organ is hurt — that takes imaging and a physician."
+      ],
+      "list": [
+        "Stop the athlete from returning to play the moment a chest or abdominal injury is suspected — don't wait for pain to 'prove' itself.",
+        "If any red flag from this unit is present, call 911 or activate the EAP immediately — don't wait to see if it passes.",
+        "Keep the athlete still and as calm as possible; unnecessary movement doesn't help and can make some injuries worse.",
+        "Watch continuously for the shock pattern — pale/clammy skin, rapid weak pulse, rapid shallow breathing, increasing anxiety, or drowsiness — even if the athlete initially looks okay, since internal bleeding can look fine for several minutes before it doesn't (see the shock-recognition unit).",
+        "Give nothing to eat or drink, in case surgery is needed.",
+        "For a clearly minor contusion with no red flags, rest, ice, and monitoring on the sideline is appropriate — but still tell the athletic trainer or coach what happened."
+      ]
+    },
+    {
+      "heading": "Return to play and prevention",
+      "body": [
+        "A simple rib contusion with no red flags may return to play once pain allows full, unrestricted breathing and movement — often within one to two weeks, but only after checking with the athletic trainer or physician. A confirmed rib fracture needs physician-guided healing time, typically several weeks, because returning too soon risks that same rib re-injuring the lung or an organ underneath it.",
+        "An athlete with a confirmed spleen, liver, or kidney injury needs specific physician clearance — sometimes with follow-up imaging — before any return to contact, often weeks to months later. Returning early is especially dangerous with a spleen injury, because a partially healed spleen can rupture again from a hit that wouldn't have hurt it the first time.",
+        "Prevention starts with equipment built for this exact purpose — properly fitted rib protectors and padded vests (common for baseball/softball catchers, hockey, and lacrosse), correct tackling and blocking technique that avoids leading with the ribs or midsection, and coaches who take a 'sit them out and get it checked' approach seriously instead of pushing an athlete with chest or abdominal pain back onto the field."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Which organs are directly protected by the bony rib cage in the chest?",
+      "choices": [
+        "Liver and spleen",
+        "Heart and lungs",
+        "Kidneys and stomach",
+        "Diaphragm and pancreas"
+      ],
+      "answerIndex": 1,
+      "explanation": "The rib cage and sternum surround and protect the heart and lungs. The spleen, liver, and kidneys sit lower and are covered only partly (or not at all) by bone, which is exactly why abdominal trauma is so much harder to protect against."
+    },
+    {
+      "id": "q2",
+      "question": "What actually happens during 'getting the wind knocked out of you'?",
+      "choices": [
+        "A rib fractures and punctures the lung",
+        "The heart's rhythm is briefly disrupted",
+        "A blow to the abdomen causes the diaphragm, the main breathing muscle, to spasm and temporarily stop working normally",
+        "The stomach briefly stops digesting food"
+      ],
+      "answerIndex": 2,
+      "explanation": "A blow to the stomach or solar plexus can make the diaphragm spasm, which briefly interrupts normal breathing even though the airway itself is completely clear. It usually resolves within about a minute as the spasm passes — it is not a rib fracture or a heart problem."
+    },
+    {
+      "id": "q3",
+      "question": "A football player takes a helmet to the ribs and has sharp point tenderness directly over one rib, worse with deep breaths. What should happen next?",
+      "choices": [
+        "Refer for evaluation — point tenderness over one rib with pain on breathing raises concern for a fracture, not just a contusion",
+        "Tape the ribs and send him back onto the field",
+        "Have him take several deep breaths to 'stretch it out'",
+        "Ignore it since rib injuries always resolve on their own"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sharp, localized point tenderness over a single rib is a sign that should be evaluated for a possible fracture, since a displaced fracture can injure the lung or organs underneath it. Taping and returning to play, forcing deep breaths, or ignoring the injury all skip the evaluation step that determines whether it's safe to keep playing."
+    },
+    {
+      "id": "q4",
+      "question": "A soccer player takes a knee to the stomach and is panicked, gasping, and can't seem to catch her breath. What is most helpful in the first moments?",
+      "choices": [
+        "Force her to lie flat immediately and take deep breaths",
+        "Give her water right away to help her relax",
+        "Have her run it off to reset her breathing",
+        "Stay calm, reassure her, and help her relax — a diaphragm spasm from getting the wind knocked out of her usually passes within a minute or so"
+      ],
+      "answerIndex": 3,
+      "explanation": "Staying calm and helping the athlete relax is the most useful first response to a normal diaphragm spasm, since panic makes the spasm feel worse and last longer. Forcing deep breaths, giving water, or having her run it off don't address a diaphragm spasm and can make an already panicked athlete more distressed."
+    },
+    {
+      "id": "q5",
+      "question": "The same athlete from the previous question still cannot catch her breath after two minutes and is now looking pale and clammy. What should you do?",
+      "choices": [
+        "Continue reassuring her and wait another few minutes — this is still normal",
+        "Treat this as an emergency: call 911/activate the EAP — breathing trouble that isn't improving, especially with signs of shock, is not a normal 'winded' recovery",
+        "Have her try to walk it off on the sideline",
+        "Give her a sports drink to help her recover faster"
+      ],
+      "answerIndex": 1,
+      "explanation": "A normal wind-knocked-out recovery steadily improves within a minute or two; breathing trouble that persists and comes with pale, clammy skin (a shock sign) means something more serious is happening and needs an immediate emergency response. Waiting longer, walking it off, or giving fluids all delay the help she actually needs."
+    },
+    {
+      "id": "q6",
+      "question": "An athlete is hit hard on the left side of the ribs during a tackle. Minutes later, his abdomen is rigid and increasingly tender, and he reports pain radiating to his left shoulder. What does this pattern suggest?",
+      "choices": [
+        "A possible spleen injury — the spleen sits in the upper left abdomen, and referred pain to the left shoulder (called Kehr's sign) can signal internal bleeding there",
+        "A simple case of getting the wind knocked out of him",
+        "A normal muscle cramp from the hit",
+        "Dehydration from the game"
+      ],
+      "answerIndex": 0,
+      "explanation": "A rigid, worsening abdomen plus pain radiating to the left shoulder after a left-side blow is the classic pattern of a spleen injury, and it needs an immediate emergency response. A wind-knocked-out recovery, a muscle cramp, or dehydration would not produce a rigid abdomen or referred shoulder pain."
+    },
+    {
+      "id": "q7",
+      "question": "A wrestler is thrown hard onto his lower back and later notices blood in his urine. Which organ is most likely involved?",
+      "choices": [
+        "The liver",
+        "The stomach",
+        "A kidney — a blow to the flank or back can injure a kidney, and blood in the urine is a red-flag sign",
+        "The bladder only, never the kidney"
+      ],
+      "answerIndex": 2,
+      "explanation": "The kidneys sit toward the back near the spine, so a hard blow or fall onto the back or flank can injure one of them, and blood in the urine afterward is the clearest warning sign. The liver sits in the front upper-right abdomen and would not typically be injured by a blow to the back."
+    },
+    {
+      "id": "q8",
+      "question": "Why is a fractured rib treated more seriously than a simple bruise, beyond the pain of the fracture itself?",
+      "choices": [
+        "It always requires surgery",
+        "It never heals without a cast",
+        "It changes the athlete's height",
+        "A fractured rib's sharp edge can injure the structures underneath it — such as puncturing a lung or bruising the spleen, liver, or a kidney on the lower ribs"
+      ],
+      "answerIndex": 3,
+      "explanation": "The real danger of a rib fracture is the sharp broken edge injuring whatever sits directly beneath it — the lung for upper ribs, or the spleen, liver, and kidneys for the lower ribs. Most rib fractures don't require surgery or a cast, and none of them change an athlete's height."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Diaphragm",
+      "back": "The dome-shaped muscle beneath the lungs that does most of the work of breathing; a hard blow to the abdomen can make it briefly spasm — 'getting the wind knocked out of you.'"
+    },
+    {
+      "id": "f2",
+      "front": "Getting the wind knocked out of you",
+      "back": "A diaphragm spasm from a blow to the abdomen; breathing feels blocked but usually returns to normal within about 30-90 seconds once the athlete relaxes."
+    },
+    {
+      "id": "f3",
+      "front": "Rib contusion vs. rib fracture",
+      "back": "Contusion = bruised soft tissue over the rib, bone intact. Fracture = the rib itself is cracked or broken; point tenderness over one exact spot raises concern for a fracture."
+    },
+    {
+      "id": "f4",
+      "front": "Why a rib fracture is a bigger deal than the pain",
+      "back": "A broken rib has a sharp edge that sits next to the lung (upper/middle ribs) or the spleen, liver, and kidneys (lower ribs) — it can injure whatever is underneath it."
+    },
+    {
+      "id": "f5",
+      "front": "Spleen location",
+      "back": "Upper left abdomen, tucked partly under the lower left ribs — the organ injured most often by blunt abdominal trauma."
+    },
+    {
+      "id": "f6",
+      "front": "Kehr's sign",
+      "back": "Pain that radiates to the left shoulder after a blow to the left abdomen — caused by blood from a bleeding spleen irritating a nerve that also serves the shoulder."
+    },
+    {
+      "id": "f7",
+      "front": "Mono and the spleen",
+      "back": "Mononucleosis can enlarge the spleen, making it far more fragile — an athlete recovering from mono needs a physician's clearance before returning to contact sports."
+    },
+    {
+      "id": "f8",
+      "front": "Liver location",
+      "back": "Upper right abdomen, partly under the lower right ribs — the body's largest solid organ."
+    },
+    {
+      "id": "f9",
+      "front": "Kidney injury red flag",
+      "back": "Blood in the urine (visible, or pink/red/tea-colored) after a blow to the back or flank."
+    },
+    {
+      "id": "f10",
+      "front": "Rigid abdomen",
+      "back": "A hard, board-like abdomen that is tender or worsening — a red flag for internal bleeding; treat as a 911/EAP emergency."
+    },
+    {
+      "id": "f11",
+      "front": "Commotio cordis (one-line reminder)",
+      "back": "A chest blow timed to one narrow instant in the heartbeat can trigger a fatal rhythm in an otherwise normal heart — covered in full in the cardiac-conditions unit; any collapse right after a chest impact is a cardiac emergency."
+    },
+    {
+      "id": "f12",
+      "front": "The rule for torso red flags",
+      "back": "Breathing trouble that isn't improving, severe/worsening chest pain, shock signs, or a rigid/worsening abdomen after torso trauma = call 911/activate the EAP immediately. Recognize, protect, refer — never wait it out."
+    }
+  ]
+}
