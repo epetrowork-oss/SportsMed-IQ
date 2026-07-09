@@ -1,0 +1,257 @@
+{
+  "id": "vital-signs",
+  "title": "Vital Signs: Measuring What the Body Tells You",
+  "category": "Assessment & Clinical Skills",
+  "strand": "vital-signs",
+  "gradeBand": "9-10",
+  "summary": "Learn to check pulse, breathing, skin signs, capillary refill, and temperature — the fastest window into how an athlete is really doing.",
+  "minutes": 17,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.4.5", "CTE.HSMT.B.5.0", "CTE.HSMT.Anchor.6"],
+  "sections": [
+    {
+      "heading": "Why vital signs matter",
+      "body": [
+        "Vital signs are the small set of measurements — pulse, breathing rate, skin signs, temperature, and blood pressure — that show how the body's most essential systems are running right now. They don't tell you what's wrong on their own, but they tell you fast whether someone is stable, improving, or getting worse, often before you can see an obvious injury.",
+        "Athletic trainers and EMS providers check vital signs on almost every injured or ill athlete for the same reason a pilot checks instruments before worrying about anything else: vitals change quickly when something is wrong internally, and normal vitals are one of the most reassuring findings you can have."
+      ]
+    },
+    {
+      "heading": "Pulse: finding and counting a heart rate",
+      "body": [
+        "A pulse is the wave of pressure you can feel in an artery each time the heart beats. Heart rate is how many times the heart beats in one minute, expressed in beats per minute (bpm).",
+        "Two spots are easiest to check by hand. The radial pulse is on the thumb side of the wrist, just below the base of the thumb — press lightly with your index and middle fingers (never your thumb, which has its own faint pulse and can trick you). The carotid pulse is in the groove of the neck beside the windpipe — press gently with two fingers on only one side at a time, since pressing both carotid arteries at once can restrict blood flow to the brain.",
+        "To count: find the pulse, count the beats for 15 seconds using a watch or phone timer, then multiply by 4 to get beats per minute.",
+        "A typical resting heart rate for a teenager is about 60-100 bpm. Well-conditioned athletes often sit lower than that — sometimes in the 40s or 50s — because a stronger, more efficient heart pumps more blood with each beat and doesn't need to beat as often. A low resting pulse in a fit, otherwise normal-feeling athlete usually isn't a red flag; context (what's normal for that person) matters as much as the number itself."
+      ],
+      "image": {
+        "asset": "vital-signs-pulse-points.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Two-panel diagram of a person's arm and neck. Left panel: close-up of a wrist showing the radial pulse location on the thumb side, with two fingers (index and middle) placed correctly, thumb clearly not used. Right panel: close-up of a neck showing the carotid pulse location in the groove beside the windpipe, two fingers placed on one side only. Label both pulse points. Clean medical-illustration style, neutral skin tone, no clutter.",
+        "alt": "Diagram showing correct hand position for checking a radial pulse at the wrist and a carotid pulse at the neck.",
+        "location": "public/images/units/vital-signs/"
+      }
+    },
+    {
+      "heading": "Respiratory rate: counting breaths",
+      "body": [
+        "Respiratory rate is the number of breaths (one full inhale plus one full exhale counts as one breath) taken per minute. A normal resting respiratory rate for a teenager is roughly 12-20 breaths per minute.",
+        "Count discreetly — if an athlete knows you're watching their breathing, they can unconsciously change it. A common trick is to keep your fingers on their pulse and watch their chest rise and fall out of the corner of your eye while you're 'still counting the pulse.'",
+        "Fast breathing right after a hard sprint is normal and should ease back toward a resting rate within a few minutes of stopping. Labored breathing is different and doesn't just settle down with rest: watch for gasping, visibly using neck or shoulder muscles to breathe, an inability to speak more than a word or two at a time, wheezing, or breathing that is both very fast and very shallow."
+      ]
+    },
+    {
+      "heading": "Skin signs: color, temperature, moisture",
+      "body": [
+        "Skin is an easy, fast vital sign because you can check it just by looking and touching the back of your hand to the athlete's skin. Three things to note: color, temperature, and moisture.",
+        "Pale, cool, and clammy (moist) skin usually means blood flow is being redirected away from the skin toward vital organs — a pattern seen in shock, fainting, and early heat exhaustion. Red, hot skin can point toward fever or heat illness, but be careful: as covered in the heat illness unit, an athlete with heat stroke can still be sweating heavily, so don't rule out a heat emergency just because the skin is wet.",
+        "A bluish or grayish tinge, especially around the lips or fingertips, is called cyanosis and signals the body isn't getting enough oxygen. This is always a red-flag finding, not a 'wait and see' one."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Compare to a known baseline",
+        "text": "If you can, compare the athlete's skin to your own hand or to a teammate's — some people naturally run cooler or paler than others. A sudden change from how that athlete normally looks is more meaningful than the raw description alone."
+      },
+      "image": {
+        "asset": "vital-signs-skin-signs-comparison.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-panel comparison illustration of a forearm and hand. Left panel labeled 'Pale, cool, clammy': skin shown pale with a light sheen of moisture, small water-droplet icons to indicate clamminess. Right panel labeled 'Red, hot, dry (or wet)': skin shown flushed/reddened with a small heat-wave icon; a small note icon indicating 'can also be sweaty.' Clean, simple medical-illustration style, no gore, labeled captions under each panel.",
+        "alt": "Side-by-side comparison of pale, cool, clammy skin versus red, hot skin, illustrating two different skin-sign patterns.",
+        "location": "public/images/units/vital-signs/"
+      }
+    },
+    {
+      "heading": "Capillary refill and temperature",
+      "body": [
+        "Capillary refill time checks how quickly blood returns to tissue. Press firmly on a fingernail (or toenail) until the nail bed turns pale, then release and count how many seconds it takes for normal color to return. Normal capillary refill is under 2 seconds. A refill that takes noticeably longer can point to poor circulation or shock and should be reported.",
+        "Normal body temperature sits in a range, roughly 97-99°F, with 98.6°F often used as the average. A temperature of 100.4°F or higher is generally treated as a fever. An athlete with a fever should not practice or compete — a fever means the body is already fighting something, raises the risk of heat illness and dehydration, and can mean the athlete is contagious."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "No thermometer handy?",
+        "text": "You can't get an exact number without a thermometer, but skin that feels distinctly hot to the back of your hand, combined with flushing, sweating, or the athlete reporting chills, is enough reason to pull them from activity and get an adult to check further."
+      }
+    },
+    {
+      "heading": "Blood pressure: what the two numbers mean",
+      "body": [
+        "Blood pressure is written as two numbers, like 118/76, and describes the force of blood pushing against artery walls. The top number (systolic) is the pressure when the heart contracts and pumps blood out. The bottom number (diastolic) is the pressure when the heart relaxes between beats and refills.",
+        "A general reference for teens is around 110-120 systolic over 70-80 diastolic, though normal varies by person, size, and activity level. Measuring blood pressure accurately requires a cuff (sphygmomanometer) and a stethoscope, and reading it correctly is a hands-on skill taught later in your training — this unit is about recognizing what the numbers mean when a trainer, coach, or EMT reports them to you, not about taking the measurement yourself.",
+        "One pattern worth knowing at this level: a low blood pressure paired with a fast, weak pulse and pale, clammy skin is a classic combination seen in shock — the body struggling to keep enough blood moving to vital organs."
+      ]
+    },
+    {
+      "heading": "When vitals mean 'activate the EAP'",
+      "body": [
+        "Every athletic program has an Emergency Action Plan (EAP) — a written, practiced plan spelling out who calls 911, who retrieves the AED (automated external defibrillator), and who directs EMS to the scene. Certain vital sign findings mean you stop checking and activate that plan immediately rather than continuing to monitor.",
+        "Vitals that mean emergency, not 'keep watching': no pulse found, not breathing normally (including only occasional gasping breaths, which is not effective breathing), a pulse or breathing rate that is rapidly climbing or dropping, skin suddenly turning pale, blue, or cold and clammy, and any loss of responsiveness."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Red flags — activate the EAP and call 911",
+        "text": "No pulse, no normal breathing (or only gasping), rapidly worsening vitals, sudden unresponsiveness, or bluish skin around the lips or fingertips are true emergencies. Do not wait to see if things improve on their own — activate your team's EAP, call 911, and start CPR/get the AED if you are trained and the athlete is unresponsive with no normal breathing."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A coach counts a resting athlete's pulse for 15 seconds and counts 18 beats. What is the heart rate, and is it in the normal teen range?",
+      "choices": [
+        "36 bpm — below normal",
+        "72 bpm — within the normal 60-100 bpm range",
+        "90 bpm — within the normal 60-100 bpm range",
+        "18 bpm — below normal"
+      ],
+      "answerIndex": 1,
+      "explanation": "15-second counts are multiplied by 4 to get beats per minute: 18 × 4 = 72 bpm, comfortably inside the normal resting range of 60-100 bpm for a teenager."
+    },
+    {
+      "id": "q2",
+      "question": "What is the correct way to check a carotid pulse?",
+      "choices": [
+        "Press firmly on both sides of the neck at once for a stronger signal",
+        "Use your thumb, which is more sensitive to pressure changes",
+        "Press gently with two fingers on one side of the neck only",
+        "Press directly on the front of the windpipe"
+      ],
+      "answerIndex": 2,
+      "explanation": "The carotid pulse is checked with light pressure from two fingers on one side of the neck at a time — pressing both sides at once can restrict blood flow to the brain. The thumb is avoided because it has its own faint pulse that can be mistaken for the patient's."
+    },
+    {
+      "id": "q3",
+      "question": "A well-conditioned distance runner has a resting pulse of 46 bpm and otherwise feels and looks completely normal. Is this worrying?",
+      "choices": [
+        "Yes — any pulse under 60 bpm is always an emergency",
+        "No — trained athletes often have lower resting heart rates because their hearts pump more blood per beat",
+        "Yes — it means the athlete is in shock",
+        "No — resting pulse has no normal range and can't be evaluated"
+      ],
+      "answerIndex": 1,
+      "explanation": "A low resting pulse in a fit, symptom-free athlete is a normal training adaptation, not a red flag — a stronger heart moves more blood with each beat and doesn't need to beat as often. Context (how the athlete looks and feels) matters alongside the number."
+    },
+    {
+      "id": "q4",
+      "question": "What is a typical normal resting respiratory rate for a teenager?",
+      "choices": [
+        "4-8 breaths per minute",
+        "12-20 breaths per minute",
+        "30-40 breaths per minute",
+        "50-60 breaths per minute"
+      ],
+      "answerIndex": 1,
+      "explanation": "12-20 breaths per minute is the typical resting range for a teenager. Rates far outside that range, especially with other signs of distress, need attention."
+    },
+    {
+      "id": "q5",
+      "question": "An athlete sits out after a hard play, breathing 30 times a minute, visibly using her neck muscles to pull in air, and can only get out one word at a time. Five minutes of rest hasn't changed anything. What does this most likely represent?",
+      "choices": [
+        "Normal recovery breathing after exertion — give her a few more minutes",
+        "Labored breathing that isn't resolving with rest, which needs to be reported to a supervising adult",
+        "A normal respiratory rate that doesn't need any follow-up",
+        "Hyperventilation from nervousness, which should be ignored"
+      ],
+      "answerIndex": 1,
+      "explanation": "Simple post-exertion breathlessness eases within a few minutes of stopping. Using accessory neck muscles, an inability to speak in full sentences, and no improvement with rest are signs of labored breathing that need to be reported, not waited out."
+    },
+    {
+      "id": "q6",
+      "question": "An athlete's skin is pale, cool, and clammy. What does this pattern most often suggest?",
+      "choices": [
+        "The athlete is simply cold from the weather and needs a jacket",
+        "This is a normal finding that needs no follow-up",
+        "Blood flow is being redirected away from the skin, as seen in shock, fainting, or heat exhaustion",
+        "The athlete has a high fever"
+      ],
+      "answerIndex": 2,
+      "explanation": "Pale, cool, clammy skin reflects blood being shunted away from the skin toward vital organs, a pattern seen in shock, fainting, and early heat exhaustion. A fever more typically produces red, hot skin, not pale and cool skin."
+    },
+    {
+      "id": "q7",
+      "question": "In a blood pressure reading of 118/76, what does the top number (118) represent?",
+      "choices": [
+        "Diastolic pressure — the pressure when the heart relaxes between beats",
+        "Heart rate in beats per minute",
+        "Systolic pressure — the pressure when the heart contracts and pumps blood out",
+        "Body temperature converted to a pressure scale"
+      ],
+      "answerIndex": 2,
+      "explanation": "The top number is systolic pressure, measured when the heart contracts and pushes blood out. The bottom number (diastolic) is the pressure during the heart's relaxation phase between beats."
+    },
+    {
+      "id": "q8",
+      "question": "You check an unresponsive athlete and find no pulse and no normal breathing — just occasional gasps. What should you do first?",
+      "choices": [
+        "Keep monitoring for another minute to see if breathing improves on its own",
+        "Check blood pressure to confirm before doing anything else",
+        "Activate the EAP — call 911, get the AED, and begin CPR if trained",
+        "Wait for the athlete to become responsive before acting"
+      ],
+      "answerIndex": 2,
+      "explanation": "No pulse and no normal breathing (occasional gasping is not effective breathing) is a true emergency — activate the Emergency Action Plan immediately: call 911, get the AED, and start CPR if you're trained. Don't wait or spend time on other measurements first."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Vital signs",
+      "back": "The core measurements — pulse, respiratory rate, skin signs, temperature, blood pressure — that show how the body's essential systems are functioning right now."
+    },
+    {
+      "id": "f2",
+      "front": "Normal resting heart rate for teens",
+      "back": "About 60-100 beats per minute (bpm). Conditioned athletes are often lower (40s-50s) and that's normal for them."
+    },
+    {
+      "id": "f3",
+      "front": "How to count a pulse",
+      "back": "Count beats for 15 seconds, then multiply by 4 to get beats per minute."
+    },
+    {
+      "id": "f4",
+      "front": "Manual pulse check points",
+      "back": "Radial (thumb side of the wrist) and carotid (side of the neck beside the windpipe). Use index/middle fingers, never the thumb; press only one carotid side at a time."
+    },
+    {
+      "id": "f5",
+      "front": "Why trained athletes have a lower resting pulse",
+      "back": "A stronger, more efficient heart pumps more blood per beat, so it needs fewer beats per minute to move the same amount of blood."
+    },
+    {
+      "id": "f6",
+      "front": "Normal resting respiratory rate for teens",
+      "back": "About 12-20 breaths per minute (one inhale + one exhale = one breath)."
+    },
+    {
+      "id": "f7",
+      "front": "Signs of labored breathing",
+      "back": "Gasping, using neck/shoulder muscles to breathe, unable to speak full sentences, wheezing, or breathing that stays fast and shallow instead of settling with rest."
+    },
+    {
+      "id": "f8",
+      "front": "Pale, cool, clammy skin",
+      "back": "Suggests blood flow redirected away from the skin — seen in shock, fainting, and early heat exhaustion."
+    },
+    {
+      "id": "f9",
+      "front": "Cyanosis",
+      "back": "A bluish or grayish tinge to the skin, especially lips or fingertips, signaling the body isn't getting enough oxygen — always a red flag."
+    },
+    {
+      "id": "f10",
+      "front": "Capillary refill time (normal)",
+      "back": "Press a nail bed pale, release, and time the color's return — normal is under 2 seconds. Slower suggests poor circulation."
+    },
+    {
+      "id": "f11",
+      "front": "Normal body temperature & fever threshold",
+      "back": "Normal is roughly 97-99°F (average ~98.6°F). 100.4°F or higher is treated as a fever — no practice or competition with a fever."
+    },
+    {
+      "id": "f12",
+      "front": "Blood pressure numbers",
+      "back": "Systolic (top) = pressure when the heart contracts and pumps. Diastolic (bottom) = pressure when the heart relaxes between beats."
+    }
+  ]
+}

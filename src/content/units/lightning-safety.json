@@ -1,0 +1,261 @@
+{
+  "id": "lightning-safety",
+  "title": "Lightning Safety for Outdoor Sports",
+  "category": "Environmental Emergencies",
+  "strand": "lightning-safety",
+  "gradeBand": "9-10",
+  "summary": "Know why lightning is a real threat before the storm arrives overhead, how the evacuation call gets made, and why the 30-minute reset rule exists.",
+  "minutes": 18,
+  "standards": ["CTE.HSMT.Anchor.6", "CTE.HSMT.B.1.0", "CTE.HSMT.Anchor.5"],
+  "sections": [
+    {
+      "heading": "Why lightning threatens outdoor athletes",
+      "body": [
+        "Lightning is one of the top storm-related killers in the United States, and outdoor sports venues are some of the worst places to be caught in it: open fields with no cover, metal bleachers, and tall metal goalposts and light poles that can act like lightning rods. A crowded field or sideline is exactly the kind of exposed, elevated-risk-object environment lightning finds.",
+        "The most dangerous myth is that the storm has to be overhead, or that it has to be raining, for lightning to be a threat. Lightning can strike as far as 10 miles ahead of a storm's leading edge — often out of a clear-looking sky, well before any rain or dark clouds arrive, and sometimes after the rain has already stopped. Waiting for rain, or waiting for the sky to look threatening, waits too long."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "\"Heard thunder\" is the trigger, not \"felt rain\"",
+        "text": "Thunder is the sound of lightning. If you can hear thunder, you are within range of a strike — full stop. You do not need to see the lightning itself or feel any rain to act."
+      }
+    },
+    {
+      "heading": "Who makes the call — and how",
+      "body": [
+        "A venue's Emergency Action Plan (EAP) — the written, practiced plan covering exactly what happens in a medical or weather emergency at that specific field or venue — should name a designated weather watcher for every outdoor practice and competition. This is a specific person, by title, whose only job during that window is tracking the sky and the forecast, not coaching or officiating at the same time.",
+        "Most programs today rely on a lightning detection app or subscription weather-alert service that tracks strikes in real time and pushes a warning when lightning enters a set radius of the venue. This is the primary method because it's faster and more consistent than a human trying to time flashes.",
+        "The backup method — useful when there's no detection service, or as a quick manual check — is the flash-to-bang count: the moment you see a lightning flash, start counting seconds until you hear the thunder that goes with it, then divide by 5. That gives you the storm's distance in miles (sound travels roughly one mile every 5 seconds). A flash-to-bang count of 30 seconds or less means the storm is within about 6 miles — time to stop and evacuate."
+      ],
+      "image": {
+        "asset": "lightning-safety-flash-to-bang-count.webp",
+        "ratio": "16:9",
+        "background": "transparent",
+        "description": "Simple infographic showing a lightning bolt on the left and a stick-figure athlete on a field on the right, with a stopwatch icon between them counting seconds. Below, a labeled formula: 'seconds counted ÷ 5 = distance in miles.' Include a small callout box reading '30 seconds or less = time to evacuate.' Clean flat infographic style, no photorealism.",
+        "alt": "Infographic explaining the flash-to-bang method: count seconds from lightning flash to thunder, divide by 5 for distance in miles, and evacuate at 30 seconds or less.",
+        "location": "public/images/units/lightning-safety/"
+      }
+    },
+    {
+      "heading": "The evacuation rule: when thunder roars, go indoors",
+      "body": [
+        "The rule is simple and has no exceptions: at the first sign of lightning or the first sound of thunder, everyone leaves the field for safe shelter immediately. Not after the current play finishes, not after the set ends, not after the coach checks the radar one more time. Practice or play does not resume until the storm has genuinely cleared the area.",
+        "A safe shelter is one of two things: a substantial building with four solid walls, a roof, and wiring/plumbing (a school building, field house, or similar — not an open-sided structure), or a fully enclosed vehicle with a hard metal roof and the windows rolled up, like a bus or a car. In a proper vehicle shelter, it's the metal frame conducting a strike safely around the outside and into the ground — not the tires — so the windows-up, doors-closed part matters."
+      ],
+      "list": [
+        "Safe: a school gym, locker room, or field house.",
+        "Safe: a hard-topped car, van, or bus with the windows up.",
+        "Not safe: convertibles, golf carts, and other open or soft-top vehicles — they don't have the enclosed metal shell that makes a car safe."
+      ]
+    },
+    {
+      "heading": "What is NOT safe shelter",
+      "body": [
+        "A lot of structures found around athletic venues look like shelter but are not, because they're open-sided, ungrounded, or simply not built to handle a strike. Knowing this list matters as much as knowing the good options — a team that \"takes shelter\" in the wrong place has done nothing to reduce its risk."
+      ],
+      "list": [
+        "Dugouts and open-sided sheds — no walls to route a strike safely around you.",
+        "Tents and canopies — fabric offers zero protection.",
+        "Picnic shelters and pavilions — open-sided by design.",
+        "Under a tree — trees are frequently struck, and a strike can jump (\"side flash\") from the trunk to anyone standing near it.",
+        "Open water — pools, lakes, and ponds conduct electricity across the entire surface; get out and away from the water immediately.",
+        "Staying on the field to \"finish the drill\" or \"just get one more rep\" — this is the single most common way athletes get struck, because it trades a few extra minutes for real risk."
+      ],
+      "image": {
+        "asset": "lightning-safety-safe-vs-unsafe-shelter.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Split comparison illustration. Left side labeled 'SAFE' shows a solid-walled brick school building and a hard-topped car with windows up, both with a small green check icon. Right side labeled 'NOT SAFE' shows a dugout, a picnic pavilion, a lone tree, and an open pool, each with a small red X icon. Clean flat infographic style, side-by-side layout.",
+        "alt": "Comparison graphic of safe lightning shelters (enclosed buildings, hard-topped vehicles) versus unsafe locations (dugouts, pavilions, trees, open water).",
+        "location": "public/images/units/lightning-safety/"
+      }
+    },
+    {
+      "heading": "The 30-minute reset rule",
+      "body": [
+        "After the last observed flash of lightning or clap of thunder, everyone stays in shelter for a full 30 minutes before returning to play. This isn't arbitrary — storm cells can seem to pass and then circle back, and a gap of quiet sky doesn't mean the lightning risk is actually gone.",
+        "Here's the part that trips teams up: if a new flash or thunder is seen or heard at minute 25 of the wait, the clock resets back to 30 minutes from that new event. A storm that keeps producing occasional strikes can push the safe return time back again and again — and that's the system working correctly, not a glitch to override."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Restarting early is the classic mistake",
+        "text": "Every season, teams get struck by a \"second round\" of lightning because someone restarted practice or a game after only 10 or 15 minutes of quiet sky, assuming the storm had moved on. The 30-minute count is not a suggestion — treat it the same way you'd treat a hard stop-play rule, because it is one."
+      }
+    },
+    {
+      "heading": "If someone is struck",
+      "body": [
+        "A person struck by lightning does NOT retain any electrical charge — they are completely safe to touch immediately. This matters because hesitation to approach a struck athlete costs time they may not have.",
+        "The response: get everyone to safety first (a second strike in the same area is possible), call 911, and activate the venue's EAP — the same written response plan covered in the Emergency Action Plans & CPR/AED Awareness unit, which walks through checking responsiveness and breathing, starting hands-only CPR, and using an AED. This lesson does not re-teach that technique here; know that lightning strikes can stop the heart's normal rhythm, so be ready for CPR/AED exactly as that plan describes.",
+        "One detail specific to lightning: if multiple people are struck at once, responders check the ones who look worst — unresponsive, not breathing — first, not last. Unlike most emergencies, an unresponsive strike victim who gets immediate CPR has a strong chance of recovery, while someone who is dazed but breathing on their own can usually wait a few minutes for help."
+      ]
+    },
+    {
+      "heading": "Who has the authority to stop play",
+      "body": [
+        "Every rule in this lesson only works if one specific person has the standing authority to suspend play and send everyone to shelter — and everyone else has agreed in advance to listen. That person is usually named in the EAP: the athletic trainer, a game official, or another designated adult, not \"whoever notices first and speaks up loudest.\"",
+        "This matters because the pressure to keep playing is real and predictable. Athletes want to finish the game. Coaches don't want to lose momentum or a championship rep. Parents in the stands want to see the ending. None of that changes the physics of a lightning strike, and none of it should be allowed to override the weather call in the moment. A plan that names the authority ahead of time — in writing, before any storm is on the radar — takes that decision out of a live argument on the sideline and turns it into something that just happens."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "How far ahead of a storm's rain and dark clouds can lightning strike?",
+      "choices": [
+        "Only during the heaviest part of the rain",
+        "As far as 10 miles ahead of the storm, sometimes from a clear-looking sky",
+        "Lightning never strikes before the rain arrives",
+        "About 100 yards ahead of the leading edge"
+      ],
+      "answerIndex": 1,
+      "explanation": "Lightning can strike up to about 10 miles ahead of a storm's visible edge, often before any rain falls. Waiting for rain or dark skies to decide it's time to evacuate waits far too long."
+    },
+    {
+      "id": "q2",
+      "question": "The sky overhead is still blue, but you hear distant thunder. What should happen?",
+      "choices": [
+        "Evacuate to safe shelter immediately — hearing thunder means you're in range of a strike",
+        "Keep playing until rain actually starts",
+        "Send one player to check the radar app before deciding",
+        "Only stop if lightning is actually visible"
+      ],
+      "answerIndex": 0,
+      "explanation": "Thunder is the sound of lightning — if you can hear it, you're close enough to be at risk, regardless of what the sky overhead looks like. \"When thunder roars, go indoors\" doesn't wait for rain or a visible bolt."
+    },
+    {
+      "id": "q3",
+      "question": "You see a flash of lightning and count 20 seconds before hearing the thunder. Roughly how far away is the storm, and what should you do?",
+      "choices": [
+        "20 miles away; no action needed yet",
+        "About 4 miles away; this is within the evacuate threshold, so take shelter now",
+        "20 miles away; wait until the count drops to 5 seconds",
+        "The flash-to-bang count only works with a stopwatch app, not manual counting"
+      ],
+      "answerIndex": 1,
+      "explanation": "Divide the counted seconds by 5 (sound travels about a mile every 5 seconds): 20 ÷ 5 = about 4 miles. That's well within the 30-second/6-mile evacuation threshold, so shelter should already be underway."
+    },
+    {
+      "id": "q4",
+      "question": "During a delay, a team gathers in the dugout to wait out a storm. Is this safe shelter?",
+      "choices": [
+        "Yes, as long as everyone stays seated",
+        "Yes, because it has a roof",
+        "Only safe if the storm is more than 6 miles away",
+        "No — a dugout is open-sided and offers no real protection from a strike"
+      ],
+      "answerIndex": 3,
+      "explanation": "A dugout is open-sided, so it does nothing to route a strike safely away from the people inside. Safe shelter means a fully enclosed building or a hard-topped, fully enclosed vehicle with the windows up — not any roofed structure."
+    },
+    {
+      "id": "q5",
+      "question": "The last thunder was heard 22 minutes ago, but a new rumble of thunder is heard right now. What happens to the 30-minute wait?",
+      "choices": [
+        "The clock resets — the 30 minutes now starts over from this new thunder",
+        "Nothing changes — the original 30-minute clock keeps running",
+        "The wait ends immediately since 22 minutes have already passed",
+        "The wait is cut in half to 15 minutes for a second event"
+      ],
+      "answerIndex": 0,
+      "explanation": "Any new flash or thunder during the wait resets the 30-minute clock back to zero. Storms can circle back, so a quiet stretch doesn't guarantee the risk has actually passed — this is why restarting early on the original countdown is such a common mistake."
+    },
+    {
+      "id": "q6",
+      "question": "A teammate is struck by lightning and collapses. Is it safe to touch and help them right away?",
+      "choices": [
+        "No — wait several minutes for any charge to dissipate before touching them",
+        "Yes — a struck person does not retain any electrical charge and is safe to touch immediately",
+        "Only a trained adult can safely approach a struck person",
+        "Only if it has stopped thundering"
+      ],
+      "answerIndex": 1,
+      "explanation": "The human body does not store or hold an electrical charge after a strike, so there is no delay needed before helping. The real priority is moving everyone to safety first (a second strike nearby is possible), then calling 911 and starting the EAP."
+    },
+    {
+      "id": "q7",
+      "question": "A coach wants to finish one more rep after thunder is heard, arguing the storm still looks far away. What is the correct response, according to the EAP?",
+      "choices": [
+        "Let the coach make the call — they know the team's schedule best",
+        "Take a team vote on whether to keep playing",
+        "Continue until an official visible flash is seen, not just thunder",
+        "The designated authority named in the EAP suspends play immediately; the decision isn't up for debate in the moment"
+      ],
+      "answerIndex": 3,
+      "explanation": "The EAP names a specific person with authority to stop play (often the athletic trainer or a game official) precisely so this decision doesn't become a live argument under pressure. Hearing thunder is itself the trigger — there's no wait for lightning to look close."
+    },
+    {
+      "id": "q8",
+      "question": "During a lightning delay with several people struck at once, how should rescuers prioritize care?",
+      "choices": [
+        "Treat the ones who are awake and talking first, since they need reassurance",
+        "Treat whoever was struck first, in the order it happened",
+        "Check the unresponsive, not-breathing victims first — they have a strong chance of recovery with immediate CPR",
+        "Wait for EMS to arrive before touching anyone, since multiple victims makes it too risky"
+      ],
+      "answerIndex": 2,
+      "explanation": "Lightning response reverses the usual instinct: victims who look worst (unresponsive, not breathing) are checked first, because immediate CPR gives them a strong chance of recovery, while dazed-but-breathing victims can typically wait a few minutes. Delaying care for anyone by waiting on EMS costs the window that matters most."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "How far can lightning strike ahead of a storm?",
+      "back": "Up to about 10 miles ahead of the storm's rain and dark clouds — often from a clear-looking sky."
+    },
+    {
+      "id": "f2",
+      "front": "\"When thunder roars, go indoors\"",
+      "back": "The evacuation trigger is hearing thunder or seeing lightning — not waiting for rain or a threatening-looking sky."
+    },
+    {
+      "id": "f3",
+      "front": "Weather watcher",
+      "back": "A person named in the EAP whose only job during practice/competition is monitoring the sky and forecast — not coaching or officiating at the same time."
+    },
+    {
+      "id": "f4",
+      "front": "Flash-to-bang count",
+      "back": "Count seconds from seeing a lightning flash to hearing its thunder, divide by 5 for distance in miles. 30 seconds or less (about 6 miles) means evacuate."
+    },
+    {
+      "id": "f5",
+      "front": "Safe lightning shelter",
+      "back": "A substantial fully enclosed building (four walls, roof, wiring/plumbing) OR a fully enclosed, hard-topped vehicle with windows up."
+    },
+    {
+      "id": "f6",
+      "front": "NOT safe shelter",
+      "back": "Dugouts, tents, picnic pavilions, open-sided structures, trees, open water, and convertibles/golf carts — none of these protect from a strike."
+    },
+    {
+      "id": "f7",
+      "front": "30-minute reset rule",
+      "back": "Wait 30 minutes after the last observed flash or thunder before returning to play. Any new flash/thunder during the wait resets the clock to 30 minutes again."
+    },
+    {
+      "id": "f8",
+      "front": "Classic lightning-safety mistake",
+      "back": "Restarting play too early — after only a short quiet stretch — before the full 30-minute reset window has passed."
+    },
+    {
+      "id": "f9",
+      "front": "Is a struck person safe to touch?",
+      "back": "Yes, immediately — a struck person does not retain any electrical charge."
+    },
+    {
+      "id": "f10",
+      "front": "If someone is struck by lightning",
+      "back": "Move everyone to safety, call 911, activate the venue's EAP, and be ready for CPR/AED (see the Emergency Action Plans unit for technique)."
+    },
+    {
+      "id": "f11",
+      "front": "Multiple lightning victims: who to check first",
+      "back": "Check unresponsive/not-breathing victims first — immediate CPR gives them a strong recovery chance, while dazed-but-breathing victims can usually wait briefly."
+    },
+    {
+      "id": "f12",
+      "front": "Authority to stop play",
+      "back": "The EAP must name one specific person with standing authority to suspend play for lightning — decided in writing ahead of time, not argued in the moment."
+    }
+  ]
+}

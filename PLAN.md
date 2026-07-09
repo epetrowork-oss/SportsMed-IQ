@@ -453,8 +453,8 @@ categories keep their names exactly).
 
 | # | Strand | Category | 9-10 | 7-8 | 11-12 |
 |---|---|---|---|---|---|
-| 1 | injury-evaluation | Assessment & Clinical Skills | | | |
-| 2 | vital-signs | Assessment & Clinical Skills | | | |
+| 1 | injury-evaluation | Assessment & Clinical Skills | x | | |
+| 2 | vital-signs | Assessment & Clinical Skills | x | | |
 | 3 | medical-terminology | Assessment & Clinical Skills | | | |
 | 4 | anatomy-foundations | Assessment & Clinical Skills | | | |
 | 5 | therapeutic-modalities | Assessment & Clinical Skills | | | |
@@ -462,7 +462,7 @@ categories keep their names exactly).
 | 7 | splinting-immobilization | Assessment & Clinical Skills | | | |
 | 8 | documentation-recordkeeping | Assessment & Clinical Skills | | | |
 | 9 | kinesiology-movement | Assessment & Clinical Skills | | | |
-| 10 | cardiac-conditions | Medical Conditions & Special Populations | | | |
+| 10 | cardiac-conditions | Medical Conditions & Special Populations | x | | |
 | 11 | asthma-respiratory | Medical Conditions & Special Populations | | | |
 | 12 | diabetes-athletes | Medical Conditions & Special Populations | | | |
 | 13 | seizure-disorders | Medical Conditions & Special Populations | | | |
@@ -473,16 +473,16 @@ categories keep their names exactly).
 | 18 | adaptive-athletes | Medical Conditions & Special Populations | | | |
 | 19 | growth-development | Medical Conditions & Special Populations | | | |
 | 20 | medication-safety | Medical Conditions & Special Populations | | | |
-| 21 | spine-injuries | Head & Spine Injuries | | | |
+| 21 | spine-injuries | Head & Spine Injuries | x | | |
 | 22 | hip-pelvis-injuries | Lower Extremity Injuries | | | |
 | 23 | foot-conditions | Lower Extremity Injuries | | | |
 | 24 | elbow-forearm-injuries | Upper Extremity Injuries | | | |
 | 25 | wrist-hand-injuries | Upper Extremity Injuries | | | |
 | 26 | chest-abdominal-injuries | Acute Care & First Aid | | | |
 | 27 | shock-recognition | Acute Care & First Aid | | | |
-| 28 | lightning-safety | Environmental Emergencies | | | |
+| 28 | lightning-safety | Environmental Emergencies | x | | |
 | 29 | air-quality | Environmental Emergencies | | | |
-| 30 | strength-conditioning | Prevention & Performance | | | |
+| 30 | strength-conditioning | Prevention & Performance | x | | |
 | 31 | sleep-recovery | Prevention & Performance | | | |
 | 32 | supplements-banned-substances | Prevention & Performance | | | |
 | 33 | protective-equipment | Prevention & Performance | | | |
@@ -491,9 +491,19 @@ categories keep their names exactly).
 | 36 | sports-medicine-team | The Sports Medicine Profession | | | |
 
 Batch log (mark `x` in the table as units land):
-- [ ] Batch 1 (9-10): cardiac-conditions, spine-injuries,
+- [x] Batch 1 (9-10): cardiac-conditions, spine-injuries,
       injury-evaluation, vital-signs, strength-conditioning,
-      lightning-safety — launched Thu Jul 9.
+      lightning-safety — all validator-clean with zero warnings.
+      Orchestrator read the safety-critical sections word-for-word
+      (cardiac collapse response, spine cardinal rule, lightning strike
+      response incl. reverse triage) and fixed one garbled sentence in
+      spine-injuries' cardinal-rule section. Browser-verified in the
+      built app: 60 units, 18/24/18 grade split, both new categories
+      render, all six units' lesson/quiz/flashcards/standards line work,
+      zero console errors.
+- [ ] Batch 2 (9-10, medical-emergency cluster): asthma-respiratory,
+      diabetes-athletes, allergies-anaphylaxis, sickle-cell-trait,
+      seizure-disorders, shock-recognition — launched Thu Jul 9.
 
 Band judgment note: a few profession/clinical strands may not merit a
 real `7-8` unit (e.g. documentation-recordkeeping, legal-ethical-issues)

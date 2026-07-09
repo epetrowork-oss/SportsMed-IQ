@@ -1,0 +1,270 @@
+{
+  "id": "injury-evaluation",
+  "title": "Evaluating an Injury: HOPS & the Basics",
+  "category": "Assessment & Clinical Skills",
+  "strand": "injury-evaluation",
+  "gradeBand": "9-10",
+  "summary": "Learn how athletic trainers systematically evaluate an on-field injury — life threats first, then History, Observation, Palpation, and Special tests — and exactly where a student aide's role begins and ends.",
+  "minutes": 18,
+  "standards": ["CTE.HSMT.B.4.5", "CTE.HSMT.B.5.0", "CTE.HSMT.Anchor.2", "CTE.HSMT.Anchor.6"],
+  "sections": [
+    {
+      "heading": "Your role: recognize, gather, report",
+      "body": [
+        "When an athlete goes down, it can be tempting to guess what's wrong or tell them it's 'probably nothing.' A good evaluator does neither — they follow a system, every time, so nothing important gets missed.",
+        "As a student aide, your job in that system is specific: recognize that something is wrong, gather information the same way every time, and report it clearly to the athletic trainer. You are not there to figure out the diagnosis or decide whether the athlete can keep playing."
+      ],
+      "list": [
+        "Do: observe carefully, ask clear questions, feel for tenderness, and report exactly what you find.",
+        "Do: stay calm and keep the athlete calm — how you act affects how they answer.",
+        "Don't: diagnose the injury, guess how serious it is out loud, or tell an athlete they're cleared to return to play. Those calls belong to the athletic trainer or a physician."
+      ]
+    },
+    {
+      "heading": "Primary survey: life threats before limb threats",
+      "body": [
+        "Before you evaluate the injury itself, you evaluate the athlete. This quick first check is called the primary survey, and it always comes before anything else — including the HOPS steps you'll learn next.",
+        "The primary survey answers one question: is there anything here that could be a threat to life, not just to a limb? Only once that's answered 'no' do you move on to evaluating the specific injury."
+      ],
+      "list": [
+        "Responsiveness — is the athlete alert and able to answer you?",
+        "Breathing — is it present and normal, not gasping, absent, or severely labored?",
+        "Severe bleeding — is there uncontrolled bleeding that needs direct pressure right now?"
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Red flags — stop and get the athletic trainer immediately",
+        "text": "If the athlete is unresponsive, not breathing normally, bleeding severely, or you suspect a head, neck, or spine injury (for example, a hard hit followed by neck pain, numbness, or tingling), stop the evaluation, do not move them, and get the athletic trainer or call 911 immediately. This overrides everything else in this lesson."
+      },
+      "image": {
+        "asset": "injury-eval-primary-survey-check.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "A student athletic trainer kneeling beside an athlete who is lying on a turf field after a collision, checking for responsiveness by speaking to them and gently tapping their shoulder while visually checking their chest for breathing. Show a calm, methodical posture — not rushed or panicked. Simple sideline-illustration style, no blood or graphic injury visible.",
+        "alt": "A student aide kneeling beside a downed athlete, checking responsiveness and breathing during the primary survey.",
+        "location": "public/images/units/injury-evaluation/"
+      }
+    },
+    {
+      "heading": "History — the H in HOPS",
+      "body": [
+        "Once you've confirmed there's no life threat, the actual injury evaluation follows a framework called HOPS: History, Observation, Palpation, Special tests. It's done in that order for a reason — you gather the story before you touch anything, and you look before you feel.",
+        "History means asking the athlete what happened, in their own words. What they tell you often points straight at what structure is hurt, so the same core questions get asked every time."
+      ],
+      "list": [
+        "\"What happened?\" — the mechanism of injury: did they plant and twist, get hit, land awkwardly, overextend a joint?",
+        "\"Did you feel or hear anything?\" — a pop, a snap, a tearing feeling.",
+        "\"Where exactly does it hurt?\" — have them point with one finger if they can, not just wave at the general area.",
+        "\"Has this happened before?\" — a repeat injury to the same spot changes how the athletic trainer thinks about it."
+      ]
+    },
+    {
+      "heading": "Observation — the O in HOPS",
+      "body": [
+        "Observation means looking carefully before you ever touch the injured area. A lot of useful information is visible without laying a hand on the athlete.",
+        "Watch for how the athlete is protecting the area, too. When someone limits or guards movement of an injured body part — even without realizing they're doing it — that's called guarding, and it's a real finding worth reporting, not just nervousness."
+      ],
+      "list": [
+        "Swelling — how much, and how quickly did it come on?",
+        "Deformity — does the limb or joint look out of its normal shape or alignment?",
+        "Discoloration — redness or bruising, and where?",
+        "Movement — is the athlete guarding the area, limping, or refusing to bear weight?"
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Compare to the uninjured side",
+        "text": "Every athlete's body is a little different — some ankles are naturally puffier than others, some knees sit slightly differently. The only reliable way to know if what you're seeing is actually abnormal is to compare it, side by side, to the same spot on the uninjured limb. Make this a habit in every HOPS step, not just Observation."
+      },
+      "image": {
+        "asset": "injury-eval-bilateral-comparison.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Close-up of both of an athlete's ankles placed side by side for comparison, one visibly swollen and slightly discolored, the other normal. Include a simple visual indicator (like a subtle outline or size difference) drawing attention to the swelling on the injured side. Clean, neutral sideline-illustration style, no distressing detail.",
+        "alt": "Side-by-side comparison of an athlete's injured and uninjured ankle, showing visible swelling on the injured side.",
+        "location": "public/images/units/injury-evaluation/"
+      }
+    },
+    {
+      "heading": "Palpation — the P in HOPS",
+      "body": [
+        "Palpation is the hands-on part of the evaluation: gently and systematically feeling the area with your fingers, not pressing hard or poking around randomly.",
+        "What you're feeling for is point tenderness — pain the athlete reports at one specific, localized spot when you press on it. That's different from general soreness spread across a whole limb, and it's one of the most useful findings you can report.",
+        "Work systematically: start away from where it hurts most and move toward it, watch the athlete's face (not just listen to their words) for a wince, and always check the same spot on the uninjured side for comparison."
+      ]
+    },
+    {
+      "heading": "Special tests — the S in HOPS",
+      "body": [
+        "Special tests are specific, hands-on stress and movement tests used to check the integrity of one particular structure — a ligament, a tendon, a joint capsule. There are many different named special tests, each designed for a specific joint and a specific suspected injury.",
+        "This is where a student aide's role in the evaluation stops. Special tests take training to perform correctly and to interpret safely, and doing one wrong on an already-injured joint can make things worse. Your job is to gather clean History, Observation, and Palpation findings and report them — the athletic trainer or another qualified clinician decides which special tests, if any, are needed and performs them."
+      ]
+    },
+    {
+      "heading": "Documentation: what gets written down, and why",
+      "body": [
+        "As soon as it's practical, findings from an evaluation get written down: the date and time, the mechanism of injury, what the athlete said in their own words, what you observed and felt, and who was notified.",
+        "This record matters even though a student aide isn't making the diagnosis. It gives the athletic trainer an accurate account to work from, creates a timeline if the injury is reevaluated later, and supports whatever care decisions come next. A clear written report is part of your job the same way asking good History questions is — it's information gathering, not diagnosis."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Which four steps make up the HOPS framework used to evaluate a sports injury?",
+      "choices": [
+        "History, Observation, Palpation, Special tests",
+        "Heat, Oxygen, Pressure, Support",
+        "History, Outcome, Prognosis, Surgery",
+        "Hydration, Observation, Prevention, Stretching"
+      ],
+      "answerIndex": 0,
+      "explanation": "HOPS is the standard order for evaluating an injury: gather the story (History), look (Observation), feel (Palpation), then hands-on tests performed by the athletic trainer or clinician (Special tests). The other choices reuse similar-sounding letters but aren't the framework."
+    },
+    {
+      "id": "q2",
+      "question": "An athlete goes down hard during a play and isn't moving. Before you do anything else — including HOPS — what comes first?",
+      "choices": [
+        "Ask what hurts the most",
+        "Check for swelling or deformity",
+        "Palpate the injured area for tenderness",
+        "Check responsiveness and breathing — rule out life threats first"
+      ],
+      "answerIndex": 3,
+      "explanation": "This is the primary survey: life threats before limb threats. Before you start gathering History or looking at the injury site, confirm the athlete is responsive and breathing normally. HOPS only starts once those basics are confirmed safe."
+    },
+    {
+      "id": "q3",
+      "question": "A soccer player limps off holding her knee after a collision. As you start History, what's one of the first things to ask?",
+      "choices": [
+        "Do you think you'll need surgery?",
+        "Can you just walk it off?",
+        "What happened — did you plant and twist, or get hit?",
+        "Have you ever been on crutches before?"
+      ],
+      "answerIndex": 2,
+      "explanation": "History starts with the mechanism of injury — what actually happened. Knowing whether the knee was twisted, hit directly, or hyperextended tells the athletic trainer what structures were likely stressed. Asking if she 'thinks' she needs surgery or telling her to walk it off isn't gathering information — it's guessing or minimizing, which isn't the student aide's job."
+    },
+    {
+      "id": "q4",
+      "question": "What does \"point tenderness\" mean?",
+      "choices": [
+        "Soreness spread across the entire limb",
+        "Pain reproduced at one specific, localized spot when it's pressed",
+        "Pain that only appears during a special test",
+        "A bruise visible on the skin"
+      ],
+      "answerIndex": 1,
+      "explanation": "Point tenderness is pain at one precise spot when you press on it — a key finding during palpation. It's different from general soreness, which is spread out and less specific, and it's not the same thing as a visible bruise."
+    },
+    {
+      "id": "q5",
+      "question": "You're observing a swollen knee on the sideline. What's the best way to judge whether the swelling is actually significant?",
+      "choices": [
+        "Compare it to the uninjured knee, side by side",
+        "Ask the athlete to rate it on a 1-10 scale",
+        "Estimate based on how tight their shorts look",
+        "Wait until after practice to check again"
+      ],
+      "answerIndex": 0,
+      "explanation": "Comparing to the uninjured side is a core habit in every HOPS step — it's the only reliable baseline for 'normal' on that specific athlete. A pain-scale guess or visual estimate without a comparison is far less reliable, and waiting delays getting the athletic trainer the information they need."
+    },
+    {
+      "id": "q6",
+      "question": "While palpating an ankle, you find clear point tenderness directly over the bone at the tip of the ankle. What should you do?",
+      "choices": [
+        "Perform a stress test to check the ligament yourself",
+        "Tell the athlete it's probably just a sprain",
+        "Report the exact location and finding to the athletic trainer",
+        "Have the athlete try to run on it to see how bad it is"
+      ],
+      "answerIndex": 2,
+      "explanation": "Bony point tenderness is an important finding to get to the athletic trainer right away. A student aide reports findings — they don't perform special tests, diagnose ('probably just a sprain'), or test the injury further by having the athlete move on it."
+    },
+    {
+      "id": "q7",
+      "question": "Who actually performs special tests during a full injury evaluation?",
+      "choices": [
+        "The student aide, right after palpation",
+        "The injured athlete, testing their own range of motion",
+        "A teammate who has seen it done before",
+        "The athletic trainer or another qualified clinician"
+      ],
+      "answerIndex": 3,
+      "explanation": "Special tests are specific, hands-on stress and movement tests that take training to perform and interpret safely. A student aide's evaluation role stops after History, Observation, and Palpation — special tests belong to the athletic trainer or clinician."
+    },
+    {
+      "id": "q8",
+      "question": "Why does a student aide write down what they observed and heard from the athlete, even though they aren't making the diagnosis?",
+      "choices": [
+        "Because writing it down replaces telling the athletic trainer in person",
+        "Because an accurate written record helps the athletic trainer track the injury and informs ongoing care",
+        "Because it's required before the athlete can return to play that day",
+        "Because it proves the student aide performed the special tests correctly"
+      ],
+      "answerIndex": 1,
+      "explanation": "Documentation supports the athletic trainer's ongoing care and creates an accurate record of what was found and when — it doesn't replace a verbal report, isn't a return-to-play decision, and student aides never perform special tests in the first place."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "HOPS",
+      "back": "The framework for evaluating an on-field injury: History, Observation, Palpation, Special tests — performed in that order."
+    },
+    {
+      "id": "f2",
+      "front": "Primary survey",
+      "back": "The first check on any injury — responsiveness, breathing, and severe bleeding — done before anything else. Life threats before limb threats."
+    },
+    {
+      "id": "f3",
+      "front": "History (the H in HOPS)",
+      "back": "Asking the athlete what happened: mechanism of injury, what they felt or heard, exactly where it hurts, and whether it's happened before."
+    },
+    {
+      "id": "f4",
+      "front": "Observation (the O in HOPS)",
+      "back": "Looking before touching — checking for swelling, deformity, discoloration, and how the athlete is moving or guarding the area."
+    },
+    {
+      "id": "f5",
+      "front": "Palpation",
+      "back": "The hands-on part of the evaluation — gently and systematically feeling for point tenderness."
+    },
+    {
+      "id": "f6",
+      "front": "Point tenderness",
+      "back": "Pain reproduced at one specific, localized spot when it's pressed — different from general soreness spread across a limb."
+    },
+    {
+      "id": "f7",
+      "front": "Special tests",
+      "back": "Hands-on stress and movement tests that check the integrity of a specific structure. Performed only by the athletic trainer or clinician, never a student aide."
+    },
+    {
+      "id": "f8",
+      "front": "Why compare to the uninjured side?",
+      "back": "It's the only reliable 'normal' baseline for that specific athlete — used during Observation and Palpation to judge swelling, tenderness, and motion."
+    },
+    {
+      "id": "f9",
+      "front": "Mechanism of injury",
+      "back": "How the injury happened — for example, planted and twisted, direct hit, or landed awkwardly. The first thing to establish in History."
+    },
+    {
+      "id": "f10",
+      "front": "Guarding",
+      "back": "When an athlete limits or protects movement of an injured area, often without realizing it — an important thing to note during Observation."
+    },
+    {
+      "id": "f11",
+      "front": "A student aide's scope",
+      "back": "Recognize, gather information using HOPS, and report to the athletic trainer. Never diagnose the injury or decide if an athlete can return to play."
+    },
+    {
+      "id": "f12",
+      "front": "Why document findings",
+      "back": "An accurate written record (what happened, what was found, who was notified) helps the athletic trainer track the injury and informs ongoing care."
+    }
+  ]
+}

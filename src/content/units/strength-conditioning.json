@@ -1,0 +1,273 @@
+{
+  "id": "strength-conditioning",
+  "title": "Strength & Conditioning Basics",
+  "category": "Prevention & Performance",
+  "strand": "strength-conditioning",
+  "gradeBand": "9-10",
+  "summary": "The training principles behind getting stronger safely — overload, progression, specificity, and why recovery is where the gains actually happen.",
+  "minutes": 16,
+  "standards": ["CTE.HSMT.Anchor.6", "CTE.HSMT.B.1.2", "CTE.HSMT.B.2.0"],
+  "sections": [
+    {
+      "heading": "How muscles get stronger",
+      "body": [
+        "Muscle doesn't get stronger during the workout — it gets challenged during the workout. Lifting weight, pushing against resistance, or doing bodyweight exercises like push-ups creates a small amount of stress on muscle fibers, the individual strands of tissue that make up a muscle. That stress is a signal, not damage in the way an injury is damage.",
+        "The body responds to that signal by rebuilding the stressed tissue slightly stronger than it was before, so it's better prepared for the same stress next time. This cycle — stress, followed by rebuilding stronger — is called adaptation, and it's the entire basis of strength and conditioning training. It only works if the training that creates the stress is smart, and if the body actually gets the recovery time it needs to do the rebuilding, which is covered below."
+      ]
+    },
+    {
+      "heading": "Three principles behind safe, effective training",
+      "body": [
+        "Three ideas control almost everything about how a training program is built. Coaches and athletic trainers use these words constantly — knowing them helps explain why a program is structured the way it is, instead of it feeling like arbitrary rules."
+      ],
+      "list": [
+        "Overload — the muscle has to be challenged with something a little beyond what it's currently used to. Repeating the exact same easy workout forever gives the body no reason to adapt.",
+        "Progression — that overload has to increase gradually, not all at once. A common guardrail, also used for running mileage (see the overuse injuries unit), is to raise weight or training volume by no more than about 10% at a time. Jumping from 100 to 150 pounds on a lift in one week isn't overload — it's a setup for injury.",
+        "Specificity — training should match the demands of the sport or goal. A sprinter benefits from explosive, sprint-specific strength work; a swimmer benefits from upper-body and rotational strength suited to their stroke. General strength matters for everyone, but the closer an exercise resembles the actual movement, the more it carries over to performance."
+      ],
+      "image": {
+        "asset": "strength-conditioning-progressive-overload-chart.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Simple bar or step-line chart with 'Training load' on the vertical axis and 'Weeks' (1 through 6) on the horizontal axis. Show load rising in small, even step increments week to week, each step roughly 10% higher than the last, with a callout label reading 'small, gradual increases' pointing at the step pattern. Clean flat infographic style, no photographic elements.",
+        "alt": "Chart showing training load increasing gradually in small steps over several weeks, illustrating the progression principle.",
+        "location": "public/images/units/strength-conditioning/"
+      }
+    },
+    {
+      "heading": "Rest and recovery: where the adaptation actually happens",
+      "body": [
+        "Here's the part that surprises a lot of new lifters: the muscle doesn't get stronger during the workout. It gets stronger afterward, during rest, when the body repairs the stressed tissue and rebuilds it slightly thicker and stronger than before. Training the same muscle again before that rebuilding is finished doesn't add extra progress — it just piles more stress on tissue that hasn't recovered yet.",
+        "Sleep is a major part of that rebuilding process — much of the hormone activity that supports muscle repair happens during deep sleep, which is one more reason cutting sleep short undercuts a training program no matter how hard the workouts are.",
+        "A sensible program spaces hard training on the same muscle group with at least a day of rest in between, and includes lighter or complete rest days across the week. Overtraining happens when training load consistently outpaces recovery over weeks — recognize the warning signs early:"
+      ],
+      "list": [
+        "Performance that plateaus or gets worse despite training hard",
+        "Persistent fatigue that doesn't improve with a normal night's sleep",
+        "Trouble sleeping, irritability, or mood changes",
+        "Getting sick or catching colds more often than usual",
+        "Nagging soreness or minor injuries that keep cropping up"
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Overtraining: the fix is rest, not more effort",
+        "text": "If several of these signs show up together, it's time to back off training load and prioritize rest and sleep. Pushing harder is the wrong response to overtraining — the body needs recovery time to finish adapting, not another hard session."
+      }
+    },
+    {
+      "heading": "Structure of a sensible session",
+      "body": [
+        "Just like any other athletic session, a smart strength workout follows a simple three-part structure: warm-up, main work, cool-down."
+      ],
+      "list": [
+        "Warm-up — light cardio and dynamic movement that raises muscle temperature and prepares the body for the exercises ahead. This is covered in depth in the warm-up and injury prevention unit; the short version is that skipping it and lifting cold raises injury risk.",
+        "Main work — the actual lifting or conditioning exercises for that session, done with full attention to technique (see the next section) before intensity.",
+        "Cool-down — a short period of easy movement and light stretching afterward that helps the body transition back down and supports recovery."
+      ]
+    },
+    {
+      "heading": "Technique before load",
+      "body": [
+        "In the weight room, form always comes before weight. Good technique means the right joints are moving in the right way, with the core and spine positioned safely, no matter how light or heavy the weight is. Lifting heavier weight with poor form doesn't build strength faster — it shifts the stress away from the muscle that's supposed to do the work and onto joints, tendons, and the spine, which is how injuries happen.",
+        "That's also why 'maxing out' — testing the single heaviest weight an athlete can lift for one rep — is risky for teenagers, especially informally, with friends, and without a spotter or coach present. Technique is the first thing to break down under a truly maximal load, and a breakdown at maximal weight is exactly when an injury is most likely. Save max-effort testing for a supervised setting with a qualified coach or athletic trainer who can spot properly and call off an attempt that isn't safe."
+      ],
+      "image": {
+        "asset": "strength-conditioning-squat-form-comparison.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Two-panel side-by-side illustration of an athlete performing a barbell back squat, same camera angle in both panels for easy comparison. Left panel labeled 'Good form': neutral spine, knees tracking over the toes, chest up, controlled depth. Right panel labeled 'Poor form': rounded lower back, knees caving inward, heels lifting off the ground. Clean athletic-instruction illustration style.",
+        "alt": "Side-by-side comparison of correct squat form (neutral spine, knees tracking over toes) versus poor squat form (rounded back, knees caving in).",
+        "location": "public/images/units/strength-conditioning/"
+      },
+      "callout": {
+        "type": "warning",
+        "title": "Red flag — no supervision, no max attempts",
+        "text": "Never attempt a maximal single-rep lift without a qualified coach, athletic trainer, or spotter present. Informal 'who can lift the most' contests in the weight room are a common way serious teen lifting injuries happen — the reward isn't worth the risk."
+      }
+    },
+    {
+      "heading": "Myth-busting",
+      "body": [
+        "A few beliefs are common in weight rooms and locker rooms but don't hold up against what sports medicine actually knows."
+      ],
+      "list": [
+        "Myth: 'No pain, no gain.' Reality — the discomfort of a hard workout (muscle burn, fatigue) is normal, but sharp or joint pain is not something to push through. Pain is the body's warning system, not proof of progress.",
+        "Myth: 'Lifting weights stunts a teenager's growth.' Reality — this idea comes from concern about growth plates, the areas of growing cartilage near the ends of long bones in kids and teens. Consensus sports medicine guidelines find that supervised resistance training with good technique and appropriate loads is safe and beneficial for teens — it does not damage growth plates. The real risk is unsupervised maximal lifting and poor technique, not resistance training itself.",
+        "Myth: 'You have to train to complete failure every set to make progress.' Reality — consistent, progressive training beats grinding every set to failure; training to failure too often adds fatigue and injury risk without adding extra benefit.",
+        "Myth: 'More is always better — extra sets and extra days will get you stronger faster.' Reality — see the recovery section above: without rest, added volume just adds stress on top of tissue that hasn't rebuilt yet."
+      ]
+    },
+    {
+      "heading": "Soreness vs. pain: knowing the difference",
+      "body": [
+        "After a new or harder-than-usual workout, it's normal to feel Delayed Onset Muscle Soreness (DOMS) — a dull, achy soreness that typically shows up 24 to 72 hours later, eases as the muscle warms up and moves, and fades within a few days on its own. DOMS is a normal response to new training stress, not an injury.",
+        "Pain that means stop is different: sudden sharp pain during a lift, pain that doesn't ease with movement, pain isolated to one specific spot, or pain that gets worse rather than better over the following days. That pattern is closer to a muscle strain (see the muscle strains unit) than to normal training soreness, and it needs to be evaluated rather than trained through."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Red flags — stop and tell a coach or athletic trainer",
+        "text": "Stop the exercise and get it evaluated if you feel a sudden sharp pain, hear or feel a pop, notice swelling or bruising, lose strength in a specific movement, or have pain that doesn't ease and instead gets worse over the following days. Recognize it, protect it, and let a qualified adult decide what's next — don't try to train through it."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What does \"progressive overload\" mean in strength training?",
+      "choices": [
+        "Lifting the heaviest weight possible on day one",
+        "Gradually challenging muscles with slightly more than they're currently used to",
+        "Training to complete muscle failure on every single set",
+        "Doing the exact same workout every week without changing anything"
+      ],
+      "answerIndex": 1,
+      "explanation": "Progressive overload means challenging muscles with slightly more than they're currently used to, which is the signal that tells the body to adapt and get stronger. Lifting max weight on day one skips the 'gradual' part, and repeating the exact same workout forever gives the body no new stress to adapt to."
+    },
+    {
+      "id": "q2",
+      "question": "A lifter's coach tells her to increase her working weight by no more than about 10% at a time, instead of jumping straight to a much heavier weight. What training principle is this guideline protecting?",
+      "choices": [
+        "Specificity — matching training to the demands of her sport",
+        "Overload — always training at maximum effort",
+        "Progression — increasing demand gradually so tissue can adapt without breaking down",
+        "Recovery — resting between individual sets"
+      ],
+      "answerIndex": 2,
+      "explanation": "The ~10% guideline keeps demand increasing gradually so tissue has time to adapt without breaking down — that's the progression principle, the same idea used to guard against overuse injuries when increasing running mileage. Overload is about challenging the muscle at all; specificity is about matching the exercise to the sport; recovery is about rest between sessions."
+    },
+    {
+      "id": "q3",
+      "question": "A basketball player wants to jump higher for rebounds. Which choice best reflects the principle of specificity?",
+      "choices": [
+        "Adding jump squats and box jumps that mimic the explosive movement of jumping",
+        "Only doing long, slow-paced jogging",
+        "Training exclusively with isolated bicep curls",
+        "Skipping warm-ups to save time for lifting"
+      ],
+      "answerIndex": 0,
+      "explanation": "Specificity means training should resemble the actual movement demanded by the sport — explosive jump training carries over to jumping ability far more than slow jogging or isolated arm curls, which don't match the goal."
+    },
+    {
+      "id": "q4",
+      "question": "Which is the correct order for a sensible strength training session?",
+      "choices": [
+        "Cool-down, main lifting work, warm-up",
+        "Main lifting work, warm-up, cool-down",
+        "Warm-up, cool-down, main lifting work",
+        "Warm-up, main lifting work, cool-down"
+      ],
+      "answerIndex": 3,
+      "explanation": "A sensible session always moves warm-up, then main work, then cool-down — raising muscle temperature and readiness before the hardest work, then easing back down afterward. Lifting heavy while still cold, or skipping the cool-down, both raise injury risk for no real benefit."
+    },
+    {
+      "id": "q5",
+      "question": "After practice, an athlete wants to see how much he can max out on the bench press with a couple of teammates around, no coach present. What should he do?",
+      "choices": [
+        "Go for it — testing your max is the fastest way to see progress",
+        "Skip the informal max-out — attempting a one-rep max without a spotter or qualified supervision is how many teen lifting injuries happen",
+        "Ask an untrained teammate to spot him instead",
+        "Max out only on the bench press, since that lift is the safest one to test"
+      ],
+      "answerIndex": 1,
+      "explanation": "Testing a one-rep max without a spotter or qualified supervision is one of the most common ways teen lifters get hurt — technique breaks down first under a truly maximal load, exactly when a spotter or coach is needed most. An untrained teammate spotting doesn't solve the underlying risk."
+    },
+    {
+      "id": "q6",
+      "question": "A teammate says lifting weights will stunt a teenager's growth. What does the evidence-based answer say?",
+      "choices": [
+        "Supervised resistance training with good technique is safe and beneficial for teens; the real risk is unsupervised maximal lifting and poor form, not resistance training itself",
+        "Weightlifting always damages growth plates in anyone under 18",
+        "Growth plates are not affected by any type of physical activity, so form and supervision don't matter",
+        "Only running and jumping affect growth plates, never lifting"
+      ],
+      "answerIndex": 0,
+      "explanation": "Consensus sports medicine guidelines find that supervised resistance training with good technique is safe and beneficial for teens and does not damage growth plates. The real risk comes from unsupervised maximal lifting and poor form, not from resistance training itself."
+    },
+    {
+      "id": "q7",
+      "question": "Two days after a new leg workout, an athlete has dull, achy soreness in both thighs that eases as she moves around during warm-up. What is this most likely, and what should she do?",
+      "choices": [
+        "A muscle strain — refer to a physician immediately",
+        "A stress fracture — stop all activity",
+        "Tendinopathy — she needs load management from a physician",
+        "Delayed Onset Muscle Soreness (DOMS) — a normal response to new training; she can train through it at a comfortable intensity"
+      ],
+      "answerIndex": 3,
+      "explanation": "Dull, achy soreness that shows up a day or two after a new or harder workout and eases with movement is classic DOMS — a normal training response, not an injury. It doesn't require stopping activity, just training at a comfortable intensity while it resolves."
+    },
+    {
+      "id": "q8",
+      "question": "During a set, an athlete feels a sudden sharp pain and has to stop mid-rep, and the pain doesn't ease afterward. What should happen?",
+      "choices": [
+        "Push through — pain during lifting is part of building strength",
+        "Ice it and finish the rest of the workout as planned",
+        "Stop the exercise and have it evaluated — sudden sharp pain that doesn't ease is different from normal muscle soreness and may signal an injury like a strain",
+        "Increase the weight next session to build past the pain"
+      ],
+      "answerIndex": 2,
+      "explanation": "Sudden sharp pain that stops a rep and doesn't ease afterward is a different pattern than normal muscle soreness and can signal an injury like a strain — it needs to be evaluated, not pushed through or trained past. Increasing the weight next time would only raise the risk."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Overload (principle)",
+      "back": "Challenging muscles with more than they're currently used to — a little beyond current capacity — the signal that tells the body to adapt."
+    },
+    {
+      "id": "f2",
+      "front": "Progression (principle)",
+      "back": "Increasing training demand gradually over time, not all at once. A common guardrail: no more than about 10% increase in weight or volume at a time."
+    },
+    {
+      "id": "f3",
+      "front": "Specificity (principle)",
+      "back": "Training should match the demands of the sport or goal — e.g., jump training for a rebounder, not just isolated arm curls."
+    },
+    {
+      "id": "f4",
+      "front": "DOMS (Delayed Onset Muscle Soreness)",
+      "back": "Normal dull, achy soreness appearing 24-72 hours after new or harder-than-usual exercise; eases with movement and fades within a few days."
+    },
+    {
+      "id": "f5",
+      "front": "Pain that means stop",
+      "back": "Sudden sharp pain, pain during a specific movement that doesn't ease, or pain that gets worse — different from DOMS and needs evaluation, not pushing through."
+    },
+    {
+      "id": "f6",
+      "front": "Overtraining warning signs",
+      "back": "Persistent fatigue, declining performance despite training hard, mood/sleep changes, and getting sick more often — signs the body isn't recovering enough."
+    },
+    {
+      "id": "f7",
+      "front": "Where adaptation actually happens",
+      "back": "During rest, not during the workout — muscle repairs and rebuilds stronger between sessions, not while lifting."
+    },
+    {
+      "id": "f8",
+      "front": "Sleep and recovery",
+      "back": "Much of muscle repair happens during deep sleep; skimping on sleep blunts the gains from a training program."
+    },
+    {
+      "id": "f9",
+      "front": "Session structure",
+      "back": "Warm-up (raise temperature, prep the body) → main work (the lifting/conditioning) → cool-down. Never skip straight into heavy work cold."
+    },
+    {
+      "id": "f10",
+      "front": "Technique before load",
+      "back": "Good form must come before adding weight — a lighter weight lifted correctly builds strength safely; heavier weight with poor form raises injury risk."
+    },
+    {
+      "id": "f11",
+      "front": "Why max-out contests are risky for teens",
+      "back": "Testing a one-rep max without a spotter or qualified supervision is a common way teen lifters get hurt — technique breaks down first under maximal load."
+    },
+    {
+      "id": "f12",
+      "front": "Growth plates and resistance training",
+      "back": "Supervised resistance training with good technique is safe and beneficial for teens per consensus guidelines; the real risk is unsupervised maximal lifting, not lifting itself."
+    }
+  ]
+}

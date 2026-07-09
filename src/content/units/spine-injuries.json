@@ -1,0 +1,277 @@
+{
+  "id": "spine-injuries",
+  "title": "Neck & Back Injuries in Sports",
+  "category": "Head & Spine Injuries",
+  "strand": "spine-injuries",
+  "gradeBand": "9-10",
+  "summary": "Recognize how neck and back injuries happen in sports, tell a stinger from a true spine emergency, and know the one rule that matters most: don't move them.",
+  "minutes": 20,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.4.5", "CTE.HSMT.Anchor.6"],
+  "sections": [
+    {
+      "heading": "The spine and spinal cord: what's protected",
+      "body": [
+        "The spine (backbone) is a stack of vertebrae — small bones separated by cushioning discs — that runs from the base of the skull to the tailbone. Running down a canal through the center of these vertebrae is the spinal cord, the thick bundle of nerves that carries every signal between the brain and the rest of the body. The vertebrae's main job is to protect it.",
+        "Nerve roots branch off the spinal cord and exit between each pair of vertebrae, carrying signals out to specific parts of the arms, trunk, and legs. That's why a spine injury at a given level can cause symptoms in a very specific, predictable location — and why athletic trainers ask exactly where numbness or weakness is felt."
+      ],
+      "list": [
+        "Cervical spine (neck) — 7 vertebrae, the most mobile and most vulnerable region in sports.",
+        "Thoracic spine (mid-back) — 12 vertebrae, each attached to a rib pair, making this region naturally stiffer and more protected.",
+        "Lumbar spine (low back) — 5 vertebrae, carrying most of the body's weight and load during bending, lifting, and arching."
+      ],
+      "image": {
+        "asset": "spine-regions-and-cord.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-view diagram of the full spine from skull to pelvis, color-coded and labeled by region: cervical (7 vertebrae), thoracic (12 vertebrae, shown attached to rib pairs), and lumbar (5 vertebrae). Show the spinal cord as a shaded column running through the center of the vertebrae, with a few nerve roots branching outward between vertebrae. Clean medical-illustration style.",
+        "alt": "Diagram of the spine showing the cervical, thoracic, and lumbar regions with the spinal cord running through the center and nerve roots branching out.",
+        "location": "public/images/units/spine-injuries/"
+      }
+    },
+    {
+      "heading": "How spine injuries happen: axial loading",
+      "body": [
+        "Most catastrophic sports spine injuries share one mechanism: axial loading — a force delivered straight down the length of the spine, compressing vertebrae directly into one another instead of bending or stretching them.",
+        "Normally the neck has a natural curve that can flex and absorb impact. But when the spine is straightened at the moment of contact, that force has nowhere to go except straight into the bone — which is how a vertebra fractures or a spinal cord gets injured.",
+        "Classic axial-loading scenarios in sports: spearing — leading with the crown (top) of the helmet into a tackle, which straightens the neck and drives the full force of the collision into the spine (this is exactly why spearing is a penalty in football, not just poor technique); a fall directly onto the head or shoulders from height, such as a missed landing in gymnastics or a cheerleading stunt; and diving headfirst into water that turns out to be shallower than it looks, driving the head into the pool or lake bottom."
+      ],
+      "image": {
+        "asset": "spine-axial-loading-spearing.webp",
+        "ratio": "4:3",
+        "background": "transparent",
+        "description": "Two-panel comparison illustration. Left panel: a football player tackling with head up and neck in its natural slight curve, a force arrow bending around the curve to show energy being absorbed. Right panel: a player spearing with the crown of the helmet leading and the neck straightened in a rigid line, a force arrow driving straight down the spine into the torso with a highlighted compression point at the neck. Simple athletic-illustration style, no graphic injury detail.",
+        "alt": "Comparison diagram showing a properly bent neck absorbing tackle force versus a straightened, speared neck transmitting force directly into the spine.",
+        "location": "public/images/units/spine-injuries/"
+      }
+    },
+    {
+      "heading": "Stingers and burners",
+      "body": [
+        "A stinger (also called a burner) is a sudden stretch or compression of the nerves that run from the neck into the shoulder and arm (the brachial plexus). It's common in football and wrestling, usually from the head being forced to one side while the shoulder is driven down, or from the shoulder taking a direct hit while the neck bends away from it.",
+        "It feels like a sudden burning, tingling, or 'electric shock' sensation shooting down one arm, sometimes with brief weakness or a dead-arm feeling in that hand. A key clue: a stinger affects one arm on one side — not both arms, not the legs, and not the neck itself with midline pain. Symptoms usually clear within seconds to a couple of minutes.",
+        "A single stinger that fully resolves — normal strength returns, no neck pain, only one arm was ever involved — still needs to be checked by the athletic trainer before the athlete returns to play. Repeated stingers are a different story: getting stingers over and over can signal a structural issue, such as narrowing of the space where nerve roots exit the neck, and must be reported and evaluated by a physician before any further contact."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Report it — every time",
+        "text": "Never treat a stinger as 'no big deal' just because it went away fast. One episode still gets checked by the athletic trainer; a second or third episode is a red flag on its own and needs a physician's evaluation before the athlete returns to contact."
+      }
+    },
+    {
+      "heading": "Red flags for a serious spine injury",
+      "body": [
+        "After any hard hit, fall, or awkward landing, watch for signs that point toward a possible serious spine injury rather than a stinger or ordinary soreness:"
+      ],
+      "list": [
+        "Midline pain — pain directly over the spine itself (neck or back), not off to one side in the muscle.",
+        "Numbness, tingling, or weakness in both arms, both legs, or all four limbs — not just one arm.",
+        "Any loss of movement, or an athlete who cannot move an arm or leg on command.",
+        "Neck or back pain combined with loss of consciousness or confusion after the impact.",
+        "An 'electric shock' feeling down the spine or into the arms or legs when the neck is moved.",
+        "Visible deformity of the neck or back."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Any one of these = suspect a serious spine injury",
+        "text": "You don't need all of these findings to act — even one is enough to suspect a serious spine injury and move straight to the cardinal rule in the next section. Never wait to see if symptoms get worse before responding."
+      }
+    },
+    {
+      "heading": "The cardinal rule: don't move them",
+      "body": [
+        "If you suspect a serious spine injury, one rule overrides everything else: do not move the athlete. Shifting a fractured or unstable vertebra can injure or worsen damage to the spinal cord — an injury that is otherwise stable can become permanent if the athlete is moved incorrectly.",
+        "That includes not removing the helmet or shoulder pads. In football, a helmet and shoulder pads work together as a system that keeps the head and neck aligned; taking one off without the other can shift that alignment. Removing equipment from a suspected spine injury is a specialized skill performed by trained athletic trainers or EMS with the right tools — it is never a student's job.",
+        "Your job is to recognize, protect, and refer: keep the athlete as calm and still as possible, tell them not to move, and activate the venue's Emergency Action Plan right away — call 911 (or have the designated person do so) and wait for EMS. Simply keeping the athlete still and getting help there fast is the correct response — spine-boarding, manual stabilization, and immobilization technique belong entirely to trained professionals."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "The single most important rule in this unit",
+        "text": "Suspected spine injury: do not move the athlete, do not remove the helmet or pads, keep them still, activate the Emergency Action Plan, and wait for EMS. Recognize, protect, refer — that's the whole job."
+      }
+    },
+    {
+      "heading": "Low back pain and spondylolysis",
+      "body": [
+        "Most low back pain in athletes is ordinary muscle strain from overuse and resolves with rest. But repeated hyperextension — bending backward over and over — puts stress on a specific piece of bone in each vertebra called the pars interarticularis, a small bony bridge in the back of the vertebra.",
+        "Spondylolysis is a stress fracture of the pars interarticularis — essentially a stress fracture of the back. It develops gradually from repeated hyperextension, which is why it shows up especially in gymnastics (backbends, tumbling), football linemen (repeated forceful extension out of a stance), cheer, and dance.",
+        "The recognition pattern: low back pain that builds gradually over weeks rather than starting with one hit, that gets worse when arching or bending backward, and that eases with rest. There's usually no single injury moment, which is what separates it from the sudden-impact spine injuries earlier in this unit. Recognizing this pattern is a student's job; diagnosing it is not — it needs imaging and a physician's evaluation, and pushing through it risks the fracture worsening."
+      ],
+      "image": {
+        "asset": "spine-spondylolysis-pars-location.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Close-up diagram of a single lumbar vertebra viewed from the side and from above, with the pars interarticularis (the small bony bridge connecting the upper and lower joint segments) highlighted in a distinct color and labeled. Include a small crack/fracture line icon at that location to indicate a stress fracture. Clean medical-illustration style.",
+        "alt": "Diagram of a lumbar vertebra highlighting the pars interarticularis, the site of a spondylolysis stress fracture.",
+        "location": "public/images/units/spine-injuries/"
+      }
+    },
+    {
+      "heading": "Prevention and return to play",
+      "body": [
+        "Prevention starts with technique: keep the head up and 'see what you hit' when tackling or blocking, never lead with the crown of the helmet, and coach proper landing mechanics in gymnastics and cheer. For diving, the rule is simple — feet first, every time, in any water of unknown or shallow depth.",
+        "Return to play always depends on what happened. A resolved single stinger still needs an athletic trainer's check before returning; repeated stingers need physician clearance before any more contact; spondylolysis needs a physician-guided rest and rehab plan, sometimes with a brace, and the timeline is measured in months, not days. Any suspected serious spine injury (the red flags from earlier) ends in transport by EMS — there is no same-day sideline return, ever.",
+        "One more overlap worth knowing: many of the same hits that raise concern for a neck injury — a hard tackle, a fall on the head — can also cause a concussion. Whenever you're checking for a spine red flag, check for concussion signs too, and vice versa. This is exactly the kind of scenario an Emergency Action Plan is built for, which is why every venue needs one rehearsed and ready before it's needed."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is axial loading, the mechanism behind most catastrophic sports spine injuries?",
+      "choices": [
+        "A force applied straight down the length of the spine, compressing vertebrae together",
+        "A sideways stretch of the neck muscles during a tackle",
+        "Repeated small impacts spread out over a season",
+        "A twisting force applied to the lower back"
+      ],
+      "answerIndex": 0,
+      "explanation": "Axial loading is a straight-line compressive force down the spine — vertebrae are driven into each other instead of bending. A sideways neck stretch describes a stinger mechanism, not axial loading, and repeated small impacts or twisting forces are different injury patterns entirely."
+    },
+    {
+      "id": "q2",
+      "question": "A football player tackles by leading with the crown (top) of his helmet, spine straightened at the moment of contact. Why is this mechanism so dangerous?",
+      "choices": [
+        "It only risks a concussion, not the spine",
+        "A straightened spine sends the full force of the hit directly into the vertebrae instead of the neck's curve absorbing it",
+        "It slows the athlete down and causes fatigue injuries later in the game",
+        "It is illegal, so it doesn't actually happen in real games"
+      ],
+      "answerIndex": 1,
+      "explanation": "Normally the neck's natural curve can flex and absorb impact. Spearing straightens that curve, so the collision force is transmitted directly into the vertebrae — exactly the axial-loading mechanism behind serious spine injuries, which is why it's penalized."
+    },
+    {
+      "id": "q3",
+      "question": "A defensive back makes a tackle and immediately feels a burning, electric-shock sensation shooting down his right arm with brief weakness in that hand. His left arm and both legs feel normal, and he has no neck pain. This best fits:",
+      "choices": [
+        "A stinger (burner) — a stretch or compression injury to nerves on one side",
+        "A spinal cord injury requiring an immediate 911 call",
+        "Spondylolysis",
+        "A concussion"
+      ],
+      "answerIndex": 0,
+      "explanation": "One-sided arm symptoms with no neck pain and no involvement of the other limbs is the classic stinger pattern. A serious spine injury would more likely involve midline neck pain or symptoms in both arms or legs; spondylolysis is gradual low back pain, not a sudden arm symptom."
+    },
+    {
+      "id": "q4",
+      "question": "An athlete who had a stinger last week during practice tells you it just happened again today — same burning feeling down the same arm. What should happen?",
+      "choices": [
+        "Nothing — stingers are minor and always resolve on their own",
+        "Tape the shoulder and let her keep practicing",
+        "This is a repeated episode and must be reported and evaluated by a physician before she returns to contact",
+        "Only report it if it happens a third time"
+      ],
+      "answerIndex": 2,
+      "explanation": "A single resolved stinger still needs an athletic trainer's check, but a repeat episode is its own red flag — it can signal a structural issue in the neck — and requires physician evaluation before any further contact, not a wait-and-see approach."
+    },
+    {
+      "id": "q5",
+      "question": "A cheerleader falls from a stunt, lands on her head and neck, and reports she can't feel her legs. What is the correct immediate action?",
+      "choices": [
+        "Carefully sit her up to check her back for a deformity",
+        "Have two people carry her off the mat to a bench",
+        "Do not move her, keep her as still as possible, and activate the Emergency Action Plan / call 911 immediately",
+        "Wait a few minutes to see if the feeling in her legs returns before doing anything"
+      ],
+      "answerIndex": 2,
+      "explanation": "Loss of feeling in the legs after a fall on the head/neck is a spine red flag. The cardinal rule applies: do not move her, keep her still, and get EMS moving right away. Sitting her up, carrying her, or waiting all risk worsening a possible spinal cord injury."
+    },
+    {
+      "id": "q6",
+      "question": "A football player is suspected of having a serious neck injury while still wearing his helmet and shoulder pads. What should a student assistant do about the equipment?",
+      "choices": [
+        "Remove the helmet only, so the head can be checked",
+        "Remove both the helmet and shoulder pads immediately so EMS has full access",
+        "Leave the helmet and shoulder pads in place — removing football headgear from a suspected spine injury is a specialized skill for trained EMS or athletic trainers only",
+        "Remove the shoulder pads only, leaving the helmet on"
+      ],
+      "answerIndex": 2,
+      "explanation": "The helmet and shoulder pads work together to keep the head and neck aligned; removing either one changes that alignment and can move an unstable spine. That's a trained-professional task, not something a student does in the field."
+    },
+    {
+      "id": "q7",
+      "question": "A gymnast has had gradually worsening low back pain over several weeks. It's worse when she arches into a backbend and eases with rest; there was no single injury moment. This pattern is most consistent with:",
+      "choices": [
+        "A stinger",
+        "Spondylolysis, a stress fracture of the pars interarticularis from repeated hyperextension",
+        "A spinal cord injury requiring an immediate 911 call",
+        "Ordinary soreness that needs no follow-up"
+      ],
+      "answerIndex": 1,
+      "explanation": "Gradual onset, worsening with backward bending, and no single hit is the recognition pattern for spondylolysis — a stress fracture from repeated hyperextension, common in gymnastics. A stinger is sudden and one-armed, and a spine emergency involves a specific traumatic event; this gradual pattern still needs evaluation, not a shrug."
+    },
+    {
+      "id": "q8",
+      "question": "After a hard tackle, an athlete has pain directly over his spine at the point of impact — not off to one side — plus tingling in both hands. Which statement is true?",
+      "choices": [
+        "This is a normal stinger, and he can return once the tingling stops",
+        "Midline spine pain plus tingling in both hands are red flags for a possible serious spine injury and call for the cardinal rule response",
+        "This only matters if he also has a headache",
+        "He should try to walk it off to see if it improves"
+      ],
+      "answerIndex": 1,
+      "explanation": "Midline pain and symptoms in both arms are two separate red flags — a stinger is one-sided and doesn't cause midline spine pain. This combination means treating it as a possible serious spine injury: don't move him, and activate the Emergency Action Plan."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Spinal cord",
+      "back": "The bundle of nerves running through the vertebrae that carries signals between the brain and the rest of the body — what the spine's bones exist to protect."
+    },
+    {
+      "id": "f2",
+      "front": "Spine regions and vertebra counts",
+      "back": "Cervical (neck) = 7, thoracic (mid-back, rib-attached) = 12, lumbar (low back) = 5."
+    },
+    {
+      "id": "f3",
+      "front": "Axial loading",
+      "back": "A force delivered straight down the length of the spine, compressing vertebrae into each other — the mechanism behind most catastrophic sports spine injuries."
+    },
+    {
+      "id": "f4",
+      "front": "Spearing",
+      "back": "Leading with the crown (top) of the helmet into a tackle, which straightens the neck and drives the full force of the hit into the spine. Illegal in football for this reason."
+    },
+    {
+      "id": "f5",
+      "front": "Common axial-loading scenarios",
+      "back": "Spearing in football, falling onto the head/shoulders from height, and diving headfirst into shallow or unknown-depth water."
+    },
+    {
+      "id": "f6",
+      "front": "Stinger (burner)",
+      "back": "A sudden stretch or compression of nerves from the neck into the shoulder/arm (brachial plexus) — burning, tingling, or weakness down ONE arm, resolving within seconds to minutes."
+    },
+    {
+      "id": "f7",
+      "front": "Stinger reporting rule",
+      "back": "A single resolved stinger still needs an athletic trainer's check. A repeated stinger is its own red flag and needs physician evaluation before any further contact."
+    },
+    {
+      "id": "f8",
+      "front": "Red flags for a serious spine injury",
+      "back": "Midline neck/back pain after impact, numbness/tingling/weakness in both arms or legs, any loss of movement, neck pain with loss of consciousness, or visible deformity."
+    },
+    {
+      "id": "f9",
+      "front": "The cardinal rule",
+      "back": "Suspected spine injury: do not move the athlete, do not remove the helmet or pads, keep them still, activate the Emergency Action Plan, and wait for EMS."
+    },
+    {
+      "id": "f10",
+      "front": "Why not remove the helmet?",
+      "back": "Helmet and shoulder pads work together to keep the head/neck aligned; removing one without proper training can shift that alignment. Only trained EMS/athletic trainers do this."
+    },
+    {
+      "id": "f11",
+      "front": "Spondylolysis",
+      "back": "A stress fracture of the pars interarticularis (a small bony bridge in the vertebra) from repeated hyperextension — the 'stress fracture of the back.' Common in gymnastics and football linemen."
+    },
+    {
+      "id": "f12",
+      "front": "Spondylolysis recognition pattern",
+      "back": "Low back pain that builds gradually over weeks, worsens with backward bending/arching, eases with rest, and has no single injury moment — needs physician evaluation, not pushing through."
+    }
+  ]
+}
