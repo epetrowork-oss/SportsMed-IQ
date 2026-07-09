@@ -1,0 +1,273 @@
+{
+  "id": "cardiac-conditions",
+  "title": "Cardiac Conditions & Sudden Cardiac Arrest",
+  "category": "Medical Conditions & Special Populations",
+  "strand": "cardiac-conditions",
+  "gradeBand": "9-10",
+  "summary": "Understand why a young, fit athlete's heart can still fail during sport, the warning signs that must never be brushed off, and the recognize-call-AED chain that saves lives.",
+  "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.3", "CTE.HSMT.Anchor.6", "CTE.HSMT.B.4.5"],
+  "sections": [
+    {
+      "heading": "A healthy-looking athlete can still be at risk",
+      "body": [
+        "It feels contradictory: sudden cardiac arrest (SCA) — the heart's electrical system malfunctions and the heart abruptly stops pumping blood effectively — is one of the leading causes of sudden death in young athletes during sport, even though these are some of the fittest people on campus. The athlete who collapses is often someone with no diagnosed illness, no obvious warning the week before, and a body that looked perfectly capable seconds earlier.",
+        "That's exactly why this unit matters. Cardiac conditions in athletes usually don't announce themselves loudly or often — they hide behind normal-looking fitness until exertion pushes the heart hard enough to expose the problem. A student assistant, coach, or teammate who knows the warning signs and responds fast is frequently the difference between a save and a tragedy."
+      ]
+    },
+    {
+      "heading": "Structural problems: when the heart muscle itself is built differently",
+      "body": [
+        "Some athletes are born with a heart that is structurally different from normal, even though it may work fine at rest. The most common structural cause of sudden cardiac arrest in young athletes is hypertrophic cardiomyopathy (HCM) — a genetic condition in which the heart muscle, especially the wall between the two lower pumping chambers, grows abnormally thick. A thickened heart wall can block normal blood flow out of the heart and can also disrupt the heart's electrical signal, both of which become far more dangerous during hard exercise than at rest.",
+        "A second, less common structural cause is a coronary artery anomaly — a coronary artery (one of the vessels that feeds the heart muscle itself with blood) that originates or runs in an abnormal position. During intense exercise, an abnormally placed artery can get compressed, starving part of the heart muscle of blood at the exact moment it's working hardest.",
+        "Both conditions can exist for years with no symptoms at all, which is why family history and pre-participation screening (covered later in this unit) matter so much — an athlete usually can't feel either one coming."
+      ],
+      "image": {
+        "asset": "cardiac-conditions-hcm-diagram.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-by-side cross-section comparison of two hearts. Left panel: a normal heart with an evenly thick muscular wall and a clear, open left ventricle chamber, labeled 'Normal heart.' Right panel: a heart with a visibly thickened, bulging wall between the two lower chambers (the septum) narrowing the ventricle space, labeled 'Hypertrophic cardiomyopathy (HCM) — thickened septum.' Clean medical-illustration style, simple labels, no distressing detail.",
+        "alt": "Comparison diagram of a normal heart and a heart with hypertrophic cardiomyopathy, showing the abnormally thickened wall between the pumping chambers.",
+        "location": "public/images/units/cardiac-conditions/"
+      }
+    },
+    {
+      "heading": "Electrical problems and commotio cordis",
+      "body": [
+        "The heart has its own electrical system that tells it when and how to beat in a steady rhythm. Some athletes are born with an electrical wiring problem — conditions like long QT syndrome or Wolff-Parkinson-White (WPW) syndrome — that can trigger an arrhythmia (an abnormal, dangerous heart rhythm) during the stress of intense exercise, even when the heart's structure looks completely normal on a scan.",
+        "There's also a cause that has nothing to do with any underlying heart condition at all: commotio cordis. This happens when a blunt blow to the chest — a baseball, a hockey puck, an elbow, a lacrosse ball — lands directly over the heart at one specific, very narrow moment in the heartbeat's electrical cycle. In that split-second window, the impact itself can trigger a fatal arrhythmia in an athlete with a completely healthy, normal heart. It is rare, but it is a real reason a hard chest impact in sports like baseball, hockey, and lacrosse is always treated seriously, especially in younger athletes whose chest walls are still flexible enough to transmit the force directly to the heart."
+      ],
+      "list": [
+        "Long QT syndrome and WPW syndrome — inherited electrical 'wiring' problems that can cause a dangerous rhythm during exertion.",
+        "Commotio cordis — a chest blow timed to a vulnerable instant in the heartbeat, triggering arrhythmia in an otherwise normal heart. Not something an athlete carries beforehand; it can happen to anyone hit hard enough at the wrong moment."
+      ],
+      "image": {
+        "asset": "cardiac-conditions-commotio-cordis-mechanism.webp",
+        "ratio": "4:3",
+        "background": "transparent",
+        "description": "Front view of a young athlete's torso in athletic gear (e.g. a baseball chest protector partly open or a bare chest), with a small ball shown at the moment of impact directly over the center-left chest above the heart. Beside the torso, a simple heartbeat waveform line with one narrow segment highlighted in a distinct color and labeled 'vulnerable window' to show timing matters, not just location. Clean instructional-illustration style, no distressing detail, no visible injury.",
+        "alt": "Diagram showing a chest impact directly over the heart timed to a narrow vulnerable window in the heartbeat, illustrating the mechanism of commotio cordis.",
+        "location": "public/images/units/cardiac-conditions/"
+      }
+    },
+    {
+      "heading": "Warning signs that must never be ignored",
+      "body": [
+        "Most athletes who experience sudden cardiac arrest had at least one warning sign in the weeks or months before, but it was missed, dismissed, or pushed through. These four signs are different from ordinary fatigue or soreness, and every one of them deserves a full stop and a trip to a doctor before the athlete plays again — even if it happened only once and even if the athlete feels totally fine right now."
+      ],
+      "list": [
+        "Fainting or near-fainting DURING exercise — passing out or feeling like you're about to, in the middle of a sprint, drill, or game, not afterward from heat or dehydration.",
+        "Chest pain or tightness during exertion — pain that shows up specifically with hard effort, not soreness from a hit or a pulled muscle.",
+        "Unexplained shortness of breath that is out of proportion to the effort — struggling to breathe far more than teammates doing the exact same drill, with no asthma or illness to explain it.",
+        "A family history of sudden, unexplained death before age 50 — especially in a parent, sibling, or close relative, and especially if it happened during exercise or was ever called a 'heart problem.'"
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Never wait for a second episode",
+        "text": "Any one of these four signs — even a single occurrence — means the athlete stops activity and gets evaluated by a physician before returning, no exceptions. 'Toughing it out' after one of these symptoms is exactly how a fixable problem turns into an emergency the second time."
+      }
+    },
+    {
+      "heading": "The pre-participation physical exam: honesty is the whole point",
+      "body": [
+        "Before most athletes are cleared to play, they complete a pre-participation physical exam (PPE) — a screening exam and health history questionnaire designed specifically to catch conditions like the ones in this unit before they become emergencies. The questionnaire asks directly about the warning signs above: has the athlete ever fainted or felt dizzy during exercise, had chest pain during exercise, been told they have a heart murmur or high blood pressure, or had a family member die suddenly and unexplained before age 50.",
+        "The PPE only works if the answers are true. It cannot detect a symptom the athlete never mentions, and a screening exam alone often cannot catch a structural or electrical heart condition on its own — the questions about personal and family history are frequently the only clue a physician has to dig further, order additional testing, or refer to a cardiologist (a heart specialist) before clearing the athlete to play."
+      ],
+      "list": [
+        "Personal history questions — prior fainting or dizziness during exercise, exertional chest pain, known heart murmur, high blood pressure.",
+        "Family history questions — any relative with unexplained sudden death before 50, or a known heart condition, especially one that runs in families.",
+        "Physical exam elements — blood pressure check and listening to the heart for an unusual rhythm or murmur."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Why athletes downplay symptoms — and why that backfires",
+        "text": "Athletes sometimes leave out a fainting spell or chest pain on the PPE because they're afraid of being held out of a season. Understandable — but it removes the one built-in chance to catch a serious problem before it happens on the field. An honest answer that leads to a short delay is always better than a hidden symptom that leads to a collapse."
+      }
+    },
+    {
+      "heading": "When an athlete collapses: recognize, call, and start the plan",
+      "body": [
+        "If an athlete suddenly collapses and is unresponsive, treat it as sudden cardiac arrest until proven otherwise, and move immediately. This unit focuses on why cardiac collapse happens and how to spot it coming — the exact CPR technique and AED steps for the response itself are covered in full in the Emergency Action Plans & CPR/AED unit, and that response chain applies here without changes.",
+        "The short version: recognize a collapsed, unresponsive athlete who is not breathing normally as a life-threatening emergency, get 911 called and the AED retrieved at the same time, and follow your venue's Emergency Action Plan (EAP) — the written, practiced plan for exactly this situation. Every minute without defibrillation lowers the odds of survival, so speed in those first few minutes matters more than almost anything else in this unit."
+      ],
+      "list": [
+        "Recognize — sudden collapse, unresponsive to voice or touch, not breathing normally (this includes gasping, which is not normal breathing).",
+        "Call — 911 and the AED, sent for at the same time, ideally by two different people.",
+        "Follow the plan — your venue's Emergency Action Plan spells out who does what; don't wait for someone else to start it.",
+        "AED as fast as possible — attach it and follow its prompts the moment it arrives; every minute of delay reduces the chance of survival."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "This is not the place to improvise",
+        "text": "Never wait to 'see if the athlete comes around' after a sudden, unexplained collapse, and never assume someone else has already called 911. A collapsed, unresponsive athlete who is not breathing normally needs the emergency response started immediately — for full CPR technique and AED steps, see the Emergency Action Plans & CPR/AED unit."
+      }
+    },
+    {
+      "heading": "After an event: clearance and prevention",
+      "body": [
+        "An athlete who has fainted during exercise, had exertional chest pain, or survived a cardiac arrest does not get cleared to return by feeling fine, by a coach's judgment, or by resting vitals looking normal. Return to any activity requires evaluation and specific clearance from a cardiologist, sometimes after tests like an ECG (a recording of the heart's electrical activity) or an echocardiogram (an ultrasound picture of the heart's structure). Students and coaches never clear an athlete with a cardiac red flag to return — that decision belongs to a physician.",
+        "On the prevention side, teams and schools reduce risk by taking the pre-participation physical exam seriously, keeping an AED accessible and a rehearsed EAP in place at every practice and game (not just game day), and treating any of the four warning signs as a full stop rather than something to push through."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Which best describes sudden cardiac arrest (SCA)?",
+      "choices": [
+        "The heart's electrical system malfunctions and the heart abruptly stops pumping blood effectively",
+        "A blocked coronary artery causes part of the heart tissue to die (a heart attack)",
+        "A muscle cramp in the chest wall during exercise",
+        "Fainting caused by dehydration on a hot day"
+      ],
+      "answerIndex": 0,
+      "explanation": "SCA is an electrical malfunction that stops effective pumping, which is why it can strike suddenly with no warning. It's a different event from a heart attack (a blocked artery killing heart tissue) and from ordinary heat-related fainting, though all three can look alarming from the sideline."
+    },
+    {
+      "id": "q2",
+      "question": "What actually happens to the heart in hypertrophic cardiomyopathy (HCM)?",
+      "choices": [
+        "The heart wall becomes abnormally thin and weak",
+        "The heart muscle, especially the wall between the two lower pumping chambers, grows abnormally thick",
+        "A heart valve leaks blood backward into the wrong chamber",
+        "A coronary artery becomes fully blocked by plaque buildup"
+      ],
+      "answerIndex": 1,
+      "explanation": "HCM is a genetic thickening of the heart muscle, most notably the wall between the ventricles, which can block blood flow and disrupt the heart's electrical signal under the stress of hard exercise. A thin or weak wall, a leaking valve, and plaque blockage are all different conditions."
+    },
+    {
+      "id": "q3",
+      "question": "A 13-year-old is hit hard in the chest by a thrown ball and collapses immediately, with no prior heart symptoms or diagnosis. What most likely happened?",
+      "choices": [
+        "A bruised sternum causing pain but nothing more serious",
+        "An asthma attack triggered by the sudden exertion of the play",
+        "Commotio cordis — the blow landed at a vulnerable instant in the heartbeat and triggered a fatal arrhythmia in an otherwise normal heart",
+        "A concussion from the head snapping forward on impact"
+      ],
+      "answerIndex": 2,
+      "explanation": "Commotio cordis doesn't require any underlying heart condition — a chest impact timed to one narrow moment in the electrical cycle can trigger a dangerous rhythm in a completely healthy heart, which is why any collapse right after a direct chest blow is treated as a cardiac emergency."
+    },
+    {
+      "id": "q4",
+      "question": "Which of these should make an athlete stop and get evaluated before playing again?",
+      "choices": [
+        "Fainting or feeling like passing out during a sprint or hard drill",
+        "Feeling generally tired the day after a hard practice",
+        "Muscle soreness two days after a heavy leg workout",
+        "A slightly elevated heart rate while warming up"
+      ],
+      "answerIndex": 0,
+      "explanation": "Fainting or near-fainting DURING exertion is one of the four cardiac red flags and should never be brushed off, even once. Normal post-practice fatigue, delayed muscle soreness, and a warm-up heart rate rise are all expected exercise responses, not warning signs."
+    },
+    {
+      "id": "q5",
+      "question": "An athlete fainted once during a hard conditioning run last month but doesn't mention it on his pre-participation physical exam because he's afraid of being held out. Why is this dangerous?",
+      "choices": [
+        "It isn't dangerous — the physical exam alone will catch any heart problem regardless of what he says",
+        "Coaches always independently verify every answer with the athlete's teammates",
+        "The PPE only asks about injuries, not about fainting or chest pain",
+        "The PPE can only catch what the athlete is honest about — hiding a real symptom removes the one built-in chance to screen for a serious problem before it happens on the field"
+      ],
+      "answerIndex": 3,
+      "explanation": "The questionnaire portion of the PPE is often the only clue that prompts further testing or a cardiology referral, because a routine exam alone frequently can't detect these conditions. An undisclosed fainting episode simply doesn't get investigated — the screening system depends entirely on honest answers."
+    },
+    {
+      "id": "q6",
+      "question": "An athlete collapses at practice and is unresponsive. What should happen first?",
+      "choices": [
+        "Wait about a minute to see if he sits up on his own",
+        "Recognize the collapse as a possible cardiac emergency, call 911, and start your venue's Emergency Action Plan immediately",
+        "Note what happened and mention it to the coach after practice ends",
+        "Check for a pulse for a full 2 minutes before deciding what to do"
+      ],
+      "answerIndex": 1,
+      "explanation": "A sudden, unresponsive collapse is treated as a life-threatening emergency the moment it happens — call 911 and start the EAP right away. Waiting to see if the athlete recovers, delaying until later, or spending minutes checking for a pulse all cost precious time that lowers the odds of survival."
+    },
+    {
+      "id": "q7",
+      "question": "About how much does an athlete's chance of survival drop for every minute that defibrillation (an AED shock) is delayed after collapse?",
+      "choices": [
+        "About 50%",
+        "About 1%",
+        "Roughly 7-10%",
+        "Survival odds don't change with time"
+      ],
+      "answerIndex": 2,
+      "explanation": "Survival drops roughly 7-10% for every minute defibrillation is delayed, which is exactly why getting the AED retrieved and attached as fast as possible — not waiting for EMS to arrive with one — is such a critical part of the response chain."
+    },
+    {
+      "id": "q8",
+      "question": "An athlete who collapsed during a game and was resuscitated wants to return to practice a week later, saying he feels totally fine. What should happen?",
+      "choices": [
+        "He must be evaluated and specifically cleared by a cardiologist before returning to any activity, no matter how he feels",
+        "Feeling fine a week later is enough evidence to return to full practice",
+        "A coach can clear him to return based on normal resting vital signs",
+        "He can ease back into practice gradually without seeing a doctor first"
+      ],
+      "answerIndex": 0,
+      "explanation": "Feeling fine says nothing about whether the underlying cause was found and treated — return after a cardiac event requires cardiologist evaluation and clearance, sometimes with tests like an ECG or echocardiogram. Coaches and students never make this call themselves."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Sudden cardiac arrest (SCA)",
+      "back": "The heart's electrical system malfunctions and the heart abruptly stops pumping blood effectively — different from a heart attack (blocked artery)."
+    },
+    {
+      "id": "f2",
+      "front": "Hypertrophic cardiomyopathy (HCM)",
+      "back": "A genetic condition where the heart muscle, especially the wall between the two lower chambers, grows abnormally thick — the most common structural cause of SCA in young athletes."
+    },
+    {
+      "id": "f3",
+      "front": "Coronary artery anomaly",
+      "back": "A coronary artery that starts or runs in an abnormal position and can get compressed during intense exercise, starving part of the heart of blood."
+    },
+    {
+      "id": "f4",
+      "front": "Arrhythmia",
+      "back": "An abnormal, potentially dangerous heart rhythm — can be caused by electrical wiring conditions (long QT, WPW) or by trauma (commotio cordis)."
+    },
+    {
+      "id": "f5",
+      "front": "Commotio cordis",
+      "back": "A blunt chest blow timed to one narrow, vulnerable instant in the heartbeat, triggering a fatal arrhythmia in an otherwise structurally normal heart."
+    },
+    {
+      "id": "f6",
+      "front": "Warning sign: exertional syncope",
+      "back": "Fainting or near-fainting DURING exercise (not after, from heat) — a red flag that always requires evaluation before returning to play."
+    },
+    {
+      "id": "f7",
+      "front": "Warning sign: exertional chest pain",
+      "back": "Chest pain or tightness that shows up specifically with hard effort — different from soreness from a hit or pulled muscle."
+    },
+    {
+      "id": "f8",
+      "front": "Warning sign: disproportionate shortness of breath",
+      "back": "Struggling to breathe far more than teammates doing the same effort, with no asthma or illness to explain it."
+    },
+    {
+      "id": "f9",
+      "front": "Warning sign: family history",
+      "back": "A parent, sibling, or close relative who died suddenly and unexplained before age 50, especially during exercise."
+    },
+    {
+      "id": "f10",
+      "front": "Pre-participation physical exam (PPE)",
+      "back": "A screening exam and health history questionnaire before sport clearance; it can only catch what the athlete honestly reports."
+    },
+    {
+      "id": "f11",
+      "front": "Response to a sudden athlete collapse",
+      "back": "Recognize it as a cardiac emergency, call 911 and get the AED at the same time, and follow your venue's Emergency Action Plan immediately — see the Emergency Action Plans & CPR/AED unit for full technique."
+    },
+    {
+      "id": "f12",
+      "front": "Survival drop per minute without defibrillation",
+      "back": "Roughly 7-10% lower survival for every minute an AED shock is delayed after collapse — speed in the first minutes matters most."
+    }
+  ]
+}
