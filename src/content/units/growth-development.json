@@ -1,0 +1,267 @@
+{
+  "id": "growth-development",
+  "title": "Growing Athletes: Growth Plates & Maturation",
+  "category": "Medical Conditions & Special Populations",
+  "strand": "growth-development",
+  "gradeBand": "9-10",
+  "summary": "Understand why a growing athlete's skeleton is genuinely different from an adult's, and why the same fall that sprains a coach's ankle can fracture a teenager's growth plate.",
+  "minutes": 16,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.Anchor.6"],
+  "sections": [
+    {
+      "heading": "What's a growth plate?",
+      "body": [
+        "If you look at an X-ray of a teenager's arm or leg, you'll see something an adult's X-ray doesn't have: a thin gap near each end of the long bones. That gap is the growth plate — also called the physis (pronounced FIZZ-iss) — a layer of cartilage, a softer, more flexible tissue than solid bone. It sits near each end of a long bone (like the femur, tibia, or the bones of the forearm), and it's the site where new bone tissue is added, which is exactly how a bone gets longer as an athlete grows.",
+        "Every growing athlete has open growth plates in dozens of spots — wrists, knees, ankles, shoulders, fingers — anywhere a long bone meets a joint. They stay open through childhood and adolescence and gradually close (harden into solid bone, a process called fusion) once an athlete reaches skeletal maturity — roughly the mid-to-late teens, though the exact age varies quite a bit person to person, and tends to happen earlier in girls than in boys."
+      ],
+      "image": {
+        "asset": "growth-development-physis-anatomy.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Cross-section illustration of a single long bone (e.g. a femur) shown upright, split to reveal internal structure. Label three zones from end to end: the rounded end cap ('epiphysis'), a distinct thin cartilage band near each end shaded in a contrasting color and labeled 'growth plate (physis),' and the long shaft in between labeled 'diaphysis.' Show a growth plate at both the top and bottom ends of the bone. Clean medical-illustration style, simple labels, neutral bone color with the cartilage bands clearly highlighted.",
+        "alt": "Diagram of a long bone cross-section showing the growth plates (physes) as cartilage bands near each end, between the epiphysis and the diaphysis.",
+        "location": "public/images/units/growth-development/"
+      }
+    },
+    {
+      "heading": "The weak link in a growing skeleton",
+      "body": [
+        "Here's the part every student athletic trainer needs to know cold: cartilage is weaker than the ligaments and tendons that cross a joint. In an adult, whose growth plates have already closed into solid bone, a hard twist or fall at a joint usually finds the ligament as the weakest link — the result is a sprain. In a growing teenager, the still-open growth plate near that same joint can actually be weaker than the ligament attached right next to it.",
+        "That means the exact same fall, twist, or direct blow that would sprain an adult's ankle, knee, or wrist can instead fracture a teenager's growth plate. This is why 'it's just a sprain' is a dangerous assumption to make about a younger athlete before it's actually been checked out — a growth plate fracture can look almost identical to a sprain on the sideline: swelling, pain, trouble bearing weight. The first-aid response to any suspected fracture is covered in the Fractures & Dislocations unit; what changes here is who needs to make the call on what's actually injured."
+      ],
+      "list": [
+        "Common sites for acute growth-plate injuries in young athletes: the wrist (falling onto an outstretched hand), the ankle, the fingers, and the knee.",
+        "The mechanisms are the same ones that cause ordinary sprains — a fall, a twist, a direct blow near a joint — which is exactly why they're easy to mistake for 'just a sprain.'"
+      ]
+    },
+    {
+      "heading": "Recognizing an acute growth-plate injury",
+      "body": [
+        "You can't confirm a growth plate fracture without an X-ray, but you can recognize when one is possible. The mechanism looks like a routine sprain — a fall, a twist, or a direct blow near a joint — so the exam is what tells you to be more cautious."
+      ],
+      "list": [
+        "Point tenderness directly over the bone near or at the joint line, not just over the ligament on the side of the joint.",
+        "Swelling that shows up quickly right at that spot.",
+        "Pain with any movement of the joint, and often reluctance to bear weight or use the limb at all.",
+        "In more severe cases, visible deformity or a limb that looks angled differently than the other side."
+      ]
+    },
+    {
+      "heading": "Overuse growth-plate injuries: when 'growing pains' aren't just growing pains",
+      "body": [
+        "Not every growth-plate problem comes from one dramatic fall. Growth plates are also where tendons attach to bone, and a strong tendon repeatedly pulling on that softer cartilage during running, jumping, or throwing can irritate and inflame it over weeks — a pattern called apophysitis (a traction injury at a growth plate, rather than a full fracture).",
+        "These conditions are common enough in growing athletes that coaches sometimes wave them off as ordinary growing pains. They deserve real attention instead — for more on the training-load side of preventing and managing them, see the Overuse Injuries unit."
+      ],
+      "list": [
+        "Osgood-Schlatter disease — pain and a tender, sometimes visibly bumped-up spot below the kneecap, where the patellar tendon pulls on the growth plate at the top of the shin bone. Common in jumping and running sports during the early-to-mid teens.",
+        "Sever's disease — heel pain, where the Achilles tendon pulls on the growth plate at the back of the heel bone. Common in soccer, cross country, and other running sports, especially in cleats with little heel cushioning.",
+        "Little League elbow and Little League shoulder — pain on the inside of the elbow or in the shoulder from the repetitive stress of throwing, loading the growth plates hardest during pitching or overhand throwing motions."
+      ],
+      "image": {
+        "asset": "growth-development-overuse-sites.webp",
+        "ratio": "16:9",
+        "background": "transparent",
+        "description": "Simple front-view outline of a young athlete's body with three hotspot circles connected by leader lines to labels: one at the front of the knee just below the kneecap labeled 'Osgood-Schlatter — tibial tubercle,' one at the back of the heel labeled 'Sever's disease — heel growth plate,' and one at the inside of the elbow labeled 'Little League elbow.' Clean flat infographic style, minimal color palette, no facial detail needed.",
+        "alt": "Body diagram marking three common growth-plate overuse injury sites: the knee (Osgood-Schlatter), the heel (Sever's disease), and the elbow (Little League elbow).",
+        "location": "public/images/units/growth-development/"
+      }
+    },
+    {
+      "heading": "Why these need a real evaluation",
+      "body": [
+        "The reason growth-plate injuries — acute or overuse — get more caution than an equivalent adult injury isn't because they're usually dangerous. The overwhelming majority heal completely. It's because the growth plate is actively building bone, and if a fracture through it is severe, displaced, or repeatedly aggravated without proper care, in rare cases it can disturb that growth — leading to a bone that ends up growing unevenly, more slowly, or unequal in length compared to the other side. This outcome is uncommon, but it's exactly the kind of thing that's easy to prevent with early evaluation and very hard to fix once it happens."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Red flags — refer, don't assume 'it's just a sprain'",
+        "text": "Refer a growing athlete for evaluation any time you see: point tenderness directly over bone near a joint (not just over a ligament) after a fall or twist, visible deformity, an inability to bear weight or use the limb, swelling that shows up fast right at a joint line, or overuse pain (like knee or heel pain) that isn't improving after a few days of reduced activity. When the growth plate might be involved, 'wait and see' is the wrong call — get it checked."
+      }
+    },
+    {
+      "heading": "The growth spurt: a built-in injury-risk window",
+      "body": [
+        "Even without any specific injury, the growth spurt itself — the stretch of months during adolescence when an athlete gains height fastest — changes injury risk. Bones lengthen quickly, but the muscles and tendons crossing them don't stretch out to match at the same speed. The result is temporary tightness (a hamstring or quad that suddenly feels shorter relative to a longer thigh bone), a short-term dip in coordination and balance, and a measurable jump in overuse injuries like the ones above.",
+        "Training loads should adapt during this window, not double down. A team that keeps piling on the same volume and intensity through an athlete's growth spurt, assuming 'they're fine, they always have been,' is training a body that has temporarily become more injury-prone, not less."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Spotting a growth spurt in real time",
+        "text": "Sudden clumsiness on familiar drills, complaints that a muscle 'feels tight' with no clear cause, and outgrowing shoes or cleats mid-season are all common signs an athlete is in a growth spurt. It's a good cue to ease off load a bit and add extra flexibility work — not push through it."
+      }
+    },
+    {
+      "heading": "Early vs. late maturers: same age, different bodies",
+      "body": [
+        "Within any single grade, athletes can be biologically years apart in physical maturity even though they're the same age. Some teens hit their growth spurt and finish most of their physical development early (early maturers); others develop on a noticeably later timeline (late maturers). Both patterns are completely normal — there's no 'right' age for this to happen, and it varies enormously from person to person.",
+        "This matters for two reasons. In collision and contact sports, matching athletes purely by grade or age can put a smaller, less physically mature athlete up against a much bigger, stronger, already-matured one — a real size and force mismatch that raises injury risk. And on the flip side, a smaller or slower-developing 14-year-old is not a permanently smaller or slower athlete — many late maturers catch up to, and surpass, early-maturing peers once their own growth spurt arrives. Writing off a late bloomer's long-term potential based on one season is just as much a mistake as ignoring a size mismatch on the field."
+      ]
+    },
+    {
+      "heading": "Recognize, protect, refer — and the good news",
+      "body": [
+        "None of this means every growing athlete needs to be pulled off the field for the rest of the season. Suspected growth-plate injuries follow the same rule as everything else in first aid: recognize a possible problem, protect the area (rest it, splint it, don't push through it), and refer to a physician or athletic trainer for an actual evaluation. Students and coaches don't diagnose growth-plate injuries on the sideline — an X-ray and a trained eye are what tell a sprain from a growth-plate fracture, or ordinary soreness from a case of Osgood-Schlatter that needs a training-load adjustment.",
+        "The genuinely good news: growing bodies heal fast, and the overwhelming majority of growth-plate injuries — acute or overuse — heal completely with proper care and cause zero long-term problems. Taking a sideline injury seriously for a few weeks is a small price for making sure a growing athlete's bones keep growing exactly the way they're supposed to."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is a growth plate (physis)?",
+      "choices": [
+        "A layer of cartilage near the ends of a long bone where new bone forms and the bone lengthens",
+        "A thick band of scar tissue that forms after a fracture heals",
+        "The hard outer shell covering the entire length of a bone",
+        "A type of ligament that connects two bones at a joint"
+      ],
+      "answerIndex": 0,
+      "explanation": "The growth plate (physis) is a layer of cartilage — softer than solid bone — located near each end of a long bone. It's where new bone tissue is added so the bone can lengthen during childhood and adolescence. It isn't scar tissue, a bone's outer shell, or a ligament."
+    },
+    {
+      "id": "q2",
+      "question": "Roughly when do growth plates finish closing (fusing into solid bone) in most people?",
+      "choices": [
+        "By age 8-9, for everyone",
+        "Not until the mid-30s",
+        "They never close — they stay open for life",
+        "Mid-to-late teens, though the exact timing varies by person and tends to be earlier in girls than boys"
+      ],
+      "answerIndex": 3,
+      "explanation": "Growth plates typically close around the mid-to-late teens, but the exact age varies quite a bit person to person and closes earlier on average in girls than boys. They don't close in early childhood, and they don't stay open into adulthood — once skeletal maturity is reached, they're gone."
+    },
+    {
+      "id": "q3",
+      "question": "A 14-year-old rolls his ankle during practice. On exam, he has point tenderness directly over the bone right at the ankle joint, not just over the ligament. A coach says, 'It's just a sprain, tape it and get back out there.' What's the right move?",
+      "choices": [
+        "Tape it and let him return, since ankle sprains are common and heal fine",
+        "Ice it for 20 minutes and re-check before deciding",
+        "Treat it as a possible growth-plate injury and refer for evaluation before he returns",
+        "Have him try to walk on it — if he can, it's safe to play"
+      ],
+      "answerIndex": 2,
+      "explanation": "In a growing athlete, the growth plate can be weaker than the nearby ligament, so the same twist that would sprain an adult's ankle can fracture a teen's growth plate. Bony point tenderness right at the joint is exactly the finding that should trigger a real evaluation rather than an assumption — 'it's just a sprain' isn't a safe call to make on the sideline here."
+    },
+    {
+      "id": "q4",
+      "question": "Osgood-Schlatter disease is best described as...",
+      "choices": [
+        "A traction injury at the growth plate below the kneecap, where the patellar tendon repeatedly pulls on the shin bone",
+        "A ligament tear inside the knee joint",
+        "A stress fracture of the femur",
+        "An infection of the kneecap"
+      ],
+      "answerIndex": 0,
+      "explanation": "Osgood-Schlatter disease is an overuse traction injury (apophysitis) at the growth plate where the patellar tendon attaches below the kneecap — common in jumping and running sports during the early-to-mid teens. It isn't a ligament tear, a stress fracture, or an infection."
+    },
+    {
+      "id": "q5",
+      "question": "A cross-country runner complains of heel pain that's worse in her cleats and eases somewhat with rest. What's the most likely explanation, and what should happen?",
+      "choices": [
+        "An ankle sprain — tape and return to running immediately",
+        "A torn Achilles tendon requiring emergency surgery",
+        "Normal foot pain from new running shoes, safe to ignore",
+        "Sever's disease, a growth-plate traction injury at the heel — reduce aggravating load and have it evaluated"
+      ],
+      "answerIndex": 3,
+      "explanation": "Heel pain in a running or cleated sport during the growing years, especially pain that eases with rest, is the classic pattern for Sever's disease — a growth-plate traction injury from the Achilles tendon. It deserves load reduction and evaluation, not a shrug or an ankle-sprain assumption."
+    },
+    {
+      "id": "q6",
+      "question": "Why does an athlete's growth spurt increase injury risk, even without any single traumatic event?",
+      "choices": [
+        "Bones lengthen faster than the muscles and tendons around them can adapt, causing temporary tightness and a coordination dip",
+        "Growth spurts make bones permanently weaker for life",
+        "Growth hormone directly causes ligament tears",
+        "Growth spurts only affect an athlete's height, not their injury risk"
+      ],
+      "answerIndex": 0,
+      "explanation": "During a growth spurt, bones lengthen faster than the muscle-tendon units crossing them can stretch out, producing temporary tightness, a short-term coordination dip, and a real jump in overuse injuries. It's a normal, temporary state — not a permanent weakness — and training loads should adjust for it."
+    },
+    {
+      "id": "q7",
+      "question": "Two 14-year-old football players are the same age, but one has already gone through his growth spurt and is much bigger and stronger, while the other hasn't started his yet. Why does this matter for safety?",
+      "choices": [
+        "It doesn't matter — same age always means a fair, safe matchup",
+        "Same age doesn't mean same size or maturity, and mismatched size/strength in a collision sport raises injury risk for the less-developed athlete",
+        "The smaller athlete should quit the sport",
+        "The bigger athlete is at greater injury risk, not the smaller one"
+      ],
+      "answerIndex": 1,
+      "explanation": "Early and late maturers can be years apart in physical development at the exact same age. In collision sports, that gap can create real size and force mismatches that raise injury risk for the less physically mature athlete — matching purely by grade or age doesn't account for it."
+    },
+    {
+      "id": "q8",
+      "question": "Which statement about growth-plate injuries in young athletes is most accurate?",
+      "choices": [
+        "Nearly all of them require season-ending surgery",
+        "They should always be ignored since kids heal on their own",
+        "The overwhelming majority heal completely with proper evaluation and care",
+        "They only happen to athletes over the age of 18"
+      ],
+      "answerIndex": 2,
+      "explanation": "The good news in this unit: growing bodies heal fast, and the large majority of growth-plate injuries — acute or overuse — heal completely with proper evaluation and care. That's exactly why 'recognize, protect, refer' rather than 'ignore' or 'panic' is the right response."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Growth plate (physis)",
+      "back": "A layer of cartilage near the ends of a long bone where new bone forms, allowing the bone to lengthen during childhood and adolescence."
+    },
+    {
+      "id": "f2",
+      "front": "Skeletal maturity",
+      "back": "The point when growth plates finish closing (fusing into solid bone) — roughly the mid-to-late teens, varying by person and generally earlier in girls than boys."
+    },
+    {
+      "id": "f3",
+      "front": "Why growth plates are the 'weak link'",
+      "back": "Cartilage is weaker than nearby ligaments and tendons — the same force that sprains an adult's ligament can fracture a growing teen's open growth plate instead."
+    },
+    {
+      "id": "f4",
+      "front": "Apophysitis",
+      "back": "An overuse traction injury at a growth plate, caused by a tendon repeatedly pulling on the immature cartilage rather than a single fracture event."
+    },
+    {
+      "id": "f5",
+      "front": "Osgood-Schlatter disease",
+      "back": "A traction injury at the growth plate below the kneecap, where the patellar tendon pulls on the top of the shin bone. Common in jumping/running sports, early-to-mid teens."
+    },
+    {
+      "id": "f6",
+      "front": "Sever's disease",
+      "back": "A traction injury at the heel growth plate, where the Achilles tendon pulls on the heel bone. Common in running and cleated sports."
+    },
+    {
+      "id": "f7",
+      "front": "Little League elbow / shoulder",
+      "back": "Overuse growth-plate injury from repetitive throwing, affecting the elbow's inner growth plate or the shoulder's growth plate in young pitchers/throwers."
+    },
+    {
+      "id": "f8",
+      "front": "Acute growth-plate injury red flag",
+      "back": "Point tenderness directly over bone near a joint (not just over a ligament) after a fall or twist — refer for evaluation rather than assuming a sprain."
+    },
+    {
+      "id": "f9",
+      "front": "Growth spurt (rapid-height period)",
+      "back": "The stretch of adolescence when height increases fastest; bones lengthen faster than muscles/tendons adapt, causing temporary tightness, a coordination dip, and higher overuse-injury risk."
+    },
+    {
+      "id": "f10",
+      "front": "Early vs. late maturer",
+      "back": "Normal variation in when a teen goes through puberty and their growth spurt. Same age does not mean same size or physical maturity."
+    },
+    {
+      "id": "f11",
+      "front": "Why missed growth-plate injuries matter",
+      "back": "Rare but real risk: a severe, displaced, or repeatedly aggravated growth-plate injury can disturb bone growth, causing uneven growth or a limb-length difference."
+    },
+    {
+      "id": "f12",
+      "front": "Growth-plate injury prognosis",
+      "back": "The overwhelming majority of growth-plate injuries — acute or overuse — heal completely with proper evaluation and care. Recognize, protect, refer."
+    }
+  ]
+}

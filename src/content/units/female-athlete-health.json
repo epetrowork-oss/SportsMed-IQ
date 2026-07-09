@@ -1,0 +1,294 @@
+{
+  "id": "female-athlete-health",
+  "title": "Fueling & the Female Athlete: RED-S and the Energy Equation",
+  "category": "Medical Conditions & Special Populations",
+  "strand": "female-athlete-health",
+  "gradeBand": "9-10",
+  "summary": "Learn why the body needs enough fuel for both training and everyday health, what happens when it doesn't get enough, and how to notice — and respond to — the warning signs in a teammate.",
+  "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.3", "CTE.HSMT.B.4.5", "CTE.HSMT.Anchor.6"],
+  "sections": [
+    {
+      "heading": "Fueling is a performance skill",
+      "body": [
+        "Every day, your body spends energy on two different jobs. One is training — practices, games, lifting, conditioning. The other is everything else it takes to be a healthy, functioning human: growing, building bone, regulating hormones, repairing tissue, fighting off illness, even concentrating in class. Both jobs run at the same time, and both need real fuel — food.",
+        "Sports medicine has a term for what's left over for that second job once training's energy cost is covered: energy availability. When an athlete eats enough to cover both training and baseline body functions, everything works the way it's supposed to. Fueling well isn't about weight or appearance — it's a performance skill, exactly like sleep or hydration. A well-fueled body trains harder, recovers faster, and adapts to training instead of breaking down.",
+        "Here's the part that surprises a lot of athletes: undereating isn't always a choice someone makes on purpose. Training load can increase — a new season, a growth spurt, a jump to a more competitive team — without a matching increase in food. The body can end up running short on fuel even when nobody intended it to."
+      ]
+    },
+    {
+      "heading": "When fuel falls short: low energy availability",
+      "body": [
+        "When energy coming in chronically doesn't cover both training and basic body functions, sports medicine calls it low energy availability (LEA) — not enough fuel left over once training's cost is subtracted. The body responds the way it's built to respond to any fuel shortage: it protects the systems it needs to survive right now — heart, brain, muscles that move — and quietly powers down systems that aren't needed minute-to-minute, like reproductive function, bone rebuilding, and immune defenses.",
+        "That's a survival response, not a malfunction. But if it continues for weeks or months, the systems it powers down start to show real, measurable costs — which is exactly what the rest of this unit covers."
+      ],
+      "list": [
+        "Unintentional undereating — training volume goes up (a new season, a growth spurt, more intense training) without food intake increasing to match. No one decided to under-fuel; it just happened.",
+        "Intentional restriction — cutting food on purpose, often tied to appearance pressure, a coach's or teammate's comment about body composition, or a mistaken belief that leaner automatically means faster.",
+        "Disordered eating patterns — a more serious, clinical-level relationship with food that needs professional care. This unit does not cover the details of disordered eating behaviors; if you're worried a teammate may be dealing with this, the response is the same either way — tell a trusted adult."
+      ],
+      "image": {
+        "asset": "female-athlete-health-energy-balance.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Flat infographic bar chart, no human figures. Left bar labeled 'Energy In' built from simple food icons (grain, fruit, plate). Right side shows two stacked bar segments labeled 'Training' (a sneaker/stopwatch icon) and 'Body Functions' (small icon cluster: heart, bone, gear for metabolism, brain). Show two versions side by side: a 'balanced' pair of bars where Energy In matches Energy Out, and a shorter 'Energy In' bar next to the same-height Energy Out bar labeled 'low energy availability' with the Body Functions segment shaded as 'shortfall.' Clean, simple color-coded infographic style — no scales, no bodies, no weight numbers.",
+        "alt": "Infographic comparing balanced energy intake to a shortfall, showing energy split between training and baseline body functions like heart, bone, and metabolism.",
+        "location": "public/images/units/female-athlete-health/"
+      }
+    },
+    {
+      "heading": "RED-S: the umbrella term, and the Triad at its core",
+      "body": [
+        "Relative Energy Deficiency in Sport (RED-S) is the modern, umbrella medical term for what happens when low energy availability disrupts multiple body systems at once — not just one. It's a broader concept than any single symptom, because chronic under-fueling rarely affects just one thing.",
+        "The Female Athlete Triad is the classic, best-known pattern inside RED-S: three connected pieces — low energy availability, menstrual dysfunction (changes or disruption to a normal menstrual cycle), and low bone density — that tend to show up together and were the first version of this problem that sports medicine identified and named, which is why it's historically the most recognized pattern in female athletes specifically.",
+        "Important: RED-S is not exclusive to female athletes. Male athletes can experience the same energy deficiency and many of the same consequences — bone stress injuries, hormonal disruption, impaired performance, weakened immunity. This unit centers the female athlete because the Triad pattern is the most established and easiest to recognize, not because male athletes are somehow protected from the underlying problem."
+      ],
+      "list": [
+        "Bone health — weaker bone remodeling, higher stress fracture risk.",
+        "Hormonal and menstrual function — irregular or missing periods.",
+        "Immune function — getting sick more often, slower recovery from illness.",
+        "Metabolic rate — the body slows itself down to conserve energy.",
+        "Cardiovascular health — potential effects on heart function over time.",
+        "Growth and development — a concern especially during the teen years.",
+        "Performance itself — the outcome under-fueling was often meant to improve usually gets worse, not better."
+      ],
+      "image": {
+        "asset": "female-athlete-health-red-s-systems.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Flat hub-and-spoke infographic wheel, no human figures. Center circle labeled 'Low Energy Availability.' Seven to eight spokes radiate out to labeled icon boxes: 'Bone Health' (bone icon), 'Menstrual/Hormonal Function' (hormone/molecule icon), 'Immune Function' (shield icon), 'Metabolic Rate' (gauge/gear icon), 'Heart Health' (heart icon), 'Growth' (growth-chart arrow icon), 'Mood' (speech-bubble icon), 'Performance' (stopwatch/trophy icon). Clean, colorful, textbook-infographic style — purely conceptual, no bodies or weight imagery.",
+        "alt": "Hub-and-spoke diagram showing low energy availability at the center connected to bone health, hormonal/menstrual function, immune function, metabolic rate, heart health, growth, mood, and performance.",
+        "location": "public/images/units/female-athlete-health/"
+      }
+    },
+    {
+      "heading": "Menstrual health as a vital sign",
+      "body": [
+        "A regular menstrual cycle is one sign that a body has enough energy available to support normal hormone regulation — sports medicine treats it as a kind of vital sign, similar to how a normal pulse or blood pressure tells you a body system is working the way it should.",
+        "Here's a myth worth busting directly: some athletes believe that missing periods is just a normal side effect of training hard, or even a sign of dedication. It is not. A missed period, or periods becoming irregular, in an athlete who trains hard is the body sending a message that something needs attention — not a badge of fitness.",
+        "That message belongs with a doctor or athletic trainer, not a shrug. Bringing it up early is what allows a simple fix; ignoring it is what allows the underlying energy shortfall to keep affecting bone and other systems in the background."
+      ]
+    },
+    {
+      "heading": "Bone health: banking density now",
+      "body": [
+        "The teenage years are when the body builds most of its lifetime bone density — think of it as a banking period. Bone laid down now, while you're still growing, is largely what you carry into adulthood; the density you build (or fail to build) in high school is difficult to fully make up for later in life.",
+        "Low energy availability disrupts the hormones that support bone remodeling — the ongoing process of breaking down and rebuilding bone tissue. Without enough fuel and the right hormonal signals, bone doesn't rebuild and strengthen the way it should, even under a completely normal training load. The practical result is a higher risk of stress fractures: tiny cracks that develop in bone from repeated stress rather than one single traumatic hit.",
+        "A stress fracture here or there can simply be bad luck or a training-load issue. Frequent or recurrent stress fractures without an obvious explanation, though, is exactly the kind of pattern this unit is teaching you to notice."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Bones remember this decade",
+        "text": "Roughly 90% of adult peak bone mass is built by the late teens. Fueling well now isn't just about this season — it's a decades-long investment that's hard to make up for later."
+      },
+      "image": {
+        "asset": "female-athlete-health-bone-density.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-by-side cross-sectional illustration of trabecular (spongy) bone tissue only — no human figure or full skeleton, just a zoomed-in tissue cross-section, similar to a textbook bone-density panel. Left panel labeled 'Well-fueled bone' shows a dense, thick lattice of interconnected bone struts. Right panel labeled 'Low energy availability' shows a visibly thinner, more porous, sparser lattice of the same tissue type. Clean medical-illustration style, neutral color palette, no text beyond the two labels.",
+        "alt": "Cross-section comparison of dense, well-fueled trabecular bone tissue next to thinner, more porous bone tissue affected by low energy availability.",
+        "location": "public/images/units/female-athlete-health/"
+      }
+    },
+    {
+      "heading": "What a teammate or student aide can notice",
+      "body": [
+        "You're not expected to diagnose anything — that's not your role, and it's not possible to diagnose RED-S or the Triad just by watching someone at practice. What you can do is notice a pattern and know when it's worth mentioning to someone qualified to help."
+      ],
+      "list": [
+        "Performance decline despite training harder — the numbers moving the wrong way even though effort and training time are up, not down.",
+        "Frequent injuries, especially stress fractures, that don't fit the training load or keep recurring.",
+        "Always cold, always tired — fatigue that a normal night's rest doesn't fix, or feeling cold even in ordinary practice conditions.",
+        "A missed period mentioned in passing, or comments suggesting it's been a while since the last one.",
+        "Avoiding team meals or snacks, or noticeable anxiety around eating in front of others.",
+        "Preoccupation with food or body talk — frequent comments about calories, weight, or body image that go beyond normal conversation."
+      ]
+    },
+    {
+      "heading": "What to do: recognize, support, refer",
+      "body": [
+        "If you notice several of these signs together in a teammate, you have a real, useful role — but it's a specific and limited one, the same 'recognize, protect, refer' pattern used throughout this program for physical injuries.",
+        "Never comment on a teammate's body, weight, or what they're eating — even something meant as a compliment can land as pressure or scrutiny and can make the underlying problem worse. Don't try to confront a teammate or convince them to change anything yourself, and don't try to diagnose what you think is going on.",
+        "Instead, share what you've noticed privately with an athletic trainer, coach, or another trusted adult — describe the pattern you observed, not a diagnosis you've come up with on your own. Telling an adult is not betraying a teammate; it's how they get connected to people who are actually trained to help: a doctor, a registered dietitian, and an athletic trainer working together."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "If you notice these signs — tell a trusted adult",
+        "text": "Recurrent stress fractures, a missed or irregular period mentioned in passing, performance dropping despite harder training, or visible anxiety around food or the team's body talk are all signs worth acting on. Never comment on a teammate's body or food, never confront or try to diagnose it yourself — share your concern privately with an athletic trainer, coach, or parent and let a qualified professional take it from there. That referral is protection, not betrayal."
+      }
+    },
+    {
+      "heading": "Recovery is possible",
+      "body": [
+        "RED-S and the Female Athlete Triad are treatable, and outcomes are best when they're caught early. With the right care team — a physician, a registered dietitian, an athletic trainer, and supportive family — energy availability, menstrual function, and bone health can all recover.",
+        "The bigger-picture message is a positive one: food is fuel, and fueling well is a trainable skill, just like any other part of athletic performance. Athletes who restore their energy balance typically see their performance improve, not decline, once their body has what it needs to stop protecting itself and start adapting to training again.",
+        "If you recognize some of these signs in yourself while reading this, the exact same path applies to you: tell a trusted adult — a parent, athletic trainer, coach, or doctor. That's the first, and most powerful, step toward feeling and performing better."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Support without commenting on the body",
+        "text": "You can be a great teammate here without ever mentioning weight, food, or appearance. Invite someone to a team meal, sit with them, keep things normal and inclusive — and let the trained professionals handle the parts that need medical expertise."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What does \"energy availability\" mean in sports medicine?",
+      "choices": [
+        "The energy left over for basic body functions after training's energy cost is subtracted from what an athlete eats",
+        "The total number of calories an athlete burns during a single practice",
+        "How much body fat an athlete has compared to their teammates",
+        "How energetic or motivated an athlete feels before competing"
+      ],
+      "answerIndex": 0,
+      "explanation": "Energy availability specifically means what's left for baseline body functions (growth, hormones, bone, immunity) once training's energy cost is covered. It's about fuel balance, not motivation or body composition."
+    },
+    {
+      "id": "q2",
+      "question": "Which term is the modern umbrella concept for low energy availability disrupting multiple body systems, and which pattern is the classic, best-recognized version of it in female athletes?",
+      "choices": [
+        "Overtraining syndrome is the umbrella term; burnout is the classic pattern",
+        "RED-S (Relative Energy Deficiency in Sport) is the umbrella term; the Female Athlete Triad is the classic pattern within it",
+        "The Female Athlete Triad is the umbrella term; RED-S is one example of it",
+        "Energy availability and RED-S mean the exact same thing with no distinction"
+      ],
+      "answerIndex": 1,
+      "explanation": "RED-S is the broader umbrella covering effects on bone, hormones, immunity, metabolism, and more. The Female Athlete Triad — low energy availability, menstrual dysfunction, low bone density — is the classic, historically best-known pattern inside that larger picture."
+    },
+    {
+      "id": "q3",
+      "question": "A distance runner hasn't had a period in several months and tells a teammate it's \"just normal for someone who trains this much.\" What's the accurate response?",
+      "choices": [
+        "She's right — missed periods are an expected, harmless part of serious training",
+        "It only matters if it has been missing for at least a full year",
+        "A missed period is a message worth bringing to a doctor or athletic trainer, not a normal side effect of hard training",
+        "It's a private matter and no one else should ever be told"
+      ],
+      "answerIndex": 2,
+      "explanation": "Missing periods in an athlete is not a normal or harmless training effect — it's a signal the body is short on energy for normal hormone regulation, and it belongs with a doctor or athletic trainer, not dismissed as dedication."
+    },
+    {
+      "id": "q4",
+      "question": "Why are the teenage years an especially important window for bone health?",
+      "choices": [
+        "Bones stop growing entirely after age 12, so nothing done later matters",
+        "The body builds most of its lifetime peak bone density during this period, and it's hard to make up later",
+        "Bone density only matters for athletes over age 30",
+        "Bones are at their strongest naturally during the teen years regardless of nutrition"
+      ],
+      "answerIndex": 1,
+      "explanation": "The teenage years are when most lifetime peak bone density is built — a 'banking' period. Low energy availability during this window can leave a density deficit that's difficult to fully recover later, which is why fueling well now matters long-term, not just for this season."
+    },
+    {
+      "id": "q5",
+      "question": "A teammate has had two stress fractures this season, seems tired and cold most of the time, and has been skipping team meals. What does this pattern most likely represent?",
+      "choices": [
+        "Nothing worth mentioning — stress fractures and skipping meals happen to everyone sometimes",
+        "Possible signs of RED-S worth quietly sharing with an athletic trainer or coach",
+        "Proof she has an eating disorder that you should confront her about",
+        "A normal result of being a highly dedicated athlete"
+      ],
+      "answerIndex": 1,
+      "explanation": "Recurrent stress fractures plus fatigue, feeling cold, and avoiding team meals is exactly the noticing pattern this unit teaches — worth a private, non-diagnostic word to an athletic trainer or coach, not dismissal, confrontation, or a self-made diagnosis."
+    },
+    {
+      "id": "q6",
+      "question": "You've noticed several RED-S warning signs in a teammate. What is the correct next step?",
+      "choices": [
+        "Tell her directly that she needs to eat more and stop restricting food",
+        "Post about your concern in the team group chat so everyone is aware",
+        "Share what you've observed privately with an athletic trainer, coach, or another trusted adult",
+        "Wait to see if the signs go away on their own before doing anything"
+      ],
+      "answerIndex": 2,
+      "explanation": "The role of a teammate or student aide is to recognize and refer privately — not confront, diagnose, publicize, or wait and hope. A private word to a trusted adult connects her to people trained to actually help."
+    },
+    {
+      "id": "q7",
+      "question": "Which statement about RED-S and male athletes is accurate?",
+      "choices": [
+        "RED-S and low energy availability only occur in female athletes",
+        "Male athletes can experience the same energy deficiency and many of the same consequences, even though the classic Triad pattern is most recognized in female athletes",
+        "Male athletes are biologically protected from any effects of chronic under-fueling",
+        "RED-S in male athletes only involves muscle loss and nothing else"
+      ],
+      "answerIndex": 1,
+      "explanation": "RED-S is not exclusive to female athletes — males can experience bone stress injuries, hormonal disruption, and impaired performance from the same energy shortfall. The Triad is centered on female athletes here because it's the most established, recognizable pattern, not because males are immune."
+    },
+    {
+      "id": "q8",
+      "question": "An athlete worries that once bone density or menstrual function is affected, the damage is permanent. What does this unit's guidance say?",
+      "choices": [
+        "She's correct — once affected, these changes cannot be improved at all",
+        "It only matters for athletes who plan to compete beyond high school",
+        "With the right care team (physician, dietitian, athletic trainer, family), energy availability, menstrual function, and bone health can recover, especially if caught early",
+        "Recovery is possible but performance will permanently suffer as a result"
+      ],
+      "answerIndex": 2,
+      "explanation": "RED-S and the Triad are treatable, and early recognition improves outcomes. With proper medical, nutritional, and family support, energy availability and its downstream effects can recover — and performance typically improves as the body stops conserving energy and starts adapting to training again."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Energy availability",
+      "back": "What's left over for basic body functions (growth, hormones, bone, immunity) after subtracting training's energy cost from what an athlete eats."
+    },
+    {
+      "id": "f2",
+      "front": "RED-S (Relative Energy Deficiency in Sport)",
+      "back": "The modern umbrella term for low energy availability disrupting multiple body systems at once — bone, hormones, immunity, metabolism, heart, growth, and performance."
+    },
+    {
+      "id": "f3",
+      "front": "Female Athlete Triad",
+      "back": "The classic pattern within RED-S: low energy availability, menstrual dysfunction, and low bone density — three connected pieces that tend to appear together."
+    },
+    {
+      "id": "f4",
+      "front": "Does RED-S affect male athletes?",
+      "back": "Yes. Males can experience the same energy deficiency and many of the same consequences; the Triad is centered on female athletes because it's the most established, recognizable pattern, not because males are protected."
+    },
+    {
+      "id": "f5",
+      "front": "Menstrual cycle as a vital sign",
+      "back": "A regular period is a sign the body has enough energy for normal hormone regulation — sports medicine treats it like a vital sign, similar to pulse or blood pressure."
+    },
+    {
+      "id": "f6",
+      "front": "Myth: missed periods are normal for hard-training athletes",
+      "back": "False. A missed or irregular period in an athlete is a message the body needs attention — it belongs with a doctor or athletic trainer, not treated as a badge of dedication."
+    },
+    {
+      "id": "f7",
+      "front": "Bone density \"banking\" window",
+      "back": "Roughly 90% of adult peak bone mass is built by the late teens — bone laid down now is largely what a person carries for decades."
+    },
+    {
+      "id": "f8",
+      "front": "Stress fracture",
+      "back": "A tiny crack in bone from repeated stress rather than one traumatic hit. Recurrent stress fractures without an obvious explanation are a RED-S warning sign."
+    },
+    {
+      "id": "f9",
+      "front": "Signs a teammate may be at risk",
+      "back": "Performance decline despite harder training, frequent stress fractures, always cold/tired, a missed period mentioned in passing, avoiding team meals, or preoccupation with food/body talk."
+    },
+    {
+      "id": "f10",
+      "front": "What NOT to do as a teammate",
+      "back": "Never comment on someone's body, weight, or food, and never confront or diagnose them yourself — even a well-meant comment can add pressure."
+    },
+    {
+      "id": "f11",
+      "front": "What TO do as a teammate",
+      "back": "Recognize the pattern, then share your concern privately with an athletic trainer, coach, or trusted adult. Telling an adult protects a teammate — it isn't betraying them."
+    },
+    {
+      "id": "f12",
+      "front": "Recovery outlook",
+      "back": "RED-S and the Triad are treatable, especially caught early. With a physician, registered dietitian, athletic trainer, and family support, energy availability, menstrual function, and bone health can all recover."
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "id": "infectious-disease",
+  "title": "Infectious Disease in Sports: Skin, Blood & the Locker Room",
+  "category": "Medical Conditions & Special Populations",
+  "strand": "infectious-disease",
+  "gradeBand": "9-10",
+  "summary": "Learn how infections actually spread through a team — skin contact, shared gear, and blood — and the recognize-protect-refer habits that stop an outbreak before it starts.",
+  "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.3", "CTE.HSMT.Anchor.6", "CTE.HSMT.B.4.5"],
+  "sections": [
+    {
+      "heading": "How infections travel through a team",
+      "body": [
+        "Sports teams create ideal conditions for germs to spread between people: athletes are in close, sweaty contact for hours a week, they share locker rooms, and they touch the same equipment, mats, and surfaces. An infection that would spread slowly between strangers can move through an entire roster in days.",
+        "Three routes matter most for team sports: skin-to-skin contact (wrestling, football, and rugby put bare skin against bare skin for extended periods during pinning, tackling, and grappling), shared personal items (towels, razors, water bottles, and mouthguards move germs directly from one person's skin or mouth to another's), and shared surfaces or equipment (wrestling mats, weight benches, pads, and helmets can hold bacteria, fungi, or viruses long after the last person touched them)."
+      ],
+      "image": {
+        "asset": "infectious-disease-transmission-routes.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Three labeled panels showing team-setting transmission routes. Panel 1 'Skin-to-skin contact': two wrestlers grappling on a mat with the areas of skin contact highlighted. Panel 2 'Shared personal items': a small rack or shelf holding a towel, razor, water bottle, and mouthguard, with a simple arrow between two teammate icons showing an item passing from one to the other. Panel 3 'Shared surfaces and equipment': a wrestling mat and a weight bench with a small magnified circle showing microbe icons surviving on the surface. Clean instructional-illustration style, no distressing detail.",
+        "alt": "Diagram of three ways infections spread on a sports team: skin-to-skin contact, shared personal items, and shared equipment or mats.",
+        "location": "public/images/units/infectious-disease/"
+      }
+    },
+    {
+      "heading": "Skin infections: MRSA, herpes gladiatorum, and fungal infections",
+      "body": [
+        "Skin infections are the most common infectious disease problem in contact sports, and most outbreaks start the same way: an athlete notices something on their skin, decides it's minor, and keeps competing. That single decision is exactly how one lesion turns into a team outbreak.",
+        "MRSA (methicillin-resistant Staphylococcus aureus) is a strain of staph bacteria that often looks, at first, like an ordinary pimple or spider bite — but one that's warm to the touch, more painful than it should be, and getting bigger. Never squeeze or pop a lesion like this. Squeezing can push the bacteria deeper into the tissue and spread it onto your hands, teammates, and shared equipment. Any bump like this gets shown to the athletic trainer the same day — it doesn't get self-treated or covered up and ignored.",
+        "Herpes gladiatorum, sometimes called 'mat herpes,' is a viral skin infection common in wrestling that spreads through direct skin-to-skin contact during a match or practice. It shows up as a cluster of small, painful, fluid-filled blisters — often on the head, neck, or arms — sometimes preceded by tingling or burning skin in that spot. Because it spreads by contact, an athlete with active blisters is pulled from practice and competition until a physician or athletic trainer clears them.",
+        "Ringworm and other fungal infections (athlete's foot, jock itch) spread the same contact-and-shared-surface way. This unit focuses on how they spread and what to do about it — for how to identify a fungal rash in detail, see the Skin Infections unit."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "\"It's just a pimple\" is how MRSA spreads",
+        "text": "A red, warm, spreading, unusually painful bump is a red flag, not a nuisance. Never squeeze it, never self-treat it, and never cover it with tape and keep competing. Show it to the athletic trainer the same day."
+      }
+    },
+    {
+      "heading": "Mononucleosis: the illness that looks over before it is",
+      "body": [
+        "Mononucleosis ('mono') is caused by the Epstein-Barr virus and spreads mainly through saliva — sharing water bottles, mouthguards, or utensils, or through coughing and kissing, which is why it's nicknamed 'the kissing disease.' It causes deep fatigue, fever, sore throat, and swollen lymph nodes in the neck, and it can knock an athlete out of normal activity for weeks.",
+        "Here's why mono gets its own section in a sports medicine class: it enlarges the spleen, an organ tucked under the lower left ribs that filters blood and helps fight infection. An enlarged spleen sits lower and is more exposed, and it's more fragile than a normal one — a direct blow to the abdomen during a contact or collision sport can cause it to rupture, which is a life-threatening emergency.",
+        "Here's the trap: an athlete's energy and sore throat often improve within a week or two, well before the spleen has shrunk back to its normal size and protected position. 'I feel fine' is not the same as 'cleared.' Physicians typically hold athletes out of contact and collision sports for several weeks and clear them based on an exam or imaging — not on how the athlete says they feel."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Spleen emergency — call 911",
+        "text": "Sudden, severe pain in the upper-left abdomen or left shoulder in an athlete who has, or recently had, mono is treated as a possible spleen rupture — a medical emergency. Call 911 immediately; do not wait to see if it passes."
+      }
+    },
+    {
+      "heading": "Bloodborne pathogens: treating blood like the hazard it is",
+      "body": [
+        "Bloodborne pathogens are germs carried in blood that cause serious illness — HIV, hepatitis B, and hepatitis C are the three that matter most in sports first aid. You cannot tell by looking at someone whether their blood carries one of these, which is why the standard rule in athletic training is universal precautions: treat every person's blood as if it's infectious, every time, no exceptions.",
+        "In practice, that means gloves go on before anyone touches a bleeding athlete or a blood-soaked surface, and hands get washed afterward even though gloves were worn. An athlete who is bleeding leaves play immediately and can return only once the wound is fully covered so it can't leak further. Blood on a uniform, mat, or piece of equipment gets cleaned with an approved disinfectant before play resumes — not wiped once with a towel and called good.",
+        "Full wound-care technique — direct pressure, dressing a wound, when to call 911 — is covered in the Wound Care & Bleeding Control unit. This section is about the infection-control side of that same moment: protecting yourself and everyone else on the field or mat from what's in the blood, not just stopping the bleeding."
+      ],
+      "image": {
+        "asset": "infectious-disease-bloodborne-precautions.webp",
+        "ratio": "4:3",
+        "background": "transparent",
+        "description": "A rescuer's gloved hands applying a sterile dressing to a small cut on a teammate's forearm, with three small inset icons around the main image: hands being washed at a sink, a spray bottle labeled 'disinfectant' being used on a mat or bench surface, and a biohazard bag icon for contaminated materials. Clean instructional-illustration style, non-graphic.",
+        "alt": "Diagram of bloodborne pathogen precautions: gloved hands treating a wound, hand-washing, and disinfecting a blood-contaminated surface.",
+        "location": "public/images/units/infectious-disease/"
+      }
+    },
+    {
+      "heading": "Immunity, vaccination, and daily habits",
+      "body": [
+        "Staying up to date on recommended vaccinations, including the hepatitis B vaccine, adds a layer of protection against some of the infections in this unit before an exposure ever happens. Vaccination isn't a substitute for good hygiene, though — it protects against specific germs, not every infection an athlete might pick up in a locker room.",
+        "The daily habits that cut infection risk the most cost nothing and take minutes:"
+      ],
+      "list": [
+        "Shower with soap right after every practice and competition — don't just change clothes and leave",
+        "Never share towels, razors, water bottles, or mouthguards",
+        "Wear sandals or shower shoes in locker rooms and shower areas rather than going barefoot",
+        "Keep practice gear, pads, and mats washed and dried between uses",
+        "Report any new skin lesion, or feeling sick, to a coach or athletic trainer right away instead of covering it up and hoping it passes"
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Reporting is protecting your teammates",
+        "text": "Telling a coach or athletic trainer about a new skin lesion or feeling sick isn't tattling on yourself — it's the single fastest way to stop one infection from becoming a whole roster's outbreak."
+      }
+    },
+    {
+      "heading": "When an athlete stays home: the fever rule",
+      "body": [
+        "A simple rule of thumb covers most of the contagious illnesses in this unit: no practice or competition with a fever. Practicing while feverish spreads the illness to teammates through the same close contact and shared spaces that make team sports risky for infection in the first place, and it can slow the athlete's own recovery or make the illness worse.",
+        "The general guideline: stay home until fever-free for 24 hours without taking a fever-reducing medication like acetaminophen or ibuprofen to mask it. Coming back 'as soon as the fever breaks' while still relying on medication just hides the fever — it doesn't mean the illness is actually gone."
+      ]
+    },
+    {
+      "heading": "Recognize, protect, refer",
+      "body": [
+        "As a student assistant, you are not expected to diagnose a rash, decide whether a bump is MRSA or an ordinary pimple, or figure out whether swollen glands mean mono. That's not your job, and getting it wrong by guessing is exactly how infections spread further.",
+        "Your job is smaller and just as important: recognize that something looks off, protect the team by keeping the athlete out of contact until it's checked, and refer to the athletic trainer or a physician who can actually evaluate and clear them."
+      ],
+      "list": [
+        "Recognize — a new or worsening skin lesion, a fever, unusual fatigue, or a bleeding wound",
+        "Protect — the athlete sits out of contact, gloves go on for any blood, shared items and surfaces get cleaned",
+        "Refer — an athletic trainer or physician evaluates and makes the return-to-play call, not the athlete's own judgment about how they feel"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A wrestler notices a red, warm, unusually painful bump on his forearm that looks like a pimple. What's the safest response?",
+      "choices": [
+        "Squeeze it to drain the pus, then tape it and wrestle",
+        "Wash it and keep practicing like normal — it's probably nothing",
+        "Show it to the athletic trainer before returning to practice, and never squeeze it",
+        "Ignore it since it's small and doesn't hurt much"
+      ],
+      "answerIndex": 2,
+      "explanation": "A warm, spreading, unusually painful bump could be MRSA. Squeezing pushes the bacteria deeper and can spread it further, so the right move is same-day evaluation by the athletic trainer, not self-treatment."
+    },
+    {
+      "id": "q2",
+      "question": "A wrestler develops a cluster of small, painful, fluid-filled blisters near his ear that tingled before they appeared. What is this most likely, and what should happen?",
+      "choices": [
+        "Ringworm — cover it with a bandage and wrestle as scheduled",
+        "Impetigo — pop the blisters and apply his own ointment",
+        "Just a friction mark from headgear — no action needed",
+        "Herpes gladiatorum — see the athletic trainer or physician before returning to the mat"
+      ],
+      "answerIndex": 3,
+      "explanation": "Clustered, painful blisters with a tingling warning sign in a wrestler is classic for herpes gladiatorum, a viral infection spread by skin-to-skin contact. Because it's contagious during an active outbreak, the athlete needs clearance before returning to contact."
+    },
+    {
+      "id": "q3",
+      "question": "How does ringworm mainly spread from one teammate to another?",
+      "choices": [
+        "Mosquito bites during outdoor practice",
+        "Contaminated food in the locker room",
+        "Skin-to-skin contact and shared mats or gear",
+        "Airborne droplets from coughing"
+      ],
+      "answerIndex": 2,
+      "explanation": "Ringworm is a fungal skin infection that spreads through direct skin contact and contact with contaminated surfaces like mats and shared gear — the same routes that make wrestling rooms and locker rooms high-risk for outbreaks."
+    },
+    {
+      "id": "q4",
+      "question": "Why does an enlarged spleen matter so much for an athlete recovering from mononucleosis?",
+      "choices": [
+        "It causes permanent hearing loss",
+        "An enlarged spleen is more vulnerable to rupture from a blow to the abdomen",
+        "It makes ringworm spread faster",
+        "It causes cramping in the calf muscles"
+      ],
+      "answerIndex": 1,
+      "explanation": "Mono enlarges the spleen, which sits lower and more exposed than normal and is more fragile — a direct hit to the abdomen during contact sport can rupture it, a life-threatening emergency. That's the specific reason mono restricts contact sports."
+    },
+    {
+      "id": "q5",
+      "question": "An athlete was diagnosed with mono two weeks ago. He says he feels totally fine now and wants back on the football field. What should happen?",
+      "choices": [
+        "Let him play since he says he feels fine",
+        "He can jump straight back into full-contact practice without seeing anyone",
+        "Feeling fine for 48 hours is proof enough that he's cleared",
+        "He needs physician clearance before contact or collision sports — spleen enlargement can outlast the tired, sick feeling"
+      ],
+      "answerIndex": 3,
+      "explanation": "Energy and sore throat often improve well before the spleen shrinks back to its normal, protected size. 'Feeling fine' is not the same as being cleared — a physician determines when contact sports are safe again, typically after several weeks."
+    },
+    {
+      "id": "q6",
+      "question": "A football player starts bleeding from a cut during a game. What is the correct sequence?",
+      "choices": [
+        "The player keeps playing since it's a minor cut",
+        "The player leaves the game, the wound gets covered, and any blood on the uniform is cleaned before he returns",
+        "A teammate wipes the blood off with a bare hand so play can continue",
+        "Wait until halftime to deal with it"
+      ],
+      "answerIndex": 1,
+      "explanation": "A bleeding athlete comes out of play immediately. The wound must be fully covered and any blood on the uniform or shared surfaces cleaned with proper disinfectant before the athlete returns — bare-handed contact with blood is never acceptable."
+    },
+    {
+      "id": "q7",
+      "question": "What is the standard first-aid assumption about blood at a sporting event?",
+      "choices": [
+        "Only blood from someone known to be sick is infectious",
+        "Bloodborne pathogens can't survive outside the body",
+        "Blood on a mat is fine to compete on until practice ends",
+        "All blood should be treated as potentially infectious, no matter whose it is"
+      ],
+      "answerIndex": 3,
+      "explanation": "Universal precautions mean treating every person's blood as potentially infectious every time, since you can't tell by looking whether it carries HIV, hepatitis B, or hepatitis C. Gloves and cleanup happen regardless of who is bleeding."
+    },
+    {
+      "id": "q8",
+      "question": "What is the general rule of thumb for whether an athlete should go to practice with a fever?",
+      "choices": [
+        "Push through practice unless the fever is very high",
+        "No practice with a fever — stay home until fever-free for 24 hours without medication, then ease back in",
+        "A fever under 100°F is fine to practice through",
+        "Only skip practice if teammates are also sick"
+      ],
+      "answerIndex": 1,
+      "explanation": "Practicing with a fever spreads illness through the same close contact that makes team sports risky for infection, and can slow the athlete's own recovery. Staying home until truly fever-free — not just medicated — protects both the athlete and the team."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "MRSA",
+      "back": "Methicillin-resistant Staphylococcus aureus — a staph infection that can look like a pimple or spider bite but is warm, painful, and spreading. Spreads via skin-to-skin contact and shared gear. Never squeeze it — refer to the athletic trainer the same day."
+    },
+    {
+      "id": "f2",
+      "front": "Herpes gladiatorum",
+      "back": "A viral skin infection (\"mat herpes\") common in wrestling, spread by skin-to-skin contact. Clusters of small, painful blisters. Requires clearance before returning to the mat."
+    },
+    {
+      "id": "f3",
+      "front": "Ringworm and fungal infections — transmission",
+      "back": "Spread by skin-to-skin contact and shared mats or gear. See the Skin Infections unit for how to identify the rash itself."
+    },
+    {
+      "id": "f4",
+      "front": "Mononucleosis (mono)",
+      "back": "Caused by the Epstein-Barr virus, spread mainly through saliva (shared water bottles, mouthguards, coughing, kissing). Causes fatigue, fever, sore throat, swollen glands, and an enlarged spleen."
+    },
+    {
+      "id": "f5",
+      "front": "Why mono restricts contact sports",
+      "back": "An enlarged spleen sits lower and is more fragile — a blow to the abdomen during contact or collision sport can rupture it, a life-threatening emergency."
+    },
+    {
+      "id": "f6",
+      "front": "The mono trap",
+      "back": "Energy and sore throat often improve before the spleen shrinks back to normal size. Feeling better is not the same as being medically cleared."
+    },
+    {
+      "id": "f7",
+      "front": "Universal precautions (blood)",
+      "back": "Treat all blood as potentially infectious, every time, no matter whose it is — gloves before contact, hand-washing after."
+    },
+    {
+      "id": "f8",
+      "front": "Bleeding athlete rule",
+      "back": "A bleeding athlete leaves play until the wound is covered. Blood on a uniform, mat, or equipment is cleaned with proper disinfectant before play resumes."
+    },
+    {
+      "id": "f9",
+      "front": "Shared-item rule",
+      "back": "Never share towels, razors, water bottles, or mouthguards — each one is a direct path for infection between teammates."
+    },
+    {
+      "id": "f10",
+      "front": "Vaccination and immunity",
+      "back": "Staying current on recommended vaccines (like hepatitis B) adds a layer of protection, but it doesn't replace daily hygiene habits."
+    },
+    {
+      "id": "f11",
+      "front": "Fever rule of thumb",
+      "back": "No practice with a fever. Stay home until fever-free for 24 hours without fever-reducing medication before returning."
+    },
+    {
+      "id": "f12",
+      "front": "Recognize, protect, refer",
+      "back": "Notice something unusual, protect the team by keeping the athlete out of contact, and refer to an athletic trainer or physician for evaluation and clearance — reporting protects the whole team."
+    }
+  ]
+}
