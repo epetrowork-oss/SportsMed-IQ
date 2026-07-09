@@ -458,10 +458,10 @@ categories keep their names exactly).
 | 3 | medical-terminology | Assessment & Clinical Skills | x | | |
 | 4 | anatomy-foundations | Assessment & Clinical Skills | x | | |
 | 5 | therapeutic-modalities | Assessment & Clinical Skills | x | | |
-| 6 | rehab-return-to-play | Assessment & Clinical Skills | | | |
+| 6 | rehab-return-to-play | Assessment & Clinical Skills | x | | |
 | 7 | splinting-immobilization | Assessment & Clinical Skills | x | | |
-| 8 | documentation-recordkeeping | Assessment & Clinical Skills | | | |
-| 9 | kinesiology-movement | Assessment & Clinical Skills | | | |
+| 8 | documentation-recordkeeping | Assessment & Clinical Skills | x | | |
+| 9 | kinesiology-movement | Assessment & Clinical Skills | x | | |
 | 10 | cardiac-conditions | Medical Conditions & Special Populations | x | | |
 | 11 | asthma-respiratory | Medical Conditions & Special Populations | x | | |
 | 12 | diabetes-athletes | Medical Conditions & Special Populations | x | | |
@@ -474,9 +474,9 @@ categories keep their names exactly).
 | 19 | growth-development | Medical Conditions & Special Populations | x | | |
 | 20 | medication-safety | Medical Conditions & Special Populations | x | | |
 | 21 | spine-injuries | Head & Spine Injuries | x | | |
-| 22 | hip-pelvis-injuries | Lower Extremity Injuries | | | |
-| 23 | foot-conditions | Lower Extremity Injuries | | | |
-| 24 | elbow-forearm-injuries | Upper Extremity Injuries | | | |
+| 22 | hip-pelvis-injuries | Lower Extremity Injuries | x | | |
+| 23 | foot-conditions | Lower Extremity Injuries | x | | |
+| 24 | elbow-forearm-injuries | Upper Extremity Injuries | x | | |
 | 25 | wrist-hand-injuries | Upper Extremity Injuries | | | |
 | 26 | chest-abdominal-injuries | Acute Care & First Aid | | | |
 | 27 | shock-recognition | Acute Care & First Aid | x | | |
@@ -540,9 +540,20 @@ careers-sports-medicine, legal-ethical-issues, sports-medicine-team. Then
 the 7-8 and 11-12 sibling waves for all 36 new strands. **Sprint priority
 still comes first**: Day 3 (aesthetic pass, GitHub Pages deploy, QA sweep,
 TESTERS.md) is due Fri Jul 10 and outranks finishing the content triple.
-- [ ] Batch 5 (9-10): rehab-return-to-play, documentation-recordkeeping,
+- [x] Batch 5 (9-10): rehab-return-to-play, documentation-recordkeeping,
       kinesiology-movement, hip-pelvis-injuries, foot-conditions,
-      elbow-forearm-injuries — launched Thu Jul 9.
+      elbow-forearm-injuries — all validator-clean, zero warnings. Safety
+      refer-out sections read word-for-word: RTP only-a-physician/AT-clears,
+      documentation HIPAA/FERPA confidentiality, Achilles rupture "don't
+      walk it off", femoral-neck stress fracture, elbow vascular emergency
+      + young-thrower medial elbow pain. **Assessment & Clinical Skills
+      COMPLETE (9/9). Library now 81 units.**
+- [ ] Batch 6 (9-10, final baseline batch — 9 strands): wrist-hand-injuries,
+      chest-abdominal-injuries, air-quality, sleep-recovery,
+      supplements-banned-substances, protective-equipment,
+      careers-sports-medicine, legal-ethical-issues, sports-medicine-team —
+      launched Thu Jul 9. Completes all 36 new-strand 9-10 baselines; after
+      this the spiral moves to 7-8 and 11-12 sibling waves.
 
 Band judgment note: a few profession/clinical strands may not merit a
 real `7-8` unit (e.g. documentation-recordkeeping, legal-ethical-issues)
