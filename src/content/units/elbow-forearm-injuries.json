@@ -1,0 +1,294 @@
+{
+  "id": "elbow-forearm-injuries",
+  "title": "Elbow & Forearm Injuries in Sports",
+  "category": "Upper Extremity Injuries",
+  "strand": "elbow-forearm-injuries",
+  "gradeBand": "9-10",
+  "summary": "From tennis elbow to Little League elbow to a locked-out dislocation: recognize the elbow and forearm injuries overhead athletes face, and know which ones can't wait.",
+  "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.3", "CTE.HSMT.B.4.5", "CTE.HSMT.Anchor.6"],
+  "sections": [
+    {
+      "heading": "Anatomy: a hinge with a twist",
+      "body": [
+        "The elbow looks like a simple hinge, but it's actually two joints working together. The humeroulnar joint (where the humerus, the upper arm bone, meets the ulna) is a true hinge joint — it only bends and straightens (flexion and extension), the same way a door hinge only swings one way (see the Anatomy Foundations unit for more on hinge joints).",
+        "Right next to it, the proximal radioulnar joint lets the two forearm bones — the radius (thumb-side bone) and the ulna (pinky-side bone) — rotate around each other. That rotation is what lets you turn your palm up (supination) or down (pronation), like turning a doorknob or a screwdriver. So the elbow region does two different jobs at once, bending/straightening and rotating, which is exactly why it takes this much abuse from throwing."
+      ],
+      "list": [
+        "Medial epicondyle — the bony bump you can feel on the inner (pinky-side) part of the elbow. It's the attachment point for the muscles that flex the wrist and fingers and pronate the forearm — the group most stressed by throwing and gripping.",
+        "Lateral epicondyle — the bony bump on the outer (thumb-side) part of the elbow. It's the attachment point for the muscles that extend (straighten) the wrist and fingers — the group most stressed by backhand strokes and repetitive gripping.",
+        "Ulnar collateral ligament (UCL) — a ligament on the inner elbow that resists valgus stress, meaning it keeps the elbow from opening up on the inside when force pushes the forearm outward relative to the upper arm. It's the ligament at risk in throwing athletes, and the one behind 'UCL reconstruction' (Tommy John) surgery you may have heard about in baseball.",
+        "Ulnar nerve — runs down the arm and passes directly behind the medial epicondyle, just under the skin, before continuing into the forearm and hand to the ring and little fingers. That shallow, exposed path is exactly why bumping the inner elbow sends an electric-feeling shock into those two fingers — the 'funny bone.'"
+      ],
+      "image": {
+        "asset": "elbow-forearm-injuries-anatomy.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Anterior/medial view diagram of a right elbow and forearm showing the humerus, radius, and ulna. Label the medial epicondyle and lateral epicondyle as small bony bumps at the elbow. Highlight the ulnar collateral ligament (UCL) on the inner elbow in a distinct color. Show the ulnar nerve as a highlighted line running just behind/under the medial epicondyle and continuing down the forearm toward the ring and little fingers. Clean medical-illustration style.",
+        "alt": "Diagram of the elbow showing the medial and lateral epicondyles, the ulnar collateral ligament on the inner elbow, and the ulnar nerve path behind the medial epicondyle.",
+        "location": "public/images/units/elbow-forearm-injuries/"
+      }
+    },
+    {
+      "heading": "How these injuries happen: throwing, falls, and blows",
+      "body": [
+        "Three mechanisms account for almost everything in this unit."
+      ],
+      "list": [
+        "Repetitive overhead throwing — during the cocking and acceleration phases of a pitch or throw, the forearm is forced outward relative to the upper arm hundreds of times a game. This valgus stress stretches the UCL and the tendons/growth plate at the medial epicondyle on the inside, while jamming the bones together on the outside of the joint. One throw does nothing; thousands across a season is what wears the elbow down.",
+        "Fall onto an outstretched hand (FOOSH) — force travels up through the wrist and forearm. Depending on how the arm is positioned, this can fracture the radius or ulna, or drive the elbow joint itself out of its socket (a dislocation).",
+        "Direct blow — a fall, tackle, or collision landing squarely on the forearm or the point of the elbow can fracture bone or, if it lands right on the inner elbow, briefly stun the ulnar nerve."
+      ],
+      "image": {
+        "asset": "elbow-forearm-injuries-throwing-valgus-stress.webp",
+        "ratio": "4:3",
+        "background": "transparent",
+        "description": "Side view illustration of a throwing athlete's arm in the late cocking/acceleration phase of an overhand throw, shoulder externally rotated and elbow bent. Use a highlighted stress indicator at the inner (medial) elbow showing the joint opening slightly on the inside (valgus stress), with the UCL and medial epicondyle region shaded to show tension, and a small compression indicator on the outer (lateral) elbow. Clean athletic-illustration style, motion-focused, no background clutter.",
+        "alt": "Diagram of a throwing athlete's arm in the cocking phase showing valgus stress opening the inner elbow and stressing the UCL and medial epicondyle.",
+        "location": "public/images/units/elbow-forearm-injuries/"
+      }
+    },
+    {
+      "heading": "Overuse tendinopathies: tennis elbow and golfer's elbow",
+      "body": [
+        "Tendinopathy is a painful, overworked tendon — repetitive load faster than the tendon can recover from, not a single traumatic moment (see the Overuse Injuries unit for the general pattern). At the elbow, it shows up at the two epicondyles, named for the two tendon groups that attach there.",
+        "Both build the same way: stiffness or ache that's worse at the start of activity, tenderness right on the bony bump, and no single moment the athlete can point to."
+      ],
+      "list": [
+        "Lateral epicondylitis ('tennis elbow') — overuse of the wrist extensor tendons where they attach at the lateral epicondyle. Common from a repeated backhand, but also from any repetitive gripping activity. Pain sits directly over the outer bump of the elbow and is reproduced by gripping or lifting with the palm down.",
+        "Medial epicondylitis ('golfer's elbow' or 'thrower's elbow') — overuse of the wrist flexor/pronator tendons where they attach at the medial epicondyle. Common in golf swings, throwing, and racquet forehands. Pain sits directly over the inner bump of the elbow and is reproduced by gripping or flexing the wrist."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Same story, different side",
+        "text": "The pattern is the same whether it's lateral or medial: tenderness right on one epicondyle, pain reproduced by gripping, and a gradual onset tied to a repetitive motion. Which side hurts — and what motion brings it on — tells you which one you're looking at."
+      }
+    },
+    {
+      "heading": "The young thrower's elbow: Little League elbow",
+      "body": [
+        "In an adult, repetitive valgus stress at the inner elbow usually shows up as medial epicondylitis — a tendon problem. In a growing athlete, the story is different, because the medial epicondyle is a growth plate (an apophysis, a growth plate where a tendon pulls rather than where a bone lengthens), and cartilage is the weaker link in a growing skeleton (see the Growing Athletes unit). The same repetitive throwing stress that irritates an adult's tendon can instead irritate — or in severe cases pull open — that growth plate in a young thrower. This pattern is called Little League elbow: gradually worsening pain on the inner elbow in throwers roughly age 8-15.",
+        "This deserves more weight than an adult's tennis elbow, for two reasons: the growth plate involved is still developing, and unmanaged valgus stress in a young thrower is exactly the pattern that leads to more serious UCL injuries later on. The fix isn't complicated, but it only works if it's actually followed: age-appropriate pitch counts, mandatory rest days between pitching appearances (guidelines like USA Baseball's Pitch Smart), and, most importantly, never pitching or throwing through elbow pain."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Persistent medial elbow pain in a young thrower — stop and refer",
+        "text": "Inner-elbow pain in a throwing athlete that doesn't fully settle with a day or two of rest, or that returns as soon as throwing resumes, is not something to play through. Stop throwing and get it evaluated. Continuing to pitch or throw through this pain risks the growth plate and the UCL — the two things this age group can least afford to damage."
+      }
+    },
+    {
+      "heading": "Ulnar nerve symptoms: when the 'funny bone' isn't funny",
+      "body": [
+        "A quick bump to the inner elbow that sends a brief electric tingle into the ring and little fingers is normal and harmless — the nerve gets briefly stunned and settles within seconds. What's not normal is when those same symptoms, numbness, tingling, or a 'pins and needles' feeling limited to the ring and little fingers, show up without an obvious bump, stick around, or come with weakness in the hand."
+      ],
+      "list": [
+        "Chronic irritation — repetitive valgus stress from throwing, or leaning on the elbow for long periods, can irritate the ulnar nerve where it passes behind the medial epicondyle over time.",
+        "Swelling or deformity from an acute injury (fracture or dislocation) can compress the nerve right where it runs close to the bone.",
+        "Any numbness, tingling, or weakness in the ring and little fingers that is new, persistent, or getting worse should be referred for evaluation rather than waited out."
+      ]
+    },
+    {
+      "heading": "Acute injuries: forearm fractures and elbow dislocation",
+      "body": [
+        "Not every elbow or forearm injury builds gradually. A fall onto an outstretched hand or a direct blow can break bone or force the joint itself out of place, and both need to be recognized quickly, not diagnosed on the sideline."
+      ],
+      "list": [
+        "Forearm fracture — a break in the radius, the ulna, or both, usually from a FOOSH or a direct blow. Look for point tenderness over the bone, swelling, and possible visible deformity or angulation along the forearm (see the Fractures & Dislocations unit for the general signs of a fracture).",
+        "Elbow dislocation — the joint itself is forced out of alignment, most often from a fall onto an outstretched, slightly bent arm. The elbow looks obviously deformed, is locked in an abnormal position, and the athlete resists any attempt to move it. This is a joint injury, not just a bone injury, and it puts the nerves and blood vessels running right past the joint at real risk.",
+        "Whichever it turns out to be, your job is the same: recognize it, don't move it into a 'better' position, and get it evaluated. Reducing a dislocated elbow, putting the joint back into place, is a physician's procedure only; it is never something to attempt on the sideline (see the Splinting & Immobilization unit for the 'splint it as it lies' rule that applies here)."
+      ],
+      "image": {
+        "asset": "elbow-forearm-injuries-fracture-vs-dislocation.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-panel comparison of an injured right arm. Left panel labeled 'Forearm fracture': the forearm shows an angulated deformity mid-shaft between wrist and elbow, with a normal elbow contour. Right panel labeled 'Elbow dislocation': the elbow is held bent at an unusual fixed angle with a visible deformity right at the joint itself, forearm appearing shortened, athlete supporting the arm with the other hand. Clean medical-illustration style, non-graphic.",
+        "alt": "Comparison diagram of a forearm fracture (deformity along the forearm shaft) versus an elbow dislocation (deformity and a locked position at the joint itself).",
+        "location": "public/images/units/elbow-forearm-injuries/"
+      }
+    },
+    {
+      "heading": "Immediate care and red flags",
+      "body": [
+        "For any suspected elbow or forearm injury, overuse or acute, the first-aid steps are the same:"
+      ],
+      "list": [
+        "Protect and immobilize the arm in the position it's in. Don't straighten a deformed elbow or force a fractured forearm back into alignment.",
+        "Ice over the area (never directly on skin) to limit swelling and pain.",
+        "Check circulation, sensation, and movement (CSM) in the hand and fingers beyond the injury — color, warmth, pulse, feeling, and the ability to wiggle the fingers — before and after any splint is applied (see the Splinting & Immobilization unit for the full CSM check).",
+        "Refer to the athletic trainer or a physician. Don't send the athlete back in to 'test it out.'"
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Red flags — refer immediately, activate the EAP",
+        "text": "Any of these means the athlete needs urgent medical attention: obvious deformity or a joint that's locked and won't move; a hand or forearm below the injury that is cold, pale, or has no pulse — a possible vascular emergency after elbow trauma that needs the Emergency Action Plan activated right away; numbness or weakness that is new or getting worse; or a young thrower with medial elbow pain that isn't settling. When in doubt, protect the arm as found and refer — never try to straighten, realign, or 'test' a deformed elbow or forearm yourself."
+      }
+    },
+    {
+      "heading": "Return to play and prevention",
+      "body": [
+        "No athlete returns to throwing, gripping sports, or contact after a suspected fracture, dislocation, or significant ligament injury without clearance from a physician and a supervised return plan. For overuse injuries like tendinopathy or Little League elbow, return is guided by being pain-free with daily activities first, then a gradual, monitored return to throwing or gripping, not just 'it feels okay today.'",
+        "Prevention for throwing athletes centers on managing load, the same principle as any overuse injury: age-appropriate pitch counts, mandatory rest days between outings, avoiding pitching for multiple teams in the same season, and treating elbow pain as information, not something to play through. These guidelines exist because the damage from ignoring them, to a growth plate or a ligament, can outlast a single season."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Which ligament, on the inner side of the elbow, resists the widening (valgus) stress produced by throwing and is the ligament at risk in throwing athletes?",
+      "choices": [
+        "Ulnar collateral ligament (UCL)",
+        "Lateral epicondyle tendon",
+        "Radial collateral ligament",
+        "Anterior cruciate ligament"
+      ],
+      "answerIndex": 0,
+      "explanation": "The UCL sits on the inner (medial) elbow and resists valgus stress, the outward force on the forearm produced during throwing. The radial collateral ligament is on the outer elbow, and the ACL is a knee ligament, not an elbow structure."
+    },
+    {
+      "id": "q2",
+      "question": "Why does hitting the inner elbow sometimes send a tingling shock into the ring and little fingers?",
+      "choices": [
+        "The radial nerve crosses the lateral epicondyle there",
+        "The ulnar nerve runs just behind the medial epicondyle, close to the skin",
+        "The UCL directly connects to those two fingers",
+        "It's a sign the elbow is fractured"
+      ],
+      "answerIndex": 1,
+      "explanation": "The ulnar nerve travels behind the medial epicondyle in a shallow, exposed path — a bump there briefly stuns the nerve, producing the 'funny bone' feeling. It isn't evidence of a fracture, and the radial nerve and UCL aren't involved in this sensation."
+    },
+    {
+      "id": "q3",
+      "question": "A tennis player has gradual-onset pain directly over the outside bump of her elbow that worsens when she grips her racket or shakes hands. This is most consistent with:",
+      "choices": [
+        "Medial epicondylitis (golfer's elbow)",
+        "Little League elbow",
+        "Lateral epicondylitis (tennis elbow)",
+        "Ulnar nerve entrapment"
+      ],
+      "answerIndex": 2,
+      "explanation": "Pain over the outer (lateral) epicondyle that's worse with gripping is the classic pattern of lateral epicondylitis, or tennis elbow. Golfer's elbow is on the inner elbow, Little League elbow is a growth-plate injury seen in young throwers, and nerve entrapment causes numbness/tingling, not this gripping pain pattern."
+    },
+    {
+      "id": "q4",
+      "question": "A 12-year-old pitcher tells his coach his inner elbow has ached for the last two starts, worse when he throws breaking balls. The coach says to 'shake it off' and pitch the next game. What is the right response?",
+      "choices": [
+        "Let him pitch, but only fastballs",
+        "Ice it between innings and keep pitching",
+        "Wait until the pain reaches a 7 out of 10 before doing anything",
+        "Stop him from pitching and refer him for evaluation — persistent medial elbow pain in a young thrower is a red flag"
+      ],
+      "answerIndex": 3,
+      "explanation": "Persistent medial elbow pain in a young thrower can mean Little League elbow (growth-plate stress) or early UCL injury. It should stop throwing activity and get evaluated, not be managed with ice-and-play or waited out until it gets worse."
+    },
+    {
+      "id": "q5",
+      "question": "A gymnast falls onto an outstretched arm during a tumbling pass. Her elbow now looks visibly deformed, is locked with any attempted motion, and she's holding it away from her body. What should you do first?",
+      "choices": [
+        "Gently try to straighten the elbow to see if it moves normally",
+        "Support the arm in the position found, check circulation and sensation in the hand, and activate the EAP",
+        "Have her make a fist and grip a ball to test her strength",
+        "Apply heat to relax the muscles around the joint"
+      ],
+      "answerIndex": 1,
+      "explanation": "This presentation fits a possible elbow dislocation: protect the arm in the position found, check CSM, and refer/activate the EAP. Never attempt to straighten or test a deformed joint, and heat is the wrong response for an acute injury."
+    },
+    {
+      "id": "q6",
+      "question": "After an elbow dislocation, an athlete's forearm and hand below the injury are cold, pale, and you cannot feel a pulse at the wrist. What does this mean?",
+      "choices": [
+        "A possible vascular emergency — a blood vessel near the elbow may be compressed or injured, so activate the EAP immediately",
+        "This is normal after any elbow injury and will resolve with ice",
+        "The athlete is just anxious and needs to calm down",
+        "It's a sign the injury is actually less severe than it looks"
+      ],
+      "answerIndex": 0,
+      "explanation": "A blood vessel runs close to the elbow joint, and a cold, pale hand with no pulse after elbow trauma is a limb-threatening vascular emergency. It requires activating the EAP immediately, not waiting to see if it resolves."
+    },
+    {
+      "id": "q7",
+      "question": "What is the most common mechanism for a forearm fracture in youth sports?",
+      "choices": [
+        "Gradual overuse from repetitive gripping",
+        "A twisting motion of the wrist alone",
+        "Chronic pressure from wearing a brace",
+        "A fall onto an outstretched hand (FOOSH) or a direct blow to the forearm"
+      ],
+      "answerIndex": 3,
+      "explanation": "FOOSH and direct blows are the classic mechanisms for forearm fractures. Overuse from repetitive gripping causes tendinopathy over time, not a discrete fracture, and a brace doesn't cause fractures."
+    },
+    {
+      "id": "q8",
+      "question": "What is the best-supported way to prevent overuse elbow injuries like Little League elbow in youth pitchers?",
+      "choices": [
+        "Aggressively stretching the elbow before every outing",
+        "Following age-appropriate pitch count limits and mandatory rest days between outings",
+        "Icing the elbow after every game regardless of symptoms",
+        "Switching to throwing only breaking balls, which are gentler on the elbow"
+      ],
+      "answerIndex": 1,
+      "explanation": "Pitch count and rest-day guidelines directly manage the repetitive valgus load that causes these injuries. Breaking balls like curveballs actually add stress to a young elbow rather than reducing it, and stretching or icing alone don't address the underlying load problem."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Ulnar collateral ligament (UCL)",
+      "back": "A ligament on the inner elbow that resists valgus stress (the elbow opening on the inside). At risk in throwing athletes; the ligament behind 'UCL reconstruction' (Tommy John) surgery."
+    },
+    {
+      "id": "f2",
+      "front": "Medial vs. lateral epicondyle",
+      "back": "Medial (inner) epicondyle — wrist flexor/pronator tendon origin. Lateral (outer) epicondyle — wrist extensor tendon origin."
+    },
+    {
+      "id": "f3",
+      "front": "Ulnar nerve / 'funny bone'",
+      "back": "Runs just behind the medial epicondyle, close to the skin, before continuing to the ring and little fingers — why bumping the inner elbow sends a tingling shock into those two fingers."
+    },
+    {
+      "id": "f4",
+      "front": "Forearm bones and rotation",
+      "back": "Radius (thumb-side) and ulna (pinky-side). Rotating them around each other produces pronation (palm down) and supination (palm up)."
+    },
+    {
+      "id": "f5",
+      "front": "Lateral epicondylitis ('tennis elbow')",
+      "back": "Overuse of the wrist extensor tendons at the lateral epicondyle. Pain over the outer elbow, worse with gripping; common from backhands and repetitive gripping."
+    },
+    {
+      "id": "f6",
+      "front": "Medial epicondylitis ('golfer's/thrower's elbow')",
+      "back": "Overuse of the wrist flexor/pronator tendons at the medial epicondyle. Pain over the inner elbow, worse with gripping or wrist flexion; common in golf and throwing."
+    },
+    {
+      "id": "f7",
+      "front": "Little League elbow",
+      "back": "Apophysitis (growth-plate traction injury) at the medial epicondyle in young throwers (roughly age 8-15), from repetitive valgus stress during throwing."
+    },
+    {
+      "id": "f8",
+      "front": "Valgus stress",
+      "back": "Force that pushes the forearm outward relative to the upper arm, opening the inner elbow. Produced repeatedly during the cocking/acceleration phases of throwing; stresses the UCL and medial epicondyle."
+    },
+    {
+      "id": "f9",
+      "front": "Pitch counts and rest days",
+      "back": "Age-appropriate limits on pitches thrown plus mandatory rest days between outings — the best-supported way to prevent overuse elbow injuries in young throwers."
+    },
+    {
+      "id": "f10",
+      "front": "Elbow dislocation",
+      "back": "The elbow joint is forced out of alignment, usually from a fall onto an outstretched, slightly bent arm. Obviously deformed and locked; never attempt to reduce it — splint as found and refer."
+    },
+    {
+      "id": "f11",
+      "front": "Vascular emergency after elbow trauma",
+      "back": "A cold, pale hand with no pulse below an elbow injury means a blood vessel may be compressed or injured — activate the EAP immediately."
+    },
+    {
+      "id": "f12",
+      "front": "CSM check",
+      "back": "Circulation, Sensation, Movement — checked in the hand/fingers beyond the injury before and after splinting, to catch nerve or vessel compromise."
+    }
+  ]
+}
