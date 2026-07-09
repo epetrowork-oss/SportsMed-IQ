@@ -1,0 +1,258 @@
+{
+  "id": "kinesiology-movement",
+  "title": "How the Body Moves: Kinesiology Basics",
+  "category": "Assessment & Clinical Skills",
+  "strand": "kinesiology-movement",
+  "gradeBand": "9-10",
+  "summary": "Learn the vocabulary that lets you describe exactly how a joint moved and how an injury happened — planes of motion, joint movements, and range of motion — the language the sports medicine team uses to communicate fast and precisely.",
+  "minutes": 17,
+  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.5.0", "CTE.HSMT.Anchor.2"],
+  "sections": [
+    {
+      "heading": "Why sports medicine needs a movement vocabulary",
+      "body": [
+        "You already know the body's structures — bones, joints, and muscles — from the anatomy-foundations unit, and you know how to name where something hurts using directional terms like medial and anterior from medical-terminology. This unit adds the missing piece: kinesiology, the vocabulary for describing how a joint actually moves.",
+        "That vocabulary isn't academic decoration. On a sideline, the difference between 'his ankle looked weird when he landed' and 'his foot rolled into inversion' is the difference between a vague guess and a mechanism of injury the athletic trainer can act on immediately. Learning to name a movement precisely is one of the fastest ways a student aide becomes genuinely useful during an evaluation."
+      ],
+      "list": [
+        "By the end of this unit you'll be able to name the plane a movement happens in, name the specific joint movement you just watched happen, and describe range of motion the same systematic way you already compare an injured limb to the uninjured one."
+      ]
+    },
+    {
+      "heading": "The three planes of motion",
+      "body": [
+        "A plane of motion is an imaginary flat surface that slices through the body and gives every movement a direction to be described in. Every movement you'll ever describe in this field happens in one of three planes."
+      ],
+      "list": [
+        "Sagittal plane — slices the body into left and right halves. Movements here are flexion and extension: bending your knee to bring your heel up during a sprint, or straightening your elbow to follow through on a basketball free throw.",
+        "Frontal (coronal) plane — slices the body into front and back halves. Movements here are abduction and adduction: raising your arm out to the side for a volleyball spike, or bringing your leg back across the midline after a soccer tackle.",
+        "Transverse plane — slices the body into top and bottom halves. Movements here are rotation: twisting the torso through a golf swing or a discus throw."
+      ],
+      "image": {
+        "asset": "kinesiology-movement-planes-of-motion.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "A human figure standing in anatomical position with three transparent colored planes slicing through the body, one per plane. Sagittal plane (dividing left/right) shown as a front-to-back vertical sheet, labeled with a small flexion/extension arrow at the knee. Frontal/coronal plane (dividing front/back) shown as a side-to-side vertical sheet, labeled with a small abduction/adduction arrow at the shoulder. Transverse plane (dividing top/bottom) shown as a horizontal sheet at waist height, labeled with a small rotation arrow at the torso. Use a distinct color per plane with a small legend. Clean flat medical-illustration style.",
+        "alt": "Diagram of a human figure showing the sagittal, frontal, and transverse planes of motion, each labeled with its associated movement type.",
+        "location": "public/images/units/kinesiology-movement/"
+      }
+    },
+    {
+      "heading": "The fundamental joint movements",
+      "body": [
+        "Most sports movements combine a handful of basic joint actions. Learn these six terms and you can describe almost any motion precisely."
+      ],
+      "list": [
+        "Flexion — decreasing the angle at a joint (bending). Example: curling a dumbbell flexes the elbow.",
+        "Extension — increasing the angle at a joint (straightening). Example: kicking a soccer ball extends the knee.",
+        "Abduction — moving a limb away from the body's midline. Example: raising your arm overhead to spike a volleyball.",
+        "Adduction — moving a limb toward the body's midline. Example: bringing your arm back across your chest to finish a freestyle swim stroke.",
+        "Internal (medial) rotation — turning a limb inward, toward the midline, around its long axis. Example: a pitcher's shoulder rotates internally as the throwing arm whips forward.",
+        "External (lateral) rotation — turning a limb outward, away from the midline, around its long axis. Example: cocking the throwing arm back before a pitch requires shoulder external rotation."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Two words instead of twenty",
+        "text": "Instead of writing 'his arm rotated toward his body funny when he threw,' a precise note reads 'loss of shoulder internal rotation.' Naming the exact movement is faster to write, faster to read, and impossible to misunderstand."
+      },
+      "image": {
+        "asset": "kinesiology-movement-joint-movements.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Four-panel comparison diagram of a human figure demonstrating paired joint movements, each panel with directional arrows. Panel 1: knee bending and straightening, labeled flexion/extension. Panel 2: arm raised out to the side versus back at rest, labeled abduction/adduction. Panel 3: shoulder rotating a bent arm inward toward the torso versus outward away from it, labeled internal rotation/external rotation. Panel 4: small inset showing one real sport example per movement pair (sprinting knee drive, volleyball spike arm, pitcher's throwing motion). Clean flat medical-illustration style, consistent color palette across panels.",
+        "alt": "Four-panel diagram showing flexion/extension, abduction/adduction, and internal/external rotation, each illustrated on a human figure with directional arrows.",
+        "location": "public/images/units/kinesiology-movement/"
+      }
+    },
+    {
+      "heading": "Specialized movements: forearm, foot, and ankle",
+      "body": [
+        "A few joints have their own special vocabulary because their movement doesn't fit neatly into flexion/extension or abduction/adduction. You'll see these constantly in injury reports."
+      ],
+      "list": [
+        "Pronation / supination (forearm) — rotating the forearm so the palm faces down (pronation) or up (supination). Turning a doorknob or dealing cards uses forearm pronation.",
+        "Pronation / supination (foot) — as the foot strikes the ground it naturally rolls slightly inward (pronation) to absorb shock, then rolls slightly outward (supination) to push off. Too much of either, repeated over thousands of steps, is a common source of overuse injury.",
+        "Inversion / eversion (ankle) — inversion rolls the sole of the foot inward, toward the midline; eversion rolls it outward. This is the exact mechanism behind the injury covered in the ankle-sprain unit: about 85% of ankle sprains happen when the foot inverts, stretching the outer (lateral) ligaments.",
+        "Dorsiflexion / plantarflexion (ankle) — dorsiflexion pulls the top of the foot up toward the shin (like walking on your heels); plantarflexion points the toes down (like standing on tiptoe, or a sprinter's push off the blocks)."
+      ],
+      "image": {
+        "asset": "kinesiology-movement-specialized-movements.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Three-panel diagram. Panel 1: a forearm and hand shown twice, palm down and palm up, labeled pronation/supination, with a small rotation arrow. Panel 2: a right foot and ankle shown from behind, sole rolling inward versus outward, labeled inversion/eversion, with a motion arrow matching the ankle-sprain unit's inversion illustration style. Panel 3: a foot and ankle shown from the side, toes pulled up toward the shin versus pointed down, labeled dorsiflexion/plantarflexion. Clean flat medical-illustration style, consistent color palette across panels.",
+        "alt": "Three-panel diagram showing forearm pronation/supination, ankle inversion/eversion, and ankle dorsiflexion/plantarflexion.",
+        "location": "public/images/units/kinesiology-movement/"
+      }
+    },
+    {
+      "heading": "How muscles create movement",
+      "body": [
+        "The anatomy-foundations unit introduced the agonist-antagonist pair: the agonist (also called the prime mover) is the muscle contracting to cause a movement, and the antagonist is the muscle on the opposite side relaxing and lengthening to let it happen. Every movement you just learned has a specific prime mover behind it.",
+        "Knowing the prime mover behind a movement matters in evaluation: if an athlete has pain and weakness specifically with knee extension, that points the athletic trainer toward the quadriceps or its tendon — not the hamstrings on the opposite side of the joint."
+      ],
+      "list": [
+        "Knee extension — quadriceps (front of thigh)",
+        "Knee flexion — hamstrings (back of thigh)",
+        "Shoulder abduction — deltoid",
+        "Shoulder internal/external rotation — the rotator cuff muscles",
+        "Elbow flexion — biceps brachii; elbow extension — triceps brachii"
+      ]
+    },
+    {
+      "heading": "Range of motion: what's normal, and how you know",
+      "body": [
+        "Range of motion (ROM) — you've likely already seen it abbreviated 'ROM' on a chart in the medical-terminology unit — is how far a joint can move through a given motion. ROM is described using the exact vocabulary you just learned: 'full knee flexion,' 'limited shoulder external rotation,' 'painful ankle dorsiflexion.'",
+        "There are two kinds worth knowing the difference between: active ROM is how far the athlete can move the joint on their own, using their own muscles. Passive ROM is how far the joint moves when someone else moves it for them, without the athlete's muscles doing the work. A gap between the two — for example, an athlete who can't actively lift their arm very far, but someone else can move it further passively — is itself a useful finding to report.",
+        "Just like every other part of an evaluation, the reliable baseline for 'normal' ROM isn't a number in a textbook — it's the same habit from the injury-evaluation unit: compare to the uninjured side."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Limited or painful ROM is a refer signal, not something to push through",
+        "text": "If an athlete has pain or a noticeable limit when moving a joint after an injury, that is information to report — not a range to force. Pushing a joint further to 'test how bad it is' can turn a mild injury into a serious one. Recognize the limitation, compare it to the uninjured side, and let the athletic trainer or physician decide what happens next."
+      }
+    },
+    {
+      "heading": "Talking like the sports medicine team",
+      "body": [
+        "This vocabulary earns its place because it's fast and exact. 'Inversion ankle sprain' tells a physician the mechanism, the likely ligaments involved, and roughly what to expect — in two words. 'Loss of shoulder external rotation' tells an athletic trainer exactly which motion to check and which structures are suspects, without a single guess.",
+        "Compare that to a vague report — 'his ankle just did something weird' or 'her arm didn't look right' — which forces everyone downstream to ask follow-up questions before they can even start helping. A precise mechanism, reported using this vocabulary, is one of the most useful things a student aide can hand off.",
+        "None of this changes your role: you're still recognizing, gathering information, and reporting — never diagnosing, and never deciding an athlete is cleared to return. What changes is how usable your report is the moment it leaves your mouth."
+      ],
+      "list": [
+        "Instead of \"his ankle rolled in\" — say \"inversion mechanism, lateral ankle.\"",
+        "Instead of \"she can't lift her arm all the way\" — say \"limited active shoulder abduction.\"",
+        "Instead of \"his elbow won't straighten\" — say \"limited elbow extension.\""
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A sprinter drives her knee up, bringing her heel toward her glutes during a hill-sprint drill. What is bending the knee like this called?",
+      "choices": ["Flexion", "Extension", "Abduction", "Adduction"],
+      "answerIndex": 0,
+      "explanation": "Flexion decreases the angle at a joint — bending the knee to bring the heel up is knee flexion. Extension is the opposite (straightening); abduction and adduction describe movement toward or away from the midline, not bending."
+    },
+    {
+      "id": "q2",
+      "question": "A volleyball player raises her arm straight out to the side to spike the ball. This shoulder movement — moving the limb away from the body's midline — is called...",
+      "choices": ["Adduction", "Abduction", "Flexion", "Rotation"],
+      "answerIndex": 1,
+      "explanation": "Abduction moves a limb away from the body's midline; adduction is the opposite (toward the midline). Flexion and extension describe bending or straightening a joint, and rotation describes turning around a limb's long axis — none of those match moving straight out to the side."
+    },
+    {
+      "id": "q3",
+      "question": "A golfer rotates her torso through impact during her swing. Which plane of motion is this rotation happening in?",
+      "choices": ["Sagittal plane", "Frontal plane", "Transverse plane", "Longitudinal plane"],
+      "answerIndex": 2,
+      "explanation": "The transverse plane divides the body into top and bottom halves, and rotation — like a torso twisting through a golf swing — happens in this plane. The sagittal plane (left/right) is where flexion and extension happen, and the frontal plane (front/back) is where abduction and adduction happen. 'Longitudinal plane' isn't one of the three anatomical planes."
+    },
+    {
+      "id": "q4",
+      "question": "A wide receiver comes down awkwardly and the sole of his foot rolls inward, toward his other foot, just before his ankle gives way. Which movement caused this mechanism of injury?",
+      "choices": ["Plantarflexion", "Eversion", "Dorsiflexion", "Inversion"],
+      "answerIndex": 3,
+      "explanation": "The sole rolling inward toward the midline is inversion — the mechanism behind roughly 85% of ankle sprains, covered in the ankle-sprain unit. Eversion is the sole rolling outward; plantarflexion and dorsiflexion describe the foot pointing down or up, not rolling side to side."
+    },
+    {
+      "id": "q5",
+      "question": "A sprinter explosively points her toes downward, pushing off the starting blocks. This ankle movement is called...",
+      "choices": ["Plantarflexion", "Dorsiflexion", "Supination", "Eversion"],
+      "answerIndex": 0,
+      "explanation": "Plantarflexion points the toes and foot downward — the exact motion of pushing off the blocks. Dorsiflexion is the opposite (pulling the foot up toward the shin); supination and eversion describe the foot rolling, not pointing up or down."
+    },
+    {
+      "id": "q6",
+      "question": "An athletic trainer's note says: 'loss of shoulder external rotation, otherwise normal exam.' What is this athlete unable to do normally?",
+      "choices": [
+        "Raise the arm overhead",
+        "Rotate the arm outward, away from the body",
+        "Bend the elbow",
+        "Rotate the arm inward, across the body"
+      ],
+      "answerIndex": 1,
+      "explanation": "External rotation turns a limb outward, away from the midline, around its long axis — like cocking a throwing arm back. This note tells the athletic trainer exactly which motion is limited without a single guess. Raising the arm overhead is abduction/flexion, bending the elbow is elbow flexion, and rotating inward is internal rotation — the opposite of what's described."
+    },
+    {
+      "id": "q7",
+      "question": "During a bicep curl, the biceps brachii shortens to bend the elbow while the triceps on the opposite side relaxes and lengthens. In this movement, the biceps is acting as the...",
+      "choices": ["Antagonist", "Ligament", "Agonist (prime mover)", "Tendon"],
+      "answerIndex": 2,
+      "explanation": "The agonist, or prime mover, is the muscle contracting to cause the movement — the biceps here. The triceps, relaxing to allow the motion, is the antagonist. Ligaments and tendons are connective tissue structures, not the contracting muscles themselves."
+    },
+    {
+      "id": "q8",
+      "question": "During an evaluation, a gymnast can't turn her injured wrist's palm all the way up without pain, though she could before her fall. What should the evaluator do?",
+      "choices": [
+        "Push the wrist further into that position to see how limited it really is",
+        "Ignore it since wrist ROM isn't usually reported",
+        "Tell her it's probably fine and she can keep tumbling",
+        "Compare the motion to her uninjured wrist and report the limitation without forcing it further"
+      ],
+      "answerIndex": 3,
+      "explanation": "Painful or limited ROM after an injury is a finding to report, not a range to force — pushing further risks turning a mild injury into a worse one. Comparing to the uninjured wrist gives a reliable baseline, and the evaluator's job is to report the finding, not decide she's cleared to keep tumbling."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Sagittal plane",
+      "back": "Divides the body into left and right halves; flexion and extension happen in this plane."
+    },
+    {
+      "id": "f2",
+      "front": "Frontal (coronal) plane",
+      "back": "Divides the body into front and back halves; abduction and adduction happen in this plane."
+    },
+    {
+      "id": "f3",
+      "front": "Transverse plane",
+      "back": "Divides the body into upper and lower halves; rotation happens in this plane."
+    },
+    {
+      "id": "f4",
+      "front": "Flexion vs. extension",
+      "back": "Flexion decreases the angle at a joint (bending); extension increases it (straightening)."
+    },
+    {
+      "id": "f5",
+      "front": "Abduction vs. adduction",
+      "back": "Abduction moves a limb away from the body's midline; adduction moves it back toward the midline."
+    },
+    {
+      "id": "f6",
+      "front": "Internal vs. external rotation",
+      "back": "Internal (medial) rotation turns a limb inward, toward the midline; external (lateral) rotation turns it outward, away from the midline."
+    },
+    {
+      "id": "f7",
+      "front": "Pronation vs. supination",
+      "back": "Forearm: palm turns down (pronation) or up (supination). Foot: rolls slightly inward on landing (pronation) or outward on push-off (supination)."
+    },
+    {
+      "id": "f8",
+      "front": "Inversion vs. eversion",
+      "back": "Ankle-specific: inversion rolls the sole inward toward the midline; eversion rolls it outward. Inversion is the mechanism behind most ankle sprains."
+    },
+    {
+      "id": "f9",
+      "front": "Dorsiflexion vs. plantarflexion",
+      "back": "Dorsiflexion pulls the foot up toward the shin; plantarflexion points the toes down, like a sprinter's push-off."
+    },
+    {
+      "id": "f10",
+      "front": "Agonist (prime mover) vs. antagonist",
+      "back": "Agonist = the muscle contracting to cause a movement. Antagonist = the opposing muscle relaxing and lengthening to allow it."
+    },
+    {
+      "id": "f11",
+      "front": "Range of motion (ROM)",
+      "back": "How far a joint can move through a given motion, described with movement vocabulary (e.g., 'limited shoulder external rotation'). Compare to the uninjured side for the most reliable baseline."
+    },
+    {
+      "id": "f12",
+      "front": "Why precise movement vocabulary matters",
+      "back": "\"Inversion ankle sprain\" or \"loss of shoulder external rotation\" communicates the mechanism and likely structures involved in just a few words — faster and more accurate than a vague description."
+    }
+  ]
+}
