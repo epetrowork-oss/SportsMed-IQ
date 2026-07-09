@@ -1,0 +1,265 @@
+{
+  "id": "sports-medicine-team",
+  "title": "The Sports Medicine Team",
+  "category": "The Sports Medicine Profession",
+  "strand": "sports-medicine-team",
+  "gradeBand": "9-10",
+  "summary": "Good athlete care isn't one person's job — learn who's on the sports medicine team, who decides what, and how clear communication keeps everyone working together instead of at cross purposes.",
+  "minutes": 17,
+  "standards": ["CTE.HSMT.Anchor.9", "CTE.HSMT.Anchor.2", "CTE.HSMT.Anchor.6"],
+  "sections": [
+    {
+      "heading": "Why sports medicine is a team, not one person",
+      "body": [
+        "It's tempting to picture sports medicine as one expert person — the athletic trainer taping an ankle, or a physician making a diagnosis. In reality, every athlete's care runs through a whole team of people, each with a different job, working around that one athlete.",
+        "No single person does everything. The physician doesn't run practice. The coach doesn't diagnose an injury. The student aide doesn't decide when someone can return to play. When each person knows their role and communicates clearly with the others, the athlete gets fast, consistent care. When roles are unclear — when two people think someone else is handling something, or a coach and a medical provider give an athlete conflicting instructions — real time gets lost and mistakes happen."
+      ]
+    },
+    {
+      "heading": "Meet the team",
+      "body": [
+        "Every one of these people can be part of an athlete's care team, and each has a distinct lane:"
+      ],
+      "list": [
+        "Team physician — a licensed doctor (MD or DO) who directs the athlete's overall medical care: making or overseeing diagnoses, approving treatment plans, and holding final medical authority on return-to-play for significant injuries.",
+        "Athletic trainer (AT) — a licensed healthcare professional and the team's day-to-day hub: injury prevention, on-field evaluation, immediate care, and rehab, working under the team physician's direction. The AT is usually the first person on the scene and the link between the athlete, coach, physician, and parents.",
+        "Physical therapist (PT) — a licensed professional who guides an athlete through a structured rehab program to rebuild strength, motion, and function, often picking up care after the acute phase or after surgery.",
+        "EMS / paramedics — emergency medical services personnel who provide emergency transport and advanced care when an injury or illness goes beyond what's available on-site. They're called through the venue's emergency action plan (EAP).",
+        "Coach — leads conditioning and play/strategy decisions: who starts, what the game plan is, how practice is run. A coach's job with an injury is to recognize something's wrong and get the athlete to the AT or physician — not to diagnose it or decide when it's safe to return.",
+        "Strength and conditioning coach — designs and runs training programs to build strength, power, and durability, and adjusts programs for athletes working through rehab, guided by the AT or PT.",
+        "School nurse — manages day-to-day health needs on campus, including chronic conditions like asthma or diabetes, and is often the link between home, school, and the sports medicine team when the AT isn't around.",
+        "Registered dietitian (RD) — a credentialed nutrition professional who guides fueling, hydration, and recovery nutrition for performance and health.",
+        "The athlete and their parents/guardians — central members of the team, not bystanders. The athlete reports symptoms honestly and follows the plan; parents give consent, share medical history, and support recovery at home.",
+        "Student aide — assists the AT under direct supervision: preparing water and equipment, keeping records, observing practice. A student aide never diagnoses, treats independently, or clears an athlete to return; the job is to support and to report."
+      ],
+      "image": {
+        "asset": "sports-medicine-team-hub-diagram.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "A hub-and-spoke diagram with the athlete in the center circle. A second ring around the athlete shows the athletic trainer as the primary hub connecting outward with labeled spokes to: team physician, physical therapist, coach, strength and conditioning coach, EMS/paramedics, school nurse, registered dietitian, parents/guardians, and student aide. Each spoke is a simple labeled line, clean flat infographic style, no photographic detail, readable at a glance.",
+        "alt": "Hub-and-spoke diagram showing the athlete at the center, connected through the athletic trainer to the team physician, PT, coach, strength coach, EMS, school nurse, dietitian, parents, and student aide.",
+        "location": "public/images/units/sports-medicine-team/"
+      }
+    },
+    {
+      "heading": "Chain of command: who decides what",
+      "body": [
+        "Two very different kinds of decisions happen around an injured athlete, and they belong to different people.",
+        "Medical decisions — what's actually wrong, how it should be treated, and whether it's safe to return to play — belong to the team physician and athletic trainer, following the team's established return-to-play process (see the rehab and return-to-play unit for how that clearance actually works). Play decisions — who starts, what the game plan is, how hard to push conditioning — belong to the coach.",
+        "A coach can and should ask questions, share what they observed, and plan around an injury. What a coach cannot do is overrule a medical clearance decision. The chain of command exists precisely so that, under pressure — a close game, a big rival, a parent pushing to play — the person with medical training, not the person with the most at stake in the scoreboard, has the final word on medical safety."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "The coach does not make medical decisions",
+        "text": "A coach directs conditioning and play — never whether an injured athlete is medically cleared to play. If a coach and the athletic trainer or physician disagree about return-to-play, the medical decision stands on the field, full stop. Any disagreement gets worked out afterward through the proper chain of command, never by putting the athlete back in."
+      }
+    },
+    {
+      "heading": "The emergency action plan: the team's rehearsed choreography",
+      "body": [
+        "Nowhere does teamwork matter more than in an emergency, when there's no time to figure things out on the spot. That's exactly what an emergency action plan (EAP) is for — see the emergency action plan unit for the full picture, but the short version is this: every venue has a written plan that assigns specific jobs, by role, before anything ever happens.",
+        "One person calls 911 and stays on the line. Another retrieves the AED (automated external defibrillator). Someone unlocks the gate and guides EMS in. Someone keeps the rest of the team and any crowd back so responders have room to work. The athletic trainer or physician directs the medical response itself. None of this is improvised — it's rehearsed, so that in the moment everyone already knows their job and moves without being told twice."
+      ],
+      "image": {
+        "asset": "sports-medicine-team-eap-roles.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Overhead view of a practice field during a drilled emergency response. Show five simplified figures with role labels above each: 'Athletic trainer — directs medical response' kneeling beside a collapsed figure, 'Coach — calls 911, stays on line', 'Assistant coach — retrieves AED', 'Team captain — guides EMS to the gate', 'Student aide — keeps teammates back, clears space'. Add a dashed line showing the guided path from the parking lot gate to the scene. Clean flat infographic style, no distressing detail.",
+        "alt": "Overhead diagram of a practice field showing an emergency response with each team member's role labeled: athletic trainer directing care, coach calling 911, assistant coach retrieving the AED, a captain guiding EMS in, and a student aide keeping the area clear.",
+        "location": "public/images/units/sports-medicine-team/"
+      }
+    },
+    {
+      "heading": "Clear, accurate handoffs",
+      "body": [
+        "A team only works if information moves cleanly between its members — what an athlete's symptoms are, what's already been done, what needs to happen next. Sloppy handoffs are how important details get lost: an allergy that never gets mentioned to the substitute AT, a 'she said her ankle popped' that never makes it into the physician's notes.",
+        "One simple structure used across health care for handing off information is SBAR: Situation (what's happening right now), Background (relevant history — prior injuries, medications, allergies), Assessment (what's been observed or found), and Recommendation (what should happen next). You don't need to be a professional to use the idea — reporting 'she rolled her ankle inward landing from a jump, she's sprained this ankle before, it's swelling fast and she can't put weight on it, I think she needs to see the AT right away' is far more useful than 'her ankle hurts.'",
+        "Using correct terminology matters here too (see the medical terminology unit) — 'swelling' and 'bruising' mean different things to a physician than 'looks bad,' and precise words prevent mix-ups. Written records back this up: what gets documented (see the documentation and recordkeeping unit) is what the next person on the team can actually rely on."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "When you report something, give the full picture",
+        "text": "Whether you're a student aide telling the AT what you saw, or the AT briefing a physician, aim to answer: what happened, what's the history, what do you see now, and what do you think should happen next. A complete, specific report saves the next person time and prevents something important from getting missed."
+      }
+    },
+    {
+      "heading": "The athlete and family are part of the team, not bystanders",
+      "body": [
+        "It's easy to think of the athlete as the person things happen to, rather than a member of the care team. In reality, the athlete's honesty is often the single most important source of information the team has — no test replaces a truthful answer to 'does this hurt' or 'have you had this before.' An athlete who hides symptoms to keep playing makes every other team member's job harder and puts their own safety at risk.",
+        "Parents and guardians matter just as much. They provide consent for care, share medical history the athlete may not think to mention (past surgeries, family conditions, medication allergies), and are the ones supporting recovery at home — icing on schedule, showing up to rehab appointments, reinforcing what the AT or physician recommended instead of undermining it."
+      ]
+    },
+    {
+      "heading": "The student aide's place on the team",
+      "body": [
+        "A student aide is a real, valued part of the sports medicine team — not just someone fetching water. Reliable support matters: showing up on time, keeping equipment and supplies ready, helping keep accurate records, and staying alert during practice and games.",
+        "What a student aide does not do is just as important: diagnose an injury, decide treatment, or clear anyone to return to play. Staying within that scope isn't about being unhelpful — it's what keeps athletes safe and keeps the team's trust (see the legal and ethical issues unit for more on why scope of practice matters). If you notice anything — swelling, an athlete limping, someone who 'doesn't seem right' after a hit — the correct action is always the same: tell the athletic trainer immediately. Recognize it, report it, let the trained professional evaluate it."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "When in doubt, say something",
+        "text": "You will never be wrong for reporting something to the athletic trainer, even if it turns out to be nothing. You can be wrong for staying quiet, guessing, or handling something yourself that's outside your role."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Which member of the sports medicine team directs the athlete's overall medical care and holds final medical authority on return-to-play for a significant injury?",
+      "choices": [
+        "The head coach",
+        "The team physician",
+        "The strength and conditioning coach",
+        "The student aide"
+      ],
+      "answerIndex": 1,
+      "explanation": "The team physician directs medical care and holds final authority on return-to-play decisions for significant injuries, working closely with the athletic trainer's day-to-day evaluation. The coach directs play and conditioning, not medicine; the strength coach and student aide have no authority over medical clearance at all."
+    },
+    {
+      "id": "q2",
+      "question": "Which description best fits the athletic trainer's (AT) role on the sports medicine team?",
+      "choices": [
+        "The day-to-day hub who handles prevention, evaluation, immediate care, and rehab, and links the athlete to the physician, coach, and parents",
+        "A physician who only appears once a season to clear athletes",
+        "A volunteer whose only job is stocking the first aid kit",
+        "The person who decides game strategy and playing time"
+      ],
+      "answerIndex": 0,
+      "explanation": "The AT is the team's day-to-day hub — usually the first person on scene for an injury, and the connective link between everyone else on the team. Deciding strategy and playing time is the coach's job, not the AT's."
+    },
+    {
+      "id": "q3",
+      "question": "During a game, the athletic trainer tells a coach an injured player is not cleared to return. The coach is frustrated because the team is down late and wants to send the player back in anyway. What's the correct next step?",
+      "choices": [
+        "The coach can override the AT, since it's the coach's team and decision",
+        "The player decides for themselves since they say they feel fine",
+        "The AT's medical decision stands — the player stays out; any disagreement gets addressed later through the proper chain of command",
+        "The student aide should quietly let the player back onto the field if the coach insists"
+      ],
+      "answerIndex": 2,
+      "explanation": "Medical clearance belongs to the athletic trainer/physician, not the coach, no matter how important the moment feels. An athlete's own opinion doesn't override a medical hold either, and a student aide should never act outside their role to satisfy a coach's request."
+    },
+    {
+      "id": "q4",
+      "question": "Why does a venue's emergency action plan (EAP) assign jobs like 'calls 911' or 'retrieves the AED' to roles ahead of time, rather than figuring it out in the moment?",
+      "choices": [
+        "So everyone already knows their job and no time is lost figuring out who does what during an emergency",
+        "So only the head coach is allowed to help in an emergency",
+        "Because it's required paperwork with no real effect on the response",
+        "So the athletic trainer doesn't need to be present at practices"
+      ],
+      "answerIndex": 0,
+      "explanation": "Assigning roles in advance means the plan works instantly under pressure — nobody wastes precious seconds deciding who does what. It doesn't limit who can help, it isn't just paperwork, and it doesn't reduce the need for a trained AT to be present."
+    },
+    {
+      "id": "q5",
+      "question": "As a student aide, you notice an athlete's finger looks visibly bent out of shape after a ball hit it during drills. What should you do?",
+      "choices": [
+        "Try to gently straighten it back into place before anyone notices",
+        "Tape the finger to the one next to it so the athlete can keep practicing",
+        "Decide whether it's a dislocation or a fracture and tell the athlete which one it is",
+        "Tell the athletic trainer immediately and let them evaluate it"
+      ],
+      "answerIndex": 3,
+      "explanation": "A student aide's job is to recognize and report, not diagnose or treat — reporting to the AT right away gets the athlete a trained evaluation fast. Straightening, taping for play, or naming the injury yourself are all outside a student aide's scope and could make things worse."
+    },
+    {
+      "id": "q6",
+      "question": "What does the SBAR framework (Situation, Background, Assessment, Recommendation) help a sports medicine team member do?",
+      "choices": [
+        "Grade the severity of a ligament sprain",
+        "Hand off information about an athlete clearly and completely, so nothing important gets lost between team members",
+        "Decide which conditioning drills to run at practice",
+        "Calculate how much water an athlete should drink per hour"
+      ],
+      "answerIndex": 1,
+      "explanation": "SBAR is a structure for reporting information clearly and completely — what's happening, relevant history, what's been observed, and what should happen next — not a tool for grading injuries, planning conditioning, or calculating hydration needs."
+    },
+    {
+      "id": "q7",
+      "question": "Which sports medicine team member is trained to guide an athlete's fueling and hydration plan for performance and recovery?",
+      "choices": [
+        "The strength and conditioning coach",
+        "The school nurse",
+        "The registered dietitian (RD)",
+        "The team physician"
+      ],
+      "answerIndex": 2,
+      "explanation": "A registered dietitian is the credentialed nutrition professional on the team, focused on fueling, hydration, and recovery nutrition. The strength coach focuses on training programs, the nurse on day-to-day campus health needs, and the physician on directing overall medical care."
+    },
+    {
+      "id": "q8",
+      "question": "Which statement correctly separates a coach's role from a physician's or athletic trainer's role on the sports medicine team?",
+      "choices": [
+        "The coach makes both play-calling decisions and medical clearance decisions",
+        "The coach has no role at all once an athlete is injured",
+        "The coach only handles paperwork while the AT runs practices",
+        "The coach leads conditioning and play/strategy decisions, while medical decisions like diagnosis and return-to-play clearance belong to the physician/AT"
+      ],
+      "answerIndex": 3,
+      "explanation": "Coaches lead conditioning and play decisions and should recognize and report problems, but diagnosis and return-to-play clearance belong to the physician/AT. The coach isn't sidelined after an injury (they still coordinate logistics and communication) and doesn't hold any medical authority."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Team physician",
+      "back": "Licensed doctor (MD/DO) who directs the athlete's overall medical care and holds final medical authority on return-to-play for significant injuries."
+    },
+    {
+      "id": "f2",
+      "front": "Athletic trainer (AT)",
+      "back": "Licensed healthcare professional and the team's day-to-day hub — prevention, evaluation, immediate care, and rehab; the link between athlete, coach, physician, and parents."
+    },
+    {
+      "id": "f3",
+      "front": "Physical therapist (PT)",
+      "back": "Licensed professional who guides structured rehab to rebuild strength, motion, and function, often after the acute phase or surgery."
+    },
+    {
+      "id": "f4",
+      "front": "EMS / paramedics",
+      "back": "Emergency medical services personnel who provide emergency transport and advanced care beyond what's available on-site; called through the EAP."
+    },
+    {
+      "id": "f5",
+      "front": "Coach's role with an injury",
+      "back": "Leads conditioning and play/strategy decisions; recognizes a problem and gets the athlete to the AT/physician — does NOT diagnose or clear return to play."
+    },
+    {
+      "id": "f6",
+      "front": "Strength and conditioning coach",
+      "back": "Designs and runs training programs for performance; adjusts programs for rehabbing athletes under the AT or PT's guidance."
+    },
+    {
+      "id": "f7",
+      "front": "School nurse",
+      "back": "Manages day-to-day campus health needs (chronic conditions, medications) and links home, school, and the sports medicine team."
+    },
+    {
+      "id": "f8",
+      "front": "Registered dietitian (RD)",
+      "back": "Credentialed nutrition professional who guides fueling, hydration, and recovery nutrition for performance and health."
+    },
+    {
+      "id": "f9",
+      "front": "Chain of command",
+      "back": "Medical decisions (diagnosis, return-to-play) belong to the physician/AT; play and conditioning decisions belong to the coach — this prevents cross-purposes, especially in an emergency."
+    },
+    {
+      "id": "f10",
+      "front": "Student aide's scope",
+      "back": "Assists the AT under supervision — never diagnoses, treats independently, or clears an athlete to return. Job is to recognize and report, always escalating findings to the AT."
+    },
+    {
+      "id": "f11",
+      "front": "SBAR",
+      "back": "Situation, Background, Assessment, Recommendation — a simple structure for handing off information about an athlete clearly and completely."
+    },
+    {
+      "id": "f12",
+      "front": "Athlete and parents on the team",
+      "back": "Central team members, not bystanders: the athlete reports symptoms honestly and follows the plan; parents give consent, share history, and support recovery at home."
+    }
+  ]
+}

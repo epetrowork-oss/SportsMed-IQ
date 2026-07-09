@@ -1,0 +1,271 @@
+{
+  "id": "protective-equipment",
+  "title": "Protective Equipment & Injury Prevention",
+  "category": "Prevention & Performance",
+  "strand": "protective-equipment",
+  "gradeBand": "9-10",
+  "summary": "The right, well-fitted, well-maintained gear prevents injuries — the wrong or poorly-fitted gear just creates a false sense of safety.",
+  "minutes": 16,
+  "standards": ["CTE.HSMT.Anchor.6", "CTE.HSMT.B.1.2", "CTE.HSMT.B.2.0"],
+  "sections": [
+    {
+      "heading": "Why protective equipment matters",
+      "body": [
+        "Protective equipment — helmets, pads, mouthguards, eyewear, braces, and sport-specific gear — exists because sports put predictable stress on the body, and engineers design gear to absorb or redirect that stress before it reaches bone, teeth, eyes, or soft tissue. The right piece of equipment, worn the right way, measurably lowers the odds and severity of specific injuries.",
+        "But that protection only holds up under one condition: the gear has to be the correct type for the sport, fitted to that specific athlete, worn every time it's needed, and kept in good repair. A helmet that's too big, a mouthguard left in a gym bag, or a cracked shoulder pad doesn't just fail to help — it can create a false sense of safety, where an athlete plays harder or takes bigger risks because they believe they're protected when they aren't. This unit covers what good protective equipment looks like, how to know if it's actually working, and the one equipment rule that can never be broken on the field: never remove a possibly spine-injured athlete's helmet just to check on them."
+      ]
+    },
+    {
+      "heading": "Categories of protective equipment",
+      "body": [
+        "Different sports create different injury risks, so protective gear is built for a specific job. Knowing the major categories helps you recognize what should be on an athlete before they ever take the field."
+      ],
+      "list": [
+        "Helmets and headgear — hard-shell helmets in football, hockey, lacrosse, and batting helmets in baseball/softball absorb and spread impact forces away from the skull; padded headgear in wrestling protects the ears from repeated friction injury (cauliflower ear); bike and skate helmets work the same way for wheeled sports.",
+        "Mouthguards — worn in football, hockey, lacrosse, and boxing, and recommended in basketball, they protect the teeth, lips, and tongue from direct impact and help cushion the jaw (see the dental and facial trauma unit for what happens when a tooth is knocked out anyway).",
+        "Eye protection — polycarbonate sports goggles or face shields in basketball, racquetball, lacrosse, and field hockey guard against a fast-moving ball, elbow, or stick reaching the eye (see the eye injuries unit for why this matters — some eye injuries cause permanent vision loss in seconds).",
+        "Pads and braces — shoulder pads and shin guards absorb direct-contact force in football, hockey, and soccer; knee and elbow pads protect athletes who dive or fall in volleyball and wrestling; ankle and knee braces support a joint that's already been injured or is at higher risk.",
+        "Footwear — cleats and shoes matched to the sport and playing surface improve traction and shock absorption and reduce the risk of ankle and foot injuries (see the foot conditions unit for what happens when footwear doesn't fit or match the surface).",
+        "Sport-specific gear — equipment built for one role or sport, like a baseball catcher's mask, chest protector, and shin guards, a fencer's mask, or a goalie's leg pads and chest protector."
+      ],
+      "image": {
+        "asset": "protective-equipment-categories-overview.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Flat infographic showing six labeled icons in a row, each representing a protective equipment category: a helmet, a mouthguard, sports goggles, shoulder pads, an ankle brace, and a cleat. Under each icon, add a small caption naming one or two sports where it's used (e.g., 'Football, Hockey' under the helmet). Clean, simple line-icon style with a shared color palette.",
+        "alt": "Infographic of six protective equipment categories — helmets, mouthguards, eye protection, pads/braces, footwear, and sport-specific gear — each labeled with example sports.",
+        "location": "public/images/units/protective-equipment/"
+      }
+    },
+    {
+      "heading": "Fit is everything",
+      "body": [
+        "Every piece of protective equipment is engineered and tested at a specific fit — a helmet, brace, or pad that's the wrong size or worn incorrectly doesn't just work a little worse, it often doesn't work at all. A helmet that's too loose can shift or rotate on impact, moving the padding away from the exact spot that took the hit. A mouthguard that's sitting in a locker instead of the athlete's mouth protects nobody. Shoulder pads that have slid out of position leave the joint they're supposed to cover exposed.",
+        "A few fit checks worth knowing:"
+      ],
+      "list": [
+        "Helmet — sits level on the head (not tilted back, which exposes the forehead), doesn't rock side to side or slide down when the head moves, and the chin strap is buckled snugly every time.",
+        "Mouthguard — actually in the athlete's mouth during play and practice, not just carried; a boil-and-bite or custom-fitted mouthguard stays in place on its own without being held in by clenched teeth.",
+        "Pads and braces — positioned directly over the joint or bone they're built to protect, and secured (straps, laces, buckles) so they can't slide out of place during play."
+      ],
+      "image": {
+        "asset": "protective-equipment-helmet-fit-check.webp",
+        "ratio": "4:3",
+        "background": "transparent",
+        "description": "Two-panel comparison illustration of an athlete wearing a football helmet. Left panel labeled 'Correct fit': helmet sits level just above the eyebrows, snug against the head with no gap, chin strap buckled. Right panel labeled 'Incorrect fit': helmet tilted back exposing the forehead, visible gap between pad and head, chin strap hanging unbuckled. Simple athletic-instruction illustration style.",
+        "alt": "Comparison diagram of a correctly fitted helmet (level, snug, chin strap buckled) versus an incorrectly fitted helmet (tilted back, loose, strap unbuckled).",
+        "location": "public/images/units/protective-equipment/"
+      },
+      "callout": {
+        "type": "tip",
+        "title": "Check fit again mid-practice, not just before",
+        "text": "Equipment that fit correctly at the start of practice can shift after 20 minutes of sweat, contact, and movement. Part of the job of a student assistant is a quick glance during a water break — is that helmet still level? Is that brace still in place?"
+      }
+    },
+    {
+      "heading": "Standards, certification, and gear lifespan",
+      "body": [
+        "Protective equipment isn't just padding — helmets in particular are tested by independent safety-standards organizations against specific impact criteria before they're allowed to be sold and worn in organized sports. Look for a certification sticker or stamp on the inside of a helmet; it means that model met a tested safety standard, not that any individual helmet is automatically safe forever.",
+        "That's because protective materials wear down. Foam padding compresses, shells develop hairline cracks from repeated impacts, and hardware loosens over years of use. Many manufacturers recommend professional reconditioning and recertification on a regular cycle — commonly every year or two of heavy use — and require immediate retirement after a hard impact or any visible shell damage. Equipment doesn't stay 'certified' just because it once passed a test; it has to still be in the condition that test was based on."
+      ]
+    },
+    {
+      "heading": "Maintenance and inspection",
+      "body": [
+        "Gear that once fit and once passed certification can fail silently if it isn't checked. Regular inspection — at the start of a season and periodically throughout it — is where a lot of preventable injuries get caught before they happen. This is exactly the kind of task a student assistant is well-positioned to help with."
+      ],
+      "list": [
+        "Cracks, dents, or other visible damage to a hard shell (helmet, shin guard, chest protector)",
+        "Frayed, torn, or stretched-out straps that no longer hold gear snugly in place",
+        "Broken, missing, or bent buckles, snaps, or fasteners",
+        "Padding that's compressed flat, torn, or missing in spots",
+        "A mouthguard that's cracked, has holes bitten through it, or no longer fits snugly"
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Damaged equipment comes out of play immediately",
+        "text": "Any of the signs above means that piece of gear gets pulled from use and reported to a coach or athletic trainer right away — not 'after the game' and not 'if it gets worse.' Damaged equipment can fail at the exact moment it's needed most, and a player should never be sent back out in gear you've flagged as compromised."
+      }
+    },
+    {
+      "heading": "Equipment doesn't make you invincible",
+      "body": [
+        "One of the most dangerous ideas in sports is that wearing protective equipment means an athlete can't get hurt. It's backwards: gear reduces certain risks, it doesn't remove them, and believing otherwise can make athletes play more recklessly — leading with a helmet, throwing a body into contact they'd otherwise avoid — which can raise injury risk instead of lowering it.",
+        "The clearest example is the helmet-concussion myth. A properly fitted helmet meaningfully lowers the risk of skull fracture and other severe head injuries by absorbing and spreading impact force. What it does not do is prevent concussion. A concussion happens when the brain moves rapidly inside the skull (covered in its own unit) — and a helmet, no matter how well made, can't stop the brain from moving inside a skull that's still absorbing a sudden hit. 'I have a helmet on, so I can go all-out' is exactly the kind of thinking that leads to more head injuries, not fewer.",
+        "This is also why the rules requiring specific gear for specific sports exist — mouthguard rules, helmet rules, eyewear rules in some leagues. They're not arbitrary bureaucracy; they reflect real injury data about what happens when that piece of equipment is missing."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "A helmet does not prevent concussion",
+        "text": "Never treat a helmet as concussion-proof, and never let 'I'm wearing my helmet' become a reason to take a bigger, more reckless hit. Helmets lower the risk of skull fracture and severe brain injury — they do not stop the brain from moving inside the skull, which is what causes a concussion."
+      }
+    },
+    {
+      "heading": "The can't-miss rule, and your role",
+      "body": [
+        "There's one equipment rule that overrides every other instinct: if an athlete goes down and you suspect a serious neck or spine injury, never remove their helmet or other equipment to 'just take a look.' In sports like football and hockey, a helmet and shoulder pads work together as a system that keeps the head and neck aligned — pulling one off without the other, even for a moment, can shift that alignment and turn a stable injury into a permanent one. This is covered in full in the neck and back injuries unit, and it applies here too: leave the equipment exactly where it is, keep the athlete still, and activate the Emergency Action Plan.",
+        "Outside of emergencies, your role with protective equipment is mostly about the basics done consistently: help make sure teammates actually have the right gear for their sport and position, check that it's fitted and worn correctly — not just present in a bag — spot damaged equipment early and report it instead of assuming someone else will notice, and reinforce that equipment rules exist for real safety reasons, not as something to work around."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Never remove equipment from a suspected spine injury",
+        "text": "If you suspect a serious neck or back injury, do not remove the helmet, shoulder pads, or any other equipment. Keep the athlete still, activate the Emergency Action Plan, and let trained EMS or athletic trainers handle equipment removal — it's a specialized skill, never a sideline judgment call."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Which piece of protective equipment is most associated with protecting the teeth, lips, and jaw from direct impact?",
+      "choices": ["Eye shield", "Mouthguard", "Shin guards", "Wrist brace"],
+      "answerIndex": 1,
+      "explanation": "A mouthguard cushions the teeth, lips, and jaw against direct impact, and its coverage is exactly why a knocked-out tooth is often preventable — covered in more detail in the dental and facial trauma unit. Shin guards, eye shields, and wrist braces protect different body regions entirely."
+    },
+    {
+      "id": "q2",
+      "question": "Which statement about helmets is accurate?",
+      "choices": [
+        "A helmet completely prevents concussions if worn correctly",
+        "Helmets only protect against cuts and scrapes",
+        "A properly fitted helmet significantly lowers the risk of skull fracture and severe brain injury, but does not prevent concussion",
+        "A helmet's main job is to improve an athlete's speed"
+      ],
+      "answerIndex": 2,
+      "explanation": "A well-fitted helmet is proven to lower the risk of skull fracture and severe brain injury by absorbing and spreading impact force — but it can't stop the brain from moving rapidly inside the skull, which is what actually causes a concussion. Believing a helmet is concussion-proof is exactly the false sense of safety that leads athletes to take bigger, more reckless hits."
+    },
+    {
+      "id": "q3",
+      "question": "During a drill, a coach notices a player's helmet rocks side to side and slides down over his eyes whenever he moves his head. What should happen?",
+      "choices": [
+        "The player should adjust or replace the helmet so it fits snugly before continuing",
+        "Nothing, as long as the chin strap is buckled",
+        "It's fine, since football helmets are designed to move slightly",
+        "The player should just wear it looser for comfort"
+      ],
+      "answerIndex": 0,
+      "explanation": "A helmet that rocks or slides has lost the snug fit it needs to keep its padding lined up with the head during an impact — it's no longer providing the protection it was designed for. Continuing to play in a helmet like that is a fit problem, not a minor comfort issue, and it should be fixed before the athlete continues."
+    },
+    {
+      "id": "q4",
+      "question": "A player says, 'I don't need my mouthguard — I never get hit in the face.' What's the best response to this reasoning?",
+      "choices": [
+        "He's right — mouthguards are only necessary for high-contact positions",
+        "He should carry the mouthguard in his pocket in case he needs it later",
+        "Mouthguards are optional accessories with no real safety purpose",
+        "Injuries happen unpredictably in sports, and a mouthguard only protects if it's actually worn every time, not just during a play he predicts will be rough"
+      ],
+      "answerIndex": 3,
+      "explanation": "A mouthguard only works if it's actually in the athlete's mouth when an unpredictable hit happens — injuries in sports don't wait for the play an athlete expects to be rough. Carrying it 'just in case' or deciding certain positions don't need it defeats the entire purpose of wearing one."
+    },
+    {
+      "id": "q5",
+      "question": "A student assistant inspecting gear before the season finds a batting helmet with a visible crack in the shell. What should be done?",
+      "choices": [
+        "Remove it from use immediately and report it — a cracked shell can no longer absorb impact the way it's designed to",
+        "Use it anyway if the padding inside still feels fine",
+        "Tape over the crack and continue using it",
+        "Only worry about it if a player complains"
+      ],
+      "answerIndex": 0,
+      "explanation": "A cracked shell can no longer absorb and spread impact force the way an intact one can, even if the padding underneath still feels okay from the inside. Damaged equipment should be pulled from use immediately and reported, not taped over or left for a player to flag later."
+    },
+    {
+      "id": "q6",
+      "question": "An athlete is down after a hard hit and is not moving his legs. He is still wearing his helmet and shoulder pads. What should a student assistant do about his equipment?",
+      "choices": [
+        "Remove the helmet so his airway can be checked",
+        "Remove both the helmet and pads to prepare him for transport",
+        "Leave the helmet and pads in place, keep him still, and activate the Emergency Action Plan for the athletic trainer or EMS",
+        "Loosen the chin strap only"
+      ],
+      "answerIndex": 2,
+      "explanation": "Helmet and shoulder pads work together to keep the head and neck aligned; removing either one from a possibly spine-injured athlete — even partway, even just to check — can shift that alignment and worsen the injury. The correct response is to leave equipment in place, keep the athlete still, and get trained help moving toward the athlete right away."
+    },
+    {
+      "id": "q7",
+      "question": "Why do certified helmets sometimes need to be sent back to the manufacturer for reconditioning, or eventually retired?",
+      "choices": [
+        "Certification never expires once a helmet is purchased",
+        "Protective materials and hardware wear down with use and impacts over time, so a helmet's protection can't be assumed to last forever",
+        "Reconditioning is only about improving the helmet's appearance",
+        "Helmets are recertified only if they look dirty"
+      ],
+      "answerIndex": 1,
+      "explanation": "Protective materials like foam padding and hard shells wear down with repeated use and impacts, which is why manufacturers set reconditioning and recertification cycles and require replacement after significant damage. A certification sticker reflects the model's original testing — it doesn't guarantee an individual helmet is still in that same condition years later."
+    },
+    {
+      "id": "q8",
+      "question": "Which of these best shows protective equipment matched to a sport's specific demands?",
+      "choices": [
+        "A soccer goalie wearing shin guards no differently than a field player",
+        "Every athlete in every sport wearing the same gear",
+        "Skipping sport-specific gear since basic pads cover all needs",
+        "A baseball catcher wearing a chest protector, shin guards, and a mask that a batter does not wear"
+      ],
+      "answerIndex": 3,
+      "explanation": "A catcher faces a completely different set of impact risks than a batter — foul tips, close-range throws, plays at the plate — so catcher's gear is built for that specific role, not handed to every player on the field. Sport-specific gear exists because 'one set of pads for everyone' doesn't match the actual demands different positions face."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Why fit matters",
+      "back": "Protective equipment is engineered and tested for a specific fit — worn too loose, too tight, or not at all, it can fail to protect even though it's the 'right' piece of gear."
+    },
+    {
+      "id": "f2",
+      "front": "Mouthguard (role)",
+      "back": "Protects teeth, lips, and tongue and helps cushion the jaw from impact — only works if it's actually worn during play and practice, not just carried."
+    },
+    {
+      "id": "f3",
+      "front": "Helmet certification",
+      "back": "An independent safety-standards sticker inside a helmet means that model passed impact testing — it doesn't guarantee an individual helmet is still in that tested condition years later."
+    },
+    {
+      "id": "f4",
+      "front": "Helmet reconditioning",
+      "back": "Manufacturers commonly recommend professional reconditioning/recertification every year or two of heavy use, and immediate retirement after a hard impact or visible shell damage."
+    },
+    {
+      "id": "f5",
+      "front": "What a helmet does NOT prevent",
+      "back": "Concussion. A helmet lowers the risk of skull fracture and severe brain injury, but it can't stop the brain from moving inside the skull on impact."
+    },
+    {
+      "id": "f6",
+      "front": "Correct helmet fit",
+      "back": "Sits level on the head (not tilted back), doesn't rock or slide when the head moves, chin strap fastened snugly every time."
+    },
+    {
+      "id": "f7",
+      "front": "Signs equipment should be pulled from use",
+      "back": "Cracks or dents in a hard shell, frayed or torn straps, broken buckles/snaps, compressed or missing padding, or a cracked/ill-fitting mouthguard."
+    },
+    {
+      "id": "f8",
+      "front": "Eye protection",
+      "back": "Polycarbonate goggles or face shields used in basketball, racquetball, lacrosse, and field hockey — guard against fast-moving balls, elbows, or sticks reaching the eye."
+    },
+    {
+      "id": "f9",
+      "front": "Footwear and fit",
+      "back": "Cleats/shoes matched to the sport and playing surface improve traction and shock absorption, lowering ankle and foot injury risk."
+    },
+    {
+      "id": "f10",
+      "front": "False sense of safety",
+      "back": "Believing gear makes an athlete invincible can lead to more reckless play (leading with a helmet, bigger hits) — raising injury risk instead of lowering it."
+    },
+    {
+      "id": "f11",
+      "front": "Never remove equipment from a suspected spine injury",
+      "back": "Leave the helmet and shoulder pads in place, keep the athlete still, and activate the Emergency Action Plan — equipment removal is a specialized skill for trained EMS/athletic trainers only."
+    },
+    {
+      "id": "f12",
+      "front": "Student assistant's equipment role",
+      "back": "Help ensure teammates have the right gear, check it's fitted and worn correctly (not just present), spot and report damaged equipment, and reinforce that equipment rules exist for real safety reasons."
+    }
+  ]
+}
