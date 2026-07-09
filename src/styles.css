@@ -1133,3 +1133,95 @@ h3 {
   border-top: 1px solid var(--line);
   max-width: 42rem;
 }
+
+/* Teacher dashboard: assignment ("class code") builder. */
+
+.teacher-assignments {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  max-width: 42rem;
+}
+
+.assignment-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-weight: 600;
+  margin: 0.75rem 0;
+}
+
+.assignment-unit-picker {
+  margin: 0.5rem 0;
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  padding: 0 0.25rem;
+  max-height: 22rem;
+  overflow-y: auto;
+}
+
+.assignment-unit-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+}
+
+.assignment-unit-row:hover {
+  background: var(--bg);
+}
+
+.assignment-unit-row input[type='checkbox'] {
+  flex: none;
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.assignment-unit-title {
+  flex: 1 1 auto;
+}
+
+.assignment-unit-row .pill-grade {
+  margin-top: 0;
+  flex: none;
+}
+
+.assignment-mode-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0.75rem 0;
+}
+
+.assignment-mode-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  min-height: 44px;
+  padding: 0.3rem 0;
+  cursor: pointer;
+}
+
+.assignment-mode-option input[type='radio'] {
+  flex: none;
+  margin-top: 0.2rem;
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+/* Roster: per-assignment completion shown inside a student's expanded row,
+   above the category groups. */
+
+.assignment-progress-block {
+  padding-bottom: 0.3rem;
+}
+
+.assignment-progress-row {
+  margin: 0;
+  padding: 0.2rem 0.75rem;
+  padding-left: calc(0.75rem + 1.1rem);
+  font-size: 0.88rem;
+  color: var(--ink);
+}
