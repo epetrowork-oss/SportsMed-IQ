@@ -1,0 +1,261 @@
+{
+  "id": "splinting-immobilization",
+  "title": "Splinting & Immobilization Principles",
+  "category": "Assessment & Clinical Skills",
+  "strand": "splinting-immobilization",
+  "gradeBand": "9-10",
+  "summary": "Learn why injuries get immobilized, the golden rule that guides every splint, and the circulation/sensation/movement check that matters more than technique.",
+  "minutes": 16,
+  "standards": ["CTE.HSMT.B.1.2", "CTE.HSMT.Anchor.6", "CTE.HSMT.B.4.5"],
+  "sections": [
+    {
+      "heading": "Why injuries get immobilized",
+      "body": [
+        "Immobilization means keeping an injured body part from moving. It's the step that connects recognizing a suspected fracture or dislocation (bones broken or a joint forced out of alignment — see the Fractures & Dislocations unit) to getting that athlete safely to a physician.",
+        "Immobilization isn't just about comfort. Movement at an injury site can grind broken bone ends against nearby nerves and blood vessels, turn a stable injury into an unstable one, and restart or worsen bleeding around the fracture. Holding the area still limits all of that."
+      ],
+      "list": [
+        "Reduces pain by stopping motion at the injury site.",
+        "Protects nerves and blood vessels near the injury from further damage caused by bone or joint movement.",
+        "Helps control bleeding — movement at a fracture site can disturb clotting and restart blood loss.",
+        "Makes the athlete safe to move or transport without the injury shifting."
+      ]
+    },
+    {
+      "heading": "The golden principle: splint it as it lies",
+      "body": [
+        "Every splint in first aid follows one rule above all others: splint the injury in the position you find it. Do not try to straighten a bent limb, push a deformity back into a 'normal' looking shape, or attempt to relocate ('reduce') a dislocated joint before splinting it. Reducing a dislocation is a physician's procedure — attempting it on the sideline, even for something that looks minor like a jammed finger, risks tearing a nerve or blood vessel you can't see and turning a manageable injury into a much worse one.",
+        "The second half of the rule: immobilize the joint above and the joint below the injury. A splint that only covers the injured bone itself can still pivot at the neighboring joints, which lets the fracture site move anyway. For example, a suspected forearm fracture needs a splint that holds both the wrist and the elbow still, not just the forearm in between."
+      ],
+      "list": [
+        "Splint the limb in the position you found it — never force it straight.",
+        "Immobilize one joint above and one joint below the injury.",
+        "Pad the splint for comfort, but keep it snug enough that the injured part can't shift inside it.",
+        "Never attempt to reduce a dislocation or push a deformity back into place."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Never straighten, realign, or reduce",
+        "text": "A deformed limb or 'popped out' joint should never be pushed, pulled, or straightened by anyone other than a physician. Forcing it can tear nerves or blood vessels running past the joint and make an X-ray-confirmable injury into a surgical one. Splint it exactly as you found it and get the athlete to a trained provider."
+      }
+    },
+    {
+      "heading": "Types of splints and slings — know them, don't improvise them",
+      "body": [
+        "Trained providers choose from several splint types depending on the injury and what's available. As a student assistant, your job is to recognize these types and understand what they're for — not to select or apply one on a real athlete on your own.",
+        "Rigid splints use a firm material — a padded board, an aluminum SAM splint, or a commercial splint — held straight along the length of a limb. They give the most stability and are typically used for suspected long-bone fractures in the arm or leg.",
+        "Soft splints, like a folded pillow or a vacuum splint that molds around the limb once air is pumped out, flex around the shape of the injury. They're gentler and often used for foot, ankle, or lower-leg injuries where a rigid, flat splint would be hard to fit.",
+        "Anatomical splints use the athlete's own body as the support — for example, taping an injured finger to the neighboring finger ('buddy taping'), or securing an injured leg to the uninjured leg when no other equipment is available.",
+        "Slings and swathes support an injured arm, shoulder, or collarbone. A sling cradles the forearm and takes the weight of the arm off the shoulder; a swathe is a wrap around the torso that pins the arm against the body for extra stability, preventing it from swinging or being bumped."
+      ],
+      "image": {
+        "asset": "splinting-immobilization-splint-types-comparison.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Four-panel comparison illustration, each panel showing one splint type on a labeled body part: (1) Rigid splint — a padded board splint along a forearm from wrist to elbow. (2) Soft splint — a pillow splint wrapped around an ankle and lower leg. (3) Anatomical splint — buddy-taping one injured finger to the adjacent finger. (4) Sling and swathe — a forearm supported in a triangular sling with a swathe wrap securing the arm against the torso. Label each panel with its splint type name. Clean medical-illustration style, no graphic detail.",
+        "alt": "Four-panel comparison diagram of a rigid splint, a soft splint, an anatomical (buddy-tape) splint, and a sling and swathe.",
+        "location": "public/images/units/splinting-immobilization/"
+      }
+    },
+    {
+      "heading": "CSM: the check that matters more than the splint itself",
+      "body": [
+        "CSM stands for Circulation, Sensation, and Movement — the three things you check in the fingers or toes beyond (distal to) any injury, before splinting and again after. Field athletic trainers sometimes just call it 'check the fingers and toes,' but the idea is the same: a splint that's too tight, or an injury that's already damaged a nerve or blood vessel, can cut off blood flow or nerve signal to everything downstream of it.",
+        "Circulation: is the skin beyond the injury a normal color and warm, or is it pale, bluish, or unusually cold? Can you feel a pulse, or does color return quickly (within about 2 seconds) after you press and release a fingernail or toenail? Sensation: can the athlete feel you touching their fingers or toes lightly, or does it feel numb or 'asleep'? Movement: can they wiggle their fingers or toes on their own — without you moving the injured joint to test it?",
+        "If any of these are abnormal — cold, pale, numb, or unable to move — that's not a minor detail. It means blood flow or nerve function may be compromised, and it needs immediate attention from a trained provider: loosening the splint if one is already on, and activating the Emergency Action Plan (EAP) without delay."
+      ],
+      "image": {
+        "asset": "splinting-immobilization-csm-check.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Close-up illustration of a hand checking an athlete's fingers just beyond a splinted forearm. Show three small labeled callout bubbles pointing to the fingers: 'Circulation — color, warmth, pulse,' 'Sensation — can they feel light touch,' and 'Movement — can they wiggle their fingers.' Clean medical-illustration style, focus on the hand and splint edge only.",
+        "alt": "Diagram of a CSM check — circulation, sensation, and movement — performed on the fingers beyond a splinted forearm.",
+        "location": "public/images/units/splinting-immobilization/"
+      },
+      "callout": {
+        "type": "warning",
+        "title": "Check the fingers and toes — before AND after",
+        "text": "Always check circulation, sensation, and movement beyond the injury before you (or a trained provider) apply any splint or sling, and again right after. Skipping this check means you could miss a splint that's cutting off blood flow — a limb-threatening problem that a bandage or brace can hide from view."
+      }
+    },
+    {
+      "heading": "When you don't immobilize at all: suspected spine injury",
+      "body": [
+        "Everything above applies to arm, hand, leg, and foot injuries. A suspected neck or back injury is different, and the splinting rules in this unit do not apply to it.",
+        "If an athlete has neck or back pain after a hard hit or fall, numbness or weakness in more than one limb, or loses consciousness from a collision, the correct action is not to splint or reposition anything — it's to not move them at all. This is the cardinal rule covered in full in the Neck & Back Injuries unit: keep the athlete still, keep them calm, and activate the EAP so EMS can take over with spinal precautions. Attempting to apply a splint, sling, or any hands-on immobilization technique to someone with a suspected spine injury can shift the spine and cause the exact damage you're trying to prevent."
+      ]
+    },
+    {
+      "heading": "Your role: assist, monitor, refer",
+      "body": [
+        "At this stage, applying a splint to a real, injured athlete is a supervised skill performed by a certified athletic trainer, EMT, or other trained provider — not something a student does independently. That's not a small print detail; splinting the wrong way, too loosely, or too tightly can cause real harm, which is exactly why it takes hands-on training and supervision to do safely.",
+        "Your real job on the sideline is just as important: gather the splinting supplies a trained provider asks for, help hold the injured limb steady in the position found while they work, and keep the athlete calm and talking so they stay still. Once a splint or sling is on, you can be the one tracking CSM every few minutes until EMS or the next level of care arrives — and if anything changes for the worse (color, warmth, feeling, or movement), tell the trained provider immediately."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Calm and still beats fast and rough",
+        "text": "An athlete who is scared or in pain tends to move — which is exactly what you don't want at an injury site. Talk to them in a steady voice, explain what's happening one step at a time, and keep their attention on you rather than the injury. A calm athlete is easier to keep safely still."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is the main purpose of immobilizing a suspected fracture or dislocation?",
+      "choices": [
+        "To figure out exactly which bone or ligament is injured",
+        "To realign the bone so it heals in the correct position",
+        "To reduce pain, protect nearby nerves and blood vessels, and help control bleeding by limiting movement",
+        "To keep the athlete warm until help arrives"
+      ],
+      "answerIndex": 2,
+      "explanation": "Immobilization limits movement at the injury site, which reduces pain, protects structures near the injury, and helps control bleeding. It does not diagnose the injury (that takes imaging) and it is never used to realign or straighten anything — that's a physician's job."
+    },
+    {
+      "id": "q2",
+      "question": "'Splint it as it lies' means:",
+      "choices": [
+        "Splint the injury in the position you found it, without straightening or realigning it",
+        "Wait until the athlete lies down flat before splinting",
+        "Only splint injuries that are already in a straight position",
+        "Splint the limb straight so it matches the uninjured side"
+      ],
+      "answerIndex": 0,
+      "explanation": "The golden principle of splinting is to immobilize the injury exactly as found. Straightening a deformity or forcing a limb into a 'normal' position before splinting risks damaging nerves or blood vessels near the injury."
+    },
+    {
+      "id": "q3",
+      "question": "A baseball player has a suspected fracture in the middle of the forearm. Which joints must the splint immobilize?",
+      "choices": [
+        "No joints — only the forearm bone itself needs to be covered",
+        "Only the elbow",
+        "The shoulder and the fingers",
+        "The wrist and the elbow, the joints above and below the injury"
+      ],
+      "answerIndex": 3,
+      "explanation": "A splint must cross the joint above and the joint below the injury site — here, the wrist and elbow — or the fracture site can still move even with the bone itself covered. Covering just the injured bone, or only one neighboring joint, leaves it able to pivot."
+    },
+    {
+      "id": "q4",
+      "question": "A teammate's finger is visibly bent sideways after a rebound, and another player offers to 'just pop it back into place.' What's the correct response?",
+      "choices": [
+        "Let them do it — a finger dislocation is minor and easy to fix",
+        "Stop them, splint the finger in the position it's in, and get the athlete to a trained provider",
+        "Wait five minutes to see if it straightens on its own",
+        "Have the athlete try to bend it back themselves since it's their own hand"
+      ],
+      "answerIndex": 1,
+      "explanation": "Reducing (relocating) any joint — even a 'simple' finger — is a physician's procedure, not sideline first aid. Attempting it risks nerve or blood vessel damage you can't see. Splint it as found and refer to a trained provider."
+    },
+    {
+      "id": "q5",
+      "question": "Buddy-taping an injured finger to the finger next to it is an example of which type of splint?",
+      "choices": [
+        "Rigid splint",
+        "Soft (vacuum or pillow) splint",
+        "Anatomical splint",
+        "Traction splint"
+      ],
+      "answerIndex": 2,
+      "explanation": "An anatomical splint uses part of the athlete's own body — like an uninjured neighboring finger or the opposite leg — as the support structure. Rigid splints use a firm board or commercial device, and soft splints mold around the limb."
+    },
+    {
+      "id": "q6",
+      "question": "A trained provider just applied a sling and swathe to an athlete's injured shoulder. A few minutes later, the athlete's fingers on that arm are cold, pale, and tingling. What does this mean, and what should happen?",
+      "choices": [
+        "It's a sign the splint or sling may be too tight, cutting off circulation or nerve function — tell the trained provider immediately so it can be loosened",
+        "This is normal after any sling and needs no action",
+        "The athlete is just cold and should be given a blanket",
+        "It means the shoulder injury has healed and the sling can come off"
+      ],
+      "answerIndex": 0,
+      "explanation": "Cold, pale, or tingling fingers after immobilization is an abnormal CSM (circulation, sensation, movement) finding — a red flag that the splint or sling is restricting blood flow or nerve signal. It needs immediate attention, not a wait-and-see approach."
+    },
+    {
+      "id": "q7",
+      "question": "An athlete goes down hard, lands on the top of her head, and reports neck pain with tingling in both arms. What is the correct immobilization approach?",
+      "choices": [
+        "Apply a rigid splint to her neck yourself, then wait for EMS",
+        "Sit her up slowly and check whether she can turn her head",
+        "Use a sling and swathe to hold her head still against her shoulder",
+        "Do not attempt to splint or move her at all — keep her still, keep her calm, and activate the EAP for EMS with spinal precautions"
+      ],
+      "answerIndex": 3,
+      "explanation": "Neck pain with tingling in both arms is a spine red flag, and the splinting principles for limbs don't apply here. The correct response is the spine cardinal rule: don't move her at all, keep her calm and still, and get EMS involved — not attempt any hands-on immobilization yourself."
+    },
+    {
+      "id": "q8",
+      "question": "You're on the sideline when the athletic trainer splints a teammate's suspected lower-leg fracture. What is your role as a student assistant?",
+      "choices": [
+        "Choose and apply the splint yourself since you've seen it done before",
+        "Hand over supplies, help hold the limb steady in the position found, keep the athlete calm, and monitor CSM before and after — but let the trained provider apply the splint",
+        "Straighten the leg first so the splint fits better",
+        "Stay out of the way completely and let the athletic trainer handle everything alone"
+      ],
+      "answerIndex": 1,
+      "explanation": "Splinting a real injury is a supervised skill for trained providers. A student assistant's job is to support that process — supplies, steadying the limb, calming the athlete, and tracking CSM — not to apply the splint independently or attempt to reposition the limb."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Immobilization",
+      "back": "Keeping an injured body part from moving, to reduce pain, protect nearby nerves/vessels, and help control bleeding."
+    },
+    {
+      "id": "f2",
+      "front": "Why immobilize an injury? (3 reasons)",
+      "back": "Reduces pain, protects nerves and blood vessels near the injury from further damage, and helps control bleeding at the injury site."
+    },
+    {
+      "id": "f3",
+      "front": "'Splint it as it lies'",
+      "back": "The golden principle of splinting — immobilize the injury in the position you found it; never straighten, realign, or reduce it first."
+    },
+    {
+      "id": "f4",
+      "front": "Joint above and below rule",
+      "back": "A splint must immobilize the joint above AND the joint below the injury, or the injury site can still move even with the bone itself covered."
+    },
+    {
+      "id": "f5",
+      "front": "Rigid splint",
+      "back": "A firm splint (padded board, SAM splint, commercial splint) held straight along a limb; used for suspected long-bone fractures."
+    },
+    {
+      "id": "f6",
+      "front": "Soft splint",
+      "back": "A splint that molds/flexes around the injury (pillow splint, vacuum splint); often used for foot, ankle, or lower-leg injuries."
+    },
+    {
+      "id": "f7",
+      "front": "Anatomical splint",
+      "back": "Uses the athlete's own body as the support — e.g., buddy-taping an injured finger to the one next to it, or securing an injured leg to the uninjured leg."
+    },
+    {
+      "id": "f8",
+      "front": "Sling and swathe",
+      "back": "A sling cradles the forearm and takes weight off the shoulder; a swathe wraps around the torso to pin the arm against the body for extra stability."
+    },
+    {
+      "id": "f9",
+      "front": "CSM",
+      "back": "Circulation, Sensation, Movement — checked in the fingers or toes beyond (distal to) an injury, before AND after any splint or sling is applied."
+    },
+    {
+      "id": "f10",
+      "front": "Abnormal CSM finding",
+      "back": "Cold, pale/bluish skin, absent pulse, numbness, or inability to move the fingers/toes — means circulation or nerve function may be compromised; needs immediate attention."
+    },
+    {
+      "id": "f11",
+      "front": "Never reduce a deformity or dislocation",
+      "back": "Putting a bone or joint back into place is a physician's procedure only — attempting it on the sideline risks nerve or blood vessel damage."
+    },
+    {
+      "id": "f12",
+      "front": "Suspected spine injury exception",
+      "back": "The splinting rules in this unit don't apply — do not move or splint the athlete at all. Keep them still and calm, and activate the EAP for EMS with spinal precautions."
+    }
+  ]
+}

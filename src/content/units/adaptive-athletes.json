@@ -1,0 +1,283 @@
+{
+  "id": "adaptive-athletes",
+  "title": "Caring for Adaptive & Para Athletes",
+  "category": "Medical Conditions & Special Populations",
+  "strand": "adaptive-athletes",
+  "gradeBand": "9-10",
+  "summary": "Support athletes with disabilities with respectful, athlete-led communication — and know the handful of safety-critical facts, like autonomic dysreflexia, that make the difference for spinal cord-injured athletes.",
+  "minutes": 18,
+  "standards": ["CTE.HSMT.Anchor.9", "CTE.HSMT.Anchor.6", "CTE.HSMT.B.2.3", "CTE.HSMT.Anchor.2"],
+  "sections": [
+    {
+      "heading": "Adaptive sport is sport",
+      "body": [
+        "Athletes with disabilities compete at every level of sport — youth recreational leagues, high school adapted PE and unified sports, club teams, and all the way up to the Paralympic Games and Special Olympics World Games. Wheelchair basketball, sitting volleyball, para track and field, blind soccer, and unified basketball are real, competitive, physically demanding sports — not modified versions of 'real' sports.",
+        "If you're supporting an athlete with a disability as a student athletic trainer aide or teammate, the core job doesn't change: recognize a problem, protect the athlete, and get them to the right help. What does change is that a few conditions carry safety details worth knowing, and every interaction goes better when you approach it with two habits — treat the athlete as the expert on their own body, and ask instead of assuming."
+      ]
+    },
+    {
+      "heading": "Language and communication: let the athlete lead",
+      "body": [
+        "Disability language is personal, and reasonable people prefer different terms. Person-first language puts the person before the condition — 'athlete with a spinal cord injury,' 'athlete with an intellectual disability.' Identity-first language puts the identity first — 'Deaf athlete,' 'autistic athlete,' 'amputee athlete' — and many people in those communities prefer it because they see that identity as part of who they are, not something to soften.",
+        "There is no single 'correct' choice that works for every athlete and every disability. The only reliable rule is to ask the athlete what they use for themselves and use that. If you don't know yet and can't ask in the moment, person-first phrasing ('athlete with a disability') is a safe, respectful default until you learn otherwise."
+      ],
+      "list": [
+        "Talk directly to the athlete — not to a parent, coach, interpreter, or aide standing nearby. The athlete answers for themselves.",
+        "Ask before helping, and accept the answer. 'Do you want a hand with that?' is always better than grabbing a bag, a wheelchair, or an arm without asking.",
+        "Don't assume ability based on appearance. A disability tells you almost nothing about what an athlete can or can't do — let their words and actions tell you.",
+        "A respectful, direct question is fine when it's relevant to your job ('Is there anything I should know if this happens on the field?'). Asking out of curiosity during practice is not."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Not sure what to say?",
+        "text": "Just ask, plainly and privately: 'What language do you prefer?' or 'Is there anything I should know to support you today?' Almost every athlete would rather answer a direct question once than have people guess and get it wrong all season."
+      }
+    },
+    {
+      "heading": "A quick map of adaptive sport",
+      "body": [
+        "Adaptive sport covers a wide range of disabilities, and each one shapes competition differently. You don't need to memorize a classification system — you need enough awareness to understand who you might be working with and to know that 'disability' is not one single thing."
+      ],
+      "list": [
+        "Wheelchair sports — athletes with spinal cord injuries, spina bifida, or other conditions affecting mobility compete using specialized sport wheelchairs (built very differently from everyday wheelchairs) in sports like wheelchair basketball, rugby, and racing.",
+        "Athletes with visual impairment — compete across a range of vision levels; some run or ski tethered to a sighted guide, others use eyeshades so every competitor starts from the same point.",
+        "Amputee athletes — may compete with a prosthesis (an artificial limb, like a running blade) or without one, depending on the sport and event.",
+        "Athletes with cerebral palsy (CP) — CP is a condition affecting muscle control and coordination, caused by a brain injury before, during, or shortly after birth; it affects each athlete differently, from mild coordination differences to significant physical impairment.",
+        "Athletes with an intellectual disability — Special Olympics is the dedicated global movement for these athletes, grouping competitors by similar ability level ('divisioning') rather than just age and gender."
+      ]
+    },
+    {
+      "heading": "Equipment is part of the athlete",
+      "body": [
+        "For many adaptive athletes, equipment isn't just gear — it's custom-fitted, expensive, and often as personal as a limb. A sport wheelchair is built around one athlete's body and playing style. A prosthesis is shaped and aligned to one athlete's exact anatomy and gait.",
+        "Treat that equipment as part of the athlete. Never grab, push, lean on, sit in, or move a wheelchair, and never pick up or handle a prosthesis, without asking first and getting a clear yes — the same way you wouldn't grab someone's arm without asking. This applies even when you're trying to help; a well-meant grab at wheelchair handles to 'assist' up a ramp can startle an athlete and throw off their balance and control.",
+        "The one exception is a true emergency, where the athletic trainer or the Emergency Action Plan directs equipment to be moved for the athlete's safety — that call belongs to the supervising adult, not a student assistant acting alone."
+      ],
+      "image": {
+        "asset": "adaptive-athletes-sport-wheelchair-parts.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-view illustration of a sport wheelchair (basketball or racing style) with clean callout lines labeling its key parts: push rims (the outer rings the athlete grips to propel the chair), cambered wheels (angled outward at the bottom for stability and quick turns), anti-tip wheels/bar at the back, and a low, form-fitting seat. Simple instructional-illustration style, no rider shown, neutral background.",
+        "alt": "Labeled diagram of a sport wheelchair showing push rims, cambered wheels, anti-tip wheels, and the fitted seat.",
+        "location": "public/images/units/adaptive-athletes/"
+      }
+    },
+    {
+      "heading": "Autonomic dysreflexia: a spinal cord injury emergency",
+      "body": [
+        "Autonomic dysreflexia (AD) is a genuine medical emergency that can affect athletes with a spinal cord injury (SCI) at or above roughly the mid-chest level (around the sixth thoracic vertebra, T6). Above that level, the injury disrupts the autonomic nervous system — the system that automatically controls blood pressure, heart rate, and other background functions — badly enough that a painful or irritating stimulus below the level of injury can trigger a sudden, dangerous spike in blood pressure.",
+        "The tricky part: the trigger is often something small that the athlete can't even feel, because sensation below the level of injury may be reduced or absent. Common triggers include a full bladder, a full bowel, a pressure sore, a tight strap or waistband, or a foot caught awkwardly in a footrest."
+      ],
+      "list": [
+        "Sudden, severe headache — often described as the worst the athlete has ever had",
+        "A sharp rise in blood pressure",
+        "Flushing and heavy sweating above the level of injury, sometimes with goosebumps or pale, cool skin below it",
+        "Blurred vision, a stuffy nose, or a slower-than-normal heart rate",
+        "Anxiety or a sense that something is seriously wrong"
+      ],
+      "image": {
+        "asset": "adaptive-athletes-sci-level-dysreflexia.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Side-view outline of a seated athlete with the spine shown as a simple column, a marker labeling the T6 vertebra roughly at mid-chest height. Above that marker, small icons show flushed/sweaty skin and a headache symbol; below the marker, icons show pale, cool, goosebump skin with an 'X' over a nerve-signal line to indicate reduced sensation. Label the marker 'T6 — autonomic dysreflexia risk at or above this level.' Clean medical-illustration style, no distressing detail.",
+        "alt": "Diagram of a seated athlete with the T6 spinal level marked, showing flushed skin and headache above the injury level and pale, sensation-reduced skin below it, illustrating autonomic dysreflexia.",
+        "location": "public/images/units/adaptive-athletes/"
+      },
+      "callout": {
+        "type": "warning",
+        "title": "Treat autonomic dysreflexia as an emergency — every time",
+        "text": "If an athlete with a high-level spinal cord injury shows a sudden severe headache along with flushing/sweating and a possible blood pressure spike, do not wait to see if it passes. Get the athletic trainer immediately and follow the Emergency Action Plan — untreated, this can progress to a seizure or stroke. Your job is to recognize it and get qualified help fast, not to find or fix the trigger yourself."
+      }
+    },
+    {
+      "heading": "Temperature regulation: heat and cold risk after spinal cord injury",
+      "body": [
+        "A spinal cord injury at a high level doesn't just affect movement and sensation — it can also disrupt the autonomic nervous system's ability to regulate body temperature below the level of injury. Below that level, the athlete may not be able to sweat to cool down, or constrict blood vessels and shiver to warm up, the way an uninjured body automatically does.",
+        "The result is a body that can't fully regulate its own core temperature and drifts toward whatever the environment is doing. That raises risk in both directions for the same athlete."
+      ],
+      "list": [
+        "Heat risk — without full sweating capacity below the level of injury, core temperature can climb faster and higher in hot or humid conditions. See the Heat Illness unit for the full spectrum from heat cramps to heat stroke — the same red flags apply, and this athlete can reach them faster.",
+        "Cold risk — without normal shivering and blood-vessel constriction below the level of injury, core temperature can also drop faster in cold conditions. See the Cold Exposure unit for hypothermia and frostbite recognition — again, the same warning signs, just a shorter runway.",
+        "Practical awareness — check in verbally more often in extreme heat or cold, since this athlete may not show the usual visible cues (heavy sweating, shivering) that would normally tip off a teammate that something's wrong."
+      ]
+    },
+    {
+      "heading": "Skin and pressure injuries in wheelchair users",
+      "body": [
+        "A pressure injury (also called a pressure sore) is damage to skin and the tissue beneath it caused by sustained pressure that cuts off blood flow to that spot — most often over a bony area like the hip, tailbone, or heel. For wheelchair athletes, especially those with reduced or absent sensation, sitting in one position too long is the main risk, because the body's normal warning signal — discomfort that makes you shift — may not register.",
+        "Pressure injuries can start after as little as 30-60 minutes of unrelieved pressure in a vulnerable athlete, and they're far easier to prevent than to treat. Wheelchair athletes are trained to perform regular pressure relief — lifting or shifting their body weight off the seat — roughly every 15 to 30 minutes to let blood flow return."
+      ],
+      "list": [
+        "Redness that doesn't fade within a few minutes after pressure is removed",
+        "A warm, discolored, or firm patch of skin over a bony area",
+        "Any break, blister, or opening in the skin",
+        "Wet skin from sweat or rain increases risk — keeping skin dry when possible helps prevent breakdown"
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "If you notice a mark, say something",
+        "text": "You're not diagnosing anything by mentioning it — you're just passing along what you saw. Tell the athlete privately or flag it to the athletic trainer. Caught early, skin redness is a quick fix; an established pressure injury can sideline an athlete for weeks or months."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "A new teammate uses a wheelchair. You want to know if she needs help getting to the locker room. What's the best approach?",
+      "choices": [
+        "Ask her directly what she needs, if anything",
+        "Ask the aide standing nearby since it's faster",
+        "Assume she needs help carrying her bag and just do it",
+        "Avoid the topic entirely so you don't say something wrong"
+      ],
+      "answerIndex": 0,
+      "explanation": "Talk directly to the athlete — she answers for herself. Asking an aide instead, assuming she needs help without asking, or avoiding her altogether all sideline the athlete's own voice, which is the opposite of respectful support."
+    },
+    {
+      "id": "q2",
+      "question": "Which best describes person-first language?",
+      "choices": [
+        "A label chosen by coaches instead of athletes",
+        "Naming the disability before the person, like 'the disabled athlete'",
+        "Putting the person before the condition, like 'athlete with a spinal cord injury' — used when that's the individual's preference",
+        "Never mentioning the disability at all"
+      ],
+      "answerIndex": 2,
+      "explanation": "Person-first language puts the person ahead of the condition, and it's used when that's what the athlete personally prefers — some athletes instead prefer identity-first language ('Deaf athlete'). The only reliable rule is to ask and use what the athlete uses."
+    },
+    {
+      "id": "q3",
+      "question": "In a huddle, a teammate with a high-level spinal cord injury suddenly complains of a pounding headache, and her face and neck look flushed and sweaty even though it isn't hot out. What should you do?",
+      "choices": [
+        "Tell her to drink water and rest a minute",
+        "Wait to see if the headache passes on its own",
+        "Loosen her shoes since that's a common trigger",
+        "Recognize this as a possible autonomic dysreflexia emergency and get the athletic trainer / activate the EAP immediately"
+      ],
+      "answerIndex": 3,
+      "explanation": "A sudden severe headache with flushing/sweating in an athlete with a high-level SCI is the classic presentation of autonomic dysreflexia, a true emergency — get qualified help immediately rather than waiting, hydrating, or trying to guess and fix the trigger yourself."
+    },
+    {
+      "id": "q4",
+      "question": "Autonomic dysreflexia is usually triggered by:",
+      "choices": [
+        "Overexertion or cardiovascular fatigue during a hard drill",
+        "A painful or irritating stimulus below the level of injury that the athlete may not be able to feel, like a full bladder or a tight strap",
+        "Low blood sugar from skipping a pre-game meal",
+        "An allergic reaction to new gear"
+      ],
+      "answerIndex": 1,
+      "explanation": "AD is triggered by an irritating stimulus below the level of injury — often something the athlete can't feel because sensation there is reduced or absent, like a full bladder, a pressure sore, or a tight waistband. It's not related to exertion, blood sugar, or allergies."
+    },
+    {
+      "id": "q5",
+      "question": "During a break, a teammate's prosthetic running blade falls to the ground beside the track. What should you do?",
+      "choices": [
+        "Pick it up and hand it back right away without asking, to be helpful",
+        "Move it out of the way to a nearby chair without saying anything",
+        "Leave it and ask the athlete if they'd like help, then only touch it with a clear yes",
+        "Ignore it since it's not your job"
+      ],
+      "answerIndex": 2,
+      "explanation": "A prosthesis is treated as part of the athlete — ask first and wait for a clear yes before touching it, even when your intent is to help. Grabbing it unasked or moving it away without a word both skip the athlete's own say over their equipment."
+    },
+    {
+      "id": "q6",
+      "question": "Why does a spinal cord injury above the mid-chest level raise both heat-illness and cold risk for the same athlete?",
+      "choices": [
+        "The nervous system's ability to sweat and adjust blood vessels below the level of injury is impaired, so the body can't regulate itself well in either heat or cold",
+        "It has no real effect on temperature control",
+        "It only raises cold risk, not heat risk",
+        "It only matters for athletes who train outdoors"
+      ],
+      "answerIndex": 0,
+      "explanation": "A high-level SCI disrupts the automatic sweating and blood-vessel responses below the injury level that normally cool or warm the body, so core temperature drifts toward whatever the environment is doing — raising risk in both directions, indoors or out."
+    },
+    {
+      "id": "q7",
+      "question": "A wheelchair basketball player has been sitting through a long team meeting without shifting position. What's the best action for a teammate who knows the basics?",
+      "choices": [
+        "Say nothing — it's not a medical issue",
+        "Physically lift the athlete out of the chair",
+        "Tell them to switch to a regular chair",
+        "Ask if they'd like a reminder to do a pressure relief / weight shift, since sitting without repositioning raises pressure-injury risk"
+      ],
+      "answerIndex": 3,
+      "explanation": "A friendly, asked-for reminder about pressure relief supports the athlete's own routine without taking over. Saying nothing risks a preventable pressure injury; physically lifting someone or telling them to change chairs takes the decision out of their hands unnecessarily."
+    },
+    {
+      "id": "q8",
+      "question": "You notice a new red mark on a wheelchair user's hip that doesn't fade after a few minutes. What is your role?",
+      "choices": [
+        "Diagnose the issue yourself based on what you've read and manage it",
+        "Recognize the concern, and get it to the athletic trainer or another qualified adult — never diagnose or manage it independently",
+        "Only mention it if the athlete's performance drops",
+        "Wait until after practice to bring it up"
+      ],
+      "answerIndex": 1,
+      "explanation": "Recognize, protect, refer: a student's role is to notice and report, not diagnose or treat. A mark that doesn't fade could be early skin breakdown, and prompt reporting — not waiting or self-managing — is what keeps a small issue from becoming a serious one."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Person-first language",
+      "back": "Puts the person before the condition, e.g. 'athlete with a spinal cord injury' — used when that's the individual's stated preference."
+    },
+    {
+      "id": "f2",
+      "front": "Identity-first language",
+      "back": "Puts the identity first, e.g. 'Deaf athlete,' 'amputee athlete' — preferred by many in those communities as part of who they are."
+    },
+    {
+      "id": "f3",
+      "front": "The rule when you're not sure which language to use",
+      "back": "Ask the athlete directly and use what they use — talk to the athlete, not to an aide, parent, or coach standing nearby."
+    },
+    {
+      "id": "f4",
+      "front": "Equipment as part of the athlete",
+      "back": "Wheelchairs and prostheses are custom-fitted and personal — never move, touch, or handle them without asking first and getting a clear yes."
+    },
+    {
+      "id": "f5",
+      "front": "Autonomic dysreflexia (AD)",
+      "back": "A medical emergency in athletes with a spinal cord injury at or above about T6 (mid-chest): a stimulus below the injury level triggers a sudden, dangerous blood pressure spike."
+    },
+    {
+      "id": "f6",
+      "front": "AD warning signs",
+      "back": "Sudden severe headache, sharp rise in blood pressure, flushing/sweating above the injury level, possibly blurred vision or a slow heart rate."
+    },
+    {
+      "id": "f7",
+      "front": "Common AD triggers",
+      "back": "A full bladder, full bowel, pressure sore, tight strap or clothing — often something the athlete can't feel due to reduced sensation below the injury level."
+    },
+    {
+      "id": "f8",
+      "front": "Your role if you suspect AD",
+      "back": "Recognize it immediately and get the athletic trainer / activate the EAP — do not wait to see if it passes or try to find/fix the trigger yourself."
+    },
+    {
+      "id": "f9",
+      "front": "Why high-level SCI raises heat AND cold risk",
+      "back": "Impaired autonomic control below the injury level means the athlete may not sweat to cool down or shiver/constrict vessels to warm up — core temp drifts with the environment in both directions."
+    },
+    {
+      "id": "f10",
+      "front": "Pressure injury (pressure sore)",
+      "back": "Skin and tissue damage from sustained pressure cutting off blood flow, usually over a bony area (hip, tailbone, heel); can start after 30-60 minutes unrelieved in a vulnerable athlete."
+    },
+    {
+      "id": "f11",
+      "front": "Pressure relief interval",
+      "back": "Wheelchair athletes shift or lift their body weight off the seat roughly every 15-30 minutes to prevent pressure injuries."
+    },
+    {
+      "id": "f12",
+      "front": "Broad categories of adaptive sport",
+      "back": "Wheelchair sports, athletes with visual impairment, amputee athletes, athletes with cerebral palsy, and athletes with intellectual disability (Special Olympics)."
+    }
+  ]
+}

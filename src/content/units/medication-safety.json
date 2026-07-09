@@ -1,0 +1,261 @@
+{
+  "id": "medication-safety",
+  "title": "Medication Safety in the Athletic Setting",
+  "category": "Medical Conditions & Special Populations",
+  "strand": "medication-safety",
+  "gradeBand": "9-10",
+  "summary": "Learn the one boundary that never bends for a student aide — never give, hand out, or administer any medication to an athlete — and why even 'harmless' OTC drugs carry real risk.",
+  "minutes": 15,
+  "standards": ["CTE.HSMT.Anchor.8", "CTE.HSMT.Anchor.6", "CTE.HSMT.Anchor.2", "CTE.HSMT.B.5.0"],
+  "sections": [
+    {
+      "heading": "Your role: recognize, refer — never administer",
+      "body": [
+        "A student athletic training aide does a lot: taping ankles, filling water bottles, icing an injury, watching for red flags, running for the athletic trainer. Medication is different. It's the one area with a single, absolute boundary that never bends, no matter how minor the situation seems or how much a teammate is asking you for help.",
+        "The rule: a student aide never gives, hands out, or administers any medication — prescription or over-the-counter (OTC, meaning available without a doctor's order) — to an athlete. Not a single ibuprofen tablet from the first-aid kit, not a squeeze of an antihistamine cream, not operating someone else's inhaler for them. The athlete takes their own medication, themselves. This holds true even for medications that seem completely harmless, and it holds true in emergencies too — a rescue inhaler, an epinephrine auto-injector, or glucose for low blood sugar is used by the athlete themselves or by a responder specifically trained and authorized under the team's written emergency plan, never handed out casually by whoever happens to be standing nearby."
+      ],
+      "list": [
+        "Handing a teammate a pill from your bag or the first-aid kit — counts as administering, even if it's 'just' ibuprofen.",
+        "Opening or measuring out someone else's prescribed medication for them — counts, even if you're trying to help them keep up with their own dosing schedule.",
+        "Applying an OTC cream, spray, or ointment to someone else's skin — counts.",
+        "Operating an inhaler or auto-injector for another person — counts, even in a scary moment when seconds feel like they matter most."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Never administer medication to another person",
+        "text": "This rule has no exceptions for 'it's just OTC' or 'it's an emergency.' You can recognize a problem, help an athlete reach their own medication, and get a trained adult fast — but you never give, hand out, or operate medication for someone else. This is the same boundary you'll see stated in the asthma and anaphylaxis units: the medication belongs to the athlete, and only the athlete or a specifically trained, authorized responder uses it."
+      }
+    },
+    {
+      "heading": "Prescription vs. over-the-counter medications",
+      "body": [
+        "A prescription medication is one a doctor has ordered for a specific patient, filled by a pharmacist, at a dose chosen for that person's diagnosis, body, and medical history. Examples an aide might see around sports: an asthma controller or rescue inhaler, an epinephrine auto-injector, insulin for an athlete with diabetes, or a prescribed pain medication after surgery.",
+        "An over-the-counter (OTC) medication is one sold directly on a store shelf without a prescription — ibuprofen, acetaminophen, antihistamines like Benadryl, antacids, cough drops. 'Available without a prescription' is a statement about how it's sold, not a guarantee that it's risk-free for every person in every situation. That distinction matters more than most people assume, which is the focus of the next section."
+      ],
+      "image": {
+        "asset": "medication-safety-rx-vs-otc-chart.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-column comparison chart. Left column headed 'Prescription' with icons/short lines for: ordered by a doctor for one specific patient, filled by a pharmacist, dose matched to that person's history — examples: asthma inhaler, epinephrine auto-injector, insulin. Right column headed 'Over-the-counter (OTC)' with icons/short lines for: sold on any store shelf, no prescription needed, still carries real risks — examples: ibuprofen, acetaminophen, antihistamines. Clean infographic style, high contrast, simple icons, no photographic realism.",
+        "alt": "Comparison chart contrasting prescription medications with over-the-counter medications, including examples of each.",
+        "location": "public/images/units/medication-safety/"
+      }
+    },
+    {
+      "heading": "Why 'harmless' OTC drugs aren't harmless",
+      "body": [
+        "Because OTC medications sit on an open shelf, it's easy to assume they're basically risk-free. In the athletic setting, that assumption causes real problems.",
+        "NSAIDs (nonsteroidal anti-inflammatory drugs — ibuprofen and naproxen are the common ones) can irritate the stomach lining, and with repeated use that irritation can progress to GI (gastrointestinal) bleeding. They also add stress to the kidneys — a bigger problem than usual when an athlete is already dehydrated from hard practice, since the kidneys are working harder with less fluid to work with. And because NSAIDs reduce pain and swelling, they can mask (hide) the exact signal — pain — that would normally tell an athlete to stop and get an injury looked at, which can let a minor injury turn into a much bigger one while the athlete keeps playing on it.",
+        "Acetaminophen (Tylenol) doesn't reduce swelling the way NSAIDs do, and its main risk is to the liver — repeated or excessive use stresses it, and it's easy to accidentally take too much because acetaminophen is hidden as an ingredient inside many combination cold and flu products.",
+        "Antihistamines (Benadryl and similar allergy medications) cause drowsiness and slowed reaction time, which is a real danger in a contact sport or anytime split-second decisions matter. They can also reduce how much an athlete sweats — which interferes with the body's main way of cooling itself down."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "OTC drugs and heat illness — a dangerous combination",
+        "text": "As covered in the heat-illness unit, hard exercise in the heat already puts stress on hydration and the body's cooling system. NSAIDs add extra strain to the kidneys right when dehydration is already straining them, and antihistamines reduce sweating right when the body needs to sweat most. Taking either one before a hot, hard practice raises heat-illness risk — it isn't a neutral choice just because the drug is sold over the counter."
+      }
+    },
+    {
+      "heading": "Allergies: never assume a medication is safe for someone else",
+      "body": [
+        "A drug allergy is the immune system reacting to the medication itself, not just to what it's being used for — some people are allergic to aspirin or NSAIDs, sulfa-based drugs, or specific ingredients in a product, and a real allergic reaction to a medication can be just as serious as a food or insect-sting allergy.",
+        "This is a second, independent reason — on top of the never-administer rule — that you should never hand a teammate your own OTC medication, even if it's something you take all the time with zero problems. You don't know their allergy history, what other medications or conditions they have, or how a drug might interact with something else going on in their body. What's completely safe for you can be genuinely dangerous for them, and there's no way to know that just by looking at someone."
+      ]
+    },
+    {
+      "heading": "Emergency medications follow the same rule",
+      "body": [
+        "It can feel different when the situation is scary and the medication could save a life — a rescue inhaler during an asthma flare-up, an epinephrine auto-injector during anaphylaxis (a severe, whole-body allergic reaction), or glucose for an athlete with diabetes whose blood sugar has dropped too low. But the rule doesn't change: these medications belong to the athlete, and they're used by the athlete themselves or by a responder who is specifically trained and authorized under the school's Emergency Action Plan (EAP, the written plan for medical emergencies) — never handed out or operated by an untrained bystander just because the moment feels urgent.",
+        "The asthma, allergies/anaphylaxis, and diabetes units in this program cover each of those emergencies in full detail. What matters here is the shared principle: your job in any of these moments is to recognize the signs, help the athlete reach their own medication fast, get a trained adult immediately, and call 911 or activate the EAP if things escalate — not to operate someone else's device yourself unless you are specifically trained and authorized to do so."
+      ],
+      "image": {
+        "asset": "medication-safety-emergency-meds.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Three simple icons side by side, each representing an emergency medication device: a rescue inhaler, an epinephrine auto-injector, and a glucose gel tube/tablet. Under each icon, a short caption: 'The athlete's own device.' Below all three, a single shared caption in bold: 'Used by the athlete or a trained, authorized responder — never handed out casually.' Clean infographic style, no distressing detail, no visible needle.",
+        "alt": "Icons of a rescue inhaler, epinephrine auto-injector, and glucose gel, each labeled as the athlete's own device used by the athlete or a trained, authorized responder.",
+        "location": "public/images/units/medication-safety/"
+      }
+    },
+    {
+      "heading": "Banned substances and supplements: an awareness note",
+      "body": [
+        "Some medications and many performance or dietary supplements are restricted or banned in competitive sport by athletic governing bodies, and even a legal, store-bought supplement can be contaminated with a banned ingredient that isn't listed on its label. This program covers doping and banned-substance rules in full as its own topic elsewhere — this unit only covers the awareness-level point that connects to medication safety generally.",
+        "You're not expected to police this as a student aide, but two things are worth knowing: never recommend or hand out a supplement or performance product to a teammate, and if an athlete asks you about a supplement, a performance-boosting product, or something they heard about online, the answer is to direct them to the athletic trainer, coach, or their doctor — not to weigh in yourself."
+      ]
+    },
+    {
+      "heading": "Storage, expiration, and reporting: your two real jobs",
+      "body": [
+        "Any medication kept in a team's first-aid kit or athletic training room — including emergency stock medications some schools keep on hand — needs to stay in its original labeled container, out of heat and direct sun (a hot equipment bag or a car trunk is a bad storage spot), and accessible only to authorized staff.",
+        "Medications lose potency after their expiration date, and some can break down into something less safe over time. An expired medication should never be used or handed out — treat finding one as a signal to tell the athletic trainer so it gets replaced, not as still-good medicine you can offer someone.",
+        "Your real job when any medication question comes up — a teammate asking for a pill, an athlete who seems off after taking something, a found bottle of unlabeled pills — is always the same: report what you saw or heard to the athletic trainer or coach right away, and let a trained professional make the treatment decision. You are not expected to diagnose, dose, or decide. You're expected to notice and communicate."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "A good report is short and specific",
+        "text": "When you report a medication concern, cover who, what, and when: 'Maria asked me for ibuprofen for a headache around 3:15, I told her no and to talk to you' or 'I found an open bottle of pills with no label in the locker room at practice today.' Specific, fast reporting is what makes this system work."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is the core medication-safety rule for a student athletic training aide?",
+      "choices": [
+        "You may give out OTC medications but never prescription ones",
+        "You may give medication only if a coach tells you to",
+        "You never give, hand out, or administer any medication — prescription or OTC — to an athlete",
+        "You may give medication only in an emergency"
+      ],
+      "answerIndex": 2,
+      "explanation": "The rule has no exceptions for OTC status, a coach's request, or an emergency — the athlete takes their own medication, or a trained/authorized responder acts under the written emergency plan. A student aide never administers medication to someone else."
+    },
+    {
+      "id": "q2",
+      "question": "A teammate asks you for an ibuprofen from the first-aid kit for a mild headache before practice. What should you do?",
+      "choices": [
+        "Give her one tablet, since ibuprofen is OTC and generally considered mild",
+        "Tell her you can't hand out medication, but she can take her own if she has it, or check with the athletic trainer or a parent",
+        "Tell her to just push through the headache and not worry about it",
+        "Give her acetaminophen instead since it's gentler than ibuprofen"
+      ],
+      "answerIndex": 1,
+      "explanation": "Handing out any medication — including a single OTC tablet — breaks the never-administer rule. The correct response points her to her own medication or an authorized adult, not to medication from your hands."
+    },
+    {
+      "id": "q3",
+      "question": "Why can NSAIDs like ibuprofen be risky for an athlete during a hot, hard practice?",
+      "choices": [
+        "They can irritate the stomach and stress the kidneys, and can mask pain that signals a worsening injury",
+        "They make the heart beat too slowly to keep up with exercise",
+        "They cause permanent hearing loss with a single dose",
+        "They are only risky for adults, never for teenage athletes"
+      ],
+      "answerIndex": 0,
+      "explanation": "NSAIDs can irritate the GI (gastrointestinal) lining, add stress to the kidneys — worse when dehydrated — and hide the pain signal that would normally prompt an athlete to stop and get checked. None of the other choices describe a real NSAID risk."
+    },
+    {
+      "id": "q4",
+      "question": "An athlete with a sore ankle wants to take her own ibuprofen so she can finish practice without pain. As a student aide, what's the concern here?",
+      "choices": [
+        "There's no concern at all — since it's her own medicine, nothing needs to be said to anyone",
+        "You should refuse to let her take it, because taking any medication before practice is against team rules",
+        "You should give her a stronger prescription-strength dose instead",
+        "Taking her own OTC medication is her call, but masking the pain could let her keep playing on a worsening injury — report it to the athletic trainer"
+      ],
+      "answerIndex": 3,
+      "explanation": "An athlete may take her own OTC medication — that's not the aide's decision to block. But because pain relief can hide a worsening injury, the aide's job is to report the situation to the athletic trainer, not to ignore it or escalate the dose."
+    },
+    {
+      "id": "q5",
+      "question": "You've taken ibuprofen many times with no problems. Why is that not a good reason to hand some to a teammate who asks?",
+      "choices": [
+        "It is a good reason — if it's safe for you, it's safe for anyone your age",
+        "You don't know their allergy history, other medications, or conditions — what's safe for you may not be safe for them",
+        "Ibuprofen only works on certain body types, so it likely wouldn't help them anyway",
+        "It's fine as long as you give them a smaller dose than you take"
+      ],
+      "answerIndex": 1,
+      "explanation": "Drug allergies and interactions are individual — you can't know a teammate's full medical history just by looking at them. That unknown risk, on top of the never-administer rule, is exactly why medication should never be shared between athletes."
+    },
+    {
+      "id": "q6",
+      "question": "During a game, an athlete having an asthma flare-up asks you to hold and press her inhaler for her because her hands are shaking too much. What should you do?",
+      "choices": [
+        "Press the inhaler for her since she asked and it's clearly an emergency",
+        "Refuse to help at all and walk away to find an adult",
+        "Help her steady herself, get her to activate her own inhaler, and get an adult immediately",
+        "Use your own inhaler on her instead if you have one, since any rescue inhaler works the same way"
+      ],
+      "answerIndex": 2,
+      "explanation": "Even in an emergency, the athlete operates her own medication — your role is to support her in doing that and get a trained adult fast, not to operate the device for her or substitute someone else's inhaler."
+    },
+    {
+      "id": "q7",
+      "question": "A teammate mentions she's thinking about trying a supplement she found online to help her run faster. What's the appropriate response?",
+      "choices": [
+        "Tell her which supplement worked for you personally",
+        "Direct her to the athletic trainer, coach, or her doctor rather than weighing in yourself",
+        "Tell her all supplements are illegal and she'll be banned from her sport",
+        "Offer to order it for her since it's sold legally in stores"
+      ],
+      "answerIndex": 1,
+      "explanation": "Even legal, store-bought supplements can be contaminated with banned or unsafe ingredients not listed on the label. A student aide isn't expected to evaluate supplements — the right move is pointing the athlete to a trained professional."
+    },
+    {
+      "id": "q8",
+      "question": "You find an athlete taking pills from an unlabeled, expired bottle of acetaminophen she's been using for weeks for a nagging headache. What should you do?",
+      "choices": [
+        "Tell her expired medication is fine as long as it isn't too old",
+        "Take the bottle from her and throw it away without telling anyone",
+        "Say nothing since it's her own medication and her choice",
+        "Report what you saw to the athletic trainer right away and let them decide next steps"
+      ],
+      "answerIndex": 3,
+      "explanation": "Expired medication can lose potency or become unsafe, and a repeated, unresolved symptom like a nagging headache deserves professional attention. Your job is to report clearly and let a trained professional evaluate and decide — not to treat, dispose of evidence, or stay silent."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Prescription medication",
+      "back": "A medication ordered by a doctor for one specific patient, filled by a pharmacist, at a dose matched to that person's diagnosis and history."
+    },
+    {
+      "id": "f2",
+      "front": "Over-the-counter (OTC) medication",
+      "back": "A medication sold directly on a store shelf without a prescription. Available without a prescription does not mean risk-free for every person or situation."
+    },
+    {
+      "id": "f3",
+      "front": "The never-administer rule",
+      "back": "A student aide never gives, hands out, or administers any medication — prescription or OTC — to an athlete. The athlete takes their own; no exceptions for 'it's just OTC' or 'it's an emergency.'"
+    },
+    {
+      "id": "f4",
+      "front": "OTC pain relievers — hidden risks",
+      "back": "NSAIDs (ibuprofen, naproxen): GI irritation/bleeding, kidney stress, can mask pain that signals injury. Acetaminophen: liver stress, easy to double-dose since it's hidden in combo cold/flu products."
+    },
+    {
+      "id": "f5",
+      "front": "Antihistamines — risks",
+      "back": "Cause drowsiness and slowed reaction time — dangerous in contact sports — and can reduce sweating, interfering with the body's cooling system."
+    },
+    {
+      "id": "f6",
+      "front": "Masking pain",
+      "back": "Pain relievers can hide the pain signal that would normally tell an athlete to stop and get an injury checked, letting a minor injury worsen while play continues."
+    },
+    {
+      "id": "f7",
+      "front": "Medications and heat illness",
+      "back": "NSAIDs add kidney stress on top of dehydration; antihistamines reduce sweating. Both raise heat-illness risk during hot, hard practices — not a neutral choice just because they're OTC."
+    },
+    {
+      "id": "f8",
+      "front": "Medication allergies",
+      "back": "A drug allergy is the immune system reacting to the medication itself. What's safe for one person may not be safe for another — never assume your own medication is safe to give someone else."
+    },
+    {
+      "id": "f9",
+      "front": "Emergency medications (inhaler, epinephrine, glucose)",
+      "back": "Still follow the never-administer rule: used by the athlete themselves or a responder specifically trained and authorized under the Emergency Action Plan (EAP) — never handed out casually by a bystander."
+    },
+    {
+      "id": "f10",
+      "front": "Banned substances / doping (awareness)",
+      "back": "Some medications and supplements are restricted in competitive sport, and even legal supplements can contain unlisted banned ingredients. Direct questions to the athletic trainer, coach, or a doctor — don't weigh in yourself."
+    },
+    {
+      "id": "f11",
+      "front": "Safe storage & expired medications",
+      "back": "Keep medications in original labeled containers, away from heat and sun, accessible only to authorized staff. Expired medication loses potency and should never be used or handed out — report it for replacement."
+    },
+    {
+      "id": "f12",
+      "front": "Report, don't treat",
+      "back": "When a medication question or concern comes up, your job is to notice and report it to the athletic trainer or coach right away — not to diagnose, dose, or decide treatment yourself."
+    }
+  ]
+}

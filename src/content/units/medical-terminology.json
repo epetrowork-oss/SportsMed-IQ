@@ -1,0 +1,209 @@
+{
+  "id": "medical-terminology",
+  "title": "Medical Terminology: Reading the Language of the Body",
+  "category": "Assessment & Clinical Skills",
+  "strand": "medical-terminology",
+  "gradeBand": "9-10",
+  "summary": "Learn how medical words are built from roots, prefixes, and suffixes so you can decode unfamiliar terms instead of memorizing a dictionary.",
+  "minutes": 18,
+  "standards": ["CTE.HSMT.B.5.0", "CTE.HSMT.Anchor.2", "CTE.HSMT.B.2.0"],
+  "sections": [
+    {
+      "heading": "Why medical terminology matters",
+      "body": [
+        "In a training room, on a chart, or in a referral to a physician, medical words carry precise information — and that precision is a safety issue, not just a vocabulary exercise. If a note says a joint is 'inflamed' versus 'unstable' versus 'fractured,' the next person reading it needs to know exactly which one happened, because the response is different for each.",
+        "Health care uses a small set of building blocks — roots, prefixes, and suffixes borrowed mostly from Latin and Greek — to construct thousands of specific terms. Learn about twenty word parts well, and you can decode words you've never seen before, the same way you can sound out an unfamiliar English word once you know its syllables. That's the goal of this unit: not memorizing a dictionary, but learning the system.",
+        "This vocabulary is also what makes the injury-evaluation process (History, Observation, Palpation, Special tests) and any documentation you write usable by the next person — a teammate, an athletic trainer, or a physician reading a referral."
+      ]
+    },
+    {
+      "heading": "Word roots: the core meaning",
+      "body": [
+        "Every medical term has a root — the core word part that carries its central meaning, usually a body part or system. Roots are often paired with a connecting vowel (usually 'o') when followed by another root or a suffix starting with a consonant, which is why you'll see them written as 'cardi/o' or 'oste/o.'"
+      ],
+      "list": [
+        "cardi/o — heart (cardiology, tachycardia)",
+        "arthr/o — joint (arthritis, arthroscopy)",
+        "my/o — muscle (myalgia, myotomy)",
+        "oste/o — bone (osteoarthritis, osteoporosis)",
+        "derm/o — skin (dermatitis, subdermal)",
+        "neur/o — nerve (neuralgia, neurology)"
+      ],
+      "image": {
+        "asset": "medical-terminology-word-parts.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Educational diagram breaking a compound medical term into labeled, color-coded blocks — prefix, root, and suffix — using the example word 'osteoarthritis' split into oste (bone, blue block), o (connecting vowel, small neutral block), arthr (joint, green block), and itis (inflammation, orange block). Include a small arrow underneath showing the term reassembling left to right, with a one-line caption: 'bone + joint + inflammation.' Clean, textbook-style flat illustration, no photorealism.",
+        "alt": "Diagram showing the medical term osteoarthritis broken into its word parts: oste (bone), o (connector), arthr (joint), and itis (inflammation).",
+        "location": "public/images/units/medical-terminology/"
+      }
+    },
+    {
+      "heading": "Prefixes: modifying the root",
+      "body": [
+        "A prefix attaches to the front of a root and narrows or modifies its meaning — often describing direction, size, speed, or presence versus absence."
+      ],
+      "list": [
+        "hyper- — above normal, excessive (hyperextension: a joint bent beyond its normal range)",
+        "hypo- — below normal, deficient (hypothermia: body temperature below normal)",
+        "brady- — slow (bradycardia: a slow heart rate)",
+        "tachy- — fast (tachycardia: a fast heart rate)",
+        "a-/an- — without, absence of (asymptomatic: without symptoms)",
+        "sub- — under, below (subdermal: under the skin)",
+        "peri- — around (pericardium: the sac around the heart)"
+      ]
+    },
+    {
+      "heading": "Suffixes: completing the word",
+      "body": [
+        "A suffix attaches to the end of a root and usually tells you what kind of condition or procedure is being described — inflammation, pain, a surgery, a field of study."
+      ],
+      "list": [
+        "-itis — inflammation (dermatitis: skin inflammation)",
+        "-ology — study of (cardiology: study of the heart)",
+        "-ectomy — surgical removal (appendectomy: removal of the appendix)",
+        "-algia — pain (myalgia: muscle pain)",
+        "-otomy — incision into (arthrotomy: a surgical cut into a joint)",
+        "-plasty — surgical repair (arthroplasty: surgical repair or reconstruction of a joint)"
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Decode from the end",
+        "text": "When you hit an unfamiliar term, start with the suffix — it usually tells you the general category (inflammation? removal? a field of study?). Then work backward through the root (what body part or system?) and any prefix (what direction, size, or speed?). 'Osteotomy' breaks down fast this way: -otomy (incision into) + oste/o (bone) = a surgical cut into bone. Put a root and suffix together and you can build real terms the same way: arthr + itis = arthritis (joint inflammation); cardi + ology = cardiology (study of the heart); oste + o + arthr + itis = osteoarthritis — bone + joint + inflammation, the wear-and-tear arthritis that affects both tissues."
+      }
+    },
+    {
+      "heading": "Directional and anatomical position vocabulary",
+      "body": [
+        "Every directional term in medicine is defined relative to anatomical position: standing upright, facing forward, arms at the sides, palms facing forward, feet facing forward. Anatomical position is the fixed reference point, so 'medial' or 'anterior' always mean the same thing regardless of how a patient is actually lying or standing when you examine them."
+      ],
+      "list": [
+        "Anterior / posterior — toward the front of the body / toward the back (the kneecap sits anterior to the knee joint)",
+        "Medial / lateral — toward the midline of the body / away from the midline (the ATFL is a lateral ankle ligament)",
+        "Proximal / distal — closer to the trunk or point of attachment / farther from it (the elbow is proximal to the wrist)",
+        "Superior / inferior — above / below (the shoulder is superior to the elbow)",
+        "Superficial / deep — closer to the skin surface / farther beneath it (a superficial scrape versus a deep laceration)",
+        "Bilateral — affecting both sides (bilateral knee pain means both knees hurt); unilateral means one side only"
+      ],
+      "image": {
+        "asset": "medical-terminology-directional-terms.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Full-body human figure standing in anatomical position (facing forward, arms at sides, palms facing forward, feet forward) with paired directional arrows and labels overlaid: anterior/posterior arrows pointing front-to-back through the torso, superior/inferior arrows running head-to-foot along one side, and medial/lateral plus proximal/distal arrows illustrated on an outstretched arm (medial toward the body, lateral away; proximal near the shoulder, distal near the hand). Clean flat medical-illustration style with a small legend box listing each term pair.",
+        "alt": "Human figure in anatomical position labeled with directional term pairs: anterior/posterior, superior/inferior, medial/lateral, and proximal/distal.",
+        "location": "public/images/units/medical-terminology/"
+      }
+    },
+    {
+      "heading": "Common abbreviations you'll see",
+      "body": [
+        "Charts, referral forms, and quick sideline notes lean on standard abbreviations to save time. Knowing them lets you read — and write — documentation accurately."
+      ],
+      "list": [
+        "ROM — range of motion",
+        "RICE — rest, ice, compression, elevation",
+        "PRN — as needed",
+        "Hx — history",
+        "Fx — fracture",
+        "ATC — Certified Athletic Trainer (a specific professional credential, not a generic title)",
+        "R / L — right / left",
+        "WNL — within normal limits",
+        "c/o — complains of"
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Abbreviations are only safe when you're certain",
+        "text": "Never guess at an abbreviation you don't recognize — especially ones involving right/left (R/L), dosing, or timing. A misread abbreviation can send care to the wrong side of the body or the wrong timeframe. Real health care settings maintain 'do-not-use' lists of abbreviations that look too similar to other symbols precisely because guessing has caused real errors. If you're not sure what an abbreviation means, spell it out in your own note or ask your supervising professional — don't assume."
+      }
+    },
+    {
+      "heading": "Decode, don't memorize",
+      "body": [
+        "You now have the pieces to work out terms you've never studied directly. Try 'neuritis' before reading further: neur (nerve) + itis (inflammation) = inflammation of a nerve. Or 'myotomy': my (muscle) + otomy (incision into) = a surgical cut into a muscle. Cover the ending, identify the root, check for a prefix, then rebuild the meaning piece by piece.",
+        "This system is exactly what shows up in the injury-evaluation and documentation work you'll do throughout this program — the notes you write during an assessment, the terms on a referral form, the vocabulary an athletic trainer or physician uses when handing off care. Decoding unfamiliar terms, instead of memorizing an endless list, is a skill that scales to every body system, procedure, and diagnosis you'll encounter later in this field."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Which root means 'joint'?",
+      "choices": ["oste/o", "arthr/o", "cardi/o", "derm/o"],
+      "answerIndex": 1,
+      "explanation": "Arthr/o is the root for joint — the base of words like arthritis (joint inflammation) and arthroscopy. Oste/o means bone, cardi/o means heart, and derm/o means skin."
+    },
+    {
+      "id": "q2",
+      "question": "The suffix '-ectomy' means:",
+      "choices": ["Study of", "Inflammation", "Surgical removal", "Incision into"],
+      "answerIndex": 2,
+      "explanation": "'-ectomy' means surgical removal, as in an appendectomy (removal of the appendix). '-ology' means study of, '-itis' means inflammation, and '-otomy' means incision into — easy to confuse with '-ectomy' since both are surgical, but '-otomy' cuts INTO something without removing it."
+    },
+    {
+      "id": "q3",
+      "question": "Breaking 'arthritis' into its word parts (arthr + itis), what does the term literally mean?",
+      "choices": ["Study of joints", "Inflammation of a joint", "Surgical repair of a joint", "Pain in a joint"],
+      "answerIndex": 1,
+      "explanation": "arthr = joint, -itis = inflammation, so arthritis literally means 'inflammation of a joint.' 'Study of joints' would be arthrology, 'surgical repair' would be arthroplasty, and 'pain' uses the suffix -algia (arthralgia), not -itis."
+    },
+    {
+      "id": "q4",
+      "question": "'Osteoarthritis' combines oste/o (bone), arthr (joint), and -itis (inflammation). Which best captures its literal meaning?",
+      "choices": [
+        "Surgical removal of bone and joint tissue",
+        "Study of bone and joint disease",
+        "Inflammation involving the bone and joint",
+        "Incision into the bone near a joint"
+      ],
+      "answerIndex": 2,
+      "explanation": "Stacking the parts gives 'inflammation involving the bone and joint' — matching osteoarthritis, the degenerative wear-and-tear arthritis common in aging joints. The 'o' between oste and arthr is just a connecting vowel, not a separate word part with its own meaning."
+    },
+    {
+      "id": "q5",
+      "question": "An athlete's resting heart rate is unusually slow. Which prefix means 'slow' in the medical term for this?",
+      "choices": ["tachy-", "brady-", "hyper-", "hypo-"],
+      "answerIndex": 1,
+      "explanation": "brady- means slow (bradycardia = slow heart rate). tachy- means fast — the opposite — and hyper-/hypo- describe 'above normal/excessive' and 'below normal/deficient,' not speed specifically."
+    },
+    {
+      "id": "q6",
+      "question": "An evaluation note says tenderness is on the 'medial' side of the knee. In anatomical position, medial means:",
+      "choices": ["Toward the midline of the body", "Away from the midline of the body", "Toward the front of the body", "Closer to the point of attachment"],
+      "answerIndex": 0,
+      "explanation": "Medial means toward the body's midline. 'Away from the midline' describes lateral, 'toward the front' describes anterior, and 'closer to the point of attachment' describes proximal — each direction pair has one precise meaning, and they're easy to mix up if you don't anchor them to anatomical position."
+    },
+    {
+      "id": "q7",
+      "question": "Compared to the wrist, the elbow is:",
+      "choices": ["Proximal", "Distal", "Superior", "Superficial"],
+      "answerIndex": 0,
+      "explanation": "Proximal means closer to the point of attachment (the trunk); the elbow is closer to the trunk than the wrist, so it's proximal to the wrist. Distal would describe the wrist relative to the elbow. Superior/inferior describe up/down position, and superficial/deep describe closeness to the skin — neither fits this closer/farther-along-a-limb relationship."
+    },
+    {
+      "id": "q8",
+      "question": "A chart note reads: 'Pt c/o R ankle pain, Hx of prior sprain, ROM WNL.' If you've never seen the abbreviation 'c/o' before, what's the safest thing to do?",
+      "choices": [
+        "Guess based on context and move on",
+        "Skip it — it's probably not important",
+        "Look it up or ask your supervising professional before relying on it",
+        "Assume it means whatever seems most likely and document that"
+      ],
+      "answerIndex": 2,
+      "explanation": "When you're not certain what an abbreviation means, confirm it — look it up or ask — rather than guessing. ('c/o' does mean 'complains of' here, but guessing at abbreviations you don't actually know is exactly the kind of miscommunication that causes real errors in patient care.) Skipping or ignoring documentation you don't understand is never the safe choice."
+    }
+  ],
+  "flashcards": [
+    { "id": "f1", "front": "cardi/o", "back": "Root meaning heart. Example: cardiology (study of the heart), tachycardia (fast heart rate)." },
+    { "id": "f2", "front": "arthr/o", "back": "Root meaning joint. Example: arthritis (joint inflammation), arthroplasty (surgical joint repair)." },
+    { "id": "f3", "front": "my/o", "back": "Root meaning muscle. Example: myalgia (muscle pain), myotomy (incision into muscle)." },
+    { "id": "f4", "front": "oste/o", "back": "Root meaning bone. Example: osteoarthritis (bone and joint inflammation), osteotomy (incision into bone)." },
+    { "id": "f5", "front": "derm/o", "back": "Root meaning skin. Example: dermatitis (skin inflammation), subdermal (under the skin)." },
+    { "id": "f6", "front": "neur/o", "back": "Root meaning nerve. Example: neuralgia (nerve pain), neurology (study of the nervous system)." },
+    { "id": "f7", "front": "hyper- / hypo-", "back": "hyper- = above normal or excessive; hypo- = below normal or deficient. Example: hyperextension vs. hypothermia." },
+    { "id": "f8", "front": "brady- / tachy-", "back": "brady- = slow; tachy- = fast. Example: bradycardia (slow heart rate) vs. tachycardia (fast heart rate)." },
+    { "id": "f9", "front": "a-/an-, sub-, peri-", "back": "a-/an- = without or absence of; sub- = under or below; peri- = around. Example: asymptomatic, subdermal, pericardium (sac around the heart)." },
+    { "id": "f10", "front": "-itis, -algia, -ology", "back": "-itis = inflammation; -algia = pain; -ology = study of. Example: arthritis, myalgia, cardiology." },
+    { "id": "f11", "front": "-ectomy, -otomy, -plasty", "back": "-ectomy = surgical removal; -otomy = surgical incision into; -plasty = surgical repair. Example: appendectomy, arthrotomy, arthroplasty." },
+    { "id": "f12", "front": "Building 'osteoarthritis'", "back": "oste (bone) + o (connecting vowel) + arthr (joint) + itis (inflammation) = inflammation involving the bone and joint — the degenerative, wear-and-tear form of arthritis." }
+  ]
+}

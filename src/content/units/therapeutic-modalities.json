@@ -1,0 +1,285 @@
+{
+  "id": "therapeutic-modalities",
+  "title": "Therapeutic Modalities: Heat, Cold & the Basics",
+  "category": "Assessment & Clinical Skills",
+  "strand": "therapeutic-modalities",
+  "gradeBand": "9-10",
+  "summary": "Know what cryotherapy and thermotherapy actually do, when each is the right call, and where a student aide's role stops.",
+  "minutes": 16,
+  "standards": ["CTE.HSMT.B.1.2", "CTE.HSMT.B.2.4", "CTE.HSMT.Anchor.6"],
+  "sections": [
+    {
+      "heading": "What a student aide does — and doesn't — with modalities",
+      "body": [
+        "Therapeutic modalities are the tools athletic trainers use to manage pain and support healing — ice, heat packs, ultrasound, electrical stimulation, and more. As a student aide, you will help set up and monitor some of these under direct supervision. You do not choose which modality an injury gets, and you do not apply one on your own judgment.",
+        "Why the hard line? Picking the wrong modality — or leaving one on too long — can make an injury worse. Getting it right takes training and hands-on evaluation that a certified athletic trainer (AT) has and a student aide does not. Your job is to understand the two you'll actually encounter, cryotherapy (cold) and thermotherapy (heat), know why each is used, and always check with the supervising AT before starting or changing anything."
+      ]
+    },
+    {
+      "heading": "Cryotherapy: what cold does",
+      "body": [
+        "Cryotherapy (cryo- = cold) is the use of cold — ice packs, ice bags, cold immersion — to treat an injury. It's the modality you'll reach for most on a sideline."
+      ],
+      "list": [
+        "Slows blood flow to the area, which limits the internal bleeding and swelling that happen right after an injury.",
+        "Numbs pain receptors in the skin and tissue, lowering how much pain the athlete feels.",
+        "Slows the local metabolic rate, which reduces secondary tissue damage — cell damage that spreads outward from the original injury site in the hours afterward."
+      ]
+    },
+    {
+      "heading": "Using cold correctly — and its real dangers",
+      "body": [
+        "Cold is the go-to modality for acute injuries — anything that just happened, in roughly the first 24 to 72 hours, while swelling is actively forming. It's the 'I' in RICE/PRICE (Rest/Protection, Ice, Compression, Elevation), the standard first-aid framework used for sprains and strains."
+      ],
+      "list": [
+        "Always place a barrier — a thin towel, pillowcase, or the pack's own fabric cover — between ice and skin. Never bare skin on ice.",
+        "15-20 minutes per application is the standard limit, not a suggestion.",
+        "Check the skin partway through and again at the end — it should look pink or red, not white, blue-gray, or waxy.",
+        "Never place ice over an area with numbness, tingling, or known poor circulation — the athlete can't feel the damage happening."
+      ],
+      "image": {
+        "asset": "therapeutic-modalities-ice-barrier-application.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Close-up illustration of an ice pack being applied to a swollen ankle, with a thin towel clearly shown as a barrier layer between the ice pack and the skin. Include a small inset showing a hand checking/lifting the pack edge to inspect skin color. Clean medical-illustration style, neutral pose.",
+        "alt": "Diagram of correct ice pack application to an ankle, showing a towel barrier between the ice pack and skin.",
+        "location": "public/images/units/therapeutic-modalities/"
+      },
+      "callout": {
+        "type": "warning",
+        "title": "Ice burns and frostbite are real injuries",
+        "text": "Leaving ice directly on skin, or leaving any ice pack on too long, can freeze and damage tissue just like frostbite — even though it feels like 'just ice.' Warning signs are skin that turns white, blue-gray, or waxy, or skin that goes numb. If you see any of these, remove the ice immediately and tell the athletic trainer — don't wait to see if it improves."
+      }
+    },
+    {
+      "heading": "Thermotherapy: what heat does",
+      "body": [
+        "Thermotherapy (thermo- = heat) uses heat — hot packs, warm whirlpools, heating pads — to treat an injury, but under very different circumstances than cold."
+      ],
+      "list": [
+        "Increases blood flow to the area, bringing in oxygen and nutrients that support healing.",
+        "Relaxes muscle tissue and reduces the guarding and tightness that builds up around an old injury.",
+        "Eases stiffness in joints and muscles, making them easier to move through a full range of motion."
+      ]
+    },
+    {
+      "heading": "When heat is used — and when it's dangerous",
+      "body": [
+        "Heat is a later-stage tool. It's used for chronic stiffness — an old injury, days or weeks out, once swelling has fully resolved — not a fresh one. On a brand-new injury with active swelling, heat does the opposite of what's needed: it increases blood flow into a joint or muscle that is already swelling, making the swelling and pain worse."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Never heat a fresh injury",
+        "text": "Heat on an acute injury, or applying heat while swelling is still active, increases bleeding and swelling instead of controlling it — the opposite of what the athlete needs in the first 24-72 hours. Heat packs and heating pads can also scald skin, especially over areas with reduced sensation. Only the athletic trainer decides when an injury has moved from the 'cold' phase to the 'heat' phase."
+      }
+    },
+    {
+      "heading": "The rule to leave with: when in doubt, ask",
+      "body": [
+        "Two things put athletes at risk: heat on a fresh injury, and cold left on too long. Both are avoidable, and both come down to the same fix — checking with the athletic trainer before you act, not after."
+      ],
+      "list": [
+        "Fresh injury, active swelling, first 24-72 hours → cold, about 15-20 minutes, with a barrier, watching the skin.",
+        "Old injury, no swelling, stiffness or tightness → heat, only as directed, watching the skin.",
+        "Not sure which stage the injury is in → don't apply either one — ask the athletic trainer first."
+      ],
+      "image": {
+        "asset": "therapeutic-modalities-heat-vs-cold-decision-chart.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-column comparison chart, 'Cold (Cryotherapy)' vs 'Heat (Thermotherapy)', each column listing timing (fresh/acute 24-72h vs. old/chronic, swelling resolved), main effects (reduced blood flow & pain vs. increased blood flow & relaxed muscle), and a one-line danger warning (ice burn/frostbite vs. worsened swelling/scald). Simple flat infographic style, clear icon (snowflake vs. flame) heading each column.",
+        "alt": "Side-by-side comparison chart of when to use cold versus heat, their main effects, and their main danger.",
+        "location": "public/images/units/therapeutic-modalities/"
+      }
+    },
+    {
+      "heading": "Other modalities you'll see (not use)",
+      "body": [
+        "The training room has tools beyond ice and heat packs. You'll see the certified athletic trainer or a physical therapist use these — your role is to recognize them and help set up the space, not operate the equipment:"
+      ],
+      "list": [
+        "Ultrasound — sound waves used to deliver deep heat to tissue below the skin.",
+        "Electrical stimulation (e-stim) — low-level electrical current used for pain relief or muscle re-education.",
+        "Whirlpool — a bath, cold or warm, that combines temperature therapy with gentle massage from moving water.",
+        "Compression — pneumatic (air-filled) sleeves or wraps that push swelling out of a limb, often paired with ice or elevation."
+      ]
+    },
+    {
+      "heading": "Contraindications: when no modality is used at all",
+      "body": [
+        "Certain conditions mean neither heat nor cold should be applied until the athletic trainer or physician says otherwise. These are called contraindications — reasons NOT to use a treatment."
+      ],
+      "list": [
+        "Impaired sensation — numbness, nerve damage, or anywhere the athlete can't reliably feel temperature or pain.",
+        "Poor circulation — conditions like diabetes or peripheral vascular disease can slow the body's ability to respond to temperature and injury.",
+        "Open wounds, skin infections, or rashes — heat or cold packs directly on broken or infected skin can make the problem worse.",
+        "Any area the athlete reports as numb, tingling, or 'doesn't feel right,' even before you've started."
+      ],
+      "callout": {
+        "type": "tip",
+        "title": "Not sure if a contraindication applies?",
+        "text": "That uncertainty is itself the answer — ask the athletic trainer before applying anything. It costs nothing to check first, and it can prevent real harm."
+      }
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "What is the main effect of cryotherapy (cold) on a fresh injury?",
+      "choices": [
+        "Slows blood flow and numbs pain, limiting swelling and secondary tissue damage",
+        "Increases blood flow to speed healing",
+        "Loosens muscle tissue for stretching",
+        "Delivers deep heat to tissue below the skin"
+      ],
+      "answerIndex": 0,
+      "explanation": "Cold slows blood flow, numbs pain receptors, and slows the local metabolic rate — limiting swelling and the secondary tissue damage that spreads in the hours after an injury. Heat does the opposite (increases blood flow), which is why it's saved for later."
+    },
+    {
+      "id": "q2",
+      "question": "How long should a single ice application typically last, and what should always sit between the ice and the skin?",
+      "choices": [
+        "5 minutes, nothing needed",
+        "45-60 minutes, ice directly on skin for best effect",
+        "15-20 minutes, with a barrier like a thin towel",
+        "2 hours, wrapped tightly with no breaks"
+      ],
+      "answerIndex": 2,
+      "explanation": "15-20 minutes with a barrier is the standard. Ice directly on bare skin for extended periods is exactly how ice burns and frostbite-like damage happen."
+    },
+    {
+      "id": "q3",
+      "question": "A soccer player rolls her ankle during warmups. Ten minutes later it's visibly swelling. Which modality fits this moment?",
+      "choices": [
+        "Heat pack, to relax the muscles around the joint",
+        "Whirlpool set to warm",
+        "No modality — wait 3 days before doing anything",
+        "Cold, following RICE/PRICE, since this is a fresh injury with active swelling"
+      ],
+      "answerIndex": 3,
+      "explanation": "A same-day injury with active swelling is squarely in cryotherapy territory — cold is the 'I' in RICE/PRICE for roughly the first 24-72 hours. Heat here would increase blood flow into an already-swelling joint."
+    },
+    {
+      "id": "q4",
+      "question": "An athlete's hamstring has been chronically tight for weeks with no swelling, and the athletic trainer decides heat is appropriate before stretching. Why does heat make sense here but not on a day-one injury?",
+      "choices": [
+        "Heat only works on hamstrings, not other muscles",
+        "Because swelling is gone, heat's increased blood flow and muscle relaxation ease stiffness instead of feeding fresh swelling",
+        "Heat is always safer than cold, regardless of injury age",
+        "Heat and cold have identical effects, so it doesn't matter which is used"
+      ],
+      "answerIndex": 1,
+      "explanation": "Once swelling has resolved, heat's increased blood flow and muscle relaxation help work out stiffness. On a fresh, actively swelling injury, that same increased blood flow would make swelling and pain worse."
+    },
+    {
+      "id": "q5",
+      "question": "You're monitoring an ice pack on a teammate's knee. Partway through, you notice the skin under the pack looks white and waxy, and the athlete says the area feels numb. What do you do?",
+      "choices": [
+        "Remove the ice immediately and tell the athletic trainer",
+        "Leave it on since numbness just means it's working well",
+        "Add a second ice pack to finish the job faster",
+        "Switch immediately to a hot pack to warm the skin back up"
+      ],
+      "answerIndex": 0,
+      "explanation": "White, waxy skin and numbness are warning signs of an ice burn or frostbite-like injury, not signs of effective treatment. Remove the ice and report it right away — don't try to fix it yourself with more ice or with heat."
+    },
+    {
+      "id": "q6",
+      "question": "Why is it dangerous to apply a heat pack to a joint that is actively swelling from a same-day injury?",
+      "choices": [
+        "Heat has no real effect on swelling either way",
+        "Heat packs are only designed for muscles, never joints",
+        "Heat is only dangerous if it's left on for more than 5 minutes",
+        "Heat increases blood flow into the area, which increases swelling and pain instead of controlling it"
+      ],
+      "answerIndex": 3,
+      "explanation": "Heat's main effect — increased blood flow — is exactly what an actively swelling injury doesn't need. That's why heat is reserved for later, once swelling has resolved."
+    },
+    {
+      "id": "q7",
+      "question": "Which statement correctly describes a student aide's role with modalities like ultrasound and electrical stimulation (e-stim)?",
+      "choices": [
+        "A student aide can operate ultrasound independently once trained",
+        "A student aide should set the e-stim intensity for the athlete",
+        "Ultrasound and e-stim are operated by the athletic trainer or physical therapist; a student aide's role is to recognize them, not run them",
+        "Ice packs require the same certification as ultrasound or e-stim"
+      ],
+      "answerIndex": 2,
+      "explanation": "Ultrasound and e-stim require training a student aide doesn't have. A student aide may help set up and monitor simpler modalities like ice or heat packs under direct supervision, but never operates equipment like ultrasound or e-stim."
+    },
+    {
+      "id": "q8",
+      "question": "An athlete with diabetes tells you her foot has been numb for a while, before you've even reached for an ice pack. What should you do?",
+      "choices": [
+        "Apply ice anyway, since numbness just means she'll feel less pain",
+        "Recognize impaired sensation as a contraindication and check with the athletic trainer before applying anything",
+        "Apply heat instead, since heat is always the safer option",
+        "Apply ice, just for a shorter amount of time"
+      ],
+      "answerIndex": 1,
+      "explanation": "Impaired sensation is a contraindication for both heat and cold — the athlete can't reliably feel damage happening, and conditions like diabetes can also affect circulation. This calls for checking with the athletic trainer before applying anything, not adjusting the treatment yourself."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "Cryotherapy",
+      "back": "The use of cold (ice packs, ice bags, cold immersion) to treat an injury — reduces blood flow, pain, and secondary tissue damage."
+    },
+    {
+      "id": "f2",
+      "front": "Thermotherapy",
+      "back": "The use of heat (hot packs, warm whirlpool) to treat an injury — increases blood flow, relaxes muscle, eases stiffness."
+    },
+    {
+      "id": "f3",
+      "front": "Standard ice application",
+      "back": "15-20 minutes per application, always with a barrier (thin towel) between the ice and the skin."
+    },
+    {
+      "id": "f4",
+      "front": "Ice burn / frostbite warning signs",
+      "back": "Skin that turns white, blue-gray, or waxy, or skin that goes numb — remove the ice immediately and tell the athletic trainer."
+    },
+    {
+      "id": "f5",
+      "front": "When cold is used",
+      "back": "Acute injuries with active swelling, roughly the first 24-72 hours — the 'I' in RICE/PRICE."
+    },
+    {
+      "id": "f6",
+      "front": "When heat is used",
+      "back": "Chronic stiffness on an old injury, once swelling has fully resolved — never on a fresh, actively swelling injury."
+    },
+    {
+      "id": "f7",
+      "front": "Why heat on a fresh injury is dangerous",
+      "back": "It increases blood flow into an already-swelling area, worsening swelling and pain instead of controlling it. Heat packs can also scald skin."
+    },
+    {
+      "id": "f8",
+      "front": "The critical rule",
+      "back": "Heat on a fresh injury and cold left on too long both cause harm — when unsure which stage an injury is in, ask the athletic trainer first."
+    },
+    {
+      "id": "f9",
+      "front": "Contraindication",
+      "back": "A condition that means a treatment should NOT be used — e.g., impaired sensation, poor circulation, or open wounds/skin infection for heat or cold."
+    },
+    {
+      "id": "f10",
+      "front": "Ultrasound",
+      "back": "A modality using sound waves to deliver deep heat below the skin — operated only by the athletic trainer or physical therapist."
+    },
+    {
+      "id": "f11",
+      "front": "Electrical stimulation (e-stim)",
+      "back": "Low-level electrical current used for pain relief or muscle re-education — operated only by the athletic trainer or physical therapist."
+    },
+    {
+      "id": "f12",
+      "front": "Student aide's role with modalities",
+      "back": "Help set up and monitor treatments under direct supervision — never choose or apply a modality independently."
+    }
+  ]
+}
