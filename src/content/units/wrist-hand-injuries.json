@@ -1,0 +1,280 @@
+{
+  "id": "wrist-hand-injuries",
+  "title": "Wrist & Hand Injuries in Sports",
+  "category": "Upper Extremity Injuries",
+  "strand": "wrist-hand-injuries",
+  "gradeBand": "9-10",
+  "summary": "From a routine wrist sprain to the fracture that hides inside one, recognize the wrist, hand, and finger injuries that need protection versus the ones that need an X-ray now.",
+  "minutes": 18,
+  "standards": ["CTE.HSMT.B.2.3", "CTE.HSMT.B.4.5", "CTE.HSMT.Anchor.6"],
+  "sections": [
+    {
+      "heading": "Anatomy: a lot of small parts doing a big job",
+      "body": [
+        "The wrist and hand pack more joints into a small space than almost anywhere else in the body, which is exactly why so many different things can go wrong there. The wrist itself is made up of eight small carpal bones arranged in two rows between the forearm bones and the hand (see the Anatomy Foundations unit for how bones form joints in general). One of those eight, the scaphoid, sits on the thumb side of the wrist and matters more than its size suggests — you'll see why in a few sections.",
+        "Past the wrist, each finger has three bones (phalanges) connected by three joints, plus the metacarpal bone in the palm that connects to the wrist. The thumb has one fewer joint than the other fingers, which makes it more prone to certain ligament injuries. Tendons run along the front and back of the wrist and fingers like cables, pulled by muscles up in the forearm, letting you grip, extend your fingers, and move your thumb independently of everything else."
+      ],
+      "image": {
+        "asset": "wrist-hand-injuries-anatomy.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Dorsal (back-of-hand) view diagram of a right wrist and hand skeleton. Show the two rows of carpal bones between the forearm and hand, with the scaphoid highlighted in a distinct color on the thumb side of the wrist. Label the radius and ulna at the forearm, the metacarpal bones in the palm, and the three phalanges of a finger with their joints marked. Clean medical-illustration style.",
+        "alt": "Diagram of the wrist and hand skeleton with the scaphoid carpal bone highlighted on the thumb side of the wrist.",
+        "location": "public/images/units/wrist-hand-injuries/"
+      }
+    },
+    {
+      "heading": "The FOOSH: one mechanism, many possible injuries",
+      "body": [
+        "A huge share of wrist and hand injuries in sports trace back to the same mechanism: a fall onto an outstretched hand, shortened to FOOSH. An athlete trips, gets pushed, or goes down awkwardly and instinctively puts a hand out to catch themselves. The wrist bends backward under the athlete's full body weight, and force travels up through the hand into the wrist and forearm.",
+        "What actually gets hurt from a FOOSH depends on exactly how the hand landed and how much force was involved — it can be a stretched ligament (a sprain), a fractured carpal bone, or a fractured forearm bone (see the Elbow & Forearm Injuries unit). The tricky part on the sideline is that a mild sprain and a small fracture can look and feel almost identical at first: swelling, pain, and reluctance to use the wrist. That overlap is exactly why the next section matters."
+      ],
+      "image": {
+        "asset": "wrist-hand-injuries-foosh-mechanism.webp",
+        "ratio": "4:3",
+        "background": "transparent",
+        "description": "Side view illustration of an athlete falling forward and catching themselves with one arm extended, wrist bent backward, palm flat on the ground taking their body weight. Use a motion/force arrow traveling up from the palm through the wrist into the forearm. Simple athletic-illustration style, no background clutter.",
+        "alt": "Diagram of a fall onto an outstretched hand (FOOSH), showing the wrist bent backward under body weight and force traveling up through the wrist.",
+        "location": "public/images/units/wrist-hand-injuries/"
+      }
+    },
+    {
+      "heading": "Wrist sprains vs. the scaphoid fracture — the can't-miss injury",
+      "body": [
+        "A wrist sprain is a stretch or tear of one of the ligaments holding the carpal bones together, usually from a FOOSH. It causes diffuse swelling and tenderness across the wrist, pain with movement, and it typically improves day by day with rest and protection.",
+        "A scaphoid fracture is a break in that same thumb-side carpal bone from the anatomy section, and it happens from the exact same FOOSH mechanism — which is the problem. Right after the fall, it can look and feel almost exactly like 'just a sprain': some swelling, wrist pain, and the athlete can often still move the wrist and even keep playing. The one finding that sets it apart is tenderness in a specific spot: the anatomical snuffbox, the small hollow at the base of the thumb on the back of the wrist that you can see form when you extend your thumb out and up. Point tenderness there after a FOOSH means treat it as a possible scaphoid fracture until proven otherwise.",
+        "Here's why this distinction is worth learning by name: the scaphoid gets much of its blood supply from one direction, entering at one end of the bone. A fracture can cut that blood flow off to the rest of the bone. Left untreated, some scaphoid fractures don't heal, and the bone tissue that lost its blood supply can die (a condition called avascular necrosis) — a problem that surgery can usually prevent if it's caught early, but that gets much harder to fix the longer it's missed. A wrist X-ray taken right after the injury can even look normal because some scaphoid fractures don't show up until swelling settles or a repeat X-ray is taken 10-14 days later, which is exactly why snuffbox tenderness after a fall gets a referral for imaging rather than a wait-and-see approach, even when the wrist looks like 'just a sprain.'"
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Snuffbox tenderness after a FOOSH — don't call it 'just a sprain'",
+        "text": "Any athlete with tenderness in the anatomical snuffbox after falling on an outstretched hand needs referral for an X-ray, even if they can still move the wrist and even if the first X-ray comes back clear. A missed scaphoid fracture can lose its blood supply and fail to heal — this is one of the few 'looks minor, isn't' injuries in this unit, and it's the one most worth remembering."
+      },
+      "image": {
+        "asset": "wrist-hand-injuries-snuffbox.webp",
+        "ratio": "4:3",
+        "background": "white",
+        "description": "Close-up illustration of the back of a right hand and wrist with the thumb extended up and outward, showing the anatomical snuffbox as a visible shallow hollow at the base of the thumb. Highlight the snuffbox location with a shaded circle or outline and a small label pointing to the underlying scaphoid bone beneath it. Clean medical-illustration style.",
+        "alt": "Diagram of the anatomical snuffbox at the base of the thumb, the tenderness site checked for a possible scaphoid fracture.",
+        "location": "public/images/units/wrist-hand-injuries/"
+      }
+    },
+    {
+      "heading": "Finger injuries: jammed fingers and the ones hiding more",
+      "body": [
+        "A 'jammed finger' is the catch-all term athletes use for any finger that got bent or compressed suddenly, usually from a ball hitting the fingertip. Most jammed fingers are a mild sprain of a finger joint: swelling, stiffness, and pain with bending that improves over days with buddy taping (taping the injured finger to the one next to it for support) and protection.",
+        "But 'jammed finger' can also describe injuries that are more than a simple sprain, and two are worth knowing by name:"
+      ],
+      "list": [
+        "Mallet finger — the tendon that straightens the fingertip is torn or pulled off the bone, usually from a ball jamming straight into an extended fingertip. The fingertip droops and the athlete cannot actively straighten it, even though someone else can passively push it straight. This needs splinting in extension and referral, not buddy taping — taped to a bent neighbor, it can heal in the drooped position.",
+        "Finger fracture or dislocation — a finger that looks crooked, is deformed at a joint, or won't move at all is not a simple jam. Never try to pop a dislocated finger back into place in the field, even if a teammate insists it 'always happens' or asks you to just 'pull it back.' Reduction (putting a joint back in place) is a trained-provider procedure, because a finger can also be fractured at the same joint, and forcing a dislocation back into place on a break can make things worse (see the Fractures & Dislocations and Splinting & Immobilization units for the general 'splint it as it lies' rule)."
+      ],
+      "image": {
+        "asset": "wrist-hand-injuries-mallet-finger.webp",
+        "ratio": "16:9",
+        "background": "white",
+        "description": "Two-panel comparison of a right index finger viewed from the side. Left panel labeled 'Normal': finger fully extended and straight. Right panel labeled 'Mallet finger': the fingertip (last joint) droops downward while the rest of the finger stays straight, with a small highlighted marker at the torn tendon attachment on the back of the fingertip. Clean medical-illustration style.",
+        "alt": "Comparison diagram of a normal extended finger versus mallet finger, where the fingertip droops from a torn extensor tendon.",
+        "location": "public/images/units/wrist-hand-injuries/"
+      }
+    },
+    {
+      "heading": "Thumb and hand: skier's thumb and boxer's fracture",
+      "body": [
+        "Two more injuries are common enough in sports to recognize by name, even at a basic level.",
+        "Skier's thumb (also called gamekeeper's thumb) is an injury to the ulnar collateral ligament (UCL) of the thumb — a different UCL from the one in the elbow, this one stabilizes the base of the thumb. It happens when the thumb gets forced backward and outward, classically from a ski pole handle during a fall, but also from a thumb catching on a jersey, a ball, or the ground. Look for pain and swelling at the base of the thumb and a thumb that feels loose or unstable when gripping — this needs referral, since an unstable thumb ligament that heals in the wrong position can leave a weak grip permanently.",
+        "Boxer's fracture is a break in the neck of the 5th metacarpal, the hand bone leading to the pinky finger, from punching or striking something with a closed fist (despite the name, it's actually more common in bar fights and wall-punching than in trained boxing, where proper technique and wraps protect the hand). Look for swelling and tenderness over the back of the hand near the pinky knuckle, and often a knuckle that looks 'sunken in' compared to the others. Like other suspected fractures, it gets protected and referred, not taped and played through."
+      ]
+    },
+    {
+      "heading": "Overuse of the wrist and hand",
+      "body": [
+        "Not every wrist or hand problem comes from one dramatic moment. Repetitive stress from gymnastics (repeated weight-bearing through the wrist), racquet sports, rowing, and weightlifting can gradually irritate the tendons crossing the wrist, producing a dull ache that builds with activity and eases with rest — the same overuse pattern seen elsewhere in the body (see the Overuse Injuries unit). Unlike a FOOSH injury, there's no single fall or blow to point to; the story is 'it's been getting worse over the season,' not 'it happened right then.' Rest, activity modification, and gradually rebuilding load are the fix, along with addressing whatever technique or equipment issue is driving the repetitive stress in the first place."
+      ]
+    },
+    {
+      "heading": "Immediate care and red flags",
+      "body": [
+        "For any suspected wrist, hand, or finger injury, the first-aid approach is consistent:"
+      ],
+      "list": [
+        "Protect the hand and stop play — don't ask the athlete to 'shake it off' and keep gripping equipment.",
+        "Ice over the area for 15-20 minutes at a time, never directly on skin.",
+        "Check circulation, sensation, and movement (CSM) beyond the injury — color, warmth, feeling, and the ability to move the fingers — before and after any buddy tape or splint (see the Splinting & Immobilization unit for the full CSM check).",
+        "Buddy tape only for what looks like a simple, uncomplicated finger sprain with no deformity and full ability to move the joint. When in doubt, splint it as it lies instead and refer."
+      ],
+      "callout": {
+        "type": "warning",
+        "title": "Red flags — refer immediately, don't wait it out",
+        "text": "Refer right away for any of these: tenderness in the anatomical snuffbox after a FOOSH; an obviously deformed, dislocated finger, or one that won't move at all; a fingertip that droops and can't actively straighten (possible mallet finger); numbness or tingling in the thumb, index, and middle fingers (the median nerve's territory) or anywhere in the hand; or any change in circulation — a finger or hand that's cold, pale, or bluish. Never attempt to relocate a dislocated finger or joint in the field."
+      }
+    },
+    {
+      "heading": "Return to play",
+      "body": [
+        "Simple wrist sprains and jammed fingers can often return to play once swelling and pain have settled, grip strength is close to normal, and the athlete can perform sport-specific tasks (catching, gripping a bat or racquet, bearing weight) without pain — sometimes with buddy tape or a protective wrap for support.",
+        "Anything referred out — a suspected scaphoid fracture, mallet finger, finger dislocation, skier's thumb, or boxer's fracture — returns only on the clearance of the physician or athletic trainer who evaluated it, on their timeline, not the athlete's. Some of these injuries look minor enough that the biggest risk isn't the initial injury; it's an athlete talking their way back onto the field before it's actually healed."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "q1",
+      "question": "Which carpal bone sits on the thumb side of the wrist and is the site of the classic 'can't-miss' wrist fracture in sports?",
+      "choices": [
+        "The scaphoid",
+        "The 5th metacarpal",
+        "The ulna",
+        "The lunate on the pinky side"
+      ],
+      "answerIndex": 0,
+      "explanation": "The scaphoid sits on the thumb side of the wrist and is the carpal bone most at risk of a fracture that can fail to heal. The 5th metacarpal is a hand bone (site of boxer's fracture), and the ulna is a forearm bone, not a carpal."
+    },
+    {
+      "id": "q2",
+      "question": "What does FOOSH stand for, and why does it come up so often in this unit?",
+      "choices": [
+        "Fracture of outer shoulder — a throwing injury",
+        "Forearm overuse or shoulder hyperextension",
+        "Fall on outstretched hand — the mechanism behind most wrist and hand injuries in this unit",
+        "Finger overextension syndrome from handball"
+      ],
+      "answerIndex": 2,
+      "explanation": "FOOSH is a fall onto an outstretched hand — an athlete putting a hand out to catch a fall, driving force up through the hand into the wrist. It's the mechanism behind wrist sprains, scaphoid fractures, and many forearm fractures."
+    },
+    {
+      "id": "q3",
+      "question": "A volleyball player falls on an outstretched hand. Her wrist is swollen, she can still move it, and it's tender in the anatomical snuffbox at the base of her thumb. What should happen next?",
+      "choices": [
+        "Ice it and let her keep playing since she can still move the wrist",
+        "Buddy tape the wrist and reassess tomorrow",
+        "Refer for an X-ray — snuffbox tenderness after a FOOSH could mean a scaphoid fracture",
+        "Assume it's a simple sprain since there's no visible deformity"
+      ],
+      "answerIndex": 2,
+      "explanation": "Snuffbox tenderness after a FOOSH is treated as a possible scaphoid fracture regardless of how much motion or play remains — a scaphoid fracture can look and move almost like a sprain at first. Waiting it out risks the bone losing its blood supply and failing to heal."
+    },
+    {
+      "id": "q4",
+      "question": "Why is a missed scaphoid fracture more dangerous than a typical missed finger sprain?",
+      "choices": [
+        "The scaphoid fracture is always immediately and obviously deformed",
+        "The scaphoid's blood supply can be cut off, so an unrecognized fracture may not heal and the bone tissue can die",
+        "Scaphoid fractures never show up on X-ray, so treatment isn't possible anyway",
+        "A missed scaphoid fracture always requires amputation"
+      ],
+      "answerIndex": 1,
+      "explanation": "The scaphoid receives much of its blood supply from one end of the bone; a fracture can cut that supply off to the rest of the bone, risking avascular necrosis (bone tissue death) and nonhealing if it's not caught and treated early. It is not always obviously deformed, and while an early X-ray can look normal, that's an argument for referral and follow-up, not for skipping care."
+    },
+    {
+      "id": "q5",
+      "question": "A basketball player is hit on the fingertip by the ball. The tip of his finger now droops and he cannot actively straighten it, though you can passively push it straight. This is most consistent with:",
+      "choices": [
+        "A boxer's fracture",
+        "Mallet finger — a torn or avulsed extensor tendon at the fingertip",
+        "Skier's thumb",
+        "A simple jammed finger that just needs buddy taping"
+      ],
+      "answerIndex": 1,
+      "explanation": "A drooping fingertip that can't actively straighten, from a ball striking an extended finger, is the classic sign of mallet finger — the extensor tendon is torn or pulled off the bone. It needs splinting in extension and referral, not buddy taping, which can let it heal in the drooped position."
+    },
+    {
+      "id": "q6",
+      "question": "A teammate's finger is visibly dislocated at the middle joint after being hit by a pass. Another player says 'just pull it back into place, it always happens to me.' What's the correct response?",
+      "choices": [
+        "Do it — relocating a dislocated finger quickly reduces pain",
+        "Wait five minutes to see if the swelling makes it easier to reduce",
+        "Protect the finger in the position found, check circulation and sensation, and refer — never relocate a joint in the field",
+        "Buddy tape it to the next finger immediately"
+      ],
+      "answerIndex": 2,
+      "explanation": "Reduction of a dislocated joint is a trained-provider procedure — the joint may also be fractured, and forcing it back into place can worsen the injury. The correct field response is to protect it as found, check CSM, and refer, regardless of what a teammate insists 'always happens.'"
+    },
+    {
+      "id": "q7",
+      "question": "A skier falls with a ski pole strap around her thumb, forcing it backward and outward. Her thumb is now swollen at the base and feels loose when she tries to grip. This mechanism and presentation best fit:",
+      "choices": [
+        "Skier's (gamekeeper's) thumb — an injury to the thumb's ulnar collateral ligament",
+        "Mallet finger",
+        "A scaphoid fracture",
+        "Golfer's elbow"
+      ],
+      "answerIndex": 0,
+      "explanation": "Skier's/gamekeeper's thumb is an injury to the thumb's UCL from the thumb being forced backward and outward, classically from a ski pole. A loose, unstable feeling at the base of the thumb after this mechanism needs referral so the ligament doesn't heal unstable. Mallet finger involves the fingertip, and a scaphoid fracture is a wrist injury, not a thumb ligament injury."
+    },
+    {
+      "id": "q8",
+      "question": "Which of these findings after a hand or wrist injury is a red flag that requires immediate referral rather than field first aid alone?",
+      "choices": [
+        "Mild diffuse swelling across the wrist that improves over a couple of days",
+        "Numbness and tingling in the thumb, index, and middle fingers",
+        "A finger that's a little stiff the morning after a mild jam",
+        "Mild tenderness that fully resolves within a day"
+      ],
+      "answerIndex": 1,
+      "explanation": "New numbness or tingling in the hand — especially in the thumb, index, and middle fingers, the median nerve's territory — is a red flag for nerve involvement and needs referral. Mild, improving swelling or stiffness after a minor jam is consistent with a simple sprain managed with protection and buddy taping."
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "f1",
+      "front": "FOOSH",
+      "back": "Fall On Outstretched Hand — the mechanism behind most wrist and hand injuries, from wrist sprains to scaphoid fractures to forearm fractures."
+    },
+    {
+      "id": "f2",
+      "front": "Scaphoid",
+      "back": "A carpal bone on the thumb side of the wrist; the site of sports medicine's classic 'can't-miss' wrist fracture because it can lose its blood supply and fail to heal if missed."
+    },
+    {
+      "id": "f3",
+      "front": "Anatomical snuffbox",
+      "back": "The small hollow at the base of the thumb, seen when the thumb is extended. Point tenderness here after a FOOSH signals a possible scaphoid fracture."
+    },
+    {
+      "id": "f4",
+      "front": "Why a missed scaphoid fracture matters",
+      "back": "The scaphoid's blood supply enters from one end of the bone. A fracture can cut off that supply, risking avascular necrosis (bone tissue death) and nonhealing if not caught early."
+    },
+    {
+      "id": "f5",
+      "front": "Mallet finger",
+      "back": "A torn or avulsed extensor tendon at the fingertip, from a ball striking an extended finger. Fingertip droops and can't actively straighten. Needs splinting in extension and referral — not buddy taping."
+    },
+    {
+      "id": "f6",
+      "front": "Skier's (gamekeeper's) thumb",
+      "back": "Injury to the thumb's ulnar collateral ligament (UCL) from the thumb forced backward and outward, classically by a ski pole. Base of thumb swollen and loose with gripping; refer."
+    },
+    {
+      "id": "f7",
+      "front": "Boxer's fracture",
+      "back": "A break in the neck of the 5th metacarpal (the pinky-side hand bone), from punching a solid object with a closed fist. Swelling and a 'sunken' pinky knuckle."
+    },
+    {
+      "id": "f8",
+      "front": "Buddy taping",
+      "back": "Taping an injured finger to the one next to it for support. Appropriate for a simple, uncomplicated finger sprain only — not for mallet finger, dislocation, or suspected fracture."
+    },
+    {
+      "id": "f9",
+      "front": "Never relocate a dislocated joint in the field",
+      "back": "Reduction (putting a dislocated joint back in place) is a trained-provider procedure. Protect the joint in the position found and refer instead."
+    },
+    {
+      "id": "f10",
+      "front": "CSM check",
+      "back": "Circulation, Sensation, Movement — checked beyond the injury (color, warmth, feeling, ability to move fingers) before and after any splint or buddy tape."
+    },
+    {
+      "id": "f11",
+      "front": "Median nerve red flag",
+      "back": "Numbness or tingling in the thumb, index, and middle fingers points to median nerve involvement and needs referral, not wait-and-see."
+    },
+    {
+      "id": "f12",
+      "front": "Wrist/hand overuse pattern",
+      "back": "Gradual dull ache from repetitive stress (gymnastics, racquet sports, rowing, weightlifting) that builds with activity and eases with rest — no single fall or blow to point to, unlike a FOOSH injury."
+    }
+  ]
+}
