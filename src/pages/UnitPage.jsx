@@ -14,6 +14,8 @@ import NotFoundPage from './NotFoundPage.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
 import PracticalActivity from '../components/PracticalActivity.jsx'
 
+// Accumulate reading time while the lesson is open AND the tab is visible.
+// Each delta is capped so a laptop waking from sleep cannot credit hours.
 const FLUSH_MS = 5000
 const MAX_DELTA_S = 30
 
@@ -49,6 +51,9 @@ function formatReadTime(seconds) {
   return `${Math.round(seconds / 60)} min`
 }
 
+// Track the deepest point of the lesson the student has scrolled to. Measure
+// on scroll, but persist only every couple of seconds so scrolling does not
+// trigger store writes and React updates on every event.
 function useScrollDepth(unitId) {
   useEffect(() => {
     if (!unitId) return
