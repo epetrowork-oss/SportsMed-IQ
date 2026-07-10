@@ -31,6 +31,13 @@ function save(next) {
   listeners.forEach((fn) => fn())
 }
 
+function hasGamificationData(value) {
+  if (!value || typeof value !== 'object') return false
+  return (Array.isArray(value.activeDates) && value.activeDates.length > 0)
+    || (Array.isArray(value.seenBadgeIds) && value.seenBadgeIds.length > 0)
+    || (value.practicals && typeof value.practicals === 'object' && Object.keys(value.practicals).length > 0)
+}
+
 // Decodes the code and upserts the student (matched case-insensitively by
 // name). Throws a user-readable error for bad codes or missing names.
 export async function addStudentFromCode(code) {
@@ -45,7 +52,9 @@ export async function addStudentFromCode(code) {
     id: existing?.id ?? `stu-${Date.now().toString(36)}`,
     name,
     progress: units,
-    gamification: gamification ?? existing?.gamification ?? null,
+    // Legacy codes decode to an empty gamification shape. Do not let that
+    // erase richer data already stored for the same student on this device.
+    gamification: hasGamificationData(gamification) ? gamification : existing?.gamification ?? gamification,
     updatedAt: at ?? Date.now(),
   }
   save({
