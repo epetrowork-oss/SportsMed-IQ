@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 import { getAllUnits, getUnit } from '../content/index.js'
 import { useProgress, useAssignments, getUnitProgress, isUnitComplete, importAssignment } from '../lib/progress.js'
 import { isComplete } from '../lib/status.js'
-import { decodeAssignment, assignmentStats, hasFocusAssignment } from '../lib/assignments.js'
+import { decodeAssignment, assignmentStats } from '../lib/assignments.js'
 import StatusIcon from '../components/StatusIcon.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
+import '../assignment-polish.css'
 
 function parseLocalDate(due) {
   const [y, m, d] = due.split('-').map(Number)
@@ -103,6 +104,14 @@ function sortAssignments(assignments) {
     if (a.assignment.due) return -1
     if (b.assignment.due) return 1
     return (a.assignment.createdAt ?? '').localeCompare(b.assignment.createdAt ?? '')
+  })
+}
+
+function hasActiveFocusAssignment(assignments) {
+  return assignments.some((assignment) => {
+    if (assignment.mode !== 'focus') return false
+    const { total, complete } = assignmentStats(assignment, isUnitComplete)
+    return total === 0 || complete < total
   })
 }
 
@@ -219,7 +228,7 @@ function ClassCodeEntry({ hasAssignments = false }) {
 export default function HomePage() {
   useProgress()
   const assignments = useAssignments()
-  const focusMode = hasFocusAssignment(assignments)
+  const focusMode = hasActiveFocusAssignment(assignments)
   const continueUnit = focusMode ? null : findContinueUnit()
 
   return (
