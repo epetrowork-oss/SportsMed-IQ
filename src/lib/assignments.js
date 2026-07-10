@@ -135,11 +135,15 @@ export function assignedUnitIds(assignments) {
   return result
 }
 
-// True if any assignment is in focus mode — one focus assignment is enough
-// to put the whole Library into focus view; open-mode assignments never
-// hide anything on their own.
-export function hasFocusAssignment(assignments) {
-  return (assignments ?? []).some((a) => a.mode === 'focus')
+// True when at least one focus-mode assignment is still active. Completed
+// focus assignments stop restricting Home and Library. The completion
+// callback is injected so this module remains independent of progress.js.
+export function hasActiveFocusAssignment(assignments, isUnitCompleteFn) {
+  return (assignments ?? []).some((assignment) => {
+    if (assignment.mode !== 'focus') return false
+    const { total, complete } = assignmentStats(assignment, isUnitCompleteFn)
+    return total === 0 || complete < total
+  })
 }
 
 // { total, complete, nextUnitId } for one assignment. isUnitCompleteFn is
