@@ -1,7 +1,15 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getAllUnits, getUnit } from '../content/index.js'
-import { useProgress, useAssignments, getUnitProgress, isUnitComplete, importAssignment } from '../lib/progress.js'
+import {
+  useProgress,
+  useAssignments,
+  getUnitProgress,
+  isUnitComplete,
+  importAssignment,
+  localDateKey,
+} from '../lib/progress.js'
+import { getGamificationSummary } from '../lib/gamification.js'
 import { isComplete } from '../lib/status.js'
 import { decodeAssignment, assignmentStats, hasActiveFocusAssignment } from '../lib/assignments.js'
 import StatusIcon from '../components/StatusIcon.jsx'
@@ -180,6 +188,26 @@ function MyLessons({ assignments }) {
   )
 }
 
+function GamificationPanel({ progress }) {
+  const summary = getGamificationSummary(progress, getAllUnits(), localDateKey())
+  const nextText = summary.nextLevelXp == null
+    ? 'Highest current level'
+    : `${summary.nextLevelXp - summary.xp} XP to next level`
+
+  return (
+    <section className="assignment-card" aria-labelledby="home-achievements-heading">
+      <div className="assignment-card-header">
+        <h2 id="home-achievements-heading">Level {summary.level.level}: {summary.level.name}</h2>
+        <span className="pill pill-grade">{summary.xp} XP</span>
+      </div>
+      <p className="assignment-progress-text">
+        {nextText} · {summary.currentStreak}-day streak · {summary.earnedBadges.length} badge{summary.earnedBadges.length === 1 ? '' : 's'}
+      </p>
+      <Link to="/achievements" className="button">View achievements</Link>
+    </section>
+  )
+}
+
 function ClassCodeEntry({ hasAssignments = false }) {
   const [pasted, setPasted] = useState('')
   const [result, setResult] = useState(null)
@@ -223,7 +251,7 @@ function ClassCodeEntry({ hasAssignments = false }) {
 }
 
 export default function HomePage() {
-  useProgress()
+  const progress = useProgress()
   const assignments = useAssignments()
   const focusMode = hasActiveFocusAssignment(assignments, isUnitComplete)
   const continueUnit = focusMode ? null : findContinueUnit()
@@ -254,6 +282,8 @@ export default function HomePage() {
       {assignments.length > 0 && <MyLessons assignments={assignments} />}
 
       {!focusMode && (continueUnit ? <ContinueCard unit={continueUnit} /> : <StartCard />)}
+
+      <GamificationPanel progress={progress} />
 
       <ClassCodeEntry hasAssignments={assignments.length > 0} />
 
