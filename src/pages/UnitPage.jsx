@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getUnit, getStandardsForUnit } from '../content/index.js'
+import { getActivitiesForUnit } from '../content/activities.js'
 import {
   useProgress,
   getUnitProgress,
@@ -11,9 +12,10 @@ import {
 } from '../lib/progress.js'
 import NotFoundPage from './NotFoundPage.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
+import PracticalActivity from '../components/PracticalActivity.jsx'
 
 // Accumulate reading time while the lesson is open AND the tab is visible.
-// Each delta is capped so a laptop waking from sleep can't credit hours.
+// Each delta is capped so a laptop waking from sleep cannot credit hours.
 const FLUSH_MS = 5000
 const MAX_DELTA_S = 30
 
@@ -31,7 +33,6 @@ function useReadingTimer(unitId) {
       else last = Date.now()
     }
     const onVisibility = () => {
-      // Tab just hid: bank the visible time up to this moment.
       if (document.visibilityState === 'hidden') credit()
       else last = Date.now()
     }
@@ -50,9 +51,9 @@ function formatReadTime(seconds) {
   return `${Math.round(seconds / 60)} min`
 }
 
-// Track the deepest point of the lesson the student has scrolled to.
-// Measured on scroll but only persisted every couple of seconds so
-// scrolling never triggers store writes/re-renders per-event.
+// Track the deepest point of the lesson the student has scrolled to. Measure
+// on scroll, but persist only every couple of seconds so scrolling does not
+// trigger store writes and React updates on every event.
 function useScrollDepth(unitId) {
   useEffect(() => {
     if (!unitId) return
@@ -71,7 +72,7 @@ function useScrollDepth(unitId) {
         savedPct = maxPct
       }
     }
-    measure() // a lesson shorter than the viewport counts as fully seen
+    measure()
     const interval = setInterval(flush, 2000)
     window.addEventListener('scroll', measure, { passive: true })
     window.addEventListener('resize', measure)
@@ -94,10 +95,6 @@ function Callout({ callout }) {
   )
 }
 
-// Expandable "Standards alignment" disclosure — only rendered when the unit
-// has at least one standards id that resolves against the catalog (unknown
-// ids are dropped by getStandardsForUnit, so a bad ref just disappears here
-// rather than breaking the page).
 function StandardsAlignment({ unit }) {
   const standards = getStandardsForUnit(unit)
   if (standards.length === 0) return null
@@ -122,6 +119,20 @@ function StandardsAlignment({ unit }) {
         </p>
       )}
     </details>
+  )
+}
+
+function PracticalActivities({ unit }) {
+  const activities = getActivitiesForUnit(unit)
+  if (activities.length === 0) return null
+  return (
+    <section className="practical-activities" aria-labelledby="practical-activities-heading">
+      <h2 id="practical-activities-heading">Practical activities</h2>
+      <p className="field-hint">Practice the lesson in a teacher-supervised simulation.</p>
+      {activities.map((activity) => (
+        <PracticalActivity key={activity.id} activity={activity} />
+      ))}
+    </section>
   )
 }
 
@@ -152,8 +163,7 @@ export default function UnitPage() {
               {` · best ${Math.round(p.bestQuizScore * 100)}%`}
               {passed && (
                 <span className="status-done" aria-hidden="true">
-                  {' '}
-                  ✓
+                  {' '}✓
                 </span>
               )}
             </>
@@ -163,8 +173,7 @@ export default function UnitPage() {
           Flashcards
           {p.flashcardsReviewed && (
             <span className="status-done" aria-hidden="true">
-              {' '}
-              ✓
+              {' '}✓
             </span>
           )}
         </Link>
@@ -202,6 +211,7 @@ export default function UnitPage() {
         ))}
       </article>
 
+      <PracticalActivities unit={unit} />
       <StandardsAlignment unit={unit} />
 
       <div className="lesson-footer">
