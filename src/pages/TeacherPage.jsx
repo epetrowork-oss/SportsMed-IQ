@@ -224,6 +224,7 @@ function TeacherAssignments() {
   const [copied, setCopied] = useState(false)
 
   const [copiedName, setCopiedName] = useState(null)
+  const [revealedName, setRevealedName] = useState(null) // saved assignment whose code textarea is shown
   const [confirmRemove, setConfirmRemove] = useState(null)
 
   function toggleUnit(id) {
@@ -270,7 +271,9 @@ function TeacherAssignments() {
       setCopiedName(assignment.name)
       setTimeout(() => setCopiedName(null), 2000)
     } catch {
-      // Clipboard blocked (some school browsers) — the textarea is selectable.
+      // Clipboard blocked (some school browsers) — reveal the selectable
+      // textarea so the teacher can still select and copy the code by hand.
+      setRevealedName(assignment.name)
     }
   }
 
@@ -421,6 +424,15 @@ function TeacherAssignments() {
                   <button className="button" onClick={() => copySavedCode(a)}>
                     {copiedName === a.name ? '✓ Copied' : 'Copy code'}
                   </button>
+                  <button
+                    className="button"
+                    onClick={() =>
+                      setRevealedName((cur) => (cur === a.name ? null : a.name))
+                    }
+                    aria-expanded={revealedName === a.name}
+                  >
+                    {revealedName === a.name ? 'Hide code' : 'Show code'}
+                  </button>
                   {confirmRemove === a.name ? (
                     <>
                       <button
@@ -447,6 +459,16 @@ function TeacherAssignments() {
                     </button>
                   )}
                 </span>
+                {revealedName === a.name && (
+                  <textarea
+                    className="code-box"
+                    readOnly
+                    value={a.code}
+                    rows={4}
+                    onFocus={(e) => e.target.select()}
+                    aria-label={`Class code for ${a.name}`}
+                  />
+                )}
               </div>
             )
           })}

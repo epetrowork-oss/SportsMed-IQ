@@ -1214,11 +1214,19 @@ h3 {
 
 .assignment-item {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
   gap: 0.75rem;
   padding: 0.75rem 0;
   border-top: 1px solid var(--line);
+}
+
+/* Revealed saved-assignment class code drops to its own full-width line
+   below the row (the clipboard-blocked fallback). */
+.assignment-item > .code-box {
+  flex-basis: 100%;
+  margin: 0;
 }
 
 .assignment-item-main {
