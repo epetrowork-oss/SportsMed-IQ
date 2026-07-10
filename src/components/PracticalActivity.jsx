@@ -1,3 +1,5 @@
+import '../practical-activities.css'
+
 export default function PracticalActivity({ activity }) {
   return (
     <details className="practical-activity">
