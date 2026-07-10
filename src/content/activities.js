@@ -19,7 +19,12 @@ function hasOnlyNonEmptyStrings(value) {
 function duplicateValues(values) {
   if (!Array.isArray(values)) return []
   const seen = new Set()
-  return [...new Set(values.filter((value) => seen.size === seen.add(value).size))]
+  const duplicates = new Set()
+  for (const value of values) {
+    if (seen.has(value)) duplicates.add(value)
+    else seen.add(value)
+  }
+  return [...duplicates]
 }
 
 function validateActivity(activity, index, seenIds) {
