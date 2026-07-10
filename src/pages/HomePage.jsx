@@ -3,29 +3,47 @@ import { Link } from 'react-router-dom'
 import { getAllUnits, getUnit } from '../content/index.js'
 import { useProgress, useAssignments, getUnitProgress, isUnitComplete, importAssignment } from '../lib/progress.js'
 import { isComplete } from '../lib/status.js'
-import { decodeAssignment, assignmentStats } from '../lib/assignments.js'
+import { decodeAssignment, assignmentStats, hasActiveFocusAssignment } from '../lib/assignments.js'
 import StatusIcon from '../components/StatusIcon.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
 
-// due is "YYYY-MM-DD"; parse as local date, not UTC midnight, so it never
-// displays a day early/late depending on timezone. Same approach as
-// SyncPage's formatDueDate.
-function formatDueDate(due) {
+// due is "YYYY-MM-DD"; parse as a local date, not UTC midnight, so it never
+// displays a day early/late depending on timezone. Same approach as SyncPage.
+function parseLocalDate(due) {
   const [y, m, d] = due.split('-').map(Number)
-  return new Date(y, m - 1, d).toLocaleDateString(undefined, {
+  return new Date(y, m - 1, d)
+}
+
+function formatDueDate(due) {
+  return parseLocalDate(due).toLocaleDateString(undefined, {
     month: 'short',
     day: 'numeric',
     year: 'numeric',
   })
 }
 
-// "started" = touched in some way but not (yet) complete. Same rule used by
-// StatusIcon/status.js's statusInfo().
+function startOfToday() {
+  const now = new Date()
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate())
+}
+
+function dueInfo(due, complete) {
+  if (complete) return { label: 'Completed', className: 'pill pill-done' }
+  if (!due) return null
+  const days = Math.round((parseLocalDate(due) - startOfToday()) / 86400000)
+  if (days < 0) return { label: 'Overdue', className: 'pill pill-progress' }
+  if (days === 0) return { label: 'Due today', className: 'pill pill-progress' }
+  if (days === 1) return { label: 'Due tomorrow', className: 'pill pill-progress' }
+  if (days <= 7) return { label: `Due in ${days} days`, className: 'pill pill-grade' }
+  return { label: `Due ${formatDueDate(due)}`, className: 'field-hint' }
+}
+
+// "Started" means the student has touched the lesson in some way but has not
+// necessarily completed it. This matches the status rules used elsewhere.
 function isUnitStarted(p) {
   return !!p && (p.lessonRead || p.quizAttempts > 0 || p.flashcardsReviewed || p.readSeconds > 0)
 }
 
-// Short "read · quiz 60% · cards pending" style summary for the continue card.
 function progressSummary(p) {
   const parts = [p.lessonRead ? 'read' : 'lesson pending']
   parts.push(p.quizAttempts > 0 ? `quiz ${Math.round((p.bestQuizScore ?? 0) * 100)}%` : 'quiz pending')
@@ -34,23 +52,20 @@ function progressSummary(p) {
 }
 
 const GRADE_BANDS = {
-  'all': 'All grades',
+  all: 'All grades',
   '7-8': '7th–8th grade',
   '9-10': '9th–10th grade',
   '11-12': '11th–12th grade',
 }
 
-// Most recently touched unit that's been started but isn't complete yet.
-// Ignores grade-band/search filters — personal progress trumps filters.
 function findContinueUnit() {
   const candidates = getAllUnits().filter((unit) => {
     const p = getUnitProgress(unit.id)
     return isUnitStarted(p) && !isComplete(p)
   })
   if (candidates.length === 0) return null
-  // getAllUnits() is already sorted in the app's canonical order, so when
-  // every candidate has touchedAt === 0 (e.g. progress imported from an
-  // older sync code) this naturally falls back to the first one.
+  // getAllUnits() is already in canonical order, so when every candidate has
+  // touchedAt === 0 (for example, older imported progress) the first wins.
   return candidates.reduce((best, unit) =>
     getUnitProgress(unit.id).touchedAt > getUnitProgress(best.id).touchedAt ? unit : best
   )
@@ -82,22 +97,35 @@ function StartCard() {
   )
 }
 
-function AssignmentCard({ assignment }) {
-  const { total, complete, nextUnitId } = assignmentStats(assignment, isUnitComplete)
-  const allDone = total > 0 && complete === total
+function assignmentView(assignment) {
+  const stats = assignmentStats(assignment, isUnitComplete)
+  return { assignment, ...stats, allDone: stats.total > 0 && stats.complete === stats.total }
+}
+
+function sortAssignments(assignments) {
+  return assignments.map(assignmentView).sort((a, b) => {
+    if (a.allDone !== b.allDone) return a.allDone ? 1 : -1
+    if (a.assignment.due && b.assignment.due) return a.assignment.due.localeCompare(b.assignment.due)
+    if (a.assignment.due) return -1
+    if (b.assignment.due) return 1
+    return (a.assignment.createdAt ?? '').localeCompare(b.assignment.createdAt ?? '')
+  })
+}
+
+function AssignmentCard({ view }) {
+  const { assignment, total, complete, nextUnitId, allDone } = view
   const pct = total > 0 ? Math.round((complete / total) * 100) : 0
   const nextUnit = nextUnitId ? getUnit(nextUnitId) : null
+  const due = dueInfo(assignment.due, allDone)
 
   return (
     <div className="assignment-card">
       <div className="assignment-card-header">
         <h3>{assignment.name}</h3>
-        {assignment.due && <span className="field-hint">Due {formatDueDate(assignment.due)}</span>}
+        {due && <span className={due.className}>{due.label}</span>}
       </div>
       {allDone ? (
-        <p className="pill pill-done assignment-card-done">
-          <span aria-hidden="true">✓</span> All done
-        </p>
+        <p className="assignment-progress-text">All {total} lessons complete.</p>
       ) : (
         <>
           <div
@@ -125,28 +153,43 @@ function AssignmentCard({ assignment }) {
 }
 
 function MyLessons({ assignments }) {
+  const views = sortAssignments(assignments)
+  const active = views.filter((view) => !view.allDone)
+  const completed = views.filter((view) => view.allDone)
+
   return (
     <section className="my-lessons">
       <h2>My Lessons</h2>
+      <p className="field-hint">A lesson is complete after you read it, pass its quiz, and review its flashcards.</p>
       <div className="assignment-card-list">
-        {assignments.map((a) => (
-          <AssignmentCard key={a.name} assignment={a} />
+        {active.map((view) => (
+          <AssignmentCard key={view.assignment.name} view={view} />
         ))}
       </div>
+      {completed.length > 0 && (
+        <details className="standards-alignment">
+          <summary>Completed assignments ({completed.length})</summary>
+          <div className="assignment-card-list">
+            {completed.map((view) => (
+              <AssignmentCard key={view.assignment.name} view={view} />
+            ))}
+          </div>
+        </details>
+      )}
     </section>
   )
 }
 
-function ClassCodeEntry() {
+function ClassCodeEntry({ hasAssignments = false }) {
   const [pasted, setPasted] = useState('')
-  const [result, setResult] = useState(null) // { ok, message }
+  const [result, setResult] = useState(null)
 
   async function submit() {
     try {
       const assignment = await decodeAssignment(pasted)
       importAssignment(assignment)
       setPasted('')
-      setResult(null)
+      setResult({ ok: true, message: `Added ${assignment.name}.` })
     } catch (err) {
       setResult({ ok: false, message: err.message })
     }
@@ -154,11 +197,9 @@ function ClassCodeEntry() {
 
   return (
     <section className="class-code-entry">
-      <h3>Have a class code from your teacher?</h3>
+      <h3>{hasAssignments ? 'Add another class code' : 'Have a class code from your teacher?'}</h3>
       <div className="class-code-entry-row">
-        <label htmlFor="home-class-code" className="sr-only">
-          Class code
-        </label>
+        <label htmlFor="home-class-code" className="sr-only">Class code</label>
         <input
           id="home-class-code"
           type="text"
@@ -174,19 +215,18 @@ function ClassCodeEntry() {
           Add
         </button>
       </div>
-      {result && !result.ok && (
-        <p className="import-error" role="status">
-          {result.message}
-        </p>
+      {result && (
+        <p className={result.ok ? 'import-ok' : 'import-error'} role="status">{result.message}</p>
       )}
     </section>
   )
 }
 
 export default function HomePage() {
-  useProgress() // re-render when progress changes
+  useProgress()
   const assignments = useAssignments()
-  const continueUnit = findContinueUnit()
+  const focusMode = hasActiveFocusAssignment(assignments, isUnitComplete)
+  const continueUnit = focusMode ? null : findContinueUnit()
 
   return (
     <div className="page">
@@ -213,9 +253,9 @@ export default function HomePage() {
 
       {assignments.length > 0 && <MyLessons assignments={assignments} />}
 
-      {continueUnit ? <ContinueCard unit={continueUnit} /> : <StartCard />}
+      {!focusMode && (continueUnit ? <ContinueCard unit={continueUnit} /> : <StartCard />)}
 
-      {assignments.length === 0 && <ClassCodeEntry />}
+      <ClassCodeEntry hasAssignments={assignments.length > 0} />
 
       <Link to="/lessons" className="button button-primary home-browse-button">
         Browse the Library
