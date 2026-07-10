@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getAllUnits, getUnitsByCategory } from '../content/index.js'
 import { useProgress, useAssignments, getUnitProgress, isUnitComplete } from '../lib/progress.js'
-import { assignedUnitIds, hasFocusAssignment } from '../lib/assignments.js'
+import { assignedUnitIds, hasActiveFocusAssignment } from '../lib/assignments.js'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
 
 // Shared with scripts/list-image-slots.mjs, which reconstructs these same
@@ -83,7 +83,7 @@ function UnitCard({ unit, showGradeBand }) {
 export default function LibraryPage() {
   useProgress() // re-render when progress changes
   const assignments = useAssignments()
-  const focusMode = hasFocusAssignment(assignments)
+  const focusMode = hasActiveFocusAssignment(assignments, isUnitComplete)
   const focusedIds = focusMode ? new Set(assignedUnitIds(assignments)) : null
   const [gradeBand, setGradeBand] = useState(() => {
     try {
