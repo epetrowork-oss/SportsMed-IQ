@@ -144,3 +144,52 @@ Not every strand needs all three bands filled immediately — a strand with
 only a `9-10` unit today is a normal, valid, incomplete state while the
 library fills in. `PLAN.md` tracks which strand/band combinations exist and
 which are queued.
+
+## Practical activity catalog (`src/content/activities.json`)
+
+Practical activities live in one separate, strand-keyed catalog rather than
+inside each grade-band unit. This avoids copying the same classroom activity
+into three sibling unit files. `src/content/activities.js` validates the
+catalog and matches activities to a unit by `targetStrands` and `gradeBands`.
+
+```jsonc
+{
+  "activities": [
+    {
+      "id": "emergency-action-plan-activity", // required, URL-safe and unique
+      "title": "Emergency Action Plan Walk-Through",
+      "targetStrands": ["emergency-action-plan"], // real unit strand ids only
+      "gradeBands": ["7-8", "9-10", "11-12"],
+      "estimatedMinutes": 30,
+      "completionMethod": "written-response-and-teacher-verification",
+      "teacherVerification": true,
+      "materials": ["School or venue map", "Emergency Action Plan template"],
+      "safetyNotes": ["Do not call 911 or activate a real alarm during practice."],
+      "instructions": ["Choose one athletic venue.", "Walk through the response roles."],
+      "checklist": ["Venue address is recorded", "AED location is identified"],
+      "writtenResponse": "Describe one likely delay and how to reduce it.",
+      "rubric": [
+        {
+          "criterion": "Roles",
+          "proficient": "Assigns clear, non-overlapping responsibilities."
+        }
+      ]
+    }
+  ]
+}
+```
+
+Required fields are `id`, `title`, `targetStrands`, `gradeBands`,
+`estimatedMinutes`, `completionMethod`, `instructions`, `checklist`, and
+`rubric`. Optional fields include `teacherVerification`, `materials`,
+`safetyNotes`, and `writtenResponse`.
+
+Activity rules:
+
+- Use only real strand ids from unit JSON files.
+- Keep all activities simulation-only unless a qualified instructor's scope
+  and the lesson explicitly support something more.
+- Do not direct students to perform real emergency activation or invasive care.
+- `completionMethod` is display metadata only for now; activity completion is
+  not yet stored in student progress or teacher reporting.
+- A single activity may target multiple strands and grade bands.
