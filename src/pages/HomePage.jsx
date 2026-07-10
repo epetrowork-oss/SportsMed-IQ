@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom'
 import { getAllUnits, getUnit } from '../content/index.js'
 import { useProgress, useAssignments, getUnitProgress, isUnitComplete, importAssignment } from '../lib/progress.js'
 import { isComplete } from '../lib/status.js'
-import { decodeAssignment, assignmentStats } from '../lib/assignments.js'
+import { decodeAssignment, assignmentStats, hasActiveFocusAssignment } from '../lib/assignments.js'
 import StatusIcon from '../components/StatusIcon.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
 import '../assignment-polish.css'
 
+// due is "YYYY-MM-DD"; parse as a local date, not UTC midnight, so it never
+// displays a day early/late depending on timezone. Same approach as SyncPage.
 function parseLocalDate(due) {
   const [y, m, d] = due.split('-').map(Number)
   return new Date(y, m - 1, d)
@@ -37,6 +39,8 @@ function dueInfo(due, complete) {
   return { label: `Due ${formatDueDate(due)}`, className: 'field-hint' }
 }
 
+// "Started" means the student has touched the lesson in some way but has not
+// necessarily completed it. This matches the status rules used elsewhere.
 function isUnitStarted(p) {
   return !!p && (p.lessonRead || p.quizAttempts > 0 || p.flashcardsReviewed || p.readSeconds > 0)
 }
@@ -61,6 +65,8 @@ function findContinueUnit() {
     return isUnitStarted(p) && !isComplete(p)
   })
   if (candidates.length === 0) return null
+  // getAllUnits() is already in canonical order, so when every candidate has
+  // touchedAt === 0 (for example, older imported progress) the first wins.
   return candidates.reduce((best, unit) =>
     getUnitProgress(unit.id).touchedAt > getUnitProgress(best.id).touchedAt ? unit : best
   )
@@ -104,14 +110,6 @@ function sortAssignments(assignments) {
     if (a.assignment.due) return -1
     if (b.assignment.due) return 1
     return (a.assignment.createdAt ?? '').localeCompare(b.assignment.createdAt ?? '')
-  })
-}
-
-function hasActiveFocusAssignment(assignments) {
-  return assignments.some((assignment) => {
-    if (assignment.mode !== 'focus') return false
-    const { total, complete } = assignmentStats(assignment, isUnitComplete)
-    return total === 0 || complete < total
   })
 }
 
@@ -166,7 +164,7 @@ function MyLessons({ assignments }) {
       <p className="field-hint">A lesson is complete after you read it, pass its quiz, and review its flashcards.</p>
       <div className="assignment-card-list">
         {active.map((view) => (
-          <AssignmentCard key={view.assignment.id ?? view.assignment.name} view={view} />
+          <AssignmentCard key={view.assignment.name} view={view} />
         ))}
       </div>
       {completed.length > 0 && (
@@ -174,7 +172,7 @@ function MyLessons({ assignments }) {
           <summary>Completed assignments ({completed.length})</summary>
           <div className="assignment-card-list">
             {completed.map((view) => (
-              <AssignmentCard key={view.assignment.id ?? view.assignment.name} view={view} />
+              <AssignmentCard key={view.assignment.name} view={view} />
             ))}
           </div>
         </details>
@@ -228,7 +226,7 @@ function ClassCodeEntry({ hasAssignments = false }) {
 export default function HomePage() {
   useProgress()
   const assignments = useAssignments()
-  const focusMode = hasActiveFocusAssignment(assignments)
+  const focusMode = hasActiveFocusAssignment(assignments, isUnitComplete)
   const continueUnit = focusMode ? null : findContinueUnit()
 
   return (
