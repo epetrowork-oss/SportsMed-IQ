@@ -19,6 +19,14 @@ const emptyUnit = () => ({
   touchedAt: 0, // Date.now() of the last mutation, for "continue where you left off"
 })
 
+const emptyPractical = () => ({
+  reflection: '',
+  reflectionCompleted: false,
+  readyForReview: false,
+  teacherVerified: false,
+  updatedAt: 0,
+})
+
 const emptyGamification = () => ({
   activeDates: [],
   practicals: {},
@@ -32,13 +40,30 @@ export function localDateKey(date = new Date()) {
   return `${year}-${month}-${day}`
 }
 
+function normalizePractical(value) {
+  const source = value && typeof value === 'object' ? value : {}
+  return {
+    reflection: typeof source.reflection === 'string' ? source.reflection.slice(0, 4000) : '',
+    reflectionCompleted: !!source.reflectionCompleted,
+    readyForReview: !!source.readyForReview,
+    teacherVerified: !!source.teacherVerified,
+    updatedAt: typeof source.updatedAt === 'number' && source.updatedAt > 0 ? source.updatedAt : 0,
+  }
+}
+
 function normalizeGamification(value) {
   const source = value && typeof value === 'object' ? value : {}
+  const practicals = {}
+  if (source.practicals && typeof source.practicals === 'object') {
+    for (const [activityId, practical] of Object.entries(source.practicals)) {
+      if (typeof activityId === 'string' && activityId) practicals[activityId] = normalizePractical(practical)
+    }
+  }
   return {
     activeDates: [...new Set((Array.isArray(source.activeDates) ? source.activeDates : []).filter((item) =>
       typeof item === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(item),
     ))].sort(),
-    practicals: source.practicals && typeof source.practicals === 'object' ? source.practicals : {},
+    practicals,
     seenBadgeIds: [...new Set((Array.isArray(source.seenBadgeIds) ? source.seenBadgeIds : []).filter((item) =>
       typeof item === 'string' && item,
     ))],
@@ -94,6 +119,22 @@ function updateUnit(unitId, patch, meaningful = false) {
   save(meaningful ? withMeaningfulActivity(next) : next)
 }
 
+function updatePractical(activityId, patch, meaningful = false) {
+  const gamification = normalizeGamification(state.gamification)
+  const current = gamification.practicals[activityId] ?? emptyPractical()
+  const next = {
+    ...state,
+    gamification: {
+      ...gamification,
+      practicals: {
+        ...gamification.practicals,
+        [activityId]: { ...current, ...patch, updatedAt: Date.now() },
+      },
+    },
+  }
+  save(meaningful ? withMeaningfulActivity(next) : next)
+}
+
 // --- mutations ---
 
 export function markLessonRead(unitId) {
@@ -137,6 +178,34 @@ export function recordQuizResult(unitId, correct, total) {
   )
 }
 
+export function savePracticalReflection(activityId, reflection) {
+  const text = typeof reflection === 'string' ? reflection.trim().slice(0, 4000) : ''
+  const current = getPracticalProgress(activityId)
+  updatePractical(
+    activityId,
+    {
+      reflection: text,
+      reflectionCompleted: text.length > 0,
+      readyForReview: text === current.reflection ? current.readyForReview : false,
+    },
+    text.length > 0 && !current.reflectionCompleted,
+  )
+}
+
+export function markPracticalReadyForReview(activityId) {
+  const current = getPracticalProgress(activityId)
+  if (!current.reflectionCompleted) return false
+  updatePractical(activityId, { readyForReview: true }, !current.readyForReview)
+  return true
+}
+
+// Teacher verification is intentionally not exposed as a student-page action.
+// A future teacher-controlled import can call this after validating its source.
+export function applyTeacherPracticalVerification(activityId, verified = true) {
+  const current = getPracticalProgress(activityId)
+  updatePractical(activityId, { teacherVerified: !!verified }, !!verified && !current.teacherVerified)
+}
+
 export function resetAllProgress() {
   save({ ...state, units: {}, gamification: emptyGamification() })
 }
@@ -149,6 +218,19 @@ export function markBadgesSeen(badgeIds) {
   const gamification = normalizeGamification(state.gamification)
   const seenBadgeIds = [...new Set([...gamification.seenBadgeIds, ...(badgeIds ?? [])])]
   save({ ...state, gamification: { ...gamification, seenBadgeIds } })
+}
+
+function mergePractical(currentValue, importedValue) {
+  const current = normalizePractical(currentValue)
+  const imported = normalizePractical(importedValue)
+  const newer = imported.updatedAt > current.updatedAt ? imported : current
+  return {
+    reflection: newer.reflection,
+    reflectionCompleted: current.reflectionCompleted || imported.reflectionCompleted,
+    readyForReview: current.readyForReview || imported.readyForReview,
+    teacherVerified: current.teacherVerified || imported.teacherVerified,
+    updatedAt: Math.max(current.updatedAt, imported.updatedAt),
+  }
 }
 
 // Merge imported progress into this device's progress, keeping the best of
@@ -178,9 +260,13 @@ export function mergeProgress(name, importedUnits, importedGamification = null) 
 
   const currentGame = normalizeGamification(state.gamification)
   const importedGame = normalizeGamification(importedGamification)
+  const practicals = { ...currentGame.practicals }
+  for (const [activityId, importedPractical] of Object.entries(importedGame.practicals)) {
+    practicals[activityId] = mergePractical(practicals[activityId], importedPractical)
+  }
   const gamification = {
     activeDates: [...new Set([...currentGame.activeDates, ...importedGame.activeDates])].sort(),
-    practicals: { ...importedGame.practicals, ...currentGame.practicals },
+    practicals,
     seenBadgeIds: [...new Set([...currentGame.seenBadgeIds, ...importedGame.seenBadgeIds])],
   }
   save({ ...state, name: state.name || name, units: merged, gamification })
@@ -214,6 +300,11 @@ export function getUnitProgress(unitId) {
   // Spread over defaults so records saved by older app versions
   // (before readSeconds existed) still have every field.
   return { ...emptyUnit(), ...(state.units[unitId] ?? {}) }
+}
+
+export function getPracticalProgress(activityId) {
+  const gamification = normalizeGamification(state.gamification)
+  return { ...emptyPractical(), ...(gamification.practicals[activityId] ?? {}) }
 }
 
 export function isUnitComplete(unitId) {

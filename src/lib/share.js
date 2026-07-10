@@ -61,7 +61,11 @@ function compactGamification(gamification) {
         readyForReview: reflection.length > 0 && !!raw.readyForReview,
         // Ordinary student progress codes are never a trusted teacher-verification source.
         teacherVerified: false,
-        updatedAt: typeof raw.updatedAt === 'number' && raw.updatedAt > 0 ? Math.round(raw.updatedAt) : 0,
+        // A cleared reflection must not outrank a saved response during a cross-device merge.
+        updatedAt:
+          reflection.length > 0 && typeof raw.updatedAt === 'number' && raw.updatedAt > 0
+            ? Math.round(raw.updatedAt)
+            : 0,
       }
     }
   }
