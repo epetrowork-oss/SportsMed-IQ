@@ -1,4 +1,4 @@
-# Plan — pick up here (ALPHA SPRINT Jul 8-10 in progress, see that section)
+# Plan — pick up here (ALPHA SPRINT Jul 8-10 in progress; NEW: "Printable materials" plan added 2026-07-10)
 
 This file is the handoff between sessions. Read it first, keep it updated:
 check items off as they land, and add anything newly discovered. The working
@@ -414,6 +414,138 @@ Real images (user + ChatGPT pipeline, slots are ready), strand
 cross-links between grade-band siblings, `UnitCard` pill-logic cleanup,
 gamification beyond the queue (streaks/badges), fuller standards
 coverage reporting for teachers, accounts/live sync (permanently out).
+
+## Printable materials — PLANNED 2026-07-10 (specs ready for the sonnet loop)
+
+**Requirement (user, 2026-07-10):** teachers can print / save-as-PDF lessons,
+quizzes, flashcards, practical activities, and teacher answer keys + rubrics.
+Must be browser-native printing (`window.print()`) so it works offline; clean
+black-and-white output; no nav/app chrome; page breaks between major sections;
+student name/class/date lines; quiz version without answers + separate teacher
+answer-key version; flashcards printable for cutting or as a study sheet;
+optional images; every document headed by lesson title, grade band, and
+standards. Work lands on `claude/teacher-printable-materials-n5ynir`.
+
+### Design decisions (orchestrator, 2026-07-10 — user can override async)
+
+1. **Dedicated print route, not print-CSS over the screen pages.** The
+   requirements are *different documents* (answerless quiz, mirrored-back cut
+   cards, name/date header lines), not restyled screens. New route
+   `/print/:unitId` mounted as a **sibling of the `<Layout>` route** in
+   `App.jsx`, so the header/nav never exist in the DOM — no hide-the-chrome
+   whack-a-mole. On screen the route shows the composed documents as a
+   preview plus a `.no-print` toolbar (doc checkboxes, options, a big
+   **Print / Save as PDF** button calling `window.print()`). `@media print`
+   hides the toolbar and applies page rules.
+2. **Document composer via query params** (shareable/bookmarkable, and the
+   toolbar just writes them):
+   `/print/:unitId?docs=lesson,quiz,key,cards,activity&cards=sheet|cut&images=0|1`.
+   Default `docs=lesson,quiz`, `cards=sheet`, `images=0`.
+3. **The answer key is its own document**, never mixed into the student quiz:
+   same questions with the correct choice marked + each question's
+   `explanation`, plus (Phase P3) the activity rubric. Full standards text
+   prints in the key; student-facing docs carry codes only.
+4. **Images default OFF; placeholders never print.** With `images=1`, only
+   real `<img>` assets print — `ImagePlaceholder` dev boxes are always
+   excluded (`display:none` in print). Today's library is all placeholders,
+   so the default keeps printouts clean until real art lands.
+5. **Activities + rubrics are a schema extension** (they don't exist yet):
+   new optional per-unit `activity` field, print-first (screen rendering of
+   activities is deferred). Content backfill is a separate `unit-author`
+   wave, piloted before batching — 54 units of hands-on activities is real
+   authoring work, not a checkbox.
+6. **One unit per print job** for alpha. "Print a whole assignment" (multi-
+   unit packet) is an easy follow-on (`?units=a,b,c` + a loop) — deferred.
+
+### Shared print-document contract (applies to every phase)
+
+- **Header block on every document**: unit title, "Grades 7-8/9-10/11-12",
+  and resolved standards codes (`shortName officialCode`, from
+  `getStandardsForUnit`). Student-facing docs (quiz, activity) add
+  `Name ____ Class ____ Date ____` lines; lesson and key don't.
+- **B&W formatting**: print CSS forces black-on-white, drops shadows/accent
+  colors; callouts become plain bordered boxes labeled by type
+  ("⚠ Safety note:" / "Tip:"); links print as plain text (no URLs).
+- **Page breaks**: `break-before: page` between documents;
+  `break-inside: avoid` on quiz questions, flashcards, rubric rows, and
+  callouts; `@page { margin: 1.5cm }`.
+- **No progress side-effects**: PrintPage must NOT mount the reading-timer /
+  scroll-depth hooks or call `markLessonRead` — printing is not reading.
+- Unknown `unitId` → reuse NotFound. Zero network, zero new dependencies.
+
+### Phase P1 — print route + lesson / quiz / answer key (`implementer`)
+
+*Orchestrator writes the spec (mostly above); implementer builds + verifies.*
+
+- [ ] `/print/:unitId` route outside Layout; `PrintPage` composing documents
+      from query params; toolbar (doc checkboxes, images toggle, Print
+      button); print styles in `styles.css` (`@media print` + `.print-*`
+      classes scoped to this page).
+- [ ] **Lesson document**: sections with headings, paragraphs, lists,
+      B&W callouts; optional images per decision 4.
+- [ ] **Quiz (student) document**: name/class/date lines, numbered questions,
+      lettered choices (A/B/C/D) with empty write-in blank per question —
+      no answers, no explanations anywhere in the markup (view-source clean).
+- [ ] **Answer key document**: "TEACHER KEY" banner, questions with correct
+      choice letter bolded/marked + explanation; full standards text list.
+- [ ] **Teacher entry points**: "Print materials" panel on TeacherPage
+      (unit picker grouped by strand × band like the assignment builder,
+      doc checkboxes, opens the composed `/print/...` URL in a new tab);
+      plus a small Print link on each By-Lesson drill row.
+- [ ] **Verify against `npm run preview`** with Playwright
+      (`/opt/pw-browsers/chromium`): `emulateMedia({ media: 'print' })` +
+      `page.pdf()` for a 7-8 and an 11-12 unit; assert no `<nav>`/toolbar in
+      print output, answers absent from student quiz DOM, page-break rules
+      applied; screen app unaffected at 375px.
+
+### Phase P2 — flashcards, two print layouts (`implementer`)
+
+- [ ] **Study sheet** (`cards=sheet`): compact two-column term/definition
+      table, `break-inside: avoid` per row.
+- [ ] **Cut cards** (`cards=cut`): 2×4 grid per page with dashed cut guides;
+      fronts page followed by a backs page with each row's cells
+      **horizontally mirrored** so long-edge duplex printing puts each back
+      behind its front. Single-sided printers just get fronts then backs to
+      cut and pair.
+- [ ] Verify both layouts via print-media PDF; card counts per page correct
+      for a 12-card unit.
+
+### Phase P3 — practical activities + rubrics (schema, then content)
+
+- [ ] **Schema + validator** (`implementer`): optional `activity` object per
+      unit — `{ title, objective, materials[], steps[], rubric[] }`, rubric
+      rows `{ criterion, points, description }`; validator errors on
+      malformed/partial activities, stays silent when absent (54 existing
+      units must stay green). Document in `src/content/README.md`.
+- [ ] **Print rendering** (`implementer`): activity document (student-facing:
+      name/date lines, objective, materials checklist, numbered steps) +
+      rubric table appended to the teacher answer key. `docs=activity`
+      option hidden/disabled for units without one.
+- [ ] **Pilot content** (`unit-author`, 3-5 units spanning all three bands —
+      e.g. ankle-sprain 7-8, taping-wrapping 9-10, concussion 11-12):
+      activities must be doable in a classroom with cheap/common materials,
+      band-appropriate (7-8 recognize/tell-an-adult framing, 11-12
+      assessment-adjacent), rubrics 3-5 criteria with point values.
+      Orchestrator reviews the pilot word-for-word before any batch.
+- [ ] **Backfill waves** (`unit-author` batches by band, later sessions):
+      remaining units. Not an alpha blocker — print flow ships with
+      activities appearing only on units that have them.
+
+### Phase P4 — QA + handoff (orchestrator)
+
+- [ ] Print every doc type for one unit per band; check page breaks, B&W,
+      headers, no chrome; validator + build green; offline print sanity
+      (preview server, network cut, `window.print()` still fine).
+- [ ] Update `TESTERS.md` one-pager with the print feature; note in PLAN.md
+      which units have pilot activities.
+
+### Relation to the alpha sprint
+
+This is new scope arriving on Day 3 of the alpha sprint. P1-P2 are
+self-contained UI work and can ship in the alpha (they touch no content);
+P3's schema piece is small but its content backfill explicitly is NOT an
+alpha blocker. Day 3's aesthetic/deploy/QA items still own the sprint's
+definition of done.
 
 ## Previous plan (hero-banner approach) — SUPERSEDED 2026-07-08, kept for context
 
