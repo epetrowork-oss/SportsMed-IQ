@@ -1,10 +1,11 @@
 import catalog from './activities.json'
 
 const unitModules = import.meta.glob('./units/*.json', { eager: true })
-const knownStrands = new Set(
-  Object.values(unitModules)
-    .map((mod) => (mod.default ?? mod)?.strand)
-    .filter((strand) => typeof strand === 'string' && strand.trim()),
+const units = Object.values(unitModules).map((mod) => mod.default ?? mod)
+const knownTargets = new Set(
+  units
+    .flatMap((unit) => [unit?.strand, unit?.id])
+    .filter((target) => typeof target === 'string' && target.trim()),
 )
 const VALID_BANDS = new Set(['7-8', '9-10', '11-12'])
 
@@ -40,8 +41,8 @@ function validateActivity(activity, index, seenIds) {
   if (!hasOnlyNonEmptyStrings(activity?.targetStrands) || activity.targetStrands.length === 0) {
     problems.push('missing or invalid targetStrands')
   } else {
-    const unknown = activity.targetStrands.filter((strand) => !knownStrands.has(strand))
-    if (unknown.length > 0) problems.push(`unknown targetStrands: ${unknown.join(', ')}`)
+    const unknown = activity.targetStrands.filter((target) => !knownTargets.has(target))
+    if (unknown.length > 0) problems.push(`unknown targets: ${unknown.join(', ')}`)
     const duplicates = duplicateValues(activity.targetStrands)
     if (duplicates.length > 0) problems.push(`duplicate targetStrands: ${duplicates.join(', ')}`)
   }
