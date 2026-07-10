@@ -170,7 +170,9 @@ export function mergeProgress(name, importedUnits, importedGamification = null) 
       // Max, not sum: re-importing the same code twice must not double-count.
       readSeconds: Math.max(cur.readSeconds ?? 0, imp.readSeconds ?? 0),
       scrollPct: Math.max(cur.scrollPct ?? 0, imp.scrollPct ?? 0),
-      touchedAt: Math.max(cur.touchedAt ?? 0, imp.touchedAt ?? 0),
+      // touchedAt stays device-local so importing a code cannot fake recency
+      // for "Continue where you left off" on this device.
+      touchedAt: cur.touchedAt ?? 0,
     }
   }
 
