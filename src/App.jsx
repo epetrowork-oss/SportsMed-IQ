@@ -7,6 +7,7 @@ import QuizPage from './pages/QuizPage.jsx'
 import FlashcardsPage from './pages/FlashcardsPage.jsx'
 import TeacherPage from './pages/TeacherPage.jsx'
 import SyncPage from './pages/SyncPage.jsx'
+import AchievementsPage from './pages/AchievementsPage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/unit/:unitId" element={<UnitPage />} />
         <Route path="/unit/:unitId/quiz" element={<QuizPage />} />
         <Route path="/unit/:unitId/flashcards" element={<FlashcardsPage />} />
+        <Route path="/achievements" element={<AchievementsPage />} />
         <Route path="/sync" element={<SyncPage />} />
         <Route path="/teacher" element={<TeacherPage />} />
         <Route path="*" element={<NotFoundPage />} />

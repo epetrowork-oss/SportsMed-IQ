@@ -23,7 +23,7 @@ function formatDueDate(due) {
 }
 
 export default function SyncPage() {
-  const { name, units } = useProgress()
+  const { name, units, gamification } = useProgress()
   const assignments = useAssignments()
   const [copied, setCopied] = useState(false)
   const [pasted, setPasted] = useState('')
@@ -35,13 +35,13 @@ export default function SyncPage() {
 
   useEffect(() => {
     let cancelled = false
-    encodeProgress(name, units).then((c) => {
+    encodeProgress(name, units, gamification).then((c) => {
       if (!cancelled) setCode(c)
     })
     return () => {
       cancelled = true
     }
-  }, [name, units])
+  }, [name, units, gamification])
 
   async function copyCode() {
     try {
@@ -55,8 +55,12 @@ export default function SyncPage() {
 
   async function importCode() {
     try {
-      const { name: importedName, units: importedUnits } = await decodeProgressCode(pasted)
-      mergeProgress(importedName, importedUnits)
+      const {
+        name: importedName,
+        units: importedUnits,
+        gamification: importedGamification,
+      } = await decodeProgressCode(pasted)
+      mergeProgress(importedName, importedUnits, importedGamification)
       const unitCount = Object.keys(importedUnits).length
       const known = Object.keys(importedUnits).filter((id) => getUnit(id)).length
       setImportResult({

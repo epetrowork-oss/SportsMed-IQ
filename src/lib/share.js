@@ -42,7 +42,33 @@ export async function inflate(bytes) {
   return new Uint8Array(await new Response(stream).arrayBuffer())
 }
 
-export async function encodeProgress(name, units) {
+function compactGamification(gamification) {
+  const source = gamification && typeof gamification === 'object' ? gamification : {}
+  const activeDates = [...new Set((Array.isArray(source.activeDates) ? source.activeDates : []).filter((value) =>
+    typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value),
+  ))].sort()
+  const seenBadgeIds = [...new Set((Array.isArray(source.seenBadgeIds) ? source.seenBadgeIds : []).filter((value) =>
+    typeof value === 'string' && value,
+  ))]
+  const practicals = {}
+  if (source.practicals && typeof source.practicals === 'object') {
+    for (const [activityId, raw] of Object.entries(source.practicals)) {
+      if (typeof activityId !== 'string' || !activityId || !raw || typeof raw !== 'object') continue
+      const reflection = typeof raw.reflection === 'string' ? raw.reflection.trim().slice(0, 4000) : ''
+      practicals[activityId] = {
+        reflection,
+        reflectionCompleted: reflection.length > 0 && !!raw.reflectionCompleted,
+        readyForReview: reflection.length > 0 && !!raw.readyForReview,
+        // Ordinary student progress codes are never a trusted teacher-verification source.
+        teacherVerified: false,
+        updatedAt: typeof raw.updatedAt === 'number' && raw.updatedAt > 0 ? Math.round(raw.updatedAt) : 0,
+      }
+    }
+  }
+  return { activeDates, seenBadgeIds, practicals }
+}
+
+export async function encodeProgress(name, units, gamification = null) {
   // Only carry fields the schema knows, so codes stay small and predictable.
   const compactUnits = {}
   for (const [unitId, p] of Object.entries(units)) {
@@ -51,16 +77,22 @@ export async function encodeProgress(name, units) {
       flashcardsReviewed: !!p.flashcardsReviewed,
       bestQuizScore: p.bestQuizScore ?? null,
       quizAttempts: p.quizAttempts ?? 0,
+      quizImprovementMax: p.quizImprovementMax ?? 0,
       readSeconds: Math.round(p.readSeconds ?? 0),
       scrollPct: Math.round(p.scrollPct ?? 0),
     }
   }
-  const json = JSON.stringify({ name, units: compactUnits, at: Date.now() })
+  const json = JSON.stringify({
+    name,
+    units: compactUnits,
+    gamification: compactGamification(gamification),
+    at: Date.now(),
+  })
   const compressed = await deflate(new TextEncoder().encode(json))
   return PREFIX_V2 + toBase64Url(compressed)
 }
 
-// Returns { name, units, at } or throws with a user-readable message.
+// Returns { name, units, gamification, at } or throws with a user-readable message.
 export async function decodeProgressCode(code) {
   const trimmed = code.trim()
   let data
@@ -97,6 +129,10 @@ export async function decodeProgressCode(code) {
       flashcardsReviewed: !!p.flashcardsReviewed,
       bestQuizScore: score == null ? null : Math.min(1, Math.max(0, score)),
       quizAttempts: Number.isInteger(p.quizAttempts) && p.quizAttempts > 0 ? p.quizAttempts : 0,
+      quizImprovementMax:
+        typeof p.quizImprovementMax === 'number' && p.quizImprovementMax > 0
+          ? Math.min(1, p.quizImprovementMax)
+          : 0,
       readSeconds:
         typeof p.readSeconds === 'number' && p.readSeconds > 0
           ? Math.round(Math.min(p.readSeconds, 60 * 60 * 24)) // sanity cap: one day
@@ -107,5 +143,10 @@ export async function decodeProgressCode(code) {
           : 0,
     }
   }
-  return { name: data.name.trim().slice(0, 60), units, at: data.at ?? null }
+  return {
+    name: data.name.trim().slice(0, 60),
+    units,
+    gamification: compactGamification(data.gamification),
+    at: data.at ?? null,
+  }
 }

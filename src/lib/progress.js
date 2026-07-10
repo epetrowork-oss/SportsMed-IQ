@@ -13,10 +13,37 @@ const emptyUnit = () => ({
   flashcardsReviewed: false,
   bestQuizScore: null, // 0..1, best across attempts
   quizAttempts: 0,
+  quizImprovementMax: 0, // largest single improvement over a previous best
   readSeconds: 0, // accumulated time on the lesson page while visible
   scrollPct: 0, // deepest point of the lesson ever seen, 0-100
   touchedAt: 0, // Date.now() of the last mutation, for "continue where you left off"
 })
+
+const emptyGamification = () => ({
+  activeDates: [],
+  practicals: {},
+  seenBadgeIds: [],
+})
+
+export function localDateKey(date = new Date()) {
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
+function normalizeGamification(value) {
+  const source = value && typeof value === 'object' ? value : {}
+  return {
+    activeDates: [...new Set((Array.isArray(source.activeDates) ? source.activeDates : []).filter((item) =>
+      typeof item === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(item),
+    ))].sort(),
+    practicals: source.practicals && typeof source.practicals === 'object' ? source.practicals : {},
+    seenBadgeIds: [...new Set((Array.isArray(source.seenBadgeIds) ? source.seenBadgeIds : []).filter((item) =>
+      typeof item === 'string' && item,
+    ))],
+  }
+}
 
 function load() {
   try {
@@ -25,6 +52,7 @@ function load() {
     return {
       name: parsed.name ?? '',
       units: parsed.units ?? {},
+      gamification: normalizeGamification(parsed.gamification),
       // Teacher-issued class codes imported on this device. Deliberately NOT
       // part of the student progress-code export (share.js) — assignments
       // don't follow a student between devices, only their unit progress does.
@@ -32,7 +60,7 @@ function load() {
     }
   } catch {
     // Corrupt or unavailable storage: start fresh rather than crash.
-    return { name: '', units: {}, assignments: [] }
+    return { name: '', units: {}, gamification: emptyGamification(), assignments: [] }
   }
 }
 
@@ -49,22 +77,33 @@ function save(next) {
   listeners.forEach((fn) => fn())
 }
 
-function updateUnit(unitId, patch) {
+function withMeaningfulActivity(nextState) {
+  const gamification = normalizeGamification(nextState.gamification)
+  const today = localDateKey()
+  return gamification.activeDates.includes(today)
+    ? { ...nextState, gamification }
+    : { ...nextState, gamification: { ...gamification, activeDates: [...gamification.activeDates, today].sort() } }
+}
+
+function updateUnit(unitId, patch, meaningful = false) {
   const current = state.units[unitId] ?? emptyUnit()
-  save({
+  const next = {
     ...state,
     units: { ...state.units, [unitId]: { ...current, ...patch, touchedAt: Date.now() } },
-  })
+  }
+  save(meaningful ? withMeaningfulActivity(next) : next)
 }
 
 // --- mutations ---
 
 export function markLessonRead(unitId) {
-  updateUnit(unitId, { lessonRead: true })
+  const current = getUnitProgress(unitId)
+  updateUnit(unitId, { lessonRead: true }, !current.lessonRead)
 }
 
 export function markFlashcardsReviewed(unitId) {
-  updateUnit(unitId, { flashcardsReviewed: true })
+  const current = getUnitProgress(unitId)
+  updateUnit(unitId, { flashcardsReviewed: true }, !current.flashcardsReviewed)
 }
 
 // Called periodically by the lesson page while it is open and visible.
@@ -85,24 +124,37 @@ export function recordScrollDepth(unitId, pct) {
 export function recordQuizResult(unitId, correct, total) {
   const score = total > 0 ? correct / total : 0
   const current = state.units[unitId] ?? emptyUnit()
-  updateUnit(unitId, {
-    quizAttempts: current.quizAttempts + 1,
-    bestQuizScore: Math.max(current.bestQuizScore ?? 0, score),
-  })
+  const previousBest = current.bestQuizScore ?? 0
+  const improvement = current.quizAttempts > 0 ? score - previousBest : 0
+  updateUnit(
+    unitId,
+    {
+      quizAttempts: current.quizAttempts + 1,
+      bestQuizScore: Math.max(previousBest, score),
+      quizImprovementMax: Math.max(current.quizImprovementMax ?? 0, improvement),
+    },
+    true,
+  )
 }
 
 export function resetAllProgress() {
-  save({ ...state, units: {} })
+  save({ ...state, units: {}, gamification: emptyGamification() })
 }
 
 export function setStudentName(name) {
   save({ ...state, name: name.trim().slice(0, 60) })
 }
 
+export function markBadgesSeen(badgeIds) {
+  const gamification = normalizeGamification(state.gamification)
+  const seenBadgeIds = [...new Set([...gamification.seenBadgeIds, ...(badgeIds ?? [])])]
+  save({ ...state, gamification: { ...gamification, seenBadgeIds } })
+}
+
 // Merge imported progress into this device's progress, keeping the best of
 // both for every unit (booleans OR, scores/attempts max). Used when a student
 // loads their code on a second device that may already have some progress.
-export function mergeProgress(name, importedUnits) {
+export function mergeProgress(name, importedUnits, importedGamification = null) {
   const merged = { ...state.units }
   for (const [unitId, imp] of Object.entries(importedUnits)) {
     const cur = merged[unitId] ?? emptyUnit()
@@ -114,12 +166,24 @@ export function mergeProgress(name, importedUnits) {
           ? null
           : Math.max(cur.bestQuizScore ?? 0, imp.bestQuizScore ?? 0),
       quizAttempts: Math.max(cur.quizAttempts, imp.quizAttempts ?? 0),
+      quizImprovementMax: Math.max(cur.quizImprovementMax ?? 0, imp.quizImprovementMax ?? 0),
       // Max, not sum: re-importing the same code twice must not double-count.
       readSeconds: Math.max(cur.readSeconds ?? 0, imp.readSeconds ?? 0),
       scrollPct: Math.max(cur.scrollPct ?? 0, imp.scrollPct ?? 0),
+      // touchedAt stays device-local so importing a code cannot fake recency
+      // for "Continue where you left off" on this device.
+      touchedAt: cur.touchedAt ?? 0,
     }
   }
-  save({ ...state, name: state.name || name, units: merged })
+
+  const currentGame = normalizeGamification(state.gamification)
+  const importedGame = normalizeGamification(importedGamification)
+  const gamification = {
+    activeDates: [...new Set([...currentGame.activeDates, ...importedGame.activeDates])].sort(),
+    practicals: { ...importedGame.practicals, ...currentGame.practicals },
+    seenBadgeIds: [...new Set([...currentGame.seenBadgeIds, ...importedGame.seenBadgeIds])],
+  }
+  save({ ...state, name: state.name || name, units: merged, gamification })
 }
 
 // --- assignments (teacher-issued class codes, imported on this device) ---
