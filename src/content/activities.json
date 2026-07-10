@@ -77,6 +77,171 @@
         { "criterion": "Sequence", "proficient": "Walk-through follows a realistic sequence from recognition through transfer of care." },
         { "criterion": "Revision", "proficient": "Identifies a meaningful weakness and proposes a workable improvement." }
       ]
+    },
+    {
+      "id": "ankle-taping-decision-station",
+      "title": "Ankle Taping Decision Station",
+      "targetStrands": ["taping-wrapping"],
+      "gradeBands": ["9-10", "11-12"],
+      "estimatedMinutes": 30,
+      "completionMethod": "written-response-and-teacher-verification",
+      "teacherVerification": true,
+      "materials": ["Athletic tape", "Pre-wrap if approved", "Tape scissors", "Waste container", "Student checklist"],
+      "safetyNotes": [
+        "Practice only on an uninjured, consenting classmate or a mannequin under teacher supervision.",
+        "Stop immediately for numbness, tingling, discoloration, pain, skin irritation, or discomfort.",
+        "Do not tape a suspected fracture, open wound, acute injury, or anyone with current pain.",
+        "This station is classroom practice and does not authorize independent clinical care."
+      ],
+      "instructions": [
+        "Review the scenario and decide whether taping is appropriate or contraindicated.",
+        "Obtain consent, inspect the skin, and position the foot in a comfortable neutral position.",
+        "Verbally identify the purpose of anchors, support strips, heel locks, and closure strips before application.",
+        "Apply only the teacher-approved sequence with smooth, overlapping strips and no excessive tension.",
+        "Recheck circulation, sensation, comfort, and skin color after application.",
+        "Remove the tape using the teacher-approved method and inspect the skin again.",
+        "Clean the station and dispose of used materials appropriately."
+      ],
+      "checklist": [
+        "Screens for contraindications before taping",
+        "Obtains consent and checks the skin",
+        "Positions the foot appropriately",
+        "Explains the purpose of each major tape component",
+        "Uses smooth strips without wrinkles or excessive tension",
+        "Rechecks circulation, sensation, comfort, and skin color",
+        "Removes tape safely and reinspects the skin",
+        "States when taping should be stopped or avoided"
+      ],
+      "writtenResponse": "Explain two findings that would make you stop or avoid taping and describe the safest next step for each finding.",
+      "rubric": [
+        { "criterion": "Decision making", "proficient": "Correctly identifies when taping is appropriate and when referral or stopping is required." },
+        { "criterion": "Preparation", "proficient": "Obtains consent, checks the skin, and positions the foot before application." },
+        { "criterion": "Sequence and tension", "proficient": "Uses the approved sequence with smooth strips and safe tension." },
+        { "criterion": "Post-check", "proficient": "Rechecks circulation, sensation, comfort, and skin condition after taping." }
+      ]
+    },
+    {
+      "id": "simulated-splinting-station",
+      "title": "Simulated Splinting Station",
+      "targetStrands": ["fractures-dislocations"],
+      "gradeBands": ["9-10", "11-12"],
+      "estimatedMinutes": 35,
+      "completionMethod": "written-response-and-teacher-verification",
+      "teacherVerification": true,
+      "materials": ["Padded practice splint", "Elastic wraps", "Triangular bandage", "Scenario card", "Student checklist"],
+      "safetyNotes": [
+        "Use a simulated injury only and do not practice on anyone with current pain or injury.",
+        "Do not forcefully realign, apply traction, or move a simulated deformity.",
+        "Do not tighten a splint around an actual injury.",
+        "Classroom completion does not authorize independent care."
+      ],
+      "instructions": [
+        "Read the scenario and verbalize scene safety and the need for adult or emergency assistance.",
+        "Ask the simulated patient to remain still and support the body part in the position found.",
+        "Verbally assess distal circulation, sensation, and movement without provoking pain.",
+        "Select and pad an appropriate practice splint.",
+        "Secure the splint above and below the simulated injury without covering the distal check area.",
+        "Reassess distal circulation, sensation, comfort, and movement after application.",
+        "State the referral or emergency decision and how the athlete would be monitored until help arrives."
+      ],
+      "checklist": [
+        "Verbalizes scene safety and adult or emergency activation",
+        "Prevents unnecessary movement",
+        "Checks distal circulation, sensation, and movement before splinting",
+        "Chooses and pads an appropriate splint",
+        "Secures above and below the simulated injury",
+        "Avoids forceful realignment or traction",
+        "Repeats distal checks after application",
+        "States an appropriate referral or emergency plan"
+      ],
+      "writtenResponse": "Explain why distal circulation, sensation, and movement are checked before and after splinting, and identify one change that would require loosening or removing the practice splint.",
+      "rubric": [
+        { "criterion": "Safety", "proficient": "Prevents movement, avoids realignment, and verbalizes appropriate emergency support." },
+        { "criterion": "Distal checks", "proficient": "Performs and explains pre- and post-application circulation, sensation, and movement checks." },
+        { "criterion": "Splint selection", "proficient": "Selects, pads, and positions an appropriate practice splint." },
+        { "criterion": "Securing and reassessment", "proficient": "Secures safely above and below the simulated injury and reassesses afterward." }
+      ]
+    },
+    {
+      "id": "sweat-rate-calculation-lab",
+      "title": "Sweat-Rate Calculation Lab",
+      "targetStrands": ["hydration-nutrition"],
+      "gradeBands": ["9-10", "11-12"],
+      "estimatedMinutes": 30,
+      "completionMethod": "written-response",
+      "teacherVerification": false,
+      "materials": ["Calculator", "Scenario data sheet", "Pen or pencil"],
+      "safetyNotes": [
+        "Use teacher-provided or hypothetical data unless a supervised class protocol has been approved.",
+        "Do not use this activity to prescribe fluid intake or diagnose dehydration.",
+        "Hydration plans should follow qualified coaching, athletic-training, medical, and school guidance."
+      ],
+      "instructions": [
+        "Record pre-exercise body mass, post-exercise body mass, fluid consumed, urine produced, and exercise duration.",
+        "Convert body-mass change and fluid volumes into the same unit before calculating.",
+        "Calculate sweat loss as pre-exercise mass minus post-exercise mass plus fluid consumed minus urine produced.",
+        "Convert the session sweat loss to an hourly rate using the exercise duration.",
+        "Compare the result with the provided example and check whether the answer is physically reasonable.",
+        "Write a cautious hydration-planning response that identifies what additional information a qualified adult would need."
+      ],
+      "checklist": [
+        "All five required inputs are recorded",
+        "Mass and fluid values are converted to compatible units",
+        "Sweat-loss calculation uses the correct signs",
+        "Exercise duration is converted to hours",
+        "Hourly sweat rate is calculated correctly",
+        "Result is checked for reasonableness",
+        "Interpretation avoids making a medical prescription"
+      ],
+      "writtenResponse": "Using the calculated sweat rate, explain two factors that a qualified coach, athletic trainer, or medical professional should consider before adjusting an athlete’s hydration plan.",
+      "rubric": [
+        { "criterion": "Data setup", "proficient": "Records all inputs and converts them into compatible units." },
+        { "criterion": "Calculation", "proficient": "Calculates session sweat loss and hourly sweat rate accurately." },
+        { "criterion": "Reasonableness check", "proficient": "Checks the result and identifies an obvious unit or sign error if present." },
+        { "criterion": "Interpretation", "proficient": "Uses cautious language and identifies relevant contextual factors without prescribing care." }
+      ]
+    },
+    {
+      "id": "concussion-sideline-card-roleplay",
+      "title": "Concussion Sideline-Card Roleplay",
+      "targetStrands": ["concussion"],
+      "gradeBands": ["7-8", "9-10", "11-12"],
+      "estimatedMinutes": 25,
+      "completionMethod": "written-response-and-teacher-verification",
+      "teacherVerification": true,
+      "materials": ["Scenario card", "Sideline observation card", "Pen or pencil", "Student checklist"],
+      "safetyNotes": [
+        "Use roleplay only. Do not provoke symptoms or test balance on a potentially injured person.",
+        "Do not perform a real diagnostic examination during this simulation.",
+        "Students do not clear athletes to return to participation.",
+        "Do not place a real emergency call during the simulation."
+      ],
+      "instructions": [
+        "Assign the roles of athlete, student observer, coach or teacher, and recorder.",
+        "Read a teacher-approved scenario card and identify observable signs, reported symptoms, and concerning mechanism information.",
+        "The observer states that the athlete should be removed from participation and informs the designated adult.",
+        "The recorder documents only the information provided in the scenario without adding a diagnosis.",
+        "The group decides whether the scenario requires routine adult follow-up or emergency escalation and explains why.",
+        "Rotate roles and repeat with a second scenario.",
+        "End each scenario by stating that return-to-play decisions belong to qualified healthcare professionals under applicable rules."
+      ],
+      "checklist": [
+        "Recognizes at least one concerning sign or symptom",
+        "Removes the athlete from participation in the roleplay",
+        "Notifies a responsible adult",
+        "Documents observations without diagnosing",
+        "Identifies red flags that require emergency escalation",
+        "Does not perform symptom provocation or unsafe testing",
+        "Does not allow student-directed return to play",
+        "Communicates calmly and respectfully"
+      ],
+      "writtenResponse": "Explain why a student observer should document what was seen and reported without diagnosing the athlete, and identify one red flag that requires immediate adult or emergency action.",
+      "rubric": [
+        { "criterion": "Recognition", "proficient": "Identifies relevant signs, symptoms, or mechanism information from the scenario." },
+        { "criterion": "Protection", "proficient": "Removes the athlete from participation and prevents student-directed return to play." },
+        { "criterion": "Communication", "proficient": "Notifies the appropriate adult and communicates observations without diagnosing." },
+        { "criterion": "Escalation", "proficient": "Correctly distinguishes routine follow-up from emergency red-flag escalation." }
+      ]
     }
   ]
 }
