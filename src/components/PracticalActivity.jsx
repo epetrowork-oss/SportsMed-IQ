@@ -48,16 +48,14 @@ export default function PracticalActivity({ activity }) {
         {activity.rubric?.length > 0 && (
           <section>
             <h3>Teacher rubric</h3>
-            <div className="table-scroll">
-              <table>
-                <thead><tr><th>Criterion</th><th>Proficient evidence</th></tr></thead>
-                <tbody>
-                  {activity.rubric.map((row) => (
-                    <tr key={row.criterion}><td>{row.criterion}</td><td>{row.proficient}</td></tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            <table>
+              <thead><tr><th>Criterion</th><th>Proficient evidence</th></tr></thead>
+              <tbody>
+                {activity.rubric.map((row) => (
+                  <tr key={row.criterion}><td>{row.criterion}</td><td>{row.proficient}</td></tr>
+                ))}
+              </tbody>
+            </table>
           </section>
         )}
 
