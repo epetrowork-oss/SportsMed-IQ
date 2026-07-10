@@ -80,7 +80,8 @@ function audit(record) {
   if (!record.unit) {
     return {
       file: record.file,
-      title: 'Malformed JSON',
+      title: `Malformed JSON (${record.file})`,
+      malformed: true,
       gradeBand: '—',
       category: '—',
       strand: '—',
@@ -95,7 +96,7 @@ function audit(record) {
       checks: 0,
       practicals: 0,
       teacherResources: 0,
-      problems: [`JSON parse error: ${record.parseError}`],
+      problems: [`JSON parse error in ${record.file}: ${record.parseError}`],
     }
   }
 
@@ -111,6 +112,7 @@ function audit(record) {
   const resources = firstArray(unit, ['teacherResources', 'resources', 'teacher'])
   const problems = []
 
+  if (!unit.title) problems.push('Missing title')
   if (!unit.summary) problems.push('Missing summary')
   if (!unit.gradeBand) problems.push('Missing grade band')
   if (!unit.category) problems.push('Missing category')
@@ -129,7 +131,8 @@ function audit(record) {
 
   return {
     file: record.file,
-    title: unit.title,
+    title: unit.title || record.file,
+    malformed: false,
     gradeBand: unit.gradeBand,
     category: unit.category,
     strand: unit.strand,
@@ -149,7 +152,7 @@ function audit(record) {
 }
 
 const audited = records.map(audit)
-const validRows = audited.filter((row) => row.title !== 'Malformed JSON')
+const validRows = audited.filter((row) => !row.malformed)
 const categories = [...new Set(validRows.map((row) => row.category).filter(Boolean))].sort()
 const strands = [...new Set(validRows.map((row) => row.strand).filter(Boolean))].sort()
 
@@ -157,7 +160,7 @@ console.log('# Subject Content Completeness Audit\n')
 console.log(`Generated from ${files.length} unit JSON files.\n`)
 console.log('## Coverage summary\n')
 console.log(`- Units: ${validRows.length}`)
-console.log(`- Grade bands: ${[...new Set(validRows.map((row) => row.gradeBand))].sort().join(', ') || 'None'}`)
+console.log(`- Grade bands: ${[...new Set(validRows.map((row) => row.gradeBand).filter(Boolean))].sort().join(', ') || 'None'}`)
 console.log(`- Categories: ${categories.length}`)
 console.log(`- Strands: ${strands.length}`)
 console.log(`- Quiz questions: ${validRows.reduce((sum, row) => sum + row.quiz, 0)}`)
@@ -179,7 +182,7 @@ for (const row of audited) {
 }
 
 const priorities = [
-  'JSON parse error', 'No lesson sections', 'Thin lesson content', 'Short quiz',
+  'JSON parse error', 'Missing title', 'No lesson sections', 'Thin lesson content', 'Short quiz',
   'Short flashcard set', 'No standards tagged', 'Unresolved standards',
   'No lesson diagrams', 'Standards include draft/unverified entries',
   'No embedded knowledge checks', 'No practical activity', 'No teacher resource',
@@ -189,7 +192,11 @@ const rank = (problem) => {
   return index === -1 ? priorities.length : index
 }
 const backlog = audited.flatMap((row) => row.problems.map((problem) => ({ row, problem })))
-backlog.sort((a, b) => rank(a.problem) - rank(b.problem) || a.row.title.localeCompare(b.row.title))
+backlog.sort((a, b) => {
+  const priorityDifference = rank(a.problem) - rank(b.problem)
+  if (priorityDifference !== 0) return priorityDifference
+  return (a.row.title || a.row.file).localeCompare(b.row.title || b.row.file)
+})
 
 const roadmapPrefixes = [
   'Standards include draft/unverified entries',
@@ -203,12 +210,12 @@ const roadmap = backlog.filter(({ problem }) => isRoadmap(problem))
 
 console.log('\n## Real gaps\n')
 if (realGaps.length === 0) console.log('No immediate content gaps found.')
-for (const { row, problem } of realGaps) console.log(`- **${md(row.title)}** (${md(row.gradeBand)}): ${md(problem)}`)
+for (const { row, problem } of realGaps) console.log(`- **${md(row.title || row.file)}** (${md(row.gradeBand)}): ${md(problem)}`)
 
 console.log('\n## Roadmap\n')
 console.log('These are planned platform/content capabilities, not release-blocking unit defects.\n')
 if (roadmap.length === 0) console.log('No roadmap gaps found.')
-for (const { row, problem } of roadmap) console.log(`- **${md(row.title)}** (${md(row.gradeBand)}): ${md(problem)}`)
+for (const { row, problem } of roadmap) console.log(`- **${md(row.title || row.file)}** (${md(row.gradeBand)}): ${md(problem)}`)
 
 console.log('\n## Image brief\n')
 console.log('Run `npm run images:shotlist` for the authoritative image-production manifest. The audit intentionally does not duplicate that brief.')
