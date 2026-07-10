@@ -1,14 +1,11 @@
-import '../practical-activities.css'
-
 export default function PracticalActivity({ activity }) {
   return (
-    <details className="practical-activity">
+    <details className="standards-alignment">
       <summary>
-        <span>{activity.title}</span>
-        <span className="field-hint">About {activity.estimatedMinutes} min</span>
+        {activity.title} <span className="field-hint">· About {activity.estimatedMinutes} min</span>
       </summary>
 
-      <div className="practical-activity-body">
+      <div>
         {activity.safetyNotes?.length > 0 && (
           <div className="callout callout-warning">
             <strong>Safety notes</strong>
@@ -33,7 +30,7 @@ export default function PracticalActivity({ activity }) {
         {activity.checklist?.length > 0 && (
           <section>
             <h3>Student checklist</h3>
-            <ul className="activity-checklist">
+            <ul>
               {activity.checklist.map((item) => (
                 <li key={item}><span aria-hidden="true">☐</span> {item}</li>
               ))}
@@ -51,8 +48,8 @@ export default function PracticalActivity({ activity }) {
         {activity.rubric?.length > 0 && (
           <section>
             <h3>Teacher rubric</h3>
-            <div className="activity-rubric-wrap">
-              <table className="activity-rubric">
+            <div className="table-scroll">
+              <table>
                 <thead><tr><th>Criterion</th><th>Proficient evidence</th></tr></thead>
                 <tbody>
                   {activity.rubric.map((row) => (
