@@ -50,7 +50,21 @@ function compactGamification(gamification) {
   const seenBadgeIds = [...new Set((Array.isArray(source.seenBadgeIds) ? source.seenBadgeIds : []).filter((value) =>
     typeof value === 'string' && value,
   ))]
-  const practicals = source.practicals && typeof source.practicals === 'object' ? source.practicals : {}
+  const practicals = {}
+  if (source.practicals && typeof source.practicals === 'object') {
+    for (const [activityId, raw] of Object.entries(source.practicals)) {
+      if (typeof activityId !== 'string' || !activityId || !raw || typeof raw !== 'object') continue
+      const reflection = typeof raw.reflection === 'string' ? raw.reflection.trim().slice(0, 4000) : ''
+      practicals[activityId] = {
+        reflection,
+        reflectionCompleted: reflection.length > 0 && !!raw.reflectionCompleted,
+        readyForReview: reflection.length > 0 && !!raw.readyForReview,
+        // Ordinary student progress codes are never a trusted teacher-verification source.
+        teacherVerified: false,
+        updatedAt: typeof raw.updatedAt === 'number' && raw.updatedAt > 0 ? Math.round(raw.updatedAt) : 0,
+      }
+    }
+  }
   return { activeDates, seenBadgeIds, practicals }
 }
 
@@ -122,7 +136,7 @@ export async function decodeProgressCode(code) {
           : 0,
       readSeconds:
         typeof p.readSeconds === 'number' && p.readSeconds > 0
-          ? Math.round(Math.min(p.readSeconds, 60 * 60 * 24)) // sanity cap: one day
+          ? Math.round(Math.min(p.readSeconds, 60 * 60 * 24))
           : 0,
       scrollPct:
         typeof p.scrollPct === 'number' && p.scrollPct > 0
