@@ -1,9 +1,23 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getAllUnits } from '../content/index.js'
-import { useProgress, getUnitProgress } from '../lib/progress.js'
+import { getAllUnits, getUnit } from '../content/index.js'
+import { useProgress, useAssignments, getUnitProgress, isUnitComplete, importAssignment } from '../lib/progress.js'
 import { isComplete } from '../lib/status.js'
+import { decodeAssignment, assignmentStats } from '../lib/assignments.js'
 import StatusIcon from '../components/StatusIcon.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
+
+// due is "YYYY-MM-DD"; parse as local date, not UTC midnight, so it never
+// displays a day early/late depending on timezone. Same approach as
+// SyncPage's formatDueDate.
+function formatDueDate(due) {
+  const [y, m, d] = due.split('-').map(Number)
+  return new Date(y, m - 1, d).toLocaleDateString(undefined, {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  })
+}
 
 // "started" = touched in some way but not (yet) complete. Same rule used by
 // StatusIcon/status.js's statusInfo().
@@ -68,8 +82,110 @@ function StartCard() {
   )
 }
 
+function AssignmentCard({ assignment }) {
+  const { total, complete, nextUnitId } = assignmentStats(assignment, isUnitComplete)
+  const allDone = total > 0 && complete === total
+  const pct = total > 0 ? Math.round((complete / total) * 100) : 0
+  const nextUnit = nextUnitId ? getUnit(nextUnitId) : null
+
+  return (
+    <div className="assignment-card">
+      <div className="assignment-card-header">
+        <h3>{assignment.name}</h3>
+        {assignment.due && <span className="field-hint">Due {formatDueDate(assignment.due)}</span>}
+      </div>
+      {allDone ? (
+        <p className="pill pill-done assignment-card-done">
+          <span aria-hidden="true">✓</span> All done
+        </p>
+      ) : (
+        <>
+          <div
+            className="assignment-progress-bar"
+            role="progressbar"
+            aria-valuenow={complete}
+            aria-valuemin={0}
+            aria-valuemax={total}
+            aria-label={`${assignment.name} progress`}
+          >
+            <div className="assignment-progress-fill" style={{ width: `${pct}%` }} />
+          </div>
+          <p className="assignment-progress-text">
+            {complete} of {total} lesson{total === 1 ? '' : 's'} complete
+          </p>
+        </>
+      )}
+      {!allDone && nextUnit && (
+        <Link to={`/unit/${nextUnit.id}`} className="button button-primary assignment-next-up">
+          Next up: {nextUnit.title}
+        </Link>
+      )}
+    </div>
+  )
+}
+
+function MyLessons({ assignments }) {
+  return (
+    <section className="my-lessons">
+      <h2>My Lessons</h2>
+      <div className="assignment-card-list">
+        {assignments.map((a) => (
+          <AssignmentCard key={a.name} assignment={a} />
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function ClassCodeEntry() {
+  const [pasted, setPasted] = useState('')
+  const [result, setResult] = useState(null) // { ok, message }
+
+  async function submit() {
+    try {
+      const assignment = await decodeAssignment(pasted)
+      importAssignment(assignment)
+      setPasted('')
+      setResult(null)
+    } catch (err) {
+      setResult({ ok: false, message: err.message })
+    }
+  }
+
+  return (
+    <section className="class-code-entry">
+      <h3>Have a class code from your teacher?</h3>
+      <div className="class-code-entry-row">
+        <label htmlFor="home-class-code" className="sr-only">
+          Class code
+        </label>
+        <input
+          id="home-class-code"
+          type="text"
+          className="text-input"
+          placeholder="Paste your class code here"
+          value={pasted}
+          onChange={(e) => {
+            setPasted(e.target.value)
+            setResult(null)
+          }}
+        />
+        <button className="button button-primary" onClick={submit} disabled={!pasted.trim()}>
+          Add
+        </button>
+      </div>
+      {result && !result.ok && (
+        <p className="import-error" role="status">
+          {result.message}
+        </p>
+      )}
+    </section>
+  )
+}
+
 export default function HomePage() {
   useProgress() // re-render when progress changes
+  const assignments = useAssignments()
   const continueUnit = findContinueUnit()
 
   return (
@@ -95,7 +211,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {assignments.length > 0 && <MyLessons assignments={assignments} />}
+
       {continueUnit ? <ContinueCard unit={continueUnit} /> : <StartCard />}
+
+      {assignments.length === 0 && <ClassCodeEntry />}
 
       <Link to="/lessons" className="button button-primary home-browse-button">
         Browse the Library

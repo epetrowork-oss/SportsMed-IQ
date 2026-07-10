@@ -113,3 +113,49 @@ export async function decodeAssignment(code) {
   if (isDueDateString(data.due)) result.due = data.due
   return result
 }
+
+// --- pure helpers for the student-facing "My Lessons" / Library focus views.
+// Deliberately dependency-free of progress.js (see module note at top of
+// this file) — callers pass in whatever progress data they need.
+
+// Deduped union of unitIds across all assignments, preserving first-seen
+// order (an assignment's own order first, then the next assignment's new
+// ids, etc.).
+export function assignedUnitIds(assignments) {
+  const seen = new Set()
+  const result = []
+  for (const a of assignments ?? []) {
+    for (const id of a.unitIds ?? []) {
+      if (!seen.has(id)) {
+        seen.add(id)
+        result.push(id)
+      }
+    }
+  }
+  return result
+}
+
+// True if any assignment is in focus mode — one focus assignment is enough
+// to put the whole Library into focus view; open-mode assignments never
+// hide anything on their own.
+export function hasFocusAssignment(assignments) {
+  return (assignments ?? []).some((a) => a.mode === 'focus')
+}
+
+// { total, complete, nextUnitId } for one assignment. isUnitCompleteFn is
+// passed in (rather than importing progress.js) so this module stays free
+// of a dependency on progress state.
+export function assignmentStats(assignment, isUnitCompleteFn) {
+  const unitIds = assignment?.unitIds ?? []
+  const total = unitIds.length
+  let complete = 0
+  let nextUnitId = null
+  for (const id of unitIds) {
+    if (isUnitCompleteFn(id)) {
+      complete += 1
+    } else if (nextUnitId === null) {
+      nextUnitId = id
+    }
+  }
+  return { total, complete, nextUnitId }
+}

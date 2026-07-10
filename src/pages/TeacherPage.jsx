@@ -1,10 +1,27 @@
 import { useEffect, useMemo, useState } from 'react'
-import { getAllUnits, getUnitsByCategory, getStandardsForUnit } from '../content/index.js'
+import { getAllUnits, getUnitsByCategory, getStandardsForUnit, getUnit } from '../content/index.js'
 import { useProgress, getUnitProgress, PASS_THRESHOLD } from '../lib/progress.js'
 import { useRoster, addStudentFromCode, removeStudent } from '../lib/roster.js'
+import {
+  useTeacherAssignments,
+  saveTeacherAssignment,
+  removeTeacherAssignment,
+} from '../lib/teacherAssignments.js'
+import { ASSIGNMENT_MODES } from '../lib/assignments.js'
 import { isComplete, isFlagged, flagReasons, formatMinSec, statusInfo } from '../lib/status.js'
 import StatusIcon from '../components/StatusIcon.jsx'
 import mockRoster from '../content/mock/students.json'
+
+// due is "YYYY-MM-DD"; parse as local date, not UTC midnight, so it never
+// displays a day early/late depending on timezone (mirrors SyncPage).
+function formatDueDate(due) {
+  const [y, m, d] = due.split('-').map(Number)
+  return new Date(y, m - 1, d).toLocaleDateString(undefined, {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  })
+}
 
 function completedCount(row, unitList) {
   return unitList.filter((u) => isComplete(row.progressFor(u.id))).length
@@ -14,12 +31,20 @@ function flagCount(row, unitList) {
   return unitList.filter((u) => isFlagged(row.progressFor(u.id))).length
 }
 
-// Wide CSV: one row per student, four columns per unit. Opens cleanly in
-// Sheets/Excel for gradebooks. Format unchanged from the flat-table version.
-function buildCsv(rows, units) {
+function assignmentCompletion(row, assignment) {
+  const total = assignment.unitIds.length
+  const complete = assignment.unitIds.filter((id) => isComplete(row.progressFor(id))).length
+  return { total, complete, pct: total ? Math.round((complete / total) * 100) : 0 }
+}
+
+// Wide CSV: one row per student, one column per saved assignment (% complete)
+// followed by four columns per unit. Opens cleanly in Sheets/Excel for
+// gradebooks. Per-unit format unchanged from the flat-table version.
+function buildCsv(rows, units, assignments) {
   const esc = (v) => `"${String(v ?? '').replaceAll('"', '""')}"`
   const header = [
     'Student',
+    ...assignments.map((a) => `«${a.name}» — % assigned complete`),
     ...units.flatMap((u) => [
       `${u.title} — status`,
       `${u.title} — best quiz %`,
@@ -29,6 +54,9 @@ function buildCsv(rows, units) {
   ]
   const lines = rows.map((row) => {
     const cells = [row.name]
+    for (const assignment of assignments) {
+      cells.push(assignmentCompletion(row, assignment).pct)
+    }
     for (const unit of units) {
       const p = row.progressFor(unit.id)
       const started =
@@ -65,8 +93,8 @@ function buildCsv(rows, units) {
   return [header.map(esc).join(','), ...lines, ...standardsSection].join('\n')
 }
 
-function downloadCsv(rows, units) {
-  const blob = new Blob([buildCsv(rows, units)], { type: 'text/csv;charset=utf-8' })
+function downloadCsv(rows, units, assignments) {
+  const blob = new Blob([buildCsv(rows, units, assignments)], { type: 'text/csv;charset=utf-8' })
   const a = document.createElement('a')
   a.href = URL.createObjectURL(blob)
   a.download = `sportmediq-progress-${new Date().toISOString().slice(0, 10)}.csv`
@@ -164,6 +192,270 @@ function CategoryHeading({ level = 0, children }) {
   )
 }
 
+// --- assignment builder (teacher-authored class codes) ---
+
+const MODE_INFO = {
+  focus: { label: 'Focus', desc: 'students see only assigned lessons in the Library.' },
+  open: { label: 'Open', desc: 'students can browse everything.' },
+}
+
+// Grade-band filter for the unit picker below — local component state only,
+// deliberately not persisted/shared with the "By Lesson" pivot's grade-band
+// filter (sportmediq:teacherGradeBand).
+const BUILDER_GRADE_BANDS = [
+  { id: 'all', label: 'All' },
+  { id: '7-8', label: '7th–8th' },
+  { id: '9-10', label: '9th–10th' },
+  { id: '11-12', label: '11th–12th' },
+]
+
+function TeacherAssignments() {
+  const savedAssignments = useTeacherAssignments()
+  const unitsByCategory = useMemo(() => getUnitsByCategory(), [])
+
+  const [name, setName] = useState('')
+  const [selected, setSelected] = useState(() => new Set())
+  const [mode, setMode] = useState('focus')
+  const [due, setDue] = useState('')
+  const [gradeBand, setGradeBand] = useState('all')
+
+  const [generatedCode, setGeneratedCode] = useState('')
+  const [generateError, setGenerateError] = useState('')
+  const [copied, setCopied] = useState(false)
+
+  const [copiedName, setCopiedName] = useState(null)
+  const [confirmRemove, setConfirmRemove] = useState(null)
+
+  function toggleUnit(id) {
+    setSelected((cur) => {
+      const next = new Set(cur)
+      if (next.has(id)) next.delete(id)
+      else next.add(id)
+      return next
+    })
+  }
+
+  async function generate() {
+    try {
+      const entry = await saveTeacherAssignment({
+        name,
+        unitIds: [...selected],
+        mode,
+        due: due || undefined,
+      })
+      setGeneratedCode(entry.code)
+      setGenerateError('')
+      setName('')
+      setSelected(new Set())
+      setMode('focus')
+      setDue('')
+    } catch (err) {
+      setGenerateError(err.message)
+    }
+  }
+
+  async function copyGeneratedCode() {
+    try {
+      await navigator.clipboard.writeText(generatedCode)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      // Clipboard blocked (some school browsers) — the textarea is selectable.
+    }
+  }
+
+  async function copySavedCode(assignment) {
+    try {
+      await navigator.clipboard.writeText(assignment.code)
+      setCopiedName(assignment.name)
+      setTimeout(() => setCopiedName(null), 2000)
+    } catch {
+      // Clipboard blocked (some school browsers) — the textarea is selectable.
+    }
+  }
+
+  return (
+    <section className="teacher-assignments">
+      <h2>Assignments</h2>
+      <p className="field-hint">
+        Build a class code for a set of lessons, then share it with students to paste into
+        their Sync page.
+      </p>
+
+      <label className="assignment-field">
+        Assignment name
+        <input
+          className="text-input"
+          type="text"
+          placeholder="e.g. Week 3 — Concussion unit"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </label>
+
+      <div className="grade-band-picker" role="group" aria-label="Filter assignment lessons by grade">
+        {BUILDER_GRADE_BANDS.map((band) => (
+          <button
+            key={band.id}
+            type="button"
+            className={
+              gradeBand === band.id ? 'grade-band-button grade-band-button-active' : 'grade-band-button'
+            }
+            onClick={() => setGradeBand(band.id)}
+            aria-pressed={gradeBand === band.id}
+          >
+            {band.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="assignment-unit-picker">
+        {unitsByCategory.map(({ category, units: catUnits }) => {
+          const visible =
+            gradeBand === 'all' ? catUnits : catUnits.filter((u) => u.gradeBand === gradeBand)
+          if (visible.length === 0) return null
+          return (
+            <div key={category}>
+              <CategoryHeading level={0}>{category}</CategoryHeading>
+              {visible.map((unit) => (
+                <label key={unit.id} className="assignment-unit-row">
+                  <input
+                    type="checkbox"
+                    checked={selected.has(unit.id)}
+                    onChange={() => toggleUnit(unit.id)}
+                  />
+                  <span className="assignment-unit-title">{unit.title}</span>
+                  <GradeBandPill gradeBand={unit.gradeBand} />
+                </label>
+              ))}
+            </div>
+          )
+        })}
+      </div>
+
+      <p className="field-hint">
+        {selected.size} lesson{selected.size === 1 ? '' : 's'} selected
+      </p>
+
+      <div className="assignment-mode-picker" role="radiogroup" aria-label="Assignment mode">
+        {ASSIGNMENT_MODES.map((m) => (
+          <label key={m} className="assignment-mode-option">
+            <input
+              type="radio"
+              name="assignment-mode"
+              value={m}
+              checked={mode === m}
+              onChange={() => setMode(m)}
+            />
+            <span>
+              <strong>{MODE_INFO[m].label}</strong> — {MODE_INFO[m].desc}
+            </span>
+          </label>
+        ))}
+      </div>
+
+      <label className="assignment-field">
+        Due date (optional)
+        <input
+          className="text-input"
+          type="date"
+          value={due}
+          onChange={(e) => setDue(e.target.value)}
+        />
+      </label>
+
+      <div className="unit-actions">
+        <button
+          className="button button-primary"
+          onClick={generate}
+          disabled={!name.trim() || selected.size === 0}
+        >
+          Generate class code
+        </button>
+      </div>
+      <p className="field-hint">
+        To edit a saved assignment, rebuild it here with the same name and generate again — it
+        replaces the old code rather than creating a duplicate.
+      </p>
+
+      {generateError && (
+        <p className="import-error" role="status">
+          {generateError}
+        </p>
+      )}
+
+      {generatedCode && (
+        <>
+          <textarea
+            className="code-box"
+            readOnly
+            value={generatedCode}
+            rows={4}
+            onFocus={(e) => e.target.select()}
+          />
+          <div className="unit-actions">
+            <button className="button button-primary" onClick={copyGeneratedCode}>
+              {copied ? '✓ Copied' : 'Copy code'}
+            </button>
+          </div>
+        </>
+      )}
+
+      {savedAssignments.length > 0 && (
+        <div className="assignment-list">
+          <h3>Saved assignments</h3>
+          {savedAssignments.map((a) => {
+            const titles = a.unitIds.map((id) => getUnit(id)?.title).filter(Boolean)
+            return (
+              <div key={a.name} className="assignment-item">
+                <div className="assignment-item-main">
+                  <strong>{a.name}</strong>
+                  <span className="field-hint">
+                    {titles.length} lesson{titles.length === 1 ? '' : 's'} &middot;{' '}
+                    {a.mode === 'focus' ? 'Focus mode' : 'Open mode'}
+                    {a.due ? ` · Due ${formatDueDate(a.due)}` : ''}
+                  </span>
+                  <span className="field-hint">{titles.join(', ')}</span>
+                </div>
+                <span className="unit-actions">
+                  <button className="button" onClick={() => copySavedCode(a)}>
+                    {copiedName === a.name ? '✓ Copied' : 'Copy code'}
+                  </button>
+                  {confirmRemove === a.name ? (
+                    <>
+                      <button
+                        className="button button-danger"
+                        onClick={() => {
+                          removeTeacherAssignment(a.name)
+                          setConfirmRemove(null)
+                        }}
+                      >
+                        Confirm remove
+                      </button>
+                      <button className="button" onClick={() => setConfirmRemove(null)}>
+                        Cancel
+                      </button>
+                    </>
+                  ) : (
+                    <button
+                      className="remove-button"
+                      onClick={() => setConfirmRemove(a.name)}
+                      aria-label={`Remove ${a.name}`}
+                      title={`Remove ${a.name}`}
+                    >
+                      ✕
+                    </button>
+                  )}
+                </span>
+              </div>
+            )
+          })}
+        </div>
+      )}
+    </section>
+  )
+}
+
 // Bottom of every drill-down path: one student, one lesson. Same info the
 // old flat table's expand-row showed, as a small definition list.
 function LessonDetailPanel({ progress }) {
@@ -218,7 +510,16 @@ function LessonDetailPanel({ progress }) {
 
 // By Student: roster list → student's lessons grouped by category → lesson
 // detail panel.
-function ByStudentView({ rows, unitsByCategory, units, openStudent, toggleStudent, openLesson, toggleLesson }) {
+function ByStudentView({
+  rows,
+  unitsByCategory,
+  units,
+  teacherAssignments,
+  openStudent,
+  toggleStudent,
+  openLesson,
+  toggleLesson,
+}) {
   return (
     <div className="drill-list">
       {rows.map((row) => {
@@ -256,6 +557,19 @@ function ByStudentView({ rows, unitsByCategory, units, openStudent, toggleStuden
             />
             {expanded && (
               <div className="drill-children">
+                {teacherAssignments.length > 0 && (
+                  <div className="assignment-progress-block">
+                    <CategoryHeading level={1}>Assignments</CategoryHeading>
+                    {teacherAssignments.map((a) => {
+                      const { total, complete, pct } = assignmentCompletion(row, a)
+                      return (
+                        <p key={a.name} className="assignment-progress-row">
+                          «{a.name}» — {complete}/{total} lessons complete ({pct}%)
+                        </p>
+                      )
+                    })}
+                  </div>
+                )}
                 {unitsByCategory.map(({ category, units: catUnits }) => (
                   <div key={category}>
                     <CategoryHeading level={1}>{category}</CategoryHeading>
@@ -486,6 +800,7 @@ const GRADE_BANDS = [
 export default function TeacherPage() {
   useProgress() // include this device's live progress
   const { students } = useRoster()
+  const teacherAssignments = useTeacherAssignments()
   const units = getAllUnits()
   const unitsByCategory = useMemo(() => getUnitsByCategory(), [])
   const usingMock = students.length === 0
@@ -625,7 +940,7 @@ export default function TeacherPage() {
             <option value="flags">Flags first</option>
           </select>
         </label>
-        <button className="button" onClick={() => downloadCsv(rows, units)}>
+        <button className="button" onClick={() => downloadCsv(rows, units, teacherAssignments)}>
           Export CSV
         </button>
       </div>
@@ -635,6 +950,7 @@ export default function TeacherPage() {
           rows={rows}
           unitsByCategory={unitsByCategory}
           units={units}
+          teacherAssignments={teacherAssignments}
           openStudent={open0}
           toggleStudent={toggle0}
           openLesson={open1}
@@ -665,6 +981,7 @@ export default function TeacherPage() {
         />
       )}
 
+      <TeacherAssignments />
       <AddStudentForm />
     </div>
   )
