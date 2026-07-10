@@ -80,7 +80,6 @@ export async function encodeProgress(name, units, gamification = null) {
       quizImprovementMax: p.quizImprovementMax ?? 0,
       readSeconds: Math.round(p.readSeconds ?? 0),
       scrollPct: Math.round(p.scrollPct ?? 0),
-      touchedAt: Math.round(p.touchedAt ?? 0),
     }
   }
   const json = JSON.stringify({
@@ -136,15 +135,11 @@ export async function decodeProgressCode(code) {
           : 0,
       readSeconds:
         typeof p.readSeconds === 'number' && p.readSeconds > 0
-          ? Math.round(Math.min(p.readSeconds, 60 * 60 * 24))
+          ? Math.round(Math.min(p.readSeconds, 60 * 60 * 24)) // sanity cap: one day
           : 0,
       scrollPct:
         typeof p.scrollPct === 'number' && p.scrollPct > 0
           ? Math.round(Math.min(p.scrollPct, 100))
-          : 0,
-      touchedAt:
-        typeof p.touchedAt === 'number' && p.touchedAt > 0
-          ? Math.round(Math.min(p.touchedAt, Date.now()))
           : 0,
     }
   }
