@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getUnit, getStandardsForUnit } from '../content/index.js'
 import { getActivitiesForUnit } from '../content/activities.js'
@@ -10,6 +10,7 @@ import {
   recordScrollDepth,
   PASS_THRESHOLD,
 } from '../lib/progress.js'
+import { printLessonPacket, printPracticalPacket } from '../lib/print.js'
 import NotFoundPage from './NotFoundPage.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
 import PracticalActivity from '../components/PracticalActivity.jsx'
@@ -95,8 +96,7 @@ function Callout({ callout }) {
   )
 }
 
-function StandardsAlignment({ unit }) {
-  const standards = getStandardsForUnit(unit)
+function StandardsAlignment({ standards }) {
   if (standards.length === 0) return null
   const hasDraft = standards.some((s) => !s.verified)
   return (
@@ -122,8 +122,7 @@ function StandardsAlignment({ unit }) {
   )
 }
 
-function PracticalActivities({ unit }) {
-  const activities = getActivitiesForUnit(unit)
+function PracticalActivities({ activities }) {
   if (activities.length === 0) return null
   return (
     <section className="practical-activities" aria-labelledby="practical-activities-heading">
@@ -139,6 +138,7 @@ function PracticalActivities({ unit }) {
 export default function UnitPage() {
   const { unitId } = useParams()
   useProgress()
+  const [printMessage, setPrintMessage] = useState('')
   const unit = getUnit(unitId)
   useReadingTimer(unit ? unit.id : null)
   useScrollDepth(unit ? unit.id : null)
@@ -146,6 +146,16 @@ export default function UnitPage() {
 
   const p = getUnitProgress(unit.id)
   const passed = (p.bestQuizScore ?? 0) >= PASS_THRESHOLD
+  const standards = getStandardsForUnit(unit)
+  const activities = getActivitiesForUnit(unit)
+
+  function printLesson() {
+    setPrintMessage(printLessonPacket(unit, standards) ? 'Lesson print preview opened.' : 'Print preview was blocked. Allow pop-ups for this app and try again.')
+  }
+
+  function printActivities() {
+    setPrintMessage(printPracticalPacket(unit, activities) ? 'Activity packet print preview opened.' : 'Print preview was blocked. Allow pop-ups for this app and try again.')
+  }
 
   return (
     <div className="page page-narrow">
@@ -177,7 +187,16 @@ export default function UnitPage() {
             </span>
           )}
         </Link>
+        <button className="button" type="button" onClick={printLesson}>
+          Print lesson
+        </button>
+        {activities.length > 0 && (
+          <button className="button" type="button" onClick={printActivities}>
+            Print activity packet{activities.length > 1 ? 's' : ''}
+          </button>
+        )}
       </div>
+      {printMessage && <p className="field-hint" role="status">{printMessage}</p>}
 
       <article className="lesson">
         {unit.sections.map((section, i) => (
@@ -211,8 +230,8 @@ export default function UnitPage() {
         ))}
       </article>
 
-      <PracticalActivities unit={unit} />
-      <StandardsAlignment unit={unit} />
+      <PracticalActivities activities={activities} />
+      <StandardsAlignment standards={standards} />
 
       <div className="lesson-footer">
         {formatReadTime(p.readSeconds) && (
