@@ -6,7 +6,6 @@ import { isComplete } from '../lib/status.js'
 import { decodeAssignment, assignmentStats, hasActiveFocusAssignment } from '../lib/assignments.js'
 import StatusIcon from '../components/StatusIcon.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
-import '../assignment-polish.css'
 
 // due is "YYYY-MM-DD"; parse as a local date, not UTC midnight, so it never
 // displays a day early/late depending on timezone. Same approach as SyncPage.
@@ -32,7 +31,7 @@ function dueInfo(due, complete) {
   if (complete) return { label: 'Completed', className: 'pill pill-done' }
   if (!due) return null
   const days = Math.round((parseLocalDate(due) - startOfToday()) / 86400000)
-  if (days < 0) return { label: 'Overdue', className: 'pill pill-flag' }
+  if (days < 0) return { label: 'Overdue', className: 'pill pill-progress' }
   if (days === 0) return { label: 'Due today', className: 'pill pill-progress' }
   if (days === 1) return { label: 'Due tomorrow', className: 'pill pill-progress' }
   if (days <= 7) return { label: `Due in ${days} days`, className: 'pill pill-grade' }
