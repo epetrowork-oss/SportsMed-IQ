@@ -34,7 +34,7 @@ function save(next) {
 // Decodes the code and upserts the student (matched case-insensitively by
 // name). Throws a user-readable error for bad codes or missing names.
 export async function addStudentFromCode(code) {
-  const { name, units, at } = await decodeProgressCode(code)
+  const { name, units, gamification, at } = await decodeProgressCode(code)
   if (!name) {
     throw new Error(
       'This code has no student name — ask the student to enter their name on the Sync page first.',
@@ -45,6 +45,7 @@ export async function addStudentFromCode(code) {
     id: existing?.id ?? `stu-${Date.now().toString(36)}`,
     name,
     progress: units,
+    gamification: gamification ?? existing?.gamification ?? null,
     updatedAt: at ?? Date.now(),
   }
   save({
