@@ -1,0 +1,82 @@
+{
+  "activities": [
+    {
+      "id": "primary-assessment-practice",
+      "title": "Primary Assessment Practice",
+      "targetStrands": ["concussion", "fractures-dislocations", "wound-care"],
+      "gradeBands": ["9-10", "11-12"],
+      "estimatedMinutes": 25,
+      "completionMethod": "teacher-verification",
+      "teacherVerification": true,
+      "materials": ["Scenario card", "Disposable gloves", "Pen or pencil", "Student checklist"],
+      "safetyNotes": [
+        "Use a simulated patient only. Do not practice on an actually injured person.",
+        "Do not perform rescue breathing, chest compressions, or cervical-spine movement during this classroom simulation.",
+        "Stop the activity immediately if any participant feels uncomfortable."
+      ],
+      "instructions": [
+        "Work in groups of three: responder, simulated patient, and observer.",
+        "The observer gives the responder a scenario without revealing the expected response.",
+        "The responder checks scene safety, uses appropriate protective equipment, assesses responsiveness, directs someone to activate the emergency plan, and identifies immediate life threats.",
+        "The responder clearly explains what should happen next without performing invasive care.",
+        "Rotate roles until every student has served as responder."
+      ],
+      "checklist": [
+        "Confirms the scene is safe before approaching",
+        "Uses or verbalizes standard precautions",
+        "Checks responsiveness and breathing",
+        "Assigns a specific person to activate the emergency response plan",
+        "Identifies when emergency medical services and an AED are needed",
+        "Avoids unnecessary movement of the simulated patient",
+        "Communicates calmly and clearly"
+      ],
+      "writtenResponse": "In 3–5 sentences, explain which primary-assessment step is easiest to skip under pressure and how a responder can prevent that mistake.",
+      "rubric": [
+        { "criterion": "Safety and precautions", "proficient": "Checks scene safety and uses or verbalizes appropriate precautions before contact." },
+        { "criterion": "Assessment sequence", "proficient": "Completes the primary assessment in a logical order without skipping a critical step." },
+        { "criterion": "Emergency activation", "proficient": "Gives a clear, specific direction to activate the emergency plan and obtain needed equipment." },
+        { "criterion": "Communication", "proficient": "Uses calm, concise language appropriate for the simulated emergency." }
+      ]
+    },
+    {
+      "id": "emergency-action-plan-activity",
+      "title": "Emergency Action Plan Walk-Through",
+      "targetStrands": ["eap-cpr-aed", "emergency-action-plan"],
+      "gradeBands": ["7-8", "9-10", "11-12"],
+      "estimatedMinutes": 30,
+      "completionMethod": "written-response-and-teacher-verification",
+      "teacherVerification": true,
+      "materials": ["School or venue map", "Emergency Action Plan template", "Pen or pencil"],
+      "safetyNotes": [
+        "Do not call 911 or activate a real alarm during the practice.",
+        "Do not block entrances, hallways, or emergency-access routes.",
+        "Use only teacher-approved locations and contact information."
+      ],
+      "instructions": [
+        "Choose one athletic venue used by your school or program.",
+        "Identify the exact venue address, the best emergency entrance, and the route an ambulance would use.",
+        "Identify who calls emergency medical services, who retrieves the AED, who meets responders, and who controls the scene.",
+        "Locate the nearest AED and emergency communication device or describe where they should be placed.",
+        "Walk through a simulated emergency verbally from the first recognition of danger until care is transferred to emergency responders.",
+        "Revise the plan after the walk-through to correct any unclear role, route, or communication step."
+      ],
+      "checklist": [
+        "Venue name and exact address are recorded",
+        "Emergency entrance and responder route are identified",
+        "Emergency communication method is identified",
+        "AED location is identified",
+        "Four response roles are assigned",
+        "A person is assigned to meet and direct emergency responders",
+        "The plan includes crowd and scene control",
+        "The group identifies at least one weakness and revision"
+      ],
+      "writtenResponse": "Describe the most likely delay in your venue’s emergency response and one realistic change that would reduce that delay.",
+      "rubric": [
+        { "criterion": "Venue information", "proficient": "Provides accurate location, access, communication, and equipment information." },
+        { "criterion": "Roles", "proficient": "Assigns clear, non-overlapping responsibilities to specific responders." },
+        { "criterion": "Sequence", "proficient": "Walk-through follows a realistic sequence from recognition through transfer of care." },
+        { "criterion": "Revision", "proficient": "Identifies a meaningful weakness and proposes a workable improvement." }
+      ]
+    }
+  ]
+}
