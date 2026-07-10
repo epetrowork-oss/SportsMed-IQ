@@ -12,6 +12,8 @@ function validateActivity(activity, index) {
     problems.push('invalid gradeBands')
   if (!Number.isFinite(activity?.estimatedMinutes) || activity.estimatedMinutes <= 0)
     problems.push('invalid estimatedMinutes')
+  if (typeof activity?.completionMethod !== 'string' || !activity.completionMethod.trim())
+    problems.push('missing completionMethod')
   if (!Array.isArray(activity?.instructions) || activity.instructions.length === 0)
     problems.push('missing instructions')
   if (!Array.isArray(activity?.checklist) || activity.checklist.length === 0)
