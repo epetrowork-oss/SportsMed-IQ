@@ -48,6 +48,7 @@ function printStyles() {
     tr { break-inside: avoid; }
     .page-break { break-before: page; }
     .standards { margin-top: 0.35in; font-size: 9pt; }
+    .draft-label { font-weight: 700; text-transform: uppercase; }
     .activity-block + .activity-block { break-before: page; }
     .print-note { font-size: 9pt; color: #444; }
     @media print { .no-print { display: none !important; } }
@@ -104,9 +105,15 @@ function renderSection(section) {
 
 function renderStandards(standards) {
   if (!Array.isArray(standards) || standards.length === 0) return ''
-  return `<section class="standards"><h2>Standards alignment</h2><ul>${standards
-    .map((standard) => `<li><strong>${escapeHtml(standard.framework.shortName)} ${escapeHtml(standard.officialCode)}</strong> — ${escapeHtml(standard.text)}</li>`)
-    .join('')}</ul></section>`
+  const hasDraft = standards.some((standard) => !standard.verified)
+  const rows = standards.map((standard) => {
+    const draft = standard.verified ? '' : ' <span class="draft-label">[Draft alignment]</span>'
+    return `<li><strong>${escapeHtml(standard.framework.shortName)} ${escapeHtml(standard.officialCode)}</strong>${draft} — ${escapeHtml(standard.text)}</li>`
+  }).join('')
+  const footnote = hasDraft
+    ? '<p class="print-note"><strong>Draft alignments:</strong> These entries are pending verification against the official CDE documents.</p>'
+    : ''
+  return `<section class="standards"><h2>Standards alignment</h2><ul>${rows}</ul>${footnote}</section>`
 }
 
 function renderActivity(activity, includePageBreak = false) {
