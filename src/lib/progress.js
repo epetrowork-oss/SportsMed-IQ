@@ -125,12 +125,13 @@ export function recordQuizResult(unitId, correct, total) {
   const score = total > 0 ? correct / total : 0
   const current = state.units[unitId] ?? emptyUnit()
   const previousBest = current.bestQuizScore ?? 0
+  const improvement = current.quizAttempts > 0 ? score - previousBest : 0
   updateUnit(
     unitId,
     {
       quizAttempts: current.quizAttempts + 1,
       bestQuizScore: Math.max(previousBest, score),
-      quizImprovementMax: Math.max(current.quizImprovementMax ?? 0, score - previousBest),
+      quizImprovementMax: Math.max(current.quizImprovementMax ?? 0, improvement),
     },
     true,
   )
