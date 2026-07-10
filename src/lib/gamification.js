@@ -14,18 +14,34 @@ export const BADGES = [
     id: 'first-steps',
     name: 'First Steps',
     description: 'Complete one full unit.',
+    targetStrands: [],
     earned: ({ completedUnits }) => completedUnits.length >= 1,
   },
   {
     id: 'quiz-comeback',
     name: 'Quiz Comeback',
     description: 'Improve a quiz score by at least 20 percentage points.',
+    targetStrands: [],
     earned: ({ unitProgress }) => Object.values(unitProgress).some((p) => (p.quizImprovementMax ?? 0) >= 0.2),
+  },
+  {
+    id: 'safety-first',
+    name: 'Safety First',
+    description: 'Complete an Emergency Action Plan unit and receive teacher verification for its practical activity.',
+    targetStrands: ['emergency-action-plan'],
+    earned: ({ unitsById, unitProgress, practicals }) => {
+      const eapComplete = Object.entries(unitProgress).some(([unitId, p]) => {
+        const unit = unitsById.get(unitId)
+        return unit?.strand === 'emergency-action-plan' && p.lessonRead && p.flashcardsReviewed && (p.bestQuizScore ?? 0) >= PASS_THRESHOLD
+      })
+      return eapComplete && !!practicals['emergency-action-plan-activity']?.teacherVerified
+    },
   },
   {
     id: 'concussion-aware',
     name: 'Concussion Aware',
     description: 'Complete a concussion unit, pass its quiz, and review its flashcards.',
+    targetStrands: ['concussion'],
     earned: ({ unitsById, unitProgress }) => Object.entries(unitProgress).some(([unitId, p]) => {
       const unit = unitsById.get(unitId)
       return unit?.strand === 'concussion' && p.lessonRead && p.flashcardsReviewed && (p.bestQuizScore ?? 0) >= PASS_THRESHOLD
@@ -35,19 +51,29 @@ export const BADGES = [
     id: 'consistent-learner',
     name: 'Consistent Learner',
     description: 'Build a three-day learning streak.',
+    targetStrands: [],
     earned: ({ longestStreak }) => longestStreak >= 3,
   },
   {
     id: 'week-of-practice',
     name: 'Week of Practice',
     description: 'Learn on seven distinct days.',
+    targetStrands: [],
     earned: ({ activeDates }) => activeDates.length >= 7,
   },
   {
     id: 'perfect-review',
     name: 'Perfect Review',
     description: 'Earn 100% on a quiz.',
+    targetStrands: [],
     earned: ({ unitProgress }) => Object.values(unitProgress).some((p) => (p.bestQuizScore ?? 0) >= 1),
+  },
+  {
+    id: 'practical-thinker',
+    name: 'Practical Thinker',
+    description: 'Complete written reflections for two practical activities.',
+    targetStrands: [],
+    earned: ({ practicals }) => Object.values(practicals).filter((p) => p.reflectionCompleted).length >= 2,
   },
 ]
 
