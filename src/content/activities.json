@@ -41,7 +41,7 @@
     {
       "id": "emergency-action-plan-activity",
       "title": "Emergency Action Plan Walk-Through",
-      "targetStrands": ["eap-cpr-aed", "emergency-action-plan"],
+      "targetStrands": ["emergency-action-plan"],
       "gradeBands": ["7-8", "9-10", "11-12"],
       "estimatedMinutes": 30,
       "completionMethod": "written-response-and-teacher-verification",
