@@ -1,5 +1,5 @@
 // Subject-content audit generator.
-// Scans every unit JSON file and prints a Markdown completeness audit and image manifest.
+// Scans every unit JSON file and prints a Markdown completeness audit.
 // Run with: npm run audit:content
 
 import { readdir, readFile } from 'node:fs/promises'
@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url'
 const rootDir = path.join(path.dirname(fileURLToPath(import.meta.url)), '..')
 const unitsDir = path.join(rootDir, 'src/content/units')
 const standardsPath = path.join(rootDir, 'src/content/standards.json')
+const activitiesPath = path.join(rootDir, 'src/content/activities.json')
 
 const files = (await readdir(unitsDir)).filter((file) => file.endsWith('.json')).sort()
 const records = []
@@ -27,6 +28,14 @@ try {
   // The strict validator owns malformed-catalog errors. Keep this report usable.
 }
 const standardsById = new Map((standardsCatalog.standards ?? []).map((standard) => [standard.id, standard]))
+
+let activityCatalog = { activities: [] }
+try {
+  activityCatalog = JSON.parse(await readFile(activitiesPath, 'utf8'))
+} catch {
+  // activities.json is optional until the practical-activity feature lands.
+}
+const activities = Array.isArray(activityCatalog.activities) ? activityCatalog.activities : []
 
 const md = (value) => String(value ?? '').replace(/\|/g, '\\|').replace(/\n/g, ' ')
 const status = (complete, partial = false) => (complete ? 'Complete' : partial ? 'Needs review' : 'Missing')
@@ -50,6 +59,16 @@ function checks(unit) {
   return (unit.sections ?? []).filter(
     (section) => section.check || section.knowledgeCheck || section.question || section.activity,
   ).length
+}
+
+function matchingActivities(unit) {
+  return activities.filter((activity) => {
+    const targets = Array.isArray(activity.targetStrands) ? activity.targetStrands : []
+    const bands = Array.isArray(activity.gradeBands) ? activity.gradeBands : []
+    const targetMatch = targets.includes(unit.strand) || targets.includes(unit.id)
+    const bandMatch = bands.length === 0 || bands.includes(unit.gradeBand)
+    return targetMatch && bandMatch
+  })
 }
 
 function firstArray(unit, keys) {
@@ -88,7 +107,7 @@ function audit(record) {
   const unresolved = standardIds.filter((id) => !standardsById.has(id))
   const diagrams = images(unit)
   const embeddedChecks = checks(unit)
-  const practicals = firstArray(unit, ['practicalActivities', 'activities', 'practicals'])
+  const practicals = matchingActivities(unit)
   const resources = firstArray(unit, ['teacherResources', 'resources', 'teacher'])
   const problems = []
 
@@ -130,7 +149,6 @@ function audit(record) {
 }
 
 const audited = records.map(audit)
-const validUnits = records.map((record) => record.unit).filter(Boolean)
 const validRows = audited.filter((row) => row.title !== 'Malformed JSON')
 const categories = [...new Set(validRows.map((row) => row.category).filter(Boolean))].sort()
 const strands = [...new Set(validRows.map((row) => row.strand).filter(Boolean))].sort()
@@ -145,7 +163,7 @@ console.log(`- Strands: ${strands.length}`)
 console.log(`- Quiz questions: ${validRows.reduce((sum, row) => sum + row.quiz, 0)}`)
 console.log(`- Flashcards: ${validRows.reduce((sum, row) => sum + row.flashcards, 0)}`)
 console.log(`- Lesson diagrams declared: ${validRows.reduce((sum, row) => sum + row.diagrams, 0)}`)
-console.log(`- Practical activities declared: ${validRows.reduce((sum, row) => sum + row.practicals, 0)}\n`)
+console.log(`- Practical activity matches: ${validRows.reduce((sum, row) => sum + row.practicals, 0)}\n`)
 
 console.log('## Unit-by-unit audit\n')
 console.log('| Unit | Grade | Category | Lesson | Quiz | Flashcards | Standards | Diagrams | Checks | Practical | Teacher resource |')
@@ -160,11 +178,10 @@ for (const row of audited) {
   console.log(`| ${md(row.title)} | ${md(row.gradeBand)} | ${md(row.category)} | ${lesson} (${row.words} words) | ${status(row.quiz >= 8, row.quiz > 0)} (${row.quiz}) | ${status(row.flashcards >= 8, row.flashcards > 0)} (${row.flashcards}) | ${standards} | ${row.diagrams} | ${row.checks} | ${row.practicals > 0 ? 'Yes' : 'No'} | ${row.teacherResources > 0 ? 'Yes' : 'No'} |`)
 }
 
-console.log('\n## Prioritized backlog\n')
 const priorities = [
   'JSON parse error', 'No lesson sections', 'Thin lesson content', 'Short quiz',
   'Short flashcard set', 'No standards tagged', 'Unresolved standards',
-  'Standards include draft/unverified entries', 'No lesson diagrams',
+  'No lesson diagrams', 'Standards include draft/unverified entries',
   'No embedded knowledge checks', 'No practical activity', 'No teacher resource',
 ]
 const rank = (problem) => {
@@ -173,36 +190,35 @@ const rank = (problem) => {
 }
 const backlog = audited.flatMap((row) => row.problems.map((problem) => ({ row, problem })))
 backlog.sort((a, b) => rank(a.problem) - rank(b.problem) || a.row.title.localeCompare(b.row.title))
-if (backlog.length === 0) console.log('No audit gaps found.')
-for (const { row, problem } of backlog) console.log(`- **${md(row.title)}** (${md(row.gradeBand)}): ${md(problem)}`)
 
-console.log('\n## Image production manifest\n')
-console.log('| Asset | Purpose | Ratio | Background | Folder | Unit/grade | Description | Alt text | Accuracy requirement |')
-console.log('|---|---|---|---|---|---|---|---|---|')
-console.log('| home-hero.webp | Home hero | 21:9 | white | public/images/home/ | Platform | Student athletic trainer taping an ankle on the sideline with an open first-aid kit | Student athletic trainer taping an athlete’s ankle on the sideline | Realistic taping position, age-appropriate school setting, no visible brand logos |')
-for (const category of categories) {
-  const slug = category.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
-  console.log(`| category-${slug}.webp | Category icon | 1:1 | transparent | public/images/categories/ | ${md(category)} | Simple flat icon representing ${md(category)} | ${md(category)} icon | Recognizable at small size; no text |`)
-}
-for (const strand of strands) {
-  const versions = validUnits.filter((unit) => unit.strand === strand)
-  const canonical = versions.find((unit) => unit.gradeBand === '9-10') ?? versions[0]
-  console.log(`| unit-${md(strand)}-hero.webp | Unit thumbnail | 3:2 | white | public/images/units/${md(strand)}/ | ${md(canonical?.title)} / shared | Illustrative thumbnail for ${md(canonical?.title)}: ${md(canonical?.summary)} | Thumbnail illustration for ${md(canonical?.title)} | Medically accurate body position/equipment; no embedded text |`)
-}
-for (const unit of validUnits) {
-  for (const section of unit.sections ?? []) {
-    const image = section.image
-    if (!image) continue
-    console.log(`| ${md(image.asset)} | Lesson diagram | ${md(image.ratio)} | ${md(image.background)} | ${md(image.location)} | ${md(unit.title)} / ${md(unit.gradeBand)} | ${md(image.description)} | ${md(image.alt)} | Anatomical and procedural details must match the lesson; labels only when explicitly required |`)
-  }
-}
+const roadmapPrefixes = [
+  'Standards include draft/unverified entries',
+  'No embedded knowledge checks',
+  'No practical activity',
+  'No teacher resource',
+]
+const isRoadmap = (problem) => roadmapPrefixes.some((prefix) => problem.startsWith(prefix))
+const realGaps = backlog.filter(({ problem }) => !isRoadmap(problem))
+const roadmap = backlog.filter(({ problem }) => isRoadmap(problem))
+
+console.log('\n## Real gaps\n')
+if (realGaps.length === 0) console.log('No immediate content gaps found.')
+for (const { row, problem } of realGaps) console.log(`- **${md(row.title)}** (${md(row.gradeBand)}): ${md(problem)}`)
+
+console.log('\n## Roadmap\n')
+console.log('These are planned platform/content capabilities, not release-blocking unit defects.\n')
+if (roadmap.length === 0) console.log('No roadmap gaps found.')
+for (const { row, problem } of roadmap) console.log(`- **${md(row.title)}** (${md(row.gradeBand)}): ${md(problem)}`)
+
+console.log('\n## Image brief\n')
+console.log('Run `npm run images:shotlist` for the authoritative image-production manifest. The audit intentionally does not duplicate that brief.')
 
 console.log('\n## Completion definition used by this audit\n')
 console.log('- Lesson: at least one section and at least 250 instructional words.')
 console.log('- Quiz: at least 8 questions.')
 console.log('- Flashcards: at least 8 cards.')
 console.log('- Standards: every referenced ID resolves and is marked verified.')
-console.log('- Visuals: at least one lesson diagram, plus the shared unit thumbnail generated by strand.')
+console.log('- Visuals: at least one lesson diagram; use `npm run images:shotlist` for the full image brief.')
 console.log('- Embedded checks: at least one section-level check/question/activity marker.')
-console.log('- Practical activity: at least one item in practicalActivities, activities, or practicals.')
+console.log('- Practical activity: at least one matching entry in `src/content/activities.json`.')
 console.log('- Teacher resource: at least one item in teacherResources, resources, or teacher.')
