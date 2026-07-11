@@ -236,11 +236,15 @@ browser-verified against the built app, and committed separately:
       grade-band filter, with a live "N of 54 units" count.
 
 **Follow-ups for later sessions:**
-- Real images: as WebP files land in `public/images/…`, swap each slot by
-  passing `src` to its `ImagePlaceholder`. Regenerate the brief anytime
-  with `npm run images:shotlist`. Before many images land, decide the
-  precache strategy (lazy-load vs eager, per-image size budget) — bundle
-  is ~1MB today with zero images.
+- Real images: production is now planned in **`docs/IMAGE-BATCH-PLAN.md`**
+  (13 batches covering all 165 slots, ordered by visibility + safety
+  priority, with specs, per-file budgets, and the per-batch quality gate).
+  Batch 0 is the in-flight rework of PRs #26/#27, which shipped a corrupt
+  hero + assets not matching their descriptions — see the reviews on those
+  PRs. Precache decision made: all images ship in the SW precache (first
+  landing batch adds `webp` to the `globPatterns` in `vite.config.js`);
+  worst-case total ~6 MB, flag if trending past ~8 MB. Regenerate per-asset
+  briefs anytime with `npm run images:shotlist`.
 - `HomePage.jsx`'s `UnitCard` still has its own inline pill logic that
   duplicates `status.js` rules — candidate for a small cleanup.
 - Original plan's ideas not yet built: strand cross-links between a
