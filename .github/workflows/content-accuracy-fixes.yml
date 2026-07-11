@@ -1,0 +1,139 @@
+name: Apply content accuracy fixes
+
+on:
+  push:
+    branches:
+      - chatgpt/content-accuracy-fixes-v2
+
+permissions:
+  contents: write
+
+jobs:
+  apply-fixes:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: chatgpt/content-accuracy-fixes-v2
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Apply approved GPT-ready wording fixes
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          root = Path('src/content/units')
+
+          def replace_exact(path, old, new, expected=1):
+              text = path.read_text(encoding='utf-8')
+              count = text.count(old)
+              if count != expected:
+                  raise SystemExit(f'{path}: expected {expected} occurrence(s) of {old!r}, found {count}')
+              path.write_text(text.replace(old, new), encoding='utf-8')
+              print(f'{path}: replaced {count} occurrence(s)')
+
+          # 1. ACL injury-risk ratio wording (9-10 was updated in the prior branch commit).
+          replace_exact(
+              root / 'knee-acl-adv.json',
+              'The 2-8x higher ACL injury rate in female athletes compared to male athletes in comparable sports',
+              'The roughly 2-6x higher ACL injury rate in female athletes compared to male athletes in comparable sports',
+          )
+
+          # 2. Caffeine/diuretic wording.
+          replace_exact(
+              root / 'hydration-nutrition.json',
+              'Caffeine is a mild diuretic and energy drinks are not designed or tested for use during exercise.',
+              'Caffeine can have a small diuretic effect, but that effect is minor and largely offset during exercise; energy drinks are not designed or tested for use during exercise.',
+          )
+
+          # 3. Nosebleed duration consistency: use 10 minutes throughout nosebleed/epistaxis contexts.
+          nose_files = [
+              root / 'dental-facial-trauma-ms.json',
+              root / 'dental-facial-trauma.json',
+              root / 'wound-care-ms.json',
+              root / 'wound-care.json',
+              root / 'wound-care-adv.json',
+          ]
+          duration_variants = {
+              '10-15 minutes': '10 minutes',
+              '10–15 minutes': '10 minutes',
+              '15-20 minutes': '10 minutes',
+              '15–20 minutes': '10 minutes',
+          }
+          nose_changes = 0
+          for path in nose_files:
+              lines = path.read_text(encoding='utf-8').splitlines(keepends=True)
+              out = []
+              recent = []
+              for line in lines:
+                  context = ' '.join(recent[-4:] + [line]).lower()
+                  new_line = line
+                  if any(term in context for term in ('nosebleed', 'epistaxis', 'pinch the soft part of the nose', 'pinching the soft part of the nose')):
+                      for old, new in duration_variants.items():
+                          if old in new_line:
+                              nose_changes += new_line.count(old)
+                              new_line = new_line.replace(old, new)
+                  out.append(new_line)
+                  recent.append(line)
+              path.write_text(''.join(out), encoding='utf-8')
+          if nose_changes < 1:
+              raise SystemExit('Expected at least one inconsistent nosebleed duration to change')
+          print(f'Nosebleed duration replacements: {nose_changes}')
+
+          # 4. Heat/humidity illustrative comparison consistency.
+          replace_exact(root / 'heat-illness-adv.json', 'a dry 98°F day', 'a dry 95°F day')
+
+          # 5. Celsius/Fahrenheit rounding consistency.
+          replace_exact(root / 'warmup-injury-prevention-adv.json', 'about 2-4°F', 'about 2-3.5°F')
+
+          # 6. Tourniquet placement default and active-threat exception.
+          replace_exact(
+              root / 'wound-care-adv.json',
+              "'High and tight' means placing the tourniquet as close to the junction of the limb and torso as possible (not directly over the wound), never over a joint, and applying it over clothing if needed rather than losing time undressing the injury.",
+              "Place the tourniquet 2-3 inches above the wound (closer to the torso), never over a joint. If the wound cannot be seen or measured quickly in an active-threat or untrained emergency, place it 'high and tight' near the top of the limb. Apply it over clothing if needed rather than losing time undressing the injury.",
+          )
+          replace_exact(
+              root / 'wound-care-adv.json',
+              'It goes high and tight above the wound, never over it, and is never loosened or removed in the field once applied;',
+              "Place it 2-3 inches above the wound and never over a joint; use 'high and tight' only when the wound cannot be seen or measured quickly in an active-threat or untrained emergency, and never loosen or remove it in the field once applied;",
+          )
+          replace_exact(
+              root / 'wound-care-adv.json',
+              'High and tight, above the wound, never over a joint; tighten until bleeding fully stops and the distal pulse disappears; note the application time; never loosen or remove in the field once applied.',
+              "Place 2-3 inches above the wound, never over a joint; use 'high and tight' only when the wound cannot be seen or measured quickly in an active-threat or untrained emergency; tighten until bleeding fully stops and the distal pulse disappears; note the application time; never loosen or remove in the field once applied.",
+          )
+
+          # 7. Heat-stroke cooling stop-target consistency.
+          replace_exact(root / 'heat-illness.json', 'core temperature drops to about 102°F', 'core temperature drops to about 100-102°F')
+          replace_exact(root / 'heat-illness.json', 'core temp ~102°F', 'core temp about 100-102°F')
+          replace_exact(root / 'heat-illness-adv.json', 'Stop active cooling around 100-102°F', 'Stop active cooling around 100-102°F')
+
+          # Guard protected files and remove this temporary workflow from the final branch diff.
+          Path('.github/workflows/content-accuracy-fixes.yml').unlink()
+          PY
+
+      - name: Validate content
+        run: npm ci && npm run validate:content
+
+      - name: Audit content
+        run: npm run audit:content
+
+      - name: Build
+        run: npm run build
+
+      - name: Commit approved fixes
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/units .github/workflows/content-accuracy-fixes.yml
+          git diff --cached --check
+          git commit -m "Apply approved content accuracy fixes"
+          git push origin HEAD:chatgpt/content-accuracy-fixes-v2
