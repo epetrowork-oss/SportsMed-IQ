@@ -265,9 +265,9 @@ export default function HomePage() {
             purpose="home hero image"
             ratio="21:9"
             background="white"
-            description="A student athletic trainer taping an ankle on the sideline, first-aid kit open nearby — welcoming, hands-on scene that sets the tone for the app."
+            description="A red first-aid kit bag with a Star of Life emblem, water bottle, and athletic tape on the sideline of a sunlit stadium field — welcoming scene that sets the tone for the app."
             location="public/images/home/"
-            alt="A student athletic trainer taping an athlete's ankle on the sideline"
+            alt="A red first-aid kit bag, water bottle, and athletic tape on the sideline of a stadium field"
           />
         </div>
         <div className="home-hero-text">
