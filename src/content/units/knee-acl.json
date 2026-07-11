@@ -33,7 +33,7 @@
       "heading": "How ACL tears happen",
       "body": [
         "Around 70% of ACL tears are non-contact: the athlete plants, cuts, pivots, or lands from a jump with the knee nearly straight and collapsing inward — no opponent involved. The athlete typically hears or feels a 'pop,' the knee gives way, and swelling develops fast, usually within 2 hours, because the torn ligament bleeds into the joint (hemarthrosis).",
-        "Female athletes tear their ACLs at roughly 2–8 times the rate of male athletes in comparable sports — factors include landing mechanics, anatomy, and neuromuscular control. This is why jump-landing training programs matter for injury prevention.",
+        "Female athletes tear their ACLs at roughly 2–6 times the rate of male athletes in comparable sports — factors include landing mechanics, anatomy, and neuromuscular control. This is why jump-landing training programs matter for injury prevention.",
         "The classic contact pattern is a blow to the outside of a planted knee, driving it inward. When that force is big enough, it can produce the 'unhappy triad': torn ACL + MCL + medial meniscus."
       ],
       "image": {
@@ -175,7 +175,7 @@
         "Stretching only after games"
       ],
       "answerIndex": 2,
-      "explanation": "Prevention programs like FIFA 11+ that train landing, deceleration, and knee-alignment control reduce ACL injuries — especially in female athletes, who tear ACLs at several times the male rate."
+      "explanation": "Prevention programs like FIFA 11+ that train landing, deceleration, and knee-alignment control reduce ACL injuries — especially in female athletes, who tear ACLs at roughly 2–6 times the male rate."
     }
   ],
   "flashcards": [
@@ -237,7 +237,7 @@
     {
       "id": "f12",
       "front": "ACL risk in female athletes",
-      "back": "2–8× the rate of male athletes in comparable sports; landing-mechanics (neuromuscular) training programs measurably reduce the risk."
+      "back": "Roughly 2–6× the rate of male athletes in comparable sports; landing-mechanics (neuromuscular) training programs measurably reduce the risk."
     }
   ]
 }

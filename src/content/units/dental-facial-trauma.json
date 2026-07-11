@@ -67,8 +67,8 @@
       "body": [
         "Most sideline nosebleeds come from a direct hit and involve small blood vessels just inside the nostril — they look dramatic but are rarely serious.",
         "Have the athlete sit up and lean slightly forward, not tilt the head back. Tilting back lets blood run down the throat, which can cause choking, gagging, or swallowed blood that upsets the stomach and can be mistaken for a bigger bleed than it is.",
-        "Pinch the soft part of the nose (just below the bony bridge) firmly between thumb and finger and hold steady, uninterrupted pressure for a full 10-15 minutes by the clock. Resist the urge to check early — releasing pressure to peek restarts the bleeding. Ice on the bridge of the nose can help too.",
-        "If bleeding hasn't slowed after 15-20 minutes of correct pressure, or it's heavy enough that the athlete is swallowing large amounts of blood, refer for medical care."
+        "Pinch the soft part of the nose (just below the bony bridge) firmly between thumb and finger and hold steady, uninterrupted pressure for a full 10 minutes by the clock. Resist the urge to check early — releasing pressure to peek restarts the bleeding. Ice on the bridge of the nose can help too.",
+        "If bleeding hasn't slowed after 10 minutes of correct pressure, or it's heavy enough that the athlete is swallowing large amounts of blood, refer for medical care."
       ],
       "image": {
         "asset": "dental-trauma-nosebleed-technique.webp",
@@ -158,7 +158,7 @@
         "Have the athlete blow their nose repeatedly to clear clots"
       ],
       "answerIndex": 1,
-      "explanation": "Sitting forward keeps blood from running down the throat, and steady pressure on the soft part of the nose (not the bony bridge) for a full 10-15 minutes controls most nosebleeds. Tilting back and blowing the nose both make things worse."
+      "explanation": "Sitting forward keeps blood from running down the throat, and steady pressure on the soft part of the nose (not the bony bridge) for a full 10 minutes controls most nosebleeds. Tilting back and blowing the nose both make things worse."
     },
     {
       "id": "q6",
@@ -236,7 +236,7 @@
     {
       "id": "f8",
       "front": "Nosebleed pressure technique",
-      "back": "Pinch the soft part of the nose (below the bony bridge) with steady, uninterrupted pressure for 10-15 minutes."
+      "back": "Pinch the soft part of the nose (below the bony bridge) with steady, uninterrupted pressure for 10 minutes."
     },
     {
       "id": "f9",

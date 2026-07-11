@@ -45,7 +45,7 @@
       "heading": "Tourniquets: lay-rescuer scope",
       "body": [
         "When direct pressure and packing cannot control severe limb bleeding, a commercial tourniquet is the next rung — and it is squarely within Stop the Bleed-style lay-rescuer training, not an EMS-only tool. The principles are simple and are meant to be followed exactly, under stress, by a non-medical bystander:",
-        "'High and tight' means placing the tourniquet as close to the junction of the limb and torso as possible (not directly over the wound), never over a joint, and applying it over clothing if needed rather than losing time undressing the injury. Tighten until the bleeding fully stops and the pulse below the tourniquet disappears — a tourniquet tight enough to hurt but not tight enough to stop bleeding completely isn't doing its job; it can actually worsen venous bleeding while failing to stop arterial flow. Write the application time on the tourniquet or the athlete's skin (or tell EMS verbally) because that timestamp changes hospital treatment decisions.",
+        "When the bleeding wound can be clearly identified, place the tourniquet 2-3 inches above the wound, toward the torso, and never directly over a joint. If the wound cannot be located quickly or the situation does not permit deliberate placement, apply the tourniquet 'high and tight' near the top of the injured limb. Apply it over clothing if needed rather than losing time undressing the injury. Tighten until the bleeding fully stops and the pulse below the tourniquet disappears — a tourniquet tight enough to hurt but not tight enough to stop bleeding completely isn't doing its job; it can actually worsen venous bleeding while failing to stop arterial flow. Write the application time on the tourniquet or the athlete's skin (or tell EMS verbally) because that timestamp changes hospital treatment decisions.",
         "The rule every trained rescuer follows: once applied, a tourniquet is never loosened or removed in the field, by anyone except a physician in a controlled setting. Removing it early to 'check' can release a hemorrhage that has been temporarily but not permanently stopped."
       ],
       "callout": {
@@ -129,7 +129,7 @@
         "Leave it in place but re-check and loosen it every 10 minutes to preserve circulation"
       ],
       "answerIndex": 1,
-      "explanation": "A tourniquet must be tightened until bleeding is fully stopped, not just slowed — partial tightening can worsen venous bleeding while failing to stop the arterial source. It goes high and tight above the wound, never over it, and is never loosened or removed in the field once applied; the application time is critical information for the hospital team."
+      "explanation": "A tourniquet must be tightened until bleeding is fully stopped, not just slowed — partial tightening can worsen venous bleeding while failing to stop the arterial source. When the wound can be clearly identified, place it 2-3 inches above the wound and never directly over a joint; if the wound cannot be located quickly or the situation does not permit deliberate placement, apply it 'high and tight' near the top of the injured limb; never loosen or remove it in the field once applied; the application time is critical information for the hospital team."
     },
     {
       "id": "q4",
@@ -216,7 +216,7 @@
     {
       "id": "f5",
       "front": "Tourniquet application rule",
-      "back": "High and tight, above the wound, never over a joint; tighten until bleeding fully stops and the distal pulse disappears; note the application time; never loosen or remove in the field once applied."
+      "back": "When the wound is clearly identified, place 2-3 inches above it and never directly over a joint; if the wound cannot be located quickly or the situation does not permit deliberate placement, apply 'high and tight' near the top of the injured limb; tighten until bleeding fully stops and the distal pulse disappears; note the application time; never loosen or remove in the field once applied."
     },
     {
       "id": "f6",

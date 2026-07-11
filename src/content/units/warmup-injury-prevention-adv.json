@@ -13,7 +13,7 @@
       "body": [
         "You already know from the 9-10 unit that warming up raises muscle temperature and makes tissue more elastic. Here's the actual mechanism: muscle and tendon are viscoelastic materials — they behave partly like a viscous fluid (resistant to being deformed quickly) and partly like an elastic solid (able to stretch and spring back). Temperature shifts the balance between those two properties.",
         "As tissue temperature rises, the viscosity component drops — collagen fibers within tendon, and the connective tissue surrounding muscle fibers, become more pliable and offer less internal resistance to being stretched. On a stress-strain curve (a plot of the force applied to a tissue against how much it deforms), warmer tissue shifts the curve so the failure point — where fibers actually tear — arrives at a greater strain. That's the real reason a cold hamstring is more likely to strain during a sudden sprint than a warm one: it isn't that cold muscle is 'weaker,' it's that its failure point arrives sooner, at a shorter length and lower force.",
-        "This is also why the target isn't just 'some warming.' Research generally points to raising muscle temperature by roughly 1-2°C (about 2-4°F) above resting to meaningfully shift tissue properties. A few light jogging strides don't reliably get there; a sustained several-minute raise phase does."
+        "This is also why the target isn't just 'some warming.' Research generally points to raising muscle temperature by roughly 1-2°C (about 2-3.5°F) above resting to meaningfully shift tissue properties. A few light jogging strides don't reliably get there; a sustained several-minute raise phase does."
       ],
       "image": {
         "asset": "warmup-injury-prevention-stress-strain-curve.webp",
@@ -211,7 +211,7 @@
     {
       "id": "f3",
       "front": "Target muscle temperature rise for a warm-up",
-      "back": "Roughly 1-2°C (about 2-4°F) above resting — the level research points to for meaningfully changing tissue properties; a few light strides don't reliably reach it."
+      "back": "Roughly 1-2°C (about 2-3.5°F) above resting — the level research points to for meaningfully changing tissue properties; a few light strides don't reliably reach it."
     },
     {
       "id": "f4",
