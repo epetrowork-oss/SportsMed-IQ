@@ -236,11 +236,18 @@ browser-verified against the built app, and committed separately:
       grade-band filter, with a live "N of 54 units" count.
 
 **Follow-ups for later sessions:**
-- Real images: as WebP files land in `public/images/…`, swap each slot by
-  passing `src` to its `ImagePlaceholder`. Regenerate the brief anytime
-  with `npm run images:shotlist`. Before many images land, decide the
-  precache strategy (lazy-load vs eager, per-image size budget) — bundle
-  is ~1MB today with zero images.
+- Real images — **first batch LANDED 2026-07-11 (PR #29)**: home hero,
+  all 7 category icons, and 4 safety-strand unit thumbnails (concussion,
+  heat illness, emergency action plan, wound care). Wiring changed from
+  the original per-slot `src` prop to a `REAL_IMAGE_PATHS` map in
+  `ImagePlaceholder.jsx` — landing a new image = add the WebP under
+  `public/images/…` + one map entry; unmapped slots still render
+  placeholders. Precache strategy decided: eager (Workbox `globPatterns`
+  now includes `webp`), so every shipped image works offline. Current
+  payload ~377 KB raw / 1.6 MB total precache; keep remaining thumbnails
+  in the ~10-40 KB range to stay near the ~1 MB image budget. Still
+  pending: ~14 other strand thumbnails and per-section lesson images —
+  regenerate the brief with `npm run images:shotlist`.
 - `HomePage.jsx`'s `UnitCard` still has its own inline pill logic that
   duplicates `status.js` rules — candidate for a small cleanup.
 - Original plan's ideas not yet built: strand cross-links between a
@@ -410,7 +417,8 @@ through desktop, nothing that looks like scaffolding.
 
 ### Explicitly deferred past alpha (so the sprint stays a sprint)
 
-Real images (user + ChatGPT pipeline, slots are ready), strand
+Real images (first 12 landed 2026-07-11 via PR #29 — hero, category
+icons, safety-strand thumbnails; the rest still pending), strand
 cross-links between grade-band siblings, `UnitCard` pill-logic cleanup,
 gamification beyond the queue (streaks/badges), fuller standards
 coverage reporting for teachers, accounts/live sync (permanently out).
