@@ -68,7 +68,7 @@
       "callout": {
         "type": "warning",
         "title": "Suspected heat stroke — act now",
-        "text": "Call 911, get the athlete into a cold water immersion tub (or rotate ice-water-soaked towels over the whole body if no tub exists), remove equipment, and keep cooling until emergency medical services arrive or core temperature drops to about 100-102°F. Cool FIRST, transport SECOND. Never give fluids to a confused or unconscious athlete."
+        "text": "Call 911, get the athlete into a cold water immersion tub (or rotate ice-water-soaked towels over the whole body if no tub exists), remove equipment, and continue active cooling while a qualified medical professional monitors rectal core temperature. Stop active cooling when core temperature reaches about 100-102°F, or when EMS assumes responsibility for continued cooling and care. Cool FIRST, transport SECOND. Never give fluids to a confused or unconscious athlete."
       }
     },
     {
@@ -222,7 +222,7 @@
     {
       "id": "f8",
       "front": "Heat stroke treatment rule",
-      "back": "Cool FIRST, transport SECOND: call 911 and start immediate cold water immersion; keep cooling until EMS arrives or core temp about 100-102°F."
+      "back": "Cool FIRST, transport SECOND: call 911 and start immediate cold water immersion; continue cooling until rectal core temperature reaches about 100-102°F or EMS assumes responsibility for continued cooling and care."
     },
     {
       "id": "f9",
