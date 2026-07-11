@@ -8,8 +8,34 @@
 // scripts/list-image-slots.mjs, which scans the source tree directly to
 // build the shot list handed to the image author.
 //
-// No network requests are ever made here: the placeholder is pure CSS/DOM,
-// keeping the app offline-first.
+// No network requests are ever made here: finished assets resolve to local
+// PWA paths, while unfinished slots continue to render pure CSS/DOM.
+
+const REAL_IMAGE_PATHS = {
+  'home-hero.webp': 'images/home/home-hero.webp',
+  'category-head-spine-injuries.webp':
+    'images/categories/category-head-spine-injuries.webp',
+  'category-environmental-emergencies.webp':
+    'images/categories/category-environmental-emergencies.webp',
+  'category-acute-care-first-aid.webp':
+    'images/categories/category-acute-care-first-aid.webp',
+  'category-lower-extremity-injuries.webp':
+    'images/categories/category-lower-extremity-injuries.webp',
+  'category-upper-extremity-injuries.webp':
+    'images/categories/category-upper-extremity-injuries.webp',
+  'category-muscle-soft-tissue.webp':
+    'images/categories/category-muscle-soft-tissue.webp',
+  'category-prevention-performance.webp':
+    'images/categories/category-prevention-performance.webp',
+  'unit-concussion-hero.webp':
+    'images/units/concussion/unit-concussion-hero.webp',
+  'unit-heat-illness-hero.webp':
+    'images/units/heat-illness/unit-heat-illness-hero.webp',
+  'unit-emergency-action-plan-hero.webp':
+    'images/units/emergency-action-plan/unit-emergency-action-plan-hero.webp',
+  'unit-wound-care-hero.webp':
+    'images/units/wound-care/unit-wound-care-hero.webp',
+}
 
 function ratioToCss(ratio) {
   const [w, h] = String(ratio).split(':')
@@ -36,11 +62,13 @@ export default function ImagePlaceholder({
     'data-background': background,
     'data-location': location,
   }
+  const localPath = REAL_IMAGE_PATHS[asset]
+  const resolvedSrc = src ?? (localPath ? `${import.meta.env.BASE_URL}${localPath}` : undefined)
 
-  if (src) {
+  if (resolvedSrc) {
     return (
       <img
-        src={src}
+        src={resolvedSrc}
         alt={alt}
         loading="lazy"
         className="image-slot image-slot-real"

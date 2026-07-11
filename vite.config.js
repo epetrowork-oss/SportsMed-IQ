@@ -11,8 +11,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       workbox: {
         // Precache the whole app bundle (JS, CSS, HTML) so the app,
-        // including all unit content, works fully offline after first load.
-        globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
+        // including all unit content and WebP artwork, works fully offline.
+        globPatterns: ['**/*.{js,css,html,svg,png,webp,ico,woff2}'],
         navigateFallback: 'index.html',
       },
       manifest: {
