@@ -1,6 +1,6 @@
 # Remaining image batches — 10 images max each
 
-Generated 2026-07-11 from `npm run images:shotlist` minus the 12 assets already landed (PR #29). **Batch 1 landed alongside this document (2026-07-12), so 143 images across batches 2–20 remain.** Work the batches in order — thumbnails are the most visible, and the first four diagram batches are the safety-critical strands. Mark each batch's heading LANDED as it merges so this stays the source of truth for what's left.
+Generated 2026-07-11 from `npm run images:shotlist` minus the 12 assets already landed (PR #29). **Batches 1–2 landed (2026-07-12), so 139 images across batches 3–20 remain.** Work the batches in order — thumbnails are the most visible, and the first four diagram batches are the safety-critical strands. Mark each batch's heading LANDED as it merges so this stays the source of truth for what's left.
 
 ## Ground rules for every batch
 
@@ -34,7 +34,7 @@ Generated 2026-07-11 from `npm run images:shotlist` minus the 12 assets already 
 | 9 | unit-cold-exposure-hero.webp | 3:2 | white | public/images/units/cold-exposure/ | Illustrative thumbnail for Cold Exposure & Hypothermia: Recognize hypothermia and frostbite before they become emergencies — and know why wet, windy cold is more dangerous than a colder, dry day. | Thumbnail illustration for Cold Exposure & Hypothermia |
 | 10 | unit-hydration-nutrition-hero.webp | 3:2 | white | public/images/units/hydration-nutrition/ | Illustrative thumbnail for Hydration & Sports Nutrition: Fuel and fluid strategy that actually holds up at practice and on tournament day — plus the myths worth unlearning. | Thumbnail illustration for Hydration & Sports Nutrition |
 
-## Batch 2: Unit card thumbnails — batch B (4 images)
+## Batch 2: Unit card thumbnails — batch B (4 images) — LANDED 2026-07-12
 
 Same spec as batch A.
 
@@ -275,4 +275,4 @@ Same spec as batch A.
 | 5 | sports-psychology-supportive-conversation.webp | 4:3 | transparent | public/images/units/sports-psychology/ | Two teammates in practice gear sitting together on a bench off to the side of a field or court, one leaning in and listening attentively with open, calm body language while the other talks. Warm, low-key scene with no text, no visible score or crowd — the focus is entirely on the supportive one-on-one conversation. Simple, gentle illustration style, nothing clinical or distressing. | Illustration of one teammate listening supportively while another talks, depicting a peer-support conversation. |
 
 ---
-**Totals:** 153 images in 20 batches originally; batch 1 (10 images) landed, **143 remaining across batches 2–20**, largest batch 10 images.
+**Totals:** 153 images in 20 batches originally; batches 1–2 (14 images) landed, **139 remaining across batches 3–20**, largest batch 10 images.

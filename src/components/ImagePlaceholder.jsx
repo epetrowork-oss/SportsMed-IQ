@@ -55,6 +55,14 @@ const REAL_IMAGE_PATHS = {
     'images/units/cold-exposure/unit-cold-exposure-hero.webp',
   'unit-hydration-nutrition-hero.webp':
     'images/units/hydration-nutrition/unit-hydration-nutrition-hero.webp',
+  'unit-dental-facial-trauma-hero.webp':
+    'images/units/dental-facial-trauma/unit-dental-facial-trauma-hero.webp',
+  'unit-eye-injuries-hero.webp':
+    'images/units/eye-injuries/unit-eye-injuries-hero.webp',
+  'unit-skin-conditions-hero.webp':
+    'images/units/skin-conditions/unit-skin-conditions-hero.webp',
+  'unit-sports-psychology-hero.webp':
+    'images/units/sports-psychology/unit-sports-psychology-hero.webp',
 }
 
 function ratioToCss(ratio) {
