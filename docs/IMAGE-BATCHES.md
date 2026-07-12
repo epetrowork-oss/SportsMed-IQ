@@ -1,6 +1,6 @@
 # Remaining image batches — 10 images max each
 
-Generated 2026-07-11 from `npm run images:shotlist` minus the 12 assets already landed (PR #29). 153 images across 20 batches. Work the batches in order — thumbnails are the most visible, and the first four diagram batches are the safety-critical strands.
+Generated 2026-07-11 from `npm run images:shotlist` minus the 12 assets already landed (PR #29). **Batch 1 landed alongside this document (2026-07-12), so 143 images across batches 2–20 remain.** Work the batches in order — thumbnails are the most visible, and the first four diagram batches are the safety-critical strands. Mark each batch's heading LANDED as it merges so this stays the source of truth for what's left.
 
 ## Ground rules for every batch
 
@@ -17,7 +17,7 @@ Generated 2026-07-11 from `npm run images:shotlist` minus the 12 assets already 
 - Each landed file also needs one entry in `REAL_IMAGE_PATHS` (`src/components/ImagePlaceholder.jsx`).
 - Diagrams are teaching aids: anatomical accuracy matters and Evan vets each batch before merge.
 
-## Batch 1: Unit card thumbnails — batch A (10 images)
+## Batch 1: Unit card thumbnails — batch A (10 images) — LANDED 2026-07-12
 
 3:2 (900×600), white background, no people, no embedded text. Same visual family as the four landed thumbnails (concussion/heat/EAP/wound care).
 
@@ -275,4 +275,4 @@ Same spec as batch A.
 | 5 | sports-psychology-supportive-conversation.webp | 4:3 | transparent | public/images/units/sports-psychology/ | Two teammates in practice gear sitting together on a bench off to the side of a field or court, one leaning in and listening attentively with open, calm body language while the other talks. Warm, low-key scene with no text, no visible score or crowd — the focus is entirely on the supportive one-on-one conversation. Simple, gentle illustration style, nothing clinical or distressing. | Illustration of one teammate listening supportively while another talks, depicting a peer-support conversation. |
 
 ---
-**Totals:** 153 images, 20 batches, largest batch 10 images.
+**Totals:** 153 images in 20 batches originally; batch 1 (10 images) landed, **143 remaining across batches 2–20**, largest batch 10 images.
