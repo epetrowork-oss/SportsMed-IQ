@@ -5,7 +5,13 @@ Generated 2026-07-11 from `npm run images:shotlist` minus the 12 assets already 
 ## Ground rules for every batch
 
 - **WebP**, exact filename and folder as listed (the app maps files by name).
-- **No embedded text** in any image; no real people needed anywhere.
+- **Text in images:** thumbnails, category icons, and the hero are strictly
+  text-free. **Lesson diagrams may carry short, essential labels** (step
+  names, axis labels, anatomy names) when the row's description calls for
+  them — the app is English-only, alt text covers accessibility, and a flow
+  chart or timeline teaches nothing without its labels. Keep labels minimal
+  and legible at lesson width; no paragraphs, no decorative text.
+- No real people needed anywhere.
 - Target **~10–40 KB per file** (stay near the ~1 MB total image budget).
 - Deliver as a zip preserving the `public/images/…` folder structure.
 - Each landed file also needs one entry in `REAL_IMAGE_PATHS` (`src/components/ImagePlaceholder.jsx`).
