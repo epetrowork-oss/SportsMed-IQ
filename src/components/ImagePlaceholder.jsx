@@ -35,6 +35,26 @@ const REAL_IMAGE_PATHS = {
     'images/units/emergency-action-plan/unit-emergency-action-plan-hero.webp',
   'unit-wound-care-hero.webp':
     'images/units/wound-care/unit-wound-care-hero.webp',
+  'unit-ankle-sprain-hero.webp':
+    'images/units/ankle-sprain/unit-ankle-sprain-hero.webp',
+  'unit-fractures-dislocations-hero.webp':
+    'images/units/fractures-dislocations/unit-fractures-dislocations-hero.webp',
+  'unit-knee-acl-hero.webp':
+    'images/units/knee-acl/unit-knee-acl-hero.webp',
+  'unit-shoulder-injuries-hero.webp':
+    'images/units/shoulder-injuries/unit-shoulder-injuries-hero.webp',
+  'unit-muscle-strains-hero.webp':
+    'images/units/muscle-strains/unit-muscle-strains-hero.webp',
+  'unit-overuse-injuries-hero.webp':
+    'images/units/overuse-injuries/unit-overuse-injuries-hero.webp',
+  'unit-taping-wrapping-hero.webp':
+    'images/units/taping-wrapping/unit-taping-wrapping-hero.webp',
+  'unit-warmup-injury-prevention-hero.webp':
+    'images/units/warmup-injury-prevention/unit-warmup-injury-prevention-hero.webp',
+  'unit-cold-exposure-hero.webp':
+    'images/units/cold-exposure/unit-cold-exposure-hero.webp',
+  'unit-hydration-nutrition-hero.webp':
+    'images/units/hydration-nutrition/unit-hydration-nutrition-hero.webp',
 }
 
 function ratioToCss(ratio) {
