@@ -63,8 +63,7 @@ const REAL_IMAGE_PATHS = {
     'images/units/skin-conditions/unit-skin-conditions-hero.webp',
   'unit-sports-psychology-hero.webp':
     'images/units/sports-psychology/unit-sports-psychology-hero.webp',
-  // Concussion lesson diagrams (batch 3). The neurometabolic-cascade slot is
-  // intentionally unmapped pending an image fix, so it still shows a placeholder.
+  // Concussion lesson diagrams (batch 3).
   'concussion-brain-in-skull.webp':
     'images/units/concussion/concussion-brain-in-skull.webp',
   'concussion-brain-movement-mechanism.webp':
@@ -81,6 +80,23 @@ const REAL_IMAGE_PATHS = {
     'images/units/concussion/concussion-return-to-play-stages.webp',
   'concussion-neurometabolic-cascade.webp':
     'images/units/concussion/concussion-neurometabolic-cascade.webp',
+  // Heat-illness lesson diagrams (batch 4).
+  'heat-illness-sweat-cooling.webp':
+    'images/units/heat-illness/heat-illness-sweat-cooling.webp',
+  'heat-illness-dissipation-pathways.webp':
+    'images/units/heat-illness/heat-illness-dissipation-pathways.webp',
+  'heat-illness-collapse-differential.webp':
+    'images/units/heat-illness/heat-illness-collapse-differential.webp',
+  'heat-illness-spectrum-triage.webp':
+    'images/units/heat-illness/heat-illness-spectrum-triage.webp',
+  'heat-illness-cold-water-immersion-technique.webp':
+    'images/units/heat-illness/heat-illness-cold-water-immersion-technique.webp',
+  'heat-illness-prevention-habits.webp':
+    'images/units/heat-illness/heat-illness-prevention-habits.webp',
+  'heat-illness-warning-signs.webp':
+    'images/units/heat-illness/heat-illness-warning-signs.webp',
+  'heat-illness-heat-stroke-emergency.webp':
+    'images/units/heat-illness/heat-illness-heat-stroke-emergency.webp',
 }
 
 function ratioToCss(ratio) {

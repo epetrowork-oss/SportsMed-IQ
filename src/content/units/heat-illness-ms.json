@@ -277,5 +277,13 @@
       "front": "Heat cramps (simple version)",
       "back": "Painful, tight muscles from sweating a lot and losing fluid. Rest, get shade, and drink fluids."
     }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Exertional Heat Illnesses",
+      "publisher": "Journal of Athletic Training",
+      "year": 2015,
+      "url": "https://doi.org/10.4085/1062-6050-50.9.07"
+    }
   ]
 }
