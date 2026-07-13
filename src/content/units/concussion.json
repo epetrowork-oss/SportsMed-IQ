@@ -65,15 +65,16 @@
     {
       "heading": "Recovery and return to play",
       "body": [
-        "Most concussions resolve in 1–4 weeks with adolescents typically taking longer than adults. Recovery starts with 24–48 hours of relative rest (light activity is fine; total dark-room isolation is outdated), followed by a gradual return to school first, then sport.",
-        "Return to play follows a stepwise progression, each stage at least 24 hours apart: light aerobic exercise → sport-specific exercise → non-contact drills → full-contact practice → competition. Any symptom return means dropping back a stage. Written medical clearance is required before contact."
+        "Most concussions resolve within a few weeks, and adolescents often take longer to recover than adults. Recovery starts with a brief 24–48 hours of relative rest (light activity is fine; total dark-room isolation is outdated), followed by a gradual return to school and sport.",
+        "Return to play follows a stepwise progression with at least 24 hours at each stage: symptom-limited activity → light aerobic exercise → sport-specific exercise → non-contact training drills → full-contact practice → return to competition. Stage 1, symptom-limited activity, is ordinary daily activity kept below the level that more than mildly worsens symptoms; it can begin within about a day of the injury and is not the same as the brief rest right after the hit. In the early stages, if symptoms worsen more than mildly, stop and try again the next day; once at the non-contact and contact stages, returning concussion symptoms mean stepping back to the sport-specific stage until symptoms fully resolve, including with exertion.",
+        "The progression is medically supervised. A provider may need to sign off before sport-specific training that could carry an accidental head impact; the contact stages begin only after symptoms and other clinical findings have resolved, including with exertion; and written clearance for unrestricted return is required as directed by state law."
       ],
       "image": {
         "asset": "concussion-return-to-play-stages.webp",
         "ratio": "16:9",
         "background": "transparent",
-        "description": "Horizontal five-step progression graphic with arrows connecting each stage in order: 1) light aerobic exercise, 2) sport-specific exercise, 3) non-contact drills, 4) full-contact practice, 5) competition. Under the arrow between each pair of stages, note '24+ hours, symptom-free.' Include a small looping arrow showing that any symptom return sends the athlete back a stage. Clean flat infographic style.",
-        "alt": "Five-stage return-to-play progression after a concussion, from light aerobic exercise through full competition, with 24-hour symptom-free gaps between stages.",
+        "description": "Horizontal six-step progression graphic with arrows connecting each stage in order: 1) symptom-limited activity, 2) light aerobic exercise, 3) sport-specific exercise, 4) non-contact training drills, 5) full-contact practice, 6) return to competition. Under the arrow between each pair of stages, note '24+ hours, symptom-free.' Include a small looping arrow showing that returning symptoms send the athlete back to an earlier stage. Clean flat infographic style.",
+        "alt": "Six-stage return-to-play progression after a concussion, from symptom-limited activity through full competition, with 24-hour symptom-free gaps between stages.",
         "location": "public/images/units/concussion/"
       },
       "callout": {
@@ -151,10 +152,10 @@
         "Push through — symptoms during exercise are expected",
         "Skip ahead to full contact to test her tolerance",
         "End her season immediately",
-        "Drop back a stage and progress again once symptom-free"
+        "Step back to the sport-specific stage and advance again once symptoms fully resolve, including with exertion"
       ],
       "answerIndex": 3,
-      "explanation": "The stepwise progression (each stage ≥24 hours) requires dropping back a stage whenever symptoms return, then advancing again once symptom-free."
+      "explanation": "Once an athlete reaches the non-contact or contact stages, returning concussion symptoms mean stepping back to the sport-specific stage and only advancing again after symptoms fully resolve, including with exertion — not pushing through."
     },
     {
       "id": "q7",
@@ -225,7 +226,7 @@
     {
       "id": "f9",
       "front": "Return-to-play progression",
-      "back": "Light aerobic → sport-specific → non-contact drills → full contact → competition. Each stage ≥24 hours; symptoms returning = drop back a stage. Written clearance required."
+      "back": "Symptom-limited activity → light aerobic → sport-specific → non-contact drills → full contact → return to competition. ≥24 h per stage. Early stages: if symptoms worsen more than mildly, stop and retry the next day. Later stages: returning symptoms step back to the sport-specific stage until they fully resolve with exertion. Medically supervised; written clearance for unrestricted return as directed by law."
     },
     {
       "id": "f10",
@@ -240,7 +241,15 @@
     {
       "id": "f12",
       "front": "Concussion recovery timeline",
-      "back": "Most concussions resolve in 1–4 weeks (adolescents often take longer). Recovery starts with 24–48 hours of relative rest (light activity is fine), then a gradual return to school before sport."
+      "back": "Most concussions resolve within a few weeks (adolescents often take longer). Recovery starts with a brief 24–48 hours of relative rest (light activity is fine), then a gradual return to school before sport."
+    }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Bridge Statement: Management of Sport-Related Concussion",
+      "publisher": "Journal of Athletic Training",
+      "year": 2024,
+      "url": "https://doi.org/10.4085/1062-6050-0046.22"
     }
   ]
 }

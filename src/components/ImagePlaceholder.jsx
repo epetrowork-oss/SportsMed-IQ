@@ -63,6 +63,24 @@ const REAL_IMAGE_PATHS = {
     'images/units/skin-conditions/unit-skin-conditions-hero.webp',
   'unit-sports-psychology-hero.webp':
     'images/units/sports-psychology/unit-sports-psychology-hero.webp',
+  // Concussion lesson diagrams (batch 3). The neurometabolic-cascade slot is
+  // intentionally unmapped pending an image fix, so it still shows a placeholder.
+  'concussion-brain-in-skull.webp':
+    'images/units/concussion/concussion-brain-in-skull.webp',
+  'concussion-brain-movement-mechanism.webp':
+    'images/units/concussion/concussion-brain-movement-mechanism.webp',
+  'concussion-warning-signs.webp':
+    'images/units/concussion/concussion-warning-signs.webp',
+  'concussion-second-impact-risk.webp':
+    'images/units/concussion/concussion-second-impact-risk.webp',
+  'concussion-lucid-interval-timeline.webp':
+    'images/units/concussion/concussion-lucid-interval-timeline.webp',
+  'concussion-return-to-play-steps.webp':
+    'images/units/concussion/concussion-return-to-play-steps.webp',
+  'concussion-return-to-play-stages.webp':
+    'images/units/concussion/concussion-return-to-play-stages.webp',
+  'concussion-neurometabolic-cascade.webp':
+    'images/units/concussion/concussion-neurometabolic-cascade.webp',
 }
 
 function ratioToCss(ratio) {

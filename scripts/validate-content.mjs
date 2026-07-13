@@ -158,6 +158,25 @@ function checkUnit(unit, file, standardsCatalog) {
     }
   }
 
+  // Peer-reviewed sources (optional; cited per unit as content is verified —
+  // see "sources" in src/content/README.md). Absent is fine and silent.
+  if (unit.sources !== undefined) {
+    if (!Array.isArray(unit.sources) || unit.sources.length === 0) {
+      err('"sources" must be a non-empty array when present')
+    } else {
+      unit.sources.forEach((s, i) => {
+        if (!s || typeof s !== 'object') return err(`sources[${i}] must be an object`)
+        if (!isNonEmptyString(s.title)) err(`sources[${i}] missing "title"`)
+        if (!Number.isInteger(s.year) || s.year < 1900 || s.year > 2100)
+          err(`sources[${i}] "year" must be a 4-digit year`)
+        if (s.publisher !== undefined && !isNonEmptyString(s.publisher))
+          err(`sources[${i}] "publisher" must be a non-empty string when present`)
+        if (s.url !== undefined && !/^https?:\/\//.test(String(s.url)))
+          err(`sources[${i}] "url" must start with http(s):// when present`)
+      })
+    }
+  }
+
   return { errors, warnings }
 }
 

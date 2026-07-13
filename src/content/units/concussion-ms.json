@@ -252,5 +252,13 @@
       "front": "What needs rest first after a concussion?",
       "back": "Both sports and schoolwork at first — school comes back before sports, based on a healthcare provider's guidance."
     }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Bridge Statement: Management of Sport-Related Concussion",
+      "publisher": "Journal of Athletic Training",
+      "year": 2024,
+      "url": "https://doi.org/10.4085/1062-6050-0046.22"
+    }
   ]
 }
