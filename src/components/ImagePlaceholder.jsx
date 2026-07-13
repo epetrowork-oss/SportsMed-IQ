@@ -79,8 +79,8 @@ const REAL_IMAGE_PATHS = {
     'images/units/concussion/concussion-return-to-play-steps.webp',
   'concussion-return-to-play-stages.webp':
     'images/units/concussion/concussion-return-to-play-stages.webp',
-  // neurometabolic-cascade still held: its 'energy crisis' callout renders
-  // blank — awaiting an image fix.
+  'concussion-neurometabolic-cascade.webp':
+    'images/units/concussion/concussion-neurometabolic-cascade.webp',
 }
 
 function ratioToCss(ratio) {
