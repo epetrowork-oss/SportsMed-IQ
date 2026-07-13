@@ -96,6 +96,33 @@ function Callout({ callout }) {
   )
 }
 
+function Sources({ sources }) {
+  if (!Array.isArray(sources) || sources.length === 0) return null
+  return (
+    <details className="sources-list">
+      <summary>Sources</summary>
+      <ul className="sources-items">
+        {sources.map((s, i) => (
+          <li key={i} className="sources-item">
+            <span className="sources-title">
+              {s.url ? (
+                <a href={s.url} target="_blank" rel="noopener noreferrer">
+                  {s.title}
+                </a>
+              ) : (
+                s.title
+              )}
+            </span>
+            <span className="sources-meta">
+              {[s.publisher, s.year].filter(Boolean).join(' · ')}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </details>
+  )
+}
+
 function StandardsAlignment({ standards }) {
   if (standards.length === 0) return null
   const hasDraft = standards.some((s) => !s.verified)
@@ -232,6 +259,7 @@ export default function UnitPage() {
 
       <PracticalActivities activities={activities} />
       <StandardsAlignment standards={standards} />
+      <Sources sources={unit.sources} />
 
       <div className="lesson-footer">
         {formatReadTime(p.readSeconds) && (

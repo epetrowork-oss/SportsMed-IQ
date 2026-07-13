@@ -31,6 +31,21 @@ never requires touching component code** — drop a new `*.json` file into
   // just produces a transition warning, not an error.
   "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.Anchor.6"],
 
+  // OPTIONAL: peer-reviewed sources backing the unit's medical content,
+  // rendered in a collapsible "Sources" section at the bottom of the lesson.
+  // Cited per unit as content is verified against the source (not all units
+  // are tagged yet). Each entry needs "title" and a 4-digit "year";
+  // "publisher" (journal/organization) and "url" are optional but preferred.
+  // Omit the field entirely for units not yet sourced.
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Bridge Statement: Management of Sport-Related Concussion",
+      "publisher": "Journal of Athletic Training",
+      "year": 2024,
+      "url": "https://doi.org/10.4085/1062-6050-0046.22"
+    }
+  ],
+
   // Lesson content, rendered in order.
   "sections": [
     {

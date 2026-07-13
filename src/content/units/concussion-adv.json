@@ -260,5 +260,13 @@
       "front": "Three pillars of state concussion laws",
       "back": "Education (training for coaches/athletes/parents), removal (immediate, same-day removal when a concussion is suspected), and clearance (written clearance from a licensed healthcare provider before return)."
     }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Bridge Statement: Management of Sport-Related Concussion",
+      "publisher": "Journal of Athletic Training",
+      "year": 2024,
+      "url": "https://doi.org/10.4085/1062-6050-0046.22"
+    }
   ]
 }
