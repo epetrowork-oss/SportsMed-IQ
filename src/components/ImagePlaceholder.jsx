@@ -77,8 +77,10 @@ const REAL_IMAGE_PATHS = {
     'images/units/concussion/concussion-lucid-interval-timeline.webp',
   'concussion-return-to-play-steps.webp':
     'images/units/concussion/concussion-return-to-play-steps.webp',
-  // return-to-play-stages held: lesson moved to the 6-stage model, so the
-  // delivered 5-stage image no longer matches — awaiting a 6-stage redo.
+  'concussion-return-to-play-stages.webp':
+    'images/units/concussion/concussion-return-to-play-stages.webp',
+  // neurometabolic-cascade still held: its 'energy crisis' callout renders
+  // blank — awaiting an image fix.
 }
 
 function ratioToCss(ratio) {
