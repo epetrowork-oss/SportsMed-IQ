@@ -80,8 +80,9 @@ const REAL_IMAGE_PATHS = {
     'images/units/concussion/concussion-return-to-play-stages.webp',
   'concussion-neurometabolic-cascade.webp':
     'images/units/concussion/concussion-neurometabolic-cascade.webp',
-  // Heat-illness lesson diagrams (batch 4). sweat-cooling held (7-8 slot)
-  // pending a restyle to match the others.
+  // Heat-illness lesson diagrams (batch 4).
+  'heat-illness-sweat-cooling.webp':
+    'images/units/heat-illness/heat-illness-sweat-cooling.webp',
   'heat-illness-dissipation-pathways.webp':
     'images/units/heat-illness/heat-illness-dissipation-pathways.webp',
   'heat-illness-collapse-differential.webp':
