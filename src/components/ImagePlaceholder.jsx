@@ -80,8 +80,8 @@ const REAL_IMAGE_PATHS = {
     'images/units/concussion/concussion-return-to-play-stages.webp',
   'concussion-neurometabolic-cascade.webp':
     'images/units/concussion/concussion-neurometabolic-cascade.webp',
-  // Heat-illness lesson diagrams (batch 4). warning-signs and
-  // heat-stroke-emergency held (7-8 slots) pending image redos.
+  // Heat-illness lesson diagrams (batch 4). sweat-cooling held (7-8 slot)
+  // pending a restyle to match the others.
   'heat-illness-dissipation-pathways.webp':
     'images/units/heat-illness/heat-illness-dissipation-pathways.webp',
   'heat-illness-collapse-differential.webp':
@@ -92,8 +92,10 @@ const REAL_IMAGE_PATHS = {
     'images/units/heat-illness/heat-illness-cold-water-immersion-technique.webp',
   'heat-illness-prevention-habits.webp':
     'images/units/heat-illness/heat-illness-prevention-habits.webp',
-  'heat-illness-sweat-cooling.webp':
-    'images/units/heat-illness/heat-illness-sweat-cooling.webp',
+  'heat-illness-warning-signs.webp':
+    'images/units/heat-illness/heat-illness-warning-signs.webp',
+  'heat-illness-heat-stroke-emergency.webp':
+    'images/units/heat-illness/heat-illness-heat-stroke-emergency.webp',
 }
 
 function ratioToCss(ratio) {
