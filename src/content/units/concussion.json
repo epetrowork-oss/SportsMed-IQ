@@ -66,7 +66,7 @@
       "heading": "Recovery and return to play",
       "body": [
         "Most concussions resolve in 1–4 weeks with adolescents typically taking longer than adults. Recovery starts with 24–48 hours of relative rest (light activity is fine; total dark-room isolation is outdated), followed by a gradual return to school first, then sport.",
-        "Return to play follows a stepwise progression, each stage at least 24 hours apart: symptom-limited activity → light aerobic exercise → sport-specific exercise → non-contact training drills → full-contact practice → return to competition. The first stage is relative rest — everyday activities that don't more than mildly bump symptoms — before any real exertion begins. Any symptom return means dropping back a stage. Written medical clearance is required before returning to contact."
+        "Return to play follows a stepwise progression, each stage at least 24 hours apart: symptom-limited activity → light aerobic exercise → sport-specific exercise → non-contact training drills → full-contact practice → return to competition. The first stage is relative rest — everyday activities that don't more than mildly bump symptoms — before any real exertion begins. Any symptom return means dropping back a stage. The whole progression is medically supervised, and written clearance from a licensed provider is required before returning to full-contact practice and competition."
       ],
       "image": {
         "asset": "concussion-return-to-play-stages.webp",
@@ -225,7 +225,7 @@
     {
       "id": "f9",
       "front": "Return-to-play progression",
-      "back": "Symptom-limited activity → light aerobic → sport-specific → non-contact drills → full contact → return to competition. Each stage ≥24 hours; symptoms returning = drop back a stage. Written clearance required before contact."
+      "back": "Symptom-limited activity → light aerobic → sport-specific → non-contact drills → full contact → return to competition. Each stage ≥24 hours; symptoms returning = drop back a stage. Written medical clearance required before return to sport."
     },
     {
       "id": "f10",
