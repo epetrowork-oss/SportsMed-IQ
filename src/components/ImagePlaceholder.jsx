@@ -97,7 +97,10 @@ const REAL_IMAGE_PATHS = {
     'images/units/heat-illness/heat-illness-warning-signs.webp',
   'heat-illness-heat-stroke-emergency.webp':
     'images/units/heat-illness/heat-illness-heat-stroke-emergency.webp',
-  // Emergency-action-plan lesson diagrams (batch 5).
+  // Emergency-action-plan lesson diagrams (batch 5). collapsed-athlete-scene
+  // and yell-for-help-scene held: their "call 911 / get the AED / start CPR"
+  // messaging contradicts the 7-8 unit's "notice and get an adult" pedagogy —
+  // pending regeneration.
   'eap-team-role-assignment.webp':
     'images/units/emergency-action-plan/eap-team-role-assignment.webp',
   'eap-sca-cause-comparison.webp':
@@ -106,10 +109,6 @@ const REAL_IMAGE_PATHS = {
     'images/units/emergency-action-plan/eap-cpr-hand-placement.webp',
   'eap-aed-pad-placement.webp':
     'images/units/emergency-action-plan/eap-aed-pad-placement.webp',
-  'eap-collapsed-athlete-scene.webp':
-    'images/units/emergency-action-plan/eap-collapsed-athlete-scene.webp',
-  'eap-yell-for-help-scene.webp':
-    'images/units/emergency-action-plan/eap-yell-for-help-scene.webp',
   'eap-aed-wall-case.webp':
     'images/units/emergency-action-plan/eap-aed-wall-case.webp',
   'eap-know-your-school-map.webp':
