@@ -399,7 +399,19 @@ else is `implementer` (Sonnet).*
 
 ### Day 3 — Fri Jul 10: look, ship, and hand off
 
-- [ ] **Aesthetic pass** (orchestrator sets direction — palette,
+- [x] **Aesthetic pass — DONE 2026-07-15** (`f987281` + `ebc5005`, two
+      `implementer` runs from orchestrator specs, browser-verified incl.
+      an end-to-end completion flow). Landed: design tokens + type scale,
+      7 category accent colors, two-column landing hero, card
+      elevation/hover, lesson section rhythm + callout markers, quiz
+      letter-chips/progress-bar/feedback accents, flashcard + achievements
+      polish, app-wide `:focus-visible` rings (three pre-existing
+      `outline: none` rules removed), reduced-motion support, and
+      placeholder slots upgraded from dashed dev boxes to soft
+      "Illustration coming soon" tiles (metadata kept in title/data
+      attrs; real-image swap path unchanged). Original scope line kept
+      below for reference:
+      (orchestrator sets direction — palette,
       type scale, category accent colors; `implementer` executes):
       landing hero treatment, card elevation/hover, lesson reading
       layout (measure, section rhythm, callout styling), quiz/flashcard
