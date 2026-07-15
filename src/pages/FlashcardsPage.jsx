@@ -48,6 +48,19 @@ export default function FlashcardsPage() {
         Card {index + 1} of {cards.length}
         {seenLast && ' · ✓ reviewed'}
       </p>
+      <div
+        className="quiz-progress-bar"
+        role="progressbar"
+        aria-label="Flashcard deck position"
+        aria-valuemin={1}
+        aria-valuemax={cards.length}
+        aria-valuenow={index + 1}
+      >
+        <div
+          className="quiz-progress-fill"
+          style={{ width: `${((index + 1) / cards.length) * 100}%` }}
+        />
+      </div>
       <button
         className={`flashcard ${flipped ? 'flashcard-flipped' : ''}`}
         onClick={() => setFlipped(!flipped)}

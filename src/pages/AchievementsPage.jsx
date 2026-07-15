@@ -26,7 +26,7 @@ export default function AchievementsPage() {
         Progress rewards careful learning, accurate review, consistency, and teacher-verified practice—not speed during emergency activities.
       </p>
 
-      <section className="assignment-card" aria-labelledby="achievement-level-heading">
+      <section className="assignment-card level-card" aria-labelledby="achievement-level-heading">
         <div className="assignment-card-header">
           <h2 id="achievement-level-heading">Level {summary.level.level}: {summary.level.name}</h2>
           <span className="pill pill-grade">{summary.xp} XP</span>
@@ -69,9 +69,14 @@ export default function AchievementsPage() {
 
       <section>
         <h2>Badges</h2>
-        <div className="assignment-card-list">
+        <div className="badge-grid">
           {summary.badges.map((badge) => (
-            <article key={badge.id} className="assignment-card">
+            <article
+              key={badge.id}
+              className={`assignment-card badge-card ${
+                badge.isEarned ? 'badge-card-earned' : 'badge-card-locked'
+              }`}
+            >
               <div className="assignment-card-header">
                 <h3>{badge.name}</h3>
                 <span className={badge.isEarned ? 'pill pill-done' : 'pill pill-grade'}>

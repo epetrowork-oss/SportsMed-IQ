@@ -193,7 +193,7 @@ export default function UnitPage() {
       <p className="unit-summary">{unit.summary}</p>
 
       <div className="unit-actions">
-        <Link className="button" to={`/unit/${unit.id}/quiz`}>
+        <Link className="button button-primary" to={`/unit/${unit.id}/quiz`}>
           Take quiz
           {p.bestQuizScore != null && (
             <>
@@ -275,7 +275,10 @@ export default function UnitPage() {
             I've read this lesson
           </button>
         )}
-        <Link className="button" to={`/unit/${unit.id}/quiz`}>
+        <Link
+          className={p.lessonRead ? 'button button-primary' : 'button'}
+          to={`/unit/${unit.id}/quiz`}
+        >
           Continue to quiz →
         </Link>
       </div>
