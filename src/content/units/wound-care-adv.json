@@ -36,7 +36,7 @@
         "asset": "wound-care-junctional-wound-packing.webp",
         "ratio": "4:3",
         "background": "white",
-        "description": "Cross-section illustration of a deep junctional wound (at the groin/thigh junction) with gloved hands packing gauze firmly layer by layer into the wound cavity while maintaining downward pressure, with a small inset labeling 'junctional area — limb meets torso, tourniquet cannot be applied here.' Clean instructional-illustration style, non-graphic.",
+        "description": "Illustration of a deep junctional wound at the shoulder/axilla junction with gloved hands packing gauze firmly layer by layer while maintaining steady downward and inward pressure, with a small inset labeling 'junctional area — shoulder (axilla) meets torso, a tourniquet cannot be applied here.' Clean instructional-illustration style, non-graphic.",
         "alt": "Diagram of wound packing technique for a deep junctional wound, showing gauze packed layer by layer into the wound cavity with sustained pressure.",
         "location": "public/images/units/wound-care/"
       }
@@ -252,6 +252,20 @@
       "id": "f12",
       "front": "MRSA vs. herpes gladiatorum — recognition",
       "back": "MRSA: red, warm, painful bump, often with a pus center, can look like a spider bite; spreads via skin contact and shared surfaces. Herpes gladiatorum: cluster of small fluid-filled blisters, often with tingling first; athlete is held from ALL contact until physician-cleared."
+    }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Management of Acute Skin Trauma",
+      "publisher": "Journal of Athletic Training",
+      "year": 2016,
+      "url": "https://doi.org/10.4085/1062-6050-51.7.01"
+    },
+    {
+      "title": "Stop the Bleed: bleeding-control guidance (direct pressure, wound packing, tourniquets)",
+      "publisher": "American College of Surgeons Committee on Trauma",
+      "year": 2015,
+      "url": "https://www.stopthebleed.org/"
     }
   ]
 }

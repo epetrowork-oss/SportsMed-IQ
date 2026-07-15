@@ -242,5 +242,19 @@
       "front": "Tetanus booster rule",
       "back": "Any puncture or dirty wound should prompt a check — a booster is needed if it has been more than 10 years (5 years for dirty wounds) since the last one."
     }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Management of Acute Skin Trauma",
+      "publisher": "Journal of Athletic Training",
+      "year": 2016,
+      "url": "https://doi.org/10.4085/1062-6050-51.7.01"
+    },
+    {
+      "title": "Stop the Bleed: bleeding-control guidance (direct pressure, tourniquets)",
+      "publisher": "American College of Surgeons Committee on Trauma",
+      "year": 2015,
+      "url": "https://www.stopthebleed.org/"
+    }
   ]
 }
