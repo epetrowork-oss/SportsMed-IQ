@@ -258,5 +258,13 @@
       "front": "When in doubt about a wound...",
       "back": "Treat it like it's serious. Get an adult to look at it."
     }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Management of Acute Skin Trauma",
+      "publisher": "Journal of Athletic Training",
+      "year": 2016,
+      "url": "https://doi.org/10.4085/1062-6050-51.7.01"
+    }
   ]
 }

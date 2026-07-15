@@ -63,12 +63,15 @@ simple + correct **scope of action** for the age.
 ## Progress
 
 Done and merged: home hero, 7 category icons, 18 unit thumbnails, and the lesson
-diagrams for the **3 safety-critical strands** — concussion, heat-illness,
-emergency-action-plan (each 8/8, sourced). Roughly **58 of 165** image slots
-live.
+diagrams for the **4 safety-critical strands** — concussion, heat-illness,
+emergency-action-plan, and wound-care (each 8/8, sourced; wound-care cites
+NATA Acute Skin Trauma on all bands plus Stop the Bleed on 9-10/11-12; two
+of its images had a right-edge production-sheet bleed fixed in-repo by
+white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6). Roughly
+**66 of 165** image slots live.
 
-**Next:** batch 6 = **wound-care**, then batches 7–20 (one strand each) per
-`docs/IMAGE-BATCHES.md`. Regenerate a batch's per-image brief anytime from the
+**Next:** batch 7 = **ankle-sprain**, then batches 8–20 (one strand each)
+per `docs/IMAGE-BATCHES.md`. Regenerate a batch's per-image brief anytime from the
 unit JSONs' `image` descriptions (or run `npm run images:shotlist`).
 
 ## Peer-reviewed sources already identified (cite when each strand lands)
@@ -76,8 +79,6 @@ unit JSONs' `image` descriptions (or run `npm run images:shotlist`).
 The user provided these NATA position statements (Journal of Athletic Training).
 Attach to each unit's `sources` when that strand's images land:
 
-- **wound-care** — Management of Acute Skin Trauma. 2016;51(12):1053–1070.
-  https://doi.org/10.4085/1062-6050-51.7.01
 - **knee-acl** — Prevention of ACL Injury. 2018;53(1):5–19.
   https://doi.org/10.4085/1062-6050-99-16 · and Management of Patellofemoral
   Pain. 2018;53(9):820–836. https://doi.org/10.4085/1062-6050-231-15
@@ -92,7 +93,10 @@ Already cited (merged): concussion → NATA Bridge Statement (2024;59(3):225–2
 doi:10.4085/1062-6050-0046.22); heat-illness → Exertional Heat Illnesses
 (2015;50(9):986–1000, doi:10.4085/1062-6050-50.9.07); emergency-action-plan →
 EAP Development and Implementation in Sport (2024;59(6):570–583,
-doi:10.4085/1062-6050-0521.23).
+doi:10.4085/1062-6050-0521.23); wound-care → Management of Acute Skin Trauma
+(2016;51(12):1053–1070, doi:10.4085/1062-6050-51.7.01) plus Stop the Bleed
+(ACS Committee on Trauma, stopthebleed.org) on the 9-10/11-12 units for
+packing/tourniquet guidance.
 
 Not mapped to any current unit: Type 1 Diabetes (no unit) and Facilitating
 Work-Life Balance (professional-practice, not a student lesson).
