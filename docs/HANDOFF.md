@@ -64,14 +64,14 @@ simple + correct **scope of action** for the age.
 
 Done and merged: home hero, 7 category icons, 18 unit thumbnails, and the lesson
 diagrams for the **4 safety-critical strands** — concussion, heat-illness,
-emergency-action-plan (each 8/8, sourced), and wound-care (6/8 landed
-2026-07-15 + sourced with NATA Acute Skin Trauma and Stop the Bleed;
-`bleeding-type-comparison` and `minor-vs-serious` held for a right-edge
-production-sheet-bleed redo — see the note in `docs/IMAGE-BATCHES.md`
-batch 6). Roughly **64 of 165** image slots live.
+emergency-action-plan, and wound-care (each 8/8, sourced; wound-care cites
+NATA Acute Skin Trauma on all bands plus Stop the Bleed on 9-10/11-12; two
+of its images had a right-edge production-sheet bleed fixed in-repo by
+white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6). Roughly
+**66 of 165** image slots live.
 
-**Next:** the 2 wound-care redos, then batch 7 = **ankle-sprain** and
-batches 8–20 (one strand each) per `docs/IMAGE-BATCHES.md`. Regenerate a batch's per-image brief anytime from the
+**Next:** batch 7 = **ankle-sprain**, then batches 8–20 (one strand each)
+per `docs/IMAGE-BATCHES.md`. Regenerate a batch's per-image brief anytime from the
 unit JSONs' `image` descriptions (or run `npm run images:shotlist`).
 
 ## Peer-reviewed sources already identified (cite when each strand lands)

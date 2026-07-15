@@ -84,7 +84,7 @@ Same spec as batch A.
 | 7 | eap-cpr-hand-placement.webp | 4:3 | white | public/images/units/emergency-action-plan/ | A rescuer kneeling beside a collapsed athlete lying on their back, hands correctly stacked with the heel of one hand on the center of the chest (lower half of the breastbone) and the other hand layered on top, elbows locked straight, shoulders directly over the hands. Include a small depth indicator (about 2 inches) beside the chest. Clean instructional-illustration style, no distressing detail. | Diagram of correct hand placement and body position for hands-only CPR chest compressions. |
 | 8 | eap-aed-pad-placement.webp | 4:3 | white | public/images/units/emergency-action-plan/ | Front view of a torso showing the two AED pad placement locations: one pad on the upper right chest below the collarbone, one pad on the lower left side of the ribcage, with a dashed line suggesting the shock pathway between them. Include a small AED device icon beside the torso with a 'follow the voice prompts' label. Clean instructional-illustration style, no distressing detail. | Diagram showing correct AED pad placement on the chest: upper right below the collarbone and lower left side of the ribcage. |
 
-## Batch 6: Lesson diagrams — wound-care (8 images) — LANDED 2026-07-15 (6 of 8; 2 held for redo, see note below the table)
+## Batch 6: Lesson diagrams — wound-care (8 images) — LANDED 2026-07-15 (8 of 8)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -97,13 +97,14 @@ Same spec as batch A.
 | 7 | wound-care-open-wound-types.webp | 16:9 | white | public/images/units/wound-care/ | Five small side-by-side panels, each illustrating one open wound type on a forearm: abrasion (scraped, shallow, dirty-looking surface), laceration (jagged-edged cut), incision (clean straight cut with edges lining up), puncture (small deep entry hole), avulsion (a flap of skin torn partially away). Label each panel with its name. Clean medical-illustration style, non-graphic. | Diagram comparing five open wound types: abrasion, laceration, incision, puncture, and avulsion. |
 | 8 | wound-care-direct-pressure-technique.webp | 4:3 | transparent | public/images/units/wound-care/ | A rescuer's gloved hands pressing firmly on a gauze pad over a forearm wound, with a small inset diagram showing a tourniquet band placed 2-3 inches above the wound (not over a joint) with a note reading 'time applied: __' as the secondary, severe-bleeding-only option. Clean instructional-illustration style, non-graphic. | Diagram of firm direct pressure on a wound with gauze, and a tourniquet placed 2-3 inches above the wound for severe, uncontrolled bleeding. |
 
-**Held for redo (2026-07-15):** `wound-care-bleeding-type-comparison.webp` and
+**Delivery note (2026-07-15):** `wound-care-bleeding-type-comparison.webp` and
 `wound-care-minor-vs-serious.webp` were delivered with a sliver of the
-neighboring production-sheet panel visible along the right edge. Regenerate
-each as a standalone, full-frame card — same approved infographic style,
-same header number chip ('1' for bleeding-type-comparison, '5' for
-minor-vs-serious), identical content, delivered at the same ratio — with no
-part of any other panel in frame. Everything else in the batch landed.
+neighboring production-sheet panel visible along the right edge. Fixed
+in-repo (no regeneration needed): the sliver sat entirely on the white
+margin (pixel columns 885+, card border ends by x=860), so the margin strip
+was white-filled with sharp, leaving the card artwork byte-untouched. For
+future batches: deliver each card as a standalone, full-frame render with
+no part of any adjacent panel in frame.
 
 ## Batch 7: Lesson diagrams — ankle-sprain (9 images)
 

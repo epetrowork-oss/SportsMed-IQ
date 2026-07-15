@@ -116,9 +116,14 @@ const REAL_IMAGE_PATHS = {
     'images/units/emergency-action-plan/eap-aed-wall-case.webp',
   'eap-know-your-school-map.webp':
     'images/units/emergency-action-plan/eap-know-your-school-map.webp',
-  // Wound-care lesson diagrams (batch 6; bleeding-type-comparison and
-  // minor-vs-serious held for a redo — right-edge bleed from the
-  // production sheet — so they stay unmapped for now).
+  // Wound-care lesson diagrams (batch 6, complete 8/8; bleeding-type-
+  // comparison and minor-vs-serious were delivered with a neighboring
+  // production-sheet panel bleeding into the right margin and were fixed
+  // in-repo by white-filling the margin strip — card artwork untouched).
+  'wound-care-bleeding-type-comparison.webp':
+    'images/units/wound-care/wound-care-bleeding-type-comparison.webp',
+  'wound-care-minor-vs-serious.webp':
+    'images/units/wound-care/wound-care-minor-vs-serious.webp',
   'wound-care-junctional-wound-packing.webp':
     'images/units/wound-care/wound-care-junctional-wound-packing.webp',
   'wound-care-open-wound-types.webp':
