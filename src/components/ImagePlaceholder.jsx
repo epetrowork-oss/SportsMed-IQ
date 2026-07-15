@@ -159,22 +159,45 @@ export default function ImagePlaceholder({
     )
   }
 
+  // Filename/ratio/purpose stay available (per data-* attributes above and
+  // this title) without being visibly rendered — the visible tile is just a
+  // short human label, not dev scaffolding.
+  const metaTitle = [asset, ratio, purpose].filter(Boolean).join(' · ')
+
+  // Icon-sized slots (the Library category icons) stay icon-only: no chip,
+  // no label, same dimensions as before.
+  if (purpose === 'category icon') {
+    return (
+      <div
+        className="image-slot image-placeholder image-placeholder-icon-only"
+        style={style}
+        role="img"
+        aria-label={alt}
+        title={metaTitle}
+        {...dataProps}
+      >
+        <span className="image-placeholder-icon" aria-hidden="true">
+          🖼
+        </span>
+      </div>
+    )
+  }
+
   return (
     <div
-      className={`image-slot image-placeholder image-placeholder-bg-${background}`}
+      className="image-slot image-placeholder"
       style={style}
       role="img"
       aria-label={alt}
-      title={description}
+      title={metaTitle}
       {...dataProps}
     >
-      <span className="image-placeholder-icon" aria-hidden="true">
-        🖼
+      <span className="image-placeholder-chip">
+        <span className="image-placeholder-icon" aria-hidden="true">
+          🖼
+        </span>
       </span>
-      <span className="image-placeholder-asset">{asset}</span>
-      <span className="image-placeholder-meta">
-        {ratio} · {purpose}
-      </span>
+      <span className="image-placeholder-label">Illustration coming soon</span>
     </div>
   )
 }

@@ -84,7 +84,7 @@ function ContinueCard({ unit }) {
   const gradeLabel = GRADE_BANDS[unit.gradeBand]
   return (
     <Link to={`/unit/${unit.id}`} className="continue-card">
-      <span className="continue-kicker">Continue where you left off</span>
+      <span className="continue-kicker kicker">Continue where you left off</span>
       <h2 className="continue-title">{unit.title}</h2>
       <div className="continue-meta">
         {gradeLabel && <span className="pill pill-grade">{gradeLabel}</span>}
@@ -98,7 +98,7 @@ function ContinueCard({ unit }) {
 function StartCard() {
   return (
     <Link to="/lessons" className="continue-card">
-      <span className="continue-kicker">Get started</span>
+      <span className="continue-kicker kicker">Get started</span>
       <h2 className="continue-title">Start your first lesson</h2>
       <p className="continue-summary">Browse the library to pick a topic and dive in.</p>
     </Link>

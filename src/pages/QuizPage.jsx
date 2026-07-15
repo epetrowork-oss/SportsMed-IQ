@@ -49,15 +49,17 @@ export default function QuizPage() {
           <Link to="/lessons">Units</Link> / <Link to={`/unit/${unit.id}`}>{unit.title}</Link> / Quiz
         </nav>
         <h1>Quiz results</h1>
-        <p className={`quiz-score ${passed ? 'quiz-score-pass' : 'quiz-score-progress'}`}>
-          <span aria-hidden="true">{passed ? '✓' : '●'}</span>{' '}
-          {correctCount} / {questions.length} correct ({Math.round(score * 100)}%)
-        </p>
-        <p>
-          {passed
-            ? 'Nice work — that counts as a pass.'
-            : `You need ${Math.round(PASS_THRESHOLD * 100)}% to pass. Review the lesson and try again.`}
-        </p>
+        <div className={`quiz-results-card ${passed ? 'quiz-results-card-pass' : ''}`}>
+          <p className={`quiz-score ${passed ? 'quiz-score-pass' : 'quiz-score-progress'}`}>
+            <span aria-hidden="true">{passed ? '✓' : '●'}</span>{' '}
+            {correctCount} / {questions.length} correct ({Math.round(score * 100)}%)
+          </p>
+          <p>
+            {passed
+              ? 'Nice work — that counts as a pass.'
+              : `You need ${Math.round(PASS_THRESHOLD * 100)}% to pass. Review the lesson and try again.`}
+          </p>
+        </div>
         <div className="unit-actions">
           <button className="button button-primary" onClick={restart}>
             Retake quiz
@@ -99,9 +101,22 @@ export default function QuizPage() {
       <nav className="breadcrumb">
         <Link to="/lessons">Units</Link> / <Link to={`/unit/${unit.id}`}>{unit.title}</Link> / Quiz
       </nav>
-      <p className="quiz-progress">
+      <p className="kicker quiz-progress">
         Question {index + 1} of {questions.length}
       </p>
+      <div
+        className="quiz-progress-bar"
+        role="progressbar"
+        aria-label="Quiz progress"
+        aria-valuemin={0}
+        aria-valuemax={questions.length}
+        aria-valuenow={index + (answered ? 1 : 0)}
+      >
+        <div
+          className="quiz-progress-fill"
+          style={{ width: `${((index + (answered ? 1 : 0)) / questions.length) * 100}%` }}
+        />
+      </div>
       <h1 className="quiz-question">{question.question}</h1>
       <div className="quiz-choices">
         {orders[index].map((choiceIndex) => {
@@ -123,7 +138,11 @@ export default function QuizPage() {
         })}
       </div>
       {answered && (
-        <div className="quiz-feedback">
+        <div
+          className={`quiz-feedback ${
+            selected === question.answerIndex ? 'quiz-feedback-correct' : 'quiz-feedback-wrong'
+          }`}
+        >
           <p>
             <strong>{selected === question.answerIndex ? 'Correct.' : 'Not quite.'}</strong>{' '}
             {question.explanation}

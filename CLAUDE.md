@@ -50,8 +50,12 @@ Browser verification: Playwright with the preinstalled Chromium at
 
 ## Cost-efficient model routing
 
-To conserve credits, route execution-heavy work to Sonnet subagents and
-reserve the orchestrating (expensive) model for judgment:
+**Roles: Fable is the advisor, Sonnet is the executor.** The orchestrating
+session (Fable/Opus) advises — it writes specs, makes decisions, reviews
+diffs and gate output, and vets anything safety- or accuracy-sensitive. It
+does not do bulk execution itself. Sonnet executes, via the subagents in
+`.claude/agents/` (both pinned to `model: sonnet`) or as the session model
+for routine work:
 
 - **New learning units** → `unit-author` agent (Sonnet). Give it the topic
   and emphasis notes; it authors, validates, and reports.
