@@ -49,7 +49,7 @@
         "asset": "wound-care-direct-pressure-technique.webp",
         "ratio": "4:3",
         "background": "transparent",
-        "description": "A rescuer's gloved hands pressing firmly on a gauze pad over a forearm wound, with a small inset diagram showing a tourniquet band placed 2-3 inches above the wound (not over a joint) with a note reading 'time applied: __' as the secondary, severe-bleeding-only option. Clean instructional-illustration style, non-graphic.",
+        "description": "A rescuer's gloved hands pressing firmly on a gauze pad over a forearm wound, with a small inset diagram showing a tourniquet band placed 2-3 inches above the wound (not over a joint) as the secondary, severe-bleeding-only backup option. The write-down-the-application-time rule is taught in the adjacent lesson text and flashcards rather than in the image (a blank 'time applied' line would read as an unfinished template). Clean instructional-illustration style, non-graphic.",
         "alt": "Diagram of firm direct pressure on a wound with gauze, and a tourniquet placed 2-3 inches above the wound for severe, uncontrolled bleeding.",
         "location": "public/images/units/wound-care/"
       },
