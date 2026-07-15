@@ -1,14 +1,27 @@
-# Plan — pick up here (ALPHA SPRINT Jul 8-10 in progress, see that section)
+# Plan — pick up here (current focus: image pipeline, see `docs/HANDOFF.md`)
 
 This file is the handoff between sessions. Read it first, keep it updated:
 check items off as they land, and add anything newly discovered. The working
 rhythm is unchanged: **build a piece → verify in the browser → commit.**
 
 **Credit-saving protocol** (see `CLAUDE.md` → "Cost-efficient model
-routing"): delegate execution to the Sonnet subagents in `.claude/agents/`
-(`unit-author` for content, `implementer` for spec'd code changes) and keep
-the expensive model for specs, review, and judgment. Each task below is
-tagged with its routing.
+routing"): **Fable is the advisor, Sonnet is the executor.** The
+orchestrating Fable/Opus session writes specs, decides, and reviews;
+execution goes to the Sonnet subagents in `.claude/agents/` (`unit-author`
+for content, `implementer` for spec'd code changes) or a Sonnet-direct
+session for routine batches. Each task below is tagged with its routing.
+
+**Status as of 2026-07-15:** the Jul 8-10 alpha sprint's big feature —
+assignments end-to-end via class codes — is DONE and merged (PR #15 built
+it, PR #16 polished the student queue/focus behavior), GitHub Pages deploy
+is live (`.github/workflows/deploy-pages.yml`), and an offline gamification
+foundation (streak dates, badges, practical activities with reflections +
+Achievements page) landed after the sprint plan was written. The active
+workstream is landing ChatGPT-generated lesson diagrams strand-by-strand —
+**`docs/HANDOFF.md` is the current handoff for that**; it needs the user to
+upload each image batch, so sessions are blocked on that input. Still
+genuinely open from the sprint: the aesthetic pass, a full QA sweep, and
+the `TESTERS.md` alpha kit (not yet written).
 
 ## Where things stand
 
@@ -358,7 +371,7 @@ else is `implementer` (Sonnet).*
 *Routing: orchestrator specs the code format + merge semantics first
 (share.js is subtle); UI builds are `implementer` tasks.*
 
-- [ ] **Assignment code format** (`src/lib/assignments.js`): `SMIQA1.` +
+- [x] **Assignment code format** (`src/lib/assignments.js`): `SMIQA1.` +
       deflate-raw base64url (same plumbing as SMIQ2), payload
       `{name, unitIds[], mode, due?, createdAt}`. Multiple assignments
       can coexist; re-importing the same name updates it. Stored in the
@@ -366,21 +379,23 @@ else is `implementer` (Sonnet).*
       stay compatible; completion is derivable from unit progress).
       Known alpha limitation to document: assignments don't follow a
       student who moves devices via progress code.
-- [ ] **Teacher: assignment builder** on Teacher page: pick units
+- [x] **Teacher: assignment builder** on Teacher page: pick units
       (grouped by strand × band, with grade-band filter), name it, pick
       focus/open mode, optional due date, generate + copy code. Roster
       gains per-assignment completion (% of assigned units complete per
       student) alongside existing columns.
-- [ ] **Student: import + My Lessons**: paste code on Sync (and a
+- [x] **Student: import + My Lessons**: paste code on Sync (and a
       low-friction "have a class code?" entry on Home); "My Lessons"
       becomes the primary home-page module when assignments exist —
       Khan-style short queue ("next up" = first incomplete assigned
       unit), due date shown, per-assignment progress bar; Library obeys
       focus/open mode per decision 1.
-- [ ] **Browser-verify the full loop as both roles**: teacher builds code
+- [x] **Browser-verify the full loop as both roles**: teacher builds code
       → student imports → queue + focus mode correct → student completes
       a unit → exports progress code → teacher roster shows assignment
       completion. Garbage/truncated assignment codes → friendly errors.
+      (All four items above landed via PR #15, queue/focus polish in
+      PR #16.)
 
 ### Day 3 — Fri Jul 10: look, ship, and hand off
 
@@ -392,7 +407,8 @@ else is `implementer` (Sonnet).*
       "dashed dev box" to a presentable illustrated-tile look (soft
       gradient + icon + label) so the alpha doesn't look unfinished
       before real images land.
-- [ ] **Deploy**: GitHub Pages workflow (build on push to `main`),
+- [x] **Deploy** (landed: `e03e3ab`, `.github/workflows/deploy-pages.yml`,
+      hash routing under `/SportsMed-IQ/`): GitHub Pages workflow (build on push to `main`),
       Vite `base` set correctly, SW/manifest verified on the deployed
       URL (installability + offline reload on the real host, not just
       preview).
