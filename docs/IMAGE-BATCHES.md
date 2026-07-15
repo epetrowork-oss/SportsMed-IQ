@@ -106,7 +106,7 @@ was white-filled with sharp, leaving the card artwork byte-untouched. For
 future batches: deliver each card as a standalone, full-frame render with
 no part of any adjacent panel in frame.
 
-## Batch 7: Lesson diagrams — ankle-sprain (9 images)
+## Batch 7: Lesson diagrams — ankle-sprain (9 images) — LANDED 2026-07-15 (6 of 9; 3 held for redo, see note below the table)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -119,6 +119,35 @@ no part of any adjacent panel in frame.
 | 7 | ankle-sprain-lateral-ligaments.webp | 4:3 | white | public/images/units/ankle-sprain/ | Lateral (outside) view of a right ankle joint showing the tibia, fibula, and talus with the lateral malleolus labeled. Highlight the three lateral ligaments in a distinct color: ATFL (anterior talofibular), CFL (calcaneofibular), and PTFL (posterior talofibular), each labeled with its full name and abbreviation. Clean medical-illustration style, neutral foot position. | Diagram of the lateral ankle ligaments — ATFL, CFL, and PTFL — connecting the fibula to the talus and calcaneus. |
 | 8 | ankle-sprain-inversion-mechanism.webp | 4:3 | transparent | public/images/units/ankle-sprain/ | Side view of a right foot and lower leg mid-inversion, sole rolling inward and toes pointed slightly down, weight coming down on the outer edge of the foot after a landing. Use a motion arrow to show the foot rolling inward relative to the leg, and shade the lateral ligaments under tension. Simple athletic-illustration style, no background clutter. | Diagram of an ankle inversion sprain mechanism, showing the foot rolling inward under body weight during a landing. |
 | 9 | ankle-sprain-grading-comparison.webp | 16:9 | white | public/images/units/ankle-sprain/ | Three-panel side-by-side comparison of a lateral ankle, one panel per grade. Grade I: ligament fibers stretched but intact, mild puffiness. Grade II: ligament partially torn (visible frayed fibers), moderate swelling and a light bruise shading. Grade III: ligament completely torn with a visible gap, pronounced swelling and bruising, joint sitting slightly out of normal alignment. Label each panel with its grade number and one-line severity descriptor. Clean medical-illustration style. | Comparison diagram of Grade I, II, and III ankle sprains showing increasing ligament damage, swelling, and bruising. |
+
+**Landed 6 of 9 (2026-07-15):** rows 1, 2, 3, 7, 8, 9
+(`syndesmosis-anatomy`, `differential-diagnosis`, `ligament-basics`,
+`lateral-ligaments`, `inversion-mechanism`, `grading-comparison`). Four of
+these arrived with a neighboring-card sliver bleeding into the top (and, on
+grading/inversion, a side) margin — fixed in-repo by white-filling the
+margin outside each card (artwork untouched, dimensions unchanged), the same
+technique used on batch 6.
+
+**Held for redo — WRONG TOPIC delivered (2026-07-15):** three filenames came
+back with images about entirely different topics than the slot needs.
+Regenerate each to match the row description above, as its own standalone
+full-frame card, illustrated (no photographs / real people):
+- **`ankle-sprain-swelling-signs.webp` (row 4)** — needs a side-by-side
+  *normal ankle vs. swollen/bruised sprained ankle* comparison. Delivered
+  image was a "red flags" checklist, and its own title was cropped off the
+  right edge.
+- **`ankle-sprain-rice-steps.webp` (row 5)** — needs the *RICE rest image*:
+  an athlete sitting with an ice pack on a wrapped ankle, leg propped above
+  heart level. Delivered image was a "how a sprain happens" sports-mechanism
+  scene.
+- **`ankle-sprain-deformity-warning.webp` (row 6)** — needs a *normal ankle
+  vs. an obviously bent/deformed ankle* comparison with a warning outline.
+  Delivered image was a photorealistic clinic exam scene with real people
+  (violates the no-real-people and illustrated-style rules).
+
+Also recurring across batches 6 and 7: neighbor-panel slivers at image
+edges. Deliver each card as a fully standalone frame with nothing from any
+adjacent card in view.
 
 ## Batch 8: Lesson diagrams — fractures-dislocations (8 images)
 

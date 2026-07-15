@@ -70,8 +70,24 @@ of its images had a right-edge production-sheet bleed fixed in-repo by
 white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6). Roughly
 **66 of 165** image slots live.
 
-**Next:** batch 7 = **ankle-sprain**, then batches 8–20 (one strand each)
-per `docs/IMAGE-BATCHES.md`. Regenerate a batch's per-image brief anytime from the
+Batch 7 (**ankle-sprain**) is 6 of 9 landed (2026-07-15) + sourced with the
+NATA Ankle Sprains position statement (2013, doi:10.4085/1062-6050-48.4.02).
+Three slots are held for a redo because ChatGPT returned the wrong topic for
+the filename (swelling-signs → red-flags list; rice-steps → sports-mechanism
+scene; deformity-warning → a photoreal exam scene with real people) — full
+redo notes are in `docs/IMAGE-BATCHES.md` batch 7. Four of the six landed had
+a neighbor-card sliver at the top/side margin, fixed in-repo the same way as
+batch 6.
+
+**Next:** the 3 ankle-sprain redos, then batch 8 = **fractures-dislocations**
+and batches 9–20 (one strand each) per `docs/IMAGE-BATCHES.md`.
+
+**Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
+exporting cards with a sliver of the neighboring panel bleeding into a
+margin, and batch 7 also shuffled three topics onto the wrong filenames and
+used photoreal people once. Worth firmer up-front direction to the image
+author: one standalone full-frame illustrated card per named file, nothing
+from adjacent cards in view, no photographs. Regenerate a batch's per-image brief anytime from the
 unit JSONs' `image` descriptions (or run `npm run images:shotlist`).
 
 ## Peer-reviewed sources already identified (cite when each strand lands)
@@ -96,7 +112,9 @@ EAP Development and Implementation in Sport (2024;59(6):570–583,
 doi:10.4085/1062-6050-0521.23); wound-care → Management of Acute Skin Trauma
 (2016;51(12):1053–1070, doi:10.4085/1062-6050-51.7.01) plus Stop the Bleed
 (ACS Committee on Trauma, stopthebleed.org) on the 9-10/11-12 units for
-packing/tourniquet guidance.
+packing/tourniquet guidance; ankle-sprain → Conservative Management and
+Prevention of Ankle Sprains in Athletes (2013;48(4):528–545,
+doi:10.4085/1062-6050-48.4.02).
 
 Not mapped to any current unit: Type 1 Diabetes (no unit) and Facilitating
 Work-Life Balance (professional-practice, not a student lesson).
