@@ -106,7 +106,7 @@ was white-filled with sharp, leaving the card artwork byte-untouched. For
 future batches: deliver each card as a standalone, full-frame render with
 no part of any adjacent panel in frame.
 
-## Batch 7: Lesson diagrams — ankle-sprain (9 images) — LANDED 2026-07-15 (6 of 9; 3 held for redo, see note below the table)
+## Batch 7: Lesson diagrams — ankle-sprain (9 images) — LANDED 2026-07-15 (9 of 9; 3 redone, see note below the table)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -128,26 +128,20 @@ grading/inversion, a side) margin — fixed in-repo by white-filling the
 margin outside each card (artwork untouched, dimensions unchanged), the same
 technique used on batch 6.
 
-**Held for redo — WRONG TOPIC delivered (2026-07-15):** three filenames came
-back with images about entirely different topics than the slot needs.
-Regenerate each to match the row description above, as its own standalone
-full-frame card, illustrated (no photographs / real people):
-- **`ankle-sprain-swelling-signs.webp` (row 4)** — needs a side-by-side
-  *normal ankle vs. swollen/bruised sprained ankle* comparison. Delivered
-  image was a "red flags" checklist, and its own title was cropped off the
-  right edge.
-- **`ankle-sprain-rice-steps.webp` (row 5)** — needs the *RICE rest image*:
-  an athlete sitting with an ice pack on a wrapped ankle, leg propped above
-  heart level. Delivered image was a "how a sprain happens" sports-mechanism
-  scene.
-- **`ankle-sprain-deformity-warning.webp` (row 6)** — needs a *normal ankle
-  vs. an obviously bent/deformed ankle* comparison with a warning outline.
-  Delivered image was a photorealistic clinic exam scene with real people
-  (violates the no-real-people and illustrated-style rules).
+**Redone and landed (2026-07-15):** rows 4, 5, 6
+(`swelling-signs`, `rice-steps`, `deformity-warning`) first came back on the
+wrong topic (a red-flags checklist, a sports-mechanism scene, and a
+photorealistic exam scene with real people, respectively). The redo batch
+returned all three on-topic and illustrated — swelling-signs = normal vs.
+swollen ankle, rice-steps = athlete resting with ice + elevation (faceless),
+deformity-warning = normal vs. bent/deformed ankle with a warning box. The
+redos still arrived with thin neighbor slivers at an edge (top/left), fixed
+in-repo the same way as the rest. Strand complete 9/9.
 
-Also recurring across batches 6 and 7: neighbor-panel slivers at image
-edges. Deliver each card as a fully standalone frame with nothing from any
-adjacent card in view.
+Recurring across batches 6 and 7: neighbor-panel slivers at image edges (and
+in the first batch-7 delivery, wrong-topic filenames + one photoreal image).
+Deliver each card as a fully standalone illustrated frame with nothing from
+any adjacent card in view.
 
 ## Batch 8: Lesson diagrams — fractures-dislocations (8 images)
 
