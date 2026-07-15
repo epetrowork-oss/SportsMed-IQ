@@ -97,12 +97,9 @@ const REAL_IMAGE_PATHS = {
     'images/units/heat-illness/heat-illness-warning-signs.webp',
   'heat-illness-heat-stroke-emergency.webp':
     'images/units/heat-illness/heat-illness-heat-stroke-emergency.webp',
-  // Emergency-action-plan lesson diagrams (batch 5). All four 7-8
-  // (emergency-action-plan-ms) images are held pending regeneration: their
-  // "call 911 / use the AED / follow dispatcher" messaging contradicts that
-  // unit's "your job is to notice and get an adult; adults handle 911/AED"
-  // pedagogy. The 9-10 and 11-12 diagrams (which do teach hands-on CPR/AED)
-  // stand.
+  // Emergency-action-plan lesson diagrams (batch 5). The four 7-8
+  // (emergency-action-plan-ms) images were reframed after review to the
+  // unit's "notice and get an adult; adults handle 911/AED" pedagogy.
   'eap-team-role-assignment.webp':
     'images/units/emergency-action-plan/eap-team-role-assignment.webp',
   'eap-sca-cause-comparison.webp':
@@ -111,6 +108,14 @@ const REAL_IMAGE_PATHS = {
     'images/units/emergency-action-plan/eap-cpr-hand-placement.webp',
   'eap-aed-pad-placement.webp':
     'images/units/emergency-action-plan/eap-aed-pad-placement.webp',
+  'eap-collapsed-athlete-scene.webp':
+    'images/units/emergency-action-plan/eap-collapsed-athlete-scene.webp',
+  'eap-yell-for-help-scene.webp':
+    'images/units/emergency-action-plan/eap-yell-for-help-scene.webp',
+  'eap-aed-wall-case.webp':
+    'images/units/emergency-action-plan/eap-aed-wall-case.webp',
+  'eap-know-your-school-map.webp':
+    'images/units/emergency-action-plan/eap-know-your-school-map.webp',
 }
 
 function ratioToCss(ratio) {
