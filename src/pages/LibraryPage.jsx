@@ -173,7 +173,7 @@ export default function LibraryPage() {
       )}
       {groups.map(({ category, units }) => (
         <section key={category} className="category-group">
-          <div className="category-heading">
+          <div className={`category-heading category-accent-${slugify(category)}`}>
             <div className="category-icon-slot">
               <ImagePlaceholder
                 asset={`category-${slugify(category)}.webp`}
