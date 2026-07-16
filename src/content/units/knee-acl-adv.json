@@ -249,5 +249,19 @@
       "front": "Neuromuscular training (NMT) programs",
       "back": "Programs like FIFA 11+ cut non-contact ACL injury rates by roughly half by retraining landing mechanics, hamstring strength, and cutting technique. Real-world results depend on consistent, correct compliance — the program's biggest weak link."
     }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Prevention of Anterior Cruciate Ligament Injury",
+      "publisher": "Journal of Athletic Training",
+      "year": 2018,
+      "url": "https://doi.org/10.4085/1062-6050-99-16"
+    },
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Management of Patellofemoral Pain",
+      "publisher": "Journal of Athletic Training",
+      "year": 2018,
+      "url": "https://doi.org/10.4085/1062-6050-231-15"
+    }
   ]
 }

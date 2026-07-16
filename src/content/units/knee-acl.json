@@ -40,8 +40,8 @@
         "asset": "knee-acl-noncontact-landing-mechanism.webp",
         "ratio": "4:3",
         "background": "transparent",
-        "description": "An athlete captured mid-landing from a jump, knee nearly straight and collapsing inward (valgus) toward the midline while the foot stays planted, torso leaning away from the knee. Use a motion/force arrow at the knee to show the inward collapse. No opponent in frame, emphasizing this is a non-contact mechanism. Simple athletic-illustration style.",
-        "alt": "Illustration of the classic non-contact ACL injury mechanism: a knee collapsing inward while landing from a jump.",
+        "description": "Lower-body skeletal biomechanics diagram (titled 'High-risk ACL mechanism') showing the multi-planar non-contact injury alignment on one leg: femoral adduction, dynamic valgus (knee collapsing inward toward the body midline), near-full extension, tibial rotation, and ankle eversion, each labeled with a leader line and the body midline marked. No opponent in frame, emphasizing the non-contact mechanism. Clean anatomical-illustration style, transparent background.",
+        "alt": "Skeletal diagram of the non-contact ACL injury mechanism: one knee collapsing inward (dynamic valgus) toward the body midline, with femoral adduction, near-full extension, tibial rotation, and ankle eversion labeled.",
         "location": "public/images/units/knee-acl/"
       }
     },
@@ -238,6 +238,20 @@
       "id": "f12",
       "front": "ACL risk in female athletes",
       "back": "Roughly 2–6× the rate of male athletes in comparable sports; landing-mechanics (neuromuscular) training programs measurably reduce the risk."
+    }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Prevention of Anterior Cruciate Ligament Injury",
+      "publisher": "Journal of Athletic Training",
+      "year": 2018,
+      "url": "https://doi.org/10.4085/1062-6050-99-16"
+    },
+    {
+      "title": "Anterior Cruciate Ligament (ACL) Injuries",
+      "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)",
+      "year": 2022,
+      "url": "https://orthoinfo.aaos.org/en/diseases--conditions/anterior-cruciate-ligament-acl-injuries/"
     }
   ]
 }

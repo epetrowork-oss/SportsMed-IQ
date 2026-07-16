@@ -173,7 +173,7 @@ to match:
   `fractures-dislocations.json` were updated from "bone exposed through a
   wound" to "a small skin wound connecting to the break."
 
-## Batch 9: Lesson diagrams — knee-acl (8 images)
+## Batch 9: Lesson diagrams — knee-acl (8 images) — LANDED 2026-07-16 (8 of 8, clean delivery)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -185,6 +185,19 @@ to match:
 | 6 | knee-acl-deformity-emergency.webp | 4:3 | white | public/images/units/knee-acl/ | Side-by-side illustration comparing a normal knee to a knee that looks bent out of shape after a serious injury, drawn with a warning-colored outline around the injured knee to signal an emergency. Clean, non-graphic illustration style for middle schoolers. | Comparison drawing of a normal knee next to a deformed knee marked as an emergency warning sign. |
 | 7 | knee-acl-anatomy-mechanism.webp | 4:3 | white | public/images/units/knee-acl/ | Anterior view of a right knee joint with the patella removed to show internal anatomy: femur above, tibia below, and the four major ligaments labeled in distinct colors — ACL and PCL crossing inside the joint, MCL along the inner edge, LCL along the outer edge — plus the medial and lateral menisci shown as C-shaped pads between femur and tibia. Clean medical-illustration style, no text other than labels. | Diagram of the knee joint showing the ACL, PCL, MCL, and LCL ligaments and the medial and lateral menisci. |
 | 8 | knee-acl-noncontact-landing-mechanism.webp | 4:3 | transparent | public/images/units/knee-acl/ | An athlete captured mid-landing from a jump, knee nearly straight and collapsing inward (valgus) toward the midline while the foot stays planted, torso leaning away from the knee. Use a motion/force arrow at the knee to show the inward collapse. No opponent in frame, emphasizing this is a non-contact mechanism. Simple athletic-illustration style. | Illustration of the classic non-contact ACL injury mechanism: a knee collapsing inward while landing from a jump. |
+
+**Landed 8/8 clean (2026-07-16):** standalone full-frame cards, no slivers,
+no photographs, ligament anatomy vetted (ACL/PCL cross inside the joint, MCL
+medial / LCL lateral, C-shaped menisci correct for a right knee), differential
+chart accurate and marked "for trained clinicians," non-contact mechanism
+shown with no opponent and hedged ("do not guarantee injury"). One
+author-flagged, user-approved deviation the unit JSON was updated to match:
+- **Row 8 (`noncontact-landing-mechanism`)** was delivered as a lower-body
+  **skeletal biomechanics diagram** (femoral adduction, dynamic valgus,
+  near-full extension, tibial rotation, ankle eversion, midline) rather than
+  the briefed full-body action figure mid-landing — clearer for the
+  multi-planar alignment. The `alt`/`description` in `knee-acl.json` were
+  rewritten to describe the actual skeletal diagram.
 
 ## Batch 10: Lesson diagrams — shoulder-injuries (8 images)
 
