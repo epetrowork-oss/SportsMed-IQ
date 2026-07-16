@@ -84,8 +84,16 @@ Appendicular Joint Dislocations position statement (2018) and AAOS OrthoInfo
 fracture-vs-dislocation; small-wound open fracture) were sound and the unit
 JSON alts were updated to match.
 
-**Next:** batch 9 = **knee-acl**, then batches 10–20 (one strand each) per
-`docs/IMAGE-BATCHES.md`.
+Batch 9 (**knee-acl**) is complete 8/8 (2026-07-16 — anatomy vetted, no
+slivers/photos) + sourced with the NATA ACL Prevention and Patellofemoral
+Pain position statements (2018) and AAOS OrthoInfo ACL. Codex caught the
+differential chart's meniscal swelling timing ("2-3 days") contradicting the
+app's own "hours to a day"/"overnight" teaching; fixed in-repo by removing the
+"(2-3 days)" parenthetical (cell now reads "Usually gradual"). Row 8 came as a
+skeletal biomechanics diagram (user-approved); its alt was updated to match.
+
+**Next:** batch 10 = **shoulder-injuries**, then batches 11–20 (one strand
+each) per `docs/IMAGE-BATCHES.md`.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a
@@ -100,9 +108,6 @@ unit JSONs' `image` descriptions (or run `npm run images:shotlist`).
 The user provided these NATA position statements (Journal of Athletic Training).
 Attach to each unit's `sources` when that strand's images land:
 
-- **knee-acl** — Prevention of ACL Injury. 2018;53(1):5–19.
-  https://doi.org/10.4085/1062-6050-99-16 · and Management of Patellofemoral
-  Pain. 2018;53(9):820–836. https://doi.org/10.4085/1062-6050-231-15
 - **shoulder-injuries** — Evaluation/RTP for Overhead Athletes with SLAP
   Injuries. 2018;53(3):209–229. https://doi.org/10.4085/1062-6050-59-16
 - **hydration-nutrition** — Fluid Replacement for the Physically Active.
@@ -121,7 +126,10 @@ packing/tourniquet guidance; ankle-sprain → Conservative Management and
 Prevention of Ankle Sprains in Athletes (2013;48(4):528–545,
 doi:10.4085/1062-6050-48.4.02); fractures-dislocations → Immediate Management
 of Appendicular Joint Dislocations (2018;53(12):1117–1128,
-doi:10.4085/1062-6050-421-17) plus AAOS OrthoInfo "Open Fractures."
+doi:10.4085/1062-6050-421-17) plus AAOS OrthoInfo "Open Fractures";
+knee-acl → Prevention of ACL Injury (2018;53(1):5–19,
+doi:10.4085/1062-6050-99-16) and Management of Patellofemoral Pain
+(2018;53(9):820–836, doi:10.4085/1062-6050-231-15) plus AAOS OrthoInfo ACL.
 
 Not mapped to any current unit: Type 1 Diabetes (no unit) and Facilitating
 Work-Life Balance (professional-practice, not a student lesson).

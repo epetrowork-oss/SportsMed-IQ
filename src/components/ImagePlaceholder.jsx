@@ -182,6 +182,32 @@ const REAL_IMAGE_PATHS = {
     'images/units/fractures-dislocations/fractures-dislocations-bone-vs-joint-diagram.webp',
   'fractures-dislocations-open-vs-closed.webp':
     'images/units/fractures-dislocations/fractures-dislocations-open-vs-closed.webp',
+  // Knee-acl lesson diagrams (batch 9, complete 8/8). Clean delivery — no
+  // slivers, no photographs, anatomy vetted (ACL/PCL cross inside, MCL
+  // medial / LCL lateral, C-shaped menisci). The noncontact-landing slot was
+  // delivered as a user-approved lower-body skeletal biomechanics diagram
+  // (not a full-body action figure); its unit-JSON alt/desc were updated to
+  // match. On differential-comparison-chart, the meniscal-tear swelling cell's
+  // '(2-3 days)' parenthetical was removed in-repo (it contradicted the app's
+  // 'hours to a day' / 'overnight' teaching in six places, per Codex); the
+  // cell now reads 'Usually gradual', matching the three no-parenthetical
+  // columns. See docs/IMAGE-BATCHES.md batch 9.
+  'knee-acl-position-of-no-return.webp':
+    'images/units/knee-acl/knee-acl-position-of-no-return.webp',
+  'knee-acl-differential-comparison-chart.webp':
+    'images/units/knee-acl/knee-acl-differential-comparison-chart.webp',
+  'knee-acl-inside-the-knee.webp':
+    'images/units/knee-acl/knee-acl-inside-the-knee.webp',
+  'knee-acl-planting-twist-mechanism.webp':
+    'images/units/knee-acl/knee-acl-planting-twist-mechanism.webp',
+  'knee-acl-warning-signs.webp':
+    'images/units/knee-acl/knee-acl-warning-signs.webp',
+  'knee-acl-deformity-emergency.webp':
+    'images/units/knee-acl/knee-acl-deformity-emergency.webp',
+  'knee-acl-anatomy-mechanism.webp':
+    'images/units/knee-acl/knee-acl-anatomy-mechanism.webp',
+  'knee-acl-noncontact-landing-mechanism.webp':
+    'images/units/knee-acl/knee-acl-noncontact-landing-mechanism.webp',
 }
 
 function ratioToCss(ratio) {
