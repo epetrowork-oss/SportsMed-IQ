@@ -77,8 +77,15 @@ on the wrong topic and were redone on-topic; several images across both the
 first delivery and the redo had neighbor-card slivers at a margin, fixed
 in-repo the same way as batch 6.
 
-**Next:** batch 8 = **fractures-dislocations**, then batches 9–20 (one strand
-each) per `docs/IMAGE-BATCHES.md`.
+Batch 8 (**fractures-dislocations**) is complete 8/8 (2026-07-16, clean
+delivery — no slivers, no photos, all on-topic) + sourced with the NATA
+Appendicular Joint Dislocations position statement (2018) and AAOS OrthoInfo
+"Open Fractures." Two author refinements (recognition-graphic
+fracture-vs-dislocation; small-wound open fracture) were sound and the unit
+JSON alts were updated to match.
+
+**Next:** batch 9 = **knee-acl**, then batches 10–20 (one strand each) per
+`docs/IMAGE-BATCHES.md`.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a
@@ -112,7 +119,9 @@ doi:10.4085/1062-6050-0521.23); wound-care → Management of Acute Skin Trauma
 (ACS Committee on Trauma, stopthebleed.org) on the 9-10/11-12 units for
 packing/tourniquet guidance; ankle-sprain → Conservative Management and
 Prevention of Ankle Sprains in Athletes (2013;48(4):528–545,
-doi:10.4085/1062-6050-48.4.02).
+doi:10.4085/1062-6050-48.4.02); fractures-dislocations → Immediate Management
+of Appendicular Joint Dislocations (2018;53(12):1117–1128,
+doi:10.4085/1062-6050-421-17) plus AAOS OrthoInfo "Open Fractures."
 
 Not mapped to any current unit: Type 1 Diabetes (no unit) and Facilitating
 Work-Life Balance (professional-practice, not a student lesson).

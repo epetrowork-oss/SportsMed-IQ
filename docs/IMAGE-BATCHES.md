@@ -143,7 +143,7 @@ in the first batch-7 delivery, wrong-topic filenames + one photoreal image).
 Deliver each card as a fully standalone illustrated frame with nothing from
 any adjacent card in view.
 
-## Batch 8: Lesson diagrams — fractures-dislocations (8 images)
+## Batch 8: Lesson diagrams — fractures-dislocations (8 images) — LANDED 2026-07-16 (8 of 8, clean delivery)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -155,6 +155,23 @@ any adjacent card in view.
 | 6 | fractures-dislocations-doctor-xray-decision.webp | 4:3 | white | public/images/units/fractures-dislocations/ | Simple, calm illustration of a doctor in a clinic looking at an X-ray image of a bone displayed on a lightbox or screen, showing that a doctor is the one who decides when an athlete can return to play. Clean, flat illustration style. | A doctor looking at an X-ray image of a bone in a clinic. |
 | 7 | fractures-dislocations-bone-vs-joint-diagram.webp | 16:9 | white | public/images/units/fractures-dislocations/ | Two-panel comparison at a shoulder joint. Left panel: a fracture — a break line through the humerus bone itself, with the joint still properly seated. Right panel: a dislocation — the humeral head displaced completely out of its socket, with the bone itself intact. Label each panel 'Fracture' and 'Dislocation.' Clean medical-illustration style, no graphic detail. | Comparison diagram of a bone fracture versus a joint dislocation at the shoulder. |
 | 8 | fractures-dislocations-open-vs-closed.webp | 4:3 | white | public/images/units/fractures-dislocations/ | Two-panel cross-section comparison of a broken lower leg. Left panel: closed fracture — the break line is visible through a translucent skin overlay, but the skin surface is intact. Right panel: open fracture — a wound in the skin with the edge of the bone visible at the wound margin, and a dressing with gentle pressure being applied around (not on top of) the exposed bone. Label each panel 'Closed' and 'Open.' Clean clinical-illustration style, non-graphic. | Comparison diagram of a closed fracture (skin intact) and an open fracture (bone exposed through a wound). |
+
+**Landed 8/8 clean (2026-07-16):** best delivery yet — standalone full-frame
+cards, no neighbor slivers, no photographs, all on-topic and medically
+accurate. Two deliberate, sound author refinements the unit JSON was updated
+to match:
+- **Row 3 (`fracture-vs-dislocation`)** was delivered as an *illustrated
+  athlete recognition graphic* (a teen holding a painful/swollen forearm vs.
+  a teen whose shoulder looks out of place) rather than the isolated
+  forearm-bone / shoulder-joint diagram originally briefed — intentional, to
+  avoid duplicating row 7's detailed bone-vs-joint anatomy. The slot's
+  `alt`/`description` in `fractures-dislocations-ms.json` were rewritten to
+  describe the actual image.
+- **Row 8 (`open-vs-closed`)** shows a *small skin wound communicating with
+  the fracture* rather than protruding bone (medically correct per AAOS — an
+  open fracture doesn't require exposed bone). The `alt`/`description` in
+  `fractures-dislocations.json` were updated from "bone exposed through a
+  wound" to "a small skin wound connecting to the break."
 
 ## Batch 9: Lesson diagrams — knee-acl (8 images)
 
