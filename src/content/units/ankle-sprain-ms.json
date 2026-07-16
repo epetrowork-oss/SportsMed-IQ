@@ -258,5 +258,13 @@
       "front": "Who decides when to return to play?",
       "back": "An athletic trainer, doctor, or coach following medical guidance — never the athlete or a teammate alone."
     }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Conservative Management and Prevention of Ankle Sprains in Athletes",
+      "publisher": "Journal of Athletic Training",
+      "year": 2013,
+      "url": "https://doi.org/10.4085/1062-6050-48.4.02"
+    }
   ]
 }

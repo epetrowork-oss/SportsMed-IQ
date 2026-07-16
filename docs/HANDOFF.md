@@ -70,8 +70,22 @@ of its images had a right-edge production-sheet bleed fixed in-repo by
 white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6). Roughly
 **66 of 165** image slots live.
 
-**Next:** batch 7 = **ankle-sprain**, then batches 8–20 (one strand each)
-per `docs/IMAGE-BATCHES.md`. Regenerate a batch's per-image brief anytime from the
+Batch 7 (**ankle-sprain**) is complete 9/9 (2026-07-15) + sourced with the
+NATA Ankle Sprains position statement (2013, doi:10.4085/1062-6050-48.4.02).
+Three images (swelling-signs, rice-steps, deformity-warning) first came back
+on the wrong topic and were redone on-topic; several images across both the
+first delivery and the redo had neighbor-card slivers at a margin, fixed
+in-repo the same way as batch 6.
+
+**Next:** batch 8 = **fractures-dislocations**, then batches 9–20 (one strand
+each) per `docs/IMAGE-BATCHES.md`.
+
+**Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
+exporting cards with a sliver of the neighboring panel bleeding into a
+margin, and batch 7 also shuffled three topics onto the wrong filenames and
+used photoreal people once. Worth firmer up-front direction to the image
+author: one standalone full-frame illustrated card per named file, nothing
+from adjacent cards in view, no photographs. Regenerate a batch's per-image brief anytime from the
 unit JSONs' `image` descriptions (or run `npm run images:shotlist`).
 
 ## Peer-reviewed sources already identified (cite when each strand lands)
@@ -96,7 +110,9 @@ EAP Development and Implementation in Sport (2024;59(6):570–583,
 doi:10.4085/1062-6050-0521.23); wound-care → Management of Acute Skin Trauma
 (2016;51(12):1053–1070, doi:10.4085/1062-6050-51.7.01) plus Stop the Bleed
 (ACS Committee on Trauma, stopthebleed.org) on the 9-10/11-12 units for
-packing/tourniquet guidance.
+packing/tourniquet guidance; ankle-sprain → Conservative Management and
+Prevention of Ankle Sprains in Athletes (2013;48(4):528–545,
+doi:10.4085/1062-6050-48.4.02).
 
 Not mapped to any current unit: Type 1 Diabetes (no unit) and Facilitating
 Work-Life Balance (professional-practice, not a student lesson).

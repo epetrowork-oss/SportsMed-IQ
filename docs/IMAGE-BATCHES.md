@@ -106,7 +106,7 @@ was white-filled with sharp, leaving the card artwork byte-untouched. For
 future batches: deliver each card as a standalone, full-frame render with
 no part of any adjacent panel in frame.
 
-## Batch 7: Lesson diagrams — ankle-sprain (9 images)
+## Batch 7: Lesson diagrams — ankle-sprain (9 images) — LANDED 2026-07-15 (9 of 9; 3 redone, see note below the table)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -119,6 +119,29 @@ no part of any adjacent panel in frame.
 | 7 | ankle-sprain-lateral-ligaments.webp | 4:3 | white | public/images/units/ankle-sprain/ | Lateral (outside) view of a right ankle joint showing the tibia, fibula, and talus with the lateral malleolus labeled. Highlight the three lateral ligaments in a distinct color: ATFL (anterior talofibular), CFL (calcaneofibular), and PTFL (posterior talofibular), each labeled with its full name and abbreviation. Clean medical-illustration style, neutral foot position. | Diagram of the lateral ankle ligaments — ATFL, CFL, and PTFL — connecting the fibula to the talus and calcaneus. |
 | 8 | ankle-sprain-inversion-mechanism.webp | 4:3 | transparent | public/images/units/ankle-sprain/ | Side view of a right foot and lower leg mid-inversion, sole rolling inward and toes pointed slightly down, weight coming down on the outer edge of the foot after a landing. Use a motion arrow to show the foot rolling inward relative to the leg, and shade the lateral ligaments under tension. Simple athletic-illustration style, no background clutter. | Diagram of an ankle inversion sprain mechanism, showing the foot rolling inward under body weight during a landing. |
 | 9 | ankle-sprain-grading-comparison.webp | 16:9 | white | public/images/units/ankle-sprain/ | Three-panel side-by-side comparison of a lateral ankle, one panel per grade. Grade I: ligament fibers stretched but intact, mild puffiness. Grade II: ligament partially torn (visible frayed fibers), moderate swelling and a light bruise shading. Grade III: ligament completely torn with a visible gap, pronounced swelling and bruising, joint sitting slightly out of normal alignment. Label each panel with its grade number and one-line severity descriptor. Clean medical-illustration style. | Comparison diagram of Grade I, II, and III ankle sprains showing increasing ligament damage, swelling, and bruising. |
+
+**Landed 6 of 9 (2026-07-15):** rows 1, 2, 3, 7, 8, 9
+(`syndesmosis-anatomy`, `differential-diagnosis`, `ligament-basics`,
+`lateral-ligaments`, `inversion-mechanism`, `grading-comparison`). Four of
+these arrived with a neighboring-card sliver bleeding into the top (and, on
+grading/inversion, a side) margin — fixed in-repo by white-filling the
+margin outside each card (artwork untouched, dimensions unchanged), the same
+technique used on batch 6.
+
+**Redone and landed (2026-07-15):** rows 4, 5, 6
+(`swelling-signs`, `rice-steps`, `deformity-warning`) first came back on the
+wrong topic (a red-flags checklist, a sports-mechanism scene, and a
+photorealistic exam scene with real people, respectively). The redo batch
+returned all three on-topic and illustrated — swelling-signs = normal vs.
+swollen ankle, rice-steps = athlete resting with ice + elevation (faceless),
+deformity-warning = normal vs. bent/deformed ankle with a warning box. The
+redos still arrived with thin neighbor slivers at an edge (top/left), fixed
+in-repo the same way as the rest. Strand complete 9/9.
+
+Recurring across batches 6 and 7: neighbor-panel slivers at image edges (and
+in the first batch-7 delivery, wrong-topic filenames + one photoreal image).
+Deliver each card as a fully standalone illustrated frame with nothing from
+any adjacent card in view.
 
 ## Batch 8: Lesson diagrams — fractures-dislocations (8 images)
 

@@ -281,5 +281,13 @@
       "front": "Limb symmetry index for return to play",
       "back": "Functional test performance (e.g., single-leg hop) on the injured side compared to the uninjured side; clinicians commonly look for roughly 90% or better before clearing full return."
     }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Conservative Management and Prevention of Ankle Sprains in Athletes",
+      "publisher": "Journal of Athletic Training",
+      "year": 2013,
+      "url": "https://doi.org/10.4085/1062-6050-48.4.02"
+    }
   ]
 }

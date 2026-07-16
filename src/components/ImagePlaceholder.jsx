@@ -136,6 +136,30 @@ const REAL_IMAGE_PATHS = {
     'images/units/wound-care/wound-care-infection-signs.webp',
   'wound-care-nosebleed-position.webp':
     'images/units/wound-care/wound-care-nosebleed-position.webp',
+  // Ankle-sprain lesson diagrams (batch 7, complete 9/9). The first delivery
+  // had neighboring-card slivers bleeding into a margin on several images
+  // (fixed in-repo by white-filling the margin outside each card, artwork
+  // untouched); swelling-signs, rice-steps, and deformity-warning came back
+  // on the wrong topic and were redone (the redos also had thin edge slivers,
+  // fixed the same way). See docs/IMAGE-BATCHES.md batch 7.
+  'ankle-sprain-syndesmosis-anatomy.webp':
+    'images/units/ankle-sprain/ankle-sprain-syndesmosis-anatomy.webp',
+  'ankle-sprain-differential-diagnosis.webp':
+    'images/units/ankle-sprain/ankle-sprain-differential-diagnosis.webp',
+  'ankle-sprain-ligament-basics.webp':
+    'images/units/ankle-sprain/ankle-sprain-ligament-basics.webp',
+  'ankle-sprain-swelling-signs.webp':
+    'images/units/ankle-sprain/ankle-sprain-swelling-signs.webp',
+  'ankle-sprain-rice-steps.webp':
+    'images/units/ankle-sprain/ankle-sprain-rice-steps.webp',
+  'ankle-sprain-deformity-warning.webp':
+    'images/units/ankle-sprain/ankle-sprain-deformity-warning.webp',
+  'ankle-sprain-lateral-ligaments.webp':
+    'images/units/ankle-sprain/ankle-sprain-lateral-ligaments.webp',
+  'ankle-sprain-inversion-mechanism.webp':
+    'images/units/ankle-sprain/ankle-sprain-inversion-mechanism.webp',
+  'ankle-sprain-grading-comparison.webp':
+    'images/units/ankle-sprain/ankle-sprain-grading-comparison.webp',
 }
 
 function ratioToCss(ratio) {
