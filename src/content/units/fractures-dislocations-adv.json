@@ -267,5 +267,19 @@
       "front": "Posterior hip dislocation position",
       "back": "Hip flexed, adducted, internally rotated, leg appears shortened — a time-sensitive emergency for the femoral head's blood supply; do not move the leg, activate EMS immediately."
     }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Immediate Management of Appendicular Joint Dislocations",
+      "publisher": "Journal of Athletic Training",
+      "year": 2018,
+      "url": "https://doi.org/10.4085/1062-6050-421-17"
+    },
+    {
+      "title": "Open Fractures",
+      "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)",
+      "year": 2022,
+      "url": "https://orthoinfo.aaos.org/en/diseases--conditions/open-fractures/"
+    }
   ]
 }

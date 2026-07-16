@@ -18,8 +18,8 @@
         "asset": "fractures-dislocations-fracture-vs-dislocation.webp",
         "ratio": "4:3",
         "background": "white",
-        "description": "Simple side-by-side diagram: left side shows a forearm bone with a break highlighted in red (a fracture); right side shows a shoulder joint with the bones out of their normal alignment (a dislocation). Clean, labeled, non-graphic medical-illustration style for middle schoolers.",
-        "alt": "Side-by-side diagram comparing a broken forearm bone to a dislocated shoulder joint.",
+        "description": "Simple side-by-side recognition illustration for middle schoolers, titled 'Fracture or dislocation?'. Left, 'Suspected fracture': an athlete holding a forearm with pain and swelling highlighted along the bone. Right, 'Suspected dislocation': an athlete whose shoulder looks out of place, supporting the arm. Clean, non-graphic illustration style (illustrated figures, not photographs).",
+        "alt": "Illustration comparing an athlete holding a painful, swollen forearm (suspected fracture) to an athlete whose shoulder looks out of place (suspected dislocation).",
         "location": "public/images/units/fractures-dislocations/"
       }
     },
@@ -262,6 +262,14 @@
       "id": "f12",
       "front": "Who decides return to play",
       "back": "A doctor, using an exam and often an X-ray — never the athlete, a teammate, or a coach guessing."
+    }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Immediate Management of Appendicular Joint Dislocations",
+      "publisher": "Journal of Athletic Training",
+      "year": 2018,
+      "url": "https://doi.org/10.4085/1062-6050-421-17"
     }
   ]
 }

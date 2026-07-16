@@ -160,6 +160,28 @@ const REAL_IMAGE_PATHS = {
     'images/units/ankle-sprain/ankle-sprain-inversion-mechanism.webp',
   'ankle-sprain-grading-comparison.webp':
     'images/units/ankle-sprain/ankle-sprain-grading-comparison.webp',
+  // Fractures-dislocations lesson diagrams (batch 8, complete 8/8). Clean
+  // delivery — standalone full-frame cards, no slivers, no photographs. The
+  // fracture-vs-dislocation slot was delivered as an illustrated athlete
+  // recognition graphic (not the isolated bone diagram originally briefed,
+  // to avoid duplicating bone-vs-joint-diagram); its unit-JSON alt/desc were
+  // updated to match. See docs/IMAGE-BATCHES.md batch 8.
+  'fractures-dislocations-pattern-classification.webp':
+    'images/units/fractures-dislocations/fractures-dislocations-pattern-classification.webp',
+  'fractures-dislocations-patellar-vs-knee-dislocation.webp':
+    'images/units/fractures-dislocations/fractures-dislocations-patellar-vs-knee-dislocation.webp',
+  'fractures-dislocations-fracture-vs-dislocation.webp':
+    'images/units/fractures-dislocations/fractures-dislocations-fracture-vs-dislocation.webp',
+  'fractures-dislocations-warning-signs.webp':
+    'images/units/fractures-dislocations/fractures-dislocations-warning-signs.webp',
+  'fractures-dislocations-do-not-move.webp':
+    'images/units/fractures-dislocations/fractures-dislocations-do-not-move.webp',
+  'fractures-dislocations-doctor-xray-decision.webp':
+    'images/units/fractures-dislocations/fractures-dislocations-doctor-xray-decision.webp',
+  'fractures-dislocations-bone-vs-joint-diagram.webp':
+    'images/units/fractures-dislocations/fractures-dislocations-bone-vs-joint-diagram.webp',
+  'fractures-dislocations-open-vs-closed.webp':
+    'images/units/fractures-dislocations/fractures-dislocations-open-vs-closed.webp',
 }
 
 function ratioToCss(ratio) {
