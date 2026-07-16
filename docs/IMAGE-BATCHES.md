@@ -173,7 +173,7 @@ to match:
   `fractures-dislocations.json` were updated from "bone exposed through a
   wound" to "a small skin wound connecting to the break."
 
-## Batch 9: Lesson diagrams — knee-acl (8 images) — LANDED 2026-07-16 (8 of 8, clean delivery)
+## Batch 9: Lesson diagrams — knee-acl (8 images) — LANDED 2026-07-16 (7 of 8; differential chart held for a timing-fix redo)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -186,12 +186,23 @@ to match:
 | 7 | knee-acl-anatomy-mechanism.webp | 4:3 | white | public/images/units/knee-acl/ | Anterior view of a right knee joint with the patella removed to show internal anatomy: femur above, tibia below, and the four major ligaments labeled in distinct colors — ACL and PCL crossing inside the joint, MCL along the inner edge, LCL along the outer edge — plus the medial and lateral menisci shown as C-shaped pads between femur and tibia. Clean medical-illustration style, no text other than labels. | Diagram of the knee joint showing the ACL, PCL, MCL, and LCL ligaments and the medial and lateral menisci. |
 | 8 | knee-acl-noncontact-landing-mechanism.webp | 4:3 | transparent | public/images/units/knee-acl/ | An athlete captured mid-landing from a jump, knee nearly straight and collapsing inward (valgus) toward the midline while the foot stays planted, torso leaning away from the knee. Use a motion/force arrow at the knee to show the inward collapse. No opponent in frame, emphasizing this is a non-contact mechanism. Simple athletic-illustration style. | Illustration of the classic non-contact ACL injury mechanism: a knee collapsing inward while landing from a jump. |
 
-**Landed 8/8 clean (2026-07-16):** standalone full-frame cards, no slivers,
+**Landed 7/8 (2026-07-16):** standalone full-frame cards, no slivers,
 no photographs, ligament anatomy vetted (ACL/PCL cross inside the joint, MCL
-medial / LCL lateral, C-shaped menisci correct for a right knee), differential
-chart accurate and marked "for trained clinicians," non-contact mechanism
-shown with no opponent and hedged ("do not guarantee injury"). One
-author-flagged, user-approved deviation the unit JSON was updated to match:
+medial / LCL lateral, C-shaped menisci correct for a right knee), non-contact
+mechanism shown with no opponent and hedged ("do not guarantee injury").
+
+**Held for a one-image redo (row 2, `differential-comparison-chart`):** the
+chart is otherwise excellent (correct mechanisms and hallmark exam findings,
+marked "for trained clinicians"), but its **meniscal-tear swelling timing
+reads "usually gradual (2–3 days)," which contradicts the app's own text** —
+the lesson, flashcard, and quiz in `knee-acl-adv.json` (and the `knee-acl.json`
+9-10 lesson/flashcard) all teach gradual meniscal effusion over "hours to a
+day" / "overnight," the standard rapid-vs-next-day contrast with ACL
+hemarthrosis. Regenerate the chart with the meniscal SWELLING cell corrected
+to roughly "gradual (~1 day)" or "gradual (next day)"; everything else in the
+chart is correct and can be reproduced as-is.
+
+One author-flagged, user-approved deviation the unit JSON was updated to match:
 - **Row 8 (`noncontact-landing-mechanism`)** was delivered as a lower-body
   **skeletal biomechanics diagram** (femoral adduction, dynamic valgus,
   near-full extension, tibial rotation, ankle eversion, midline) rather than

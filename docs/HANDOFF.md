@@ -84,15 +84,16 @@ Appendicular Joint Dislocations position statement (2018) and AAOS OrthoInfo
 fracture-vs-dislocation; small-wound open fracture) were sound and the unit
 JSON alts were updated to match.
 
-Batch 9 (**knee-acl**) is complete 8/8 (2026-07-16, clean delivery —
-anatomy vetted, no slivers/photos) + sourced with the NATA ACL Prevention
-and Patellofemoral Pain position statements (2018) and AAOS OrthoInfo ACL.
-One user-approved deviation (row 8 delivered as a skeletal biomechanics
-diagram rather than an action figure) was sound; its unit-JSON alt updated
-to match.
+Batch 9 (**knee-acl**) is 7 of 8 landed (2026-07-16 — anatomy vetted, no
+slivers/photos) + sourced with the NATA ACL Prevention and Patellofemoral
+Pain position statements (2018) and AAOS OrthoInfo ACL. The `differential-
+comparison-chart` (11-12) is held for a one-image redo: its meniscal swelling
+timing ("2-3 days") contradicts the app's own "hours to a day"/"overnight"
+teaching (caught by Codex). Row 8 came as a skeletal biomechanics diagram
+(user-approved); its alt was updated to match.
 
-**Next:** batch 10 = **shoulder-injuries**, then batches 11–20 (one strand
-each) per `docs/IMAGE-BATCHES.md`.
+**Next:** the knee-acl chart redo, then batch 10 = **shoulder-injuries** and
+batches 11–20 (one strand each) per `docs/IMAGE-BATCHES.md`.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a
