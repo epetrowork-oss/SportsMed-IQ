@@ -173,7 +173,7 @@ to match:
   `fractures-dislocations.json` were updated from "bone exposed through a
   wound" to "a small skin wound connecting to the break."
 
-## Batch 9: Lesson diagrams — knee-acl (8 images) — LANDED 2026-07-16 (7 of 8; differential chart held for a timing-fix redo)
+## Batch 9: Lesson diagrams — knee-acl (8 images) — LANDED 2026-07-16 (8 of 8; differential chart timing corrected in-repo)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -191,16 +191,18 @@ no photographs, ligament anatomy vetted (ACL/PCL cross inside the joint, MCL
 medial / LCL lateral, C-shaped menisci correct for a right knee), non-contact
 mechanism shown with no opponent and hedged ("do not guarantee injury").
 
-**Held for a one-image redo (row 2, `differential-comparison-chart`):** the
-chart is otherwise excellent (correct mechanisms and hallmark exam findings,
-marked "for trained clinicians"), but its **meniscal-tear swelling timing
-reads "usually gradual (2–3 days)," which contradicts the app's own text** —
-the lesson, flashcard, and quiz in `knee-acl-adv.json` (and the `knee-acl.json`
-9-10 lesson/flashcard) all teach gradual meniscal effusion over "hours to a
-day" / "overnight," the standard rapid-vs-next-day contrast with ACL
-hemarthrosis. Regenerate the chart with the meniscal SWELLING cell corrected
-to roughly "gradual (~1 day)" or "gradual (next day)"; everything else in the
-chart is correct and can be reproduced as-is.
+**Timing correction on row 2, `differential-comparison-chart` (Codex catch,
+fixed in-repo):** as delivered, the meniscal-tear SWELLING cell read "usually
+gradual (2–3 days)," which contradicted the app's own text — the lesson,
+flashcard, and quiz in `knee-acl-adv.json` (and the `knee-acl.json` 9-10
+lesson/flashcard) all teach gradual meniscal effusion over "hours to a day" /
+"overnight," the standard rapid-vs-next-day contrast with ACL hemarthrosis.
+Rather than a full redo, the "(2–3 days)" parenthetical was white-filled out
+in-repo (background-matched, no other pixels touched), leaving "Usually
+gradual" — consistent with the three columns (PCL, MCL/LCL, patellar) that
+carry no timing parenthetical, and no longer contradicting the lesson. If this
+strand is ever regenerated, brief the meniscal SWELLING cell as "gradual
+(next day)".
 
 One author-flagged, user-approved deviation the unit JSON was updated to match:
 - **Row 8 (`noncontact-landing-mechanism`)** was delivered as a lower-body
