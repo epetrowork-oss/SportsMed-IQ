@@ -262,5 +262,19 @@
       "front": "Complete rupture / avulsion red flags",
       "back": "Felt/heard pop, immediate inability to contract the muscle, a palpable gap, a balled-up (retracted) muscle mass, and rapidly spreading bruising — protect/immobilize and refer to a physician immediately."
     }
+  ],
+  "sources": [
+    {
+      "title": "Hamstring Strain Injuries: Recommendations for Diagnosis, Rehabilitation, and Injury Prevention",
+      "publisher": "Journal of Orthopaedic & Sports Physical Therapy",
+      "year": 2010,
+      "url": "https://doi.org/10.2519/jospt.2010.3047"
+    },
+    {
+      "title": "Sprains, Strains and Other Soft-Tissue Injuries",
+      "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)",
+      "year": 2022,
+      "url": "https://orthoinfo.aaos.org/en/diseases--conditions/sprains-strains-and-other-soft-tissue-injuries/"
+    }
   ]
 }
