@@ -266,5 +266,13 @@
       "front": "Who decides return to play",
       "back": "An athletic trainer or doctor decides when a shoulder injury has healed enough to play again, not the athlete or a teammate."
     }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Immediate Management of Appendicular Joint Dislocations",
+      "publisher": "Journal of Athletic Training",
+      "year": 2018,
+      "url": "https://doi.org/10.4085/1062-6050-421-17"
+    }
   ]
 }
