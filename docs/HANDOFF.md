@@ -92,8 +92,17 @@ app's own "hours to a day"/"overnight" teaching; fixed in-repo by removing the
 "(2-3 days)" parenthetical (cell now reads "Usually gradual"). Row 8 came as a
 skeletal biomechanics diagram (user-approved); its alt was updated to match.
 
-**Next:** batch 10 = **shoulder-injuries**, then batches 11–20 (one strand
-each) per `docs/IMAGE-BATCHES.md`.
+Batch 10 (**shoulder-injuries**) is complete 8/8 (2026-07-16, clean delivery
+— best anatomy yet: glenoid/labrum, four rotator-cuff muscles with a
+posterior-cuff inset, separate AC joint, Bankart/Hill-Sachs, classic-vs-
+internal impingement, dislocation-vs-AC signs all correct) + sourced with the
+NATA SLAP and Appendicular Joint Dislocations statements (2018) and AAOS
+OrthoInfo shoulder instability. Minor: the dislocation figure cradles the arm
+rather than the classic "held away"; landed (squared-off sign is correct),
+alt made position-neutral.
+
+**Next:** batch 11 = **muscle-strains**, then batches 12–20 (one strand each)
+per `docs/IMAGE-BATCHES.md`.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a
@@ -108,8 +117,6 @@ unit JSONs' `image` descriptions (or run `npm run images:shotlist`).
 The user provided these NATA position statements (Journal of Athletic Training).
 Attach to each unit's `sources` when that strand's images land:
 
-- **shoulder-injuries** — Evaluation/RTP for Overhead Athletes with SLAP
-  Injuries. 2018;53(3):209–229. https://doi.org/10.4085/1062-6050-59-16
 - **hydration-nutrition** — Fluid Replacement for the Physically Active.
   2017;52(9):877–895. https://doi.org/10.4085/1062-6050-52.9.02 · and Safe
   Weight Loss and Maintenance Practices in Sport and Exercise. 2011;46(3):
@@ -129,7 +136,10 @@ of Appendicular Joint Dislocations (2018;53(12):1117–1128,
 doi:10.4085/1062-6050-421-17) plus AAOS OrthoInfo "Open Fractures";
 knee-acl → Prevention of ACL Injury (2018;53(1):5–19,
 doi:10.4085/1062-6050-99-16) and Management of Patellofemoral Pain
-(2018;53(9):820–836, doi:10.4085/1062-6050-231-15) plus AAOS OrthoInfo ACL.
+(2018;53(9):820–836, doi:10.4085/1062-6050-231-15) plus AAOS OrthoInfo ACL;
+shoulder-injuries → Overhead Athletes With SLAP Injuries (2018;53(3):209–229,
+doi:10.4085/1062-6050-59-16) and Immediate Management of Appendicular Joint
+Dislocations (2018) plus AAOS OrthoInfo shoulder instability.
 
 Not mapped to any current unit: Type 1 Diabetes (no unit) and Facilitating
 Work-Life Balance (professional-practice, not a student lesson).

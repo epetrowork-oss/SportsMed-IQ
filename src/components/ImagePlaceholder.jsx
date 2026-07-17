@@ -208,6 +208,31 @@ const REAL_IMAGE_PATHS = {
     'images/units/knee-acl/knee-acl-anatomy-mechanism.webp',
   'knee-acl-noncontact-landing-mechanism.webp':
     'images/units/knee-acl/knee-acl-noncontact-landing-mechanism.webp',
+  // Shoulder-injuries lesson diagrams (batch 10, complete 8/8). Clean
+  // delivery — no slivers, no photographs, anatomy vetted (glenoid/labrum,
+  // four rotator-cuff muscles with a posterior-cuff inset for infraspinatus/
+  // teres minor, separate AC joint; Bankart = anterior-inferior labrum,
+  // Hill-Sachs = posterior humeral-head divot; dislocation squared-off vs AC
+  // step-off; classic vs internal impingement with correct athlete groups).
+  // The dislocation-vs-ac-sprain arm is guarded/supported (its unit-JSON
+  // alt/desc were made position-neutral to stay consistent with the lesson's
+  // 'held away from the body' text). See docs/IMAGE-BATCHES.md batch 10.
+  'shoulder-injuries-bankart-hill-sachs.webp':
+    'images/units/shoulder-injuries/shoulder-injuries-bankart-hill-sachs.webp',
+  'shoulder-injuries-internal-vs-classic-impingement.webp':
+    'images/units/shoulder-injuries/shoulder-injuries-internal-vs-classic-impingement.webp',
+  'shoulder-injuries-two-causes.webp':
+    'images/units/shoulder-injuries/shoulder-injuries-two-causes.webp',
+  'shoulder-injuries-warning-signs.webp':
+    'images/units/shoulder-injuries/shoulder-injuries-warning-signs.webp',
+  'shoulder-injuries-support-the-arm.webp':
+    'images/units/shoulder-injuries/shoulder-injuries-support-the-arm.webp',
+  'shoulder-injuries-overhead-ache.webp':
+    'images/units/shoulder-injuries/shoulder-injuries-overhead-ache.webp',
+  'shoulder-injuries-glenohumeral-anatomy.webp':
+    'images/units/shoulder-injuries/shoulder-injuries-glenohumeral-anatomy.webp',
+  'shoulder-injuries-dislocation-vs-ac-sprain.webp':
+    'images/units/shoulder-injuries/shoulder-injuries-dislocation-vs-ac-sprain.webp',
 }
 
 function ratioToCss(ratio) {

@@ -212,7 +212,7 @@ One author-flagged, user-approved deviation the unit JSON was updated to match:
   multi-planar alignment. The `alt`/`description` in `knee-acl.json` were
   rewritten to describe the actual skeletal diagram.
 
-## Batch 10: Lesson diagrams — shoulder-injuries (8 images)
+## Batch 10: Lesson diagrams — shoulder-injuries (8 images) — LANDED 2026-07-16 (8 of 8, clean delivery)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -224,6 +224,21 @@ One author-flagged, user-approved deviation the unit JSON was updated to match:
 | 6 | shoulder-injuries-overhead-ache.webp | 4:3 | white | public/images/units/shoulder-injuries/ | Illustration of a swimmer or pitcher reaching overhead with a wincing expression and a small highlighted ache mark on the shoulder, showing discomfort during a repeated overhead motion rather than a sudden fall. Clean, simple illustration style for middle schoolers. | Illustration of an athlete wincing while reaching overhead, showing shoulder pain that builds up from overuse. |
 | 7 | shoulder-injuries-glenohumeral-anatomy.webp | 4:3 | white | public/images/units/shoulder-injuries/ | Anterior view of the right shoulder with the humeral head seated in the shallow glenoid socket of the scapula. Label the glenohumeral joint, the labrum as a thin rim of cartilage around the socket edge, the four rotator cuff muscles (supraspinatus, infraspinatus, teres minor, subscapularis) wrapping the humeral head in a distinct color, and the AC joint where the clavicle meets the acromion, shown as a separate small joint above. Clean medical-illustration style. | Diagram of the shoulder's glenohumeral joint showing the shallow glenoid socket, labrum, rotator cuff muscles, and the separate AC joint. |
 | 8 | shoulder-injuries-dislocation-vs-ac-sprain.webp | 16:9 | white | public/images/units/shoulder-injuries/ | Two-panel comparison of an injured right shoulder from the front. Left panel labeled 'Dislocation': arm held away from the body and supported by the other hand, shoulder contour looking squared-off instead of rounded. Right panel labeled 'AC sprain (separation)': arm hanging naturally at the side, with a visible step-off bump at the very top of the shoulder where the collarbone rides up. Clean medical-illustration style, non-graphic. | Comparison diagram of a shoulder dislocation (arm held away, squared-off contour) versus an AC joint sprain (arm hangs normally, step-off bump at the shoulder tip). |
+
+**Landed 8/8 clean (2026-07-16):** best-anatomy batch yet — standalone
+full-frame cards, no slivers, no photographs. Anatomy vetted: glenoid/labrum,
+the four rotator-cuff muscles with a smart posterior-cuff inset (so
+infraspinatus/teres minor aren't drawn on the anterior view; teres major
+correctly omitted), the separate AC joint; Bankart = anterior-inferior
+labrum, Hill-Sachs = posterior humeral-head divot (pairing with anterior
+dislocation); classic subacromial vs internal impingement with correct
+athlete groups (swimmers / throwers); dislocation squared-off contour vs AC
+step-off bump. Minor: on `dislocation-vs-ac-sprain` the injured arm is drawn
+cradled/supported rather than the lesson's classic "held away from the body"
+— the diagnostic sign (squared-off contour) is correct and labeled, so it was
+landed; the unit-JSON alt/desc were made position-neutral ("guarded and
+supported") to stay consistent with the lesson text. If ever regenerated,
+draw the dislocated arm slightly abducted/away from the body.
 
 ## Batch 11: Lesson diagrams — muscle-strains (8 images)
 
