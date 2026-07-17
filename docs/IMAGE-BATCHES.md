@@ -240,7 +240,7 @@ landed; the unit-JSON alt/desc were made position-neutral ("guarded and
 supported") to stay consistent with the lesson text. If ever regenerated,
 draw the dislocated arm slightly abducted/away from the body.
 
-## Batch 11: Lesson diagrams — muscle-strains (8 images)
+## Batch 11: Lesson diagrams — muscle-strains (8 images) — LANDED 2026-07-16 (8 of 8, clean delivery)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -252,6 +252,18 @@ draw the dislocated arm slightly abducted/away from the body.
 | 6 | muscle-strains-severe-warning.webp | 4:3 | white | public/images/units/muscle-strains/ | Side-by-side illustration comparing a normal thigh muscle outline to one with a visible dent or gap where the muscle tore, drawn with a warning-colored outline around the injured area to signal danger. Clean, non-graphic illustration style for middle schoolers. | Comparison drawing of a normal thigh muscle next to one with a visible dent marking a severe muscle tear warning sign. |
 | 7 | muscle-strains-two-joint-muscles-map.webp | 4:3 | white | public/images/units/muscle-strains/ | Front and back outline of a human body with the four commonly strained two-joint muscle groups highlighted and labeled: hamstrings (back of thigh, crossing hip and knee), rectus femoris (front of thigh, crossing hip and knee), groin/adductors (inner thigh), and gastrocnemius (calf, crossing knee and ankle). Use a consistent highlight color for all four with small joint-crossing icons at each end. Clean medical-illustration style. | Body diagram highlighting the hamstrings, rectus femoris, groin/adductors, and calf — the muscle groups most often strained because they cross two joints. |
 | 8 | muscle-strains-grading-comparison.webp | 16:9 | white | public/images/units/muscle-strains/ | Three-panel comparison of a muscle belly (e.g., hamstring) cross-section, one panel per grade. Grade I: a few individual fibers frayed, muscle shape intact. Grade II: a visible partial tear through part of the muscle width, mild retraction. Grade III: a complete tear all the way through with a visible gap and the two ends balled up, plus a downstream bruise shading. Label each panel with its grade number. Clean medical-illustration style. | Comparison diagram of Grade I, II, and III muscle strains showing increasing fiber damage from a few stretched fibers to a complete rupture. |
+
+**Landed 8/8 clean (2026-07-16):** standalone full-frame cards, no slivers,
+no photographs, all on-topic. Anatomy vetted: the four two-joint muscle groups
+(hamstring, quad/rectus femoris, groin/adductors, gastrocnemius) correctly
+located, with the `two-joint-muscles-map` handling the adductor subtlety well
+(labels "gracilis crosses hip + knee" rather than implying every adductor is
+biarticular); terminal/late-swing eccentric hamstring mechanism correct; I→III
+grading progression correct; and the differential chart's DOMS "24–72 hours"
+matches the lesson/flashcard text exactly (no repeat of the batch-9 chart
+issue). The differential chart is headed "Recognition clues — not a diagnosis"
+and the severe-warning image uses the correct "visible dent — get an adult"
+framing.
 
 ## Batch 12: Lesson diagrams — overuse-injuries (8 images)
 

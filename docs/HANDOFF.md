@@ -101,8 +101,15 @@ OrthoInfo shoulder instability. Minor: the dislocation figure cradles the arm
 rather than the classic "held away"; landed (squared-off sign is correct),
 alt made position-neutral.
 
-**Next:** batch 11 = **muscle-strains**, then batches 12–20 (one strand each)
-per `docs/IMAGE-BATCHES.md`.
+Batch 11 (**muscle-strains**) is complete 8/8 (2026-07-16, clean delivery —
+anatomy vetted incl. the gracilis/adductor subtlety, DOMS chart timing matches
+the lesson) + sourced with the JOSPT hamstring-strain recommendations (2010)
+and AAOS OrthoInfo soft-tissue injuries. NOTE: these two sources were not
+pre-earmarked in the list below (muscle-strains had none) — worth a quick
+human confirm of the JOSPT DOI/citation.
+
+**Next:** batch 12 = **overuse-injuries**, then batches 13–20 (one strand
+each) per `docs/IMAGE-BATCHES.md`.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a

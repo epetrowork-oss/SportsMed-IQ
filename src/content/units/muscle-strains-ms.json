@@ -258,5 +258,13 @@
       "front": "Who decides when to return to play?",
       "back": "An athletic trainer, doctor, or coach following medical guidance — never the athlete or a teammate alone."
     }
+  ],
+  "sources": [
+    {
+      "title": "Sprains, Strains and Other Soft-Tissue Injuries",
+      "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)",
+      "year": 2022,
+      "url": "https://orthoinfo.aaos.org/en/diseases--conditions/sprains-strains-and-other-soft-tissue-injuries/"
+    }
   ]
 }

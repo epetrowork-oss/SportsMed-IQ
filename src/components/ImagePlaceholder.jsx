@@ -233,6 +233,29 @@ const REAL_IMAGE_PATHS = {
     'images/units/shoulder-injuries/shoulder-injuries-glenohumeral-anatomy.webp',
   'shoulder-injuries-dislocation-vs-ac-sprain.webp':
     'images/units/shoulder-injuries/shoulder-injuries-dislocation-vs-ac-sprain.webp',
+  // Muscle-strains lesson diagrams (batch 11, complete 8/8). Clean delivery —
+  // no slivers, no photographs. Anatomy vetted: four two-joint muscle groups
+  // (hamstring/quad-rectus femoris/adductors/gastrocnemius) with the gracilis
+  // adductor subtlety handled correctly; terminal/late-swing eccentric
+  // hamstring mechanism; I->III grading; and the differential chart's
+  // DOMS "24-72 hours" matches the lesson text. See docs/IMAGE-BATCHES.md
+  // batch 11.
+  'muscle-strains-terminal-swing-mechanism.webp':
+    'images/units/muscle-strains/muscle-strains-terminal-swing-mechanism.webp',
+  'muscle-strains-differential-chart.webp':
+    'images/units/muscle-strains/muscle-strains-differential-chart.webp',
+  'muscle-strains-common-spots.webp':
+    'images/units/muscle-strains/muscle-strains-common-spots.webp',
+  'muscle-strains-warning-signs.webp':
+    'images/units/muscle-strains/muscle-strains-warning-signs.webp',
+  'muscle-strains-rice-steps.webp':
+    'images/units/muscle-strains/muscle-strains-rice-steps.webp',
+  'muscle-strains-severe-warning.webp':
+    'images/units/muscle-strains/muscle-strains-severe-warning.webp',
+  'muscle-strains-two-joint-muscles-map.webp':
+    'images/units/muscle-strains/muscle-strains-two-joint-muscles-map.webp',
+  'muscle-strains-grading-comparison.webp':
+    'images/units/muscle-strains/muscle-strains-grading-comparison.webp',
 }
 
 function ratioToCss(ratio) {
