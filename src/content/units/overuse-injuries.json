@@ -247,5 +247,19 @@
       "front": "Stress fracture treatment",
       "back": "Genuine rest from impact, often 6–8 weeks, sometimes a boot or crutches, with a gradual supervised return; high-risk sites need urgent physician management."
     }
+  ],
+  "sources": [
+    {
+      "title": "Stress Fractures",
+      "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)",
+      "year": 2022,
+      "url": "https://orthoinfo.aaos.org/en/diseases--conditions/stress-fractures/"
+    },
+    {
+      "title": "Bone stress injuries (International Delphi consensus / clinical review)",
+      "publisher": "British Journal of Sports Medicine",
+      "year": 2022,
+      "url": "https://doi.org/10.1136/bjsports-2021-104994"
+    }
   ]
 }

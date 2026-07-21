@@ -256,6 +256,32 @@ const REAL_IMAGE_PATHS = {
     'images/units/muscle-strains/muscle-strains-two-joint-muscles-map.webp',
   'muscle-strains-grading-comparison.webp':
     'images/units/muscle-strains/muscle-strains-grading-comparison.webp',
+  // Overuse-injuries lesson diagrams (batch 12, complete 8/8). Clean delivery
+  // — no slivers, no photographs. Numbers/staging vetted against the lesson:
+  // ACWR sweet spot 0.8-1.3 / spike >1.5 (framed as "historically proposed /
+  // not a guarantee" — matches the lesson's numbers, more cautiously);
+  // bone-stress continuum (strain -> reaction -> fracture -> complete) with
+  // correct high-risk (tension-side femoral neck, anterior tibial cortex,
+  // navicular) vs low-risk (posteromedial tibia, fibula, metatarsals) sites
+  // as close-ups; four-stage pain ladder; shin-splints vs stress-fracture.
+  // Two alts updated to match delivered images (close-ups not a body outline;
+  // "throwing shoulder"). See docs/IMAGE-BATCHES.md batch 12.
+  'overuse-injuries-acwr-graph.webp':
+    'images/units/overuse-injuries/overuse-injuries-acwr-graph.webp',
+  'overuse-injuries-bone-stress-continuum.webp':
+    'images/units/overuse-injuries/overuse-injuries-bone-stress-continuum.webp',
+  'overuse-injuries-sudden-vs-gradual.webp':
+    'images/units/overuse-injuries/overuse-injuries-sudden-vs-gradual.webp',
+  'overuse-injuries-common-spots.webp':
+    'images/units/overuse-injuries/overuse-injuries-common-spots.webp',
+  'overuse-injuries-warning-signs.webp':
+    'images/units/overuse-injuries/overuse-injuries-warning-signs.webp',
+  'overuse-injuries-prevention-habits.webp':
+    'images/units/overuse-injuries/overuse-injuries-prevention-habits.webp',
+  'overuse-injuries-pain-stage-progression.webp':
+    'images/units/overuse-injuries/overuse-injuries-pain-stage-progression.webp',
+  'overuse-injuries-shin-splints-vs-stress-fracture.webp':
+    'images/units/overuse-injuries/overuse-injuries-shin-splints-vs-stress-fracture.webp',
 }
 
 function ratioToCss(ratio) {

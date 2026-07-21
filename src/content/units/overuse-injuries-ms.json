@@ -39,7 +39,7 @@
         "ratio": "4:3",
         "background": "white",
         "description": "Simple outline of a young athlete's body from the front, with four common overuse pain spots highlighted in a bright color: the shin, the heel, just below the kneecap, and the elbow/shoulder. Clean, simple illustration style for middle schoolers, minimal labels.",
-        "alt": "Diagram of a young athlete's body highlighting the shin, heel, knee, and elbow/shoulder as common overuse pain spots.",
+        "alt": "Diagram of a young athlete's body highlighting the shin, heel, just below the kneecap, and the throwing shoulder as common overuse pain spots.",
         "location": "public/images/units/overuse-injuries/"
       }
     },
@@ -264,6 +264,14 @@
       "id": "f12",
       "front": "Lowering overuse risk",
       "back": "Warm up before activity, take rest days during the week, play more than one sport/activity across the year, and wear shoes that fit and aren't worn out."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Stress Fractures",
+      "publisher": "American Academy of Orthopaedic Surgeons (OrthoInfo)",
+      "year": 2022,
+      "url": "https://orthoinfo.aaos.org/en/diseases--conditions/stress-fractures/"
     }
   ]
 }

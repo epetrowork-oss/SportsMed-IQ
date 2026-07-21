@@ -108,8 +108,17 @@ and AAOS OrthoInfo soft-tissue injuries. NOTE: these two sources were not
 pre-earmarked in the list below (muscle-strains had none) — worth a quick
 human confirm of the JOSPT DOI/citation.
 
-**Next:** batch 12 = **overuse-injuries**, then batches 13–20 (one strand
-each) per `docs/IMAGE-BATCHES.md`.
+Batch 12 (**overuse-injuries**) is complete 8/8 (2026-07-16, clean delivery —
+most number-heavy batch, all values verified against the lesson: ACWR
+0.8/1.3/1.5, bone-stress continuum + risk sites, four-stage pain ladder) +
+sourced with Gabbett (BJSM 2016), a bone-stress-injury BJSM reference, and
+AAOS OrthoInfo stress fractures. Two alts updated to match delivered images
+(close-ups not a body outline; throwing shoulder). NOTE: the BJSM
+bone-stress DOI and the AAOS stress-fractures URL are best-effort and worth a
+human confirm.
+
+**Next:** batch 13 = **taping-wrapping**, then batches 14–20 (one strand each)
+per `docs/IMAGE-BATCHES.md`.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a
