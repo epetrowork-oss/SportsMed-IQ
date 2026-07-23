@@ -265,7 +265,7 @@ issue). The differential chart is headed "Recognition clues — not a diagnosis"
 and the severe-warning image uses the correct "visible dent — get an adult"
 framing.
 
-## Batch 12: Lesson diagrams — overuse-injuries (8 images)
+## Batch 12: Lesson diagrams — overuse-injuries (8 images) — LANDED 2026-07-16 (8 of 8, clean delivery)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -277,6 +277,24 @@ framing.
 | 6 | overuse-injuries-prevention-habits.webp | 4:3 | white | public/images/units/overuse-injuries/ | Illustration of a young athlete warming up with light jogging, next to a small calendar showing a marked rest day and two different sport icons (like a soccer ball and a basketball) to show mixing up activities. Clean, friendly illustration style for middle schoolers. | Illustration showing an athlete warming up, a marked rest day on a calendar, and icons for playing more than one sport. |
 | 7 | overuse-injuries-pain-stage-progression.webp | 16:9 | transparent | public/images/units/overuse-injuries/ | Horizontal four-step severity ladder, each step taller and darker-shaded than the last. Stage 1: 'Pain after activity only.' Stage 2: 'Pain during activity, not limiting.' Stage 3: 'Pain during activity, limiting performance.' Stage 4: 'Pain at rest / night — stop and refer.' Use a rising arrow beneath the steps to show escalating urgency. Clean flat infographic style. | Four-stage severity ladder showing overuse injury pain progression from pain after activity only to pain at rest requiring referral. |
 | 8 | overuse-injuries-shin-splints-vs-stress-fracture.webp | 4:3 | white | public/images/units/overuse-injuries/ | Front view of a lower leg with two shaded pain-location overlays side by side. Left overlay labeled 'Shin splints': a broad, diffuse shaded band running several centimeters along the inner border of the tibia. Right overlay labeled 'Stress fracture': a single small, sharply defined pinpoint dot at one spot on the tibia. Include a short caption under each: 'eases with warm-up' vs. 'worsens through activity, may ache at night.' Clean medical-illustration style. | Comparison diagram of shin splints (diffuse pain along the inner shin) versus a stress fracture (pinpoint bone pain). |
+
+**Landed 8/8 clean (2026-07-16):** the most number-heavy batch, all values
+verified against the lesson. Standalone full-frame cards, no slivers, no
+photographs. Notable evidence-aware author refinements (all sound, kept):
+- **`acwr-graph`**: keeps the exact 0.8 / 1.3 / 1.5 thresholds (matching the
+  `overuse-injuries-adv.json` lesson, quiz, and flashcard) but frames the band
+  as a "historically proposed sweet spot" and adds "not a safety guarantee" —
+  more cautious than the lesson, not contradictory (the ACWR has been
+  critiqued; README cites Impellizzeri 2020). No number conflict.
+- **`bone-stress-continuum`**: correct four-stage continuum + specifies the
+  **tension-side** superior femoral neck; uses six labeled anatomical
+  close-ups instead of a small body outline (clearer). Its unit-JSON alt was
+  updated from "on a body outline" to describe the close-ups.
+- **`common-spots`**: fourth spot resolved to "throwing shoulder" (brief said
+  elbow/shoulder); alt updated to match.
+- `pain-stage-progression` uses the four exact stage statements; `common-spots`,
+  `shin-splints-vs-stress-fracture`, and `prevention-habits` all carry
+  recognition-not-diagnosis / not-a-guarantee wording.
 
 ## Batch 13: Lesson diagrams — taping-wrapping (8 images)
 

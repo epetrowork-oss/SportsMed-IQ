@@ -62,7 +62,7 @@
         "ratio": "16:9",
         "background": "white",
         "description": "Horizontal four-stage continuum diagram of bone stress injury, each stage bar taller/darker than the last: 1) 'Bone strain' — subclinical, no imaging findings. 2) 'Stress reaction' — bone marrow edema visible on MRI, no fracture line. 3) 'Stress fracture' — visible fracture line. 4) 'Complete/displaced fracture.' Beneath the continuum, a small body outline marks high-risk sites (femoral neck, tarsal navicular, anterior tibial cortex) in a warning color versus low-risk sites (posteromedial tibia, fibula, metatarsal shafts) in a neutral color. Clean instructional-illustration style.",
-        "alt": "Diagram of the bone stress injury continuum from bone strain through stress reaction, stress fracture, to complete fracture, with high-risk and low-risk anatomical sites marked on a body outline.",
+        "alt": "Diagram of the bone stress injury continuum from bone strain through stress reaction, stress fracture, to complete fracture, with higher-risk sites (superior femoral neck, anterior tibial cortex, tarsal navicular) and lower-risk sites (posteromedial tibia, fibula, metatarsal shafts) shown as labeled anatomical close-ups.",
         "location": "public/images/units/overuse-injuries/"
       },
       "callout": {
@@ -258,6 +258,20 @@
       "id": "f12",
       "front": "RED-S and energy availability",
       "back": "Energy availability = dietary intake minus exercise expenditure, relative to lean mass. Low EA drives RED-S: bone, menstrual, metabolic, immune, cardiovascular, and performance consequences in athletes of any sex. Recurrent stress fractures + fatigue + missed cycles = refer to a professional, sensitively and promptly — never a discipline issue."
+    }
+  ],
+  "sources": [
+    {
+      "title": "The training-injury prevention paradox: should athletes be training smarter and harder?",
+      "publisher": "British Journal of Sports Medicine",
+      "year": 2016,
+      "url": "https://doi.org/10.1136/bjsports-2015-095788"
+    },
+    {
+      "title": "Bone stress injuries (International Delphi consensus / clinical review)",
+      "publisher": "British Journal of Sports Medicine",
+      "year": 2022,
+      "url": "https://doi.org/10.1136/bjsports-2021-104994"
     }
   ]
 }
