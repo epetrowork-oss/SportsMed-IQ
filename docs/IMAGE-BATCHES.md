@@ -296,7 +296,7 @@ photographs. Notable evidence-aware author refinements (all sound, kept):
   `shin-splints-vs-stress-fracture`, and `prevention-habits` all carry
   recognition-not-diagnosis / not-a-guarantee wording.
 
-## Batch 13: Lesson diagrams — taping-wrapping (8 images)
+## Batch 13: Lesson diagrams — taping-wrapping (8 images) — LANDED 2026-07-27 (8 of 8, clean delivery)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -308,6 +308,55 @@ photographs. Notable evidence-aware author refinements (all sound, kept):
 | 6 | taping-wrapping-dont-hide-pain.webp | 4:3 | white | public/images/units/taping-wrapping/ | Illustration of an athletic trainer taping an athlete's ankle while the athlete winces slightly in pain but stays quiet, with a small thought bubble showing the athlete wanting to keep playing. A gentle visual reminder to speak up rather than mask pain. Clean, simple illustration style for middle schoolers. | Illustration of an athlete wincing while getting taped, showing why hiding pain from an adult is not okay. |
 | 7 | taping-wrapping-basket-weave-pattern.webp | 4:3 | white | public/images/units/taping-wrapping/ | Step diagram of a closed basket weave ankle taping job on a right ankle, shown as a build-up sequence: anchor strips (one around the lower leg, one around the arch), alternating stirrups (vertical strips up one side, under the heel, up the other) and horseshoes (horizontal strips low to high), and finishing figure-8 and heel-lock strips crossing diagonally over the foot and around the heel. Use numbered layers or a light color gradient to show build order. Clean instructional-illustration style. | Step diagram of the closed basket weave ankle taping pattern, showing anchors, stirrups, horseshoes, and finishing figure-8/heel-lock strips. |
 | 8 | taping-wrapping-capillary-refill-check.webp | 4:3 | transparent | public/images/units/taping-wrapping/ | Close-up of a hand pressing on a toenail bed distal to a wrapped ankle, with a small two-step sequence: step 1 shows the nail turning white under pressure, step 2 shows the nail released with a stopwatch icon reading 'under 2 seconds' as color returns. Clean instructional-illustration style. | Diagram of the capillary refill check: pressing a toenail bed until white, then timing how quickly pink color returns. |
+
+**Landed 8/8 clean (2026-07-27):** no neighbor slivers (the first batch
+where edge-profiling flagged nothing but legitimate full-bleed
+composition), no wrong-topic files, correct filenames and dimensions
+throughout. Accuracy verified against the unit text on every number and
+label:
+- **`materials-comparison`** — the batch's most sensitive image, since the
+  11-12 unit teaches students to appraise kinesiology-tape marketing
+  critically and its quiz counts believing those claims as the wrong
+  answer. Delivered correctly: kinesiology tape reads "Minimal mechanical
+  restriction / Evidence is mixed / Possible short-term sensory cueing,"
+  with none of the marketing claims (lymphatic drainage, circulation, pain
+  relief, injury prevention) asserted anywhere. Rigid tape is labeled
+  "Initial mechanical restriction," which lines up with the same unit's
+  teaching that restriction decays during activity. Cohesive wrap is
+  correctly "Not designed for rigid motion restriction."
+- **`basket-weave-pattern`** — build order matches the 9-10 lesson strip by
+  strip: anchors (lower leg + arch) → 3 stirrups + 3 horseshoes labeled
+  "inside first" → figure-8 + heel lock → closing strips, with a posterior
+  view inset. Illustration style, correctly labeled with the lesson's own
+  terms.
+- **`capillary-refill-check`** — stopwatch reads "< 2 sec" and the caption
+  "Pink returns in under 2 seconds," matching the lesson, quiz, and
+  flashcard exactly; nail bed checked is distal to the wrap. **Delivered at
+  274 KB** (4.5x the 30-60 KB budget) and re-encoded in-repo to 58.2 KB at
+  WebP q=82 with the alpha channel preserved and label text still crisp —
+  the only mechanical fix this batch needed.
+- **`too-tight-warning`** — correct 7-8 scope: signs listed are numbness /
+  tingling / pale, blue, or unusual color, and the action is "Tell an adult
+  immediately." No student is shown loosening or re-applying a wrap.
+- One alt reconciliation: **`dont-hide-pain`** was briefed with the athlete
+  wincing, but the delivered figures are drawn with featureless faces (a
+  faceless figure was also accepted in batch 7), so no wince is visible.
+  The message carries instead through a thought bubble ("I want to keep
+  playing…") and the trainer's "Speak up about pain." The slot's
+  `alt`/`description` in `taping-wrapping-ms.json` were rewritten to
+  describe what is actually shown.
+
+**Style note for future batches:** this batch mixes rendering styles —
+`materials-comparison`, `dermatitis-vs-blister`, `capillary-refill-check`,
+`tape-vs-wrap`, and `three-jobs` are photorealistic renders of anonymous
+body parts (no faces, no identifiable people, no photographs of real
+people), while `basket-weave-pattern`, `too-tight-warning`, and
+`dont-hide-pain` are illustrated. Nothing here breaks the no-photographs /
+no-real-people rule, and realistic skin rendering genuinely helps the
+dermatitis-vs-blister comparison, but the 7-8 band images read more
+photoreal than the flat-illustration style used in batches 3-5. Worth
+deciding explicitly if visual consistency across the app matters more than
+per-image clarity.
 
 ## Batch 14: Lesson diagrams — warmup-injury-prevention (8 images)
 

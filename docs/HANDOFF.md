@@ -67,8 +67,16 @@ diagrams for the **4 safety-critical strands** — concussion, heat-illness,
 emergency-action-plan, and wound-care (each 8/8, sourced; wound-care cites
 NATA Acute Skin Trauma on all bands plus Stop the Bleed on 9-10/11-12; two
 of its images had a right-edge production-sheet bleed fixed in-repo by
-white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6). Roughly
-**66 of 165** image slots live.
+white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6).
+
+**Current totals (recounted 2026-07-27, after batch 13):
+89 of 139 lesson-diagram slots live (64%), and 115 of 165 image slots
+overall** (139 diagrams + 18 thumbnails + 7 category icons + 1 hero). Count
+these from the repo rather than trusting a prior line — an earlier handoff
+put diagram progress at "115 of 139," which was the total-mapped-files
+number (115/165) mistakenly written against the diagram denominator. To
+recount: walk each unit JSON's section `image.asset` values and test each
+against `REAL_IMAGE_PATHS` in `src/components/ImagePlaceholder.jsx`.
 
 Batch 7 (**ankle-sprain**) is complete 9/9 (2026-07-15) + sourced with the
 NATA Ankle Sprains position statement (2013, doi:10.4085/1062-6050-48.4.02).
@@ -117,8 +125,25 @@ AAOS OrthoInfo stress fractures. Two alts updated to match delivered images
 bone-stress DOI and the AAOS stress-fractures URL are best-effort and worth a
 human confirm.
 
-**Next:** batch 13 = **taping-wrapping**, then batches 14–20 (one strand each)
-per `docs/IMAGE-BATCHES.md`.
+Batch 13 (**taping-wrapping**) is complete 8/8 (2026-07-27, clean delivery —
+no slivers, no wrong-topic files) + sourced with the NATA ankle-sprains
+position statement, whose Recommendation 28 covers prophylactic taping and
+bracing. The sensitive `materials-comparison` chart correctly frames
+kinesiology tape as mixed evidence / possible sensory cueing with none of
+the marketing claims the 11-12 unit teaches students to question.
+`capillary-refill-check` arrived at 274 KB and was re-encoded in-repo to
+58.2 KB (q=82, alpha preserved); `dont-hide-pain`'s alt was rewritten
+because the delivered figures are faceless and show no wince. Landing this
+strand also surfaced a lesson-vs-source conflict, fixed in the same PR: the
+11-12 unit asserted that taping without rehab shifts load to the knee or
+hip, while the NATA statement it now cites says taping and bracing have not
+been found to increase knee injuries — the passage was reworked to state
+what the evidence does and does not support. See `docs/IMAGE-BATCHES.md`
+batch 13 for a style note about this batch mixing photoreal and illustrated
+renders.
+
+**Next:** batch 14 = **warmup-injury-prevention**, then batches 15–20 (one
+strand each) per `docs/IMAGE-BATCHES.md`.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a
@@ -155,7 +180,19 @@ doi:10.4085/1062-6050-99-16) and Management of Patellofemoral Pain
 (2018;53(9):820–836, doi:10.4085/1062-6050-231-15) plus AAOS OrthoInfo ACL;
 shoulder-injuries → Overhead Athletes With SLAP Injuries (2018;53(3):209–229,
 doi:10.4085/1062-6050-59-16) and Immediate Management of Appendicular Joint
-Dislocations (2018) plus AAOS OrthoInfo shoulder instability.
+Dislocations (2018) plus AAOS OrthoInfo shoulder instability;
+taping-wrapping → Conservative Management and Prevention of Ankle Sprains in
+Athletes (2013;48(4):528–545, doi:10.4085/1062-6050-48.4.02) on all three
+bands — the same statement cited on ankle-sprain, reused here because its
+Recommendation 28 is the direct evidence for prophylactic taping/bracing.
+Citation verified against the source PDF, so unlike the batch 11/12 sources
+it needs no human confirm.
+
+Still uncited in taping-wrapping: the 11-12 unit's claim that a substantial
+share of rigid tape's motion restriction is gone within about 20–30 minutes
+of activity. It is well established in the taping literature, but the NATA
+ankle statement does not address mechanical decay (its reference list was
+checked), so no citation was attached rather than guessing one.
 
 Not mapped to any current unit: Type 1 Diabetes (no unit) and Facilitating
 Work-Life Balance (professional-practice, not a student lesson).
