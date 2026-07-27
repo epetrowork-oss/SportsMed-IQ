@@ -282,6 +282,24 @@ const REAL_IMAGE_PATHS = {
     'images/units/overuse-injuries/overuse-injuries-pain-stage-progression.webp',
   'overuse-injuries-shin-splints-vs-stress-fracture.webp':
     'images/units/overuse-injuries/overuse-injuries-shin-splints-vs-stress-fracture.webp',
+
+  // taping-wrapping lesson diagrams (batch 13)
+  'taping-wrapping-materials-comparison.webp':
+    'images/units/taping-wrapping/taping-wrapping-materials-comparison.webp',
+  'taping-wrapping-dermatitis-vs-blister.webp':
+    'images/units/taping-wrapping/taping-wrapping-dermatitis-vs-blister.webp',
+  'taping-wrapping-tape-vs-wrap.webp':
+    'images/units/taping-wrapping/taping-wrapping-tape-vs-wrap.webp',
+  'taping-wrapping-three-jobs.webp':
+    'images/units/taping-wrapping/taping-wrapping-three-jobs.webp',
+  'taping-wrapping-too-tight-warning.webp':
+    'images/units/taping-wrapping/taping-wrapping-too-tight-warning.webp',
+  'taping-wrapping-dont-hide-pain.webp':
+    'images/units/taping-wrapping/taping-wrapping-dont-hide-pain.webp',
+  'taping-wrapping-basket-weave-pattern.webp':
+    'images/units/taping-wrapping/taping-wrapping-basket-weave-pattern.webp',
+  'taping-wrapping-capillary-refill-check.webp':
+    'images/units/taping-wrapping/taping-wrapping-capillary-refill-check.webp',
 }
 
 function ratioToCss(ratio) {

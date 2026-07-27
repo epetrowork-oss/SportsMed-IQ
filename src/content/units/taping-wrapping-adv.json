@@ -68,7 +68,7 @@
         "A well-applied rigid tape job is not a static barrier that holds its exact mechanical properties for an entire game. Studies measuring ankle range of motion before and after a single practice or game consistently find that a substantial share of the initial motion restriction is gone within about 20-30 minutes of activity, as the tape stretches with sweat, heat, and repeated loading — and this happens even when the job was applied correctly, not just when it was applied poorly.",
         "What's left after that mechanical decay is thought to be largely proprioceptive: continued light pressure and skin stimulation around the joint appears to speed up the reflex reaction time of stabilizing muscles, rather than physically blocking the joint from moving. This is a meaningful distinction for how you talk about tape — \"the tape is still stuck on\" is not the same claim as \"the tape is still mechanically restricting the joint.\"",
         "Tape vs. brace, compared head to head: semi-rigid ankle braces hold their mechanical properties through a full session in a way tape does not, and across a season the two are comparably effective at reducing sprain recurrence, especially in athletes with a prior sprain history. The practical tradeoff is cost and reusability — a brace is purchased once and reused session after session, while tape is a consumable that must be repurchased and reapplied by trained hands every single time. Neither is universally \"better\"; the choice depends on the situation, which is covered in the next section.",
-        "None of this changes when taping is inappropriate. Taping an unevaluated acute injury is still a hard no — restriction can give a false sense of security while masking pain from a structure that hasn't been checked for a fracture. And taping as a long-term substitute for rehab carries a deeper problem than just \"it doesn't heal anything\": restricting motion at one joint without restoring the strength and proprioception that were lost in the original injury doesn't remove the underlying deficit — it just relocates where the load goes. An ankle taped tightly enough to block inversion, on an athlete who never rebuilt balance and peroneal strength, often ends up loading the knee or hip differently to compensate, which is exactly how a tape-as-permanent-crutch pattern can quietly create a second problem somewhere else in the kinetic chain."
+        "None of this changes when taping is inappropriate. Taping an unevaluated acute injury is still a hard no — restriction can give a false sense of security while masking pain from a structure that hasn't been checked for a fracture. And taping as a long-term substitute for rehab carries a deeper problem than just \"it doesn't heal anything\": restricting motion at one joint without restoring the strength and proprioception that were lost in the original injury doesn't remove the underlying deficit — it just postpones dealing with it. That isn't a claim that the tape stops helping: prophylactic taping genuinely reduces recurrence for an athlete with a prior sprain, and as the section above describes, that benefit outlives the mechanical restriction. The point is that the protection is external and temporary — an ankle taped tightly enough to block inversion, on an athlete who never rebuilt balance and peroneal strength, still carries the same deficit the moment the tape comes off, and it will keep needing tape to cover for what rehab was supposed to restore. Worth knowing what the evidence does and does not say here: studies to date have not found that taping or bracing an ankle increases knee injuries, so the concern with tape-as-permanent-crutch is the unaddressed deficit itself, not a guaranteed second injury elsewhere in the kinetic chain."
       ]
     },
     {
@@ -261,6 +261,14 @@
       "id": "f12",
       "front": "Correct tape removal technique",
       "back": "Peel back slowly while pressing the underlying skin down and away (skin-supported peel-back), or cut with tape scissors — never rip, which can tear the epidermis, especially with repeated daily taping."
+    }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Conservative Management and Prevention of Ankle Sprains in Athletes",
+      "publisher": "Journal of Athletic Training",
+      "year": 2013,
+      "url": "https://doi.org/10.4085/1062-6050-48.4.02"
     }
   ]
 }
