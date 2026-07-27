@@ -346,17 +346,21 @@ label:
   `alt`/`description` in `taping-wrapping-ms.json` were rewritten to
   describe what is actually shown.
 
-**Style note for future batches:** this batch mixes rendering styles —
-`materials-comparison`, `dermatitis-vs-blister`, `capillary-refill-check`,
-`tape-vs-wrap`, and `three-jobs` are photorealistic renders of anonymous
-body parts (no faces, no identifiable people, no photographs of real
-people), while `basket-weave-pattern`, `too-tight-warning`, and
-`dont-hide-pain` are illustrated. Nothing here breaks the no-photographs /
-no-real-people rule, and realistic skin rendering genuinely helps the
-dermatitis-vs-blister comparison, but the 7-8 band images read more
-photoreal than the flat-illustration style used in batches 3-5. Worth
-deciding explicitly if visual consistency across the app matters more than
-per-image clarity.
+**Style note — mixed rendering is APPROVED (decided 2026-07-27):** this batch
+mixes rendering styles. `materials-comparison`, `dermatitis-vs-blister`,
+`capillary-refill-check`, `tape-vs-wrap`, and `three-jobs` are
+photorealistic renders of anonymous body parts (no faces, no identifiable
+people, no photographs of real people), while `basket-weave-pattern`,
+`too-tight-warning`, and `dont-hide-pain` are illustrated. This was raised
+for a decision and **approved as a positive** — the mix helps convey the
+message, because realism carries skin findings, tape texture, and limb
+anatomy better while illustration carries scenes with people and
+process/flow diagrams better. Later batches should follow the same
+principle: pick the rendering that teaches each image best rather than
+forcing one house style, and do not treat a mixed batch as a defect. The
+prohibition that remains is about subject, not style — no photographs, and
+no identifiable or photorealistic people; realistic anonymous body parts
+are fine. See "Standing image rules" in `docs/HANDOFF.md`.
 
 ## Batch 14: Lesson diagrams — warmup-injury-prevention (8 images)
 

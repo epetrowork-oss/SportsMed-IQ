@@ -60,6 +60,16 @@ empty white); labels spelled correctly; medical accuracy (a batch is reviewed
 before merge); **non-graphic / stylized** for wound & blood topics; 7–8 =
 simple + correct **scope of action** for the age.
 
+**On rendering style (decided 2026-07-27, after batch 13):** a batch may mix
+photorealistic and flat-illustrated renders, and should when realism carries
+the teaching better — skin findings, tape texture, and limb anatomy read more
+clearly rendered realistically, while scenes with people and process/flow
+diagrams work better illustrated. Do **not** ask a batch to be stylistically
+uniform for its own sake. What stays prohibited is unchanged and is about
+subject, not rendering style: **no photographs, and no identifiable or
+photorealistic people** — realistic *anonymous body parts* (a forearm, a foot,
+hands) are fine and welcome; faces should be illustrated or absent.
+
 ## Progress
 
 Done and merged: home hero, 7 category icons, 18 unit thumbnails, and the lesson
