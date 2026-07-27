@@ -362,7 +362,7 @@ prohibition that remains is about subject, not style — no photographs, and
 no identifiable or photorealistic people; realistic anonymous body parts
 are fine. See "Standing image rules" in `docs/HANDOFF.md`.
 
-## Batch 14: Lesson diagrams — warmup-injury-prevention (8 images)
+## Batch 14: Lesson diagrams — warmup-injury-prevention (8 images) — LANDED 2026-07-27 (8 of 8, clean delivery)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -374,6 +374,45 @@ are fine. See "Standing image rules" in `docs/HANDOFF.md`.
 | 6 | warmup-injury-prevention-cold-weather.webp | 4:3 | white | public/images/units/warmup-injury-prevention/ | Illustration of an athlete warming up outdoors on a chilly day, wearing a light jacket, with visible breath in the cold air, doing arm swings before practice. Clean, simple illustration style for middle schoolers. | Illustration of an athlete warming up outdoors on a cold day, with visible breath in the cold air. |
 | 7 | warmup-injury-prevention-dynamic-vs-static.webp | 16:9 | white | public/images/units/warmup-injury-prevention/ | Two-panel comparison. Left panel labeled 'Dynamic (before activity)': an athlete mid-motion in a walking lunge or leg swing, with a motion arrow showing active movement through the range. Right panel labeled 'Static (after activity)': an athlete holding a still hamstring stretch, with a stopwatch icon reading '20-30 seconds.' Clean instructional-illustration style. | Comparison diagram of dynamic stretching (active movement before activity) and static stretching (held position after activity). |
 | 8 | warmup-injury-prevention-three-phase-structure.webp | 16:9 | transparent | public/images/units/warmup-injury-prevention/ | Horizontal flow diagram with three connected boxes and arrows showing increasing intensity left to right: 'General warm-up' (light jogging icon), 'Dynamic stretching & mobility' (leg swing icon), 'Sport-specific movement' (cutting/passing icon). Add a small intensity gradient bar beneath the boxes rising from low to high. Clean flat infographic style. | Flow diagram of the three-phase warm-up structure: general warm-up, dynamic stretching and mobility, then sport-specific movement. |
+
+**Landed 8/8 clean (2026-07-27):** no slivers, all eight files inside the
+30-60 KB budget on arrival (the size warning added to the brief after batch
+13's 274 KB miss did its job), correct dimensions including the batch's one
+1:1 at 900x900, and true alpha on `three-phase-structure`. Numbers verified
+against the lesson:
+- **`pap-window-graph`** — plots fatigue, potentiation, and their net effect
+  against a baseline, with the net curve dipping **below** baseline early
+  and rising **above** it inside a shaded window marked **5-12 min**,
+  matching the 11-12 lesson exactly. Note the fatigue and potentiation
+  curves are drawn as effect magnitudes rather than literal performance
+  (the standard textbook convention for this figure); the net-effect curve
+  is the one the y-axis label describes, and it is correct.
+- **`stress-strain-curve`** — cold tissue fails at a shorter strain, warm
+  tissue further along the strain axis, both failure points marked. Avoids
+  the trap the brief called out: it does not imply "warm = stronger," since
+  the cold curve is steeper and fails at higher stress, which is the
+  correct viscoelastic picture.
+- **`dynamic-vs-static`** and **`move-vs-hold`** — both handled the batch's
+  most contradiction-prone requirement correctly. Neither marks static
+  stretching with an X or labels it wrong; `move-vs-hold` puts a green check
+  on the "after" panel, which matches the lesson's "Move first, hold later"
+  framing rather than forbidding held stretches.
+- **`three-phase-structure`** — exactly three phases with the lesson's
+  names, plus the low-to-high intensity bar.
+
+**One filename fix:** the stress-strain image arrived as
+`...-stress-strain-graph.webp` but the lesson slot is
+`...-stress-strain-curve.webp`. The art was verified correct for the slot
+first, then the file was renamed — this is *not* the batch-7 situation,
+where art on an entirely different topic was held rather than remapped.
+Renaming is only ever appropriate when the picture already matches the
+slot's alt text.
+
+**One accepted deviation:** on `dynamic-vs-static` the stopwatch is a plain
+icon with no "20-30 seconds" reading, where the brief asked for the number.
+Nothing contradicts the lesson (the duration is taught in the body text and
+a flashcard, and the slot's alt does not mention a duration), so it was
+landed as-is rather than edited.
 
 ## Batch 15: Lesson diagrams — cold-exposure (8 images)
 

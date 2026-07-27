@@ -79,8 +79,8 @@ NATA Acute Skin Trauma on all bands plus Stop the Bleed on 9-10/11-12; two
 of its images had a right-edge production-sheet bleed fixed in-repo by
 white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6).
 
-**Current totals (recounted 2026-07-27, after batch 13):
-89 of 139 lesson-diagram slots live (64%), and 115 of 165 image slots
+**Current totals (recounted 2026-07-27, after batch 14):
+97 of 139 lesson-diagram slots live (70%), and 123 of 165 image slots
 overall** (139 diagrams + 18 thumbnails + 7 category icons + 1 hero). Count
 these from the repo rather than trusting a prior line — an earlier handoff
 put diagram progress at "115 of 139," which was the total-mapped-files
@@ -152,8 +152,35 @@ what the evidence does and does not support. See `docs/IMAGE-BATCHES.md`
 batch 13 for a style note about this batch mixing photoreal and illustrated
 renders.
 
-**Next:** batch 14 = **warmup-injury-prevention**, then batches 15–20 (one
-strand each) per `docs/IMAGE-BATCHES.md`.
+Batch 14 (**warmup-injury-prevention**) is complete 8/8 (2026-07-27, clean
+delivery — every file inside the size budget on arrival, no slivers). The
+two nuance-sensitive images came back right: neither `dynamic-vs-static`
+nor `move-vs-hold` marks static stretching as wrong, and
+`stress-strain-curve` avoids implying warm tissue is stronger. One file
+arrived named `...-stress-strain-graph.webp` against a slot named
+`...-stress-strain-curve.webp`; the art was verified correct for the slot
+and then renamed.
+
+⚠ **Sources needing confirmation (warmup-injury-prevention, all three
+bands).** This strand had no earmarked source and no PDF was supplied, and
+DOI-resolution hosts (doi.org, Crossref, PubMed) are all blocked by the
+container proxy, so these were cited by **title + publisher + year with no
+URL** rather than guessing DOIs. Please confirm or correct:
+- *Comprehensive warm-up programme to prevent injuries in young female
+  footballers: cluster randomised controlled trial* — BMJ, 2008 (the FIFA
+  11+ trial; cited on all three bands)
+- *A review of the acute effects of static and dynamic stretching on
+  performance* — European Journal of Applied Physiology, 2011 (backs the
+  static-stretching power dip; 9-10 and 11-12)
+- *Factors modulating post-activation potentiation and its effect on
+  performance of subsequent explosive activities* — Sports Medicine, 2009
+  (backs the PAP window; 11-12 only)
+
+Also still unsourced in this strand: the 11-12 claim that raising muscle
+temperature by roughly 1-2 °C meaningfully shifts tissue properties.
+
+**Next:** batch 15 = **cold-exposure**, then batches 16–20 (one strand
+each) per `docs/IMAGE-BATCHES.md`.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a

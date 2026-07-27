@@ -300,6 +300,24 @@ const REAL_IMAGE_PATHS = {
     'images/units/taping-wrapping/taping-wrapping-basket-weave-pattern.webp',
   'taping-wrapping-capillary-refill-check.webp':
     'images/units/taping-wrapping/taping-wrapping-capillary-refill-check.webp',
+
+  // warmup-injury-prevention lesson diagrams (batch 14)
+  'warmup-injury-prevention-stress-strain-curve.webp':
+    'images/units/warmup-injury-prevention/warmup-injury-prevention-stress-strain-curve.webp',
+  'warmup-injury-prevention-pap-window-graph.webp':
+    'images/units/warmup-injury-prevention/warmup-injury-prevention-pap-window-graph.webp',
+  'warmup-injury-prevention-cold-vs-warm-muscle.webp':
+    'images/units/warmup-injury-prevention/warmup-injury-prevention-cold-vs-warm-muscle.webp',
+  'warmup-injury-prevention-warmup-steps.webp':
+    'images/units/warmup-injury-prevention/warmup-injury-prevention-warmup-steps.webp',
+  'warmup-injury-prevention-move-vs-hold.webp':
+    'images/units/warmup-injury-prevention/warmup-injury-prevention-move-vs-hold.webp',
+  'warmup-injury-prevention-cold-weather.webp':
+    'images/units/warmup-injury-prevention/warmup-injury-prevention-cold-weather.webp',
+  'warmup-injury-prevention-dynamic-vs-static.webp':
+    'images/units/warmup-injury-prevention/warmup-injury-prevention-dynamic-vs-static.webp',
+  'warmup-injury-prevention-three-phase-structure.webp':
+    'images/units/warmup-injury-prevention/warmup-injury-prevention-three-phase-structure.webp',
 }
 
 function ratioToCss(ratio) {
