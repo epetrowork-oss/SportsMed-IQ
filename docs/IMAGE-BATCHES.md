@@ -362,7 +362,7 @@ prohibition that remains is about subject, not style — no photographs, and
 no identifiable or photorealistic people; realistic anonymous body parts
 are fine. See "Standing image rules" in `docs/HANDOFF.md`.
 
-## Batch 14: Lesson diagrams — warmup-injury-prevention (8 images) — LANDED 2026-07-27 (8 of 8, clean delivery)
+## Batch 14: Lesson diagrams — warmup-injury-prevention (8 images) — LANDED 2026-07-27 (6 of 8; 2 held for redo)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -375,23 +375,43 @@ are fine. See "Standing image rules" in `docs/HANDOFF.md`.
 | 7 | warmup-injury-prevention-dynamic-vs-static.webp | 16:9 | white | public/images/units/warmup-injury-prevention/ | Two-panel comparison. Left panel labeled 'Dynamic (before activity)': an athlete mid-motion in a walking lunge or leg swing, with a motion arrow showing active movement through the range. Right panel labeled 'Static (after activity)': an athlete holding a still hamstring stretch, with a stopwatch icon reading '20-30 seconds.' Clean instructional-illustration style. | Comparison diagram of dynamic stretching (active movement before activity) and static stretching (held position after activity). |
 | 8 | warmup-injury-prevention-three-phase-structure.webp | 16:9 | transparent | public/images/units/warmup-injury-prevention/ | Horizontal flow diagram with three connected boxes and arrows showing increasing intensity left to right: 'General warm-up' (light jogging icon), 'Dynamic stretching & mobility' (leg swing icon), 'Sport-specific movement' (cutting/passing icon). Add a small intensity gradient bar beneath the boxes rising from low to high. Clean flat infographic style. | Flow diagram of the three-phase warm-up structure: general warm-up, dynamic stretching and mobility, then sport-specific movement. |
 
-**Landed 8/8 clean (2026-07-27):** no slivers, all eight files inside the
-30-60 KB budget on arrival (the size warning added to the brief after batch
-13's 274 KB miss did its job), correct dimensions including the batch's one
-1:1 at 900x900, and true alpha on `three-phase-structure`. Numbers verified
-against the lesson:
-- **`pap-window-graph`** — plots fatigue, potentiation, and their net effect
-  against a baseline, with the net curve dipping **below** baseline early
-  and rising **above** it inside a shaded window marked **5-12 min**,
-  matching the 11-12 lesson exactly. Note the fatigue and potentiation
-  curves are drawn as effect magnitudes rather than literal performance
-  (the standard textbook convention for this figure); the net-effect curve
-  is the one the y-axis label describes, and it is correct.
-- **`stress-strain-curve`** — cold tissue fails at a shorter strain, warm
-  tissue further along the strain axis, both failure points marked. Avoids
-  the trap the brief called out: it does not imply "warm = stronger," since
-  the cold curve is steeper and fails at higher stress, which is the
-  correct viscoelastic picture.
+**Landed 6 of 8 (2026-07-27); the two 11-12 graphs are HELD for redo.** No
+slivers, all eight files inside the 30-60 KB budget on arrival (the size
+warning added to the brief after batch 13's 274 KB miss did its job),
+correct dimensions including the batch's one 1:1 at 900x900, and true alpha
+on `three-phase-structure`.
+
+**HELD — `stress-strain-curve`.** Codex catch on PR #47, confirmed by pixel
+measurement: the cold-tissue failure marker sits **higher** on the stress
+axis than the warm one (y=117 vs y=137), i.e. the diagram teaches that cold
+tissue fails at a *greater* force. The 11-12 lesson says the opposite in so
+many words — "it isn't that cold muscle is 'weaker,' it's that its failure
+point arrives sooner, **at a shorter length and lower force**." The strain
+axis is right and only the stress relationship is wrong, but that is not
+cleanly fixable in-repo (it needs the curve redrawn), so the asset was
+removed and left unmapped. **Redo note:** keep the warm curve failing
+further along the strain axis, and place the cold failure point *both*
+earlier in strain *and* lower in stress than the warm one.
+*Caution for whoever redoes this:* there is a real open question about
+whether the lesson's "lower force" claim is itself the best reading of the
+literature (some isolated-muscle work reports warmed muscle failing at
+greater force *and* greater length). Do not "fix" the image against the
+literature while leaving the lesson as-is, or the contradiction just
+reverses — settle the lesson text first, against a source, then draw to it.
+
+**HELD — `pap-window-graph`.** Also a Codex catch, and a good one. The net
+effect curve is correct — it dips below baseline early and rises above it
+inside a shaded window marked 5-12 min, matching the lesson. But the shared
+y-axis is labeled "Performance relative to baseline" while the **fatigue
+curve sits entirely above baseline**, which reads as "more fatigue = better
+performance." This was initially waved through here as the standard
+textbook convention for the figure; that was wrong on the diagram's own
+terms, because the axis label makes a claim the component curves don't
+honor. Not cleanly fixable in-repo. **Redo note:** either plot fatigue as a
+negative contribution below the baseline, or give the component curves an
+explicit "effect magnitude" axis distinct from the net performance curve.
+
+Landed and verified:
 - **`dynamic-vs-static`** and **`move-vs-hold`** — both handled the batch's
   most contradiction-prone requirement correctly. Neither marks static
   stretching with an X or labels it wrong; `move-vs-hold` puts a green check

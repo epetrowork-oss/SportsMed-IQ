@@ -80,7 +80,7 @@ of its images had a right-edge production-sheet bleed fixed in-repo by
 white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6).
 
 **Current totals (recounted 2026-07-27, after batch 14):
-97 of 139 lesson-diagram slots live (70%), and 123 of 165 image slots
+95 of 139 lesson-diagram slots live (68%), and 121 of 165 image slots
 overall** (139 diagrams + 18 thumbnails + 7 category icons + 1 hero). Count
 these from the repo rather than trusting a prior line — an earlier handoff
 put diagram progress at "115 of 139," which was the total-mapped-files
@@ -152,11 +152,18 @@ what the evidence does and does not support. See `docs/IMAGE-BATCHES.md`
 batch 13 for a style note about this batch mixing photoreal and illustrated
 renders.
 
-Batch 14 (**warmup-injury-prevention**) is complete 8/8 (2026-07-27, clean
-delivery — every file inside the size budget on arrival, no slivers). The
-two nuance-sensitive images came back right: neither `dynamic-vs-static`
-nor `move-vs-hold` marks static stretching as wrong, and
-`stress-strain-curve` avoids implying warm tissue is stronger. One file
+Batch 14 (**warmup-injury-prevention**) landed **6 of 8** (2026-07-27 —
+every file inside the size budget on arrival, no slivers). The two
+nuance-sensitive scene images came back right: neither `dynamic-vs-static`
+nor `move-vs-hold` marks static stretching as wrong. **The two 11-12 graphs
+are held for redo**, both caught by Codex on PR #47 after this session's own
+vet passed them: `stress-strain-curve` draws cold tissue failing at a higher
+force than warm, contradicting the lesson's "shorter length and lower
+force," and `pap-window-graph` puts the fatigue curve entirely above a
+y-axis labeled "performance relative to baseline." Redo notes for both are
+in `docs/IMAGE-BATCHES.md` batch 14. Lesson: an image can satisfy every
+number in a brief and still invert a relationship the lesson states in
+words — check direction, not just values. One file
 arrived named `...-stress-strain-graph.webp` against a slot named
 `...-stress-strain-curve.webp`; the art was verified correct for the slot
 and then renamed.

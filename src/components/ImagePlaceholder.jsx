@@ -302,10 +302,13 @@ const REAL_IMAGE_PATHS = {
     'images/units/taping-wrapping/taping-wrapping-capillary-refill-check.webp',
 
   // warmup-injury-prevention lesson diagrams (batch 14)
-  'warmup-injury-prevention-stress-strain-curve.webp':
-    'images/units/warmup-injury-prevention/warmup-injury-prevention-stress-strain-curve.webp',
-  'warmup-injury-prevention-pap-window-graph.webp':
-    'images/units/warmup-injury-prevention/warmup-injury-prevention-pap-window-graph.webp',
+  // HELD for redo, deliberately unmapped (see docs/IMAGE-BATCHES.md batch 14):
+  //   warmup-injury-prevention-stress-strain-curve.webp  — drew cold tissue
+  //     failing at HIGHER stress than warm, contradicting the 11-12 lesson's
+  //     "shorter length and lower force."
+  //   warmup-injury-prevention-pap-window-graph.webp     — plotted the fatigue
+  //     curve entirely above a y-axis labeled "performance relative to
+  //     baseline," reading as "more fatigue = better performance."
   'warmup-injury-prevention-cold-vs-warm-muscle.webp':
     'images/units/warmup-injury-prevention/warmup-injury-prevention-cold-vs-warm-muscle.webp',
   'warmup-injury-prevention-warmup-steps.webp':
