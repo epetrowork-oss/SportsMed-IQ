@@ -171,22 +171,45 @@ arrived named `...-stress-strain-graph.webp` against a slot named
 `...-stress-strain-curve.webp`; the art was verified correct for the slot
 and then renamed.
 
-⚠ **Sources needing confirmation (warmup-injury-prevention, all three
-bands).** This strand had no earmarked source and no PDF was supplied, and
-DOI-resolution hosts (doi.org, Crossref, PubMed) are all blocked by the
-container proxy, so these were cited by **title + publisher + year with no
-URL** rather than guessing DOIs. Please confirm or correct:
+⚠ **warmup-injury-prevention is DELIBERATELY UNSOURCED — do not re-add these
+without verifying first.** Three citations were added when this strand
+landed and then **removed again** on a Codex catch (PR #47): the `sources`
+field is documented in `src/content/README.md` as being for content
+"verified against the source," and the app renders it to students and
+teachers as the lesson's evidence base — so publishing citations recorded as
+unverified turned an open research task into an apparent evidence
+endorsement. They are parked here until someone can actually read them.
+
+Candidates, all still unverified in-repo (DOI hosts — doi.org, Crossref,
+PubMed — are blocked by the container proxy, and no PDF was supplied):
 - *Comprehensive warm-up programme to prevent injuries in young female
   footballers: cluster randomised controlled trial* — BMJ, 2008 (the FIFA
-  11+ trial; cited on all three bands)
+  11+ trial; would cover all three bands)
 - *A review of the acute effects of static and dynamic stretching on
-  performance* — European Journal of Applied Physiology, 2011 (backs the
+  performance* — European Journal of Applied Physiology, 2011 (the
   static-stretching power dip; 9-10 and 11-12)
 - *Factors modulating post-activation potentiation and its effect on
   performance of subsequent explosive activities* — Sports Medicine, 2009
-  (backs the PAP window; 11-12 only)
+  (the PAP window; 11-12 only)
 
-Also still unsourced in this strand: the 11-12 claim that raising muscle
+ChatGPT reported (2026-07-28) that these three are **not** in its project
+PDF set but that it verified their bibliographic details and DOIs
+independently; those details were never relayed, so nothing is confirmed on
+this side. To close this out: get the PDFs into a session and check the
+title pages directly, the way the NATA statement was checked for
+taping-wrapping.
+
+**Caveat to carry into that check:** ChatGPT specifically flagged that the
+Sports Medicine review may not support an *exact universal* 5-12 minute PAP
+window. The lesson already hedges appropriately ("Most athletes see the
+window open somewhere in the roughly 5-12 minute range... though it varies
+by individual training status"), and the flashcard says "Roughly 5-12
+minutes," so no text change was made. But the `pap-window-graph` image draws
+5 and 12 as crisp dashed boundaries, which reads harder than the prose. If
+that citation is ever attached, confirm it actually backs the range, or
+soften the image.
+
+Also unsourced in this strand: the 11-12 claim that raising muscle
 temperature by roughly 1-2 °C meaningfully shifts tissue properties.
 
 ⚠ **Open evidence question, warmup-injury-prevention 11-12.** The lesson
@@ -194,9 +217,10 @@ says cold tissue's failure point arrives "at a shorter length **and lower
 force**," and `stress-strain-curve` is now drawn to match it, so the app is
 internally consistent. But whether that claim is the best reading of the
 literature is unresolved — some isolated-muscle work reports warmed muscle
-failing at *greater* force as well as greater length. ChatGPT was asked to
-answer this from the project's source PDFs and the redo came back without
-an answer. Until it is settled, do not redraw this image against the
+failing at *greater* force as well as greater length. ChatGPT was asked to answer this from the project's
+source PDFs and reported back (2026-07-28) that the lesson and the corrected
+image **do** agree with those PDFs — but it named no paper or page, so this
+is a relayed claim rather than something checked here. Until it is settled, do not redraw this image against the
 literature while leaving the lesson text unchanged; that would just reverse
 the contradiction. Settle the lesson text against a source first, then
 redraw if needed.
