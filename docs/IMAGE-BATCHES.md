@@ -436,6 +436,17 @@ where art on an entirely different topic was held rather than remapped.
 Renaming is only ever appropriate when the picture already matches the
 slot's alt text.
 
+**Style question raised and settled — `cold-weather` is APPROVED.** Codex
+flagged this image on PR #47 as a photorealistic person that should be held.
+It was kept and escalated instead, and the repo owner approved it. The
+reasoning on record: it is a painted/rendered illustration rather than a
+photograph, the figure is drawn from behind with no visible face, and it
+therefore satisfies the standing rule as rewritten after batch 13 — which is
+scoped to *subject* (no photographs, no identifiable or photorealistic
+people) rather than to rendering style. Do not re-hold this image; the
+"scenes with people should be illustrated" line in the brief guidance is a
+preference about what teaches best, not a prohibition.
+
 **One accepted deviation:** on `dynamic-vs-static` the stopwatch is a plain
 icon with no "20-30 seconds" reading, where the brief asked for the number.
 Nothing contradicts the lesson (the duration is taught in the body text and
