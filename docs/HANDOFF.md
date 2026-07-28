@@ -79,8 +79,8 @@ NATA Acute Skin Trauma on all bands plus Stop the Bleed on 9-10/11-12; two
 of its images had a right-edge production-sheet bleed fixed in-repo by
 white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6).
 
-**Current totals (recounted 2026-07-27, after batch 14):
-95 of 139 lesson-diagram slots live (68%), and 121 of 165 image slots
+**Current totals (recounted 2026-07-28, after the batch 14 redo):
+97 of 139 lesson-diagram slots live (70%), and 123 of 165 image slots
 overall** (139 diagrams + 18 thumbnails + 7 category icons + 1 hero). Count
 these from the repo rather than trusting a prior line — an earlier handoff
 put diagram progress at "115 of 139," which was the total-mapped-files
@@ -155,15 +155,18 @@ renders.
 Batch 14 (**warmup-injury-prevention**) landed **6 of 8** (2026-07-27 —
 every file inside the size budget on arrival, no slivers). The two
 nuance-sensitive scene images came back right: neither `dynamic-vs-static`
-nor `move-vs-hold` marks static stretching as wrong. **The two 11-12 graphs
-are held for redo**, both caught by Codex on PR #47 after this session's own
-vet passed them: `stress-strain-curve` draws cold tissue failing at a higher
-force than warm, contradicting the lesson's "shorter length and lower
-force," and `pap-window-graph` puts the fatigue curve entirely above a
-y-axis labeled "performance relative to baseline." Redo notes for both are
-in `docs/IMAGE-BATCHES.md` batch 14. Lesson: an image can satisfy every
+nor `move-vs-hold` marks static stretching as wrong. The two 11-12 graphs were
+**held and then redone successfully** (landed 2026-07-28). Both were caught
+by Codex on PR #47 after this session's own vet passed them:
+`stress-strain-curve` drew cold tissue failing at a higher force than warm,
+contradicting the lesson's "shorter length and lower force," and
+`pap-window-graph` put the fatigue curve entirely above a y-axis labeled
+"performance relative to baseline." Both redos were verified by pixel
+measurement rather than by eye — see `docs/IMAGE-BATCHES.md` batch 14 for
+the numbers. **Lesson worth carrying forward: an image can satisfy every
 number in a brief and still invert a relationship the lesson states in
-words — check direction, not just values. One file
+words. Check direction, not just values — and measure it, because both of
+these looked fine at a glance.** One file
 arrived named `...-stress-strain-graph.webp` against a slot named
 `...-stress-strain-curve.webp`; the art was verified correct for the slot
 and then renamed.
@@ -185,6 +188,18 @@ URL** rather than guessing DOIs. Please confirm or correct:
 
 Also still unsourced in this strand: the 11-12 claim that raising muscle
 temperature by roughly 1-2 °C meaningfully shifts tissue properties.
+
+⚠ **Open evidence question, warmup-injury-prevention 11-12.** The lesson
+says cold tissue's failure point arrives "at a shorter length **and lower
+force**," and `stress-strain-curve` is now drawn to match it, so the app is
+internally consistent. But whether that claim is the best reading of the
+literature is unresolved — some isolated-muscle work reports warmed muscle
+failing at *greater* force as well as greater length. ChatGPT was asked to
+answer this from the project's source PDFs and the redo came back without
+an answer. Until it is settled, do not redraw this image against the
+literature while leaving the lesson text unchanged; that would just reverse
+the contradiction. Settle the lesson text against a source first, then
+redraw if needed.
 
 **Next:** batch 15 = **cold-exposure**, then batches 16–20 (one strand
 each) per `docs/IMAGE-BATCHES.md`.
