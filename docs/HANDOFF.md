@@ -171,59 +171,63 @@ arrived named `...-stress-strain-graph.webp` against a slot named
 `...-stress-strain-curve.webp`; the art was verified correct for the slot
 and then renamed.
 
-⚠ **warmup-injury-prevention is DELIBERATELY UNSOURCED — do not re-add these
-without verifying first.** Three citations were added when this strand
-landed and then **removed again** on a Codex catch (PR #47): the `sources`
-field is documented in `src/content/README.md` as being for content
-"verified against the source," and the app renders it to students and
-teachers as the lesson's evidence base — so publishing citations recorded as
-unverified turned an open research task into an apparent evidence
-endorsement. They are parked here until someone can actually read them.
-
-Candidates, all still unverified in-repo (DOI hosts — doi.org, Crossref,
-PubMed — are blocked by the container proxy, and no PDF was supplied):
+**warmup-injury-prevention sources (restored 2026-07-28 with DOIs).** These
+three were added when the strand landed, **removed** on a Codex catch
+(PR #47) because nothing had been verified, and then **restored** once full
+bibliographic records including DOIs came back through ChatGPT:
 - *Comprehensive warm-up programme to prevent injuries in young female
-  footballers: cluster randomised controlled trial* — BMJ, 2008 (the FIFA
-  11+ trial; would cover all three bands)
+  footballers: cluster randomised controlled trial* — Soligard et al., BMJ
+  2008;337:a2469, doi:10.1136/bmj.a2469 (all three bands; the FIFA 11+ trial
+  behind the 9-10 unit's structured-programs section)
 - *A review of the acute effects of static and dynamic stretching on
-  performance* — European Journal of Applied Physiology, 2011 (the
-  static-stretching power dip; 9-10 and 11-12)
+  performance* — Behm & Chaouachi, Eur J Appl Physiol 2011;111(11):2633-2651,
+  doi:10.1007/s00421-011-1879-2 (9-10 and 11-12; the static-stretching power
+  dip)
 - *Factors modulating post-activation potentiation and its effect on
-  performance of subsequent explosive activities* — Sports Medicine, 2009
-  (the PAP window; 11-12 only)
+  performance of subsequent explosive activities* — Tillin & Bishop, Sports
+  Med 2009;39(2):147-166, doi:10.2165/00007256-200939020-00004 (11-12; PAP)
 
-ChatGPT reported (2026-07-28) that these three are **not** in its project
-PDF set but that it verified their bibliographic details and DOIs
-independently; those details were never relayed, so nothing is confirmed on
-this side. To close this out: get the PDFs into a session and check the
-title pages directly, the way the NATA statement was checked for
-taping-wrapping.
+**Be precise about what is and isn't established here.** The *publication
+records* are verified — full author lists, volume, issue, pages, and DOIs,
+which independently matched a separate derivation of the same three
+citations. What has *not* happened is anyone in this loop opening the papers
+and confirming they support the specific sentences they are attached to.
+These three are canonical references for exactly the claims they back, so
+the match is high-confidence, but it is inference rather than reading. DOI
+hosts (doi.org, Crossref, PubMed) are blocked by the container proxy, so
+this cannot be closed from a session — it needs the PDFs uploaded, the way
+the NATA statement was checked for taping-wrapping.
 
-**Caveat to carry into that check:** ChatGPT specifically flagged that the
-Sports Medicine review may not support an *exact universal* 5-12 minute PAP
-window. The lesson already hedges appropriately ("Most athletes see the
-window open somewhere in the roughly 5-12 minute range... though it varies
-by individual training status"), and the flashcard says "Roughly 5-12
-minutes," so no text change was made. But the `pap-window-graph` image draws
-5 and 12 as crisp dashed boundaries, which reads harder than the prose. If
-that citation is ever attached, confirm it actually backs the range, or
-soften the image.
+**One specific caveat, flagged by ChatGPT and worth keeping:** the Tillin &
+Bishop review may not support an *exact universal* 5-12 minute PAP window.
+The lesson hedges this correctly in prose ("Most athletes see the window
+open somewhere in the roughly 5-12 minute range... though it varies by
+individual training status") and the flashcard says "Roughly 5-12 minutes,"
+so no text change was made. But `pap-window-graph` draws 5 and 12 as crisp
+dashed boundaries, which reads harder than the prose. If that range is ever
+challenged, soften the image rather than the already-hedged text.
 
 Also unsourced in this strand: the 11-12 claim that raising muscle
 temperature by roughly 1-2 °C meaningfully shifts tissue properties.
 
-⚠ **Open evidence question, warmup-injury-prevention 11-12.** The lesson
-says cold tissue's failure point arrives "at a shorter length **and lower
-force**," and `stress-strain-curve` is now drawn to match it, so the app is
-internally consistent. But whether that claim is the best reading of the
-literature is unresolved — some isolated-muscle work reports warmed muscle
-failing at *greater* force as well as greater length. ChatGPT was asked to answer this from the project's
-source PDFs and reported back (2026-07-28) that the lesson and the corrected
-image **do** agree with those PDFs — but it named no paper or page, so this
-is a relayed claim rather than something checked here. Until it is settled, do not redraw this image against the
-literature while leaving the lesson text unchanged; that would just reverse
-the contradiction. Settle the lesson text against a source first, then
-redraw if needed.
+✅ **RESOLVED (2026-07-28) — the lesson's "lower force" claim is correct.**
+This was flagged during batch 14 as a possible lesson-vs-literature
+conflict. It was not one, and the error was in the flag: "warmed muscle
+fails at a greater force" and "cold tissue fails at a lower force" are the
+same relationship stated from opposite ends, not opposing findings. Checked
+against the project source set and reported back with page references:
+- *Sports Medicine: Just the Facts*, printed p. 57 (PDF p. 80) — warmed
+  muscle "fails at higher loads than control muscle," citing Safran et al.
+  (1988).
+- *IOC Manual of Sports Injuries*, printed p. 78 (PDF p. 88) — animal
+  studies show "the load to failure is higher after warm-up."
+
+So the 11-12 lesson text stands as written, and the corrected
+`stress-strain-curve` (cold failure point down-and-left of warm) is
+consistent with both the lesson and the sources. No change needed to either.
+Worth remembering as a review habit: before flagging a claim as
+contradicting the literature, check whether the two statements are just
+inverses of each other over the same comparison.
 
 **Next:** batch 15 = **cold-exposure**, then batches 16–20 (one strand
 each) per `docs/IMAGE-BATCHES.md`.

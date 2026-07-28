@@ -258,5 +258,25 @@
       "front": "The real-world compliance gap",
       "back": "Programs underperform their trial results mainly because teams skip, rush, or run them inconsistently — not because the science is weaker in practice. Consistent, correctly-cued delivery is the highest-leverage thing an aide can control."
     }
+  ],
+  "sources": [
+    {
+      "title": "Comprehensive warm-up programme to prevent injuries in young female footballers: cluster randomised controlled trial",
+      "publisher": "BMJ",
+      "year": 2008,
+      "url": "https://doi.org/10.1136/bmj.a2469"
+    },
+    {
+      "title": "A review of the acute effects of static and dynamic stretching on performance",
+      "publisher": "European Journal of Applied Physiology",
+      "year": 2011,
+      "url": "https://doi.org/10.1007/s00421-011-1879-2"
+    },
+    {
+      "title": "Factors modulating post-activation potentiation and its effect on performance of subsequent explosive activities",
+      "publisher": "Sports Medicine",
+      "year": 2009,
+      "url": "https://doi.org/10.2165/00007256-200939020-00004"
+    }
   ]
 }
