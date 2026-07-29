@@ -79,8 +79,8 @@ NATA Acute Skin Trauma on all bands plus Stop the Bleed on 9-10/11-12; two
 of its images had a right-edge production-sheet bleed fixed in-repo by
 white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6).
 
-**Current totals (recounted 2026-07-27, after batch 13):
-89 of 139 lesson-diagram slots live (64%), and 115 of 165 image slots
+**Current totals (recounted 2026-07-28, after the batch 14 redo):
+97 of 139 lesson-diagram slots live (70%), and 123 of 165 image slots
 overall** (139 diagrams + 18 thumbnails + 7 category icons + 1 hero). Count
 these from the repo rather than trusting a prior line — an earlier handoff
 put diagram progress at "115 of 139," which was the total-mapped-files
@@ -152,8 +152,85 @@ what the evidence does and does not support. See `docs/IMAGE-BATCHES.md`
 batch 13 for a style note about this batch mixing photoreal and illustrated
 renders.
 
-**Next:** batch 14 = **warmup-injury-prevention**, then batches 15–20 (one
-strand each) per `docs/IMAGE-BATCHES.md`.
+Batch 14 (**warmup-injury-prevention**) landed **6 of 8** (2026-07-27 —
+every file inside the size budget on arrival, no slivers). The two
+nuance-sensitive scene images came back right: neither `dynamic-vs-static`
+nor `move-vs-hold` marks static stretching as wrong. The two 11-12 graphs were
+**held and then redone successfully** (landed 2026-07-28). Both were caught
+by Codex on PR #47 after this session's own vet passed them:
+`stress-strain-curve` drew cold tissue failing at a higher force than warm,
+contradicting the lesson's "shorter length and lower force," and
+`pap-window-graph` put the fatigue curve entirely above a y-axis labeled
+"performance relative to baseline." Both redos were verified by pixel
+measurement rather than by eye — see `docs/IMAGE-BATCHES.md` batch 14 for
+the numbers. **Lesson worth carrying forward: an image can satisfy every
+number in a brief and still invert a relationship the lesson states in
+words. Check direction, not just values — and measure it, because both of
+these looked fine at a glance.** One file
+arrived named `...-stress-strain-graph.webp` against a slot named
+`...-stress-strain-curve.webp`; the art was verified correct for the slot
+and then renamed.
+
+**warmup-injury-prevention sources (restored 2026-07-28 with DOIs).** These
+three were added when the strand landed, **removed** on a Codex catch
+(PR #47) because nothing had been verified, and then **restored** once full
+bibliographic records including DOIs came back through ChatGPT:
+- *Comprehensive warm-up programme to prevent injuries in young female
+  footballers: cluster randomised controlled trial* — Soligard et al., BMJ
+  2008;337:a2469, doi:10.1136/bmj.a2469 (all three bands; the FIFA 11+ trial
+  behind the 9-10 unit's structured-programs section)
+- *A review of the acute effects of static and dynamic stretching on
+  performance* — Behm & Chaouachi, Eur J Appl Physiol 2011;111(11):2633-2651,
+  doi:10.1007/s00421-011-1879-2 (9-10 and 11-12; the static-stretching power
+  dip)
+- *Factors modulating post-activation potentiation and its effect on
+  performance of subsequent explosive activities* — Tillin & Bishop, Sports
+  Med 2009;39(2):147-166, doi:10.2165/00007256-200939020-00004 (11-12; PAP)
+
+**Be precise about what is and isn't established here.** The *publication
+records* are verified — full author lists, volume, issue, pages, and DOIs,
+which independently matched a separate derivation of the same three
+citations. What has *not* happened is anyone in this loop opening the papers
+and confirming they support the specific sentences they are attached to.
+These three are canonical references for exactly the claims they back, so
+the match is high-confidence, but it is inference rather than reading. DOI
+hosts (doi.org, Crossref, PubMed) are blocked by the container proxy, so
+this cannot be closed from a session — it needs the PDFs uploaded, the way
+the NATA statement was checked for taping-wrapping.
+
+**One specific caveat, flagged by ChatGPT and worth keeping:** the Tillin &
+Bishop review may not support an *exact universal* 5-12 minute PAP window.
+The lesson hedges this correctly in prose ("Most athletes see the window
+open somewhere in the roughly 5-12 minute range... though it varies by
+individual training status") and the flashcard says "Roughly 5-12 minutes,"
+so no text change was made. But `pap-window-graph` draws 5 and 12 as crisp
+dashed boundaries, which reads harder than the prose. If that range is ever
+challenged, soften the image rather than the already-hedged text.
+
+Also unsourced in this strand: the 11-12 claim that raising muscle
+temperature by roughly 1-2 °C meaningfully shifts tissue properties.
+
+✅ **RESOLVED (2026-07-28) — the lesson's "lower force" claim is correct.**
+This was flagged during batch 14 as a possible lesson-vs-literature
+conflict. It was not one, and the error was in the flag: "warmed muscle
+fails at a greater force" and "cold tissue fails at a lower force" are the
+same relationship stated from opposite ends, not opposing findings. Checked
+against the project source set and reported back with page references:
+- *Sports Medicine: Just the Facts*, printed p. 57 (PDF p. 80) — warmed
+  muscle "fails at higher loads than control muscle," citing Safran et al.
+  (1988).
+- *IOC Manual of Sports Injuries*, printed p. 78 (PDF p. 88) — animal
+  studies show "the load to failure is higher after warm-up."
+
+So the 11-12 lesson text stands as written, and the corrected
+`stress-strain-curve` (cold failure point down-and-left of warm) is
+consistent with both the lesson and the sources. No change needed to either.
+Worth remembering as a review habit: before flagging a claim as
+contradicting the literature, check whether the two statements are just
+inverses of each other over the same comparison.
+
+**Next:** batch 15 = **cold-exposure**, then batches 16–20 (one strand
+each) per `docs/IMAGE-BATCHES.md`.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a

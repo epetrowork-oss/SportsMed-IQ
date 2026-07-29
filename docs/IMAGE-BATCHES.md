@@ -362,7 +362,7 @@ prohibition that remains is about subject, not style — no photographs, and
 no identifiable or photorealistic people; realistic anonymous body parts
 are fine. See "Standing image rules" in `docs/HANDOFF.md`.
 
-## Batch 14: Lesson diagrams — warmup-injury-prevention (8 images)
+## Batch 14: Lesson diagrams — warmup-injury-prevention (8 images) — LANDED 2026-07-28 (8 of 8; 2 redone after Codex catches)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -374,6 +374,84 @@ are fine. See "Standing image rules" in `docs/HANDOFF.md`.
 | 6 | warmup-injury-prevention-cold-weather.webp | 4:3 | white | public/images/units/warmup-injury-prevention/ | Illustration of an athlete warming up outdoors on a chilly day, wearing a light jacket, with visible breath in the cold air, doing arm swings before practice. Clean, simple illustration style for middle schoolers. | Illustration of an athlete warming up outdoors on a cold day, with visible breath in the cold air. |
 | 7 | warmup-injury-prevention-dynamic-vs-static.webp | 16:9 | white | public/images/units/warmup-injury-prevention/ | Two-panel comparison. Left panel labeled 'Dynamic (before activity)': an athlete mid-motion in a walking lunge or leg swing, with a motion arrow showing active movement through the range. Right panel labeled 'Static (after activity)': an athlete holding a still hamstring stretch, with a stopwatch icon reading '20-30 seconds.' Clean instructional-illustration style. | Comparison diagram of dynamic stretching (active movement before activity) and static stretching (held position after activity). |
 | 8 | warmup-injury-prevention-three-phase-structure.webp | 16:9 | transparent | public/images/units/warmup-injury-prevention/ | Horizontal flow diagram with three connected boxes and arrows showing increasing intensity left to right: 'General warm-up' (light jogging icon), 'Dynamic stretching & mobility' (leg swing icon), 'Sport-specific movement' (cutting/passing icon). Add a small intensity gradient bar beneath the boxes rising from low to high. Clean flat infographic style. | Flow diagram of the three-phase warm-up structure: general warm-up, dynamic stretching and mobility, then sport-specific movement. |
+
+**Landed 8 of 8 — 6 on 2026-07-27, the two 11-12 graphs redone and landed
+2026-07-28 after being held.** No
+slivers, all eight files inside the 30-60 KB budget on arrival (the size
+warning added to the brief after batch 13's 274 KB miss did its job),
+correct dimensions including the batch's one 1:1 at 900x900, and true alpha
+on `three-phase-structure`.
+
+**REDONE and landed — `stress-strain-curve`.** Originally held on a Codex
+catch on PR #47, confirmed by pixel measurement: the cold-tissue failure marker sits **higher** on the stress
+axis than the warm one (y=117 vs y=137), i.e. the diagram teaches that cold
+tissue fails at a *greater* force. The 11-12 lesson says the opposite in so
+many words — "it isn't that cold muscle is 'weaker,' it's that its failure
+point arrives sooner, **at a shorter length and lower force**." The strain
+axis was right and only the stress relationship was wrong, and that is not
+cleanly fixable in-repo (it needs the curve redrawn), so the asset was
+removed and left unmapped pending a redo.
+**The redo passes**, verified by the same pixel measurement rather than by
+eye: cold failure marker at (431, 202), warm at (741, 104) — cold is both
+left of (shorter strain) and below (lower force) warm, matching the lesson.
+*Caution for whoever redoes this:* there is a real open question about
+whether the lesson's "lower force" claim is itself the best reading of the
+literature (some isolated-muscle work reports warmed muscle failing at
+greater force *and* greater length). Do not "fix" the image against the
+literature while leaving the lesson as-is, or the contradiction just
+reverses — settle the lesson text first, against a source, then draw to it.
+
+**REDONE and landed — `pap-window-graph`.** Also a Codex catch, and a good
+one. The net
+effect curve is correct — it dips below baseline early and rises above it
+inside a shaded window marked 5-12 min, matching the lesson. But the shared
+y-axis is labeled "Performance relative to baseline" while the **fatigue
+curve sits entirely above baseline**, which reads as "more fatigue = better
+performance." This was initially waved through here as the standard
+textbook convention for the figure; that was wrong on the diagram's own
+terms, because the axis label makes a claim the component curves don't
+honor. Not cleanly fixable in-repo. **Redo note:** either plot fatigue as a
+negative contribution below the baseline, or give the component curves an
+explicit "effect magnitude" axis distinct from the net performance curve.
+**The redo takes the first option and passes**: with the baseline measured
+at y=216, the fatigue curve now sits below it throughout (y=333 early,
+decaying to y=217 by the right edge), potentiation stays above it, and the
+net curve starts below baseline (y=365) before crossing above it — so no
+curve now implies that fatigue improves performance.
+
+Landed and verified:
+- **`dynamic-vs-static`** and **`move-vs-hold`** — both handled the batch's
+  most contradiction-prone requirement correctly. Neither marks static
+  stretching with an X or labels it wrong; `move-vs-hold` puts a green check
+  on the "after" panel, which matches the lesson's "Move first, hold later"
+  framing rather than forbidding held stretches.
+- **`three-phase-structure`** — exactly three phases with the lesson's
+  names, plus the low-to-high intensity bar.
+
+**One filename fix:** the stress-strain image arrived as
+`...-stress-strain-graph.webp` but the lesson slot is
+`...-stress-strain-curve.webp`. The art was verified correct for the slot
+first, then the file was renamed — this is *not* the batch-7 situation,
+where art on an entirely different topic was held rather than remapped.
+Renaming is only ever appropriate when the picture already matches the
+slot's alt text.
+
+**Style question raised and settled — `cold-weather` is APPROVED.** Codex
+flagged this image on PR #47 as a photorealistic person that should be held.
+It was kept and escalated instead, and the repo owner approved it. The
+reasoning on record: it is a painted/rendered illustration rather than a
+photograph, the figure is drawn from behind with no visible face, and it
+therefore satisfies the standing rule as rewritten after batch 13 — which is
+scoped to *subject* (no photographs, no identifiable or photorealistic
+people) rather than to rendering style. Do not re-hold this image; the
+"scenes with people should be illustrated" line in the brief guidance is a
+preference about what teaches best, not a prohibition.
+
+**One accepted deviation:** on `dynamic-vs-static` the stopwatch is a plain
+icon with no "20-30 seconds" reading, where the brief asked for the number.
+Nothing contradicts the lesson (the duration is taught in the body text and
+a flashcard, and the slot's alt does not mention a duration), so it was
+landed as-is rather than edited.
 
 ## Batch 15: Lesson diagrams — cold-exposure (8 images)
 
