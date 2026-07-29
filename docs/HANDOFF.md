@@ -79,8 +79,8 @@ NATA Acute Skin Trauma on all bands plus Stop the Bleed on 9-10/11-12; two
 of its images had a right-edge production-sheet bleed fixed in-repo by
 white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6).
 
-**Current totals (recounted 2026-07-28, after the batch 14 redo):
-97 of 139 lesson-diagram slots live (70%), and 123 of 165 image slots
+**Current totals (recounted 2026-07-28, after batch 15):
+105 of 139 lesson-diagram slots live (76%), and 131 of 165 image slots
 overall** (139 diagrams + 18 thumbnails + 7 category icons + 1 hero). Count
 these from the repo rather than trusting a prior line — an earlier handoff
 put diagram progress at "115 of 139," which was the total-mapped-files
@@ -229,8 +229,38 @@ Worth remembering as a review habit: before flagging a claim as
 contradicting the literature, check whether the two statements are just
 inverses of each other over the same comparison.
 
-**Next:** batch 15 = **cold-exposure**, then batches 16–20 (one strand
-each) per `docs/IMAGE-BATCHES.md`.
+Batch 15 (**cold-exposure**) landed **7 of 8** (2026-07-28) — mechanically
+the cleanest delivery so far, and every line of the direction checklist added
+to that brief came back satisfied. That checklist (spelling out each
+relationship that could be drawn backwards, for the author to tick before
+sending) is worth reusing on any strand with counterintuitive teaching.
+Landing it also surfaced and fixed a pre-existing defect: the 11-12 flashcard
+grouped frostnip with true frostbite as a "freezing injury" while noting in
+the same sentence that frostnip has no ice crystals.
+
+✅ **RESOLVED — `cold-exposure-frostbite-severity.webp` landed and the 9-10
+lesson was changed to match it (owner decision, 2026-07-28).** ChatGPT
+delivered a "frostbite after rewarming" comparison (clear/milky blister =
+superficial, hemorrhagic = deep) with a "DO NOT PRESS OR TEST" banner, and
+argued the lesson should drop its palpation test. The owner adopted it. The
+lesson now says depth is hard to judge while the tissue is frozen, tells
+students not to press or rub, and puts the blister distinction after
+rewarming under medical care; the slot's description/alt and the "Frostbite:
+signs" flashcard were updated to match, and the quiz needed nothing. The
+cited guidelines (NATA 2008, WMS 2024, ACSM 2021) could not be read from the
+container, so **no source was added** — the change was judged on scope-of-
+practice grounds, not on citations. If those PDFs ever land in a session,
+this section is the first place to attach them.
+
+**Watch for this pattern:** ChatGPT edited the brief it was handed and
+returned the modified copy, and two of its four proposed lesson changes were
+reactions to compressions in *the brief's paraphrase* rather than to the
+lesson itself. Always diff a proposed content change against the unit JSON
+before acting on it.
+
+**Next:** batch 16 = **dental-facial-trauma**, then batches 17–20 (one
+strand each) per `docs/IMAGE-BATCHES.md`. Batch 15 is complete 8/8 — nothing
+outstanding on it.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a

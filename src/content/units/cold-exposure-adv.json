@@ -74,8 +74,8 @@
         "asset": "cold-exposure-cold-injury-classification.webp",
         "ratio": "16:9",
         "background": "white",
-        "description": "Four-panel classification chart of cold-weather tissue injuries. Panel 1 'Frostnip': pale, numb skin with no blistering, labeled 'fully reversible, no ice crystals.' Panel 2 'Chilblains (pernio)': red-purple itchy patches on fingers/ears, labeled 'repeated cool-damp exposure, non-freezing.' Panel 3 'Trench foot': macerated, swollen, pale foot skin, labeled 'prolonged wet-cold immersion, non-freezing.' Panel 4 'Frostbite': hard, waxy, blistered tissue, labeled 'true tissue freezing, ice crystal formation.' Clean medical-illustration style, non-graphic, each panel labeled with its mechanism.",
-        "alt": "Classification chart comparing frostnip, chilblains, trench foot, and true frostbite by mechanism and appearance.",
+        "description": "Four-panel classification chart of cold-weather tissue injuries, each panel tagged with whether it involves freezing. Panel 1 'Frostnip': pale, numb skin with no blistering, tagged NON-FREEZING, 'no ice crystals within tissue.' Panel 2 'Chilblains (pernio)': red-purple itchy patches on the fingers, tagged NON-FREEZING, 'cool + damp exposure.' Panel 3 'Trench foot': pale, swollen, macerated foot skin, tagged NON-FREEZING, 'prolonged wet-cold exposure.' Panel 4 'Frostbite': pale, waxy fingers with a small blister, tagged FREEZING INJURY, 'ice crystals form in tissue.' Clean medical-illustration style, non-graphic.",
+        "alt": "Classification chart comparing frostnip, chilblains, trench foot, and frostbite, with the first three tagged non-freezing and only frostbite tagged as a freezing injury.",
         "location": "public/images/units/cold-exposure/"
       }
     },
@@ -174,11 +174,11 @@
       "choices": [
         "True frostbite, since any discoloration means the tissue froze",
         "Trench foot, from a single day of prolonged wet immersion",
-        "Frostnip, a mild and fully reversible form of frostbite",
+        "Frostnip, a mild and fully reversible cold injury",
         "Chilblains, from repeated exposure to cool, damp — non-freezing — conditions damaging small blood vessels over time"
       ],
       "answerIndex": 3,
-      "explanation": "Repeated, non-freezing cool-damp exposure causing itchy, inflamed, purplish patches over time is the classic chilblains pattern — no ice crystal formation is required, and the history here shows repeated exposure rather than one prolonged immersion (trench foot) or a single freezing event (frostnip or frostbite)."
+      "explanation": "Repeated, non-freezing cool-damp exposure causing itchy, inflamed, purplish patches over time is the classic chilblains pattern — no ice crystal formation is required, and the history here shows repeated exposure rather than one prolonged immersion (trench foot) or a single acute exposure to freezing cold (frostbite). Note that frostnip, like chilblains and trench foot, is also a non-freezing injury; frostbite is the one that actually freezes tissue."
     },
     {
       "id": "q7",
@@ -254,7 +254,7 @@
     {
       "id": "f10",
       "front": "Freezing vs. non-freezing cold injury",
-      "back": "Frostnip (superficial, fully reversible, no ice crystals) and true frostbite (actual tissue freezing) are freezing injuries. Chilblains (repeated cool-damp exposure, vessel damage) and trench foot (prolonged wet-cold immersion, tissue maceration) are non-freezing injuries."
+      "back": "True frostbite (actual tissue freezing, ice crystals form) is the freezing injury. Frostnip (superficial, fully reversible, no ice crystals — frostbite's warning sign), chilblains (repeated cool-damp exposure, vessel damage), and trench foot (prolonged wet-cold immersion, tissue maceration) are all non-freezing injuries."
     },
     {
       "id": "f11",

@@ -61,24 +61,24 @@
       "heading": "Frostbite — when tissue actually freezes",
       "body": [
         "Frostbite is different from hypothermia: it's the freezing of skin and, in more serious cases, the tissue underneath — not a drop in core temperature. It happens most often at the body's extremities and exposed skin, farthest from the warm core and often less insulated: fingers, toes, ears, nose, and cheeks.",
-        "Superficial frostbite affects the skin: it looks white, waxy, or grayish, and feels numb. The surface may feel hard or frozen, but the tissue underneath still feels soft and pliable when gently pressed.",
-        "Deep frostbite extends into the tissue below the skin. The area is hard and cold all the way through, may look mottled or blue-white, and can blister. Deep frostbite is a medical emergency that needs hospital care — the tissue can be permanently damaged."
+        "Frostbite is described as superficial when it involves the skin and deep when it extends into the tissue below, but that distinction is genuinely hard to judge while the tissue is still frozen. Before rewarming, frostbitten skin of either depth can look white, waxy, or grayish and feel numb and hard. Do not press, squeeze, or rub the area to try to work out how deep it goes — handling frozen tissue can damage it further, and grading the injury is not your job.",
+        "The clearer signal comes after rewarming, which happens under medical care. Blisters that fill with clear or milky fluid point toward a more superficial injury, while blood-filled (hemorrhagic) blisters point toward deeper tissue damage. Deep frostbite is a medical emergency that needs hospital care — the tissue can be permanently damaged. Treat any suspected frostbite the same way on the sideline: get the athlete out of the cold and get medical evaluation without delay."
       ],
       "image": {
         "asset": "cold-exposure-frostbite-severity.webp",
         "ratio": "4:3",
         "background": "white",
-        "description": "Two-panel comparison of frostbitten fingers. Left panel: superficial frostbite — skin looks white, waxy, or grayish, with a caption noting the tissue underneath still feels soft when pressed. Right panel: deep frostbite — skin is mottled, blue-white, with a blister and a caption noting the tissue is hard and cold throughout. Label each panel 'Superficial' and 'Deep.' Clean medical-illustration style, no graphic detail.",
-        "alt": "Comparison diagram of superficial frostbite (white, waxy skin) and deep frostbite (mottled, blistered skin) on the fingers.",
+        "description": "Two-panel comparison of frostbitten fingers after rewarming, headed 'Frostbite after rewarming.' Left panel labeled 'Superficial': pale fingers with a clear or milky blister, captioned 'clear or milky blister may form.' Right panel labeled 'Deep': mottled, blue-grey fingers with a dark blood-filled blister, captioned 'hemorrhagic blister suggests deeper injury.' A banner across the foot of the image reads 'Do not press or test — get medical help.' Clean medical-illustration style, no graphic detail.",
+        "alt": "Comparison of frostbitten fingers after rewarming: superficial frostbite with a clear or milky blister, and deep frostbite with a blood-filled blister, under a reminder not to press or test the tissue but to get medical help.",
         "location": "public/images/units/cold-exposure/"
       }
     },
     {
       "heading": "Responding to frostbite",
       "body": [
-        "Get the athlete out of the cold and indoors as soon as possible. Rewarm the area gently — skin-to-skin contact (tucking bare fingers into an armpit, for example) or gentle immersion in lukewarm (not hot) water both work. Never use a direct heat source like a campfire, heater, or hot water, since numb skin can't feel a burn happening.",
-        "Never rub or massage a frostbitten area. The tissue may contain ice crystals, and rubbing grinds them against already-damaged cells, making the injury worse — the opposite of the instinct to 'rub it warm.'",
-        "Any suspected deep frostbite — tissue that's hard and cold throughout, blistering, or badly discolored — needs emergency medical care. Don't attempt to rewarm deep frostbite yourself; get the athlete to a hospital."
+        "Because you can't tell how deep a frostbite injury goes while it's still frozen, every suspected frostbite gets the same response, and it doesn't depend on grading the injury. Get the athlete out of the cold and indoors as soon as possible. Take off wet clothing and anything constricting near the area — rings, tight laces, a snug cuff — since swelling follows rewarming. Protect the area from further cold and from being knocked, and get medical evaluation without delay.",
+        "Never rub or massage a frostbitten area. The tissue may contain ice crystals, and rubbing grinds them against already-damaged cells, making the injury worse — the opposite of the instinct to 'rub it warm.' Never use a direct heat source like a campfire, heater, or hot water either, since numb skin can't feel a burn happening.",
+        "Once the athlete is somewhere they can stay warm, rewarm the area gently — skin-to-skin contact (tucking bare fingers into an armpit, for example) or gentle immersion in lukewarm (not hot) water. The one thing that decides whether to rewarm in the field is not how deep the injury looks, it's whether the area could refreeze: if there's any chance of that before the athlete reaches lasting warmth, protect the area and wait, because thawing and refreezing does far more damage than staying frozen a while longer. Either way, every suspected frostbite gets medical evaluation."
       ],
       "callout": {
         "type": "warning",
@@ -247,7 +247,7 @@
     {
       "id": "f10",
       "front": "Frostbite: signs",
-      "back": "Skin looks white, waxy, or grayish and feels numb. Deep frostbite: hard and cold throughout, may blister, mottled or blue-white."
+      "back": "Skin looks white, waxy, or grayish and feels numb. Depth is hard to judge while frozen — don't press or test it. After rewarming, clear or milky blisters suggest superficial injury and blood-filled ones suggest deeper damage."
     },
     {
       "id": "f11",
