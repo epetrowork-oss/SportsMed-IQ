@@ -258,8 +258,9 @@ reactions to compressions in *the brief's paraphrase* rather than to the
 lesson itself. Always diff a proposed content change against the unit JSON
 before acting on it.
 
-**Next:** finish batch 15's held image, then batch 16 = **dental-facial-trauma**,
-then batches 17–20 (one strand each) per `docs/IMAGE-BATCHES.md`.
+**Next:** batch 16 = **dental-facial-trauma**, then batches 17–20 (one
+strand each) per `docs/IMAGE-BATCHES.md`. Batch 15 is complete 8/8 — nothing
+outstanding on it.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a
