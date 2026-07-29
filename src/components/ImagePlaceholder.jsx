@@ -318,6 +318,28 @@ const REAL_IMAGE_PATHS = {
     'images/units/warmup-injury-prevention/warmup-injury-prevention-dynamic-vs-static.webp',
   'warmup-injury-prevention-three-phase-structure.webp':
     'images/units/warmup-injury-prevention/warmup-injury-prevention-three-phase-structure.webp',
+
+  // cold-exposure lesson diagrams (batch 15)
+  // HELD pending a lesson decision, deliberately unmapped (see
+  // docs/IMAGE-BATCHES.md batch 15):
+  //   cold-exposure-frostbite-severity.webp — drawn to teach blister character
+  //     after rewarming plus "do not press or test," which contradicts the
+  //     9-10 lesson's current soft-underneath vs hard-throughout palpation
+  //     test. The image is not wrong; the two just cannot both be shipped.
+  'cold-exposure-cold-injury-classification.webp':
+    'images/units/cold-exposure/cold-exposure-cold-injury-classification.webp',
+  'cold-exposure-confusion-differential.webp':
+    'images/units/cold-exposure/cold-exposure-confusion-differential.webp',
+  'cold-exposure-hypothermia-frostbite-overview.webp':
+    'images/units/cold-exposure/cold-exposure-hypothermia-frostbite-overview.webp',
+  'cold-exposure-layering-basics.webp':
+    'images/units/cold-exposure/cold-exposure-layering-basics.webp',
+  'cold-exposure-shivering-signs.webp':
+    'images/units/cold-exposure/cold-exposure-shivering-signs.webp',
+  'cold-exposure-frostbite-signs.webp':
+    'images/units/cold-exposure/cold-exposure-frostbite-signs.webp',
+  'cold-exposure-conduction-convection.webp':
+    'images/units/cold-exposure/cold-exposure-conduction-convection.webp',
 }
 
 function ratioToCss(ratio) {
