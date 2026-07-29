@@ -453,7 +453,7 @@ Nothing contradicts the lesson (the duration is taught in the body text and
 a flashcard, and the slot's alt does not mention a duration), so it was
 landed as-is rather than edited.
 
-## Batch 15: Lesson diagrams — cold-exposure (8 images) — LANDED 2026-07-28 (7 of 8; 1 held pending a lesson decision)
+## Batch 15: Lesson diagrams — cold-exposure (8 images) — LANDED 2026-07-28 (8 of 8; 1 landed with a lesson change)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -466,7 +466,8 @@ landed as-is rather than edited.
 | 7 | cold-exposure-conduction-convection.webp | 16:9 | transparent | public/images/units/cold-exposure/ | Two-panel diagram of an athlete outdoors in cold weather. Left panel: conduction — wet clothing clinging to skin with small arrows showing heat leaving the body directly into the wet fabric. Right panel: convection — wind lines blowing past the same athlete, arrows showing the thin warm air layer near the skin being stripped away. Label each panel 'Conduction' and 'Convection.' Clean instructional-illustration style. | Diagram comparing conduction (wet clothing) and convection (wind) as the two main ways an athlete loses body heat in cold weather. |
 | 8 | cold-exposure-frostbite-severity.webp | 4:3 | white | public/images/units/cold-exposure/ | Two-panel comparison of frostbitten fingers. Left panel: superficial frostbite — skin looks white, waxy, or grayish, with a caption noting the tissue underneath still feels soft when pressed. Right panel: deep frostbite — skin is mottled, blue-white, with a blister and a caption noting the tissue is hard and cold throughout. Label each panel 'Superficial' and 'Deep.' Clean medical-illustration style, no graphic detail. | Comparison diagram of superficial frostbite (white, waxy skin) and deep frostbite (mottled, blistered skin) on the fingers. |
 
-**Landed 7 of 8 (2026-07-28).** Mechanically the cleanest batch yet: correct
+**Landed 8 of 8 (2026-07-28)** — seven straight through, the eighth after
+an owner decision to change the lesson it illustrates. Mechanically the cleanest batch yet: correct
 filenames, correct dimensions, every file 32-57 KB, true alpha on
 `conduction-convection`, no slivers. **Every line of the direction checklist
 added to this batch's brief came back satisfied** — the checklist approach is
@@ -495,26 +496,34 @@ body ("no actual ice crystals form in the tissue"), and contradicting the new
 classification image. Frostnip was moved to the non-freezing group. This
 defect predates the batch and was only surfaced by drawing the chart.
 
-**HELD — `cold-exposure-frostbite-severity.webp`, pending a content
-decision, not because the image is wrong.** ChatGPT declined to draw the
-briefed soft-underneath-vs-hard-throughout comparison and instead delivered
-"FROSTBITE AFTER REWARMING" — superficial shown with a clear/milky blister,
-deep with a hemorrhagic blister, under a banner reading "DO NOT PRESS OR TEST
-— GET MEDICAL HELP." It also shipped a `LESSON-UPDATES.md` proposing that the
-9-10 lesson drop its palpation test, citing the NATA environmental cold
-injuries position statement (2008), the Wilderness Medical Society frostbite
-guidelines (2024 update), and the ACSM cold-weather consensus (2021).
+**`cold-exposure-frostbite-severity.webp` — landed, and the LESSON was
+changed to match it (owner decision, 2026-07-28).** ChatGPT declined to draw
+the briefed soft-underneath-vs-hard-throughout comparison and delivered
+"FROSTBITE AFTER REWARMING" instead — superficial with a clear/milky
+blister, deep with a hemorrhagic blister, under a banner reading "DO NOT
+PRESS OR TEST — GET MEDICAL HELP" — along with a `LESSON-UPDATES.md`
+arguing the 9-10 lesson should drop its palpation test. It cited the NATA
+environmental cold injuries position statement (2008), the Wilderness
+Medical Society frostbite guidelines (2024 update), and the ACSM
+cold-weather consensus (2021); none of those could be read from the
+container, so the change was judged on its own merits rather than on the
+citations, and **no source was added to the unit**.
 
-The clinical argument is sound — depth classification before rewarming is
+The argument that carried it: depth classification before rewarming is
 unreliable, blister character after rewarming is the accepted discriminator,
-and instructing a student aide to press frozen tissue is poor scope of
-practice. But the 9-10 lesson currently teaches *"the tissue underneath still
-feels soft and pliable when gently pressed,"* so the image and the lesson
-cannot both ship. The image is unmapped until the owner decides whether to
-adopt the lesson change. The edit is small if adopted: one lesson sentence in
-`cold-exposure.json`, that slot's `description`, and nothing in the quiz —
-the "Frostbite: signs" flashcard describes appearance only and needs no
-change.
+and a lesson written for student aides should not describe pressing on
+frozen tissue as a way to grade injury depth. What changed in
+`cold-exposure.json`:
+- the two "Frostbite — when tissue actually freezes" body paragraphs, which
+  now say depth is hard to judge while frozen, tell the student not to
+  press/squeeze/rub, and put the clear-vs-hemorrhagic blister distinction
+  after rewarming under medical care;
+- that slot's `description` and `alt`, rewritten to describe the delivered
+  after-rewarming image;
+- the "Frostbite: signs" flashcard, which had carried the same "hard and
+  cold throughout" palpation framing.
+The quiz needed no change. The 7-8 unit was already correct — it never
+taught palpation, only "get inside and tell an adult."
 
 **Process note:** ChatGPT also edited the brief it was given and returned the
 modified copy. Two of its four proposed lesson changes were reactions to

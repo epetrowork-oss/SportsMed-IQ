@@ -80,7 +80,7 @@ of its images had a right-edge production-sheet bleed fixed in-repo by
 white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6).
 
 **Current totals (recounted 2026-07-28, after batch 15):
-104 of 139 lesson-diagram slots live (75%), and 130 of 165 image slots
+105 of 139 lesson-diagram slots live (76%), and 131 of 165 image slots
 overall** (139 diagrams + 18 thumbnails + 7 category icons + 1 hero). Count
 these from the repo rather than trusting a prior line — an earlier handoff
 put diagram progress at "115 of 139," which was the total-mapped-files
@@ -238,19 +238,19 @@ Landing it also surfaced and fixed a pre-existing defect: the 11-12 flashcard
 grouped frostnip with true frostbite as a "freezing injury" while noting in
 the same sentence that frostnip has no ice crystals.
 
-⚠ **DECISION PENDING — `cold-exposure-frostbite-severity.webp` is held, and
-the image is not the problem.** ChatGPT delivered a "frostbite after
-rewarming" comparison (clear/milky blister = superficial, hemorrhagic =
-deep) with a "DO NOT PRESS OR TEST" banner, plus a proposal that the 9-10
-lesson drop its current palpation test ("the tissue underneath still feels
-soft and pliable when gently pressed"), citing NATA environmental cold
-injuries (2008), WMS frostbite guidelines (2024 update), and the ACSM
-cold-weather consensus (2021). The clinical case is sound — pre-thaw depth
-classification is unreliable and telling a student aide to press frozen
-tissue is poor scope of practice — but it changes what students are taught to
-*do*, so it needs the owner's decision. If adopted the edit is small: one
-lesson sentence in `cold-exposure.json`, that slot's `description`, then map
-the image. If declined, request a redraw to the current lesson.
+✅ **RESOLVED — `cold-exposure-frostbite-severity.webp` landed and the 9-10
+lesson was changed to match it (owner decision, 2026-07-28).** ChatGPT
+delivered a "frostbite after rewarming" comparison (clear/milky blister =
+superficial, hemorrhagic = deep) with a "DO NOT PRESS OR TEST" banner, and
+argued the lesson should drop its palpation test. The owner adopted it. The
+lesson now says depth is hard to judge while the tissue is frozen, tells
+students not to press or rub, and puts the blister distinction after
+rewarming under medical care; the slot's description/alt and the "Frostbite:
+signs" flashcard were updated to match, and the quiz needed nothing. The
+cited guidelines (NATA 2008, WMS 2024, ACSM 2021) could not be read from the
+container, so **no source was added** — the change was judged on scope-of-
+practice grounds, not on citations. If those PDFs ever land in a session,
+this section is the first place to attach them.
 
 **Watch for this pattern:** ChatGPT edited the brief it was handed and
 returned the modified copy, and two of its four proposed lesson changes were

@@ -320,12 +320,8 @@ const REAL_IMAGE_PATHS = {
     'images/units/warmup-injury-prevention/warmup-injury-prevention-three-phase-structure.webp',
 
   // cold-exposure lesson diagrams (batch 15)
-  // HELD pending a lesson decision, deliberately unmapped (see
-  // docs/IMAGE-BATCHES.md batch 15):
-  //   cold-exposure-frostbite-severity.webp — drawn to teach blister character
-  //     after rewarming plus "do not press or test," which contradicts the
-  //     9-10 lesson's current soft-underneath vs hard-throughout palpation
-  //     test. The image is not wrong; the two just cannot both be shipped.
+  'cold-exposure-frostbite-severity.webp':
+    'images/units/cold-exposure/cold-exposure-frostbite-severity.webp',
   'cold-exposure-cold-injury-classification.webp':
     'images/units/cold-exposure/cold-exposure-cold-injury-classification.webp',
   'cold-exposure-confusion-differential.webp':
