@@ -338,17 +338,12 @@ const REAL_IMAGE_PATHS = {
     'images/units/cold-exposure/cold-exposure-conduction-convection.webp',
 
   // dental-facial-trauma lesson diagrams (batch 16)
-  // HELD for redo, deliberately unmapped (see docs/IMAGE-BATCHES.md batch 16):
-  //   dental-trauma-nosebleed-position.webp   — delivered as an anatomical
-  //     skeleton rather than an athlete, and shows no seated posture at all,
-  //     when the posture IS the teaching point at this band.
-  //   dental-trauma-nosebleed-technique.webp  — same skeleton substitution;
-  //     posture and crossed-out wrong position are correct, so this one is
-  //     the closest to salvageable.
-  //   dental-trauma-injury-types-overview.webp — photorealistic adult face
-  //     with clinical vocabulary ("Epistaxis", "Mandibular Fracture") for a
-  //     7-8 slot, and it omits the avulsed tooth, which is the unit's
-  //     headline injury.
+  'dental-trauma-nosebleed-position.webp':
+    'images/units/dental-facial-trauma/dental-trauma-nosebleed-position.webp',
+  'dental-trauma-nosebleed-technique.webp':
+    'images/units/dental-facial-trauma/dental-trauma-nosebleed-technique.webp',
+  'dental-trauma-injury-types-overview.webp':
+    'images/units/dental-facial-trauma/dental-trauma-injury-types-overview.webp',
   'dental-trauma-luxation-spectrum.webp':
     'images/units/dental-facial-trauma/dental-trauma-luxation-spectrum.webp',
   'dental-trauma-mandible-ring-anatomy.webp':

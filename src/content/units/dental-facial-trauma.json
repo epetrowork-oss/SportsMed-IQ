@@ -74,8 +74,8 @@
         "asset": "dental-trauma-nosebleed-technique.webp",
         "ratio": "4:3",
         "background": "transparent",
-        "description": "An athlete seated upright, torso leaning slightly forward from the hips (not tilting the head back), pinching the soft lower part of the nose with thumb and finger just below the bony bridge. Add a small crossed-out icon showing the incorrect head-tilted-back position beside it. Simple instructional-illustration style.",
-        "alt": "Diagram of correct nosebleed positioning: sitting upright and leaning slightly forward while pinching the soft part of the nose.",
+        "description": "An athlete seated upright, torso leaning slightly forward from the hips (not tilting the head back), pinching the soft lower part of the nose with thumb and finger just below the bony bridge. A labelled inset cross-section of the nose marks the bony bridge above and the soft part below, a clock icon reads '10 minutes steady pressure,' and a smaller crossed-out figure shows the incorrect head-tilted-back position. Simple instructional-illustration style.",
+        "alt": "Diagram of correct nosebleed positioning: an athlete sitting upright and leaning slightly forward while pinching the soft part of the nose, with an inset distinguishing the bony bridge from the soft part, a ten-minute pressure reminder, and the incorrect head-tilted-back position crossed out.",
         "location": "public/images/units/dental-facial-trauma/"
       }
     },

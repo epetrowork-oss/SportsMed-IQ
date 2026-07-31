@@ -533,7 +533,7 @@ the wet/windy 40 °F vs dry/still 20 °F comparison is already hedged with
 says frostnip involves no ice crystals. Always diff a proposed lesson change
 against the unit JSON before acting on it.
 
-## Batch 16: Lesson diagrams — dental-facial-trauma (8 images) — LANDED 2026-07-29 (5 of 8; 3 held for redo)
+## Batch 16: Lesson diagrams — dental-facial-trauma (8 images) — LANDED 2026-07-30 (8 of 8; 3 redone)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -546,7 +546,7 @@ against the unit JSON before acting on it.
 | 7 | dental-trauma-tooth-anatomy-handling.webp | 4:3 | white | public/images/units/dental-facial-trauma/ | Cross-section of a tooth showing the crown (white chewing surface, labeled) above the gumline and the root (labeled) below it, wrapped in a thin highlighted layer representing the periodontal ligament. Beside it, a small inset shows a hand correctly holding an avulsed tooth by the crown only, fingers not touching the root. Clean medical-illustration style. | Diagram of a tooth's crown and root with the periodontal ligament highlighted, and a hand correctly holding a knocked-out tooth by the crown only. |
 | 8 | dental-trauma-nosebleed-technique.webp | 4:3 | transparent | public/images/units/dental-facial-trauma/ | An athlete seated upright, torso leaning slightly forward from the hips (not tilting the head back), pinching the soft lower part of the nose with thumb and finger just below the bony bridge. Add a small crossed-out icon showing the incorrect head-tilted-back position beside it. Simple instructional-illustration style. | Diagram of correct nosebleed positioning: sitting upright and leaning slightly forward while pinching the soft part of the nose. |
 
-**Landed 5 of 8 (2026-07-29).** All eight were mechanically clean —
+**Landed 8 of 8** — five on 2026-07-29, three after a redo on 2026-07-30. All eight were mechanically clean —
 correct filenames (including the `dental-trauma-` prefix against the
 `dental-facial-trauma/` folder), correct dimensions, 31-58 KB, true alpha
 where required, no slivers. **All three flagged reversals came back
@@ -571,37 +571,41 @@ seated on a model of the upper teeth. No athlete, but the fit reads clearly
 and nothing is wrong, so it was landed and the slot's `description`/`alt`
 rewritten to describe the model.
 
-**HELD — three images, for two distinct reasons.**
+**THREE REDONE AND LANDED (2026-07-30), after being held for two distinct
+reasons.**
 
-*Both nosebleed images came back as anatomical skeletons.* `nosebleed-position`
-(7-8) and `nosebleed-technique` (9-10) each show a skull and spine with a
-translucent soft-tissue nose overlaid, and a disembodied hand pinching it.
-The direction is right in both — forward lean, and in the 9-10 image the
-head-tilted-back version is properly crossed out — but the brief asked for
-an athlete, and the substitution fails hardest exactly where the teaching
-lives. At 7-8 the lesson content *is* the posture ("sit up and lean
-forward"), and that image shows no seated posture at all, just a floating
-skull and ribcage. Both slots' alt text describes an athlete. **Redo note:**
-draw both as an illustrated athlete. The soft-tissue-over-bone overlay is
-genuinely a good idea for showing where the bony bridge ends and the soft
-part begins — keep it, but as a small inset on the 9-10 image rather than as
-the whole subject. The 9-10 one is the closer of the two to salvageable if a
-redraw isn't practical.
+*Both nosebleed images first came back as anatomical skeletons* — skull,
+spine, and a disembodied hand pinching a translucent soft-tissue nose. The
+direction was right in both, but the brief asked for an athlete and the
+substitution failed hardest where the teaching lives: at 7-8 the lesson
+content *is* the posture ("sit up and lean forward"), and that image showed
+no seated posture at all. **Both redos are correct**: an illustrated young
+athlete seated on a bench/stool, leaning slightly forward, pinching the soft
+part below the bony bridge, head never tilted back. The 9-10 redo also
+brought back the one genuinely good idea from the rejected version — the
+soft-tissue-over-bone cross-section, now a **labelled inset** marking BONY
+BRIDGE and SOFT PART — plus a "10 minutes steady pressure" clock and a
+smaller crossed-out tilted-back figure. Its `description` and `alt` were
+expanded to cover the inset, clock, and crossed-out figure.
 
-*`injury-types-overview` (7-8) misses its band on several axes at once.* It
-was delivered as a photorealistic adult face in four panels labeled "Crown
-Fracture," "Lip Laceration," "Nosebleed (Epistaxis)," and "Mandibular
-Fracture." Problems, in order of importance: it **omits the avulsed tooth**,
-which is the first item in the 7-8 list and the unit's headline injury; the
-vocabulary is 11-12 clinical register in a 7-8 slot, where the lesson says
-"a tooth completely knocked out," "a chipped or cracked tooth," "a cut on
-the lip," "a nosebleed," "a hard hit to the jaw"; the "Mandibular Fracture"
-panel shows cheek abrasions rather than any recognizable jaw-injury sign;
-and it is the closest any delivery has come to the no-photorealistic-people
-rule — a front-facing photoreal face cropped just below the eyes, where the
-approved precedent (batch 14 `cold-weather`) was a painted back view.
-**Redo note:** flat illustration of a young athlete's face, four numbered
-callouts, plain language, and the knocked-out tooth must be one of the four.
+*`injury-types-overview` (7-8) first missed its band on four axes at once*:
+it omitted the avulsed tooth (the first item in the 7-8 list and the unit's
+headline injury), used 11-12 clinical vocabulary ("Epistaxis," "Mandibular
+Fracture"), showed cheek abrasions as the jaw sign, and was a front-facing
+photorealistic adult face — the closest any delivery has come to the
+no-photorealistic-people rule. **The redo is correct**: flat illustration of
+a young athlete, neutral expression, four numbered callouts in the lesson's
+own plain language — completely knocked out, chipped or cracked, cut on the
+lip, nosebleed — with a visible gap in the upper teeth marking the avulsion.
+The jaw callout was dropped to keep four clean callouts, so the slot's
+`description` and `alt` (which had listed a jaw callout) were rewritten to
+match what is shown.
+
+**Lesson for later briefs:** the redo prompt led with a single shared
+instruction — *"when a spec says 'an athlete' it means an illustrated
+person"* — rather than repeating it per image, because the same substitution
+had happened three ways in one batch. That reads as one systematic
+misreading rather than three slips, and it was fixed in one pass.
 
 ## Batch 17: Lesson diagrams — eye-injuries (8 images)
 

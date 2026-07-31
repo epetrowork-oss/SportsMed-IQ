@@ -79,8 +79,8 @@ NATA Acute Skin Trauma on all bands plus Stop the Bleed on 9-10/11-12; two
 of its images had a right-edge production-sheet bleed fixed in-repo by
 white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6).
 
-**Current totals (recounted 2026-07-29, after batch 16):
-110 of 139 lesson-diagram slots live (79%), and 136 of 165 image slots
+**Current totals (recounted 2026-07-30, after the batch 16 redo):
+113 of 139 lesson-diagram slots live (81%), and 139 of 165 image slots
 overall** (139 diagrams + 18 thumbnails + 7 category icons + 1 hero). Count
 these from the repo rather than trusting a prior line — an earlier handoff
 put diagram progress at "115 of 139," which was the total-mapped-files
@@ -264,13 +264,13 @@ crown-not-root, and the opposite-side mandible fracture — so the direction
 checklist continues to earn its place. `mouthguard` was landed with its
 alt reconciled (a dental model rather than the briefed athlete).
 
-⚠ **Three images await redo — notes in `docs/IMAGE-BATCHES.md` batch 16.**
-Both nosebleed images (`nosebleed-position` 7-8, `nosebleed-technique` 9-10)
-came back as anatomical skeletons instead of athletes; the direction is
-right in both, but at 7-8 the posture *is* the lesson and the image shows no
-posture at all. `injury-types-overview` (7-8) is a photorealistic adult face
-using 11-12 clinical vocabulary, and it omits the avulsed tooth, which is
-that unit's headline injury.
+✅ **All three redos landed (2026-07-30), batch 16 complete 8/8.** Both
+nosebleed images had come back as anatomical skeletons instead of athletes,
+and `injury-types-overview` had been a photorealistic adult face using 11-12
+clinical vocabulary that omitted the avulsed tooth. The redos fixed all of
+it, and the 9-10 nosebleed image kept the salvageable idea from its rejected
+version as a labelled BONY BRIDGE / SOFT PART inset. Three alt/description
+fields were reconciled in the process.
 
 **Two patterns worth carrying into later briefs.** First, "an athlete" needs
 saying twice — twice now a delivery has substituted a non-person subject
@@ -278,8 +278,8 @@ saying twice — twice now a delivery has substituted a non-person subject
 slots, state the vocabulary level explicitly and list the plain-language
 terms the lesson uses, because the clinical register creeps in otherwise.
 
-**Next:** finish batch 16's three redos, then batch 17 = **eye-injuries**,
-then batches 18–20 (one strand each) per `docs/IMAGE-BATCHES.md`.
+**Next:** batch 17 = **eye-injuries**, then batches 18–20 (one strand each)
+per `docs/IMAGE-BATCHES.md`. Batch 16 is complete 8/8 — nothing outstanding.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a
