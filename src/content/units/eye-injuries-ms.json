@@ -93,8 +93,8 @@
         "asset": "eye-injuries-protective-eyewear.webp",
         "ratio": "4:3",
         "background": "white",
-        "description": "Simple front-facing illustration of an athlete wearing sport-specific protective eyewear, like wraparound goggles suited for a sport such as hockey or racquetball. Clean, flat, friendly illustration style.",
-        "alt": "Athlete wearing sport-specific protective wraparound eyewear.",
+        "description": "Illustration of a pair of sport-specific protective goggles — padded wraparound frame, impact lenses, side vents, and an adjustable elastic head strap — shown at an angle so the build is clear. The heavy frame and strap distinguish them from ordinary glasses. Clean, flat illustration style.",
+        "alt": "Sport-specific protective goggles with a padded wraparound frame, impact lenses, and an adjustable head strap.",
         "location": "public/images/units/eye-injuries/"
       }
     }

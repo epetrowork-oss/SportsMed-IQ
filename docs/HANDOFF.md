@@ -79,8 +79,8 @@ NATA Acute Skin Trauma on all bands plus Stop the Bleed on 9-10/11-12; two
 of its images had a right-edge production-sheet bleed fixed in-repo by
 white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6).
 
-**Current totals (recounted 2026-07-30, after the batch 16 redo):
-113 of 139 lesson-diagram slots live (81%), and 139 of 165 image slots
+**Current totals (recounted 2026-07-31, after batch 17):
+120 of 139 lesson-diagram slots live (86%), and 146 of 165 image slots
 overall** (139 diagrams + 18 thumbnails + 7 category icons + 1 hero). Count
 these from the repo rather than trusting a prior line — an earlier handoff
 put diagram progress at "115 of 139," which was the total-mapped-files
@@ -278,13 +278,38 @@ saying twice — twice now a delivery has substituted a non-person subject
 slots, state the vocabulary level explicitly and list the plain-language
 terms the lesson uses, because the clinical register creeps in otherwise.
 
-**Next:** batch 17 = **eye-injuries**, then batches 18–20 (one strand each)
-per `docs/IMAGE-BATCHES.md`. Batch 16 is complete 8/8, with **one polish item
-to fold into the batch 17 request**: on `dental-trauma-tooth-anatomy-handling`
-the `Root` and `Periodontal ligament` leader lines both terminate on the same
-thin blue layer, so the root leader should be moved onto the cream dentin
-clearly inside the root. Landed rather than held — the anatomy is right and
-the lesson text is explicit — but it should not be forgotten.
+Batch 17 (**eye-injuries**) landed **7 of 8** (2026-07-31). The batch's
+riskiest image, `subconjunctival-vs-hyphema`, came back correct — flat patch
+on the white with the iris clear, versus blood pooled inside the anterior
+chamber with a fluid level, not swapped — and `anatomy-cross-section` placed
+all five leader lines on their own structures after the batch-16 problem was
+flagged in its brief. `protective-eyewear` was landed with its alt
+reconciled (goggles alone rather than worn).
+
+⚠ **One image awaits redo:** `eye-injuries-minor-irritation-rinse` shows the
+athlete rinsing their own eye, where both the lesson ("an adult can also
+gently rinse the eye") and the slot's alt assign that to an adult. Redo note
+in `docs/IMAGE-BATCHES.md` batch 17.
+
+⚠ **Still outstanding from batch 16:** the
+`dental-trauma-tooth-anatomy-handling` leader-line correction — move the
+`Root` leader onto the cream dentin, clear of the blue ligament layer,
+changing nothing else. It was included as item 9 of the batch 17 request but
+did not come back in that delivery, because the accepted original had to be
+sent across separately. Still queued.
+
+**A recurring pattern, now three batches running:** specs that say "an
+athlete wearing/doing X" keep coming back with the person removed —
+skeletons in batch 16, object-only product shots for `mouthguard` and
+`protective-eyewear`. Landing the object-only ones with reconciled alts is
+fine when nothing is wrong, but if a slot genuinely needs the behaviour
+modelled, say so twice and say why.
+
+**Next:** finish batch 17's redo and the batch 16 dental correction, then
+batch 18 = **hydration-nutrition** (whose NATA sources are already earmarked
+in the list below), then batches 19–20 (skin-conditions and
+sports-psychology, both carrying safety-sensitive content flags that need
+their framing written into the briefs).
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a
