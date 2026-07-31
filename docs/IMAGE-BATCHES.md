@@ -533,7 +533,7 @@ the wet/windy 40 °F vs dry/still 20 °F comparison is already hedged with
 says frostnip involves no ice crystals. Always diff a proposed lesson change
 against the unit JSON before acting on it.
 
-## Batch 16: Lesson diagrams — dental-facial-trauma (8 images)
+## Batch 16: Lesson diagrams — dental-facial-trauma (8 images) — LANDED 2026-07-30 (8 of 8; 3 redone)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -545,6 +545,81 @@ against the unit JSON before acting on it.
 | 6 | dental-trauma-mouthguard.webp | 1:1 | white | public/images/units/dental-facial-trauma/ | Simple illustration showing a mouthguard on its own next to a young athlete wearing it with a slight smile, showing how it fits over the teeth. Clean, flat, friendly illustration style, no text in the image. | A mouthguard shown on its own and being worn by an athlete. |
 | 7 | dental-trauma-tooth-anatomy-handling.webp | 4:3 | white | public/images/units/dental-facial-trauma/ | Cross-section of a tooth showing the crown (white chewing surface, labeled) above the gumline and the root (labeled) below it, wrapped in a thin highlighted layer representing the periodontal ligament. Beside it, a small inset shows a hand correctly holding an avulsed tooth by the crown only, fingers not touching the root. Clean medical-illustration style. | Diagram of a tooth's crown and root with the periodontal ligament highlighted, and a hand correctly holding a knocked-out tooth by the crown only. |
 | 8 | dental-trauma-nosebleed-technique.webp | 4:3 | transparent | public/images/units/dental-facial-trauma/ | An athlete seated upright, torso leaning slightly forward from the hips (not tilting the head back), pinching the soft lower part of the nose with thumb and finger just below the bony bridge. Add a small crossed-out icon showing the incorrect head-tilted-back position beside it. Simple instructional-illustration style. | Diagram of correct nosebleed positioning: sitting upright and leaning slightly forward while pinching the soft part of the nose. |
+
+**Landed 8 of 8** — five on 2026-07-29, three after a redo on 2026-07-30. All eight were mechanically clean —
+correct filenames (including the `dental-trauma-` prefix against the
+`dental-facial-trauma/` folder), correct dimensions, 31-58 KB, true alpha
+where required, no slivers. **All three flagged reversals came back
+correct**, which is what the direction checklist is for:
+- `luxation-spectrum` — six panels in order, and critically **intrusion
+  reads shorter, extrusion reads longer**, with concussion showing no
+  displacement, subluxation loose-but-not-displaced, and lateral luxation
+  displaced-but-rigid. Spelling correct throughout.
+- `tooth-crown-root` and `tooth-anatomy-handling` — fingers on the **crown
+  only** in both, and the periodontal ligament is highlighted on the **root
+  surface**, which is the reason the root must not be touched.
+- `mandible-ring-anatomy` — excellent anatomy: ring outline TMJ to TMJ, an
+  anterior fracture at the body with the **associated condylar fracture on
+  the opposite side**, condyle correctly at the top of the ramus, and the
+  inferior alveolar nerve running inside the bone to exit at the mental
+  foramen. Titled "Example multisite pattern," which carries the ring
+  concept without the briefed force arrow.
+
+**One alt reconciliation:** `mouthguard` was briefed as a mouthguard beside
+a young athlete wearing it; the delivery shows the guard beside a second one
+seated on a model of the upper teeth. No athlete, but the fit reads clearly
+and nothing is wrong, so it was landed and the slot's `description`/`alt`
+rewritten to describe the model.
+
+**THREE REDONE AND LANDED (2026-07-30), after being held for two distinct
+reasons.**
+
+*Both nosebleed images first came back as anatomical skeletons* — skull,
+spine, and a disembodied hand pinching a translucent soft-tissue nose. The
+direction was right in both, but the brief asked for an athlete and the
+substitution failed hardest where the teaching lives: at 7-8 the lesson
+content *is* the posture ("sit up and lean forward"), and that image showed
+no seated posture at all. **Both redos are correct**: an illustrated young
+athlete seated on a bench/stool, leaning slightly forward, pinching the soft
+part below the bony bridge, head never tilted back. The 9-10 redo also
+brought back the one genuinely good idea from the rejected version — the
+soft-tissue-over-bone cross-section, now a **labelled inset** marking BONY
+BRIDGE and SOFT PART — plus a "10 minutes steady pressure" clock and a
+smaller crossed-out tilted-back figure. Its `description` and `alt` were
+expanded to cover the inset, clock, and crossed-out figure.
+
+*`injury-types-overview` (7-8) first missed its band on four axes at once*:
+it omitted the avulsed tooth (the first item in the 7-8 list and the unit's
+headline injury), used 11-12 clinical vocabulary ("Epistaxis," "Mandibular
+Fracture"), showed cheek abrasions as the jaw sign, and was a front-facing
+photorealistic adult face — the closest any delivery has come to the
+no-photorealistic-people rule. **The redo is correct**: flat illustration of
+a young athlete, neutral expression, four numbered callouts in the lesson's
+own plain language — completely knocked out, chipped or cracked, cut on the
+lip, nosebleed — with a visible gap in the upper teeth marking the avulsion.
+The jaw callout was dropped to keep four clean callouts, so the slot's
+`description` and `alt` (which had listed a jaw callout) were rewritten to
+match what is shown.
+
+**OPEN POLISH ITEM — `tooth-anatomy-handling` leader line (Codex, PR #49).**
+Both the `Root` and `Periodontal ligament` leader lines terminate on or at
+the edge of the same thin blue ligament layer, rather than the root leader
+landing clearly on the root's cream dentin. Verified by cropping the label
+region. The rendering itself is anatomically correct and the adjacent 9-10
+lesson text is explicit ("the tooth's root is covered in a thin layer of
+living cells (the periodontal ligament)"), so nothing teaches a falsehood —
+but this is the one diagram whose entire purpose is distinguishing those two
+structures, so the ambiguity is worth removing. **Landed rather than held**,
+because a full redo round-trip for a single leader-line endpoint is not
+proportionate. **Queued with the batch 17 request:** move the `Root` leader
+so it terminates on the cream dentin well inside the root, clear of the blue
+ligament layer; everything else about the image stays as-is.
+
+**Lesson for later briefs:** the redo prompt led with a single shared
+instruction — *"when a spec says 'an athlete' it means an illustrated
+person"* — rather than repeating it per image, because the same substitution
+had happened three ways in one batch. That reads as one systematic
+misreading rather than three slips, and it was fixed in one pass.
 
 ## Batch 17: Lesson diagrams — eye-injuries (8 images)
 

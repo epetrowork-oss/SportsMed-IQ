@@ -336,6 +336,24 @@ const REAL_IMAGE_PATHS = {
     'images/units/cold-exposure/cold-exposure-frostbite-signs.webp',
   'cold-exposure-conduction-convection.webp':
     'images/units/cold-exposure/cold-exposure-conduction-convection.webp',
+
+  // dental-facial-trauma lesson diagrams (batch 16)
+  'dental-trauma-nosebleed-position.webp':
+    'images/units/dental-facial-trauma/dental-trauma-nosebleed-position.webp',
+  'dental-trauma-nosebleed-technique.webp':
+    'images/units/dental-facial-trauma/dental-trauma-nosebleed-technique.webp',
+  'dental-trauma-injury-types-overview.webp':
+    'images/units/dental-facial-trauma/dental-trauma-injury-types-overview.webp',
+  'dental-trauma-luxation-spectrum.webp':
+    'images/units/dental-facial-trauma/dental-trauma-luxation-spectrum.webp',
+  'dental-trauma-mandible-ring-anatomy.webp':
+    'images/units/dental-facial-trauma/dental-trauma-mandible-ring-anatomy.webp',
+  'dental-trauma-tooth-crown-root.webp':
+    'images/units/dental-facial-trauma/dental-trauma-tooth-crown-root.webp',
+  'dental-trauma-tooth-anatomy-handling.webp':
+    'images/units/dental-facial-trauma/dental-trauma-tooth-anatomy-handling.webp',
+  'dental-trauma-mouthguard.webp':
+    'images/units/dental-facial-trauma/dental-trauma-mouthguard.webp',
 }
 
 function ratioToCss(ratio) {

@@ -31,8 +31,8 @@
         "asset": "dental-trauma-injury-types-overview.webp",
         "ratio": "4:3",
         "background": "white",
-        "description": "Simple front-view illustration of a young athlete's face and mouth area with four numbered callout points: one pointing to a tooth (knocked-out or chipped tooth), one to the lip (cut lip), one to the nose (nosebleed), and one to the jaw (hard hit/possible break). Clean, flat overview style, minimal labels.",
-        "alt": "Illustration of a face with callouts pointing to a tooth, lip, nose, and jaw showing different injury types.",
+        "description": "Simple front-view illustration of a young athlete's face and mouth, with four numbered callout points and a matching plain-language key: 1, a tooth completely knocked out, marked at a visible gap in the upper teeth; 2, a chipped or cracked tooth still in place; 3, a cut on the lip; 4, a nosebleed. Clean, flat overview style, neutral expression.",
+        "alt": "Illustration of a young athlete's face with four numbered callouts: a completely knocked-out tooth, a chipped or cracked tooth, a cut on the lip, and a nosebleed.",
         "location": "public/images/units/dental-facial-trauma/"
       }
     },
@@ -101,8 +101,8 @@
         "asset": "dental-trauma-mouthguard.webp",
         "ratio": "1:1",
         "background": "white",
-        "description": "Simple illustration showing a mouthguard on its own next to a young athlete wearing it with a slight smile, showing how it fits over the teeth. Clean, flat, friendly illustration style, no text in the image.",
-        "alt": "A mouthguard shown on its own and being worn by an athlete.",
+        "description": "A clear blue mouthguard shown on its own beside a second one seated over a model of the upper teeth, so the way it cups and cushions the biting surfaces is visible. Clean product-style rendering, no text in the image.",
+        "alt": "A mouthguard shown on its own beside another fitted over a model of the upper teeth, showing how it cushions the biting surfaces.",
         "location": "public/images/units/dental-facial-trauma/"
       }
     }

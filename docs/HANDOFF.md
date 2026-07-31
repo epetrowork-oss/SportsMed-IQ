@@ -79,8 +79,8 @@ NATA Acute Skin Trauma on all bands plus Stop the Bleed on 9-10/11-12; two
 of its images had a right-edge production-sheet bleed fixed in-repo by
 white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6).
 
-**Current totals (recounted 2026-07-28, after batch 15):
-105 of 139 lesson-diagram slots live (76%), and 131 of 165 image slots
+**Current totals (recounted 2026-07-30, after the batch 16 redo):
+113 of 139 lesson-diagram slots live (81%), and 139 of 165 image slots
 overall** (139 diagrams + 18 thumbnails + 7 category icons + 1 hero). Count
 these from the repo rather than trusting a prior line — an earlier handoff
 put diagram progress at "115 of 139," which was the total-mapped-files
@@ -258,9 +258,33 @@ reactions to compressions in *the brief's paraphrase* rather than to the
 lesson itself. Always diff a proposed content change against the unit JSON
 before acting on it.
 
-**Next:** batch 16 = **dental-facial-trauma**, then batches 17–20 (one
-strand each) per `docs/IMAGE-BATCHES.md`. Batch 15 is complete 8/8 — nothing
-outstanding on it.
+Batch 16 (**dental-facial-trauma**) landed **5 of 8** (2026-07-29). All
+three reversals the brief flagged came back correct — intrusion/extrusion,
+crown-not-root, and the opposite-side mandible fracture — so the direction
+checklist continues to earn its place. `mouthguard` was landed with its
+alt reconciled (a dental model rather than the briefed athlete).
+
+✅ **All three redos landed (2026-07-30), batch 16 complete 8/8.** Both
+nosebleed images had come back as anatomical skeletons instead of athletes,
+and `injury-types-overview` had been a photorealistic adult face using 11-12
+clinical vocabulary that omitted the avulsed tooth. The redos fixed all of
+it, and the 9-10 nosebleed image kept the salvageable idea from its rejected
+version as a labelled BONY BRIDGE / SOFT PART inset. Three alt/description
+fields were reconciled in the process.
+
+**Two patterns worth carrying into later briefs.** First, "an athlete" needs
+saying twice — twice now a delivery has substituted a non-person subject
+(skeletons here) where a relatable figure was the point. Second, for 7-8
+slots, state the vocabulary level explicitly and list the plain-language
+terms the lesson uses, because the clinical register creeps in otherwise.
+
+**Next:** batch 17 = **eye-injuries**, then batches 18–20 (one strand each)
+per `docs/IMAGE-BATCHES.md`. Batch 16 is complete 8/8, with **one polish item
+to fold into the batch 17 request**: on `dental-trauma-tooth-anatomy-handling`
+the `Root` and `Periodontal ligament` leader lines both terminate on the same
+thin blue layer, so the root leader should be moved onto the cream dentin
+clearly inside the root. Landed rather than held — the anatomy is right and
+the lesson text is explicit — but it should not be forgotten.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a
