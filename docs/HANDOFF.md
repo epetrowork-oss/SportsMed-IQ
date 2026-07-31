@@ -79,8 +79,8 @@ NATA Acute Skin Trauma on all bands plus Stop the Bleed on 9-10/11-12; two
 of its images had a right-edge production-sheet bleed fixed in-repo by
 white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6).
 
-**Current totals (recounted 2026-07-31, after batch 17):
-120 of 139 lesson-diagram slots live (86%), and 146 of 165 image slots
+**Current totals (recounted 2026-07-31, after the batch 17 redo):
+121 of 139 lesson-diagram slots live (87%), and 147 of 165 image slots
 overall** (139 diagrams + 18 thumbnails + 7 category icons + 1 hero). Count
 these from the repo rather than trusting a prior line — an earlier handoff
 put diagram progress at "115 of 139," which was the total-mapped-files
@@ -286,17 +286,23 @@ all five leader lines on their own structures after the batch-16 problem was
 flagged in its brief. `protective-eyewear` was landed with its alt
 reconciled (goggles alone rather than worn).
 
-⚠ **One image awaits redo:** `eye-injuries-minor-irritation-rinse` shows the
-athlete rinsing their own eye, where both the lesson ("an adult can also
-gently rinse the eye") and the slot's alt assign that to an adult. Redo note
-in `docs/IMAGE-BATCHES.md` batch 17.
+✅ **Both outstanding corrections landed 2026-07-31, and nothing is now
+queued behind the image pipeline.** `eye-injuries-minor-irritation-rinse` was
+redrawn with two people — an adult doing the rinsing — replacing a version
+that showed the athlete rinsing their own eye. The batch-16
+`dental-trauma-tooth-anatomy-handling` leader line was corrected surgically:
+a pixel-diff against the live original showed only 0.42% of pixels changed,
+and a 3x crop confirmed the `Root` dot now lands on the cream dentin clear of
+the blue ligament layer.
 
-⚠ **Still outstanding from batch 16:** the
-`dental-trauma-tooth-anatomy-handling` leader-line correction — move the
-`Root` leader onto the cream dentin, clear of the blue ligament layer,
-changing nothing else. It was included as item 9 of the batch 17 request but
-did not come back in that delivery, because the accepted original had to be
-sent across separately. Still queued.
+**Transfer gotcha worth knowing:** a bare `.webp` sent to the image author
+failed to arrive twice. Zips have transferred reliably in both directions all
+project, so **send source files for surgical edits inside a zip**, and
+include a PNG copy as a fallback in case the WebP extension is what the
+uploader rejects. Also worth stating explicitly when a correction is a *pixel
+edit* versus a *fresh redraw* — a request that grouped both under
+"corrections" led to the author waiting on an "approved" file for an image
+that had actually been rejected and needed regenerating from spec.
 
 **A recurring pattern, now three batches running:** specs that say "an
 athlete wearing/doing X" keep coming back with the person removed —

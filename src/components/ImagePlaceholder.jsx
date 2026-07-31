@@ -356,11 +356,8 @@ const REAL_IMAGE_PATHS = {
     'images/units/dental-facial-trauma/dental-trauma-mouthguard.webp',
 
   // eye-injuries lesson diagrams (batch 17)
-  // HELD for redo, deliberately unmapped (see docs/IMAGE-BATCHES.md batch 17):
-  //   eye-injuries-minor-irritation-rinse.webp — shows the athlete rinsing
-  //     their OWN eye. Both the lesson ("an adult can also gently rinse the
-  //     eye") and the slot's alt assign that to an adult, and the 7-8 scope
-  //     rule throughout this strand is notice-and-get-an-adult.
+  'eye-injuries-minor-irritation-rinse.webp':
+    'images/units/eye-injuries/eye-injuries-minor-irritation-rinse.webp',
   'eye-injuries-subconjunctival-vs-hyphema.webp':
     'images/units/eye-injuries/eye-injuries-subconjunctival-vs-hyphema.webp',
   'eye-injuries-orbital-blowout-entrapment.webp':
