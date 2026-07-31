@@ -533,7 +533,7 @@ the wet/windy 40 °F vs dry/still 20 °F comparison is already hedged with
 says frostnip involves no ice crystals. Always diff a proposed lesson change
 against the unit JSON before acting on it.
 
-## Batch 16: Lesson diagrams — dental-facial-trauma (8 images)
+## Batch 16: Lesson diagrams — dental-facial-trauma (8 images) — LANDED 2026-07-29 (5 of 8; 3 held for redo)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -545,6 +545,63 @@ against the unit JSON before acting on it.
 | 6 | dental-trauma-mouthguard.webp | 1:1 | white | public/images/units/dental-facial-trauma/ | Simple illustration showing a mouthguard on its own next to a young athlete wearing it with a slight smile, showing how it fits over the teeth. Clean, flat, friendly illustration style, no text in the image. | A mouthguard shown on its own and being worn by an athlete. |
 | 7 | dental-trauma-tooth-anatomy-handling.webp | 4:3 | white | public/images/units/dental-facial-trauma/ | Cross-section of a tooth showing the crown (white chewing surface, labeled) above the gumline and the root (labeled) below it, wrapped in a thin highlighted layer representing the periodontal ligament. Beside it, a small inset shows a hand correctly holding an avulsed tooth by the crown only, fingers not touching the root. Clean medical-illustration style. | Diagram of a tooth's crown and root with the periodontal ligament highlighted, and a hand correctly holding a knocked-out tooth by the crown only. |
 | 8 | dental-trauma-nosebleed-technique.webp | 4:3 | transparent | public/images/units/dental-facial-trauma/ | An athlete seated upright, torso leaning slightly forward from the hips (not tilting the head back), pinching the soft lower part of the nose with thumb and finger just below the bony bridge. Add a small crossed-out icon showing the incorrect head-tilted-back position beside it. Simple instructional-illustration style. | Diagram of correct nosebleed positioning: sitting upright and leaning slightly forward while pinching the soft part of the nose. |
+
+**Landed 5 of 8 (2026-07-29).** All eight were mechanically clean —
+correct filenames (including the `dental-trauma-` prefix against the
+`dental-facial-trauma/` folder), correct dimensions, 31-58 KB, true alpha
+where required, no slivers. **All three flagged reversals came back
+correct**, which is what the direction checklist is for:
+- `luxation-spectrum` — six panels in order, and critically **intrusion
+  reads shorter, extrusion reads longer**, with concussion showing no
+  displacement, subluxation loose-but-not-displaced, and lateral luxation
+  displaced-but-rigid. Spelling correct throughout.
+- `tooth-crown-root` and `tooth-anatomy-handling` — fingers on the **crown
+  only** in both, and the periodontal ligament is highlighted on the **root
+  surface**, which is the reason the root must not be touched.
+- `mandible-ring-anatomy` — excellent anatomy: ring outline TMJ to TMJ, an
+  anterior fracture at the body with the **associated condylar fracture on
+  the opposite side**, condyle correctly at the top of the ramus, and the
+  inferior alveolar nerve running inside the bone to exit at the mental
+  foramen. Titled "Example multisite pattern," which carries the ring
+  concept without the briefed force arrow.
+
+**One alt reconciliation:** `mouthguard` was briefed as a mouthguard beside
+a young athlete wearing it; the delivery shows the guard beside a second one
+seated on a model of the upper teeth. No athlete, but the fit reads clearly
+and nothing is wrong, so it was landed and the slot's `description`/`alt`
+rewritten to describe the model.
+
+**HELD — three images, for two distinct reasons.**
+
+*Both nosebleed images came back as anatomical skeletons.* `nosebleed-position`
+(7-8) and `nosebleed-technique` (9-10) each show a skull and spine with a
+translucent soft-tissue nose overlaid, and a disembodied hand pinching it.
+The direction is right in both — forward lean, and in the 9-10 image the
+head-tilted-back version is properly crossed out — but the brief asked for
+an athlete, and the substitution fails hardest exactly where the teaching
+lives. At 7-8 the lesson content *is* the posture ("sit up and lean
+forward"), and that image shows no seated posture at all, just a floating
+skull and ribcage. Both slots' alt text describes an athlete. **Redo note:**
+draw both as an illustrated athlete. The soft-tissue-over-bone overlay is
+genuinely a good idea for showing where the bony bridge ends and the soft
+part begins — keep it, but as a small inset on the 9-10 image rather than as
+the whole subject. The 9-10 one is the closer of the two to salvageable if a
+redraw isn't practical.
+
+*`injury-types-overview` (7-8) misses its band on several axes at once.* It
+was delivered as a photorealistic adult face in four panels labeled "Crown
+Fracture," "Lip Laceration," "Nosebleed (Epistaxis)," and "Mandibular
+Fracture." Problems, in order of importance: it **omits the avulsed tooth**,
+which is the first item in the 7-8 list and the unit's headline injury; the
+vocabulary is 11-12 clinical register in a 7-8 slot, where the lesson says
+"a tooth completely knocked out," "a chipped or cracked tooth," "a cut on
+the lip," "a nosebleed," "a hard hit to the jaw"; the "Mandibular Fracture"
+panel shows cheek abrasions rather than any recognizable jaw-injury sign;
+and it is the closest any delivery has come to the no-photorealistic-people
+rule — a front-facing photoreal face cropped just below the eyes, where the
+approved precedent (batch 14 `cold-weather`) was a painted back view.
+**Redo note:** flat illustration of a young athlete's face, four numbered
+callouts, plain language, and the knocked-out tooth must be one of the four.
 
 ## Batch 17: Lesson diagrams — eye-injuries (8 images)
 
