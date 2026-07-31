@@ -279,7 +279,12 @@ slots, state the vocabulary level explicitly and list the plain-language
 terms the lesson uses, because the clinical register creeps in otherwise.
 
 **Next:** batch 17 = **eye-injuries**, then batches 18–20 (one strand each)
-per `docs/IMAGE-BATCHES.md`. Batch 16 is complete 8/8 — nothing outstanding.
+per `docs/IMAGE-BATCHES.md`. Batch 16 is complete 8/8, with **one polish item
+to fold into the batch 17 request**: on `dental-trauma-tooth-anatomy-handling`
+the `Root` and `Periodontal ligament` leader lines both terminate on the same
+thin blue layer, so the root leader should be moved onto the cream dentin
+clearly inside the root. Landed rather than held — the anatomy is right and
+the lesson text is explicit — but it should not be forgotten.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a

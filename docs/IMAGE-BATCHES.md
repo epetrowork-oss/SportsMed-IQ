@@ -601,6 +601,20 @@ The jaw callout was dropped to keep four clean callouts, so the slot's
 `description` and `alt` (which had listed a jaw callout) were rewritten to
 match what is shown.
 
+**OPEN POLISH ITEM — `tooth-anatomy-handling` leader line (Codex, PR #49).**
+Both the `Root` and `Periodontal ligament` leader lines terminate on or at
+the edge of the same thin blue ligament layer, rather than the root leader
+landing clearly on the root's cream dentin. Verified by cropping the label
+region. The rendering itself is anatomically correct and the adjacent 9-10
+lesson text is explicit ("the tooth's root is covered in a thin layer of
+living cells (the periodontal ligament)"), so nothing teaches a falsehood —
+but this is the one diagram whose entire purpose is distinguishing those two
+structures, so the ambiguity is worth removing. **Landed rather than held**,
+because a full redo round-trip for a single leader-line endpoint is not
+proportionate. **Queued with the batch 17 request:** move the `Root` leader
+so it terminates on the cream dentin well inside the root, clear of the blue
+ligament layer; everything else about the image stays as-is.
+
 **Lesson for later briefs:** the redo prompt led with a single shared
 instruction — *"when a spec says 'an athlete' it means an illustrated
 person"* — rather than repeating it per image, because the same substitution
