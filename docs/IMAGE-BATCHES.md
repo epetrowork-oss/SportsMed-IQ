@@ -728,6 +728,24 @@ genuine safety issue:**
 `fueling-timeline` uses the exact windows (3-4 hours / 1-2 hours / 30-60
 minutes after) in left-to-right order around a practice icon.
 
+**One in-repo fix, from a Codex catch — and the error was in the spec, not
+the delivery.** `fuel-crossover-graph` arrived with the briefed annotation
+"Glycogen depletion here = bonking" and an arrow pointing at the
+**high-intensity end of the x-axis**. That makes bonking look like a
+consequence of reaching a particular intensity, whereas the lesson says it
+happens "when glycogen runs critically low **during prolonged exercise**" —
+a function of duration, not of a point on an intensity axis.
+
+The annotation came from the slot's own `description` field, which predates
+this session and was passed through into the brief unquestioned. Fixed in
+repo the batch-9 way: the annotation and arrow were white-filled out after
+verifying the fill box contained **zero curve pixels** (checked
+programmatically before compositing), leaving both curves, the crossover
+point, and every axis label intact. The image now matches its `alt`, which
+never mentioned bonking. The slot's `description` was rewritten to drop the
+annotation and to record *why* it must not come back, so a future
+regeneration can't reintroduce it.
+
 **The no-branding rule held.** The lesson names Gatorade, Red Bull, and
 Monster in its text, so the brief required generic containers; the delivery
 uses a plain "WATER" bottle, an unlabelled orange sports drink, and a generic
