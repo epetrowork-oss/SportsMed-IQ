@@ -262,5 +262,18 @@
       "front": "RED-S (Relative Energy Deficiency in Sport)",
       "back": "A chronic mismatch between energy intake and the energy cost of training that disrupts hormones, bone density, immune function, and performance — can affect any athlete regardless of body size or sport, not just weight-class or aesthetic sports."
     }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Fluid Replacement for the Physically Active",
+      "publisher": "Journal of Athletic Training",
+      "year": 2017,
+      "url": "https://doi.org/10.4085/1062-6050-52.9.02"
+    },
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Safe Weight Loss and Maintenance Practices in Sport and Exercise",
+      "publisher": "Journal of Athletic Training",
+      "year": 2011
+    }
   ]
 }

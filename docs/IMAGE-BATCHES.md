@@ -693,7 +693,7 @@ illustrative convention for athletic wear but also evokes a well-known
 brand's trade dress. No wordmark or logo is present. Landed; worth a glance
 if the app is ever distributed commercially.
 
-## Batch 18: Lesson diagrams — hydration-nutrition (7 images)
+## Batch 18: Lesson diagrams — hydration-nutrition (7 images) — LANDED 2026-08-01 (7 of 7, clean delivery)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -704,6 +704,49 @@ if the app is ever distributed commercially.
 | 5 | hydration-nutrition-game-day-bag.webp | 4:3 | white | public/images/units/hydration-nutrition/ | Simple illustration of an open sports bag packed with a refillable water bottle, a piece of fruit or a granola bar, and a folded extra shirt. Clean, flat illustration style, no text in the image. | An open sports bag packed with a water bottle, a snack, and an extra shirt. |
 | 6 | hydration-nutrition-hyponatremia-vs-dehydration.webp | 16:9 | transparent | public/images/units/hydration-nutrition/ | Two-panel side-by-side comparison. Left panel labeled 'Dehydration': thirst, dry mouth, dark urine, fatigue icons. Right panel labeled 'Overhydration / Hyponatremia': confusion, worsening headache, vomiting, swollen hands/feet icons. Add a small caption under the right panel: 'More water makes this WORSE, not better.' Clean flat infographic style. | Comparison diagram of dehydration signs versus overhydration (hyponatremia) signs during long endurance events. |
 | 7 | hydration-nutrition-fueling-timeline.webp | 16:9 | white | public/images/units/hydration-nutrition/ | Horizontal timeline graphic centered on a practice/game icon, with markers at '3-4 hours before' (balanced meal icon: chicken, rice, vegetables), '1-2 hours before' (light snack icon: banana or granola bar), and '30-60 minutes after' (recovery snack icon: chocolate milk or sandwich), followed by 'normal meal.' Clean flat infographic timeline style. | Timeline diagram of pre-activity and post-activity meal and snack timing for athletes. |
+
+**Landed 7/7 clean (2026-08-01)** — nothing held, nothing reconciled, the
+first fully clean delivery since batch 15. Correct filenames, correct
+dimensions across three aspect ratios, 30-40 KB throughout, true alpha on
+`hyponatremia-vs-dehydration`, no slivers.
+
+**All three flagged reversals came back correct, including the one that was a
+genuine safety issue:**
+- **`hyponatremia-vs-dehydration`** carries the required banner — *"More
+  water makes this WORSE, not better"* — and nothing in that panel shows or
+  implies drinking more water. The two panels read as different problems
+  rather than mild-vs-severe versions of one. This was the batch's real risk:
+  an image implying "drink more" for confusion plus worsening headache after
+  hours of plain water would have taught something harmful.
+- **`fuel-crossover-graph`** has fat oxidation starting high and falling,
+  carbohydrate starting low and rising, crossing at a marked crossover point,
+  and — the easy-to-miss part — **neither line reaches zero**, so fat is
+  never shown as fully switched off.
+- **`urine-color-chart`** puts the checkmark at the pale end and the warning
+  at the dark end, as an abstract gradient bar with no realistic imagery.
+
+`fueling-timeline` uses the exact windows (3-4 hours / 1-2 hours / 30-60
+minutes after) in left-to-right order around a practice icon.
+
+**The no-branding rule held.** The lesson names Gatorade, Red Bull, and
+Monster in its text, so the brief required generic containers; the delivery
+uses a plain "WATER" bottle, an unlabelled orange sports drink, and a generic
+dark "ENERGY DRINK" can under a red X. No logos or recognisable trade dress
+anywhere, including the granola bar and duffel.
+
+**Sources — scoped by content, not by the earmark.** `docs/HANDOFF.md` had
+two NATA statements earmarked for this strand. Checking them against the
+units showed they don't both apply everywhere:
+- **Fluid Replacement for the Physically Active** (2017;52(9):877-895,
+  doi:10.4085/1062-6050-52.9.02) → **all three bands**. It backs urine-colour
+  checks, the >2% body-weight-loss threshold, pre/post weigh-in sweat-rate
+  protocol, and hyponatremia.
+- **Safe Weight Loss and Maintenance Practices in Sport and Exercise**
+  (2011;46(3):322-336) → **11-12 only**, which is the one band with a "Body
+  composition, weight-class sports, and knowing when to refer" section and
+  RED-S content. Cited without a URL because the earmark carried no DOI.
+Attaching the second statement to the 7-8 and 9-10 units would have pointed
+a weight-practices source at lessons that never discuss making weight.
 
 ## Batch 19: Lesson diagrams — skin-conditions (6 images)
 

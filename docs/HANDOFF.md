@@ -79,8 +79,8 @@ NATA Acute Skin Trauma on all bands plus Stop the Bleed on 9-10/11-12; two
 of its images had a right-edge production-sheet bleed fixed in-repo by
 white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6).
 
-**Current totals (recounted 2026-07-31, after the batch 17 redo):
-121 of 139 lesson-diagram slots live (87%), and 147 of 165 image slots
+**Current totals (recounted 2026-08-01, after batch 18):
+128 of 139 lesson-diagram slots live (92%), and 154 of 165 image slots
 overall** (139 diagrams + 18 thumbnails + 7 category icons + 1 hero). Count
 these from the repo rather than trusting a prior line — an earlier handoff
 put diagram progress at "115 of 139," which was the total-mapped-files
@@ -311,11 +311,26 @@ skeletons in batch 16, object-only product shots for `mouthguard` and
 fine when nothing is wrong, but if a slot genuinely needs the behaviour
 modelled, say so twice and say why.
 
-**Next:** finish batch 17's redo and the batch 16 dental correction, then
-batch 18 = **hydration-nutrition** (whose NATA sources are already earmarked
-in the list below), then batches 19–20 (skin-conditions and
-sports-psychology, both carrying safety-sensitive content flags that need
-their framing written into the briefs).
+Batch 18 (**hydration-nutrition**) landed **7/7 clean** (2026-08-01) — the
+first delivery since batch 15 with nothing held and nothing reconciled. All
+three flagged reversals came back right, including the safety-critical one:
+`hyponatremia-vs-dehydration` carries the "more water makes this WORSE"
+banner with no drink-more cue anywhere in that panel.
+
+**Sourced, and scoped by content rather than by the earmark.** Fluid
+Replacement (2017, doi:10.4085/1062-6050-52.9.02) went on all three bands;
+Safe Weight Loss (2011, no DOI in the earmark) went on **11-12 only**,
+because that is the one band with a weight-class/RED-S section. Worth
+repeating the habit: an earmarked source still has to be checked against
+what each band actually teaches before it is attached.
+
+**Next:** batch 19 = **skin-conditions** (6), then batch 20 =
+**sports-psychology** (5). Both carry safety-sensitive content flags that
+need their framing written into the briefs — contagious-condition scope
+(recognize / cover / refer, never diagnose or treat) for skin-conditions,
+and for sports-psychology, recognize/support/refer only, with no depiction
+of self-harm or crisis imagery. After that the diagram pipeline is done; the
+remaining PLAN.md backlog is a TESTERS.md alpha kit and a QA sweep.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a

@@ -281,5 +281,13 @@
       "front": "Recovery window snack",
       "back": "A carb + protein snack within about 30-60 minutes after a hard session (e.g., chocolate milk, turkey sandwich) jump-starts recovery."
     }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Fluid Replacement for the Physically Active",
+      "publisher": "Journal of Athletic Training",
+      "year": 2017,
+      "url": "https://doi.org/10.4085/1062-6050-52.9.02"
+    }
   ]
 }
