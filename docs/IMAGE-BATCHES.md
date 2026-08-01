@@ -610,10 +610,15 @@ lesson text is explicit ("the tooth's root is covered in a thin layer of
 living cells (the periodontal ligament)"), so nothing teaches a falsehood —
 but this is the one diagram whose entire purpose is distinguishing those two
 structures, so the ambiguity is worth removing. **Landed rather than held**,
-because a full redo round-trip for a single leader-line endpoint is not
-proportionate. **Queued with the batch 17 request:** move the `Root` leader
-so it terminates on the cream dentin well inside the root, clear of the blue
-ligament layer; everything else about the image stays as-is.
+because a full redo round-trip for a single leader-line endpoint was not
+proportionate, then **corrected on 2026-07-31**. The corrected file was
+verified two ways: a pixel-diff against the live original showed only **0.42%
+of pixels changed**, confirming a surgical edit rather than a regeneration,
+and a 3x crop confirmed the `Root` dot now sits on the cream dentin well
+clear of the blue layer while `Periodontal ligament` still points at the
+blue. A faint rectangular patch artifact is visible around the moved dot at
+high magnification, imperceptible at display size. File also recompressed
+from 57.6 KB to 29.8 KB with no visible quality loss.
 
 **Lesson for later briefs:** the redo prompt led with a single shared
 instruction — *"when a spec says 'an athlete' it means an illustrated
@@ -621,7 +626,7 @@ person"* — rather than repeating it per image, because the same substitution
 had happened three ways in one batch. That reads as one systematic
 misreading rather than three slips, and it was fixed in one pass.
 
-## Batch 17: Lesson diagrams — eye-injuries (8 images)
+## Batch 17: Lesson diagrams — eye-injuries (8 images) — LANDED 2026-07-31 (8 of 8; 1 redone)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -633,6 +638,60 @@ misreading rather than three slips, and it was fixed in one pass.
 | 6 | eye-injuries-protective-eyewear.webp | 4:3 | white | public/images/units/eye-injuries/ | Simple front-facing illustration of an athlete wearing sport-specific protective eyewear, like wraparound goggles suited for a sport such as hockey or racquetball. Clean, flat, friendly illustration style. | Athlete wearing sport-specific protective wraparound eyewear. |
 | 7 | eye-injuries-anatomy-cross-section.webp | 4:3 | white | public/images/units/eye-injuries/ | Side cross-section of a human eye seated in its bony orbit, with the sclera, cornea, iris, pupil, and orbit each labeled with a leader line. Use distinct colors for the sclera (white), cornea (clear, outlined), and iris (colored ring around the pupil). Clean medical-illustration style, neutral gaze. | Cross-section diagram of the eye showing the sclera, cornea, iris, pupil, and bony orbit. |
 | 8 | eye-injuries-rigid-shield-technique.webp | 4:3 | transparent | public/images/units/eye-injuries/ | Side view of a face with a rigid shield (the cut-off bottom of a paper cup) taped over the bony rim surrounding the eye, resting on the brow bone and cheekbone without touching the eye itself. Tape strips shown running from the shield to the forehead and cheek, well clear of the eye. Include a small crossed-out icon of a flat gauze patch pressing directly on the eye to show what NOT to do. Clean instructional-illustration style, no graphic detail. | Diagram showing a rigid shield taped over the bony rim around an injured eye, resting on surrounding bone rather than the eye itself. |
+
+**Landed 8 of 8 (2026-07-31)** — seven straight through, the rinse image after a redraw. All mechanically clean — correct
+filenames, correct dimensions including the 1:1 at 900x900, 32-55 KB, true
+alpha on `rigid-shield-technique`, no slivers.
+
+**The batch's highest-risk image came back correct.**
+`subconjunctival-vs-hyphema` places the blood exactly right in both panels:
+the subconjunctival patch is flat on the **white** with the iris and pupil
+clear underneath, and the hyphema is pooled **inside the anterior chamber**
+in front of the lower iris with a horizontal fluid level. Swapping those
+would have inverted the entire differential. Title spelling was verified at
+3x magnification after looking wrong at full-size — it is correct.
+
+Also verified:
+- `orbital-blowout-entrapment` — **rim intact, floor fractured**, inferior
+  rectus caught in the fracture line, infraorbital nerve labelled, and the
+  inset shows restricted **upward** gaze (unaffected vs affected), not
+  sideways.
+- `anatomy-cross-section` — **all five leader lines land on their own
+  structure** (cornea, iris, pupil, sclera, orbit). This was specifically
+  called out in the brief because of the batch-16 leader-line problem, and
+  it was heeded.
+- `rigid-shield-technique` — an illustrated athlete, rigid shield resting on
+  brow and cheekbone with a visible gap over the eye, tape clear of the eye,
+  and the crossed-out alternative is the flat patch pressing on the globe.
+- `warning-signs` — plain language, normal-vs-injured comparison, mild
+  redness and puffiness only.
+
+**One alt reconciliation:** `protective-eyewear` was briefed as an athlete
+wearing sport goggles and came back as a product illustration of the goggles
+alone. Landed with the slot's `description`/`alt` rewritten — the heavy
+wraparound frame and strap still carry the lesson's point that sports
+eyewear is not ordinary glasses. This is the same call made for batch 16's
+`mouthguard`, and it is now the **second** "athlete wearing X" spec to
+return as object-only.
+
+**REDRAWN AND LANDED — `eye-injuries-minor-irritation-rinse.webp`, first
+delivered with a scope violation.**
+The image shows the athlete rinsing **their own eye** over a sink. Both the
+lesson ("an adult can also gently rinse the eye with clean water") and the
+slot's alt ("An adult gently rinsing an athlete's eye") assign that action
+to an adult, and the 7-8 scope rule across this whole strand is
+notice-and-get-an-adult — the neighbouring `do-not-touch` image exists to
+say hands off. Nothing here is dangerous in isolation, but it teaches the
+wrong actor. **The redraw is correct:** two people, with an adult pouring
+clean water from a small cup into a seated athlete's eye, the athlete's head
+tilted so water runs away from the other eye, calm and low-key with no injury
+signs.
+
+**Minor observation, not a defect:** the athlete in `rigid-shield-technique`
+wears a shirt with three parallel shoulder stripes, which is a common
+illustrative convention for athletic wear but also evokes a well-known
+brand's trade dress. No wordmark or logo is present. Landed; worth a glance
+if the app is ever distributed commercially.
 
 ## Batch 18: Lesson diagrams — hydration-nutrition (7 images)
 

@@ -354,6 +354,24 @@ const REAL_IMAGE_PATHS = {
     'images/units/dental-facial-trauma/dental-trauma-tooth-anatomy-handling.webp',
   'dental-trauma-mouthguard.webp':
     'images/units/dental-facial-trauma/dental-trauma-mouthguard.webp',
+
+  // eye-injuries lesson diagrams (batch 17)
+  'eye-injuries-minor-irritation-rinse.webp':
+    'images/units/eye-injuries/eye-injuries-minor-irritation-rinse.webp',
+  'eye-injuries-subconjunctival-vs-hyphema.webp':
+    'images/units/eye-injuries/eye-injuries-subconjunctival-vs-hyphema.webp',
+  'eye-injuries-orbital-blowout-entrapment.webp':
+    'images/units/eye-injuries/eye-injuries-orbital-blowout-entrapment.webp',
+  'eye-injuries-anatomy-cross-section.webp':
+    'images/units/eye-injuries/eye-injuries-anatomy-cross-section.webp',
+  'eye-injuries-rigid-shield-technique.webp':
+    'images/units/eye-injuries/eye-injuries-rigid-shield-technique.webp',
+  'eye-injuries-warning-signs.webp':
+    'images/units/eye-injuries/eye-injuries-warning-signs.webp',
+  'eye-injuries-do-not-touch.webp':
+    'images/units/eye-injuries/eye-injuries-do-not-touch.webp',
+  'eye-injuries-protective-eyewear.webp':
+    'images/units/eye-injuries/eye-injuries-protective-eyewear.webp',
 }
 
 function ratioToCss(ratio) {
