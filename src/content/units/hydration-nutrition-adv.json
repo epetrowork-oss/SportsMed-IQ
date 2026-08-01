@@ -19,7 +19,7 @@
         "asset": "hydration-nutrition-fuel-crossover-graph.webp",
         "ratio": "16:9",
         "background": "white",
-        "description": "Line graph with 'exercise intensity' on the x-axis (low to high) and 'percentage of energy contribution' on the y-axis. Two crossing lines: a downward-sloping line labeled 'Fat oxidation' starting high at low intensity and declining, and an upward-sloping line labeled 'Carbohydrate oxidation' starting low and rising, crossing at a marked 'crossover point' partway up the intensity axis. Add a small annotation at the far right: 'glycogen depletion here = bonking.' Clean scientific-diagram style, labeled axes.",
+        "description": "Line graph with 'exercise intensity' on the x-axis (low to high) and 'percentage of energy contribution' on the y-axis. Two crossing lines: a downward-sloping line labeled 'Fat oxidation' starting high at low intensity and declining, and an upward-sloping line labeled 'Carbohydrate oxidation' starting low and rising, crossing at a marked 'crossover point' partway up the intensity axis. Neither line reaches zero, since fat is never fully switched off. Clean scientific-diagram style, labeled axes. Deliberately carries no bonking annotation: glycogen depletion is a function of duration, not of reaching a point on the intensity axis, so placing it on this graph would contradict the lesson text.",
         "alt": "Graph showing the crossover concept: fat oxidation dominates at low exercise intensity while carbohydrate oxidation becomes dominant past a crossover point as intensity increases.",
         "location": "public/images/units/hydration-nutrition/"
       }
@@ -261,6 +261,19 @@
       "id": "f12",
       "front": "RED-S (Relative Energy Deficiency in Sport)",
       "back": "A chronic mismatch between energy intake and the energy cost of training that disrupts hormones, bone density, immune function, and performance — can affect any athlete regardless of body size or sport, not just weight-class or aesthetic sports."
+    }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Fluid Replacement for the Physically Active",
+      "publisher": "Journal of Athletic Training",
+      "year": 2017,
+      "url": "https://doi.org/10.4085/1062-6050-52.9.02"
+    },
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Safe Weight Loss and Maintenance Practices in Sport and Exercise",
+      "publisher": "Journal of Athletic Training",
+      "year": 2011
     }
   ]
 }

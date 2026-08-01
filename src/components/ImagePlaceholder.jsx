@@ -372,6 +372,22 @@ const REAL_IMAGE_PATHS = {
     'images/units/eye-injuries/eye-injuries-do-not-touch.webp',
   'eye-injuries-protective-eyewear.webp':
     'images/units/eye-injuries/eye-injuries-protective-eyewear.webp',
+
+  // hydration-nutrition lesson diagrams (batch 18)
+  'hydration-nutrition-fuel-crossover-graph.webp':
+    'images/units/hydration-nutrition/hydration-nutrition-fuel-crossover-graph.webp',
+  'hydration-nutrition-hyponatremia-vs-dehydration.webp':
+    'images/units/hydration-nutrition/hydration-nutrition-hyponatremia-vs-dehydration.webp',
+  'hydration-nutrition-fueling-timeline.webp':
+    'images/units/hydration-nutrition/hydration-nutrition-fueling-timeline.webp',
+  'hydration-nutrition-drink-comparison.webp':
+    'images/units/hydration-nutrition/hydration-nutrition-drink-comparison.webp',
+  'hydration-nutrition-urine-color-chart.webp':
+    'images/units/hydration-nutrition/hydration-nutrition-urine-color-chart.webp',
+  'hydration-nutrition-meal-plate.webp':
+    'images/units/hydration-nutrition/hydration-nutrition-meal-plate.webp',
+  'hydration-nutrition-game-day-bag.webp':
+    'images/units/hydration-nutrition/hydration-nutrition-game-day-bag.webp',
 }
 
 function ratioToCss(ratio) {
