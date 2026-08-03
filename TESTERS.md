@@ -36,9 +36,23 @@ your best score is what counts.
 3. Paste the code into **"Load a code"**.
 
 Your name and progress should come across. If you've done work in *both*
-places, importing merges them and keeps the better result for each thing —
-it shouldn't wipe anything out. **If it ever does, that's a serious bug and we
-want to hear about it immediately.**
+places, importing merges them rather than replacing one with the other.
+
+**How the merge resolves conflicts — worth knowing before you report a bug:**
+
+- **Completion and scores keep the better of the two.** If one device says you
+  read the lesson and the other doesn't, you've read it. If you scored 80% on
+  one and 60% on the other, you keep 80%. Nothing here is ever lost.
+- **Written practical reflections keep the newer text, and the older text is
+  discarded.** If you wrote a reflection on your phone and a *different* one
+  for the same activity on a laptop, the more recently edited one wins and the
+  other is gone. That's intentional — there's no way to merge two pieces of
+  prose automatically — but it does mean you can lose writing this way.
+
+So: **losing reflection text after editing the same activity in two places is
+expected.** Losing a completed lesson, a flashcard set, or a quiz score is
+**not** — if that happens, tell us straight away, with what you did on each
+device.
 
 ---
 
@@ -86,9 +100,12 @@ click-through looks like on the teacher side):*
 SMIQ1.eyJuYW1lIjoiUmlsZXkgQ2hlbiIsInVuaXRzIjp7ImNvbmN1c3Npb24tbXMiOnsibGVzc29uUmVhZCI6dHJ1ZSwiZmxhc2hjYXJkc1Jldmlld2VkIjpmYWxzZSwiYmVzdFF1aXpTY29yZSI6bnVsbCwicXVpekF0dGVtcHRzIjowLCJyZWFkU2Vjb25kcyI6MzUsInNjcm9sbFBjdCI6MjJ9fX0
 ```
 
-Riley is worth a look — the app tracks reading time and scroll depth, so a
-student who tapped "I've read this" after 35 seconds and 22% of the page shows
-up differently from one who actually read it.
+Riley is worth a look. **Click that row to open the per-student view** — the
+app tracks time on the lesson and how far down the page you got, so Riley
+shows **0:35** and **22%** against a lesson that takes several minutes to
+read. Someone who tapped "I've read this" without reading looks different
+from someone who didn't, and that's the whole point. Those two numbers are in
+the CSV export as well.
 
 ---
 
