@@ -766,7 +766,7 @@ units showed they don't both apply everywhere:
 Attaching the second statement to the 7-8 and 9-10 units would have pointed
 a weight-practices source at lessons that never discuss making weight.
 
-## Batch 19: Lesson diagrams — skin-conditions (6 images)
+## Batch 19: Lesson diagrams — skin-conditions (6 images) — LANDED 2026-08-01 (6 of 6, clean delivery)
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -776,6 +776,53 @@ a weight-practices source at lessons that never discuss making weight.
 | 4 | skin-conditions-locker-room-habits.webp | 4:3 | white | public/images/units/skin-conditions/ | Illustration of a locker room scene showing a student wearing shower sandals heading to a shower stall, with their own labeled towel and water bottle beside them, separate from a teammate's things. Clean, friendly illustration style for middle schoolers. | Illustration of a student wearing shower sandals in a locker room with their own separate towel and water bottle. |
 | 5 | skin-conditions-fungal-infection-comparison.webp | 16:9 | white | public/images/units/skin-conditions/ | Three-panel comparison of common fungal skin infections, each shown on a small patch of skin. Panel 1 'Ringworm': a ring-shaped red patch with a raised, scaly border and a clearer center. Panel 2 'Athlete's foot': redness and peeling skin between the toes. Panel 3 'Jock itch': a red, itchy rash with a defined edge in the groin/inner-thigh area (shown modestly, non-graphic). Label each panel. Clean medical-illustration style. | Comparison diagram of three fungal skin infections: ringworm, athlete's foot, and jock itch. |
 | 6 | skin-conditions-bacterial-infection-signs.webp | 16:9 | white | public/images/units/skin-conditions/ | Two-panel comparison of bacterial skin infections. Left panel 'Impetigo': small sores/blisters that have broken open and formed a distinctive honey-colored (yellowish) crust, typically near the nose/mouth. Right panel 'MRSA': a red, swollen bump resembling a pimple or spider bite, with small icons noting 'warm to touch' and 'pain out of proportion to size.' Label each panel. Clean medical-illustration style, non-graphic. | Comparison diagram of impetigo (honey-colored crusted sores) and MRSA (a swollen, painful bump resembling a pimple). |
+
+**Landed 6/6 clean (2026-08-01)** — nothing held. Correct filenames and
+dimensions, 34-40 KB throughout, no slivers, no transparent images needed.
+
+**A correction to this batch's own framing, caught while writing the brief.**
+The table above summarised this strand as "contagious → recognize/**cover**/
+refer." That is wrong, and building images to it would have taught the exact
+behaviour the unit exists to warn against. The lesson says, in its own words:
+*"Tell an adult — don't just cover it up,"* *"Do not just slap a bandage over
+it and keep playing like normal,"* and it names *"covering it with a bandage
+and playing through"* as the mistake. The correct framing is **recognize →
+tell an adult → refer**. Covering is right in exactly one place — a **closed
+blister**, which is not an infection — and the brief carved that out as the
+sole exception. Later sessions should treat the one-line summaries in this
+table as prompts to go read the lesson, not as specifications.
+
+**Both accuracy risks came back correct:**
+- **`fungal-infection-comparison`** draws ringworm as a **ring with a raised
+  scaly border and a clearer centre**, not a solid red disc — that ring is
+  the entire recognition cue and was the batch's most likely single error.
+  Nothing wormlike appears. Athlete's foot is correctly **between the toes**,
+  and jock itch is a cropped inner-thigh patch shown modestly.
+- **`bacterial-infection-signs`** renders the impetigo crust in the correct
+  **honey/golden-yellow**, and — the subtler requirement — draws **MRSA as
+  deceptively minor**, a small pimple-like bump with "warm to touch" and
+  "painful" icons. The lesson's point is that the dangerous one does not look
+  dangerous, so an obviously-severe lesion would have inverted the teaching.
+
+**The scope framing landed precisely.** `blister-care` puts a bandage and a
+green tick on the *closed* blister and routes the inflamed one to a large
+"TELL AN ADULT" arrow — not to re-bandaging. `warning-signs` labels its
+zoom panels "Normal skin" and "Something changed" with a "Tell an adult"
+bubble and no disease name anywhere, matching that band's explicit teaching
+that students don't need to name anything. `shared-gear-risk` shows no skin
+lesion at all, since it is about the setting. `locker-room-habits` keeps the
+student fully dressed in practice clothing with two clearly separated sets of
+belongings.
+
+**One accepted imprecision:** the MRSA panel's second icon reads "Painful"
+where the lesson says "painful **out of proportion to its size**" — the
+disproportion is the actual discriminator. Not contradictory, and the slot's
+`alt` says only "painful," so it was landed. Worth tightening if the image is
+ever regenerated.
+
+**Unsourced.** No earmarked source for this strand. A NATA position statement
+on skin diseases in athletes exists and would be the natural fit; it needs a
+PDF in-session to cite, since DOI hosts are unreachable from the container.
 
 ## Batch 20: Lesson diagrams — sports-psychology (5 images)
 

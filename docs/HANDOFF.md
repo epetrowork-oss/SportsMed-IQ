@@ -79,8 +79,8 @@ NATA Acute Skin Trauma on all bands plus Stop the Bleed on 9-10/11-12; two
 of its images had a right-edge production-sheet bleed fixed in-repo by
 white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6).
 
-**Current totals (recounted 2026-08-01, after batch 18):
-128 of 139 lesson-diagram slots live (92%), and 154 of 165 image slots
+**Current totals (recounted 2026-08-01, after batch 19):
+134 of 139 lesson-diagram slots live (96%), and 160 of 165 image slots
 overall** (139 diagrams + 18 thumbnails + 7 category icons + 1 hero). Count
 these from the repo rather than trusting a prior line — an earlier handoff
 put diagram progress at "115 of 139," which was the total-mapped-files
@@ -324,13 +324,38 @@ because that is the one band with a weight-class/RED-S section. Worth
 repeating the habit: an earmarked source still has to be checked against
 what each band actually teaches before it is attached.
 
-**Next:** batch 19 = **skin-conditions** (6), then batch 20 =
-**sports-psychology** (5). Both carry safety-sensitive content flags that
-need their framing written into the briefs — contagious-condition scope
-(recognize / cover / refer, never diagnose or treat) for skin-conditions,
-and for sports-psychology, recognize/support/refer only, with no depiction
-of self-harm or crisis imagery. After that the diagram pipeline is done; the
-remaining PLAN.md backlog is a TESTERS.md alpha kit and a QA sweep.
+Batch 19 (**skin-conditions**) landed **6/6 clean** (2026-08-01). Both
+accuracy risks came back right: ringworm is drawn as a ring with a clearer
+centre rather than a solid disc, and MRSA is drawn as deceptively minor,
+which is the lesson's actual point.
+
+⚠ **A correction worth carrying forward.** The batch table in
+`docs/IMAGE-BATCHES.md` summarised this strand as "recognize/**cover**/refer."
+That was wrong — the lesson explicitly names *"covering it with a bandage and
+playing through"* as the mistake, and says *"Tell an adult — don't just cover
+it up."* Covering is correct only for a closed blister, which is not an
+infection. **Treat the one-line strand summaries in that table as prompts to
+go read the lesson, not as specifications.** This is the second time an
+inherited one-liner nearly produced a wrong image — the other was the bonking
+annotation in a slot `description` (batch 18). Audit inherited text against
+the lesson body before writing any brief from it.
+
+**Next:** batch 20 = **sports-psychology** (5) — the last strand. It carries
+the heaviest content flag: recognize / support / refer only, with **no
+depiction of self-harm, no crisis imagery, and nothing clinical or
+distressing**. Read all three band lessons and audit the slot descriptions
+before writing that brief. After it lands the diagram pipeline is complete
+and the remaining `PLAN.md` backlog is a TESTERS.md alpha kit and a QA sweep.
+
+⚠ **Five strands remain unsourced** — cold-exposure, dental-facial-trauma,
+eye-injuries, skin-conditions, sports-psychology. All five are strands where
+no PDF was supplied and no earmark existed; the 13 sourced strands all had
+one or the other. DOI hosts (doi.org, Crossref, PubMed) are blocked from the
+container, so citations cannot be verified in-session — a PDF uploaded into
+the session is the only path that has worked. Natural candidates: NATA skin
+diseases in athletes; NATA environmental cold injuries (2008); NATA
+psychological concerns in athletes; IADT dental trauma guidelines; AAO/AAP
+sports eye-injury guidance.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a
