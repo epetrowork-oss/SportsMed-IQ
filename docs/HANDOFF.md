@@ -340,6 +340,15 @@ inherited one-liner nearly produced a wrong image — the other was the bonking
 annotation in a slot `description` (batch 18). Audit inherited text against
 the lesson body before writing any brief from it.
 
+⚠ **One queued improvement:** the jock-itch panel of
+`skin-conditions-fungal-infection-comparison` reads as a red line rather
+than a demarcated plaque **at display size** (it looks fine magnified, which
+is how it initially passed). Not false and not held — queued to ride back
+with the batch 20 delivery. Keep the modest crop; widen the rash into a
+clearly broader plaque with a visible scaly border and just enough
+inner-thigh context to place it. Lesson: **judge recognition images at the
+size students see them, not zoomed in.**
+
 **Next:** batch 20 = **sports-psychology** (5) — the last strand. It carries
 the heaviest content flag: recognize / support / refer only, with **no
 depiction of self-harm, no crisis imagery, and nothing clinical or

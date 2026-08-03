@@ -814,6 +814,33 @@ lesion at all, since it is about the setting. `locker-room-habits` keeps the
 student fully dressed in practice clothing with two clearly separated sets of
 belongings.
 
+**QUEUED IMPROVEMENT — the jock-itch panel (Codex, PR #52).** Codex called
+the third panel of `fungal-infection-comparison` "a thin diagonal line...
+more like a scratch or scar" than a demarcated rash. Checked both ways
+before responding, and the size you look at decides the answer:
+- **At 3x magnification the panel is good** — there is a real plaque, a
+  broader pinkish field behind a scalloped, well-demarcated active border
+  following the crease. That is a textbook tinea cruris edge, not a scratch.
+- **At true display size, and more so at mobile width, it is not.** The
+  plaque field flattens into the surrounding skin and what dominates is a
+  curving red line. Since that is the size students actually see, Codex's
+  concern is the one that counts, and the initial 3x check flattered the
+  image.
+
+Contributing cause: the brief asked for modesty in strong terms — "a cropped
+upper-inner-thigh patch only, no genitals, no underwear detail" — and the
+delivery honoured that at the cost of anatomical context. There is a real
+tension here between modesty and recognisability in a school app, and this
+one landed too far toward modesty.
+
+**Not held, because nothing is false** — the panel is labelled "Jock itch,"
+the edge is demarcated, the redness is correct, and the lesson text carries
+the location. **Queued to ride back with the batch 20 delivery** at no extra
+round trip, the way the batch-16 dental fix rode with batch 17. Redo note:
+keep the modest crop, but widen the rash into a clearly broader plaque with
+a visible scaly border, and add just enough inner-thigh/groin-crease context
+to place it — no genitals, no underwear.
+
 **One accepted imprecision:** the MRSA panel's second icon reads "Painful"
 where the lesson says "painful **out of proportion to its size**" — the
 disproportion is the actual discriminator. Not contradictory, and the slot's
