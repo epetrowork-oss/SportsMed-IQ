@@ -19,9 +19,12 @@ foundation (streak dates, badges, practical activities with reflections +
 Achievements page) landed after the sprint plan was written. The active
 workstream is landing ChatGPT-generated lesson diagrams strand-by-strand —
 **`docs/HANDOFF.md` is the current handoff for that**; it needs the user to
-upload each image batch, so sessions are blocked on that input. Still
-genuinely open from the sprint: the aesthetic pass, a full QA sweep, and
-the `TESTERS.md` alpha kit (not yet written).
+upload each image batch, so sessions are blocked on that input. **The QA
+sweep and the `TESTERS.md` alpha kit both landed 2026-08-03** — the sweep
+found no app defects. Still genuinely open from the sprint: the aesthetic
+pass. Outside the sprint, the live backlog is the dense-diagram redesign
+(14 images), four unsourced strands, and the RED-S citation — all tracked in
+`docs/HANDOFF.md`.
 
 ## Where things stand
 
@@ -424,15 +427,38 @@ else is `implementer` (Sonnet).*
       Vite `base` set correctly, SW/manifest verified on the deployed
       URL (installability + offline reload on the real host, not just
       preview).
-- [ ] **QA sweep** (orchestrator drives): fresh-profile walkthroughs as
-      student and teacher at 375/768/desktop; zero console errors;
-      validator + build green; sync codes (SMIQ1/SMIQ2/SMIQA1) all
-      round-trip.
-- [ ] **Alpha kit for testers**: seeded demo assignment code + demo
-      roster the user can share; `TESTERS.md` one-pager (what to try,
-      known gaps incl. unverified standards + placeholder images, where
-      to send feedback). Regenerate `npm run images:shotlist` after the
-      hero/landing rework so the ChatGPT image brief is current.
+- [x] **QA sweep — DONE 2026-08-03.** Fresh-profile walkthroughs as student
+      and teacher at 375/768/desktop: home, library, lesson, quiz,
+      flashcards, sync, teacher, 404. **Zero console errors, zero failed
+      requests, zero horizontal overflow at any width.** Validator (54 files,
+      0 errors) and build both green. Full completion earned through the real
+      UI — read + flashcards + quiz at 100% — then **SMIQ2 round-trip into a
+      clean profile preserved name and completion**; **SMIQ1 legacy imported
+      and produced a complete unit**, and a wrong-schema v1 code was correctly
+      rejected; **SMIQA1** generated on the teacher page, imported by a
+      student, and the assignment surfaced by name. Teacher roster accepted a
+      student code and listed them. **No app defects found.**
+      ⚠ Two of the first-draft assertions were vacuous and had to be
+      rewritten: "unit reports complete" only checked that *some* localStorage
+      key existed, and the SMIQ1 test asserted against the wrong error string,
+      so it passed while the import was actually failing. Assert on decoded
+      state (`sportmediq:progress:v1` → `units[id]`), never on key presence or
+      on the absence of one particular message.
+      Two gotchas for whoever writes the next browser test: `lessonRead` needs
+      an explicit **"I've read this lesson"** click — scrolling alone never
+      sets it — and the quiz only calls `recordQuizResult` when the last
+      question's button (**"See results"**, not "Next question →") is clicked.
+      Quiz choices are shuffled per run, so match them by text, not index.
+- [x] **Alpha kit for testers — DONE 2026-08-03** (`TESTERS.md`). Student
+      path, teacher path, one class code and three demo student codes
+      (complete / partial / click-through) — **every code verified to import
+      through the real UI before being written into the doc**. Known-gaps
+      section covers the dense-diagram list, the four unsourced strands, the
+      RED-S gap, unverified standards, and no-account-recovery, and it tells
+      testers to report unreadable diagrams anyway since that list isn't
+      proven complete.
+      Still to do here: regenerate `npm run images:shotlist` after any
+      hero/landing rework so the ChatGPT image brief stays current.
 
 ### Alpha bar (definition of done for Friday)
 

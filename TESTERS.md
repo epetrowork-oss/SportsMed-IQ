@@ -1,0 +1,149 @@
+# SportMedIQ — alpha tester kit
+
+Thanks for trying this. It's a **learning app for high school sports medicine
+students** — lessons, quizzes, and flashcards across 18 topics at three grade
+bands, with a teacher view for tracking who's done what.
+
+**It runs entirely in your browser.** No account, no login, no server. Your
+progress is saved on your own device, and the only way anything moves between
+devices is a code you copy and paste. That's deliberate: it means it works
+offline, on a school Chromebook, with no student data leaving the building.
+
+**Please try it on a phone.** Most students will use it that way, and it's the
+hardest case for us to get right.
+
+---
+
+## Start here (student)
+
+1. Open the app.
+2. Go to **Sync** and put your name in. This is only used to label your own
+   progress code — nothing is sent anywhere.
+3. Go to **Lessons**, pick anything that looks interesting, and read it.
+4. Tap **"I've read this lesson"** at the bottom.
+5. Do the **flashcards**, then take the **quiz**.
+6. Go back to the unit — it should now show as complete.
+
+A unit counts as done when you've read the lesson, been through the
+flashcards, and scored **70% or better** on the quiz. You can retake the quiz;
+your best score is what counts.
+
+### Then try moving your progress
+
+1. On **Sync**, copy your progress code (it starts with `SMIQ2.`).
+2. Open the app in a private/incognito window — that's a clean device as far
+   as the app is concerned.
+3. Paste the code into **"Load a code"**.
+
+Your name and progress should come across. If you've done work in *both*
+places, importing merges them and keeps the better result for each thing —
+it shouldn't wipe anything out. **If it ever does, that's a serious bug and we
+want to hear about it immediately.**
+
+---
+
+## Start here (teacher)
+
+Go to **Teacher**. Two things to try:
+
+**1. Build a class code.** Name an assignment, tick some lessons, and generate
+a code (it starts with `SMIQA1.`). Give that to students and they paste it
+into **Sync → class code**. It shows up for them as assigned work.
+
+**2. Build a roster.** Students send you their progress codes; paste each into
+**"Add student"**. You get a table of who's completed what, with drill-down per
+student, and a CSV export.
+
+### Demo codes — paste these to see it populated
+
+All four are verified working. Use them if you'd rather not create data by hand.
+
+**Class code** — three 7th–8th units (paste into Sync → class code):
+
+```
+SMIQA1.JY1BCsIwFAWvEt46kW8FkewKbtwLguIipB9bTH5Cky5EBA_hCT2JtMKshoF5QlxkWLQh907tOSb1fX_Uifmu1tCYZKiHrsBe4JP4qZQhiYkFGj27aoYQhEv5G4483lj8wzhf5y4Ht8RXjZi6-ZMyCzT8yK5y11ZYNNRsDe0MbY5EdmFFRGe8fg
+```
+
+**Three demo students** at different stages (paste into Teacher → Add student).
+Add all three to see a realistic mixed roster:
+
+*Avery Diaz — two units done, one partway:*
+
+```
+SMIQ1.eyJuYW1lIjoiQXZlcnkgRGlheiIsInVuaXRzIjp7ImNvbmN1c3Npb24tbXMiOnsibGVzc29uUmVhZCI6dHJ1ZSwiZmxhc2hjYXJkc1Jldmlld2VkIjp0cnVlLCJiZXN0UXVpelNjb3JlIjowLjg3NSwicXVpekF0dGVtcHRzIjoxLCJyZWFkU2Vjb25kcyI6NDIwLCJzY3JvbGxQY3QiOjEwMH0sImhlYXQtaWxsbmVzcy1tcyI6eyJsZXNzb25SZWFkIjp0cnVlLCJmbGFzaGNhcmRzUmV2aWV3ZWQiOnRydWUsImJlc3RRdWl6U2NvcmUiOjAuODc1LCJxdWl6QXR0ZW1wdHMiOjEsInJlYWRTZWNvbmRzIjo0MjAsInNjcm9sbFBjdCI6MTAwfSwiZW1lcmdlbmN5LWFjdGlvbi1wbGFuLW1zIjp7Imxlc3NvblJlYWQiOnRydWUsImZsYXNoY2FyZHNSZXZpZXdlZCI6ZmFsc2UsImJlc3RRdWl6U2NvcmUiOjAuNSwicXVpekF0dGVtcHRzIjoyLCJyZWFkU2Vjb25kcyI6MjYwLCJzY3JvbGxQY3QiOjg4fX19
+```
+
+*Sam Okafor — one done, one partway:*
+
+```
+SMIQ1.eyJuYW1lIjoiU2FtIE9rYWZvciIsInVuaXRzIjp7ImNvbmN1c3Npb24tbXMiOnsibGVzc29uUmVhZCI6dHJ1ZSwiZmxhc2hjYXJkc1Jldmlld2VkIjp0cnVlLCJiZXN0UXVpelNjb3JlIjowLjg3NSwicXVpekF0dGVtcHRzIjoxLCJyZWFkU2Vjb25kcyI6NDIwLCJzY3JvbGxQY3QiOjEwMH0sImhlYXQtaWxsbmVzcy1tcyI6eyJsZXNzb25SZWFkIjp0cnVlLCJmbGFzaGNhcmRzUmV2aWV3ZWQiOmZhbHNlLCJiZXN0UXVpelNjb3JlIjowLjUsInF1aXpBdHRlbXB0cyI6MiwicmVhZFNlY29uZHMiOjI2MCwic2Nyb2xsUGN0Ijo4OH19fQ
+```
+
+*Riley Chen — opened one lesson, barely engaged (this is what a
+click-through looks like on the teacher side):*
+
+```
+SMIQ1.eyJuYW1lIjoiUmlsZXkgQ2hlbiIsInVuaXRzIjp7ImNvbmN1c3Npb24tbXMiOnsibGVzc29uUmVhZCI6dHJ1ZSwiZmxhc2hjYXJkc1Jldmlld2VkIjpmYWxzZSwiYmVzdFF1aXpTY29yZSI6bnVsbCwicXVpekF0dGVtcHRzIjowLCJyZWFkU2Vjb25kcyI6MzUsInNjcm9sbFBjdCI6MjJ9fX0
+```
+
+Riley is worth a look — the app tracks reading time and scroll depth, so a
+student who tapped "I've read this" after 35 seconds and 22% of the page shows
+up differently from one who actually read it.
+
+---
+
+## What we most want to know
+
+- **Does it make sense on a phone?** Especially the diagrams.
+- **Is anything wrong?** This is medical content for teenagers. If something
+  reads as inaccurate, unclear, or like it might get someone hurt, tell us —
+  that outranks every other kind of feedback.
+- **Does the copy-paste code flow actually work** in your real setup — your
+  LMS, your email, your students' phones? This is the part most likely to be
+  annoying in practice, and we'd rather find out now.
+- **Does the reading level fit?** Each topic exists at 7–8, 9–10, and 11–12.
+  Tell us if a band feels off.
+
+---
+
+## Known gaps — please don't report these
+
+We already know about all of these.
+
+**Some diagrams are too dense to read on a phone.** Fourteen are confirmed:
+mostly the multi-column comparison tables in the 11th–12th units, where cell
+text ends up around 4–5 px tall on a phone screen. They're correct, just too
+small. A redesign round is planned. **We're not certain the list of fourteen is
+complete**, so if you hit a diagram you can't read, that *is* worth reporting —
+it may be one we missed.
+
+**Four topics have no source citations yet** — cold exposure, dental and facial
+trauma, eye injuries, and skin conditions. The other fourteen cite position
+statements from NATA, AMSSM, AAOS, and similar. One section of the 11th–12th
+sports psychology unit (RED-S) also still needs its own citation.
+
+**The standards alignments are unverified.** Each unit lists standards it's
+meant to map to; nobody has checked those against the official documents yet.
+Don't rely on them for reporting.
+
+**There's no account recovery, because there are no accounts.** If a student
+clears their browser data, their progress is gone unless they saved a code.
+That's the tradeoff for having no server and no student data. Worth knowing
+before you hand it to a class.
+
+**iOS "Add to Home Screen" is lightly tested.** It should install as an app and
+work offline. If it doesn't, tell us what device and iOS version.
+
+---
+
+## Reporting something
+
+Most useful, in order:
+
+1. **What you did**, step by step, so we can reproduce it.
+2. **Device and browser** — "iPhone 13, Safari" is enough.
+3. **A screenshot**, especially for anything about a diagram or layout.
+4. For a wrong answer or bad content: **which unit, which question or
+   section**, and what you think it should say.
+
+Content and safety issues jump the queue over anything cosmetic.
