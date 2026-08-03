@@ -468,6 +468,58 @@ emitting 74 false positives would buy false confidence.
 Not wrong, just unreadable on a phone. Ranked by how much of the teaching is
 lost.
 
+**This list rests on visual review at 343 px, not on a measurement.** An
+attempt was made on 2026-08-03 to put it on a measured footing, after Codex
+overturned one of the three judgement calls in this sweep. **The attempt
+failed, and the failure is documented here because the first write-up of it
+was itself wrong.**
+
+What was measured: body-region glyph heights for all 14 (title band excluded,
+since headings were never the problem), scaled by 343/900. They come out at
+**2.3–5.7 px effective**, and none reaches 8 px.
+
+⚠ **That does not confirm anything, and the first version of this section
+wrongly said it did.** The same metric was then run across all 125 lesson
+diagrams with enough text to measure and flagged **114 of them** — including
+cards that are plainly readable at 343 px:
+
+- `knee-acl-warning-signs` (2.7 px) — has essentially no body text; the metric
+  was measuring incidental marks
+- `muscle-strains-grading-comparison` (5.0 px) — "Grade I / II / III" is clear
+- `hydration-nutrition-hyponatremia-vs-dehydration` (5.0 px) — every label
+  reads, including the "More water makes this WORSE" banner
+
+**So a score below 8 px does not imply illegible.** Which means "none of the 14
+scores ≥ 8 px" proves nothing about whether any of them was over-called — the
+threshold cannot be rejected as meaningless when it flags 114 images and then
+relied on as proof for 14. That was the inconsistency; the measurement is
+merely *consistent with* the visual finding, and independently confirms
+nothing.
+
+**Why the metric fails:** a median over every glyph blob is dominated by fine
+print, punctuation, and illustration noise, and has no idea *which* text
+carries the teaching. A card whose entire message is three large words scores
+like a five-column table. Legibility here is semantic — is the text that
+matters readable? — and no single scalar answers it. **Treat this metric as
+unsuitable for classifying images, in either direction.**
+
+### Status of the corpus, stated precisely
+
+- **The 14 listed above** — flagged by visual review at 343 px. Solid enough to
+  act on. Not independently measured.
+- **The other 111 of the 114 metric flags** — **unreviewed, not cleared.** Only
+  3 were spot-checked, and those 3 only prove the metric produces false
+  positives. They say nothing about the remaining 111. Note also that the 14
+  are themselves inside the 125-image run, so the 114 flags necessarily mix
+  real cases with false ones.
+- **Whether a 15th group-B image exists** — unknown. Completeness rests on a
+  single eyeball pass over 139 diagrams.
+
+Closing this properly needs a broader or representative 343 px readability
+review, judged per image on whether the *teaching-bearing* text survives. Until
+that happens, **do not read this list as closed and do not read the corpus as
+cleared.**
+
 **Dense tables — every cell unreadable, only the headers survive:**
 `knee-acl-differential-comparison-chart` (11-12, 5 cols × 4 rows),
 `muscle-strains-differential-chart` (11-12, 4 × 3),
