@@ -486,17 +486,38 @@ lost.
 `eye-injuries-orbital-blowout-entrapment` (11-12),
 `knee-acl-anatomy-mechanism` (9-10, high-risk-mechanism labels),
 `muscle-strains-two-joint-muscles-map` (9-10),
-`overuse-injuries-workload-ratio` (11-12, axis and annotations).
+`overuse-injuries-acwr-graph` (11-12, axis and annotations — the card whose
+printed title is "Acute:chronic workload ratio"; the asset name does not
+match the title, so search by asset).
 
 The concentration in **11-12** is the pattern: the advanced bands got the
 information-dense cards, and density is exactly what display size destroys.
 
-### C. One comprehension problem, unrelated to size
+### C. RETRACTED — there is no group C
 
-`concussion-second-impact-risk.webp` (concussion-ms, 7-8) carries **no text at
-all** — two near-identical rows of brain icons with arrows. The lesson's point
-(a second hit before the first heals is catastrophic) is not recoverable from
-the image at any size.
+**An earlier version of this sweep claimed `concussion-second-impact-risk.webp`
+(concussion-ms, 7-8) was a comprehension defect: "two near-identical rows of
+brain icons," with the lesson's point "not recoverable at any size." That was
+wrong, and it is worth recording why.**
+
+The image is a **three-stage progression, not a repeated row**: first impact
+(football, blue) → a brain with an orange hot spot inside a dotted ring with a
+**clock**, meaning still healing → second impact (football, red) with a bright
+core and radiating arrows. The row beneath restates the same three stages in
+simplified brains, and the icon strip above runs shield → yellow warning → red
+warning. The colour escalation and the two impacts separated by a clock remain
+distinguishable at 343 px. **It conveys "a second hit before the first heals is
+catastrophic" without text, which is what it was asked to do.**
+
+The error was mine and it was a judgement error, not a measurement one: I read
+the second row as a duplicate of the first at thumbnail size and did not go
+back to the full-resolution file before writing it up — the exact inversion of
+the discipline the jock-itch panel taught, where magnification flattered an
+image. **Both directions are real: small can hide detail that exists, and small
+can also invent a flaw that isn't there. Confirm at both sizes before calling
+something defective.**
+
+No action is needed on this file.
 
 ### What held up
 
@@ -511,10 +532,9 @@ adult* / *call 911* line except the two clipped ones in group A.
 
 ### Suggested order
 
-Group A is a correctness fix and should ride in one redo batch. Group B is a
-redesign ask — fewer columns, larger type, or splitting a table across two
-cards — and is worth doing per strand rather than all at once. Group C needs
-a new concept, not a new render.
+Group A was a correctness fix and is done. Group B is a redesign ask — fewer
+columns, larger type, or splitting a table across two cards — and is worth
+doing per strand rather than all at once. There is no group C.
 
 ⚠ **Four strands remain unsourced** — cold-exposure, dental-facial-trauma,
 eye-injuries, skin-conditions.
