@@ -402,7 +402,26 @@ A 900 px source is therefore shown at **38–46%**. A six-panel strip gives each
 panel ~57 px of phone width; a five-column table gives each column ~68 px.
 **Author to 343 px, not to 900.**
 
-### A. Composition defects — content clipped by the frame (5)
+### A. Composition defects — content clipped by the frame (5) — ✅ FIXED 2026-08-03
+
+**All five were redrawn and landed the same day.** Every clipped line is now
+complete and inside the frame: `deformity-warning` shows *"Seek medical help
+immediately."* in a callout with a full bottom border, `rice-steps` reads
+**COMPRESSION** and **15–20**, `inversion-mechanism` reads **stretched**,
+`know-your-school-map` shows **AED LOCATION** / **TRAINED ADULT LOCATION**
+and a complete tip box, and `yell-for-help-scene` has no trace of the AED
+card at its bottom edge. Designs are otherwise unchanged.
+
+Margins measured on the redraws: **14–52 px of clean background on every edge
+of every file** (the brief asked for ≥ 12). Two of the cards carry a
+deliberate 1 px hairline border at the canvas edge — measure margins from
+*inside* that rule or the check reports a false 0.
+`inversion-mechanism` kept a genuine alpha channel (60.6% fully transparent,
+all four corners clear). Verified live at 375 px: all five render at 343 px,
+0 placeholders, 0 console or network errors.
+
+The original findings are kept below, since the redo brief was built from
+them and the failure modes are worth not repeating.
 
 Confirmed at full resolution, not inferred. These are defects at *any* size;
 the sweep is just what surfaced them.
