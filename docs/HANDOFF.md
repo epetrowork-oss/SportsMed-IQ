@@ -387,7 +387,115 @@ sign, recurrent bone stress injuries as a red flag — that need the IOC RED-S
 consensus (Br J Sports Med 2014;48:491–497) or an equivalent. **The strand
 is sourced but not fully sourced; don't read it as closed.**
 
-## What is still open (nothing image-related)
+## What is still open
+
+## Display-size QA sweep — DONE 2026-08-03, and it found real defects
+
+**The heading above used to say "nothing image-related." That was wrong, and
+the sweep is why we know.** All 139 lesson diagrams were re-checked at the
+size students actually see them.
+
+**The measured display size** (Playwright, production build, `deviceScaleFactor
+1`): `.lesson-image` is capped at `max-width: 26rem`, so a diagram renders at
+**416 px on tablet and desktop and 343 px on a 375 px phone — never larger.**
+A 900 px source is therefore shown at **38–46%**. A six-panel strip gives each
+panel ~57 px of phone width; a five-column table gives each column ~68 px.
+**Author to 343 px, not to 900.**
+
+### A. Composition defects — content clipped by the frame (5)
+
+Confirmed at full resolution, not inferred. These are defects at *any* size;
+the sweep is just what surfaced them.
+
+| File | Unit | What is broken |
+|---|---|---|
+| `ankle-sprain-deformity-warning.webp` | ankle-sprain-ms (7-8) | Bottom callout runs off the frame — **"Seek medical help immediately." is cut in half**, and the pink box has no bottom border. Ink is present on the final pixel row. |
+| `ankle-sprain-rice-steps.webp` | ankle-sprain-ms (7-8) | Right column clipped: the heading reads **"COMPRESSIO"** and the dose reads **"Use ice for 15–2"**. |
+| `ankle-sprain-inversion-mechanism.webp` | ankle-sprain (9-10) | Caption clipped: **"outside get stretched"** loses its final letter at the right edge. |
+| `eap-yell-for-help-scene.webp` | emergency-action-plan-ms (7-8) | **A ~30 px sliver of the neighbouring "KNOW WHERE THE AED" card is baked into the bottom edge**, headline clipped mid-glyph. This is the recurring export defect described below — it shipped. |
+| `eap-know-your-school-map.webp` | emergency-action-plan-ms (7-8) | Right edge clipped: **"AED LOCATIO"**, **"TRAINED ADUL"**, and the blue tip box runs off the frame. |
+
+Three of the five are **7-8 units**, and two of those clip a *get-help*
+instruction — the highest-stakes line on the card.
+
+**Why edge-profiling missed these.** The existing check looked for a
+neighbour-panel *sliver* — a long contiguous run of ink along an edge. Clipped
+text is the opposite signature: many short, disconnected glyph strokes. A
+detector tuned for one is blind to the other.
+
+**And no, this was not then solved with a better detector — three were tried
+and all three were unusable**, which is worth recording so the next session
+doesn't repeat the attempt:
+
+- *long-run test* — every card with a drawn border trips it; the border is a
+  100%-length run on all four edges.
+- *glyph-run test* — 23 flags, mostly borders, and it still missed
+  `ankle-sprain-rice-steps` and `eap-yell-for-help-scene`.
+- *depth-persistence test* (ink at the edge that continues 14 px inward,
+  meant to separate a 2 px border from real content) — 74 flags, dominated by
+  full-bleed photos and hero images, and it **still** never flagged
+  `ankle-sprain-deformity-warning`, the most clearly broken file of the five.
+
+The problem is that "ink at the margin" is normal for most of this artwork,
+so the signal-to-noise is bad no matter how the threshold is drawn. **What
+actually worked was looking:** render every diagram to 343 px, tile them into
+contact sheets, read the sheets, then crop any suspicious edge at full
+resolution to confirm. That found all five, and it is the method to repeat.
+No script is committed, because a gate that misses the worst case while
+emitting 74 false positives would buy false confidence.
+
+### B. Legible at 900 px, illegible at 343 px (14)
+
+Not wrong, just unreadable on a phone. Ranked by how much of the teaching is
+lost.
+
+**Dense tables — every cell unreadable, only the headers survive:**
+`knee-acl-differential-comparison-chart` (11-12, 5 cols × 4 rows),
+`muscle-strains-differential-chart` (11-12, 4 × 3),
+`eap-team-role-assignment` (11-12, densest card in the project),
+`overuse-injuries-bone-stress-continuum` (11-12, 4 stages + 6 labelled sites).
+
+**Six-panel strips — panel names survive, descriptor row does not:**
+`dental-trauma-luxation-spectrum` (11-12),
+`fractures-dislocations-pattern-classification` (11-12),
+`concussion-return-to-play-stages` (9-10).
+
+**Anatomical annotation too small to read:**
+`shoulder-injuries-bankart-hill-sachs` (11-12),
+`shoulder-injuries-glenohumeral-anatomy` (9-10),
+`dental-trauma-mandible-ring-anatomy` (11-12),
+`eye-injuries-orbital-blowout-entrapment` (11-12),
+`knee-acl-anatomy-mechanism` (9-10, high-risk-mechanism labels),
+`muscle-strains-two-joint-muscles-map` (9-10),
+`overuse-injuries-workload-ratio` (11-12, axis and annotations).
+
+The concentration in **11-12** is the pattern: the advanced bands got the
+information-dense cards, and density is exactly what display size destroys.
+
+### C. One comprehension problem, unrelated to size
+
+`concussion-second-impact-risk.webp` (concussion-ms, 7-8) carries **no text at
+all** — two near-identical rows of brain icons with arrows. The lesson's point
+(a second hit before the first heals is catastrophic) is not recoverable from
+the image at any size.
+
+### What held up
+
+The three fixes made this session all survive display size, checked
+explicitly: the **jock-itch plaque** reads as a broad demarcated rash, and
+both batch-14 redos are still right — **PAP** shows fatigue below baseline
+with potentiation above, and **stress-strain** shows cold failing at lower
+force. The safety-critical
+`hydration-nutrition-hyponatremia-vs-dehydration` banner ("More water makes
+this WORSE, not better.") is fully legible at 343 px, as are every *get an
+adult* / *call 911* line except the two clipped ones in group A.
+
+### Suggested order
+
+Group A is a correctness fix and should ride in one redo batch. Group B is a
+redesign ask — fewer columns, larger type, or splitting a table across two
+cards — and is worth doing per strand rather than all at once. Group C needs
+a new concept, not a new render.
 
 ⚠ **Four strands remain unsourced** — cold-exposure, dental-facial-trauma,
 eye-injuries, skin-conditions.
