@@ -356,15 +356,30 @@ distressing**. Read all three band lessons and audit the slot descriptions
 before writing that brief. After it lands the diagram pipeline is complete
 and the remaining `PLAN.md` backlog is a TESTERS.md alpha kit and a QA sweep.
 
-⚠ **Five strands remain unsourced** — cold-exposure, dental-facial-trauma,
-eye-injuries, skin-conditions, sports-psychology. All five are strands where
-no PDF was supplied and no earmark existed; the 13 sourced strands all had
-one or the other. DOI hosts (doi.org, Crossref, PubMed) are blocked from the
-container, so citations cannot be verified in-session — a PDF uploaded into
-the session is the only path that has worked. Natural candidates: NATA skin
-diseases in athletes; NATA environmental cold injuries (2008); NATA
-psychological concerns in athletes; IADT dental trauma guidelines; AAO/AAP
-sports eye-injury guidance.
+✅ **sports-psychology is now sourced (2026-08-03), both citations verified
+from the supplied PDFs' own title pages** — no memory, no relay:
+- **Interassociation Recommendations for Developing a Plan to Recognize and
+  Refer Student-Athletes With Psychological Concerns at the Secondary School
+  Level: A Consensus Statement** — Neal et al., J Athl Train
+  2015;50(3):231-249, doi:10.4085/1062-6050-50.3.03. Cited on **all three
+  bands**. It is the single best fit in the whole project: 54 mentions of
+  "secondary school," 56 of "refer," and heavy crisis content, matching this
+  strand's recognize-and-refer framing exactly.
+- **Mental Health Issues and Psychological Factors in Athletes: Detection,
+  Management, Effect on Performance and Prevention — AMSSM Position
+  Statement** — Chang, Putukian et al., Br J Sports Med 2020;54:216-220,
+  doi:10.1136/bjsports-2019-101583. Cited on **9-10 and 11-12 only**. It is
+  physician-oriented (one mention of secondary school), so it suits the
+  clinical-differential bands rather than the 7-8 unit, whose whole message
+  is "notice, care, tell a trusted adult."
+
+**Still uncited in this strand:** the 11-12 unit's RED-S section. Neither PDF
+names RED-S (0 mentions in both); AMSSM covers adjacent ground with eating
+disorders and one energy-deficiency mention, but not the syndrome by name. A
+dedicated RED-S source (the IOC consensus is the usual one) would close it.
+
+⚠ **Four strands remain unsourced** — cold-exposure, dental-facial-trauma,
+eye-injuries, skin-conditions.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a
