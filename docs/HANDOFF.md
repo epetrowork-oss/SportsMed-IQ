@@ -340,14 +340,20 @@ inherited one-liner nearly produced a wrong image — the other was the bonking
 annotation in a slot `description` (batch 18). Audit inherited text against
 the lesson body before writing any brief from it.
 
-⚠ **One queued improvement:** the jock-itch panel of
-`skin-conditions-fungal-infection-comparison` reads as a red line rather
-than a demarcated plaque **at display size** (it looks fine magnified, which
-is how it initially passed). Not false and not held — queued to ride back
-with the batch 20 delivery. Keep the modest crop; widen the rash into a
-clearly broader plaque with a visible scaly border and just enough
-inner-thigh context to place it. Lesson: **judge recognition images at the
-size students see them, not zoomed in.**
+✅ **The jock-itch panel is corrected and landed (2026-08-03).** It now reads
+as a broad demarcated plaque at phone width rather than a red line, with
+panels 1 and 2 preserved (0.44% pixel-diff over the left 600 px, i.e.
+recompression only).
+
+**Standing lesson from it: judge recognition images at the size students see
+them, not zoomed in.** Cropping and magnifying proves a detail exists; it
+does not prove a student will see it. Every diagram in this project was
+checked the magnified way, so a display-size sweep across the landed images
+is worth doing — the multi-panel comparison charts are the likeliest
+candidates, since each panel gets a third of 900 px and far less on mobile.
+When requesting a fix for this class of defect, ship a render at display size
+alongside the source file so the failure mode is visible rather than
+described.
 
 **Next:** batch 20 = **sports-psychology** (5) — the last strand. It carries
 the heaviest content flag: recognize / support / refer only, with **no
