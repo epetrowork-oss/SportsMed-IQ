@@ -855,7 +855,7 @@ ever regenerated.
 on skin diseases in athletes exists and would be the natural fit; it needs a
 PDF in-session to cite, since DOI hosts are unreachable from the container.
 
-## Batch 20: Lesson diagrams — sports-psychology (5 images)
+## Batch 20: Lesson diagrams — sports-psychology (5 images) — LANDED 2026-08-03 (5 of 5, clean delivery) — FINAL BATCH
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -864,6 +864,48 @@ PDF in-session to cite, since DOI hosts are unreachable from the container.
 | 3 | sports-psychology-injured-sidelines.webp | 4:3 | white | public/images/units/sports-psychology/ | Illustration of an athlete on crutches sitting on the sideline bench, watching their team practice in the background, with a thoughtful, slightly sad expression. A gentle, relatable scene, no medical detail. Clean, warm illustration style for middle schoolers. | Illustration of an injured athlete on crutches watching their team practice from the sideline, looking a little down. |
 | 4 | sports-psychology-listening-scene.webp | 4:3 | white | public/images/units/sports-psychology/ | Illustration of one teammate sitting beside another on a bench, listening calmly and supportively while the other talks, with a coach visible approaching nearby in the background to show the next step of getting a trusted adult involved. Warm, reassuring illustration style for middle schoolers. | Illustration of a teammate listening supportively to another, with a coach approaching in the background. |
 | 5 | sports-psychology-supportive-conversation.webp | 4:3 | transparent | public/images/units/sports-psychology/ | Two teammates in practice gear sitting together on a bench off to the side of a field or court, one leaning in and listening attentively with open, calm body language while the other talks. Warm, low-key scene with no text, no visible score or crowd — the focus is entirely on the supportive one-on-one conversation. Simple, gentle illustration style, nothing clinical or distressing. | Illustration of one teammate listening supportively while another talks, depicting a peer-support conversation. |
+
+**Landed 5/5 clean (2026-08-03) — the final batch of the project.** Correct
+filenames and dimensions, 38-52 KB, true alpha on `supportive-conversation`,
+no slivers.
+
+**The strand's safety requirements were all met.** No image depicts crisis,
+self-harm, or acute distress — the crisis material stays text-only in all
+three bands, as designed. Nothing clinical: no therapy couches, pill
+bottles, or storm-cloud metaphors. Tone is warm and ordinary throughout.
+
+- **`recognize-withdrawal`** cleared the batch's hardest requirement:
+  **withdrawal, not exclusion**. The group is animated and turned toward each
+  other, absorbed in its own conversation — nobody points, stares, or turns
+  away — while the teammate sits apart on the same bench looking down. She is
+  drawn with exactly the same care and detail as everyone else, which was the
+  dignity requirement.
+- **`listening-scene`** includes the **approaching coach**, which was
+  non-negotiable: the lesson's three steps are listen, don't try to fix it,
+  tell a trusted adult, and without the adult the image would teach peer
+  support as the endpoint. The coach reads as approachable and unhurried,
+  walking over rather than summoned in alarm.
+- **`range-of-feelings`** shows both feelings as equally ordinary — a gentle
+  celebration and a quiet slump, neither euphoric nor despairing, no tears.
+- **`injured-sidelines`** is wistful rather than miserable, with crutches as
+  context and no medical detail.
+- **`supportive-conversation`** carries no text at all, no crowd, no
+  scoreboard — just open listening body language, on a genuine alpha channel.
+
+All five use warm readable faces (the one batch where featureless faces would
+not have worked, since these images carry tone) and show a mix of athletes.
+
+**Checked at display size as well as full size**, applying the lesson from
+the jock-itch panel: the withdrawal image was re-rendered at mobile width to
+confirm the group still reads as absorbed rather than excluding, and the
+seated teammate still reads as apart and quiet. It holds.
+
+---
+
+# PIPELINE COMPLETE — 139/139 lesson diagrams, 165/165 image slots
+
+Verified 2026-08-03 by walking all 54 unit pages in a browser: **139 diagrams
+rendered, 0 placeholders remaining anywhere, 0 console or network errors.**
 
 ---
 **Totals:** 153 images in 20 batches originally; batches 1–2 (14 images) landed, **139 remaining across batches 3–20**, largest batch 10 images.

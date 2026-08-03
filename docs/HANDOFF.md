@@ -79,7 +79,17 @@ NATA Acute Skin Trauma on all bands plus Stop the Bleed on 9-10/11-12; two
 of its images had a right-edge production-sheet bleed fixed in-repo by
 white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6).
 
-**Current totals (recounted 2026-08-01, after batch 19):
+# ✅ THE IMAGE PIPELINE IS COMPLETE (2026-08-03)
+
+**139 of 139 lesson-diagram slots live (100%), and 165 of 165 image slots
+overall.** Verified by walking all 54 unit pages in a browser: 139 diagrams
+rendered, **0 placeholders remaining anywhere**, 0 console or network errors.
+All 20 batches are landed and merged.
+
+There is no remaining image work. What follows is kept as the record of how
+it was done, and what is still open elsewhere.
+
+**Old totals line (superseded, recounted 2026-08-01 after batch 19):
 134 of 139 lesson-diagram slots live (96%), and 160 of 165 image slots
 overall** (139 diagrams + 18 thumbnails + 7 category icons + 1 hero). Count
 these from the repo rather than trusting a prior line — an earlier handoff
@@ -355,34 +365,15 @@ When requesting a fix for this class of defect, ship a render at display size
 alongside the source file so the failure mode is visible rather than
 described.
 
-**Next:** batch 20 = **sports-psychology** (5) — the last strand. It carries
-the heaviest content flag: recognize / support / refer only, with **no
-depiction of self-harm, no crisis imagery, and nothing clinical or
-distressing**. Read all three band lessons and audit the slot descriptions
-before writing that brief. After it lands the diagram pipeline is complete
-and the remaining `PLAN.md` backlog is a TESTERS.md alpha kit and a QA sweep.
+Batch 20 (**sports-psychology**) landed **5/5 clean** on 2026-08-03 — the
+final batch. All the strand's safety requirements were met: no image depicts
+crisis, self-harm, or acute distress (that material is text-only in all three
+bands by design), nothing is clinical, and the tone is warm throughout.
+`recognize-withdrawal` correctly shows withdrawal rather than exclusion, and
+`listening-scene` includes the approaching adult, which was non-negotiable
+since without it the image would teach peer support as the endpoint.
 
-✅ **sports-psychology is now sourced (2026-08-03), both citations verified
-from the supplied PDFs' own title pages** — no memory, no relay:
-- **Interassociation Recommendations for Developing a Plan to Recognize and
-  Refer Student-Athletes With Psychological Concerns at the Secondary School
-  Level: A Consensus Statement** — Neal et al., J Athl Train
-  2015;50(3):231-249, doi:10.4085/1062-6050-50.3.03. Cited on **all three
-  bands**. It is the single best fit in the whole project: 54 mentions of
-  "secondary school," 56 of "refer," and heavy crisis content, matching this
-  strand's recognize-and-refer framing exactly.
-- **Mental Health Issues and Psychological Factors in Athletes: Detection,
-  Management, Effect on Performance and Prevention — AMSSM Position
-  Statement** — Chang, Putukian et al., Br J Sports Med 2020;54:216-220,
-  doi:10.1136/bjsports-2019-101583. Cited on **9-10 and 11-12 only**. It is
-  physician-oriented (one mention of secondary school), so it suits the
-  clinical-differential bands rather than the 7-8 unit, whose whole message
-  is "notice, care, tell a trusted adult."
-
-**Still uncited in this strand:** the 11-12 unit's RED-S section. Neither PDF
-names RED-S (0 mentions in both); AMSSM covers adjacent ground with eating
-disorders and one energy-deficiency mention, but not the syndrome by name. A
-dedicated RED-S source (the IOC consensus is the usual one) would close it.
+## What is still open (nothing image-related)
 
 ⚠ **Four strands remain unsourced** — cold-exposure, dental-facial-trauma,
 eye-injuries, skin-conditions.
