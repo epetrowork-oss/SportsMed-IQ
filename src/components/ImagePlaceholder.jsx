@@ -388,6 +388,20 @@ const REAL_IMAGE_PATHS = {
     'images/units/hydration-nutrition/hydration-nutrition-meal-plate.webp',
   'hydration-nutrition-game-day-bag.webp':
     'images/units/hydration-nutrition/hydration-nutrition-game-day-bag.webp',
+
+  // skin-conditions lesson diagrams (batch 19)
+  'skin-conditions-fungal-infection-comparison.webp':
+    'images/units/skin-conditions/skin-conditions-fungal-infection-comparison.webp',
+  'skin-conditions-bacterial-infection-signs.webp':
+    'images/units/skin-conditions/skin-conditions-bacterial-infection-signs.webp',
+  'skin-conditions-warning-signs.webp':
+    'images/units/skin-conditions/skin-conditions-warning-signs.webp',
+  'skin-conditions-shared-gear-risk.webp':
+    'images/units/skin-conditions/skin-conditions-shared-gear-risk.webp',
+  'skin-conditions-blister-care.webp':
+    'images/units/skin-conditions/skin-conditions-blister-care.webp',
+  'skin-conditions-locker-room-habits.webp':
+    'images/units/skin-conditions/skin-conditions-locker-room-habits.webp',
 }
 
 function ratioToCss(ratio) {
