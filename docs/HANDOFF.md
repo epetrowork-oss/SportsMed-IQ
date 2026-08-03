@@ -468,6 +468,43 @@ emitting 74 false positives would buy false confidence.
 Not wrong, just unreadable on a phone. Ranked by how much of the teaching is
 lost.
 
+**Re-verified by measurement 2026-08-03, after Codex correctly overturned one
+of the three judgement calls in this sweep.** Body-region glyph heights were
+measured for all 14 (title band excluded, since headings are never the
+problem), then scaled by 343/900:
+
+| | source cap height | on a phone |
+|---|---|---|
+| worst | 6–7 px | **2.3–2.7 px** |
+| typical | 9–13 px | **3.4–5.0 px** |
+| best of the 14 | 15 px | 5.7 px |
+
+**All 14 confirmed, and none was over-called** — not one measures ≥ 8 px
+effective. The list stands.
+
+⚠ **But do not trust the completeness of this list, and here is exactly why.**
+The same measurement was then run across all 125 lesson diagrams that contain
+enough text to measure, to catch anything the eyeball pass had missed. **It
+flagged 114 of 125 — including cards that are demonstrably readable at 343 px.**
+Three spot-checks that the metric called illegible:
+`knee-acl-warning-signs` (2.7 px — it has essentially no body text at all, so
+the metric was measuring incidental marks), `muscle-strains-grading-comparison`
+(5.0 px — "Grade I / II / III" is perfectly clear), and
+`hydration-nutrition-hyponatremia-vs-dehydration` (5.0 px — every label reads,
+including the "More water makes this WORSE" banner).
+
+**The metric is wrong, not those 114 images.** A median over every glyph blob
+is dominated by fine print, punctuation, and illustration noise, and it has no
+idea *which* text carries the teaching. A card whose essential message is three
+large words scores the same as a five-column table. Legibility here is a
+semantic question — is the text that matters readable? — and no single scalar
+answers it.
+
+So: the 14 are measured and solid, but **whether a 15th exists is still an
+eyeball judgement**, resting on one reading of all 139 diagrams at 343 px. Good
+enough to act on, not good enough to call exhaustive. Re-look before assuming
+the list is closed.
+
 **Dense tables — every cell unreadable, only the headers survive:**
 `knee-acl-differential-comparison-chart` (11-12, 5 cols × 4 rows),
 `muscle-strains-differential-chart` (11-12, 4 × 3),
