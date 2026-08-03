@@ -814,32 +814,36 @@ lesion at all, since it is about the setting. `locker-room-habits` keeps the
 student fully dressed in practice clothing with two clearly separated sets of
 belongings.
 
-**QUEUED IMPROVEMENT — the jock-itch panel (Codex, PR #52).** Codex called
-the third panel of `fungal-infection-comparison` "a thin diagonal line...
-more like a scratch or scar" than a demarcated rash. Checked both ways
-before responding, and the size you look at decides the answer:
-- **At 3x magnification the panel is good** — there is a real plaque, a
-  broader pinkish field behind a scalloped, well-demarcated active border
-  following the crease. That is a textbook tinea cruris edge, not a scratch.
-- **At true display size, and more so at mobile width, it is not.** The
-  plaque field flattens into the surrounding skin and what dominates is a
-  curving red line. Since that is the size students actually see, Codex's
-  concern is the one that counts, and the initial 3x check flattered the
-  image.
+**RESOLVED — the jock-itch panel (Codex catch on PR #52, corrected
+2026-08-03).** Codex called the third panel of
+`fungal-infection-comparison` "a thin diagonal line... more like a scratch or
+scar" than a demarcated rash. Checking it both ways showed the viewing size
+decides the answer:
+- **At 3x magnification the original was fine** — a real plaque behind a
+  scalloped, well-demarcated border.
+- **At true display size, and more so at mobile width, it was not.** The
+  plaque flattened into surrounding skin and a curving red line dominated.
+  Since that is the size students see, that was the read that counted, and
+  the original 3x check had flattered the image.
 
-Contributing cause: the brief asked for modesty in strong terms — "a cropped
-upper-inner-thigh patch only, no genitals, no underwear detail" — and the
-delivery honoured that at the cost of anatomical context. There is a real
-tension here between modesty and recognisability in a school app, and this
-one landed too far toward modesty.
+Contributing cause was in the brief, not the delivery: it demanded modesty in
+strong terms ("a cropped upper-inner-thigh patch only, no genitals, no
+underwear detail") and the art honoured that at the cost of anatomical
+context. The tension between modesty and recognisability is real in a school
+app, and the first attempt sat too far toward modesty.
 
-**Not held, because nothing is false** — the panel is labelled "Jock itch,"
-the edge is demarcated, the redness is correct, and the lesson text carries
-the location. **Queued to ride back with the batch 20 delivery** at no extra
-round trip, the way the batch-16 dental fix rode with batch 17. Redo note:
-keep the modest crop, but widen the rash into a clearly broader plaque with
-a visible scaly border, and add just enough inner-thigh/groin-crease context
-to place it — no genitals, no underwear.
+**The correction is verified good.** The redo widens the rash into a clearly
+broader filled plaque that still carries its scaly demarcated border, adds
+enough inner-thigh context to place it, and stays modest. It was checked at
+phone width first, where it now reads as a plaque rather than a line. Panels
+1 and 2 were preserved: a pixel-diff over the left 600 px shows **0.44%
+change**, consistent with recompression rather than a redraw, so the accepted
+ringworm ring and athlete's-foot panels are untouched.
+
+**Method note worth keeping:** the correction request shipped a render of the
+panel *at phone width* alongside the source file, so the failure mode was
+visible rather than described. That is a good pattern for any
+"looks-fine-magnified" defect.
 
 **One accepted imprecision:** the MRSA panel's second icon reads "Painful"
 where the lesson says "painful **out of proportion to its size**" — the
@@ -851,7 +855,7 @@ ever regenerated.
 on skin diseases in athletes exists and would be the natural fit; it needs a
 PDF in-session to cite, since DOI hosts are unreachable from the container.
 
-## Batch 20: Lesson diagrams — sports-psychology (5 images)
+## Batch 20: Lesson diagrams — sports-psychology (5 images) — LANDED 2026-08-03 (5 of 5, clean delivery) — FINAL BATCH
 
 | # | Asset | Ratio | Background | Folder | Description | Alt text |
 |---|---|---|---|---|---|---|
@@ -860,6 +864,48 @@ PDF in-session to cite, since DOI hosts are unreachable from the container.
 | 3 | sports-psychology-injured-sidelines.webp | 4:3 | white | public/images/units/sports-psychology/ | Illustration of an athlete on crutches sitting on the sideline bench, watching their team practice in the background, with a thoughtful, slightly sad expression. A gentle, relatable scene, no medical detail. Clean, warm illustration style for middle schoolers. | Illustration of an injured athlete on crutches watching their team practice from the sideline, looking a little down. |
 | 4 | sports-psychology-listening-scene.webp | 4:3 | white | public/images/units/sports-psychology/ | Illustration of one teammate sitting beside another on a bench, listening calmly and supportively while the other talks, with a coach visible approaching nearby in the background to show the next step of getting a trusted adult involved. Warm, reassuring illustration style for middle schoolers. | Illustration of a teammate listening supportively to another, with a coach approaching in the background. |
 | 5 | sports-psychology-supportive-conversation.webp | 4:3 | transparent | public/images/units/sports-psychology/ | Two teammates in practice gear sitting together on a bench off to the side of a field or court, one leaning in and listening attentively with open, calm body language while the other talks. Warm, low-key scene with no text, no visible score or crowd — the focus is entirely on the supportive one-on-one conversation. Simple, gentle illustration style, nothing clinical or distressing. | Illustration of one teammate listening supportively while another talks, depicting a peer-support conversation. |
+
+**Landed 5/5 clean (2026-08-03) — the final batch of the project.** Correct
+filenames and dimensions, 38-52 KB, true alpha on `supportive-conversation`,
+no slivers.
+
+**The strand's safety requirements were all met.** No image depicts crisis,
+self-harm, or acute distress — the crisis material stays text-only in all
+three bands, as designed. Nothing clinical: no therapy couches, pill
+bottles, or storm-cloud metaphors. Tone is warm and ordinary throughout.
+
+- **`recognize-withdrawal`** cleared the batch's hardest requirement:
+  **withdrawal, not exclusion**. The group is animated and turned toward each
+  other, absorbed in its own conversation — nobody points, stares, or turns
+  away — while the teammate sits apart on the same bench looking down. She is
+  drawn with exactly the same care and detail as everyone else, which was the
+  dignity requirement.
+- **`listening-scene`** includes the **approaching coach**, which was
+  non-negotiable: the lesson's three steps are listen, don't try to fix it,
+  tell a trusted adult, and without the adult the image would teach peer
+  support as the endpoint. The coach reads as approachable and unhurried,
+  walking over rather than summoned in alarm.
+- **`range-of-feelings`** shows both feelings as equally ordinary — a gentle
+  celebration and a quiet slump, neither euphoric nor despairing, no tears.
+- **`injured-sidelines`** is wistful rather than miserable, with crutches as
+  context and no medical detail.
+- **`supportive-conversation`** carries no text at all, no crowd, no
+  scoreboard — just open listening body language, on a genuine alpha channel.
+
+All five use warm readable faces (the one batch where featureless faces would
+not have worked, since these images carry tone) and show a mix of athletes.
+
+**Checked at display size as well as full size**, applying the lesson from
+the jock-itch panel: the withdrawal image was re-rendered at mobile width to
+confirm the group still reads as absorbed rather than excluding, and the
+seated teammate still reads as apart and quiet. It holds.
+
+---
+
+# PIPELINE COMPLETE — 139/139 lesson diagrams, 165/165 image slots
+
+Verified 2026-08-03 by walking all 54 unit pages in a browser: **139 diagrams
+rendered, 0 placeholders remaining anywhere, 0 console or network errors.**
 
 ---
 **Totals:** 153 images in 20 batches originally; batches 1–2 (14 images) landed, **139 remaining across batches 3–20**, largest batch 10 images.

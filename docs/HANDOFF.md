@@ -79,7 +79,17 @@ NATA Acute Skin Trauma on all bands plus Stop the Bleed on 9-10/11-12; two
 of its images had a right-edge production-sheet bleed fixed in-repo by
 white-filling the margin — see `docs/IMAGE-BATCHES.md` batch 6).
 
-**Current totals (recounted 2026-08-01, after batch 19):
+# ✅ THE IMAGE PIPELINE IS COMPLETE (2026-08-03)
+
+**139 of 139 lesson-diagram slots live (100%), and 165 of 165 image slots
+overall.** Verified by walking all 54 unit pages in a browser: 139 diagrams
+rendered, **0 placeholders remaining anywhere**, 0 console or network errors.
+All 20 batches are landed and merged.
+
+There is no remaining image work. What follows is kept as the record of how
+it was done, and what is still open elsewhere.
+
+**Old totals line (superseded, recounted 2026-08-01 after batch 19):
 134 of 139 lesson-diagram slots live (96%), and 160 of 165 image slots
 overall** (139 diagrams + 18 thumbnails + 7 category icons + 1 hero). Count
 these from the repo rather than trusting a prior line — an earlier handoff
@@ -340,31 +350,51 @@ inherited one-liner nearly produced a wrong image — the other was the bonking
 annotation in a slot `description` (batch 18). Audit inherited text against
 the lesson body before writing any brief from it.
 
-⚠ **One queued improvement:** the jock-itch panel of
-`skin-conditions-fungal-infection-comparison` reads as a red line rather
-than a demarcated plaque **at display size** (it looks fine magnified, which
-is how it initially passed). Not false and not held — queued to ride back
-with the batch 20 delivery. Keep the modest crop; widen the rash into a
-clearly broader plaque with a visible scaly border and just enough
-inner-thigh context to place it. Lesson: **judge recognition images at the
-size students see them, not zoomed in.**
+✅ **The jock-itch panel is corrected and landed (2026-08-03).** It now reads
+as a broad demarcated plaque at phone width rather than a red line, with
+panels 1 and 2 preserved (0.44% pixel-diff over the left 600 px, i.e.
+recompression only).
 
-**Next:** batch 20 = **sports-psychology** (5) — the last strand. It carries
-the heaviest content flag: recognize / support / refer only, with **no
-depiction of self-harm, no crisis imagery, and nothing clinical or
-distressing**. Read all three band lessons and audit the slot descriptions
-before writing that brief. After it lands the diagram pipeline is complete
-and the remaining `PLAN.md` backlog is a TESTERS.md alpha kit and a QA sweep.
+**Standing lesson from it: judge recognition images at the size students see
+them, not zoomed in.** Cropping and magnifying proves a detail exists; it
+does not prove a student will see it. Every diagram in this project was
+checked the magnified way, so a display-size sweep across the landed images
+is worth doing — the multi-panel comparison charts are the likeliest
+candidates, since each panel gets a third of 900 px and far less on mobile.
+When requesting a fix for this class of defect, ship a render at display size
+alongside the source file so the failure mode is visible rather than
+described.
 
-⚠ **Five strands remain unsourced** — cold-exposure, dental-facial-trauma,
-eye-injuries, skin-conditions, sports-psychology. All five are strands where
-no PDF was supplied and no earmark existed; the 13 sourced strands all had
-one or the other. DOI hosts (doi.org, Crossref, PubMed) are blocked from the
-container, so citations cannot be verified in-session — a PDF uploaded into
-the session is the only path that has worked. Natural candidates: NATA skin
-diseases in athletes; NATA environmental cold injuries (2008); NATA
-psychological concerns in athletes; IADT dental trauma guidelines; AAO/AAP
-sports eye-injury guidance.
+Batch 20 (**sports-psychology**) landed **5/5 clean** on 2026-08-03 — the
+final batch. All the strand's safety requirements were met: no image depicts
+crisis, self-harm, or acute distress (that material is text-only in all three
+bands by design), nothing is clinical, and the tone is warm throughout.
+`recognize-withdrawal` correctly shows withdrawal rather than exclusion, and
+`listening-scene` includes the approaching adult, which was non-negotiable
+since without it the image would teach peer support as the endpoint.
+
+⚠ **Still uncited in sports-psychology: the 11-12 unit's RED-S section**
+(`sports-psychology-adv.json`, "RED-S: the medical urgency behind the
+pattern"). Neither attached source supports it, and both PDFs were searched
+to confirm that rather than assumed: AMSSM 2020 mentions "relative energy
+deficiency" exactly once and only in its **reference list** (ref 36, the IOC
+RED-S consensus), with zero occurrences of "energy availability,"
+"menstrual," "bone stress," or "stress fracture" anywhere; NATA 2015 mentions
+amenorrhea twice, once as an anorexia-nervosa diagnostic criterion and once
+in a reference title, and never as an energy-availability signal. The section
+makes specific claims — low energy availability, missed cycles as a medical
+sign, recurrent bone stress injuries as a red flag — that need the IOC RED-S
+consensus (Br J Sports Med 2014;48:491–497) or an equivalent. **The strand
+is sourced but not fully sourced; don't read it as closed.**
+
+## What is still open (nothing image-related)
+
+⚠ **Four strands remain unsourced** — cold-exposure, dental-facial-trauma,
+eye-injuries, skin-conditions.
+
+⚠ **One section remains uncited inside a sourced strand** — the RED-S
+section of the 11-12 sports-psychology unit (see above). Tracking source
+coverage per strand hides this; it needs its own line.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a
@@ -374,17 +404,15 @@ author: one standalone full-frame illustrated card per named file, nothing
 from adjacent cards in view, no photographs. Regenerate a batch's per-image brief anytime from the
 unit JSONs' `image` descriptions (or run `npm run images:shotlist`).
 
-## Peer-reviewed sources already identified (cite when each strand lands)
+## Source ledger
 
-The user provided these NATA position statements (Journal of Athletic Training).
-Attach to each unit's `sources` when that strand's images land:
+**No earmarked source is outstanding.** Every source the user supplied that
+maps to a unit has been attached; the hydration-nutrition earmark that used
+to sit here was applied when batch 18 landed and now appears in the cited
+list below. What is missing is *sources for strands that have none*, not
+unapplied earmarks — see "What is still open."
 
-- **hydration-nutrition** — Fluid Replacement for the Physically Active.
-  2017;52(9):877–895. https://doi.org/10.4085/1062-6050-52.9.02 · and Safe
-  Weight Loss and Maintenance Practices in Sport and Exercise. 2011;46(3):
-  322–336.
-
-Already cited (merged): concussion → NATA Bridge Statement (2024;59(3):225–242,
+Cited (merged): concussion → NATA Bridge Statement (2024;59(3):225–242,
 doi:10.4085/1062-6050-0046.22); heat-illness → Exertional Heat Illnesses
 (2015;50(9):986–1000, doi:10.4085/1062-6050-50.9.07); emergency-action-plan →
 EAP Development and Implementation in Sport (2024;59(6):570–583,
@@ -409,11 +437,42 @@ Recommendation 28 is the direct evidence for prophylactic taping/bracing.
 Citation verified against the source PDF, so unlike the batch 11/12 sources
 it needs no human confirm.
 
+The five strands sourced during batches 14–20, which were landing faster than
+this ledger was updated: muscle-strains → AAOS OrthoInfo "Sprains, Strains and
+Other Soft-Tissue Injuries" (2022) on all three bands plus Hamstring Strain
+Injuries: Recommendations for Diagnosis, Rehabilitation, and Injury Prevention
+(JOSPT 2010, doi:10.2519/jospt.2010.3047) on 9-10/11-12; overuse-injuries →
+AAOS OrthoInfo "Stress Fractures" (2022) on 7-8/9-10, Bone stress injuries
+(BJSM 2022, doi:10.1136/bjsports-2021-104994) on 9-10/11-12, and The
+training-injury prevention paradox (BJSM 2016,
+doi:10.1136/bjsports-2015-095788) on 11-12; warmup-injury-prevention →
+Comprehensive warm-up programme to prevent injuries in young female
+footballers (BMJ 2008, doi:10.1136/bmj.a2469) on all three bands, A review of
+the acute effects of static and dynamic stretching on performance (Eur J Appl
+Physiol 2011, doi:10.1007/s00421-011-1879-2) on 9-10/11-12, and Factors
+modulating post-activation potentiation (Sports Med 2009,
+doi:10.2165/00007256-200939020-00004) on 11-12; hydration-nutrition → Fluid
+Replacement for the Physically Active (2017;52(9):877–895,
+doi:10.4085/1062-6050-52.9.02) on all three bands and Safe Weight Loss and
+Maintenance Practices in Sport and Exercise (2011;46(3):322–336, no DOI in the
+earmark) on 11-12 only, scoped to the one band with a weight-class section;
+sports-psychology → Interassociation Recommendations … Psychological Concerns
+at the Secondary School Level (2015;50(3):231–249,
+doi:10.4085/1062-6050-50.3.03) on all three bands and the AMSSM position
+statement on Mental Health Issues and Psychological Factors in Athletes (BJSM
+2020;54:216–220, doi:10.1136/bjsports-2019-101583) on 9-10/11-12 only, since
+it is physician-oriented and the 7-8 unit only teaches notice/care/tell.
+
 Still uncited in taping-wrapping: the 11-12 unit's claim that a substantial
 share of rigid tape's motion restriction is gone within about 20–30 minutes
 of activity. It is well established in the taping literature, but the NATA
 ankle statement does not address mechanical decay (its reference list was
 checked), so no citation was attached rather than guessing one.
+
+Still uncited in sports-psychology: the 11-12 unit's RED-S section — neither
+attached source covers low energy availability, menstrual dysfunction, or
+recurrent bone stress injuries. Both PDFs were searched to confirm it; see the
+batch 20 entry above for what the search found and what would close the gap.
 
 Not mapped to any current unit: Type 1 Diabetes (no unit) and Facilitating
 Work-Life Balance (professional-practice, not a student lesson).

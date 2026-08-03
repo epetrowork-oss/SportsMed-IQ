@@ -402,6 +402,18 @@ const REAL_IMAGE_PATHS = {
     'images/units/skin-conditions/skin-conditions-blister-care.webp',
   'skin-conditions-locker-room-habits.webp':
     'images/units/skin-conditions/skin-conditions-locker-room-habits.webp',
+
+  // sports-psychology lesson diagrams (batch 20 — final batch)
+  'sports-psychology-range-of-feelings.webp':
+    'images/units/sports-psychology/sports-psychology-range-of-feelings.webp',
+  'sports-psychology-recognize-withdrawal.webp':
+    'images/units/sports-psychology/sports-psychology-recognize-withdrawal.webp',
+  'sports-psychology-injured-sidelines.webp':
+    'images/units/sports-psychology/sports-psychology-injured-sidelines.webp',
+  'sports-psychology-listening-scene.webp':
+    'images/units/sports-psychology/sports-psychology-listening-scene.webp',
+  'sports-psychology-supportive-conversation.webp':
+    'images/units/sports-psychology/sports-psychology-supportive-conversation.webp',
 }
 
 function ratioToCss(ratio) {
