@@ -74,7 +74,7 @@
       "callout": {
         "type": "warning",
         "title": "Refer — and screen deeper",
-        "text": "Pinpoint bone pain, night pain, pain with hopping, or a limp that persists → physician referral. In any athlete with recurrent stress fractures — especially female athletes with menstrual changes or restricted eating — screen for Relative Energy Deficiency in Sport (RED-S, historically the 'female athlete triad'): low energy availability, menstrual dysfunction, and low bone density. That's a medical and nutritional problem, not a training problem."
+        "text": "Pinpoint bone pain, night pain, pain with hopping, or a limp that persists → physician referral. In any athlete with recurrent stress fractures — especially female athletes with menstrual changes or restricted eating — screen for Relative Energy Deficiency in Sport (REDs, historically the 'female athlete triad'): low energy availability, menstrual dysfunction, and low bone density. That's a medical and nutritional problem, not a training problem."
       }
     },
     {
@@ -165,7 +165,7 @@
       "id": "q7",
       "question": "A female distance runner has her second stress fracture this year and mentions her periods stopped months ago. Beyond treating the bone, what must happen?",
       "choices": [
-        "Screening for RED-S / low energy availability with medical and nutrition professionals",
+        "Screening for REDs / low energy availability with medical and nutrition professionals",
         "Nothing — irregular periods are normal in all athletes",
         "Double her calcium and keep training",
         "Switch her to morning practices"
@@ -229,7 +229,7 @@
     },
     {
       "id": "f9",
-      "front": "RED-S (Relative Energy Deficiency in Sport)",
+      "front": "REDs (Relative Energy Deficiency in Sport)",
       "back": "Low energy availability → menstrual dysfunction + low bone density (among other effects). Suspect with recurrent stress fractures; needs medical + nutrition care."
     },
     {

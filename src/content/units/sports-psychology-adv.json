@@ -1,11 +1,11 @@
 {
   "id": "sports-psychology-adv",
-  "title": "Sports Psychology: Differential Recognition, RED-S, and the Referral Network",
+  "title": "Sports Psychology: Differential Recognition, REDs, and the Referral Network",
   "category": "Prevention & Performance",
   "strand": "sports-psychology",
   "gradeBand": "11-12",
   "standards": ["CTE.HSMT.B.2.3", "CTE.HSMT.B.4.5", "CTE.HSMT.B.5.0"],
-  "summary": "Go beyond recognize-support-connect: tell normal post-injury adjustment from a clinical concern, understand the biopsychosocial model of recovery, recognize RED-S at real medical depth, and know the limits of confidentiality when safety is on the line.",
+  "summary": "Go beyond recognize-support-connect: tell normal post-injury adjustment from a clinical concern, understand the biopsychosocial model of recovery, recognize REDs at real medical depth, and know the limits of confidentiality when safety is on the line.",
   "minutes": 22,
   "sections": [
     {
@@ -42,15 +42,15 @@
       ]
     },
     {
-      "heading": "RED-S: the medical urgency behind the pattern",
+      "heading": "REDs: the medical urgency behind the pattern",
       "body": [
-        "You've already seen Relative Energy Deficiency in Sport (RED-S) covered as a nutrition and overuse-injury topic — chronic low energy availability disrupting bone, hormonal, metabolic, and immune function. The psychology-adjacent piece is why it belongs here too: RED-S is frequently intertwined with disordered eating, body image pressure, and a psychological need for control, and recognizing it requires the same seriousness as any other medical red flag, not a discipline conversation.",
+        "You've already seen Relative Energy Deficiency in Sport (REDs) covered as a nutrition and overuse-injury topic — chronic low energy availability disrupting bone, hormonal, metabolic, and immune function. The psychology-adjacent piece is why it belongs here too: REDs is frequently intertwined with disordered eating, body image pressure, and a psychological need for control, and recognizing it requires the same seriousness as any other medical red flag, not a discipline conversation.",
         "Two signs deserve real weight. Missed or irregular menstrual cycles are a medical sign, not a lifestyle detail or a badge of hard training — the body pausing reproductive function is a direct signal that available energy has dropped too low to support normal physiology. Recurrent bone stress injuries — a second or third stress fracture without an obvious, isolated high-impact mechanism — are the same kind of red flag from the overuse-injury side: bone that keeps failing under normal training load is often bone that isn't getting the energy or hormonal support it needs to remodel properly.",
         "Neither sign, alone or together, is something a student aide investigates or manages. The job is recognizing the pattern and referring it promptly and privately to the athletic trainer or team physician, who can loop in a dietitian or physician as needed."
       ],
       "callout": {
         "type": "warning",
-        "title": "RED-S is medical, never a discipline issue",
+        "title": "REDs is medical, never a discipline issue",
         "text": "Never confront an athlete yourself about eating, weight, or body composition, and never frame missed cycles or recurrent stress fractures as a willpower or commitment problem. This is a medical issue that needs a sports medicine and nutrition team — sensitive, prompt referral is the entire job."
       }
     },
@@ -142,12 +142,12 @@
       "question": "A distance runner has had two bone stress injuries this year, hasn't had a menstrual cycle in four months, and says she's 'just really dedicated to training.' What is the correct read on this situation?",
       "choices": [
         "She's simply a hard worker showing strong commitment — no action needed",
-        "This is a likely RED-S pattern — recurrent bone stress injury plus missed cycles is a medical red flag requiring prompt referral to the athletic trainer or physician, not a discipline conversation",
+        "This is a likely REDs pattern — recurrent bone stress injury plus missed cycles is a medical red flag requiring prompt referral to the athletic trainer or physician, not a discipline conversation",
         "Confront her directly about her eating habits so she changes them",
         "Wait to see if a third bone stress injury happens before doing anything"
       ],
       "answerIndex": 1,
-      "explanation": "Recurrent bone stress injury combined with missed menstrual cycles is exactly the RED-S recognition pattern covered in this unit — both are medical signs of low energy availability, not evidence of dedication, and they call for prompt, private referral, never a peer confrontation or a wait-and-see approach."
+      "explanation": "Recurrent bone stress injury combined with missed menstrual cycles is exactly the REDs recognition pattern covered in this unit — both are medical signs of low energy availability, not evidence of dedication, and they call for prompt, private referral, never a peer confrontation or a wait-and-see approach."
     },
     {
       "id": "q5",
@@ -216,18 +216,18 @@
     },
     {
       "id": "f4",
-      "front": "RED-S — missed/irregular menstrual cycles",
+      "front": "REDs — missed/irregular menstrual cycles",
       "back": "A medical sign of significant low energy availability, treated like an abnormal vital sign — never a badge of hard training or a lifestyle detail."
     },
     {
       "id": "f5",
-      "front": "RED-S — recurrent bone stress injuries",
+      "front": "REDs — recurrent bone stress injuries",
       "back": "A second or third stress fracture without an obvious high-impact mechanism is a red flag for underlying low energy availability, linking directly back to overuse-injury risk."
     },
     {
       "id": "f6",
-      "front": "RED-S response — never a discipline issue",
-      "back": "Suspected RED-S or disordered eating always routes to the athletic trainer/physician/dietitian team — never a peer confrontation about eating, weight, or willpower."
+      "front": "REDs response — never a discipline issue",
+      "back": "Suspected REDs or disordered eating always routes to the athletic trainer/physician/dietitian team — never a peer confrontation about eating, weight, or willpower."
     },
     {
       "id": "f7",
@@ -257,7 +257,7 @@
     {
       "id": "f12",
       "front": "Recognize, support, connect — still the aide's ceiling",
-      "back": "Even with deeper knowledge of RED-S, the biopsychosocial model, and crisis signs, the student aide's role stays recognize, support, and connect — never diagnose, counsel, or deliver a professional's intervention."
+      "back": "Even with deeper knowledge of REDs, the biopsychosocial model, and crisis signs, the student aide's role stays recognize, support, and connect — never diagnose, counsel, or deliver a professional's intervention."
     }
   ],
   "sources": [
