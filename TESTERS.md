@@ -137,11 +137,10 @@ it may be one we missed.
 **One topic has no source citations yet** — eye injuries. The other
 seventeen cite position statements from NATA, ACSM, AMSSM, AAOS, and similar.
 
-**Seven individual claims inside otherwise-sourced topics are also still
+**Six individual claims inside otherwise-sourced topics are also still
 uncited**, listed here in full rather than summarised, because we got this
 count wrong twice:
 
-- **Sports psychology, 11th–12th** — the whole RED-S section
 - **Dental and facial trauma, 7th–8th and 9th–10th** — the nosebleed guidance
 - **Cold exposure, 11th–12th** — classifying frostnip as a non-freezing
   injury; the "water conducts heat 25× faster than air" figure; and the

@@ -23,11 +23,11 @@ upload each image batch, so sessions are blocked on that input. **The QA
 sweep and the `TESTERS.md` alpha kit both landed 2026-08-03** — the sweep
 found no app defects. Still genuinely open from the sprint: the aesthetic
 pass. Outside the sprint, the live backlog is the dense-diagram redesign
-(14 images), **one unsourced strand** (eye-injuries), and **seven uncited
-claims inside otherwise-sourced strands** — RED-S, nosebleed, three
-cold-exposure specifics, taping-wrapping, and warm-up. All are tracked in
-`docs/HANDOFF.md`, which carries the full table; do not read "RED-S" as the
-only citation gap.
+(14 images), **one unsourced strand** (eye-injuries), and **six uncited
+claims inside otherwise-sourced strands** — nosebleed, three cold-exposure
+specifics, taping-wrapping, and warm-up. (RED-S was the seventh and closed
+2026-08-04.) All are tracked in `docs/HANDOFF.md`, which carries the full
+table; do not treat any single citation as closing the backlog.
 
 ## Where things stand
 
@@ -457,8 +457,8 @@ else is `implementer` (Sonnet).*
       (complete / partial / click-through) — **every code verified to import
       through the real UI before being written into the doc**. Known-gaps
       section covers the dense-diagram list, the one unsourced strand
-      (eye-injuries), **all seven uncited claims listed individually** (RED-S,
-      nosebleed, three cold-exposure specifics, taping-wrapping, warm-up),
+      (eye-injuries), **all six uncited claims listed individually**
+      (nosebleed, three cold-exposure specifics, taping-wrapping, warm-up),
       unverified standards, and no-account-recovery, and it tells testers to
       report unreadable diagrams anyway since that list isn't proven complete.
       Still to do here: regenerate `npm run images:shotlist` after any

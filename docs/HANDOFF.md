@@ -373,7 +373,11 @@ bands by design), nothing is clinical, and the tone is warm throughout.
 `listening-scene` includes the approaching adult, which was non-negotiable
 since without it the image would teach peer support as the endpoint.
 
-⚠ **Still uncited in sports-psychology: the 11-12 unit's RED-S section**
+✅ **RESOLVED 2026-08-04 — the RED-S gap is closed.** The IOC REDs consensus
+was supplied and is now attached to the four units that actually teach the
+topic. The original finding is kept below because the reasoning still matters.
+
+⚠ **(Historical) Still uncited in sports-psychology: the 11-12 unit's RED-S section**
 (`sports-psychology-adv.json`, "RED-S: the medical urgency behind the
 pattern"). Neither attached source supports it, and both PDFs were searched
 to confirm that rather than assumed: AMSSM 2020 mentions "relative energy
@@ -602,7 +606,8 @@ policy case study on mandating ice-hockey face protectors — nothing on
 recognition or management. Attaching it would have made a strand read as
 sourced while its substance stayed uncited.
 
-⚠ **Seven claims remain uncited inside strands that are otherwise sourced.**
+⚠ **Six claims remain uncited inside strands that are otherwise sourced.**
+(RED-S was the seventh and was **closed 2026-08-04** — see the ledger.)
 Tracking coverage per *strand* hides these, which is how the tester-facing
 count came to be wrong twice — keep this list complete, and update it whenever
 a source is attached that doesn't cover everything a unit teaches.
@@ -611,7 +616,6 @@ a source is attached that doesn't cover everything a unit teaches.
 |---|---|---|
 | warmup-injury-prevention 11-12 | Raising muscle temperature by ~1–2 °C meaningfully shifts tissue properties | batch 14 notes |
 | taping-wrapping 11-12 | Much of rigid tape's motion restriction is gone within ~20–30 min of activity | ledger |
-| sports-psychology 11-12 | The whole RED-S section — low energy availability, missed cycles, recurrent bone stress injuries | ledger |
 | dental-facial-trauma 7-8, 9-10 | Nosebleed management (the NATA dental statement has 0 hits for "nosebleed"/"epistaxis") | ledger |
 | cold-exposure 11-12 | Frostnip classified as a *non-freezing* injury | ledger |
 | cold-exposure 11-12 | "Water conducts heat ~25× faster than air" | ledger |
@@ -687,6 +691,49 @@ doi:10.4085/1062-6050-50.3.03) on all three bands and the AMSSM position
 statement on Mental Health Issues and Psychological Factors in Athletes (BJSM
 2020;54:216–220, doi:10.1136/bjsports-2019-101583) on 9-10/11-12 only, since
 it is physician-oriented and the 7-8 unit only teaches notice/care/tell.
+
+**RED-S / REDs → 2023 IOC consensus statement on Relative Energy Deficiency
+in Sport (REDs)** — Mountjoy M, Ackerman KE, Bailey DM, et al., Br J Sports
+Med **2024;57:1073–1098**, doi:10.1136/bjsports-2023-106994. Supplied and
+attached 2026-08-04, closing the longest-standing citation gap in the project.
+
+⚠ **Correct the citation if you have it from an earlier note.** This handoff
+twice named the target as "BJSM 2014;48:491–497" (the 2014 original) or
+"2023;57:1073–1097". The PDF's own *To cite* block reads **2024;57:1073–1098**
+— note the year and the end page. Use the publisher's form.
+
+**Attached to the four units that actually teach REDs, not to every unit that
+says the word:**
+
+| Unit | Why |
+|---|---|
+| overuse-injuries-adv (11-12) | Dedicated REDs section; defines energy availability and calls it "the modern, expanded version of what used to be called the female athlete triad" |
+| sports-psychology-adv (11-12) | Dedicated "RED-S: the medical urgency behind the pattern" section |
+| hydration-nutrition-adv (11-12) | REDs inside the weight-class / when-to-refer section |
+| overuse-injuries (9-10) | Makes real claims — recurrent stress fractures + menstrual dysfunction → screen for REDs |
+
+**Deliberately NOT attached to sports-psychology (9-10)**, which only
+*cross-references* the topic — "the full physical picture (including RED-S) is
+covered where nutrition and energy availability are taught in depth." A
+pointer is not a claim, and attaching a source to it would inflate coverage.
+
+Coverage check: low energy availability 53 mentions, energy availability 85,
+menstrual 28, amenorrhoea 34, bone stress injuries 11, bone mineral density
+12, eating disorders 47, disordered eating 13, female athlete triad 32. The
+two claims Codex specifically challenged on PR #53 — menstrual dysfunction as
+a medical sign and recurrent bone stress injuries as a red flag — are both
+directly supported; the statement lists "Bone stress injuries" as a REDs
+outcome under impaired bone health.
+
+⚠ **A terminology question this raises, left for the owner rather than changed
+unilaterally.** The 2023 consensus renamed the syndrome from **RED-S** to
+**REDs** — it uses "REDs" 215 times and "RED-S" zero. Five unit files still
+use "RED-S" (sports-psychology ×2 units, overuse-injuries ×2, hydration-
+nutrition-adv). Nothing is *wrong*: "RED-S" remains widely understood and the
+units spell out "Relative Energy Deficiency in Sport" correctly. But a unit
+citing the 2023 statement while using the pre-2023 abbreviation is mildly
+stale. **Changing terminology across five units is a content decision, not a
+sourcing one.**
 
 **skin-conditions → NATA Position Statement: Skin Diseases** (J Athl Train
 2010;45(4):411–428), attached to **all three bands** on 2026-08-03. Coverage
@@ -773,7 +820,7 @@ of activity. It is well established in the taping literature, but the NATA
 ankle statement does not address mechanical decay (its reference list was
 checked), so no citation was attached rather than guessing one.
 
-Still uncited in sports-psychology: the 11-12 unit's RED-S section — neither
+(Closed 2026-08-04, see the REDs entry above.) Was uncited in sports-psychology: the 11-12 unit's RED-S section — neither
 attached source covers low energy availability, menstrual dysfunction, or
 recurrent bone stress injuries. Both PDFs were searched to confirm it; see the
 batch 20 entry above for what the search found and what would close the gap.
