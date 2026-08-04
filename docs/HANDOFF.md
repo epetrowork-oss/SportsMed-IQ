@@ -588,8 +588,11 @@ Group A was a correctness fix and is done. Group B is a redesign ask — fewer
 columns, larger type, or splitting a table across two cards — and is worth
 doing per strand rather than all at once. There is no group C.
 
-⚠ **Four strands remain unsourced** — cold-exposure, dental-facial-trauma,
-eye-injuries, skin-conditions.
+⚠ **Three strands remain unsourced** — cold-exposure, eye-injuries,
+skin-conditions. (**dental-facial-trauma was sourced 2026-08-03** — see the
+ledger below.) All three are strands where no PDF has been supplied and no
+earmark exists. DOI hosts are blocked from the container, so **a PDF uploaded
+into the session is still the only path that has worked.**
 
 ⚠ **One section remains uncited inside a sourced strand** — the RED-S
 section of the 11-12 sports-psychology unit (see above). Tracking source
@@ -661,6 +664,22 @@ doi:10.4085/1062-6050-50.3.03) on all three bands and the AMSSM position
 statement on Mental Health Issues and Psychological Factors in Athletes (BJSM
 2020;54:216–220, doi:10.1136/bjsports-2019-101583) on 9-10/11-12 only, since
 it is physician-oriented and the 7-8 unit only teaches notice/care/tell.
+
+**dental-facial-trauma → NATA Position Statement: Preventing and Managing
+Sport-Related Dental and Oral Injuries** (J Athl Train 2016;51(10):821–839,
+doi:10.4085/1062-6050-51.8.01), attached to **all three bands** on 2026-08-03.
+Scoped by checking the PDF against what each band teaches rather than by
+assumption: the statement covers avulsion (30 mentions), mouthguards (181),
+milk/Hank's storage (9/3), replantation (14), and the luxation spectrum (28)
+and mandible (23) content the 11-12 unit carries. Its own text confirms the
+handling rules the units teach — replantation "should occur within 5 minutes,"
+and a tooth that can't be replanted goes into "milk, or physiologic saline."
+
+⚠ **Still uncited in dental-facial-trauma: the nosebleed content.** The 7-8
+and 9-10 units teach nosebleed management (11 and 10 mentions), and this
+statement has **zero** occurrences of "nosebleed" or "epistaxis" — checked, not
+assumed. The source was still attached because it covers the dental core of
+all three bands, but the nosebleed sections need their own citation.
 
 Still uncited in taping-wrapping: the 11-12 unit's claim that a substantial
 share of rigid tape's motion restriction is gone within about 20–30 minutes

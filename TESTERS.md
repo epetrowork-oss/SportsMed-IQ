@@ -134,10 +134,11 @@ small. A redesign round is planned. **We're not certain the list of fourteen is
 complete**, so if you hit a diagram you can't read, that *is* worth reporting —
 it may be one we missed.
 
-**Four topics have no source citations yet** — cold exposure, dental and facial
-trauma, eye injuries, and skin conditions. The other fourteen cite position
-statements from NATA, AMSSM, AAOS, and similar. One section of the 11th–12th
-sports psychology unit (RED-S) also still needs its own citation.
+**Three topics have no source citations yet** — cold exposure, eye injuries,
+and skin conditions. The other fifteen cite position statements from NATA,
+AMSSM, AAOS, and similar. Two individual sections are also still uncited: the
+RED-S part of the 11th–12th sports psychology unit, and the nosebleed guidance
+in the dental and facial trauma units.
 
 **The standards alignments are unverified.** Each unit lists standards it's
 meant to map to; nobody has checked those against the official documents yet.

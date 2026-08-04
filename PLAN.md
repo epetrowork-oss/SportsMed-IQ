@@ -23,7 +23,7 @@ upload each image batch, so sessions are blocked on that input. **The QA
 sweep and the `TESTERS.md` alpha kit both landed 2026-08-03** — the sweep
 found no app defects. Still genuinely open from the sprint: the aesthetic
 pass. Outside the sprint, the live backlog is the dense-diagram redesign
-(14 images), four unsourced strands, and the RED-S citation — all tracked in
+(14 images), three unsourced strands, and the RED-S citation — all tracked in
 `docs/HANDOFF.md`.
 
 ## Where things stand
@@ -453,7 +453,7 @@ else is `implementer` (Sonnet).*
       path, teacher path, one class code and three demo student codes
       (complete / partial / click-through) — **every code verified to import
       through the real UI before being written into the doc**. Known-gaps
-      section covers the dense-diagram list, the four unsourced strands, the
+      section covers the dense-diagram list, the three unsourced strands, the
       RED-S gap, unverified standards, and no-account-recovery, and it tells
       testers to report unreadable diagrams anyway since that list isn't
       proven complete.

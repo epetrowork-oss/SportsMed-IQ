@@ -258,5 +258,13 @@
       "front": "Chipped tooth fragment",
       "back": "If found, store it the same way as an avulsed tooth (milk/saliva) — a dentist may be able to bond it back on."
     }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Preventing and Managing Sport-Related Dental and Oral Injuries",
+      "publisher": "Journal of Athletic Training",
+      "year": 2016,
+      "url": "https://doi.org/10.4085/1062-6050-51.8.01"
+    }
   ]
 }
