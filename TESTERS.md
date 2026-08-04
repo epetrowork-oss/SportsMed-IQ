@@ -136,10 +136,11 @@ it may be one we missed.
 
 **All eighteen topics now cite a source** — position statements from NATA,
 ACSM, AMSSM and the IOC, plus AAOS and a sports medicine reference text. Two
-caveats worth knowing: the **eye injuries** source is a 2005 textbook chapter
-— the oldest by a decade, and we'd like to add a modern one alongside it — and
-citing a source for a topic doesn't mean every sentence in it is individually
-cited.
+one caveat worth knowing: citing a source for a topic doesn't mean every
+sentence in it is individually cited. (The **eye injuries** units lean on a
+2005 textbook chapter for the injury-management content — that's the reference
+the topic was written from — now paired with the 2013 AAP/AAO protective
+eyewear policy for the prevention sections.)
 
 **Eight individual claims inside otherwise-sourced topics are still
 uncited**, listed here in full rather than summarised, because we got this

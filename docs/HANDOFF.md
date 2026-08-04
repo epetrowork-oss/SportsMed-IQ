@@ -728,14 +728,35 @@ guidance matches what the units teach almost line for line:
 | Polycarbonate sports goggles | *"polycarbonate lenses, which are up to 20 times stronger"*, ASTM standards, *"Contact lenses offer no protection whatsoever"*, eye protection reduces risk *"by 90%"* |
 | Subconjunctival haemorrhage vs hyphema | Both described separately |
 
-⚠ **Two limitations, both live.** (1) **It is 2005** — twenty-one years old.
-The guidance above is the stable part of ophthalmic emergency care, but this is
-the oldest source in the project by a decade. **Add** a modern one rather than
-replacing this one, since this is the provenance source: the **AAP/AAO joint
-policy "Protective Eyewear for Young Athletes"** remains the named target and
-would suit the prevention sections better. It is **not** in the owner's files,
-so it would have to be obtained externally — do not expect it to turn up in a
-future upload the way the other four did. (2) **It does not cover chemical eye
+⚠ **Two limitations.** (1) **It is 2005** — twenty-one years old, the oldest
+source in the project by a decade. This was **partly addressed the same day**:
+the AAP/AAO eyewear policy was supplied after all and is now attached alongside
+it on the two bands that teach prevention (see the entry directly below). The
+2005 chapter still carries the *management* content — hyphema, orbital
+fracture, retinal detachment, rigid shield — on all three bands, and remains
+the provenance source, so it stays.
+
+**eye-injuries (7-8 and 9-10 only) → Protective Eyewear for Young Athletes,
+Joint Policy Statement of the AAP and the AAO** (American Academy of
+Ophthalmology, 2013), attached 2026-08-04. Provenance read off the document's
+own approval block: revised and approved by the **AAP Board of Directors
+October 2003 and June 2011**, and the **AAO Board of Trustees November 2003 and
+2013**, ©2013 AAO. No DOI is printed, so it is **cited without a URL**.
+
+Attached to **only the two bands with a prevention section** — 7-8 *"Prevention:
+wear the right eyewear"* and 9-10 *"Prevention: protective eyewear"*.
+`eye-injuries-adv` has **no** prevention section (it is entirely mechanism,
+hyphema, orbital blowout, chemical exposure, retinal detachment, differential
+and return-to-play), so it was deliberately left at one source.
+
+Coverage checked: ASTM 28 mentions, polycarbonate 7, functionally one-eyed 9,
+contact lenses 3, goggles 4, face shields 2, plus a full high/moderate/low-risk
+sport table. That is squarely what the two prevention sections teach.
+
+⚠ **It does not close any gap on the uncited table, and should not be recorded
+as if it did.** This is a *prevention* policy: **0** mentions of chemical,
+hyphema, retinal, flush or irrigation. The eye chemical-splash gap (9-10 and
+11-12) is untouched by it and stays open. (2) **It does not cover chemical eye
 injury at all** — 0 hits for "chemical", "alkali" or "acid burn" — and the
 11-12 unit has a dedicated *"Chemical exposure: the one injury where treatment
 starts before history"* section. That is now on the uncited-claims table.
