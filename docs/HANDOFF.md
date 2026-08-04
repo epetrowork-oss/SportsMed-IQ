@@ -588,15 +588,40 @@ Group A was a correctness fix and is done. Group B is a redesign ask — fewer
 columns, larger type, or splitting a table across two cards — and is worth
 doing per strand rather than all at once. There is no group C.
 
-⚠ **Three strands remain unsourced** — cold-exposure, eye-injuries,
-skin-conditions. (**dental-facial-trauma was sourced 2026-08-03** — see the
-ledger below.) All three are strands where no PDF has been supplied and no
+⚠ **Two strands remain unsourced** — eye-injuries and skin-conditions.
+(**dental-facial-trauma and cold-exposure were both sourced 2026-08-03** — see
+the ledger below.) Both are strands where no PDF has been supplied and no
 earmark exists. DOI hosts are blocked from the container, so **a PDF uploaded
 into the session is still the only path that has worked.**
 
-⚠ **One section remains uncited inside a sourced strand** — the RED-S
-section of the 11-12 sports-psychology unit (see above). Tracking source
-coverage per strand hides this; it needs its own line.
+The two that would close them, named so a future session can ask for them
+precisely: **NATA position statement on skin diseases in athletes** (J Athl
+Train 2010;45(4):411–428) and the **AAP/AAO joint policy "Protective Eyewear
+for Young Athletes"**. A 2009 IOC/Wiley injury-prevention textbook was offered
+and **declined**: searched full-text, it had 0 hits for frostbite, tinea,
+impetigo, MRSA, herpes, nosebleed and RED-S, and its only eye content was a
+policy case study on mandating ice-hockey face protectors — nothing on
+recognition or management. Attaching it would have made a strand read as
+sourced while its substance stayed uncited.
+
+⚠ **Seven claims remain uncited inside strands that are otherwise sourced.**
+Tracking coverage per *strand* hides these, which is how the tester-facing
+count came to be wrong twice — keep this list complete, and update it whenever
+a source is attached that doesn't cover everything a unit teaches.
+
+| Strand / band | Uncited claim | Recorded at |
+|---|---|---|
+| warmup-injury-prevention 11-12 | Raising muscle temperature by ~1–2 °C meaningfully shifts tissue properties | batch 14 notes |
+| taping-wrapping 11-12 | Much of rigid tape's motion restriction is gone within ~20–30 min of activity | ledger |
+| sports-psychology 11-12 | The whole RED-S section — low energy availability, missed cycles, recurrent bone stress injuries | ledger |
+| dental-facial-trauma 7-8, 9-10 | Nosebleed management (the NATA dental statement has 0 hits for "nosebleed"/"epistaxis") | ledger |
+| cold-exposure 11-12 | Frostnip classified as a *non-freezing* injury | ledger |
+| cold-exposure 11-12 | "Water conducts heat ~25× faster than air" | ledger |
+| cold-exposure 11-12 | The "1-10-1 principle" naming (the physiology is covered; the mnemonic isn't) | ledger |
+
+**A strand being sourced is not the same as every section in it being
+sourced.** Any doc that quotes a count — `TESTERS.md` especially — must reflect
+this table, not just the unsourced-strand count.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a
@@ -664,6 +689,43 @@ doi:10.4085/1062-6050-50.3.03) on all three bands and the AMSSM position
 statement on Mental Health Issues and Psychological Factors in Athletes (BJSM
 2020;54:216–220, doi:10.1136/bjsports-2019-101583) on 9-10/11-12 only, since
 it is physician-oriented and the 7-8 unit only teaches notice/care/tell.
+
+**cold-exposure → ACSM Expert Consensus Statement: Injury Prevention and
+Exercise Performance during Cold-Weather Exercise** (Current Sports Medicine
+Reports 2021;20(11):594–607), attached to **all three bands** on 2026-08-03.
+It explicitly "updates and replaces" the 2006 ACSM cold-injury position stand.
+Coverage checked per band: frostbite (54 mentions), hypothermia (46, with a
+full staging table at mild 32–35°C / moderate 28–31°C / severe <28°C),
+rewarming (23), non-freezing cold injury (13), shivering (12); for the 11-12
+unit specifically, cold-water immersion (8) with the four-stage immersion
+model and cold shock (7), Swiss staging (9), cardiac arrest (21), and
+avalanche burial (31).
+
+✅ **This source independently confirms the frostbite lesson change made
+earlier the same day.** That edit rewrote field rewarming to be gated on
+**refreezing risk rather than injury depth**, after the palpation-depth test
+was removed. The statement says it twice: *"If possible, the frozen part or
+area should not be rewarmed unless refreezing can be avoided"* and *"The
+region should only be thawed if refreezing can be prevented."* It also backs
+the superficial case the unit teaches — superficial injury *"should be
+rewarmed by contact with warm skin (their own, or someone else's) and further
+cooling avoided."* The owner-approved change now has a 2021 consensus
+statement behind it.
+
+⚠ **Three claims in cold-exposure remain uncited, checked rather than
+assumed.** (1) The 11-12 unit classifies **frostnip** as a non-freezing injury
+(6 mentions); this statement never uses the word, and describes superficial
+*frostbite* as "partial skin freezing" — so the classification is not
+supported here, though not contradicted either. Sources genuinely differ on
+whether frostnip is the mildest frostbite or a separate non-freezing entity.
+(2) The **"water conducts heat ~25 times faster than air"** figure — 0 hits.
+(3) The **"1-10-1 principle"** naming — 0 hits, though the statement covers the
+same physiology as a four-stage immersion model. The underlying teaching is
+sound; the two specific framings need their own citation.
+
+**Cited without a URL.** No DOI is printed in the PDF's extracted text, and
+DOI hosts are blocked from the container, so none was guessed — same rule
+applied to the Safe Weight Loss statement.
 
 **dental-facial-trauma → NATA Position Statement: Preventing and Managing
 Sport-Related Dental and Oral Injuries** (J Athl Train 2016;51(10):821–839,

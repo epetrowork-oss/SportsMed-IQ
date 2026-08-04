@@ -259,5 +259,12 @@
       "front": "The refreezing rule",
       "back": "Never fully rewarm frostbite if there's a chance it could refreeze before reaching a guaranteed warm environment — thawing then refreezing causes far worse tissue damage."
     }
+  ],
+  "sources": [
+    {
+      "title": "ACSM Expert Consensus Statement: Injury Prevention and Exercise Performance during Cold-Weather Exercise",
+      "publisher": "Current Sports Medicine Reports",
+      "year": 2021
+    }
   ]
 }

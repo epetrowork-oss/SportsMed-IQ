@@ -134,11 +134,26 @@ small. A redesign round is planned. **We're not certain the list of fourteen is
 complete**, so if you hit a diagram you can't read, that *is* worth reporting —
 it may be one we missed.
 
-**Three topics have no source citations yet** — cold exposure, eye injuries,
-and skin conditions. The other fifteen cite position statements from NATA,
-AMSSM, AAOS, and similar. Two individual sections are also still uncited: the
-RED-S part of the 11th–12th sports psychology unit, and the nosebleed guidance
-in the dental and facial trauma units.
+**Two topics have no source citations yet** — eye injuries and skin
+conditions. The other sixteen cite position statements from NATA, ACSM, AMSSM,
+AAOS, and similar.
+
+**Seven individual claims inside otherwise-sourced topics are also still
+uncited**, listed here in full rather than summarised, because we got this
+count wrong twice:
+
+- **Sports psychology, 11th–12th** — the whole RED-S section
+- **Dental and facial trauma, 7th–8th and 9th–10th** — the nosebleed guidance
+- **Cold exposure, 11th–12th** — classifying frostnip as a non-freezing
+  injury; the "water conducts heat 25× faster than air" figure; and the
+  "1-10-1" naming (the underlying physiology *is* sourced)
+- **Taping and wrapping, 11th–12th** — that most of rigid tape's motion
+  restriction is gone within 20–30 minutes of activity
+- **Warm-up and injury prevention, 11th–12th** — that raising muscle
+  temperature by 1–2 °C meaningfully changes tissue properties
+
+None of these are believed wrong; they're well established. They just don't
+yet have a citation attached that we've verified against the source.
 
 **The standards alignments are unverified.** Each unit lists standards it's
 meant to map to; nobody has checked those against the official documents yet.
