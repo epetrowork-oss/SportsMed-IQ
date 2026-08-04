@@ -596,14 +596,16 @@ doing per strand rather than all at once. There is no group C.
 as of 2026-08-04.** dental-facial-trauma, cold-exposure and skin-conditions
 landed 2026-08-03; eye-injuries closed it on 2026-08-04.
 
-That is coverage, not completeness — **seven claim-level gaps remain** (see the
-table below), and one strand's source carries an age caveat worth acting on
-(eye-injuries, see the ledger). A 2009 IOC/Wiley injury-prevention textbook was offered
-and **declined**: searched full-text, it had 0 hits for frostbite, tinea,
-impetigo, MRSA, herpes, nosebleed and RED-S, and its only eye content was a
-policy case study on mandating ice-hockey face protectors — nothing on
-recognition or management. Attaching it would have made a strand read as
-sourced while its substance stayed uncited.
+That is coverage, not completeness — **eight claim-level gaps remain**, listed
+in the table below. **That table is the live sourcing backlog now; there are no
+unsourced strands left to find.**
+
+A 2009 IOC/Wiley injury-prevention textbook was offered and **declined**:
+searched full-text, it had 0 hits for frostbite, tinea, impetigo, MRSA, herpes,
+nosebleed and RED-S, and its only eye content was a policy case study on
+mandating ice-hockey face protectors — nothing on recognition or management.
+Attaching it would have made a strand read as sourced while its substance
+stayed uncited.
 
 ⚠ **Eight claims remain uncited inside strands that are otherwise sourced.**
 (RED-S closed 2026-08-04. Two were added the same day when Codex checked the
@@ -640,11 +642,15 @@ unit JSONs' `image` descriptions (or run `npm run images:shotlist`).
 
 ## Source ledger
 
-**No earmarked source is outstanding.** Every source the user supplied that
-maps to a unit has been attached; the hydration-nutrition earmark that used
-to sit here was applied when batch 18 landed and now appears in the cited
-list below. What is missing is *sources for strands that have none*, not
-unapplied earmarks — see "What is still open."
+**Nothing is outstanding at the strand level.** Every source the user supplied
+has been attached, and as of 2026-08-04 **all 54 unit files carry a `sources`
+array** — there are no unsourced strands, and no unapplied earmarks. (The
+hydration-nutrition earmark that used to sit here was applied when batch 18
+landed and appears in the cited list below.)
+
+**What remains is claim-level: eight specific claims inside otherwise-sourced
+strands, listed in the table under "What is still open."** Start there rather
+than looking for a strand with no source — you will not find one.
 
 Cited (merged): concussion → NATA Bridge Statement (2024;59(3):225–242,
 doi:10.4085/1062-6050-0046.22); heat-illness → Exertional Heat Illnesses
@@ -729,7 +735,11 @@ guidance matches what the units teach almost line for line:
 | Subconjunctival haemorrhage vs hyphema | Both described separately |
 
 ⚠ **Two limitations.** (1) **It is 2005** — twenty-one years old, the oldest
-source in the project by a decade. This was **partly addressed the same day**:
+source in the project — though **only by three years**, not by a decade as an
+earlier draft of this note claimed: the next-oldest are the 2008 BMJ warm-up
+trial and a 2009 Sports Medicine review, both on warmup-injury-prevention.
+(Full spread across the corpus: 2005 ×3, 2008 ×3, 2009 ×1, then 2010 and
+later.) This was **partly addressed the same day**:
 the AAP/AAO eyewear policy was supplied after all and is now attached alongside
 it on the two bands that teach prevention (see the entry directly below). The
 2005 chapter still carries the *management* content — hyphema, orbital
