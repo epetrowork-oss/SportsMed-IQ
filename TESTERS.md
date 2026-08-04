@@ -134,9 +134,8 @@ small. A redesign round is planned. **We're not certain the list of fourteen is
 complete**, so if you hit a diagram you can't read, that *is* worth reporting —
 it may be one we missed.
 
-**Two topics have no source citations yet** — eye injuries and skin
-conditions. The other sixteen cite position statements from NATA, ACSM, AMSSM,
-AAOS, and similar.
+**One topic has no source citations yet** — eye injuries. The other
+seventeen cite position statements from NATA, ACSM, AMSSM, AAOS, and similar.
 
 **Seven individual claims inside otherwise-sourced topics are also still
 uncited**, listed here in full rather than summarised, because we got this

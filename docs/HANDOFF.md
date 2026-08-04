@@ -588,16 +588,14 @@ Group A was a correctness fix and is done. Group B is a redesign ask — fewer
 columns, larger type, or splitting a table across two cards — and is worth
 doing per strand rather than all at once. There is no group C.
 
-⚠ **Two strands remain unsourced** — eye-injuries and skin-conditions.
-(**dental-facial-trauma and cold-exposure were both sourced 2026-08-03** — see
-the ledger below.) Both are strands where no PDF has been supplied and no
-earmark exists. DOI hosts are blocked from the container, so **a PDF uploaded
-into the session is still the only path that has worked.**
+⚠ **One strand remains unsourced — eye-injuries.** (dental-facial-trauma,
+cold-exposure and skin-conditions were all sourced 2026-08-03 — see the ledger
+below.) No PDF has been supplied for it and no earmark exists. DOI hosts are
+blocked from the container, so **a PDF uploaded into the session is still the
+only path that has worked.**
 
-The two that would close them, named so a future session can ask for them
-precisely: **NATA position statement on skin diseases in athletes** (J Athl
-Train 2010;45(4):411–428) and the **AAP/AAO joint policy "Protective Eyewear
-for Young Athletes"**. A 2009 IOC/Wiley injury-prevention textbook was offered
+The one that would close it, named so a future session can ask precisely:
+the **AAP/AAO joint policy "Protective Eyewear for Young Athletes"**. A 2009 IOC/Wiley injury-prevention textbook was offered
 and **declined**: searched full-text, it had 0 hits for frostbite, tinea,
 impetigo, MRSA, herpes, nosebleed and RED-S, and its only eye content was a
 policy case study on mandating ice-hockey face protectors — nothing on
@@ -689,6 +687,32 @@ doi:10.4085/1062-6050-50.3.03) on all three bands and the AMSSM position
 statement on Mental Health Issues and Psychological Factors in Athletes (BJSM
 2020;54:216–220, doi:10.1136/bjsports-2019-101583) on 9-10/11-12 only, since
 it is physician-oriented and the 7-8 unit only teaches notice/care/tell.
+
+**skin-conditions → NATA Position Statement: Skin Diseases** (J Athl Train
+2010;45(4):411–428), attached to **all three bands** on 2026-08-03. Coverage
+checked per band: tinea 55 (tinea pedis 7, tinea cruris 4), impetigo 18,
+MRSA 43 / methicillin 40, herpes 33, folliculitis 15, furuncle 21, molluscum
+32, wrestling 47, hygiene 19. The 11-12 unit's herpes-gladiatorum clearance
+section is the tightest fit — the statement carries the explicit criterion
+(*"5 days of oral antiviral therapy and all lesions have a dried, adherent
+crust"*), and the unit deliberately teaches the *structure* of clearance while
+saying the exact day count is set by the governing body, so the statement's
+specifics sit under it rather than against it. **Cited without a URL** — no
+DOI is printed anywhere in the PDF text.
+
+⚠ **A nuance worth protecting, because a careless future reading could
+"correct" the lesson the wrong way.** The 7-8 unit teaches that *covering a
+lesion and playing through is the mistake* — "Tell an adult, don't just cover
+it." This statement contains passages that sound like the opposite: *"solitary
+lesions can be appropriately covered or curetted before competition"* and
+*"localized or solitary lesions may be covered with a gas-permeable dressing
+followed by stretch tape."* **These do not conflict, because they address
+different people.** The statement is written for athletic trainers and
+physicians applying NCAA wrestling rules; the lesson is written for a student
+deciding what to do on their own. It also contains the harder line in the same
+breath — several infections *"cannot be covered to allow participation."*
+**Do not soften the student-facing rule on the strength of the clinician-facing
+one.**
 
 **cold-exposure → ACSM Expert Consensus Statement: Injury Prevention and
 Exercise Performance during Cold-Weather Exercise** (Current Sports Medicine
