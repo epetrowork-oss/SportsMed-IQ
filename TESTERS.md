@@ -147,7 +147,9 @@ count wrong twice:
 
 - **Eye injuries, 9th–10th and 11th–12th** — the chemical-splash guidance
   (flush 15–20 minutes, then still see a doctor)
-- **Skin conditions, 7th–8th and 9th–10th** — friction-blister first aid
+- **Skin conditions, 7th–8th and 9th–10th** — specifically the advice to
+  *leave an intact blister alone*. The rest of blister care (clean it, cover
+  it, watch for infection) is now cited.
 - **Dental and facial trauma, 7th–8th and 9th–10th** — the nosebleed guidance
 - **Cold exposure, 11th–12th** — classifying frostnip as a non-freezing
   injury; the "water conducts heat 25× faster than air" figure; and the

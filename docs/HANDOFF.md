@@ -620,7 +620,7 @@ a source is attached that doesn't cover everything a unit teaches.
 | warmup-injury-prevention 11-12 | Raising muscle temperature by ~1–2 °C meaningfully shifts tissue properties | batch 14 notes |
 | taping-wrapping 11-12 | Much of rigid tape's motion restriction is gone within ~20–30 min of activity | ledger |
 | eye-injuries **9-10 and 11-12** | Chemical-splash guidance — 15–20 minutes of flushing plus mandatory medical follow-up (9-10 callout, quiz and flashcard `f10`; 11-12 has a full section). Source has 0 hits for "chemical"/"alkali"/"acid burn" | ledger |
-| skin-conditions 7-8 and 9-10 | **Friction-blister first aid** — leave an intact blister alone, clean and cover an opened one. See the note below: partially supported, not fully | ledger |
+| skin-conditions 7-8 and 9-10 | **"Leave an intact blister alone"** specifically. The rest of blister care (clean, cover, non-stick dressing, infection referral) was sourced 2026-08-04 to NATA Acute Skin Trauma; this one claim is not in it | ledger |
 | dental-facial-trauma 7-8, 9-10 | Nosebleed management (the NATA dental statement has 0 hits for "nosebleed"/"epistaxis") | ledger |
 | cold-exposure 11-12 | Frostnip classified as a *non-freezing* injury | ledger |
 | cold-exposure 11-12 | "Water conducts heat ~25× faster than air" | ledger |
@@ -810,20 +810,39 @@ saying the exact day count is set by the governing body, so the statement's
 specifics sit under it rather than against it. **Cited without a URL** — no
 DOI is printed anywhere in the PDF text.
 
-⚠ **What this statement does NOT cover: friction-blister first aid.** Both the
-7-8 and 9-10 units have a dedicated "Blister care" section, and this statement
-is about *infectious* skin disease. It is **partially** relevant — it
-recommends that *"All acute, uninfected wounds (eg, abrasions, blisters,
-lacerations) should be covered"* with an occlusive dressing, which supports the
-"keep it covered" half. It does **not** support leaving an intact blister
-alone, or cleaning and covering one that has already opened.
+⚠ **This statement does not cover friction-blister first aid** — it is about
+*infectious* skin disease, and both the 7-8 and 9-10 units have a dedicated
+"Blister care" section. **A second source was added for exactly that**, see
+below.
 
-The likely fit is **NATA: Management of Acute Skin Trauma** (J Athl Train
-2016;51(12):1053–1070), already cited on the wound-care units. **It has not
-been attached here, because that PDF is not available in-session and this
-project does not attach sources it cannot check against the claim** — the same
-rule that had the warmup citations removed in batch 14. Supply that PDF and
-this gap closes immediately.
+**skin-conditions (7-8 and 9-10 only) → NATA Position Statement: Management of
+Acute Skin Trauma** (J Athl Train 2016;51(12):1053–1070,
+doi:10.4085/1062-6050-51.7.01), attached 2026-08-04. This is the same statement
+already cited on the wound-care units. Added to **only the two bands that teach
+blister care** — `skin-conditions-adv` has no blister section, so it was left
+alone.
+
+**What it supports** (checked, 39 blister mentions): *"All acute skin trauma
+should be covered with an appropriate dressing until fully healed"* (Strength
+B); cleansing and irrigation of blisters; nonadherent pads and adhesive
+strips/patches for superficial-to-partial-thickness blisters — which is the
+lesson's "clean it gently and put a non-stick covering on it"; and the
+infection/referral criteria (*"erythema, warmth, edema, drainage"*) that match
+the units' "spreading redness, warmth, swelling, or pus → tell an adult."
+
+⚠ **What it still does NOT support — the gap narrows but does not close.** The
+units tell students *"if the blister is still closed, leave it alone."* This
+statement never says that: "unbroken" appears **0** times, "intact" once and
+only about intact-skin microflora. The **only** roof guidance runs the other
+way — autolytic debridement is indicated for blisters *"after removal of the
+necrotic roof with conservative sharp debridement."*
+
+**That is not a contradiction, and must not be read as one.** Deroofing there
+is a *clinician* performing sharp debridement, which is precisely the kind of
+audience difference already flagged for the "covering" nuance above. The
+student-facing "don't pop it, leave it covered" rule stands. It is simply
+**still uncited**, and the uncited-claims table now names that one specific
+claim rather than blister care generally.
 
 ⚠ **A nuance worth protecting, because a careless future reading could
 "correct" the lesson the wrong way.** The 7-8 unit teaches that *covering a
