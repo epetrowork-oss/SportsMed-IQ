@@ -605,9 +605,12 @@ policy case study on mandating ice-hockey face protectors — nothing on
 recognition or management. Attaching it would have made a strand read as
 sourced while its substance stayed uncited.
 
-⚠ **Seven claims remain uncited inside strands that are otherwise sourced.**
-(RED-S was closed 2026-08-04; eye-injuries' chemical-exposure section was added
-the same day when its source proved not to cover it.)
+⚠ **Eight claims remain uncited inside strands that are otherwise sourced.**
+(RED-S closed 2026-08-04. Two were added the same day when Codex checked the
+newly attached sources against *every* section rather than the headline topic:
+eye-injuries' chemical-splash guidance — which spans **both** the 9-10 and
+11-12 bands, not just 11-12 as first recorded — and skin-conditions' friction
+blister care.)
 Tracking coverage per *strand* hides these, which is how the tester-facing
 count came to be wrong twice — keep this list complete, and update it whenever
 a source is attached that doesn't cover everything a unit teaches.
@@ -616,7 +619,8 @@ a source is attached that doesn't cover everything a unit teaches.
 |---|---|---|
 | warmup-injury-prevention 11-12 | Raising muscle temperature by ~1–2 °C meaningfully shifts tissue properties | batch 14 notes |
 | taping-wrapping 11-12 | Much of rigid tape's motion restriction is gone within ~20–30 min of activity | ledger |
-| eye-injuries 11-12 | The chemical-exposure section (source has 0 hits for "chemical"/"alkali"/"acid burn") | ledger |
+| eye-injuries **9-10 and 11-12** | Chemical-splash guidance — 15–20 minutes of flushing plus mandatory medical follow-up (9-10 callout, quiz and flashcard `f10`; 11-12 has a full section). Source has 0 hits for "chemical"/"alkali"/"acid burn" | ledger |
+| skin-conditions 7-8 and 9-10 | **Friction-blister first aid** — leave an intact blister alone, clean and cover an opened one. See the note below: partially supported, not fully | ledger |
 | dental-facial-trauma 7-8, 9-10 | Nosebleed management (the NATA dental statement has 0 hits for "nosebleed"/"epistaxis") | ledger |
 | cold-exposure 11-12 | Frostnip classified as a *non-freezing* injury | ledger |
 | cold-exposure 11-12 | "Water conducts heat ~25× faster than air" | ledger |
@@ -794,6 +798,21 @@ crust"*), and the unit deliberately teaches the *structure* of clearance while
 saying the exact day count is set by the governing body, so the statement's
 specifics sit under it rather than against it. **Cited without a URL** — no
 DOI is printed anywhere in the PDF text.
+
+⚠ **What this statement does NOT cover: friction-blister first aid.** Both the
+7-8 and 9-10 units have a dedicated "Blister care" section, and this statement
+is about *infectious* skin disease. It is **partially** relevant — it
+recommends that *"All acute, uninfected wounds (eg, abrasions, blisters,
+lacerations) should be covered"* with an occlusive dressing, which supports the
+"keep it covered" half. It does **not** support leaving an intact blister
+alone, or cleaning and covering one that has already opened.
+
+The likely fit is **NATA: Management of Acute Skin Trauma** (J Athl Train
+2016;51(12):1053–1070), already cited on the wound-care units. **It has not
+been attached here, because that PDF is not available in-session and this
+project does not attach sources it cannot check against the claim** — the same
+rule that had the warmup citations removed in batch 14. Supply that PDF and
+this gap closes immediately.
 
 ⚠ **A nuance worth protecting, because a careless future reading could
 "correct" the lesson the wrong way.** The 7-8 unit teaches that *covering a

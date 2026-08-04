@@ -141,11 +141,13 @@ caveats worth knowing: the **eye injuries** source is a 2005 textbook chapter
 eyewear policy), and citing a source for a topic doesn't mean every sentence
 in it is individually cited.
 
-**Seven individual claims inside otherwise-sourced topics are still
+**Eight individual claims inside otherwise-sourced topics are still
 uncited**, listed here in full rather than summarised, because we got this
 count wrong twice:
 
-- **Eye injuries, 11th–12th** — the chemical-exposure section
+- **Eye injuries, 9th–10th and 11th–12th** — the chemical-splash guidance
+  (flush 15–20 minutes, then still see a doctor)
+- **Skin conditions, 7th–8th and 9th–10th** — friction-blister first aid
 - **Dental and facial trauma, 7th–8th and 9th–10th** — the nosebleed guidance
 - **Cold exposure, 11th–12th** — classifying frostnip as a non-freezing
   injury; the "water conducts heat 25× faster than air" figure; and the
