@@ -693,14 +693,29 @@ statement on Mental Health Issues and Psychological Factors in Athletes (BJSM
 it is physician-oriented and the 7-8 unit only teaches notice/care/tell.
 
 **RED-S / REDs → 2023 IOC consensus statement on Relative Energy Deficiency
-in Sport (REDs)** — Mountjoy M, Ackerman KE, Bailey DM, et al., Br J Sports
-Med **2024;57:1073–1098**, doi:10.1136/bjsports-2023-106994. Supplied and
+in Sport (REDs)** — Mountjoy M, Ackerman KE, Bailey DM, et al., **Br J Sports
+Med 2023;57:1073–1097**, doi:10.1136/bjsports-2023-106994. Supplied and
 attached 2026-08-04, closing the longest-standing citation gap in the project.
 
-⚠ **Correct the citation if you have it from an earlier note.** This handoff
-twice named the target as "BJSM 2014;48:491–497" (the 2014 original) or
-"2023;57:1073–1097". The PDF's own *To cite* block reads **2024;57:1073–1098**
-— note the year and the end page. Use the publisher's form.
+⚠ **The supplied PDF's own running header gives a different, wrong citation —
+do not "fix" this entry to match it.** The masthead and *To cite* block read
+"Br J Sports Med 2024;57:1073–1098", which is internally inconsistent: volume
+57 is the **2023** volume, and the end page disagrees with the article itself.
+
+The explanation is on the PDF's **last page**, which carries a **correction
+notice**. The article was published as **2023;57:1073–1097**; a correction was
+later issued (**Br J Sports Med 2024;58:e4**,
+doi:10.1136/bjsports-2023-106994corr1) updating Figure 6 and online
+supplementary file 5, **online only, not in print**. The supplied file is that
+corrected re-issue, and its running header was regenerated with the correction
+year while keeping the original volume. The correction notice restates the
+canonical citation in full, and that is what is used here.
+
+**Rule learned:** "use the publisher's own *To cite* block" is normally right,
+but when a PDF contains a correction notice, the notice's restatement of the
+original citation outranks a regenerated running header. Caught by Codex on
+PR #57 after I had trusted the header — and my *first* instinct
+(2023;57:1073–1097) had been correct before I talked myself out of it.
 
 **Attached to the four units that actually teach REDs, not to every unit that
 says the word:**
