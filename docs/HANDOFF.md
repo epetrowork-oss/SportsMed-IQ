@@ -802,12 +802,12 @@ says the word:**
 | Unit | Why |
 |---|---|
 | overuse-injuries-adv (11-12) | Dedicated REDs section; defines energy availability and calls it "the modern, expanded version of what used to be called the female athlete triad" |
-| sports-psychology-adv (11-12) | Dedicated "RED-S: the medical urgency behind the pattern" section |
+| sports-psychology-adv (11-12) | Dedicated "REDs: the medical urgency behind the pattern" section (heading said "RED-S" until the 2026-08-04 rename) |
 | hydration-nutrition-adv (11-12) | REDs inside the weight-class / when-to-refer section |
 | overuse-injuries (9-10) | Makes real claims — recurrent stress fractures + menstrual dysfunction → screen for REDs |
 
 **Deliberately NOT attached to sports-psychology (9-10)**, which only
-*cross-references* the topic — "the full physical picture (including RED-S) is
+*cross-references* the topic — "the full physical picture (including REDs) is
 covered where nutrition and energy availability are taught in depth." A
 pointer is not a claim, and attaching a source to it would inflate coverage.
 
@@ -819,15 +819,30 @@ a medical sign and recurrent bone stress injuries as a red flag — are both
 directly supported; the statement lists "Bone stress injuries" as a REDs
 outcome under impaired bone health.
 
-⚠ **A terminology question this raises, left for the owner rather than changed
-unilaterally.** The 2023 consensus renamed the syndrome from **RED-S** to
-**REDs** — it uses "REDs" 215 times and "RED-S" zero. Five unit files still
-use "RED-S" (sports-psychology ×2 units, overuse-injuries ×2, hydration-
-nutrition-adv). Nothing is *wrong*: "RED-S" remains widely understood and the
-units spell out "Relative Energy Deficiency in Sport" correctly. But a unit
-citing the 2023 statement while using the pre-2023 abbreviation is mildly
-stale. **Changing terminology across five units is a content decision, not a
-sourcing one.**
+✅ **Terminology aligned to the 2023 consensus — DONE 2026-08-04, on owner
+instruction.** The consensus renamed the syndrome from **RED-S** to **REDs**
+(it uses "REDs" 215 times and "RED-S" zero). **All 28 occurrences across the
+five units now read "REDs"** — sports-psychology ×2, overuse-injuries ×2,
+hydration-nutrition-adv. Nothing was wrong before: "RED-S" remains widely
+understood and the units always spelled out "Relative Energy Deficiency in
+Sport" correctly. The point was that a unit citing the 2023 statement while
+using its pre-2023 abbreviation was mildly stale.
+
+⚠ **Consequence for anyone searching this repo:** the units now say **REDs**.
+Older notes in this handoff still say "RED-S" **on purpose** — some are
+historical records of when the gap was open, and one records a literal search
+term ("0 hits for … RED-S" in the declined 2009 textbook). **Do not
+search-and-replace those**; changing them would falsify the record of what was
+actually checked.
+
+**The test that separates the two**, learned by getting one wrong: ask whether
+the sentence describes *what a unit contains now* or *what happened then*. A
+line explaining why a source applies to a unit is a **live pointer** and must
+track the rename — Codex caught exactly that case in
+`docs/IMAGE-BATCHES.md`, where the batch-18 scoping rationale said the 11-12
+hydration unit has "RED-S content." Being inside a historical batch note did
+not make it historical. A line recording what was searched, or what a gap was
+called while open, is a **record** and must not.
 
 **skin-conditions → NATA Position Statement: Skin Diseases** (J Athl Train
 2010;45(4):411–428), attached to **all three bands** on 2026-08-03. Coverage

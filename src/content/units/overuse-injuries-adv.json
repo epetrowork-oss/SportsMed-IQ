@@ -5,7 +5,7 @@
   "strand": "overuse-injuries",
   "gradeBand": "11-12",
   "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.Anchor.6"],
-  "summary": "The mechanisms behind overuse injury — tissue adaptation science, the tendinopathy model, the bone stress injury spectrum, growth-plate traction injuries, and RED-S — for a student aide thinking about the biology, not just the checklist.",
+  "summary": "The mechanisms behind overuse injury — tissue adaptation science, the tendinopathy model, the bone stress injury spectrum, growth-plate traction injuries, and REDs — for a student aide thinking about the biology, not just the checklist.",
   "minutes": 24,
   "sections": [
     {
@@ -61,8 +61,8 @@
         "asset": "overuse-injuries-bone-stress-continuum.webp",
         "ratio": "16:9",
         "background": "white",
-        "description": "Horizontal four-stage continuum diagram of bone stress injury, each stage bar taller/darker than the last: 1) 'Bone strain' — subclinical, no imaging findings. 2) 'Stress reaction' — bone marrow edema visible on MRI, no fracture line. 3) 'Stress fracture' — visible fracture line. 4) 'Complete/displaced fracture.' Beneath the continuum, a small body outline marks high-risk sites (femoral neck, tarsal navicular, anterior tibial cortex) in a warning color versus low-risk sites (posteromedial tibia, fibula, metatarsal shafts) in a neutral color. Clean instructional-illustration style.",
-        "alt": "Diagram of the bone stress injury continuum from bone strain through stress reaction, stress fracture, to complete fracture, with higher-risk sites (superior femoral neck, anterior tibial cortex, tarsal navicular) and lower-risk sites (posteromedial tibia, fibula, metatarsal shafts) shown as labeled anatomical close-ups.",
+        "description": "Four-stage continuum of bone stress injury across the full width of the card, each stage a large numbered panel with a bone cross-section showing progressively more damage: 1) 'Bone strain,' 2) 'Stress reaction,' 3) 'Stress fracture,' 4) 'Complete fracture,' over an 'Increasing bone stress' arrow that ramps from blue to red. The high-risk versus lower-risk anatomical site row was deliberately removed: it was the smallest text on the card and the lesson prose names every site explicitly, including in its warning callout. Clean instructional-illustration style.",
+        "alt": "Four-stage continuum of bone stress injury — bone strain, stress reaction, stress fracture, complete fracture — shown as bone cross-sections with progressively more damage above an increasing-bone-stress arrow.",
         "location": "public/images/units/overuse-injuries/"
       },
       "callout": {
@@ -80,10 +80,10 @@
       ]
     },
     {
-      "heading": "RED-S: Relative Energy Deficiency in Sport",
+      "heading": "REDs: Relative Energy Deficiency in Sport",
       "body": [
-        "The root concept behind RED-S is energy availability (EA): the energy left over for normal body function after subtracting exercise energy expenditure from dietary energy intake, relative to lean body mass. When EA drops too low — whether from disordered eating, unintentional under-fueling relative to training volume, or simply not adjusting intake as training ramps up — the body starts shutting down 'non-essential' physiological processes to conserve energy.",
-        "This is the modern, expanded version of what used to be called the female athlete triad (low energy availability + menstrual dysfunction + low bone density). RED-S recognizes the same root cause — low EA — produces consequences across multiple systems in athletes of any sex: impaired bone health, menstrual/reproductive dysfunction, slowed metabolic rate, reduced protein synthesis, weakened immune function, and cardiovascular and psychological effects. It's also a performance problem, not just a health one: decreased training response, impaired coordination and concentration, irritability, depleted glycogen stores, and increased injury risk all follow — which matters because low EA is sometimes mistakenly seen as the price of being 'lean and dedicated.'",
+        "The root concept behind REDs is energy availability (EA): the energy left over for normal body function after subtracting exercise energy expenditure from dietary energy intake, relative to lean body mass. When EA drops too low — whether from disordered eating, unintentional under-fueling relative to training volume, or simply not adjusting intake as training ramps up — the body starts shutting down 'non-essential' physiological processes to conserve energy.",
+        "This is the modern, expanded version of what used to be called the female athlete triad (low energy availability + menstrual dysfunction + low bone density). REDs recognizes the same root cause — low EA — produces consequences across multiple systems in athletes of any sex: impaired bone health, menstrual/reproductive dysfunction, slowed metabolic rate, reduced protein synthesis, weakened immune function, and cardiovascular and psychological effects. It's also a performance problem, not just a health one: decreased training response, impaired coordination and concentration, irritability, depleted glycogen stores, and increased injury risk all follow — which matters because low EA is sometimes mistakenly seen as the price of being 'lean and dedicated.'",
         "Recognition signals appropriate to a student aide's role: persistent fatigue that training rest doesn't fix, recurrent bone stress injuries, and missed or irregular menstrual cycles. That last one is a medical sign, never a badge of hard training — a missed cycle is the body signaling a genuine energy shortage, the same category of finding as a stress fracture."
       ],
       "callout": {
@@ -183,7 +183,7 @@
         "Confront her directly about her eating habits and body composition"
       ],
       "answerIndex": 1,
-      "explanation": "Recurrent bone stress injuries, persistent fatigue, and menstrual dysfunction are classic RED-S recognition signals. The correct response is sensitive, prompt referral to a professional — never a peer confrontation about eating or weight, and never dismissing missed cycles as normal."
+      "explanation": "Recurrent bone stress injuries, persistent fatigue, and menstrual dysfunction are classic REDs recognition signals. The correct response is sensitive, prompt referral to a professional — never a peer confrontation about eating or weight, and never dismissing missed cycles as normal."
     },
     {
       "id": "q8",
@@ -256,8 +256,8 @@
     },
     {
       "id": "f12",
-      "front": "RED-S and energy availability",
-      "back": "Energy availability = dietary intake minus exercise expenditure, relative to lean mass. Low EA drives RED-S: bone, menstrual, metabolic, immune, cardiovascular, and performance consequences in athletes of any sex. Recurrent stress fractures + fatigue + missed cycles = refer to a professional, sensitively and promptly — never a discipline issue."
+      "front": "REDs and energy availability",
+      "back": "Energy availability = dietary intake minus exercise expenditure, relative to lean mass. Low EA drives REDs: bone, menstrual, metabolic, immune, cardiovascular, and performance consequences in athletes of any sex. Recurrent stress fractures + fatigue + missed cycles = refer to a professional, sensitively and promptly — never a discipline issue."
     }
   ],
   "sources": [

@@ -73,8 +73,8 @@
         "asset": "muscle-strains-differential-chart.webp",
         "ratio": "16:9",
         "background": "white",
-        "description": "Four-column comparison chart, one per condition: 'Strain' (a discrete eccentric-loading moment, localized sharp pain, one tender point), 'Contusion' (a direct blunt blow, diffuse tenderness at the impact site), 'Cramp' (sudden involuntary contraction, muscle feels hard/knotted, resolves in minutes), 'DOMS' (bilateral, gradual onset 24-72 hours after unaccustomed exercise, no single traumatic moment). Each column has a small icon and its distinguishing mechanism/onset/distribution. Clean instructional-chart style.",
-        "alt": "Comparison chart of four muscle-pain presentations — strain, contusion, cramp, and delayed onset muscle soreness (DOMS) — by mechanism, onset, and pain distribution.",
+        "description": "Two-by-two grid, one quadrant per condition: 'Strain,' 'Contusion,' 'Cramp,' 'DOMS.' Each quadrant has its illustration and a single distinguishing line — one sharp spot mid-effort; direct blow, spreads; sudden, hard, passes; both sides, 24-72 h later. A grid rather than four columns so each cell is wide enough to read on a phone. All four conditions are kept, since the four-way contrast is the teaching; the mechanism/onset/pattern rows are dropped because the prose states that frame outright. Clean instructional-chart style.",
+        "alt": "Two-by-two comparison of four muscle-pain presentations: strain — one sharp spot, mid-effort; contusion — direct blow, spreads; cramp — sudden, hard, passes; DOMS — both sides, 24–72 hours later. Each is shown with a muscle illustration.",
         "location": "public/images/units/muscle-strains/"
       }
     },

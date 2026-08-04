@@ -772,7 +772,10 @@ units showed they don't both apply everywhere:
 - **Safe Weight Loss and Maintenance Practices in Sport and Exercise**
   (2011;46(3):322-336) → **11-12 only**, which is the one band with a "Body
   composition, weight-class sports, and knowing when to refer" section and
-  RED-S content. Cited without a URL because the earmark carried no DOI.
+  REDs content. Cited without a URL because the earmark carried no DOI.
+  (Said "RED-S" until the 2026-08-04 rename; updated because this line
+  describes what the unit *currently* contains, unlike the historical notes
+  in `docs/HANDOFF.md` that deliberately keep the old spelling.)
 Attaching the second statement to the 7-8 and 9-10 units would have pointed
 a weight-practices source at lessons that never discuss making weight.
 
