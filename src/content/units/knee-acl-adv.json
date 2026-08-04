@@ -45,8 +45,8 @@
         "asset": "knee-acl-differential-comparison-chart.webp",
         "ratio": "16:9",
         "background": "white",
-        "description": "Comparison table/chart with five columns, one per structure: 'ACL tear,' 'Meniscal tear,' 'PCL tear,' 'MCL/LCL sprain,' 'Patellar dislocation.' Each column lists its characteristic mechanism, effusion timing (rapid hemarthrosis vs. gradual), and one hallmark exam finding (Lachman-positive, joint line tenderness/locking, posterior sag, valgus/varus laxity, medial patellar tenderness/apprehension). Clean instructional-chart style, icon per column.",
-        "alt": "Comparison chart of five knee injuries — ACL tear, meniscal tear, PCL tear, MCL/LCL sprain, and patellar dislocation — by mechanism, swelling timing, and hallmark exam finding.",
+        "description": "Three-card comparison, one per structure: 'ACL tear,' 'Meniscal tear,' 'PCL tear.' Each card is a large labelled knee illustration with a single hallmark exam finding beneath it — Lachman positive, joint-line tenderness, posterior sag. Deliberately carries one line per card and no mechanism or swelling rows: the lesson prose covers those in more depth than a chart cell can, and the card exists to be readable at phone width. Clean instructional-chart style.",
+        "alt": "Three-card comparison of knee injuries — ACL tear with Lachman positive, meniscal tear with joint-line tenderness, and PCL tear with posterior sag — each shown as a labelled knee illustration.",
         "location": "public/images/units/knee-acl/"
       }
     },

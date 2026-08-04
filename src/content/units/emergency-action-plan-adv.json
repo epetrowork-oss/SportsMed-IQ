@@ -38,8 +38,8 @@
         "asset": "eap-team-role-assignment.webp",
         "ratio": "16:9",
         "background": "white",
-        "description": "Overhead diagram of a field emergency scene with a collapsed athlete at center, surrounded by labeled role icons connected by dotted lines radiating outward: 'Scene leader' (directing), '911 caller' (on phone, confirming back), 'AED retriever' (running toward a wall-mounted AED icon), 'Gate/traffic person' (unlocking a gate and flagging an ambulance icon), 'Crowd control' (keeping teammates back), 'Documenter' (writing on a clipboard, noting times). Clean flat instructional-illustration style, non-graphic.",
-        "alt": "Diagram of six assigned emergency-response roles positioned around a collapsed athlete: scene leader, 911 caller, AED retriever, gate/traffic person, crowd control, and documenter.",
+        "description": "Overhead view of a field emergency with a collapsed athlete and responders at centre, and six role pins arranged around them, connected by lines: '911 caller,' 'Scene leader,' 'AED retriever,' 'Gate / traffic,' 'Documenter,' 'Crowd control.' Labels only, with one icon each and no descriptive text — the spatial arrangement is what this card does that the prose cannot, and the lesson defines every role in full. Clean flat instructional-illustration style, non-graphic.",
+        "alt": "Overhead diagram of a field emergency showing six labelled response roles positioned around a collapsed athlete: 911 caller, scene leader, AED retriever, gate/traffic, documenter, and crowd control.",
         "location": "public/images/units/emergency-action-plan/"
       }
     },
