@@ -701,14 +701,23 @@ it is physician-oriented and the 7-8 unit only teaches notice/care/tell.
 (Martinez RA, Ellini KA), McGraw-Hill, 2005. Attached to all three bands
 2026-08-04, closing the last unsourced strand.
 
-⚠ **This reverses an earlier decision, deliberately, and the reasoning should
-be visible.** This text was offered earlier for cold-exposure, eye-injuries and
+✅ **This is the source the strand's content was actually developed against.**
+The owner checked their ChatGPT thread from the eye-image creation work
+(2026-08-04) and reports this text is the one that was used there, and that no
+other source exists in their files for this strand. That changes what this
+citation *is*: not a best-available retrofit found afterwards, but the
+reference the lesson content and artwork were written from. A citation that
+matches the actual provenance is the strongest kind — it is what the `sources`
+field is for.
+
+⚠ **It also reverses an earlier decision, and the reasoning should stay
+visible.** This text was offered earlier for cold-exposure, eye-injuries and
 skin-conditions together and was **declined** in favour of "modern dedicated
 guidance." That was right at the time — and cold-exposure and skin-conditions
-each subsequently got a dedicated position statement. For eye-injuries it was
-reconsidered on the evidence, not on fatigue: the book contains a **dedicated
-ophthalmology chapter by two MDs**, and its specific guidance matches what the
-units teach almost line for line:
+each subsequently got a dedicated position statement, so the decision paid off
+for two of the three. For eye-injuries it was reconsidered on the evidence: the
+book contains a **dedicated ophthalmology chapter by two MDs**, and its specific
+guidance matches what the units teach almost line for line:
 
 | What a unit teaches | What the chapter says |
 |---|---|
@@ -721,10 +730,12 @@ units teach almost line for line:
 
 ⚠ **Two limitations, both live.** (1) **It is 2005** — twenty-one years old.
 The guidance above is the stable part of ophthalmic emergency care, but this is
-the oldest source in the project by a decade and should be **upgraded when
-possible**. The named upgrade target is unchanged: the **AAP/AAO joint policy
-"Protective Eyewear for Young Athletes"**, which would also be a better fit for
-the prevention sections specifically. (2) **It does not cover chemical eye
+the oldest source in the project by a decade. **Add** a modern one rather than
+replacing this one, since this is the provenance source: the **AAP/AAO joint
+policy "Protective Eyewear for Young Athletes"** remains the named target and
+would suit the prevention sections better. It is **not** in the owner's files,
+so it would have to be obtained externally — do not expect it to turn up in a
+future upload the way the other four did. (2) **It does not cover chemical eye
 injury at all** — 0 hits for "chemical", "alkali" or "acid burn" — and the
 11-12 unit has a dedicated *"Chemical exposure: the one injury where treatment
 starts before history"* section. That is now on the uncited-claims table.
