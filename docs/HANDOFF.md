@@ -835,6 +835,15 @@ term ("0 hits for … RED-S" in the declined 2009 textbook). **Do not
 search-and-replace those**; changing them would falsify the record of what was
 actually checked.
 
+**The test that separates the two**, learned by getting one wrong: ask whether
+the sentence describes *what a unit contains now* or *what happened then*. A
+line explaining why a source applies to a unit is a **live pointer** and must
+track the rename — Codex caught exactly that case in
+`docs/IMAGE-BATCHES.md`, where the batch-18 scoping rationale said the 11-12
+hydration unit has "RED-S content." Being inside a historical batch note did
+not make it historical. A line recording what was searched, or what a gap was
+called while open, is a **record** and must not.
+
 **skin-conditions → NATA Position Statement: Skin Diseases** (J Athl Train
 2010;45(4):411–428), attached to **all three bands** on 2026-08-03. Coverage
 checked per band: tinea 55 (tinea pedis 7, tinea cruris 4), impetigo 18,

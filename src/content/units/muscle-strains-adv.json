@@ -74,7 +74,7 @@
         "ratio": "16:9",
         "background": "white",
         "description": "Two-by-two grid, one quadrant per condition: 'Strain,' 'Contusion,' 'Cramp,' 'DOMS.' Each quadrant has its illustration and a single distinguishing line — one sharp spot mid-effort; direct blow, spreads; sudden, hard, passes; both sides, 24-72 h later. A grid rather than four columns so each cell is wide enough to read on a phone. All four conditions are kept, since the four-way contrast is the teaching; the mechanism/onset/pattern rows are dropped because the prose states that frame outright. Clean instructional-chart style.",
-        "alt": "Two-by-two comparison of four muscle-pain presentations — strain, contusion, cramp, and DOMS — each with an illustration and one distinguishing feature.",
+        "alt": "Two-by-two comparison of four muscle-pain presentations: strain — one sharp spot, mid-effort; contusion — direct blow, spreads; cramp — sudden, hard, passes; DOMS — both sides, 24–72 hours later. Each is shown with a muscle illustration.",
         "location": "public/images/units/muscle-strains/"
       }
     },
