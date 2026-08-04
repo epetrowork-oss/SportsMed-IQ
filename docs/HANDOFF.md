@@ -373,7 +373,11 @@ bands by design), nothing is clinical, and the tone is warm throughout.
 `listening-scene` includes the approaching adult, which was non-negotiable
 since without it the image would teach peer support as the endpoint.
 
-⚠ **Still uncited in sports-psychology: the 11-12 unit's RED-S section**
+✅ **RESOLVED 2026-08-04 — the RED-S gap is closed.** The IOC REDs consensus
+was supplied and is now attached to the four units that actually teach the
+topic. The original finding is kept below because the reasoning still matters.
+
+⚠ **(Historical) Still uncited in sports-psychology: the 11-12 unit's RED-S section**
 (`sports-psychology-adv.json`, "RED-S: the medical urgency behind the
 pattern"). Neither attached source supports it, and both PDFs were searched
 to confirm that rather than assumed: AMSSM 2020 mentions "relative energy
@@ -588,12 +592,45 @@ Group A was a correctness fix and is done. Group B is a redesign ask — fewer
 columns, larger type, or splitting a table across two cards — and is worth
 doing per strand rather than all at once. There is no group C.
 
-⚠ **Four strands remain unsourced** — cold-exposure, dental-facial-trauma,
-eye-injuries, skin-conditions.
+✅ **Every strand is now sourced. All 54 unit files carry a `sources` array
+as of 2026-08-04.** dental-facial-trauma, cold-exposure and skin-conditions
+landed 2026-08-03; eye-injuries closed it on 2026-08-04.
 
-⚠ **One section remains uncited inside a sourced strand** — the RED-S
-section of the 11-12 sports-psychology unit (see above). Tracking source
-coverage per strand hides this; it needs its own line.
+That is coverage, not completeness — **eight claim-level gaps remain**, listed
+in the table below. **That table is the live sourcing backlog now; there are no
+unsourced strands left to find.**
+
+A 2009 IOC/Wiley injury-prevention textbook was offered and **declined**:
+searched full-text, it had 0 hits for frostbite, tinea, impetigo, MRSA, herpes,
+nosebleed and RED-S, and its only eye content was a policy case study on
+mandating ice-hockey face protectors — nothing on recognition or management.
+Attaching it would have made a strand read as sourced while its substance
+stayed uncited.
+
+⚠ **Eight claims remain uncited inside strands that are otherwise sourced.**
+(RED-S closed 2026-08-04. Two were added the same day when Codex checked the
+newly attached sources against *every* section rather than the headline topic:
+eye-injuries' chemical-splash guidance — which spans **both** the 9-10 and
+11-12 bands, not just 11-12 as first recorded — and skin-conditions' friction
+blister care.)
+Tracking coverage per *strand* hides these, which is how the tester-facing
+count came to be wrong twice — keep this list complete, and update it whenever
+a source is attached that doesn't cover everything a unit teaches.
+
+| Strand / band | Uncited claim | Recorded at |
+|---|---|---|
+| warmup-injury-prevention 11-12 | Raising muscle temperature by ~1–2 °C meaningfully shifts tissue properties | batch 14 notes |
+| taping-wrapping 11-12 | Much of rigid tape's motion restriction is gone within ~20–30 min of activity | ledger |
+| eye-injuries **9-10 and 11-12** | Chemical-splash guidance — 15–20 minutes of flushing plus mandatory medical follow-up (9-10 callout, quiz and flashcard `f10`; 11-12 has a full section). Source has 0 hits for "chemical"/"alkali"/"acid burn" | ledger |
+| skin-conditions 7-8 and 9-10 | **"Leave an intact blister alone"** specifically. The rest of blister care (clean, cover, non-stick dressing, infection referral) was sourced 2026-08-04 to NATA Acute Skin Trauma; this one claim is not in it | ledger |
+| dental-facial-trauma 7-8, 9-10 | Nosebleed management (the NATA dental statement has 0 hits for "nosebleed"/"epistaxis") | ledger |
+| cold-exposure 11-12 | Frostnip classified as a *non-freezing* injury | ledger |
+| cold-exposure 11-12 | "Water conducts heat ~25× faster than air" | ledger |
+| cold-exposure 11-12 | The "1-10-1 principle" naming (the physiology is covered; the mnemonic isn't) | ledger |
+
+**A strand being sourced is not the same as every section in it being
+sourced.** Any doc that quotes a count — `TESTERS.md` especially — must reflect
+this table, not just the unsourced-strand count.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a
@@ -605,11 +642,15 @@ unit JSONs' `image` descriptions (or run `npm run images:shotlist`).
 
 ## Source ledger
 
-**No earmarked source is outstanding.** Every source the user supplied that
-maps to a unit has been attached; the hydration-nutrition earmark that used
-to sit here was applied when batch 18 landed and now appears in the cited
-list below. What is missing is *sources for strands that have none*, not
-unapplied earmarks — see "What is still open."
+**Nothing is outstanding at the strand level.** Every source the user supplied
+has been attached, and as of 2026-08-04 **all 54 unit files carry a `sources`
+array** — there are no unsourced strands, and no unapplied earmarks. (The
+hydration-nutrition earmark that used to sit here was applied when batch 18
+landed and appears in the cited list below.)
+
+**What remains is claim-level: eight specific claims inside otherwise-sourced
+strands, listed in the table under "What is still open."** Start there rather
+than looking for a strand with no source — you will not find one.
 
 Cited (merged): concussion → NATA Bridge Statement (2024;59(3):225–242,
 doi:10.4085/1062-6050-0046.22); heat-illness → Exertional Heat Illnesses
@@ -662,13 +703,252 @@ statement on Mental Health Issues and Psychological Factors in Athletes (BJSM
 2020;54:216–220, doi:10.1136/bjsports-2019-101583) on 9-10/11-12 only, since
 it is physician-oriented and the 7-8 unit only teaches notice/care/tell.
 
+**eye-injuries → Sports Medicine: Just the Facts, Chapter 28 "Ophthalmology"**
+(Martinez RA, Ellini KA), McGraw-Hill, 2005. Attached to all three bands
+2026-08-04, closing the last unsourced strand.
+
+✅ **This is the source the strand's content was actually developed against.**
+The owner checked their ChatGPT thread from the eye-image creation work
+(2026-08-04) and reports this text is the one that was used there, and that no
+other source exists in their files for this strand. That changes what this
+citation *is*: not a best-available retrofit found afterwards, but the
+reference the lesson content and artwork were written from. A citation that
+matches the actual provenance is the strongest kind — it is what the `sources`
+field is for.
+
+⚠ **It also reverses an earlier decision, and the reasoning should stay
+visible.** This text was offered earlier for cold-exposure, eye-injuries and
+skin-conditions together and was **declined** in favour of "modern dedicated
+guidance." That was right at the time — and cold-exposure and skin-conditions
+each subsequently got a dedicated position statement, so the decision paid off
+for two of the three. For eye-injuries it was reconsidered on the evidence: the
+book contains a **dedicated ophthalmology chapter by two MDs**, and its specific
+guidance matches what the units teach almost line for line:
+
+| What a unit teaches | What the chapter says |
+|---|---|
+| Rigid shield, don't patch or press | *"a rigid eye shield should be placed and the athlete sent for immediate ophthalmology evaluation"*; *"do not apply pressure to the globe"* |
+| Hyphema is bleeding in the anterior chamber after blunt trauma | Matches, with the layering sign |
+| Retinal detachment = same-day | *"flashing lights"*, new *"floaters"*, blind spot in the visual field |
+| Orbital fracture with entrapment | *"pain with eye movements or diplopia (suggests extraocular muscle entrapment)"*; *"Hold athlete from any contact until released by ophthalmology"* |
+| Polycarbonate sports goggles | *"polycarbonate lenses, which are up to 20 times stronger"*, ASTM standards, *"Contact lenses offer no protection whatsoever"*, eye protection reduces risk *"by 90%"* |
+| Subconjunctival haemorrhage vs hyphema | Both described separately |
+
+⚠ **Two limitations.** (1) **It is 2005** — twenty-one years old, the oldest
+source in the project — though **only by three years**, not by a decade as an
+earlier draft of this note claimed: the next-oldest are the 2008 BMJ warm-up
+trial and a 2009 Sports Medicine review, both on warmup-injury-prevention.
+(Full spread across the corpus: 2005 ×3, 2008 ×3, 2009 ×1, then 2010 and
+later.) This was **partly addressed the same day**:
+the AAP/AAO eyewear policy was supplied after all and is now attached alongside
+it on the two bands that teach prevention (see the entry directly below). The
+2005 chapter still carries the *management* content — hyphema, orbital
+fracture, retinal detachment, rigid shield — on all three bands, and remains
+the provenance source, so it stays.
+
+**eye-injuries (7-8 and 9-10 only) → Protective Eyewear for Young Athletes,
+Joint Policy Statement of the AAP and the AAO** (American Academy of
+Ophthalmology, 2013), attached 2026-08-04. Provenance read off the document's
+own approval block: revised and approved by the **AAP Board of Directors
+October 2003 and June 2011**, and the **AAO Board of Trustees November 2003 and
+2013**, ©2013 AAO. No DOI is printed, so it is **cited without a URL**.
+
+Attached to **only the two bands with a prevention section** — 7-8 *"Prevention:
+wear the right eyewear"* and 9-10 *"Prevention: protective eyewear"*.
+`eye-injuries-adv` has **no** prevention section (it is entirely mechanism,
+hyphema, orbital blowout, chemical exposure, retinal detachment, differential
+and return-to-play), so it was deliberately left at one source.
+
+Coverage checked: ASTM 28 mentions, polycarbonate 7, functionally one-eyed 9,
+contact lenses 3, goggles 4, face shields 2, plus a full high/moderate/low-risk
+sport table. That is squarely what the two prevention sections teach.
+
+⚠ **It does not close any gap on the uncited table, and should not be recorded
+as if it did.** This is a *prevention* policy: **0** mentions of chemical,
+hyphema, retinal, flush or irrigation. The eye chemical-splash gap (9-10 and
+11-12) is untouched by it and stays open. (2) **It does not cover chemical eye
+injury at all** — 0 hits for "chemical", "alkali" or "acid burn" — and the
+11-12 unit has a dedicated *"Chemical exposure: the one injury where treatment
+starts before history"* section. That is now on the uncited-claims table.
+
+**RED-S / REDs → 2023 IOC consensus statement on Relative Energy Deficiency
+in Sport (REDs)** — Mountjoy M, Ackerman KE, Bailey DM, et al., **Br J Sports
+Med 2023;57:1073–1097**, doi:10.1136/bjsports-2023-106994. Supplied and
+attached 2026-08-04, closing the longest-standing citation gap in the project.
+
+⚠ **The supplied PDF's own running header gives a different, wrong citation —
+do not "fix" this entry to match it.** The masthead and *To cite* block read
+"Br J Sports Med 2024;57:1073–1098", which is internally inconsistent: volume
+57 is the **2023** volume, and the end page disagrees with the article itself.
+
+The explanation is on the PDF's **last page**, which carries a **correction
+notice**. The article was published as **2023;57:1073–1097**; a correction was
+later issued (**Br J Sports Med 2024;58:e4**,
+doi:10.1136/bjsports-2023-106994corr1) updating Figure 6 and online
+supplementary file 5, **online only, not in print**. The supplied file is that
+corrected re-issue, and its running header was regenerated with the correction
+year while keeping the original volume. The correction notice restates the
+canonical citation in full, and that is what is used here.
+
+**Rule learned:** "use the publisher's own *To cite* block" is normally right,
+but when a PDF contains a correction notice, the notice's restatement of the
+original citation outranks a regenerated running header. Caught by Codex on
+PR #57 after I had trusted the header — and my *first* instinct
+(2023;57:1073–1097) had been correct before I talked myself out of it.
+
+**Attached to the four units that actually teach REDs, not to every unit that
+says the word:**
+
+| Unit | Why |
+|---|---|
+| overuse-injuries-adv (11-12) | Dedicated REDs section; defines energy availability and calls it "the modern, expanded version of what used to be called the female athlete triad" |
+| sports-psychology-adv (11-12) | Dedicated "RED-S: the medical urgency behind the pattern" section |
+| hydration-nutrition-adv (11-12) | REDs inside the weight-class / when-to-refer section |
+| overuse-injuries (9-10) | Makes real claims — recurrent stress fractures + menstrual dysfunction → screen for REDs |
+
+**Deliberately NOT attached to sports-psychology (9-10)**, which only
+*cross-references* the topic — "the full physical picture (including RED-S) is
+covered where nutrition and energy availability are taught in depth." A
+pointer is not a claim, and attaching a source to it would inflate coverage.
+
+Coverage check: low energy availability 53 mentions, energy availability 85,
+menstrual 28, amenorrhoea 34, bone stress injuries 11, bone mineral density
+12, eating disorders 47, disordered eating 13, female athlete triad 32. The
+two claims Codex specifically challenged on PR #53 — menstrual dysfunction as
+a medical sign and recurrent bone stress injuries as a red flag — are both
+directly supported; the statement lists "Bone stress injuries" as a REDs
+outcome under impaired bone health.
+
+⚠ **A terminology question this raises, left for the owner rather than changed
+unilaterally.** The 2023 consensus renamed the syndrome from **RED-S** to
+**REDs** — it uses "REDs" 215 times and "RED-S" zero. Five unit files still
+use "RED-S" (sports-psychology ×2 units, overuse-injuries ×2, hydration-
+nutrition-adv). Nothing is *wrong*: "RED-S" remains widely understood and the
+units spell out "Relative Energy Deficiency in Sport" correctly. But a unit
+citing the 2023 statement while using the pre-2023 abbreviation is mildly
+stale. **Changing terminology across five units is a content decision, not a
+sourcing one.**
+
+**skin-conditions → NATA Position Statement: Skin Diseases** (J Athl Train
+2010;45(4):411–428), attached to **all three bands** on 2026-08-03. Coverage
+checked per band: tinea 55 (tinea pedis 7, tinea cruris 4), impetigo 18,
+MRSA 43 / methicillin 40, herpes 33, folliculitis 15, furuncle 21, molluscum
+32, wrestling 47, hygiene 19. The 11-12 unit's herpes-gladiatorum clearance
+section is the tightest fit — the statement carries the explicit criterion
+(*"5 days of oral antiviral therapy and all lesions have a dried, adherent
+crust"*), and the unit deliberately teaches the *structure* of clearance while
+saying the exact day count is set by the governing body, so the statement's
+specifics sit under it rather than against it. **Cited without a URL** — no
+DOI is printed anywhere in the PDF text.
+
+⚠ **This statement does not cover friction-blister first aid** — it is about
+*infectious* skin disease, and both the 7-8 and 9-10 units have a dedicated
+"Blister care" section. **A second source was added for exactly that**, see
+below.
+
+**skin-conditions (7-8 and 9-10 only) → NATA Position Statement: Management of
+Acute Skin Trauma** (J Athl Train 2016;51(12):1053–1070,
+doi:10.4085/1062-6050-51.7.01), attached 2026-08-04. This is the same statement
+already cited on the wound-care units. Added to **only the two bands that teach
+blister care** — `skin-conditions-adv` has no blister section, so it was left
+alone.
+
+**What it supports** (checked, 39 blister mentions): *"All acute skin trauma
+should be covered with an appropriate dressing until fully healed"* (Strength
+B); cleansing and irrigation of blisters; nonadherent pads and adhesive
+strips/patches for superficial-to-partial-thickness blisters — which is the
+lesson's "clean it gently and put a non-stick covering on it"; and the
+infection/referral criteria (*"erythema, warmth, edema, drainage"*) that match
+the units' "spreading redness, warmth, swelling, or pus → tell an adult."
+
+⚠ **What it still does NOT support — the gap narrows but does not close.** The
+units tell students *"if the blister is still closed, leave it alone."* This
+statement never says that: "unbroken" appears **0** times, "intact" once and
+only about intact-skin microflora. The **only** roof guidance runs the other
+way — autolytic debridement is indicated for blisters *"after removal of the
+necrotic roof with conservative sharp debridement."*
+
+**That is not a contradiction, and must not be read as one.** Deroofing there
+is a *clinician* performing sharp debridement, which is precisely the kind of
+audience difference already flagged for the "covering" nuance above. The
+student-facing "don't pop it, leave it covered" rule stands. It is simply
+**still uncited**, and the uncited-claims table now names that one specific
+claim rather than blister care generally.
+
+⚠ **A nuance worth protecting, because a careless future reading could
+"correct" the lesson the wrong way.** The 7-8 unit teaches that *covering a
+lesion and playing through is the mistake* — "Tell an adult, don't just cover
+it." This statement contains passages that sound like the opposite: *"solitary
+lesions can be appropriately covered or curetted before competition"* and
+*"localized or solitary lesions may be covered with a gas-permeable dressing
+followed by stretch tape."* **These do not conflict, because they address
+different people.** The statement is written for athletic trainers and
+physicians applying NCAA wrestling rules; the lesson is written for a student
+deciding what to do on their own. It also contains the harder line in the same
+breath — several infections *"cannot be covered to allow participation."*
+**Do not soften the student-facing rule on the strength of the clinician-facing
+one.**
+
+**cold-exposure → ACSM Expert Consensus Statement: Injury Prevention and
+Exercise Performance during Cold-Weather Exercise** (Current Sports Medicine
+Reports 2021;20(11):594–607), attached to **all three bands** on 2026-08-03.
+It explicitly "updates and replaces" the 2006 ACSM cold-injury position stand.
+Coverage checked per band: frostbite (54 mentions), hypothermia (46, with a
+full staging table at mild 32–35°C / moderate 28–31°C / severe <28°C),
+rewarming (23), non-freezing cold injury (13), shivering (12); for the 11-12
+unit specifically, cold-water immersion (8) with the four-stage immersion
+model and cold shock (7), Swiss staging (9), cardiac arrest (21), and
+avalanche burial (31).
+
+✅ **This source independently confirms the frostbite lesson change made
+earlier the same day.** That edit rewrote field rewarming to be gated on
+**refreezing risk rather than injury depth**, after the palpation-depth test
+was removed. The statement says it twice: *"If possible, the frozen part or
+area should not be rewarmed unless refreezing can be avoided"* and *"The
+region should only be thawed if refreezing can be prevented."* It also backs
+the superficial case the unit teaches — superficial injury *"should be
+rewarmed by contact with warm skin (their own, or someone else's) and further
+cooling avoided."* The owner-approved change now has a 2021 consensus
+statement behind it.
+
+⚠ **Three claims in cold-exposure remain uncited, checked rather than
+assumed.** (1) The 11-12 unit classifies **frostnip** as a non-freezing injury
+(6 mentions); this statement never uses the word, and describes superficial
+*frostbite* as "partial skin freezing" — so the classification is not
+supported here, though not contradicted either. Sources genuinely differ on
+whether frostnip is the mildest frostbite or a separate non-freezing entity.
+(2) The **"water conducts heat ~25 times faster than air"** figure — 0 hits.
+(3) The **"1-10-1 principle"** naming — 0 hits, though the statement covers the
+same physiology as a four-stage immersion model. The underlying teaching is
+sound; the two specific framings need their own citation.
+
+**Cited without a URL.** No DOI is printed in the PDF's extracted text, and
+DOI hosts are blocked from the container, so none was guessed — same rule
+applied to the Safe Weight Loss statement.
+
+**dental-facial-trauma → NATA Position Statement: Preventing and Managing
+Sport-Related Dental and Oral Injuries** (J Athl Train 2016;51(10):821–839,
+doi:10.4085/1062-6050-51.8.01), attached to **all three bands** on 2026-08-03.
+Scoped by checking the PDF against what each band teaches rather than by
+assumption: the statement covers avulsion (30 mentions), mouthguards (181),
+milk/Hank's storage (9/3), replantation (14), and the luxation spectrum (28)
+and mandible (23) content the 11-12 unit carries. Its own text confirms the
+handling rules the units teach — replantation "should occur within 5 minutes,"
+and a tooth that can't be replanted goes into "milk, or physiologic saline."
+
+⚠ **Still uncited in dental-facial-trauma: the nosebleed content.** The 7-8
+and 9-10 units teach nosebleed management (11 and 10 mentions), and this
+statement has **zero** occurrences of "nosebleed" or "epistaxis" — checked, not
+assumed. The source was still attached because it covers the dental core of
+all three bands, but the nosebleed sections need their own citation.
+
 Still uncited in taping-wrapping: the 11-12 unit's claim that a substantial
 share of rigid tape's motion restriction is gone within about 20–30 minutes
 of activity. It is well established in the taping literature, but the NATA
 ankle statement does not address mechanical decay (its reference list was
 checked), so no citation was attached rather than guessing one.
 
-Still uncited in sports-psychology: the 11-12 unit's RED-S section — neither
+(Closed 2026-08-04, see the REDs entry above.) Was uncited in sports-psychology: the 11-12 unit's RED-S section — neither
 attached source covers low energy availability, menstrual dysfunction, or
 recurrent bone stress injuries. Both PDFs were searched to confirm it; see the
 batch 20 entry above for what the search found and what would close the gap.

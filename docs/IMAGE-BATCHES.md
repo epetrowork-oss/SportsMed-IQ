@@ -509,6 +509,16 @@ cold-weather consensus (2021); none of those could be read from the
 container, so the change was judged on its own merits rather than on the
 citations, and **no source was added to the unit**.
 
+**✅ Closed 2026-08-03 — one of those three citations was later supplied and
+checks out.** The ACSM cold-weather consensus (Curr Sports Med Rep
+2021;20(11):594–607) is now attached to all three cold-exposure bands, and
+reading it confirms the change rather than merely permitting it: *"If possible,
+the frozen part or area should not be rewarmed unless refreezing can be
+avoided"* and *"The region should only be thawed if refreezing can be
+prevented."* That is exactly the rule the rewritten lesson teaches — rewarming
+gated on refreezing risk, not on judged depth. A change made on reasoning
+alone now has its cited source in the repo.
+
 The argument that carried it: depth classification before rewarming is
 unreliable, blister character after rewarming is the accepted discriminator,
 and a lesson written for student aides should not describe pressing on
@@ -851,9 +861,14 @@ disproportion is the actual discriminator. Not contradictory, and the slot's
 `alt` says only "painful," so it was landed. Worth tightening if the image is
 ever regenerated.
 
-**Unsourced.** No earmarked source for this strand. A NATA position statement
-on skin diseases in athletes exists and would be the natural fit; it needs a
-PDF in-session to cite, since DOI hosts are unreachable from the container.
+**✅ Sourced 2026-08-03** — NATA Position Statement: Skin Diseases, J Athl
+Train 2010;45(4):411–428, attached to all three bands. (This note previously
+said the strand was unsourced and named that statement as the thing to go
+find; the PDF was supplied and it landed. Left here corrected rather than
+deleted, since the batch notes are a record.) See `docs/HANDOFF.md` for the
+coverage check and for the one nuance worth protecting — the statement's
+clinician-facing "solitary lesions can be covered" language must not be used
+to soften the 7-8 unit's student-facing "don't just cover it" rule.
 
 ## Batch 20: Lesson diagrams — sports-psychology (5 images) — LANDED 2026-08-03 (5 of 5, clean delivery) — FINAL BATCH
 

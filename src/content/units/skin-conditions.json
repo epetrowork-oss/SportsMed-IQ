@@ -251,5 +251,18 @@
       "front": "Core prevention habits",
       "back": "Shower with soap after every practice, never share towels/razors/gear, wear sandals in shower areas, wash mats and equipment regularly, use moisture-wicking socks."
     }
+  ],
+  "sources": [
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Skin Diseases",
+      "publisher": "Journal of Athletic Training",
+      "year": 2010
+    },
+    {
+      "title": "National Athletic Trainers' Association Position Statement: Management of Acute Skin Trauma",
+      "publisher": "Journal of Athletic Training",
+      "year": 2016,
+      "url": "https://doi.org/10.4085/1062-6050-51.7.01"
+    }
   ]
 }

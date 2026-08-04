@@ -23,8 +23,14 @@ upload each image batch, so sessions are blocked on that input. **The QA
 sweep and the `TESTERS.md` alpha kit both landed 2026-08-03** — the sweep
 found no app defects. Still genuinely open from the sprint: the aesthetic
 pass. Outside the sprint, the live backlog is the dense-diagram redesign
-(14 images), four unsourced strands, and the RED-S citation — all tracked in
-`docs/HANDOFF.md`.
+(14 images) and **eight uncited claims inside sourced strands** —
+eye-injuries' chemical-splash guidance (both 9-10 and 11-12), skin-conditions'
+blister care, nosebleed, three cold-exposure specifics, taping-wrapping, and
+warm-up. **Every strand is sourced as of
+2026-08-04** (all 54 unit files), but the eye-injuries source is a 2005
+textbook chapter flagged for upgrade. All tracked in `docs/HANDOFF.md`, which
+carries the full table; do not treat any single citation as closing the
+backlog.
 
 ## Where things stand
 
@@ -453,10 +459,12 @@ else is `implementer` (Sonnet).*
       path, teacher path, one class code and three demo student codes
       (complete / partial / click-through) — **every code verified to import
       through the real UI before being written into the doc**. Known-gaps
-      section covers the dense-diagram list, the four unsourced strands, the
-      RED-S gap, unverified standards, and no-account-recovery, and it tells
-      testers to report unreadable diagrams anyway since that list isn't
-      proven complete.
+      section covers the dense-diagram list,
+      **all eight uncited claims listed individually** (eye chemical
+      splash, blister care, nosebleed, three cold-exposure specifics,
+      taping-wrapping, warm-up),
+      unverified standards, and no-account-recovery, and it tells testers to
+      report unreadable diagrams anyway since that list isn't proven complete.
       Still to do here: regenerate `npm run images:shotlist` after any
       hero/landing rework so the ChatGPT image brief stays current.
 

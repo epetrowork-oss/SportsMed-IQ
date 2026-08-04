@@ -264,5 +264,12 @@
       "front": "Your job in cold weather",
       "back": "Recognize the problem, tell a trusted adult — not to treat it or decide on your own what to do next."
     }
+  ],
+  "sources": [
+    {
+      "title": "ACSM Expert Consensus Statement: Injury Prevention and Exercise Performance during Cold-Weather Exercise",
+      "publisher": "Current Sports Medicine Reports",
+      "year": 2021
+    }
   ]
 }

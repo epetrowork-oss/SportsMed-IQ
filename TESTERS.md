@@ -134,10 +134,34 @@ small. A redesign round is planned. **We're not certain the list of fourteen is
 complete**, so if you hit a diagram you can't read, that *is* worth reporting —
 it may be one we missed.
 
-**Four topics have no source citations yet** — cold exposure, dental and facial
-trauma, eye injuries, and skin conditions. The other fourteen cite position
-statements from NATA, AMSSM, AAOS, and similar. One section of the 11th–12th
-sports psychology unit (RED-S) also still needs its own citation.
+**All eighteen topics now cite a source** — position statements from NATA,
+ACSM, AMSSM and the IOC, plus AAOS and a sports medicine reference text. Two
+one caveat worth knowing: citing a source for a topic doesn't mean every
+sentence in it is individually cited. (The **eye injuries** units lean on a
+2005 textbook chapter for the injury-management content — that's the reference
+the topic was written from — now paired with the 2013 AAP/AAO protective
+eyewear policy for the prevention sections.)
+
+**Eight individual claims inside otherwise-sourced topics are still
+uncited**, listed here in full rather than summarised, because we got this
+count wrong twice:
+
+- **Eye injuries, 9th–10th and 11th–12th** — the chemical-splash guidance
+  (flush 15–20 minutes, then still see a doctor)
+- **Skin conditions, 7th–8th and 9th–10th** — specifically the advice to
+  *leave an intact blister alone*. The rest of blister care (clean it, cover
+  it, watch for infection) is now cited.
+- **Dental and facial trauma, 7th–8th and 9th–10th** — the nosebleed guidance
+- **Cold exposure, 11th–12th** — classifying frostnip as a non-freezing
+  injury; the "water conducts heat 25× faster than air" figure; and the
+  "1-10-1" naming (the underlying physiology *is* sourced)
+- **Taping and wrapping, 11th–12th** — that most of rigid tape's motion
+  restriction is gone within 20–30 minutes of activity
+- **Warm-up and injury prevention, 11th–12th** — that raising muscle
+  temperature by 1–2 °C meaningfully changes tissue properties
+
+None of these are believed wrong; they're well established. They just don't
+yet have a citation attached that we've verified against the source.
 
 **The standards alignments are unverified.** Each unit lists standards it's
 meant to map to; nobody has checked those against the official documents yet.
