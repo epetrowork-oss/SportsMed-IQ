@@ -134,13 +134,18 @@ small. A redesign round is planned. **We're not certain the list of fourteen is
 complete**, so if you hit a diagram you can't read, that *is* worth reporting —
 it may be one we missed.
 
-**One topic has no source citations yet** — eye injuries. The other
-seventeen cite position statements from NATA, ACSM, AMSSM, AAOS, and similar.
+**All eighteen topics now cite a source** — position statements from NATA,
+ACSM, AMSSM and the IOC, plus AAOS and a sports medicine reference text. Two
+caveats worth knowing: the **eye injuries** source is a 2005 textbook chapter
+(the oldest by a decade — we want to replace it with the AAP/AAO protective
+eyewear policy), and citing a source for a topic doesn't mean every sentence
+in it is individually cited.
 
-**Six individual claims inside otherwise-sourced topics are also still
+**Seven individual claims inside otherwise-sourced topics are still
 uncited**, listed here in full rather than summarised, because we got this
 count wrong twice:
 
+- **Eye injuries, 11th–12th** — the chemical-exposure section
 - **Dental and facial trauma, 7th–8th and 9th–10th** — the nosebleed guidance
 - **Cold exposure, 11th–12th** — classifying frostnip as a non-freezing
   injury; the "water conducts heat 25× faster than air" figure; and the

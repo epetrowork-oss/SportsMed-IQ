@@ -592,22 +592,22 @@ Group A was a correctness fix and is done. Group B is a redesign ask — fewer
 columns, larger type, or splitting a table across two cards — and is worth
 doing per strand rather than all at once. There is no group C.
 
-⚠ **One strand remains unsourced — eye-injuries.** (dental-facial-trauma,
-cold-exposure and skin-conditions were all sourced 2026-08-03 — see the ledger
-below.) No PDF has been supplied for it and no earmark exists. DOI hosts are
-blocked from the container, so **a PDF uploaded into the session is still the
-only path that has worked.**
+✅ **Every strand is now sourced. All 54 unit files carry a `sources` array
+as of 2026-08-04.** dental-facial-trauma, cold-exposure and skin-conditions
+landed 2026-08-03; eye-injuries closed it on 2026-08-04.
 
-The one that would close it, named so a future session can ask precisely:
-the **AAP/AAO joint policy "Protective Eyewear for Young Athletes"**. A 2009 IOC/Wiley injury-prevention textbook was offered
+That is coverage, not completeness — **seven claim-level gaps remain** (see the
+table below), and one strand's source carries an age caveat worth acting on
+(eye-injuries, see the ledger). A 2009 IOC/Wiley injury-prevention textbook was offered
 and **declined**: searched full-text, it had 0 hits for frostbite, tinea,
 impetigo, MRSA, herpes, nosebleed and RED-S, and its only eye content was a
 policy case study on mandating ice-hockey face protectors — nothing on
 recognition or management. Attaching it would have made a strand read as
 sourced while its substance stayed uncited.
 
-⚠ **Six claims remain uncited inside strands that are otherwise sourced.**
-(RED-S was the seventh and was **closed 2026-08-04** — see the ledger.)
+⚠ **Seven claims remain uncited inside strands that are otherwise sourced.**
+(RED-S was closed 2026-08-04; eye-injuries' chemical-exposure section was added
+the same day when its source proved not to cover it.)
 Tracking coverage per *strand* hides these, which is how the tester-facing
 count came to be wrong twice — keep this list complete, and update it whenever
 a source is attached that doesn't cover everything a unit teaches.
@@ -616,6 +616,7 @@ a source is attached that doesn't cover everything a unit teaches.
 |---|---|---|
 | warmup-injury-prevention 11-12 | Raising muscle temperature by ~1–2 °C meaningfully shifts tissue properties | batch 14 notes |
 | taping-wrapping 11-12 | Much of rigid tape's motion restriction is gone within ~20–30 min of activity | ledger |
+| eye-injuries 11-12 | The chemical-exposure section (source has 0 hits for "chemical"/"alkali"/"acid burn") | ledger |
 | dental-facial-trauma 7-8, 9-10 | Nosebleed management (the NATA dental statement has 0 hits for "nosebleed"/"epistaxis") | ledger |
 | cold-exposure 11-12 | Frostnip classified as a *non-freezing* injury | ledger |
 | cold-exposure 11-12 | "Water conducts heat ~25× faster than air" | ledger |
@@ -691,6 +692,38 @@ doi:10.4085/1062-6050-50.3.03) on all three bands and the AMSSM position
 statement on Mental Health Issues and Psychological Factors in Athletes (BJSM
 2020;54:216–220, doi:10.1136/bjsports-2019-101583) on 9-10/11-12 only, since
 it is physician-oriented and the 7-8 unit only teaches notice/care/tell.
+
+**eye-injuries → Sports Medicine: Just the Facts, Chapter 28 "Ophthalmology"**
+(Martinez RA, Ellini KA), McGraw-Hill, 2005. Attached to all three bands
+2026-08-04, closing the last unsourced strand.
+
+⚠ **This reverses an earlier decision, deliberately, and the reasoning should
+be visible.** This text was offered earlier for cold-exposure, eye-injuries and
+skin-conditions together and was **declined** in favour of "modern dedicated
+guidance." That was right at the time — and cold-exposure and skin-conditions
+each subsequently got a dedicated position statement. For eye-injuries it was
+reconsidered on the evidence, not on fatigue: the book contains a **dedicated
+ophthalmology chapter by two MDs**, and its specific guidance matches what the
+units teach almost line for line:
+
+| What a unit teaches | What the chapter says |
+|---|---|
+| Rigid shield, don't patch or press | *"a rigid eye shield should be placed and the athlete sent for immediate ophthalmology evaluation"*; *"do not apply pressure to the globe"* |
+| Hyphema is bleeding in the anterior chamber after blunt trauma | Matches, with the layering sign |
+| Retinal detachment = same-day | *"flashing lights"*, new *"floaters"*, blind spot in the visual field |
+| Orbital fracture with entrapment | *"pain with eye movements or diplopia (suggests extraocular muscle entrapment)"*; *"Hold athlete from any contact until released by ophthalmology"* |
+| Polycarbonate sports goggles | *"polycarbonate lenses, which are up to 20 times stronger"*, ASTM standards, *"Contact lenses offer no protection whatsoever"*, eye protection reduces risk *"by 90%"* |
+| Subconjunctival haemorrhage vs hyphema | Both described separately |
+
+⚠ **Two limitations, both live.** (1) **It is 2005** — twenty-one years old.
+The guidance above is the stable part of ophthalmic emergency care, but this is
+the oldest source in the project by a decade and should be **upgraded when
+possible**. The named upgrade target is unchanged: the **AAP/AAO joint policy
+"Protective Eyewear for Young Athletes"**, which would also be a better fit for
+the prevention sections specifically. (2) **It does not cover chemical eye
+injury at all** — 0 hits for "chemical", "alkali" or "acid burn" — and the
+11-12 unit has a dedicated *"Chemical exposure: the one injury where treatment
+starts before history"* section. That is now on the uncited-claims table.
 
 **RED-S / REDs → 2023 IOC consensus statement on Relative Energy Deficiency
 in Sport (REDs)** — Mountjoy M, Ackerman KE, Bailey DM, et al., **Br J Sports
