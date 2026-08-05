@@ -467,7 +467,16 @@ resolution to confirm. That found all five, and it is the method to repeat.
 No script is committed, because a gate that misses the worst case while
 emitting 74 false positives would buy false confidence.
 
-### B. Legible at 900 px, illegible at 343 px (14)
+### B. Legible at 900 px, illegible at 343 px — 14 flagged, 12 real, 7 landed, 5 open
+
+**Read the per-card lists below before acting on anything in this section.**
+Fourteen cards were flagged. Two of those fourteen were later re-verified as
+over-calls and retracted (2026-08-05), so **twelve** were real; seven have
+shipped in correction batches B1 and B2, and **five are open** — three
+redesigns plus two cards needing a single line changed. The paragraphs
+immediately below describe the original fourteen-card flagging and the failed
+attempt to measure it; they are a record of how the list was produced, not a
+statement of what is outstanding.
 
 Not wrong, just unreadable on a phone. Ranked by how much of the teaching is
 lost.
@@ -509,8 +518,12 @@ unsuitable for classifying images, in either direction.**
 
 ### Status of the corpus, stated precisely
 
-- **The 14 listed above** — flagged by visual review at 343 px. Solid enough to
-  act on. Not independently measured.
+- **The 14 listed above** — flagged by visual review at 343 px, not
+  independently measured. ⚠ **Do not schedule work off this number.** All 14
+  were re-checked card by card; **12 were real, 7 have landed (B1, B2), 5 are
+  open, and 2 were retracted as over-calls.** The per-card lists above are
+  authoritative — `eye-injuries-orbital-blowout-entrapment` and
+  `knee-acl-anatomy-mechanism` need no action and must not be sent for redesign.
 - **The other 111 of the 114 metric flags** — **unreviewed, not cleared.** Only
   3 were spot-checked, and those 3 only prove the metric produces false
   positives. They say nothing about the remaining 111. Note also that the 14
@@ -524,30 +537,94 @@ review, judged per image on whether the *teaching-bearing* text survives. Until
 that happens, **do not read this list as closed and do not read the corpus as
 cleared.**
 
-**Dense tables — every cell unreadable, only the headers survive:**
+**Dense tables — every cell unreadable, only the headers survive. ✅ ALL FOUR
+FIXED — correction batch B1, landed 2026-08-04 (PR #58):**
 `knee-acl-differential-comparison-chart` (11-12, 5 cols × 4 rows),
 `muscle-strains-differential-chart` (11-12, 4 × 3),
 `eap-team-role-assignment` (11-12, densest card in the project),
 `overuse-injuries-bone-stress-continuum` (11-12, 4 stages + 6 labelled sites).
 
-**Six-panel strips — panel names survive, descriptor row does not:**
+**Six-panel strips — panel names survive, descriptor row does not. ✅ ALL THREE
+FIXED — correction batch B2, landed 2026-08-05 (PR #59):**
 `dental-trauma-luxation-spectrum` (11-12),
 `fractures-dislocations-pattern-classification` (11-12),
 `concussion-return-to-play-stages` (9-10).
 
-**Anatomical annotation too small to read:**
-`shoulder-injuries-bankart-hill-sachs` (11-12),
-`shoulder-injuries-glenohumeral-anatomy` (9-10),
-`dental-trauma-mandible-ring-anatomy` (11-12),
-`eye-injuries-orbital-blowout-entrapment` (11-12),
-`knee-acl-anatomy-mechanism` (9-10, high-risk-mechanism labels),
-`muscle-strains-two-joint-muscles-map` (9-10),
-`overuse-injuries-acwr-graph` (11-12, axis and annotations — the card whose
-printed title is "Acute:chronic workload ratio"; the asset name does not
-match the title, so search by asset).
+**Anatomical annotation too small to read — RE-VERIFIED 2026-08-05, and the
+list of seven does not hold. Two are over-calls and two need one line changed,
+not a redesign.** See "Re-verifying the annotation group" below for the method
+and the per-card result. What actually remains:
+
+- **Redesign (3):** `shoulder-injuries-bankart-hill-sachs` (11-12),
+  `shoulder-injuries-glenohumeral-anatomy` (9-10),
+  `dental-trauma-mandible-ring-anatomy` (11-12).
+- **One line each (2):** `muscle-strains-two-joint-muscles-map` (9-10) — only
+  the sub-line *"gracilis crosses hip + knee"* fails; every other label reads.
+  `overuse-injuries-acwr-graph` (11-12) — only the italic footer *"One
+  monitoring clue — not a safety guarantee"* fails; the title, both axes, the
+  sweet-spot band and both annotations all read. The asset name does not match
+  the card's printed title ("Acute:chronic workload ratio"), so search by asset.
+- **Over-calls, no action (2):** `eye-injuries-orbital-blowout-entrapment`
+  (11-12) and `knee-acl-anatomy-mechanism` (9-10). Every label on both survives
+  343 px with clean letterforms.
+
+So group B is **12 real, 7 landed, 5 open** — not 14. Any doc quoting
+"fourteen" is stale; `TESTERS.md` was corrected at the same time.
 
 The concentration in **11-12** is the pattern: the advanced bands got the
 information-dense cards, and density is exactly what display size destroys.
+
+### Re-verifying the annotation group (2026-08-05) — and the test that worked
+
+The seven annotation cards were re-checked before being briefed, because this
+list has already produced one retraction (group C, below) and the write-up
+itself says it "rests on visual review, not on a measurement."
+
+**The glyph metric failed again, in the same way.** Measuring label ink only —
+filtering by the label's blue/teal hue so bone stipple and muscle striation
+stay out, the pollution that broke the bone-stress reading — the seven come out
+at **5.0–8.0 px p75 on a phone**. The two cards that are demonstrably readable
+score 5.0 and 8.0; the two that are demonstrably broken score 5.3 and 6.1. The
+ranges overlap completely. **The metric still does not separate legible from
+illegible and must not be used to classify these.**
+
+**What worked: crop the smallest label on the card at true 343 px, then blow
+that crop up with nearest-neighbour.** The blow-up adds no information — it
+just makes visible whether the letterforms survived the downsample. The result
+is unambiguous and it is the method to repeat:
+
+| Card | Smallest label | Survives 343 px? |
+|---|---|---|
+| `bankart-hill-sachs` | "anterior-inferior labrum" | **No** — strokes merged into blobs |
+| `glenohumeral-anatomy` | "teres minor" | **No** — merged |
+| `mandible-ring-anatomy` | "Inferior alveolar nerve" | **No** — merged |
+| `muscle-strains-two-joint` | "gracilis crosses hip + knee" | **No** — merged (only failing line) |
+| `acwr-graph` | "One monitoring clue — not a safety guarantee" | **No** — merged (only failing line) |
+| `eye-orbital-blowout` | "Infraorbital nerve" | **Yes** — crisp, every letter resolvable |
+| `knee-acl-anatomy-mechanism` | "Lateral meniscus" | **Yes** — crisp |
+
+Note the direction of the risk here. Reading a *magnified* 343 px render is the
+same trap as the jock-itch panel — magnification flatters. The stroke-merge
+test is what makes it honest: a label that has dissolved into blobs stays
+dissolved no matter how far you blow it up, and a label whose letterforms are
+intact was intact in the 343 px pixels to begin with.
+
+**Per-cue audit of the three redesigns — the labels are duplication, so this is
+a different ask from B1 and B2.** Every leader-line label on
+`bankart-hill-sachs` is in the 11-12 prose (labrum ×15, glenohumeral ligament
+×7, divot ×5, humeral head ×14). Every label on `glenohumeral-anatomy` is in
+the 9-10 prose except the view label "Posterior cuff — view from back", and
+both muscles it points at appear ×3 each. On `mandible-ring-anatomy` the
+teaching cues are all covered (ring ×28, second fracture ×3, inferior alveolar
+×3, mental nerve ×6, condyle ×4); only the plain anatomical part-names *ramus*,
+*angle* and *mental foramen* are card-only, and those are not the card's claim.
+
+**So these three do not need more room for text — they need fewer, larger
+labels.** That is a cheaper ask than B1's and B2's regrids, and the 2 × N regrid
+does not apply. The two one-line cards are the opposite case: on both, the one
+illegible line is the only line the prose does *not* carry — the ACWR footer is
+a safety qualifier on a metric a reader could otherwise over-trust, and it
+appears nowhere in the lesson.
 
 ### C. RETRACTED — there is no group C
 
@@ -591,6 +668,14 @@ adult* / *call 911* line except the two clipped ones in group A.
 Group A was a correctness fix and is done. Group B is a redesign ask — fewer
 columns, larger type, or splitting a table across two cards — and is worth
 doing per strand rather than all at once. There is no group C.
+
+**Group B progress: 7 of 12 landed.** B1 (four dense tables) landed 2026-08-04;
+B2 (three six-panel strips) landed 2026-08-05. **Five open, and they are not
+one batch:** three annotation redesigns that need *fewer, larger* labels
+(the 2 × N regrid that fixed B1 and B2 does not apply — their labels are
+duplication of prose, not extra teaching), plus two cards where a single line
+is the only thing that fails and that line is the only one the prose does not
+carry. Brief those two separately from the three.
 
 ✅ **Every strand is now sourced. All 54 unit files carry a `sources` array
 as of 2026-08-04.** dental-facial-trauma, cold-exposure and skin-conditions
