@@ -18,8 +18,8 @@
         "asset": "fractures-dislocations-pattern-classification.webp",
         "ratio": "16:9",
         "background": "white",
-        "description": "Six-panel diagram of fracture patterns on a long bone shaft, each panel showing the same bone segment with a different break line: 1) Transverse — a straight break perpendicular to the shaft. 2) Oblique — a diagonal break line. 3) Spiral — a corkscrew break wrapping around the shaft. 4) Comminuted — three or more bone fragments. 5) Greenstick — a partial break with bending on one side, unbroken cortex on the other (pediatric bone). 6) Buckle (torus) — a compressed bulge in the bone surface with no clean break line (pediatric bone). Label each panel with its name and a one-word mechanism cue (direct blow, bending, twisting, high-energy, pediatric bending, pediatric compression). Clean medical-illustration style.",
-        "alt": "Six-panel classification diagram of fracture patterns: transverse, oblique, spiral, comminuted, greenstick, and buckle.",
+        "description": "Six panels in a two-by-three grid (1-2-3 across the top, 4-5-6 below), each showing the same long-bone segment with a different break line: 1) Transverse — straight across the shaft. 2) Oblique — diagonal. 3) Spiral — corkscrew, wrapping the shaft. 4) Comminuted — three or more fragments. 5) Greenstick — bent and cracked on one side only. 6) Buckle (torus) — bulged and compressed, no clean break line. Laid out as a grid rather than a row of six so the break lines are large enough to tell apart on a phone, which is the whole point of the card. Names only: the lesson prose gives every mechanism. Clean medical-illustration style.",
+        "alt": "Six panels in a two-by-three grid classifying fracture patterns by the shape of the break line: transverse, oblique, spiral, comminuted, greenstick, and buckle.",
         "location": "public/images/units/fractures-dislocations/"
       }
     },
