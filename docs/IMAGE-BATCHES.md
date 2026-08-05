@@ -927,3 +927,73 @@ rendered, 0 placeholders remaining anywhere, 0 console or network errors.**
 
 ---
 **Totals:** 153 images in 20 batches originally; batches 1–2 (14 images) landed, **139 remaining across batches 3–20**, largest batch 10 images.
+
+---
+
+# Correction batches (display-size redesigns, group B)
+
+Group B is the 343 px readability backlog from `docs/HANDOFF.md`. Fourteen
+cards were flagged; **twelve were real** after re-verification, and they split
+into three problem shapes that need three different fixes. Recording them here
+so a later session doesn't reach for the wrong one.
+
+| Batch | Shape | Cards | Fix | Status |
+|---|---|---|---|---|
+| **B1** | dense comparison tables | 4 | fewer columns / 2 × N regrid | ✅ landed 2026-08-04 (PR #58) |
+| **B2** | six-panel strips | 3 | 2 × 3 regrid, ~57 px → ~171 px per panel | ✅ landed 2026-08-05 (PR #59) |
+| **B3** | undersized labels | 5 | **fewer, larger labels** — *not* a regrid | briefed 2026-08-05 |
+| — | over-calls, retracted | 2 | none | ✅ no action (see HANDOFF) |
+
+## Why B3 is not a regrid
+
+B1 and B2 were overcrowded: too much content for the width, so the fix was to
+buy width by cutting columns or wrapping panels. **B3 is the opposite problem.**
+These cards are well composed and not crowded — their label type is simply set
+too small, and on two of the five only a *single line* fails. Applying the 2 × N
+regrid here would rebuild five cards that mostly don't need rebuilding, and the
+B1 experience says every rebuild is a chance to delete teaching.
+
+B3's five, and the ask for each:
+
+- `shoulder-injuries-bankart-hill-sachs` (11-12) — same 4 labels, 22–26 px type.
+  No cuts; four labels on 900 × 506 was never crowding.
+- `shoulder-injuries-glenohumeral-anatomy` (9-10) — **8 labels → 5.** The four
+  SITS muscle names collapse into one `Rotator cuff (SITS)` label. This is the
+  lesson's own instruction: it says to think of the cuff *"as a group … rather
+  than four muscles to memorize separately,"* and the card was doing the
+  opposite, in the smallest type on the page.
+- `dental-trauma-mandible-ring-anatomy` (11-12) — **9 labels → 6**; `Ramus`,
+  `Angle` and `Mental foramen` appear nowhere in the lesson. Also: make the
+  **ring outline bold**, since the ring is the section's entire claim and it
+  currently vanishes at 343 px.
+- `muscle-strains-two-joint-muscles-map` (9-10) — **one sub-line**
+  (*"gracilis crosses hip + knee"*), nothing else touched.
+- `overuse-injuries-acwr-graph` (11-12) — **one footer line** (*"One monitoring
+  clue — not a safety guarantee"*), set upright instead of italic. Italic
+  strokes merge faster than upright ones when downscaled.
+
+## The per-label audit, and how it differs from B1's
+
+B1 briefed cuts on "the prose covers it" and got one card wrong, deleting
+teaching from the knee differential. B2 fixed that by checking **per cue**
+rather than per card. B3 tightened it again: every label was checked by
+**reading the sentence**, not by searching for the word. Hit-counting would say
+"labrum appears 15 times"; it would not say whether the prose states *where* the
+labrum tears. It does — which is what makes the Bankart labels safe to keep at
+larger size rather than needing to be preserved verbatim at any cost.
+
+Two findings came out of reading rather than counting: the rotator-cuff
+instruction above, and that the ACWR footer is a **safety qualifier absent from
+the lesson**. That caveat was added to `overuse-injuries-adv.json` so it can't
+be lost, *and* kept on the card — a graph is exactly where over-trusting a
+threshold happens, so the warning has to be legible in the same glance as the
+numbers.
+
+## Method that finds these
+
+Render at 343 px, then blow that render up with **nearest-neighbour**. The
+blow-up adds no information; it only shows whether letterforms survived the
+downscale. Merged blobs stay merged at any magnification, intact letterforms
+were intact in the 343 px pixels. That is what keeps the check honest in both
+directions — the jock-itch panel showed magnification can flatter an image, and
+the group-C retraction showed a thumbnail can invent a flaw that isn't there.
