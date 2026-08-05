@@ -23,7 +23,10 @@ upload each image batch, so sessions are blocked on that input. **The QA
 sweep and the `TESTERS.md` alpha kit both landed 2026-08-03** — the sweep
 found no app defects. Still genuinely open from the sprint: the aesthetic
 pass. Outside the sprint, the live backlog is the dense-diagram redesign
-(14 images) and **eight uncited claims inside sourced strands** —
+(**5 open** — batches B1 and B2 landed 7 of them on 2026-08-04/05, and
+re-verifying the last group on 2026-08-05 retracted two over-calls and
+downgraded two more to a single illegible line each, so the "14" in older
+notes is stale) and **eight uncited claims inside sourced strands** —
 eye-injuries' chemical-splash guidance (both 9-10 and 11-12), skin-conditions'
 blister care, nosebleed, three cold-exposure specifics, taping-wrapping, and
 warm-up. **Every strand is sourced as of

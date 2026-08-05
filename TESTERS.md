@@ -127,12 +127,14 @@ the CSV export as well.
 
 We already know about all of these.
 
-**Some diagrams are too dense to read on a phone.** Fourteen are confirmed:
-mostly the multi-column comparison tables in the 11th–12th units, where cell
-text ends up around 4–5 px tall on a phone screen. They're correct, just too
-small. A redesign round is planned. **We're not certain the list of fourteen is
-complete**, so if you hit a diagram you can't read, that *is* worth reporting —
-it may be one we missed.
+**Some diagrams are too dense to read on a phone.** Twelve were confirmed:
+mostly the multi-column comparison tables and six-panel strips in the
+11th–12th units, where cell text ends up around 4–5 px tall on a phone screen.
+They're correct, just too small. **Seven have now been redesigned and shipped**;
+five are still to do — two shoulder anatomy cards, one jaw anatomy card, and
+two cards where a single small line is the only thing that doesn't read.
+**We're not certain that list is complete**, so if you hit a diagram you can't
+read, that *is* worth reporting — it may be one we missed.
 
 **All eighteen topics now cite a source** — position statements from NATA,
 ACSM, AMSSM and the IOC, plus AAOS and a sports medicine reference text. Two
