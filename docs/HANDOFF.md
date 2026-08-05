@@ -467,7 +467,16 @@ resolution to confirm. That found all five, and it is the method to repeat.
 No script is committed, because a gate that misses the worst case while
 emitting 74 false positives would buy false confidence.
 
-### B. Legible at 900 px, illegible at 343 px (14)
+### B. Legible at 900 px, illegible at 343 px — 14 flagged, 12 real, 7 landed, 5 open
+
+**Read the per-card lists below before acting on anything in this section.**
+Fourteen cards were flagged. Two of those fourteen were later re-verified as
+over-calls and retracted (2026-08-05), so **twelve** were real; seven have
+shipped in correction batches B1 and B2, and **five are open** — three
+redesigns plus two cards needing a single line changed. The paragraphs
+immediately below describe the original fourteen-card flagging and the failed
+attempt to measure it; they are a record of how the list was produced, not a
+statement of what is outstanding.
 
 Not wrong, just unreadable on a phone. Ranked by how much of the teaching is
 lost.
@@ -509,8 +518,12 @@ unsuitable for classifying images, in either direction.**
 
 ### Status of the corpus, stated precisely
 
-- **The 14 listed above** — flagged by visual review at 343 px. Solid enough to
-  act on. Not independently measured.
+- **The 14 listed above** — flagged by visual review at 343 px, not
+  independently measured. ⚠ **Do not schedule work off this number.** All 14
+  were re-checked card by card; **12 were real, 7 have landed (B1, B2), 5 are
+  open, and 2 were retracted as over-calls.** The per-card lists above are
+  authoritative — `eye-injuries-orbital-blowout-entrapment` and
+  `knee-acl-anatomy-mechanism` need no action and must not be sent for redesign.
 - **The other 111 of the 114 metric flags** — **unreviewed, not cleared.** Only
   3 were spot-checked, and those 3 only prove the metric produces false
   positives. They say nothing about the remaining 111. Note also that the 14
@@ -655,6 +668,14 @@ adult* / *call 911* line except the two clipped ones in group A.
 Group A was a correctness fix and is done. Group B is a redesign ask — fewer
 columns, larger type, or splitting a table across two cards — and is worth
 doing per strand rather than all at once. There is no group C.
+
+**Group B progress: 7 of 12 landed.** B1 (four dense tables) landed 2026-08-04;
+B2 (three six-panel strips) landed 2026-08-05. **Five open, and they are not
+one batch:** three annotation redesigns that need *fewer, larger* labels
+(the 2 × N regrid that fixed B1 and B2 does not apply — their labels are
+duplication of prose, not extra teaching), plus two cards where a single line
+is the only thing that fails and that line is the only one the prose does not
+carry. Brief those two separately from the three.
 
 ✅ **Every strand is now sourced. All 54 unit files carry a `sources` array
 as of 2026-08-04.** dental-facial-trauma, cold-exposure and skin-conditions
