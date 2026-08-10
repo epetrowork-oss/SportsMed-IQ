@@ -725,6 +725,48 @@ author: one standalone full-frame illustrated card per named file, nothing
 from adjacent cards in view, no photographs. Regenerate a batch's per-image brief anytime from the
 unit JSONs' `image` descriptions (or run `npm run images:shotlist`).
 
+## Content-review decisions settled against source (2026-08-06)
+
+`docs/CONTENT-REVIEW.md` (PR #25) parks six `[NEEDS-EVAN]` items — medical,
+legal and scope-of-practice calls deliberately kept away from an LLM. Two were
+settled from the NATA dental position statement already cited by all three
+dental units (J Athl Train 2016;51(10):821-839, doi:10.4085/1062-6050-51.8.01).
+**When that doc lands, mark items 2 and 3 resolved rather than re-deciding
+them.**
+
+**Item 3 — tooth storage ranking. Was a real quiz defect, now fixed.**
+`dental-facial-trauma-adv` quiz `q2` keyed the ranking *HBSS > cold milk >
+saliva > saline > tap water*. The source does not rank saliva above saline —
+it says: *"Hanks' Balanced Salt Solution is the optimal storage medium… when
+ice is available for proper cooling, low-fat milk can serve as an alternative.
+**Other less effective solutions are using saline or saliva**… Water should be
+avoided."* Saline and saliva are one tier, not two. The keyed choice now reads
+*HBSS > cold milk > saline or saliva > tap water* and the explanation says
+neither outranks the other. This also removed an internal contradiction: the
+same unit's prose already said *"Milk, saliva, and saline are all close
+enough."* The other three distractors were unaffected, so the question still
+works. **Note the shape of this one — the unit's own prose disagreed with its
+own quiz, and no gate catches that.**
+
+**Item 2 — a student reinserting an avulsed permanent tooth. Reframed, by the
+teacher's decision.** The 9-10 unit told the student to reinsert immediately.
+The cited source assigns the action to a clinician — *"The AT may attempt
+replantation…"*, strength B — while IADT/ADA public guidance does direct
+bystanders to do it. Evan's call: **lead with getting the athletic trainer or
+health care provider, and keep reinsertion as what to do when no provider is
+there within the first couple of minutes.** Defensible against both sources,
+and it preserves the ~5-minute window the source calls the single most
+important factor. The step list now opens with shouting for a provider, the
+reinsertion step is explicitly conditional, and "not being confident" is named
+as an acceptable answer that still saves the tooth. The primary-tooth
+never-reinsert rule is untouched, as are the storage and 30-60 minute steps.
+
+**Still open (four):** second-impact-syndrome certainty (concussion 11-12),
+"every U.S. state has a law" (concussion 9-10 and 11-12), shoulder recurrence
+70-90% under 20 (11-12), and whether the 10%-rule/ACWR spiral leaves the two
+bands with conflicting takeaways. Evan has asked for these one at a time,
+evidence first.
+
 ## Source ledger
 
 **Nothing is outstanding at the strand level.** Every source the user supplied

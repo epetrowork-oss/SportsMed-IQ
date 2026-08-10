@@ -142,12 +142,12 @@
       "question": "You can't reimplant an avulsed permanent tooth immediately. In order of best to worst for preserving the periodontal ligament (PDL) cells on the root, which ranking is correct, and why?",
       "choices": [
         "Tap water > saliva > milk, because water is the cleanest option available",
-        "Hank's Balanced Salt Solution > cold milk > saliva > saline > tap water, based on how closely each matches the PDL cells' natural osmolality",
+        "Hank's Balanced Salt Solution > cold milk > saline or saliva > tap water, based on how closely each matches the PDL cells' natural osmolality",
         "Saliva > tap water > milk, because saliva is always sterile",
         "It doesn't matter what medium you use as long as the tooth stays visibly moist"
       ],
       "answerIndex": 1,
-      "explanation": "PDL cell survival depends on a storage medium's osmolality (salt concentration) being close to the cells' natural environment. HBSS matches it almost exactly; milk and saliva are close enough to keep cells viable for a useful window; saline is isotonic and safe but not superior to milk in practice. Tap water is hypotonic, so cells absorb water, swell, and rupture within minutes — it is never an acceptable option regardless of how clean it looks."
+      "explanation": "PDL cell survival depends on a storage medium's osmolality (salt concentration) being close to the cells' natural environment. HBSS matches it almost exactly and is the optimal medium; cold low-fat milk is the practical alternative when HBSS isn't at hand. Saline and saliva sit together on the next tier down — both keep cells viable for a useful window, and neither is ranked above the other. Tap water is hypotonic, so cells absorb water, swell, and rupture within minutes — it is never an acceptable option regardless of how clean it looks."
     },
     {
       "id": "q3",
