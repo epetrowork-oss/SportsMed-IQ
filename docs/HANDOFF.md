@@ -795,6 +795,53 @@ duplication of prose, not extra teaching), plus two cards where a single line
 is the only thing that fails and that line is the only one the prose does not
 carry. Brief those two separately from the three.
 
+✅ **B3 + B4 DELIVERED AND LANDED 4 of 5 (2026-08-15).** ChatGPT returned both
+batches in a single zip despite being briefed separately. Mechanically the
+cleanest delivery of the project: all five correct format, dimensions, ratio and
+folder, all inside the 30–60 KB budget, no slivers, no wrong-topic files.
+
+**Landed (4):** `shoulder-injuries-glenohumeral-anatomy`,
+`shoulder-injuries-bankart-hill-sachs`, `dental-trauma-mandible-ring-anatomy`,
+`overuse-injuries-acwr-graph`. Each verified with the stroke-merge test at 343 px
+against its own predecessor — the old/new pairs are unambiguous, e.g.
+"anterior-inferior labrum" goes from merged blobs to fully resolvable letterforms.
+Browser-verified at 375 px: all render, 0 placeholders, 0 console errors, 0 failed
+requests, no horizontal overflow, each displayed at exactly **343 px** (which also
+re-confirms the display-size arithmetic this whole effort rests on).
+
+**Held (1):** `muscle-strains-two-joint-muscles-map` — see
+`docs/briefs/B4-redo-muscle-strains.md`. The briefed fix was done correctly (the
+gracilis line is now legible), but the delivery also **replaced the `hamstrings`
+label with a four-line block naming semitendinosus, semimembranosus and biceps
+femoris (long head)** on a 9-10 card. Those three names appear **×0 in all three
+bands** — there is no band where they belong — and adding a four-line block runs
+directly against the purpose of the batch. Held on scope, not quality.
+
+⚠ **Two lessons from this delivery, both worth carrying forward.**
+
+1. **Additions get dropped when bundled with deletions.** Both B3 anatomy cards
+   executed every deletion and enlargement and **skipped the one label each brief
+   asked to ADD** — `glenohumeral-anatomy` still does not name the shallow socket,
+   and `mandible-ring-anatomy` still does not label the ring. Both were landed
+   anyway because the prose carries both concepts heavily ("shallow socket" is the
+   9-10 section's own words; "ring" ×28 in the 11-12 prose), so the omission costs
+   nothing here. **But next time, put additions in their own numbered section, not
+   in a list of removals.**
+2. **A brief specifies an end, and the author may reach it another way — judge the
+   end.** B3 told them to cut `bankart-hill-sachs` from four leader labels to two.
+   They kept all four and simply enlarged them. That was accepted, because the
+   acceptance test is legibility at 343 px and it passes decisively. The
+   fewer-labels instruction was a *means*; the handoff's own audit had said the
+   labels were safe to remove, not that removing them was required.
+
+**Browser-test gotcha, new:** asserting `img.complete && naturalWidth > 0`
+immediately after `networkidle` reports images below the fold as broken — the app
+lazy-loads them. The first run flagged five "broken" images including three files
+that had not been touched, with **0 failed requests and 0 console errors**, which
+is the tell. **Scroll the full page height and await `img.decode()` before
+asserting.** Same family as the QA sweep's "assert on decoded state, never on key
+presence" lesson.
+
 ✅ **Both briefs are written and committed (2026-08-15) — the remaining work is
 the user's ChatGPT handoff, not a session task:**
 
