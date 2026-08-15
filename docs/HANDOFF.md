@@ -537,6 +537,113 @@ review, judged per image on whether the *teaching-bearing* text survives. Until
 that happens, **do not read this list as closed and do not read the corpus as
 cleared.**
 
+# ✅ THE FULL-CORPUS 343 px SWEEP IS DONE (2026-08-15) — and a 15th group-B
+# image does exist, plus two composition defects and one lesson-vs-image conflict
+
+**All 139 lesson diagrams were rendered at true display width, screened, and
+every suspect confirmed or retracted with the stroke-merge test.** The three
+open questions above are now answered: yes, more group-B images existed; the
+111 unreviewed flags are reviewed; completeness no longer rests on one pass.
+
+**Method (the documented one, repeated exactly).** Render each diagram at 343 px,
+upscale 2× nearest-neighbour, tile 4 per contact sheet, read all 35 sheets, then
+crop each suspect's smallest teaching-bearing text at true 343 px and blow it up
+nearest-neighbour. The blow-up adds no information — it only shows whether the
+letterforms survived the downsample. **The glyph metric was not used to classify
+anything.**
+
+**Screening over-calls badly, and the confirmation step is not optional.** 24
+cards were flagged by eye; **15 of them were wrong.** Retracted on test:
+`cold-exposure-confusion-differential`, `concussion-neurometabolic-cascade`,
+`eap-team-role-assignment`, `eap-sca-cause-comparison`, `eap-aed-pad-placement`,
+`heat-illness-collapse-differential`, `heat-illness-spectrum-triage`,
+`knee-acl-position-of-no-return`, `knee-acl-noncontact-landing-mechanism`,
+`overuse-injuries-common-spots`, `overuse-injuries-shin-splints-vs-stress-fracture`,
+`shoulder-injuries-internal-vs-classic-impingement`,
+`taping-wrapping-materials-comparison`, `taping-wrapping-too-tight-warning`,
+`taping-wrapping-basket-weave-pattern`. **None of these needs any action.**
+
+**A useful distinction that came out of it:** small text alone does not fail.
+Every retracted card has small text that survives. The cards that fail are small
+**and** at least one of: italic, low-contrast grey, or reversed out of a busy
+background. The ACWR footer (already known) is small + italic + grey — that
+combination, not size by itself, is the predictor. Bottom qualifier captions in
+plain dark type — `knee-acl-position-of-no-return`,
+`overuse-injuries-common-spots` — all passed.
+
+### ⚠ NEW FINDING 1 — a lesson-vs-image conflict on heat stroke (highest priority)
+
+**`heat-illness-cold-water-immersion-technique.webp` (9-10) contradicts the
+lesson it renders in, and has since 2026-07-11.**
+
+- The card instructs, in its most legible line: **"CONTINUE COOLING UNTIL THE
+  ATHLETE REACHES ABOUT 102°F (38.9°C)"** — bold, with the number in red.
+- The 9-10 lesson says the opposite for this band: *"keep cooling without
+  stopping until EMS takes over the athlete's care."* **"102" appears zero times
+  in `heat-illness.json`** — prose, quiz and flashcards alike.
+- It was removed deliberately. Commit **`4fab815` "Refine grade 9-10 heat-stroke
+  handoff wording"** (owner-authored, 2026-07-11) replaced *"Stop active cooling
+  when core temperature reaches about 100-102°F"* with *"keep cooling without
+  stopping until EMS takes over"*, in both the callout and the flashcard. That is
+  a scope-of-practice decision: a student is not the person who decides to stop
+  cooling. `heat-illness-adv` (11-12) still carries 100-102°F, which is correct
+  for that band.
+- **The image was never updated to match**, and this is the worst possible split:
+  the card *does* carry a softening sub-line — *"Cooling beyond 102°F is safe and
+  may be necessary depending on the situation"* — but **that sub-line is one of
+  the lines that dissolves at 343 px.** On a phone, the stop-at-102 instruction
+  is readable and the sentence that qualifies it is not.
+
+**This is not a medical error in the image** — 102°F is a real clinical target
+and the sub-line is accurate. It is a band-scope conflict, and it needs an owner
+decision, not a silent fix.
+
+### ⚠ NEW FINDING 2 — two composition defects (group A class, defects at any size)
+
+The original group-A sweep found five; these two were missed and shipped.
+
+| File | Unit | What is broken |
+|---|---|---|
+| `eap-aed-wall-case.webp` | emergency-action-plan-ms (**7-8**) | The text block **crosses the right frame edge**: the final glyphs of *"Know where the AEDs are"* and *"so you can point an adult"* are sliced by the boundary. Zero right margin — the brief asks for ≥ 12 px. No word is lost, so meaning survives, but it is the same production defect as `ankle-sprain-rice-steps` reading "COMPRESSIO". |
+| `concussion-brain-movement-mechanism.webp` | concussion (**9-10**) | The caption *"Body hit can jolt the brain"* **collides with the inset panel's border rule**, which runs straight through the second line, and the circle boundary clips its descenders. |
+
+### ⚠ NEW FINDING 3 — group B, four more real cards (the 15th and beyond)
+
+Confirmed by stroke-merge test; ordered by how much teaching is lost.
+
+| File | Band | What fails | Prose carries it? |
+|---|---|---|---|
+| `heat-illness-cold-water-immersion-technique` | 9-10 | **Nearly all body text** across seven numbered boxes. The 102°F number survives; every instruction around it merges | **No** — "stir"/"agitate"/"submerge" are **x0** in the lesson. This card is the only place that procedure exists |
+| `heat-illness-sweat-cooling` | **7-8** | All four step **body paragraphs** ("Exercise produces heat. Core and skin temperatures begin to rise." etc.) plus the "BETTER COOLING" strip. The four step *headings* survive | Partly — the headings carry the skeleton, but "sweat turns to vapor" and "core and skin" are x0 in the 7-8 prose |
+| `shoulder-injuries-dislocation-vs-ac-sprain` | 9-10 | **"squared-off contour"** and **"step-off bump"** — the two recognition signs, i.e. the card's entire teaching | Mixed — "step-off" x3 in prose, but **"squared-off" x0 in prose** (quiz/flashcards only) |
+| `eap-cpr-hand-placement` | 9-10 | The "PUSH HARD AND FAST" **dose numbers** — *at least 2 inches (5 cm)*, *100–120 compressions* | Yes, in prose — lower severity, but these are the CPR numbers |
+
+**Minor, single-label, prose-covered — record but do not prioritise:**
+`concussion-lucid-interval-timeline` (y-axis *"symptom severity"* merges; the
+two curve shapes and "DETERIORATION / CALL 911" are large and clear),
+`heat-illness-dissipation-pathways` (the *"DOMINANT DURING INTENSE EXERCISE"*
+pill), `muscle-strains-terminal-swing-mechanism` (the *"eccentric braking"*
+label).
+
+### What the sweep says about the corpus overall
+
+**Of 139 diagrams: 130 need no action.** Nine carry a confirmed defect — the two
+composition defects, four real group-B cards, and three minor single-label ones —
+on top of the five already-briefed group-B cards (B3/B4). The wound-care,
+skin-conditions, sports-psychology, fractures-dislocations and
+warmup-injury-prevention sets came through completely clean.
+
+**The concentration is in heat-illness and emergency-action-plan** — the two
+strands whose cards are procedural, and procedure means numbered steps with body
+text under each heading. That is the format display size destroys, and it is a
+better predictor than grade band. (The earlier "11-12 is where density lives"
+pattern held for tables; it does not hold here — three of the four new group-B
+cards are 7-8 or 9-10.)
+
+**Both batch-14 redos and the jock-itch fix were re-confirmed as still correct**,
+as were all five group-A redraws, all four B1 cards and all three B2 cards. No
+previously-landed fix has regressed.
+
 **Dense tables — every cell unreadable, only the headers survive. ✅ ALL FOUR
 FIXED — correction batch B1, landed 2026-08-04 (PR #58):**
 `knee-acl-differential-comparison-chart` (11-12, 5 cols × 4 rows),
