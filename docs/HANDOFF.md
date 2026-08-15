@@ -614,7 +614,18 @@ a different ask from B1 and B2.** Every leader-line label on
 `bankart-hill-sachs` is in the 11-12 prose (labrum ×15, glenohumeral ligament
 ×7, divot ×5, humeral head ×14). Every label on `glenohumeral-anatomy` is in
 the 9-10 prose except the view label "Posterior cuff — view from back", and
-both muscles it points at appear ×3 each. On `mandible-ring-anatomy` the
+both muscles it points at appear ×3 each.
+
+⚠ **Correction to that last count (2026-08-15), and it strengthens the
+conclusion rather than weakening it.** The "×3 each" was a whole-file count and
+implied prose coverage that does not exist. Counted per location, the four cuff
+muscle names appear in **zero** section bodies and **zero** quiz questions in
+`shoulder-injuries.json`. Their three occurrences are: the card's own `image`
+description, and flashcard **`f2` ("Rotator cuff (SITS)")**, which lists all four
+at full reading size. So the card is not duplicating the *lesson* — it is
+duplicating a *flashcard*, at roughly 2 mm. Deleting those labels costs nothing
+at all. **Habit worth keeping: count per location, not per file — a whole-file
+`grep -c` cannot tell teaching prose from image metadata.** On `mandible-ring-anatomy` the
 teaching cues are all covered (ring ×28, second fracture ×3, inferior alveolar
 ×3, mental nerve ×6, condyle ×4); only the plain anatomical part-names *ramus*,
 *angle* and *mental foramen* are card-only, and those are not the card's claim.
@@ -677,6 +688,27 @@ duplication of prose, not extra teaching), plus two cards where a single line
 is the only thing that fails and that line is the only one the prose does not
 carry. Brief those two separately from the three.
 
+✅ **Both briefs are written and committed (2026-08-15) — the remaining work is
+the user's ChatGPT handoff, not a session task:**
+
+- **`docs/briefs/B3-annotation-redesigns.md`** — the three redesigns. Specifies
+  the exact final label set per card (5 / 2 / 5 labels), what to delete and why
+  each deletion is safe, and one *addition*: `glenohumeral-anatomy` never labels
+  the shallow socket, which is the section's actual teaching point, and
+  `mandible-ring-anatomy` never labels the ring, which is the card's entire claim.
+- **`docs/briefs/B4-single-line-fixes.md`** — the two one-line fixes, written to
+  be un-mergeable with B3 (it opens by saying so) because the failure mode here
+  is an author applying B1/B2's regrid to a card that only needs one line reset.
+
+**Both briefs carry a measured size floor rather than a vague "make it bigger".**
+On `glenohumeral-anatomy`, labels that currently survive 343 px have ~16–18 px of
+ink height at 900 px and the one that fails has ~13 px. **That margin is too thin
+to aim at**, so the briefs ask for ~28–32 px — roughly double the failing labels.
+This is *not* the discredited glyph metric being revived: it is not used to
+classify any image, only to give the author a floor to draw to. The acceptance
+test stays the stroke-merge check at 343 px, and both briefs ask for a 343 px
+render to be shipped alongside each source file.
+
 ✅ **Every strand is now sourced. All 54 unit files carry a `sources` array
 as of 2026-08-04.** dental-facial-trauma, cold-exposure and skin-conditions
 landed 2026-08-03; eye-injuries closed it on 2026-08-04.
@@ -716,6 +748,36 @@ a source is attached that doesn't cover everything a unit teaches.
 **A strand being sourced is not the same as every section in it being
 sourced.** Any doc that quotes a count — `TESTERS.md` especially — must reflect
 this table, not just the unsourced-strand count.
+
+### PR #25 names candidate sources for 7 of these 8 (found 2026-08-15)
+
+`docs/CONTENT-REVIEW.md` — sitting unmerged on `claude/fable-sonnet-review-hcnppi`
+since 2026-07-11 — carries a ~128-source reference list mapped to claim numbers,
+and it happens to name a candidate for almost every open gap in the table above:
+
+| Uncited claim | Candidate named in PR #25 |
+|---|---|
+| warmup 11-12 — ~1–2 °C tissue shift | Shellock & Prentice, *Warming up and stretching…* (Sports Med, 1985) — "target temperature rise" |
+| taping 11-12 — restriction gone in 20–30 min | *Taping and bracing in the prevention of ankle sprains* (J ISAKOS, 2021) — "rigid tape's motion-restriction decay during activity" |
+| eye 9-10 + 11-12 — chemical splash / flush duration | AAO *EyeNet*, *Treating Acute Chemical Injuries of the Cornea* — "alkali vs. acid mechanism, flush duration" |
+| dental 7-8 + 9-10 — nosebleed | AAFP, *Management of Epistaxis* — "nosebleed pinch-duration guidance" |
+| cold 11-12 — frostnip as non-freezing | WMS *Frostbite: 2024 Update* — "freezing vs. non-freezing injury distinction" |
+| cold 11-12 — water conducts ~25× faster | WMS *Accidental Hypothermia: 2019 Update* — "conduction rate" |
+| cold 11-12 — "1-10-1 principle" | WMS *Accidental Hypothermia: 2019 Update* — names 1-10-1 explicitly |
+| **skin 7-8 + 9-10 — leave an intact blister alone** | **none — its refs are all infectious-disease** |
+
+⚠ **These are leads, not citations, and must not be attached on this basis.** The
+mappings are LLM-asserted and nobody has opened the documents. This is the exact
+failure the warmup sources were stripped for on PR #47 — restored only once full
+bibliographic records came back. **Every URL in that list was tested from the
+container on 2026-08-15 and all are blocked** (gateway returns 403 to CONNECT —
+aao.org, aafp.org, nata.org, pmc.ncbi.nlm.nih.gov, sagepub, springer). So this
+cannot be closed from a session either; it needs the PDFs uploaded, the way the
+NATA statement was for taping-wrapping.
+
+**What it changes:** the eight gaps stop being "find a source" and become "fetch
+seven named documents and check them." That is a materially cheaper ask of the
+user, and it is the argument for landing PR #25.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a
