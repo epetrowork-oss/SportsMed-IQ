@@ -59,17 +59,35 @@ lines that dissolves at 343 px.** So on a phone the stop-at-102 instruction is
 readable and its qualifier is not.
 
 **Nothing here is medically wrong.** 102°F is a real clinical target. The question
-is which band should see it, and that is the owner's call:
+is which band should see it.
 
-- **Option A (recommended)** — bring the card in line with the 9-10 lesson: replace
-  the 102°F box with *"KEEP COOLING UNTIL EMS TAKES OVER"*, and drop the numeric
-  target from this card entirely. The number stays available to 11-12, which
-  teaches it in prose.
-- **Option B** — keep the number but invert the emphasis: make *"Cooling beyond
-  102°F is safe and may be necessary"* the large line and the target the small
-  one. Weaker, because it still hands a stop-number to a 9-10 student.
-- **Option C** — change the lesson back instead. Not recommended; it reverses a
-  deliberate owner decision.
+### ✅ DECIDED 2026-08-15 — Option A. This is the spec; build to it.
+
+**Replace the entire blue "CONTINUE COOLING UNTIL…" box with a box reading:**
+
+> **KEEP COOLING UNTIL EMS TAKES OVER**
+
+**Remove the numeric target from this card completely** — both the large
+*"REACHES ABOUT 102°F (38.9°C)"* line and the small sub-line *"Cooling beyond
+102°F is safe and may be necessary depending on the situation."* Neither
+should appear anywhere on the card. Keep the circled check-mark icon and the
+box's blue styling; only the words change.
+
+**Do not carry the number to another part of the card.** 102°F stays with the
+11-12 unit, which teaches it in prose and is the band where a stop-threshold
+belongs.
+
+**Also fix the box heading directly above it.** It currently reads *"MONITOR
+TEMPERATURE & CONTINUE COOLING"* with the sub-line *"Monitor core body
+temperature continuously."* Since the student is no longer monitoring toward a
+number, make it **"KEEP COOLING"** with no monitoring sub-line — core-temperature
+monitoring is a clinician's job and the 9-10 lesson does not ask the student to do
+it.
+
+*(Rejected alternatives, recorded so this is not relitigated: keeping the number
+with inverted emphasis still hands a stop-threshold to a 9-10 student; changing
+the lesson back would reverse a deliberate scope-of-practice decision made in
+commit `4fab815`.)*
 
 ### 1b. Almost none of the card is readable anyway
 
