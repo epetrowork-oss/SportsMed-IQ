@@ -22,11 +22,27 @@ workstream is landing ChatGPT-generated lesson diagrams strand-by-strand —
 upload each image batch, so sessions are blocked on that input. **The QA
 sweep and the `TESTERS.md` alpha kit both landed 2026-08-03** — the sweep
 found no app defects. Still genuinely open from the sprint: the aesthetic
-pass. Outside the sprint, the live backlog is the dense-diagram redesign
+pass.
+
+**Update 2026-08-15.** The **full-corpus 343 px sweep is done** — all 139
+lesson diagrams checked at real display size, which the handoff had explicitly
+left open ("111 unreviewed, not cleared"). **130 need no action; 9 carry a
+confirmed defect**, including two composition defects the original group-A pass
+missed and a **lesson-vs-image conflict on heat stroke that needs an owner
+decision** (the 9-10 cold-water-immersion card still says "cool until 102°F"
+after the lesson deliberately dropped that target — see `docs/HANDOFF.md` and
+`docs/briefs/B5-sweep-findings.md`). **All three image briefs are now written
+and committed** (`docs/briefs/B3`, `B4`, `B5`) — that work is waiting on the
+user's ChatGPT handoff, not on a session. Also found: **PR #25 names candidate
+sources for 7 of the 8 open uncited claims**, which turns that backlog from
+"find sources" into "fetch seven named documents."
+
+Outside the sprint, the live backlog is the dense-diagram redesign
 (**5 open** — batches B1 and B2 landed 7 of them on 2026-08-04/05, and
 re-verifying the last group on 2026-08-05 retracted two over-calls and
 downgraded two more to a single illegible line each, so the "14" in older
-notes is stale) and **eight uncited claims inside sourced strands** —
+notes is stale; **B5 adds 6 more cards**) and **eight uncited claims inside
+sourced strands** —
 eye-injuries' chemical-splash guidance (both 9-10 and 11-12), skin-conditions'
 blister care, nosebleed, three cold-exposure specifics, taping-wrapping, and
 warm-up. **Every strand is sourced as of
