@@ -107,7 +107,7 @@ stable"*, and the sub-line in 1a.
 are each **x0** in `heat-illness.json`. This card is the only place that procedure
 exists, on a life-threatening emergency, and it is unreadable on a phone.
 
-**The ask, once 1a is decided: cut this card down.** Seven boxes is at least three
+**The ask, alongside the 1a rewording: cut this card down.** Seven boxes is at least three
 too many for 343 px. Keep the steps a student can actually act on — get them in
 cold water, submerge as much of the body as possible, keep the water moving, keep
 cooling until EMS takes over — and drop the clinician-facing monitoring detail,
