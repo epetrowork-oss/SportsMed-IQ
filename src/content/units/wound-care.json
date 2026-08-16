@@ -6,7 +6,11 @@
   "gradeBand": "9-10",
   "summary": "Manage cuts, abrasions, and serious bleeding safely — gloves on, pressure first, and know which wounds need more than a bandage.",
   "minutes": 18,
-  "standards": ["CTE.HSMT.Anchor.6", "CTE.HSMT.B.4.5", "CTE.HSMT.B.2.4"],
+  "standards": [
+    "CTE.HSMT.Anchor.6",
+    "CTE.HSMT.B.4.5",
+    "CTE.HSMT.B.2.4"
+  ],
   "sections": [
     {
       "heading": "Protect yourself first",
@@ -255,6 +259,11 @@
       "publisher": "American College of Surgeons Committee on Trauma",
       "year": 2015,
       "url": "https://www.stopthebleed.org/"
+    },
+    {
+      "title": "Epistaxis: Outpatient Management",
+      "publisher": "American Family Physician 2018;98(4):240-245",
+      "year": 2018
     }
   ]
 }

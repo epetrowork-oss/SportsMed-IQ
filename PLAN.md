@@ -22,11 +22,42 @@ workstream is landing ChatGPT-generated lesson diagrams strand-by-strand —
 upload each image batch, so sessions are blocked on that input. **The QA
 sweep and the `TESTERS.md` alpha kit both landed 2026-08-03** — the sweep
 found no app defects. Still genuinely open from the sprint: the aesthetic
-pass. Outside the sprint, the live backlog is the dense-diagram redesign
-(**5 open** — batches B1 and B2 landed 7 of them on 2026-08-04/05, and
-re-verifying the last group on 2026-08-05 retracted two over-calls and
-downgraded two more to a single illegible line each, so the "14" in older
-notes is stale) and **eight uncited claims inside sourced strands** —
+pass.
+
+**Update 2026-08-15 — the biggest single day of cleanup on this project.**
+
+- **The full-corpus 343 px sweep is DONE.** All 139 lesson diagrams checked at
+  real display size, closing the "111 unreviewed, not cleared" item.
+  **130 need no action; 9 carried a confirmed defect.**
+- **The heat-stroke conflict is DECIDED (Option A).** The 9-10
+  cold-water-immersion card said "cool until 102°F" after the lesson
+  deliberately dropped that target. The number leaves the card entirely and
+  stays with 11-12; spec is locked in `docs/briefs/B5-sweep-findings.md`.
+- **B3/B4 DELIVERED — 4 of 5 landed.** `glenohumeral-anatomy`,
+  `bankart-hill-sachs`, `mandible-ring-anatomy` and `acwr-graph` are live and
+  browser-verified. **Only `muscle-strains-two-joint-muscles-map` is held**
+  (redo note: `docs/briefs/B4-redo-muscle-strains.md`).
+- **Four of the six `[NEEDS-EVAN]` content calls are settled** — three hedges
+  applied (every-state concussion law, shoulder recurrence range, second-impact
+  mortality) plus one closed as a non-conflict (10%-rule vs ACWR is a deliberate
+  spiral build). **The remaining two are held** pending the IADT guideline:
+  student reinsertion of an avulsed permanent tooth, and the saliva-above-saline
+  storage ranking.
+- **New-unit authoring is CLOSED** (owner decision): no strength-and-conditioning
+  strand, and no further new strands. Sports med content is complete at
+  **54 units / 18 strands**; the next subject comes first, with a full review
+  pass afterwards. **Do not start new units.**
+
+**What is actually left, and it is all waiting on documents or ChatGPT:**
+1. **`docs/FETCH-LIST.md`** — ten documents to pull from the ChatGPT side. Closes
+   the eight uncited claims, the standards verification pass, and the two held
+   dental decisions. **This is the critical path for everything content-side.**
+2. **ChatGPT handoff** — B5's six cards plus the muscle-strains redo.
+
+Outside the sprint, the live diagram backlog is now **B5's 6 cards + the
+muscle-strains redo** (B1 and B2 landed 7 on 2026-08-04/05; B3/B4 landed 4 more
+on 2026-08-15; the "14" and "5 open" figures in older notes are both stale), plus
+**eight uncited claims inside sourced strands** —
 eye-injuries' chemical-splash guidance (both 9-10 and 11-12), skin-conditions'
 blister care, nosebleed, three cold-exposure specifics, taping-wrapping, and
 warm-up. **Every strand is sourced as of

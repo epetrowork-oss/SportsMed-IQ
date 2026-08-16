@@ -4,7 +4,11 @@
   "category": "Lower Extremity Injuries",
   "strand": "ankle-sprain",
   "gradeBand": "11-12",
-  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.B.1.0"],
+  "standards": [
+    "CTE.HSMT.B.2.0",
+    "CTE.HSMT.B.2.4",
+    "CTE.HSMT.B.1.0"
+  ],
   "summary": "Go beyond ligament names and PRICE: mechanism-specific injury patterns, the high ankle sprain, evaluation reasoning, differential thinking, and the evidence behind modern rehab and prevention.",
   "minutes": 25,
   "sections": [
@@ -116,7 +120,7 @@
       "heading": "Prevention: what the evidence actually supports",
       "body": [
         "Two athletes with an identical sprain history can have very different re-injury rates depending on what they do afterward. Two prevention strategies have real evidence behind them.",
-        "Bracing vs. taping: athletic tape provides real support initially, but it loses a substantial amount of its mechanical restriction within about 20-30 minutes of activity as it stretches and loosens with sweat and movement. Semi-rigid ankle braces maintain their support through a full practice or game and, across a season, are comparably effective — and often more cost-effective, since a brace is reused while tape is repurchased and reapplied every session — at reducing sprain recurrence, particularly in athletes with a prior sprain history.",
+        "Bracing vs. taping: athletic tape provides real support initially, but it loses a substantial amount of its mechanical restriction within about 15-20 minutes of activity as it stretches and loosens with sweat and movement. Semi-rigid ankle braces hold their restriction substantially longer than tape does — measured in the literature at roughly three times as long, though they too lose beneficial restriction over a long session — and, across a season, the two are comparably effective — and often more cost-effective, since a brace is reused while tape is repurchased and reapplied every session — at reducing sprain recurrence, particularly in athletes with a prior sprain history.",
         "Balance-training programs: structured neuromuscular/balance programs done for just 10-15 minutes, several times a week, especially during preseason and continued in-season, measurably reduce both first-time and repeat ankle sprain rates. The effect is strongest in athletes who've already sprained an ankle before — exactly the population most likely to get hurt again.",
         "For an athlete with a history of ankle sprains, the best-supported approach combines both: a brace (or well-applied, regularly reapplied tape) during competition, plus an ongoing balance-training program — not one or the other."
       ]
@@ -288,6 +292,12 @@
       "publisher": "Journal of Athletic Training",
       "year": 2013,
       "url": "https://doi.org/10.4085/1062-6050-48.4.02"
+    },
+    {
+      "title": "Taping and bracing in the prevention of ankle sprains: current concepts",
+      "publisher": "Journal of ISAKOS 2016;1:304-310",
+      "year": 2016,
+      "url": "https://doi.org/10.1136/jisakos-2016-000104"
     }
   ]
 }

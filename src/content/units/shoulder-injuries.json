@@ -23,7 +23,7 @@
         "asset": "shoulder-injuries-glenohumeral-anatomy.webp",
         "ratio": "4:3",
         "background": "white",
-        "description": "Anterior view of the right shoulder with the humeral head seated in the shallow glenoid socket of the scapula. Label the glenohumeral joint, the labrum as a thin rim of cartilage around the socket edge, the four rotator cuff muscles (supraspinatus, infraspinatus, teres minor, subscapularis) wrapping the humeral head in a distinct color, and the AC joint where the clavicle meets the acromion, shown as a separate small joint above. Clean medical-illustration style.",
+        "description": "Anterior view of the right shoulder with the humeral head seated in the shallow glenoid socket of the scapula, plus a smaller posterior-view inset. Five labels only, sized to stay legible at phone width: the glenohumeral joint, the labrum as a thin rim of cartilage around the socket edge, the AC joint where the clavicle meets the acromion, the posterior-view inset, and a single 'Rotator cuff (SITS)' group label whose leader lines reach the cuff in both views. The four muscles are deliberately NOT named individually here — flashcard f2 teaches SITS at full reading size, and naming them on the card put the smallest type in the app on a diagram displayed at 343 px. Clean medical-illustration style.",
         "alt": "Diagram of the shoulder's glenohumeral joint showing the shallow glenoid socket, labrum, rotator cuff muscles, and the separate AC joint.",
         "location": "public/images/units/shoulder-injuries/"
       }

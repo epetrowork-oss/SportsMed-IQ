@@ -6,7 +6,10 @@
   "gradeBand": "7-8",
   "summary": "Learn to recognize a minor scrape you can handle yourself, and when a cut means you stop and get an adult right away.",
   "minutes": 10,
-  "standards": ["CAHE.7-8.S.SelfOthers", "CAHE.7-8.S.Decisions"],
+  "standards": [
+    "CAHE.7-8.S.SelfOthers",
+    "CAHE.7-8.S.Decisions"
+  ],
   "sections": [
     {
       "heading": "Blood can carry hidden germs",
@@ -265,6 +268,11 @@
       "publisher": "Journal of Athletic Training",
       "year": 2016,
       "url": "https://doi.org/10.4085/1062-6050-51.7.01"
+    },
+    {
+      "title": "Epistaxis: Outpatient Management",
+      "publisher": "American Family Physician 2018;98(4):240-245",
+      "year": 2018
     }
   ]
 }

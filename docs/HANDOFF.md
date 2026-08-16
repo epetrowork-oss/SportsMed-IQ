@@ -537,6 +537,113 @@ review, judged per image on whether the *teaching-bearing* text survives. Until
 that happens, **do not read this list as closed and do not read the corpus as
 cleared.**
 
+# ✅ THE FULL-CORPUS 343 px SWEEP IS DONE (2026-08-15) — and a 15th group-B
+# image does exist, plus two composition defects and one lesson-vs-image conflict
+
+**All 139 lesson diagrams were rendered at true display width, screened, and
+every suspect confirmed or retracted with the stroke-merge test.** The three
+open questions above are now answered: yes, more group-B images existed; the
+111 unreviewed flags are reviewed; completeness no longer rests on one pass.
+
+**Method (the documented one, repeated exactly).** Render each diagram at 343 px,
+upscale 2× nearest-neighbour, tile 4 per contact sheet, read all 35 sheets, then
+crop each suspect's smallest teaching-bearing text at true 343 px and blow it up
+nearest-neighbour. The blow-up adds no information — it only shows whether the
+letterforms survived the downsample. **The glyph metric was not used to classify
+anything.**
+
+**Screening over-calls badly, and the confirmation step is not optional.** 24
+cards were flagged by eye; **15 of them were wrong.** Retracted on test:
+`cold-exposure-confusion-differential`, `concussion-neurometabolic-cascade`,
+`eap-team-role-assignment`, `eap-sca-cause-comparison`, `eap-aed-pad-placement`,
+`heat-illness-collapse-differential`, `heat-illness-spectrum-triage`,
+`knee-acl-position-of-no-return`, `knee-acl-noncontact-landing-mechanism`,
+`overuse-injuries-common-spots`, `overuse-injuries-shin-splints-vs-stress-fracture`,
+`shoulder-injuries-internal-vs-classic-impingement`,
+`taping-wrapping-materials-comparison`, `taping-wrapping-too-tight-warning`,
+`taping-wrapping-basket-weave-pattern`. **None of these needs any action.**
+
+**A useful distinction that came out of it:** small text alone does not fail.
+Every retracted card has small text that survives. The cards that fail are small
+**and** at least one of: italic, low-contrast grey, or reversed out of a busy
+background. The ACWR footer (already known) is small + italic + grey — that
+combination, not size by itself, is the predictor. Bottom qualifier captions in
+plain dark type — `knee-acl-position-of-no-return`,
+`overuse-injuries-common-spots` — all passed.
+
+### ⚠ NEW FINDING 1 — a lesson-vs-image conflict on heat stroke (highest priority)
+
+**`heat-illness-cold-water-immersion-technique.webp` (9-10) contradicts the
+lesson it renders in, and has since 2026-07-11.**
+
+- The card instructs, in its most legible line: **"CONTINUE COOLING UNTIL THE
+  ATHLETE REACHES ABOUT 102°F (38.9°C)"** — bold, with the number in red.
+- The 9-10 lesson says the opposite for this band: *"keep cooling without
+  stopping until EMS takes over the athlete's care."* **"102" appears zero times
+  in `heat-illness.json`** — prose, quiz and flashcards alike.
+- It was removed deliberately. Commit **`4fab815` "Refine grade 9-10 heat-stroke
+  handoff wording"** (owner-authored, 2026-07-11) replaced *"Stop active cooling
+  when core temperature reaches about 100-102°F"* with *"keep cooling without
+  stopping until EMS takes over"*, in both the callout and the flashcard. That is
+  a scope-of-practice decision: a student is not the person who decides to stop
+  cooling. `heat-illness-adv` (11-12) still carries 100-102°F, which is correct
+  for that band.
+- **The image was never updated to match**, and this is the worst possible split:
+  the card *does* carry a softening sub-line — *"Cooling beyond 102°F is safe and
+  may be necessary depending on the situation"* — but **that sub-line is one of
+  the lines that dissolves at 343 px.** On a phone, the stop-at-102 instruction
+  is readable and the sentence that qualifies it is not.
+
+**This is not a medical error in the image** — 102°F is a real clinical target
+and the sub-line is accurate. It is a band-scope conflict, and it needs an owner
+decision, not a silent fix.
+
+### ⚠ NEW FINDING 2 — two composition defects (group A class, defects at any size)
+
+The original group-A sweep found five; these two were missed and shipped.
+
+| File | Unit | What is broken |
+|---|---|---|
+| `eap-aed-wall-case.webp` | emergency-action-plan-ms (**7-8**) | The text block **crosses the right frame edge**: the final glyphs of *"Know where the AEDs are"* and *"so you can point an adult"* are sliced by the boundary. Zero right margin — the brief asks for ≥ 12 px. No word is lost, so meaning survives, but it is the same production defect as `ankle-sprain-rice-steps` reading "COMPRESSIO". |
+| `concussion-brain-movement-mechanism.webp` | concussion (**9-10**) | The caption *"Body hit can jolt the brain"* **collides with the inset panel's border rule**, which runs straight through the second line, and the circle boundary clips its descenders. |
+
+### ⚠ NEW FINDING 3 — group B, four more real cards (the 15th and beyond)
+
+Confirmed by stroke-merge test; ordered by how much teaching is lost.
+
+| File | Band | What fails | Prose carries it? |
+|---|---|---|---|
+| `heat-illness-cold-water-immersion-technique` | 9-10 | **Nearly all body text** across seven numbered boxes. The 102°F number survives; every instruction around it merges | **No** — "stir"/"agitate"/"submerge" are **x0** in the lesson. This card is the only place that procedure exists |
+| `heat-illness-sweat-cooling` | **7-8** | All four step **body paragraphs** ("Exercise produces heat. Core and skin temperatures begin to rise." etc.) plus the "BETTER COOLING" strip. The four step *headings* survive | Partly — the headings carry the skeleton, but "sweat turns to vapor" and "core and skin" are x0 in the 7-8 prose |
+| `shoulder-injuries-dislocation-vs-ac-sprain` | 9-10 | **"squared-off contour"** and **"step-off bump"** — the two recognition signs, i.e. the card's entire teaching | Mixed — "step-off" x3 in prose, but **"squared-off" x0 in prose** (quiz/flashcards only) |
+| `eap-cpr-hand-placement` | 9-10 | The "PUSH HARD AND FAST" **dose numbers** — *at least 2 inches (5 cm)*, *100–120 compressions* | Yes, in prose — lower severity, but these are the CPR numbers |
+
+**Minor, single-label, prose-covered — record but do not prioritise:**
+`concussion-lucid-interval-timeline` (y-axis *"symptom severity"* merges; the
+two curve shapes and "DETERIORATION / CALL 911" are large and clear),
+`heat-illness-dissipation-pathways` (the *"DOMINANT DURING INTENSE EXERCISE"*
+pill), `muscle-strains-terminal-swing-mechanism` (the *"eccentric braking"*
+label).
+
+### What the sweep says about the corpus overall
+
+**Of 139 diagrams: 130 need no action.** Nine carry a confirmed defect — the two
+composition defects, four real group-B cards, and three minor single-label ones —
+on top of the five already-briefed group-B cards (B3/B4). The wound-care,
+skin-conditions, sports-psychology, fractures-dislocations and
+warmup-injury-prevention sets came through completely clean.
+
+**The concentration is in heat-illness and emergency-action-plan** — the two
+strands whose cards are procedural, and procedure means numbered steps with body
+text under each heading. That is the format display size destroys, and it is a
+better predictor than grade band. (The earlier "11-12 is where density lives"
+pattern held for tables; it does not hold here — three of the four new group-B
+cards are 7-8 or 9-10.)
+
+**Both batch-14 redos and the jock-itch fix were re-confirmed as still correct**,
+as were all five group-A redraws, all four B1 cards and all three B2 cards. No
+previously-landed fix has regressed.
+
 **Dense tables — every cell unreadable, only the headers survive. ✅ ALL FOUR
 FIXED — correction batch B1, landed 2026-08-04 (PR #58):**
 `knee-acl-differential-comparison-chart` (11-12, 5 cols × 4 rows),
@@ -614,7 +721,40 @@ a different ask from B1 and B2.** Every leader-line label on
 `bankart-hill-sachs` is in the 11-12 prose (labrum ×15, glenohumeral ligament
 ×7, divot ×5, humeral head ×14). Every label on `glenohumeral-anatomy` is in
 the 9-10 prose except the view label "Posterior cuff — view from back", and
-both muscles it points at appear ×3 each. On `mandible-ring-anatomy` the
+both muscles it points at appear ×3 each.
+
+⚠ **Correction to that last count (2026-08-15).** The "×3 each" was a whole-file
+count that lumped image metadata in with teaching text. **Enumerated over the
+full JSON tree, the four cuff muscle names appear in exactly two places** in
+`shoulder-injuries.json` as it now stands:
+
+| Location | What it is |
+|---|---|
+| `sections[0].list[0]` | Rendered lesson content — *"Rotator cuff (SITS muscles) — four muscles (supraspinatus, infraspinatus, teres minor, subscapularis) that wrap around the ball of the joint…"* |
+| `flashcards[1].back` | Flashcard `f2`, "Rotator cuff (SITS)" |
+
+Zero quiz questions, and **zero in the `image` description** — the description was
+rewritten when the redesigned card landed and no longer names them individually.
+
+⚠⚠ **This count took three attempts, which is the real lesson.** (1) The original
+handoff said "×3 each in the 9-10 prose" — a whole-file count that could not tell
+prose from image metadata. (2) My correction to it said "zero section bodies,
+duplicated only by a flashcard" — wrong, because the scan read each section's
+`body` and never looked at `list`. Caught by Codex on PR #61. (3) The correction
+to *that* said three locations including the image description — also wrong,
+because I had rewritten that description earlier in the same PR and had not
+re-checked it.
+
+**The conclusion never changed and is stronger than the original claim: the names
+are duplicated in rendered lesson text at full reading size, so deleting them from
+a 343 px diagram costs nothing.** All three errors were in the evidence, not the
+decision — which is its own warning, because a stable conclusion made it easy to
+stop checking the numbers under it.
+
+**The habit, restated so it actually works:** count per *location*, and enumerate
+the location keys explicitly. A section can carry teaching text in `body`, `list`
+**and** `callout`. Scanning only `body` produces a confident zero that is simply
+false — which is worse than a whole-file `grep -c`, because it looks rigorous. On `mandible-ring-anatomy` the
 teaching cues are all covered (ring ×28, second fracture ×3, inferior alveolar
 ×3, mental nerve ×6, condyle ×4); only the plain anatomical part-names *ramus*,
 *angle* and *mental foramen* are card-only, and those are not the card's claim.
@@ -677,6 +817,74 @@ duplication of prose, not extra teaching), plus two cards where a single line
 is the only thing that fails and that line is the only one the prose does not
 carry. Brief those two separately from the three.
 
+✅ **B3 + B4 DELIVERED AND LANDED 4 of 5 (2026-08-15).** ChatGPT returned both
+batches in a single zip despite being briefed separately. Mechanically the
+cleanest delivery of the project: all five correct format, dimensions, ratio and
+folder, all inside the 30–60 KB budget, no slivers, no wrong-topic files.
+
+**Landed (4):** `shoulder-injuries-glenohumeral-anatomy`,
+`shoulder-injuries-bankart-hill-sachs`, `dental-trauma-mandible-ring-anatomy`,
+`overuse-injuries-acwr-graph`. Each verified with the stroke-merge test at 343 px
+against its own predecessor — the old/new pairs are unambiguous, e.g.
+"anterior-inferior labrum" goes from merged blobs to fully resolvable letterforms.
+Browser-verified at 375 px: all render, 0 placeholders, 0 console errors, 0 failed
+requests, no horizontal overflow, each displayed at exactly **343 px** (which also
+re-confirms the display-size arithmetic this whole effort rests on).
+
+**Held (1):** `muscle-strains-two-joint-muscles-map` — see
+`docs/briefs/B4-redo-muscle-strains.md`. The briefed fix was done correctly (the
+gracilis line is now legible), but the delivery also **replaced the `hamstrings`
+label with a four-line block naming semitendinosus, semimembranosus and biceps
+femoris (long head)** on a 9-10 card. Those three names appear **×0 in all three
+bands** — there is no band where they belong — and adding a four-line block runs
+directly against the purpose of the batch. Held on scope, not quality.
+
+⚠ **Two lessons from this delivery, both worth carrying forward.**
+
+1. **Additions get dropped when bundled with deletions.** Both B3 anatomy cards
+   executed every deletion and enlargement and **skipped the one label each brief
+   asked to ADD** — `glenohumeral-anatomy` still does not name the shallow socket,
+   and `mandible-ring-anatomy` still does not label the ring. Both were landed
+   anyway because the prose carries both concepts heavily ("shallow socket" is the
+   9-10 section's own words; "ring" ×28 in the 11-12 prose), so the omission costs
+   nothing here. **But next time, put additions in their own numbered section, not
+   in a list of removals.**
+2. **A brief specifies an end, and the author may reach it another way — judge the
+   end.** B3 told them to cut `bankart-hill-sachs` from four leader labels to two.
+   They kept all four and simply enlarged them. That was accepted, because the
+   acceptance test is legibility at 343 px and it passes decisively. The
+   fewer-labels instruction was a *means*; the handoff's own audit had said the
+   labels were safe to remove, not that removing them was required.
+
+**Browser-test gotcha, new:** asserting `img.complete && naturalWidth > 0`
+immediately after `networkidle` reports images below the fold as broken — the app
+lazy-loads them. The first run flagged five "broken" images including three files
+that had not been touched, with **0 failed requests and 0 console errors**, which
+is the tell. **Scroll the full page height and await `img.decode()` before
+asserting.** Same family as the QA sweep's "assert on decoded state, never on key
+presence" lesson.
+
+✅ **Both briefs are written and committed (2026-08-15) — the remaining work is
+the user's ChatGPT handoff, not a session task:**
+
+- **`docs/briefs/B3-annotation-redesigns.md`** — the three redesigns. Specifies
+  the exact final label set per card (5 / 2 / 5 labels), what to delete and why
+  each deletion is safe, and one *addition*: `glenohumeral-anatomy` never labels
+  the shallow socket, which is the section's actual teaching point, and
+  `mandible-ring-anatomy` never labels the ring, which is the card's entire claim.
+- **`docs/briefs/B4-single-line-fixes.md`** — the two one-line fixes, written to
+  be un-mergeable with B3 (it opens by saying so) because the failure mode here
+  is an author applying B1/B2's regrid to a card that only needs one line reset.
+
+**Both briefs carry a measured size floor rather than a vague "make it bigger".**
+On `glenohumeral-anatomy`, labels that currently survive 343 px have ~16–18 px of
+ink height at 900 px and the one that fails has ~13 px. **That margin is too thin
+to aim at**, so the briefs ask for ~28–32 px — roughly double the failing labels.
+This is *not* the discredited glyph metric being revived: it is not used to
+classify any image, only to give the author a floor to draw to. The acceptance
+test stays the stroke-merge check at 343 px, and both briefs ask for a 343 px
+render to be shipped alongside each source file.
+
 ✅ **Every strand is now sourced. All 54 unit files carry a `sources` array
 as of 2026-08-04.** dental-facial-trauma, cold-exposure and skin-conditions
 landed 2026-08-03; eye-injuries closed it on 2026-08-04.
@@ -692,7 +900,9 @@ mandating ice-hockey face protectors — nothing on recognition or management.
 Attaching it would have made a strand read as sourced while its substance
 stayed uncited.
 
-⚠ **Eight claims remain uncited inside strands that are otherwise sourced.**
+⚠ **Four claims remain uncited** (was eight; four closed 2026-08-15 against
+supplied PDFs — see the worked table below, which supersedes this paragraph's
+count). The original framing is kept because the reasoning still applies:
 (RED-S closed 2026-08-04. Two were added the same day when Codex checked the
 newly attached sources against *every* section rather than the headline topic:
 eye-injuries' chemical-splash guidance — which spans **both** the 9-10 and
@@ -702,20 +912,117 @@ Tracking coverage per *strand* hides these, which is how the tester-facing
 count came to be wrong twice — keep this list complete, and update it whenever
 a source is attached that doesn't cover everything a unit teaches.
 
-| Strand / band | Uncited claim | Recorded at |
+### ✅ Worked through against supplied PDFs, 2026-08-15 — 3 closed, 1 partial, 4 open
+
+**Counting note:** the eye chemical claim is counted as **open**, not closed. The
+supplied AAO source does support immediate/continuous irrigation and medical
+evaluation, but the thing actually on the uncited table is the **15–20 minute flush
+duration**, and that is precisely what it does not support. An earlier version of
+this heading said "4 closed, 4 open" by counting it as closed — counting a
+partially-supported claim as closed is how a gap disappears from tracking.
+
+The owner supplied a triaged bundle of PDFs. **Every claim below was checked by
+searching the document itself, not by trusting the bundle's own README** — which
+was correct on every call it made, but is exactly the kind of assertion this
+project does not attach sources on.
+
+| Strand / band | Uncited claim | Status |
 |---|---|---|
-| warmup-injury-prevention 11-12 | Raising muscle temperature by ~1–2 °C meaningfully shifts tissue properties | batch 14 notes |
-| taping-wrapping 11-12 | Much of rigid tape's motion restriction is gone within ~20–30 min of activity | ledger |
-| eye-injuries **9-10 and 11-12** | Chemical-splash guidance — 15–20 minutes of flushing plus mandatory medical follow-up (9-10 callout, quiz and flashcard `f10`; 11-12 has a full section). Source has 0 hits for "chemical"/"alkali"/"acid burn" | ledger |
-| skin-conditions 7-8 and 9-10 | **"Leave an intact blister alone"** specifically. The rest of blister care (clean, cover, non-stick dressing, infection referral) was sourced 2026-08-04 to NATA Acute Skin Trauma; this one claim is not in it | ledger |
-| dental-facial-trauma 7-8, 9-10 | Nosebleed management (the NATA dental statement has 0 hits for "nosebleed"/"epistaxis") | ledger |
-| cold-exposure 11-12 | Frostnip classified as a *non-freezing* injury | ledger |
-| cold-exposure 11-12 | "Water conducts heat ~25× faster than air" | ledger |
-| cold-exposure 11-12 | The "1-10-1 principle" naming (the physiology is covered; the mnemonic isn't) | ledger |
+| dental-facial-trauma **7-8, 9-10** + **wound-care 7-8, 9-10** | Nosebleed management | ✅ **CLOSED** — AAFP *Epistaxis: Outpatient Management* states *"Firm pressure is placed on the bilateral nostrils, **below the nasal bones, for 10 to 15 minutes without interruption**."* Matches what the units teach, including the soft-part-not-bony-bridge detail |
+| cold-exposure 11-12 | Frostnip classified as a *non-freezing* injury | ✅ **CLOSED** — WMS Frostbite 2024 states it verbatim: *"Frostnip is a superficial **nonfreezing** cold injury… With frostnip, **ice crystals do not form within the tissue**, and tissue loss does not occur."* The unit's existing wording already matched this precisely, including the "within the tissue" qualifier |
+| taping-wrapping 11-12 **+ ankle-sprain 11-12** | Rigid tape's motion restriction decaying during activity | ✅ **CLOSED, and the figure was wrong** — see below |
+| dental-facial-trauma 9-10 / 11-12 | *(was a held decision, not an uncited claim)* Student replantation + storage ranking | ✅ **SETTLED** — see the dental entry in the ledger |
+| warmup-injury-prevention 11-12 | Raising muscle temperature by ~1–2 °C meaningfully shifts tissue properties | ⚠ **STILL OPEN.** The only document supplied was a **ScienceDaily news article**, which reports a performance change per 1 °C but does not support the tissue-property claim. Correctly filed as do-not-cite; the Shellock & Prentice paper was not obtained |
+| eye-injuries **9-10 and 11-12** | Chemical-splash guidance — **the 15–20 minute flush duration specifically** | ⚠ **PARTIALLY CLOSED.** AAO *Treating Acute Chemical Injuries of the Cornea* supports immediate copious irrigation at the site, continued through transport, plus hospital evaluation — but gives a **pH endpoint (7.0–7.2), not a duration**. 0 hits for "20 min"/"30 min". **The fixed 15–20 minute figure remains uncited** |
+| cold-exposure 11-12 | "Water conducts heat ~25× faster than air" | ⚠ **STILL OPEN** — WMS Hypothermia 2019 has **0 hits** for "25 times", "25-fold" or "twenty-five". Its 7 "conduction" mentions are general heat-transfer exposition |
+| cold-exposure 11-12 | The "1-10-1 principle" naming | ⚠ **STILL OPEN** — **0 hits** for "1-10-1" in WMS Hypothermia 2019. The underlying physiology is covered there; the mnemonic is not |
+| skin-conditions 7-8 and 9-10 | **"Leave an intact blister alone"** specifically | ⚠ **STILL OPEN, but a candidate exists and was never requested** — see below |
+
+⚠⚠ **I reported the blister claim as having no candidate source. That was wrong.**
+`docs/CONTENT-REVIEW.md` line 697 already maps **American Academy of Dermatology,
+*How to Prevent and Treat Blisters* (2024)** to exactly this claim — "leaving
+intact blister roof in place". I wrote "no candidate was ever identified" without
+checking the reference list I had myself described, two days earlier, as naming
+candidates for seven of the eight claims. Caught by Codex on PR #61.
+
+**This is the worst class of error available in this workstream**, and it is worth
+being precise about why: reporting a claim as *unsourceable* does not just leave a
+gap, it removes the claim from the fetch/check workflow entirely. The owner would
+have stopped looking. A wrong "still open" is more damaging than a wrong
+attachment, because an attachment gets reviewed and a closed door does not.
+
+**The AAD page has been added to the fetch list.** It still needs full-text
+verification before attachment — the AAD is a lay-audience patient-education page,
+so whether it states the intact-roof rule in citable terms is exactly the question,
+and it may not survive the check. But it must enter the workflow rather than be
+declared absent.
+
+⚠⚠ **The tape claim was not merely uncited — it was wrong, and in two strands.**
+Both `taping-wrapping-adv` and `ankle-sprain-adv` said a substantial share of
+rigid tape's restriction is gone "within about **20-30 minutes**." The source now
+attached (Zwiers et al.) says *"most of the restrictive effects are lost during
+the **first 20 minutes**"*, and its Table 2 puts tape at *"Lost beneficial
+restrictive effects **after 15 min** of exercise."* **The lesson was slower than
+the evidence**, so all five occurrences were corrected to "about 15-20 minutes."
+
+The same passage in `ankle-sprain-adv` also claimed semi-rigid braces "maintain
+their support through a full practice or game." Table 2 puts braces at **45
+minutes**, which supports *longer than tape* but not *a whole session*. Reworded
+to state the comparison the source actually makes.
+
+⚠ **Two bibliographic corrections, both from `docs/CONTENT-REVIEW.md`'s reference
+list — more evidence that list is leads, not citations.** The taping paper is
+**Zwiers et al., J ISAKOS 2016;1:304-310** (received Aug 2016, DOI
+`10.1136/jisakos-2016-000104`), **not a 2021 publication**. And the supplied
+epistaxis paper is **Womack et al., Am Fam Physician 2018;98(4):240-245**, not the
+2005 article the list named — the 2005 paper appears only in its reference list.
+
+⚠ **The nosebleed row understated its own scope, which is now the third time a
+coverage table here has done that.** It listed dental-facial-trauma 7-8 and 9-10.
+Nosebleed is actually taught in **four** units — `dental-facial-trauma-ms` (11
+mentions), `dental-facial-trauma` (10), `wound-care-ms` (7) and `wound-care` (4).
+All four now carry the AAFP source. `dental-facial-trauma-adv` has a single
+passing mention and was deliberately left alone.
+
+**One thing to watch on the nosebleed source:** AAFP says **10 to 15 minutes**;
+the units teach "a full 10 minutes." That is the floor of the recommended range
+rather than a contradiction, and the 9-10 unit already routes to medical care if
+bleeding persists past 10 minutes — but if these units are ever revised, matching
+the source's 10–15 would be tighter.
 
 **A strand being sourced is not the same as every section in it being
 sourced.** Any doc that quotes a count — `TESTERS.md` especially — must reflect
 this table, not just the unsourced-strand count.
+
+### PR #25 names candidate sources for 7 of these 8 (found 2026-08-15)
+
+`docs/CONTENT-REVIEW.md` — sitting unmerged on `claude/fable-sonnet-review-hcnppi`
+since 2026-07-11 — carries a ~128-source reference list mapped to claim numbers,
+and it happens to name a candidate for almost every open gap in the table above:
+
+| Uncited claim | Candidate named in PR #25 |
+|---|---|
+| warmup 11-12 — ~1–2 °C tissue shift | Shellock & Prentice, *Warming up and stretching…* (Sports Med, 1985) — "target temperature rise" |
+| taping 11-12 — restriction gone in 20–30 min | *Taping and bracing in the prevention of ankle sprains* (J ISAKOS, 2021) — "rigid tape's motion-restriction decay during activity" |
+| eye 9-10 + 11-12 — chemical splash / flush duration | AAO *EyeNet*, *Treating Acute Chemical Injuries of the Cornea* — "alkali vs. acid mechanism, flush duration" |
+| dental 7-8 + 9-10 — nosebleed | AAFP, *Management of Epistaxis* — "nosebleed pinch-duration guidance" |
+| cold 11-12 — frostnip as non-freezing | WMS *Frostbite: 2024 Update* — "freezing vs. non-freezing injury distinction" |
+| cold 11-12 — water conducts ~25× faster | WMS *Accidental Hypothermia: 2019 Update* — "conduction rate" |
+| cold 11-12 — "1-10-1 principle" | WMS *Accidental Hypothermia: 2019 Update* — names 1-10-1 explicitly |
+| **skin 7-8 + 9-10 — leave an intact blister alone** | **none — its refs are all infectious-disease** |
+
+⚠ **These are leads, not citations, and must not be attached on this basis.** The
+mappings are LLM-asserted and nobody has opened the documents. This is the exact
+failure the warmup sources were stripped for on PR #47 — restored only once full
+bibliographic records came back. **Every URL in that list was tested from the
+container on 2026-08-15 and all are blocked** (gateway returns 403 to CONNECT —
+aao.org, aafp.org, nata.org, pmc.ncbi.nlm.nih.gov, sagepub, springer). So this
+cannot be closed from a session either; it needs the PDFs uploaded, the way the
+NATA statement was for taping-wrapping.
+
+**What it changes:** the eight gaps stop being "find a source" and become "fetch
+seven named documents and check them." That is a materially cheaper ask of the
+user, and it is the argument for landing PR #25.
 
 **Recurring quality issue to watch (batches 6 + 7):** ChatGPT keeps
 exporting cards with a sliver of the neighboring panel bleeding into a

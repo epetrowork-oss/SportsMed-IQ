@@ -4,7 +4,11 @@
   "category": "Acute Care & First Aid",
   "strand": "taping-wrapping",
   "gradeBand": "11-12",
-  "standards": ["CTE.HSMT.B.1.2", "CTE.HSMT.B.2.4", "CTE.HSMT.Anchor.6"],
+  "standards": [
+    "CTE.HSMT.B.1.2",
+    "CTE.HSMT.B.2.4",
+    "CTE.HSMT.Anchor.6"
+  ],
   "summary": "Go beyond the basic basket weave: what separates an effective tape job from a decorative one, common failure modes, materials science, the real evidence behind taping and kinesiology tape, and the clinical reasoning an aide uses to choose tape, brace, or nothing.",
   "minutes": 24,
   "sections": [
@@ -65,9 +69,9 @@
     {
       "heading": "The evidence layer: how long does taping actually work?",
       "body": [
-        "A well-applied rigid tape job is not a static barrier that holds its exact mechanical properties for an entire game. Studies measuring ankle range of motion before and after a single practice or game consistently find that a substantial share of the initial motion restriction is gone within about 20-30 minutes of activity, as the tape stretches with sweat, heat, and repeated loading — and this happens even when the job was applied correctly, not just when it was applied poorly.",
+        "A well-applied rigid tape job is not a static barrier that holds its exact mechanical properties for an entire game. Studies measuring ankle range of motion before and after a single practice or game consistently find that a substantial share of the initial motion restriction is gone within about 15-20 minutes of activity, as the tape stretches with sweat, heat, and repeated loading — and this happens even when the job was applied correctly, not just when it was applied poorly.",
         "What's left after that mechanical decay is thought to be largely proprioceptive: continued light pressure and skin stimulation around the joint appears to speed up the reflex reaction time of stabilizing muscles, rather than physically blocking the joint from moving. This is a meaningful distinction for how you talk about tape — \"the tape is still stuck on\" is not the same claim as \"the tape is still mechanically restricting the joint.\"",
-        "Tape vs. brace, compared head to head: semi-rigid ankle braces hold their mechanical properties through a full session in a way tape does not, and across a season the two are comparably effective at reducing sprain recurrence, especially in athletes with a prior sprain history. The practical tradeoff is cost and reusability — a brace is purchased once and reused session after session, while tape is a consumable that must be repurchased and reapplied by trained hands every single time. Neither is universally \"better\"; the choice depends on the situation, which is covered in the next section.",
+        "Tape vs. brace, compared head to head: semi-rigid ankle braces hold their mechanical restriction substantially longer than tape does — measured at roughly three times as long, though they lose beneficial restriction over a long session too — and across a season the two are comparably effective at reducing sprain recurrence, especially in athletes with a prior sprain history. The practical tradeoff is cost and reusability — a brace is purchased once and reused session after session, while tape is a consumable that must be repurchased and reapplied by trained hands every single time. Neither is universally \"better\"; the choice depends on the situation, which is covered in the next section.",
         "None of this changes when taping is inappropriate. Taping an unevaluated acute injury is still a hard no — restriction can give a false sense of security while masking pain from a structure that hasn't been checked for a fracture. And taping as a long-term substitute for rehab carries a deeper problem than just \"it doesn't heal anything\": restricting motion at one joint without restoring the strength and proprioception that were lost in the original injury doesn't remove the underlying deficit — it just postpones dealing with it. That isn't a claim that the tape stops helping: prophylactic taping genuinely reduces recurrence for an athlete with a prior sprain, and as the section above describes, that benefit outlives the mechanical restriction. The point is that the protection is external and temporary — an ankle taped tightly enough to block inversion, on an athlete who never rebuilt balance and peroneal strength, still carries the same deficit the moment the tape comes off, and it will keep needing tape to cover for what rehab was supposed to restore. Worth knowing what the evidence does and does not say here: studies to date have not found that taping or bracing an ankle increases knee injuries, so the concern with tape-as-permanent-crutch is the unaddressed deficit itself, not a guaranteed second injury elsewhere in the kinetic chain."
       ]
     },
@@ -145,12 +149,12 @@
       "question": "An athlete with three prior ankle sprains is entering a weekend tournament with four games across two days. Considering the evidence on tape vs. brace and the practical demands of the schedule, what is the most reasonable choice?",
       "choices": [
         "Rigid athletic tape reapplied fresh before each of the four games",
-        "A semi-rigid ankle brace, which maintains its support through each game without needing to be stripped and reapplied between matches, and is comparably effective across a season",
+        "A semi-rigid ankle brace, which holds its restriction substantially longer than tape and does not need to be stripped and reapplied between matches, and is comparably effective across a season",
         "No support at all, since tape and braces are proven equally ineffective",
         "Kinesiology tape, since it is the fastest to apply between games"
       ],
       "answerIndex": 1,
-      "explanation": "Tape and semi-rigid braces are comparably effective at reducing sprain recurrence, but a brace retains its mechanical properties through a full session and is reusable, which is the more practical choice for a tight tournament schedule requiring support across multiple games without retaping each time."
+      "explanation": "Tape and semi-rigid braces are comparably effective at reducing sprain recurrence, but a brace retains its mechanical restriction substantially longer than tape and is reusable, which is the more practical choice for a tight tournament schedule requiring support across multiple games without retaping each time."
     },
     {
       "id": "q5",
@@ -169,12 +173,12 @@
       "question": "A coach argues that a rigid ankle tape job is \"still doing its job\" for the whole game because the tape is still visibly stuck on. Why is this an oversimplification?",
       "choices": [
         "Tape provides zero benefit at any point after application",
-        "A substantial share of the initial mechanical restriction typically decays within about 20-30 minutes of activity even when the tape is still adhered; the remaining benefit afterward is thought to be mainly proprioceptive, not a true mechanical block",
+        "A substantial share of the initial mechanical restriction typically decays within about 15-20 minutes of activity even when the tape is still adhered; the remaining benefit afterward is thought to be mainly proprioceptive, not a true mechanical block",
         "Tape only works if it's reapplied every 5 minutes during the game",
         "Sweat has no effect on how tape performs during activity"
       ],
       "answerIndex": 1,
-      "explanation": "Being stuck on and providing true mechanical restriction are two different things. Studies show much of the initial motion restriction from rigid tape decays within about 20-30 minutes of activity as the tape stretches with sweat and movement — after that point, the ongoing benefit is thought to be mostly proprioceptive skin stimulation rather than an actual mechanical block."
+      "explanation": "Being stuck on and providing true mechanical restriction are two different things. Studies show much of the initial motion restriction from rigid tape decays within about 15-20 minutes of activity as the tape stretches with sweat and movement — after that point, the ongoing benefit is thought to be mostly proprioceptive skin stimulation rather than an actual mechanical block."
     },
     {
       "id": "q7",
@@ -240,12 +244,12 @@
     {
       "id": "f8",
       "front": "Mechanical restriction decay",
-      "back": "A well-applied rigid tape job loses a substantial share of its initial motion restriction within about 20-30 minutes of activity, even without any application error, as it stretches with sweat and movement."
+      "back": "A well-applied rigid tape job loses a substantial share of its initial motion restriction within about 15-20 minutes of activity, even without any application error, as it stretches with sweat and movement."
     },
     {
       "id": "f9",
       "front": "Tape vs. brace — comparative evidence",
-      "back": "Comparably effective at reducing sprain recurrence across a season. Braces hold their properties through a full session and are reusable; tape must be reapplied and repurchased every session — a cost/reusability tradeoff, not a clear performance winner."
+      "back": "Comparably effective at reducing sprain recurrence across a season. Braces hold their restriction substantially longer than tape (roughly three times as long in the cited measurements, though not indefinitely) and are reusable; tape must be reapplied and repurchased every session — a cost/reusability tradeoff, not a clear performance winner."
     },
     {
       "id": "f10",
@@ -269,6 +273,12 @@
       "publisher": "Journal of Athletic Training",
       "year": 2013,
       "url": "https://doi.org/10.4085/1062-6050-48.4.02"
+    },
+    {
+      "title": "Taping and bracing in the prevention of ankle sprains: current concepts",
+      "publisher": "Journal of ISAKOS 2016;1:304-310",
+      "year": 2016,
+      "url": "https://doi.org/10.1136/jisakos-2016-000104"
     }
   ]
 }

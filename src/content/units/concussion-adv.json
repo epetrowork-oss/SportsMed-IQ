@@ -35,7 +35,7 @@
       "heading": "Second impact syndrome",
       "body": [
         "Second impact syndrome is the catastrophic outcome that can occur when a brain still inside that vulnerable metabolic window absorbs another blow — even a relatively minor one. The second hit appears to overwhelm the brain's ability to autoregulate (control its own blood vessel diameter to keep blood flow steady). Blood vessels dilate uncontrollably, the brain rapidly engorges with blood, and pressure inside the skull rises faster than the body can compensate.",
-        "The result is malignant cerebral edema (severe, rapid brain swelling) that can cause herniation — the brain being pushed against or through structures it shouldn't move past — within minutes. Reported mortality is extremely high, and near-fatal cases usually leave permanent disability. It is rare, but it is almost exclusively documented in adolescents and young athletes, likely because the developing adolescent brain's blood vessels are more reactive to this autoregulation failure than an adult's.",
+        "The result is malignant cerebral edema (severe, rapid brain swelling) that can cause herniation — the brain being pushed against or through structures it shouldn't move past — within minutes. Reported mortality in the published cases is very high, and near-fatal cases usually leave permanent disability. The published case series are small, which is why you will see the risk described in strong but imprecise terms. It is rare, but it is almost exclusively documented in adolescents and young athletes, likely because the developing adolescent brain's blood vessels are more reactive to this autoregulation failure than an adult's.",
         "This is the mechanism, not just the rule, behind 'no same-day return' and stepwise clearance: every stage of recovery exists to make sure the metabolic energy crisis has actually resolved before the brain faces exertional or contact stress again."
       ]
     },
@@ -96,7 +96,7 @@
     {
       "heading": "Policy and the athletic training student's role",
       "body": [
-        "Every U.S. state's youth concussion law is built on roughly the same three pillars: education (coaches, athletes, and parents must receive concussion training, usually annually), removal (any athlete with a suspected concussion is removed from play immediately, same day, no exceptions), and clearance (written clearance from a licensed healthcare provider is required before return to contact activity — never a coach's or parent's judgment call).",
+        "Every U.S. state has a youth concussion law, and they are built on roughly the same three pillars \u2014 though the specifics, including who counts as an approved provider and how often education must be repeated, vary from state to state: education (coaches, athletes, and parents must receive concussion training, usually annually), removal (any athlete with a suspected concussion is removed from play immediately, same day, no exceptions), and clearance (written clearance from a licensed healthcare provider is required before return to contact activity — never a coach's or parent's judgment call).",
         "As a student athletic-training aide, your real-world contribution to that system is rarely dramatic: accurate, timely documentation (time of injury, mechanism, initial observations, who was notified and when) and being the person who actually saw the hit when the athletic trainer didn't. That eyewitness detail — how the athlete went down, whether they moved immediately, what they said first — is genuinely useful clinical information, even though you are never the one deciding what it means."
       ]
     }
@@ -218,7 +218,7 @@
     {
       "id": "f4",
       "front": "Second impact syndrome (mechanism)",
-      "back": "A second hit during the vulnerable recovery window can cause loss of cerebral blood vessel autoregulation, leading to rapid, often fatal brain swelling (malignant cerebral edema). Nearly exclusive to adolescents/young athletes."
+      "back": "The proposed mechanism is loss of cerebral blood vessel autoregulation after a second hit during the vulnerable window, leading to rapid, often fatal brain swelling (malignant cerebral edema). Almost exclusively documented in adolescents and young athletes \u2014 though the published case series are small."
     },
     {
       "id": "f5",
