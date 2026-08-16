@@ -1,27 +1,46 @@
 # Documents to pull from the ChatGPT side and upload here
 
-# ✅ DELIVERED 2026-08-15 — this list has been fulfilled. Read this box first.
+# ⏳ PARTLY FULFILLED — three things are still wanted. Read this box first.
 
-**The owner supplied a triaged bundle covering 9 of the 10 documents below, and
-the sourcing work is done.** What follows is kept as the record of what was
-requested and why; **it is no longer a to-do list.** Current state:
+**The owner supplied a triaged bundle covering 9 of the 10 documents originally
+requested, and that batch has been fully worked through.** The original
+ten-document request in sections A–C below is **archived** — do not re-upload
+those. But this page is **not finished**: three follow-ups are live, and two of
+them are new documents that were never in the original request.
+
+## 🔴 Still wanted
+
+| # | Item | Why |
+|---|---|---|
+| 1 | **AAD, *How to Prevent and Treat Blisters* (2024)** — full entry below under "Still wanted" | The last of the original eight claims. I wrongly reported it as having no candidate; it was in `docs/CONTENT-REVIEW.md` all along |
+| 2 | **Shellock & Prentice, *Warming up and stretching…*, Sports Med 1985** (row 6) | Never obtained. Would close the warm-up ~1–2 °C claim |
+| 3 | **Standards verification** — both California PDFs *have* arrived and are usable | ⏳ **Not started.** No upload needed; this is session work |
+
+## ✅ Done
 
 | Thread | Status |
 |---|---|
-| **Claim-level sourcing** | **4 of 8 claims closed**, 4 still open. Results in `docs/HANDOFF.md` — that table is authoritative, not section A below |
+| **Claim-level sourcing** | **3 of 8 claims fully closed** (tape decay, nosebleed, frostnip); **1 partially closed** (eye chemical — the irrigation guidance is citable, the 15–20 minute duration is not); **4 still open**. The worked table in `docs/HANDOFF.md` is authoritative, not section A below |
 | **Both held dental decisions** | ✅ **SETTLED** by the IADT guideline, with **no content change needed** in either case. Section C below is history |
-| **Standards verification** | ⏳ **Not started.** Both California PDFs arrived and are usable. **This is the one genuinely outstanding item on this page** |
+
+⚠ **On the count:** an earlier version of this box said "4 of 8 closed, 4 open."
+That counted the eye chemical claim as closed when the specific thing on the
+uncited table — the **15–20 minute flush duration** — is exactly what the source
+does not support. Counting a partially-supported claim as closed is how a gap
+gets lost, so it is now counted as open.
 
 **Still uncited after the pass**, each checked rather than assumed: the "1-10-1"
 naming and the ~25× water/air conduction figure (**0 hits** in WMS Hypothermia
 2019); the fixed 15–20 minute eye flush (AAO gives a **pH endpoint of 7.0–7.2**,
 not a duration); the warm-up ~1–2 °C tissue-property claim (only a ScienceDaily
 article was supplied, correctly filed do-not-cite); and the closed-blister claim
-(never had a candidate).
+(**a candidate does exist** — the AAD page in the still-wanted table above; it was
+never fetched because I wrongly reported the claim as having none).
 
-**Two documents are still wanted.** Row 6 (Shellock & Prentice) was never
-obtained. And one was never *requested*, because I wrongly reported its claim as
-having no candidate:
+## Still wanted — full entry for item 1 above
+
+Row 6 (Shellock & Prentice) was never obtained. And this one was never
+*requested*, because I wrongly reported its claim as having no candidate:
 
 | Document | Closes | Must contain |
 |---|---|---|
@@ -72,6 +91,11 @@ has to actually say for the citation to stick.
 | 5 | **Journal of ISAKOS 2021, *Taping and bracing in the prevention of ankle sprains: current concepts*** | taping-wrapping **11-12** | **Rigid tape's mechanical restriction decaying during activity** (the unit says much of it is gone within ~20–30 min). The NATA ankle statement's reference list was checked and does not address decay |
 | 6 | **Shellock & Prentice, *Warming up and stretching for improved physical performance and prevention of sports-related injuries*, Sports Med 1985** | warmup-injury-prevention **11-12** | A **target muscle-temperature rise** (the unit says ~1–2 °C meaningfully shifts tissue properties). ⚠ If this lands, it becomes the **oldest source in the project** at 1985 — worth a look for something more recent first |
 | 7 | **NATA, *Position Statement: Environmental Cold Injuries* (Cappaert et al.)** | cold-exposure, backup for row 2 | **Injury-type distinctions** — may cover the frostnip classification if the WMS frostbite guideline does not |
+
+⚠ **ARCHIVED AND WRONG — "The eighth claim has no candidate" was incorrect.** The
+AAD *How to Prevent and Treat Blisters* page was mapped to this claim in
+`docs/CONTENT-REVIEW.md` line 697 the whole time. See the still-wanted table at the
+top of this page. The original paragraph is kept below as written:
 
 **The eighth claim has no candidate.** skin-conditions **7-8 and 9-10** tell
 students *"if the blister is still closed, leave it alone."* Neither NATA

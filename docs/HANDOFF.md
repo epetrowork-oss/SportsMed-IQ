@@ -912,7 +912,14 @@ Tracking coverage per *strand* hides these, which is how the tester-facing
 count came to be wrong twice — keep this list complete, and update it whenever
 a source is attached that doesn't cover everything a unit teaches.
 
-### ✅ Worked through against supplied PDFs, 2026-08-15 — 4 closed, 4 still open
+### ✅ Worked through against supplied PDFs, 2026-08-15 — 3 closed, 1 partial, 4 open
+
+**Counting note:** the eye chemical claim is counted as **open**, not closed. The
+supplied AAO source does support immediate/continuous irrigation and medical
+evaluation, but the thing actually on the uncited table is the **15–20 minute flush
+duration**, and that is precisely what it does not support. An earlier version of
+this heading said "4 closed, 4 open" by counting it as closed — counting a
+partially-supported claim as closed is how a gap disappears from tracking.
 
 The owner supplied a triaged bundle of PDFs. **Every claim below was checked by
 searching the document itself, not by trusting the bundle's own README** — which

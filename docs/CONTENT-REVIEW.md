@@ -93,9 +93,12 @@ below; this is the short version.
 - Caffeine flatly called "a mild diuretic" — current sports-nutrition
   consensus is more nuanced for habitual users (hydration 9-10).
 - Commotio cordis "10-30 millisecond" window, myositis ossificans 2-4 week
-  timelines, tape restriction fading "within 20-30 minutes," FIFA 11+
-  "reduce injuries by one-third to one-half" — precise, quotable numbers
-  worth confirming against sources.
+  timelines, FIFA 11+ "reduce injuries by one-third to one-half" —
+  precise, quotable numbers worth confirming against sources.
+  ⚠ **The tape-restriction figure was on this list and has since been
+  checked: it was wrong.** "Within 20-30 minutes" is now 15-20, per
+  Zwiers et al. 2016. See claim 5 under taping-wrapping and claim 10
+  under ankle-sprain. **The others here are still unverified.**
 - Minor: warmup 11-12 renders "1-2°C" as "about 2-4°F" (precisely
   1.8-3.6°F).
 
@@ -180,10 +183,18 @@ routes to a human. Labels:
 
 - Commotio cordis "10-30 ms" window (`emergency-action-plan-adv`),
   myositis ossificans 2-4 week timelines (`muscle-strains-adv`), tape
-  restriction fading "within 20-30 minutes" (`ankle-sprain-adv` /
-  `taping-wrapping-adv`), FIFA 11+ "reduce injuries by one-third to
+  FIFA 11+ "reduce injuries by one-third to
   one-half" (`warmup-injury-prevention-adv`). The sourcing pass did not
   contradict these; treat as a quick confirm against the cited source.
+
+  ⚠ **One item was removed from this list on 2026-08-15 because it was
+  checked and turned out to be wrong**, not merely unconfirmed: tape
+  restriction fading "within 20-30 minutes" (`ankle-sprain-adv` /
+  `taping-wrapping-adv`). Zwiers et al. 2016 puts it in the first 20
+  minutes, and the units now say 15-20. The accompanying full-session
+  brace claim was also an overclaim and was reworded. **The rest of this
+  list remains unverified — do not read "the sourcing pass did not
+  contradict these" as evidence any of them is correct.**
 
 **Working split, so the two of us don't collide:** GPT can take the
 `[GPT-READY]` list as a spec (validate + build + browser-verify each, small
@@ -451,7 +462,7 @@ against the official CDE PDFs) lives in `docs/STANDARDS-VERIFICATION.md`.
 7. ⚠ High ankle (syndesmotic) sprain recovery is "about two to three times longer... a Grade I-II lateral sprain might be 2-6 weeks, while a syndesmotic sprain often runs 6-12+ weeks." — 11-12 §"The syndesmosis", flashcard "High ankle sprain recovery time"; 9-10 §"Mechanism of injury" (says "heals slowly" without exact figures)
 8. Balance/proprioceptive training (e.g., wobble-board single-leg stands) is "the best-proven"/"single best-supported" intervention to reduce re-sprains. — 9-10 §"Immediate care", quiz Q8; 11-12 §"Proprioception and functional testing"
 9. Limb symmetry index of "roughly 90% or better" (hop-test performance vs. uninjured side) before clearing return to play. — 11-12 §"Proprioception and functional testing", quiz Q6
-10. Athletic tape "loses a substantial amount of its mechanical restriction within about 20-30 minutes of activity," while semi-rigid braces maintain support through a full practice/game and are comparably or more effective at reducing re-sprain. — 11-12 §"Prevention: what the evidence actually supports"
+10. ✅ **RESOLVED 2026-08-15 — both halves were wrong and the unit has been corrected.** This row previously read: tape "loses a substantial amount of its mechanical restriction within about 20-30 minutes of activity," while braces "maintain support through a full practice/game." Verified against Zwiers et al. 2016: most restriction is lost in the **first 20 minutes** (Table 2: tape 15 min, brace 45 min). The unit now says **15-20 minutes**, and the brace claim now says braces hold restriction roughly three times longer than tape rather than through a whole session. **Do not reintroduce the old figures.** — 11-12 §"Prevention: what the evidence actually supports"
 11. ⚠ "The Ottawa Ankle Rules were validated primarily in adults and don't fully account for" growth-plate (Salter-Harris) injuries in skeletally immature athletes. — 11-12 §"Differential diagnosis", callout "Refer beyond 'it's just a sprain'"
 12. Ice application specifics: 15-20 minutes at a time, never directly on skin, "roughly every 2 hours while awake" during the acute phase. — 7-8 §"What to do right away" (no interval specified); 9-10 §"Immediate care", quiz Q3, Q5
 13. Acute-care evolution PRICE → POLICE → PEACE & LOVE, including "Avoid anti-inflammatory medications and modalities as a routine crutch" during the acute phase. — 11-12 §"The evolution of acute care", quiz Q8
@@ -581,9 +592,9 @@ against the official CDE PDFs) lives in `docs/STANDARDS-VERIFICATION.md`.
 2. ⚠ "Signs a wrap is too tight: capillary refill slower than 2 seconds, numbness/tingling, pale/blue/cool skin, or increasing throbbing pain — normal capillary refill is under 2 seconds." — 9-10 §"After you wrap: the circulation check"; quiz Q3; ms §"Too tight? Speak up right away"; flashcards both bands
 3. ⚠ "Compression wraps must always go distal to proximal (start farthest from the heart); wrapping the other direction can trap fluid and make swelling worse." — 9-10 §"Elastic wraps: spirals and figure-8s"; quiz Q2; flashcard "Distal to proximal"
 4. "Closed basket weave build order: two anchor strips, then alternating stirrups and horseshoes (each overlapping about half its width), finished with figure-8s and heel locks." — 9-10 §"Ankle taping: the closed basket weave"; adv §"Effective vs. decorative: what a good tape job actually requires"; adv quiz Q1
-5. "A well-applied rigid ankle tape job loses a substantial share of its initial motion restriction within about 20-30 minutes of activity, even when applied correctly." — adv §"The evidence layer: how long does taping actually work?"; quiz Q6; flashcard "Mechanical restriction decay"
+5. ✅ **RESOLVED 2026-08-15 — corrected to 15-20 minutes.** Previously "within about 20-30 minutes." Zwiers et al. 2016 says most restrictive effects are lost during the **first 20 minutes**, with Table 2 putting tape at 15 min. Source now attached. **Do not reintroduce 20-30.** — adv §"The evidence layer: how long does taping actually work?"; quiz Q6; flashcard "Mechanical restriction decay"
 6. "Systematic reviews of kinesiology tape find weak, inconsistent evidence for pain/swelling/performance claims beyond placebo; it provides no meaningful mechanical restriction, unlike rigid tape." — adv §"Materials science: what each product actually does"; quiz Q3; flashcard
-7. "Semi-rigid ankle braces are comparably effective to tape at reducing sprain recurrence across a season, and hold their mechanical properties through a full session in a way tape does not." — adv §"The evidence layer"; quiz Q4; flashcard "Tape vs. brace — comparative evidence"
+7. ✅ **RESOLVED 2026-08-15 — the full-session half was an overclaim and has been reworded on all four surfaces.** The comparable-effectiveness half stands. Zwiers et al. Table 2 measures braces at **45 minutes**, which supports *longer than tape* but not *a whole session*. The unit now says roughly three times as long, without claiming a full session. — adv §"The evidence layer"; quiz Q4; flashcard "Tape vs. brace — comparative evidence"
 8. "Evidence for prophylactic (blanket) ankle taping is strongest in athletes with a prior sprain history, not for taping every healthy ankle as routine policy." — adv §"Clinical reasoning: tape, brace, or nothing?"; flashcard "Prophylactic taping debate"
 9. "Contact dermatitis (rash tracing the tape's exact outline, appearing hours to about a day after application) is distinct from a friction blister (localized to one pressure/crossover point, appearing during activity) and needs a different fix." — adv §"Skin integrity"; quiz Q7; flashcard
 10. "Correct tape removal: peel back slowly with the underlying skin supported, or cut with tape scissors — ripping tape off can tear the epidermis, a real cumulative risk over a season of daily taping." — adv §"Skin integrity"; quiz Q8; flashcard "Correct tape removal technique"
