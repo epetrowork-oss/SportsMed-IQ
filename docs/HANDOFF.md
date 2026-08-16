@@ -723,16 +723,28 @@ a different ask from B1 and B2.** Every leader-line label on
 the 9-10 prose except the view label "Posterior cuff — view from back", and
 both muscles it points at appear ×3 each.
 
-⚠ **Correction to that last count (2026-08-15), and it strengthens the
-conclusion rather than weakening it.** The "×3 each" was a whole-file count and
-implied prose coverage that does not exist. Counted per location, the four cuff
-muscle names appear in **zero** section bodies and **zero** quiz questions in
-`shoulder-injuries.json`. Their three occurrences are: the card's own `image`
-description, and flashcard **`f2` ("Rotator cuff (SITS)")**, which lists all four
-at full reading size. So the card is not duplicating the *lesson* — it is
-duplicating a *flashcard*, at roughly 2 mm. Deleting those labels costs nothing
-at all. **Habit worth keeping: count per location, not per file — a whole-file
-`grep -c` cannot tell teaching prose from image metadata.** On `mandible-ring-anatomy` the
+⚠ **Correction to that last count (2026-08-15).** The "×3 each" was a whole-file
+count that lumped image metadata in with teaching text. Counted per location, the
+four cuff muscle names appear in `shoulder-injuries.json` at three places: the
+card's own `image` description, flashcard **`f2` ("Rotator cuff (SITS)")**, and
+**the `list` array of section 0, "Anatomy: the most mobile, least stable joint"** —
+*"Rotator cuff (SITS muscles) — four muscles (supraspinatus, infraspinatus, teres
+minor, subscapularis) that wrap around the ball of the joint…"*. Zero quiz
+questions.
+
+⚠⚠ **A first version of this correction said the names appear in "zero section
+bodies" and concluded the card duplicated only a flashcard. That was wrong, and
+it was wrong in the exact way this note warns about** — the scan read each
+section's `body` array and never looked at `list`, which is also rendered lesson
+content. Caught by Codex on PR #61. **The conclusion is unchanged and in fact
+stronger: the names are duplicated in the lesson itself, at full reading size, so
+deleting them from a 343 px diagram costs nothing.** But the evidence for it was
+mis-stated.
+
+**The habit, restated so it actually works:** count per *location*, and enumerate
+the location keys explicitly. A section can carry teaching text in `body`, `list`
+**and** `callout`. Scanning only `body` produces a confident zero that is simply
+false — which is worse than a whole-file `grep -c`, because it looks rigorous. On `mandible-ring-anatomy` the
 teaching cues are all covered (ring ×28, second fracture ×3, inferior alveolar
 ×3, mental nerve ×6, condyle ×4); only the plain anatomical part-names *ramus*,
 *angle* and *mental foramen* are card-only, and those are not the card's claim.

@@ -6,7 +6,7 @@ container — the proxy returns a 403 at the gateway for `aao.org`, `aafp.org`,
 and `cde.ca.gov` alike (tested 2026-08-15). Nothing here can be checked from a
 session. **Upload the PDFs and every item below closes.**
 
-Eleven documents. They resolve **three separate open threads at once**: the
+Ten documents. They resolve **three separate open threads at once**: the
 claim-level sourcing backlog, the standards verification pass, and two of the
 content decisions being held for sign-off.
 

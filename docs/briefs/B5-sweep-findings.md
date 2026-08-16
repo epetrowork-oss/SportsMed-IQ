@@ -175,8 +175,18 @@ The two leader labels — **"squared-off contour"** (left panel) and **"step-off
 bump"** (right panel) — merge into blobs at 343 px. These are the *recognition
 signs*, which is the entire teaching of a compare-the-two-injuries card.
 
-Note "squared-off" appears **x0 in the 9-10 lesson prose** (it is in the quiz and
-flashcards only), so this label is not redundant the way B3's are.
+⚠ **Correction:** an earlier draft of this brief said "squared-off" appears **×0
+in the 9-10 lesson prose**, and used that to argue the label was not redundant.
+**That was a false count** — the search used the image's hyphenated spelling, and
+the lesson body writes it unhyphenated: *"the shoulder may look 'squared off' —
+the normal rounded contour is lost because the ball is no longer sitting in the
+socket."* Both recognition signs are in the prose after all. Caught by Codex on
+PR #61.
+
+**The fix still stands, but on legibility grounds alone, not redundancy.** These
+two labels are the only text on a compare-the-two-injuries card, and they are
+currently unreadable at the size students see them — a card whose entire job is
+"here is what each one looks like" should not have its two answers dissolve.
 
 **Fix:** print both labels at the size of the panel titles *Dislocation* / *AC
 sprain (separation)*. There is plenty of white space on both sides of the figures;
