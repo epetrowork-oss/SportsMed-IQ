@@ -929,7 +929,26 @@ project does not attach sources on.
 | eye-injuries **9-10 and 11-12** | Chemical-splash guidance — **the 15–20 minute flush duration specifically** | ⚠ **PARTIALLY CLOSED.** AAO *Treating Acute Chemical Injuries of the Cornea* supports immediate copious irrigation at the site, continued through transport, plus hospital evaluation — but gives a **pH endpoint (7.0–7.2), not a duration**. 0 hits for "20 min"/"30 min". **The fixed 15–20 minute figure remains uncited** |
 | cold-exposure 11-12 | "Water conducts heat ~25× faster than air" | ⚠ **STILL OPEN** — WMS Hypothermia 2019 has **0 hits** for "25 times", "25-fold" or "twenty-five". Its 7 "conduction" mentions are general heat-transfer exposition |
 | cold-exposure 11-12 | The "1-10-1 principle" naming | ⚠ **STILL OPEN** — **0 hits** for "1-10-1" in WMS Hypothermia 2019. The underlying physiology is covered there; the mnemonic is not |
-| skin-conditions 7-8 and 9-10 | **"Leave an intact blister alone"** specifically | ⚠ **STILL OPEN** — no candidate source was ever identified for this one |
+| skin-conditions 7-8 and 9-10 | **"Leave an intact blister alone"** specifically | ⚠ **STILL OPEN, but a candidate exists and was never requested** — see below |
+
+⚠⚠ **I reported the blister claim as having no candidate source. That was wrong.**
+`docs/CONTENT-REVIEW.md` line 697 already maps **American Academy of Dermatology,
+*How to Prevent and Treat Blisters* (2024)** to exactly this claim — "leaving
+intact blister roof in place". I wrote "no candidate was ever identified" without
+checking the reference list I had myself described, two days earlier, as naming
+candidates for seven of the eight claims. Caught by Codex on PR #61.
+
+**This is the worst class of error available in this workstream**, and it is worth
+being precise about why: reporting a claim as *unsourceable* does not just leave a
+gap, it removes the claim from the fetch/check workflow entirely. The owner would
+have stopped looking. A wrong "still open" is more damaging than a wrong
+attachment, because an attachment gets reviewed and a closed door does not.
+
+**The AAD page has been added to the fetch list.** It still needs full-text
+verification before attachment — the AAD is a lay-audience patient-education page,
+so whether it states the intact-roof rule in citable terms is exactly the question,
+and it may not survive the check. But it must enter the workflow rather than be
+declared absent.
 
 ⚠⚠ **The tape claim was not merely uncited — it was wrong, and in two strands.**
 Both `taping-wrapping-adv` and `ankle-sprain-adv` said a substantial share of

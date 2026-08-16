@@ -19,7 +19,16 @@ not a duration); the warm-up ~1–2 °C tissue-property claim (only a ScienceDai
 article was supplied, correctly filed do-not-cite); and the closed-blister claim
 (never had a candidate).
 
-**One document was never obtained:** Shellock & Prentice (row 6).
+**Two documents are still wanted.** Row 6 (Shellock & Prentice) was never
+obtained. And one was never *requested*, because I wrongly reported its claim as
+having no candidate:
+
+| Document | Closes | Must contain |
+|---|---|---|
+| **American Academy of Dermatology, *How to Prevent and Treat Blisters* (2024)** — `https://www.aad.org/public/everyday-care/injured-skin/burns/prevent-treat-blisters` | skin-conditions **7-8 and 9-10** — the last open claim of the original eight | An explicit statement that an **intact blister roof should be left in place** rather than opened or removed. ⚠ This is lay patient-education material, not a position statement, so it may not state the rule in citable terms — check before attaching, and if it doesn't, the claim simply stays uncited |
+
+It was already sitting in `docs/CONTENT-REVIEW.md` line 697, mapped to exactly
+this claim. I did not check that list before writing the claim off.
 
 ⚠ **And one claim turned out to be wrong rather than merely uncited** — rigid
 tape's restriction decay, which the lessons had at "20-30 minutes" against a
