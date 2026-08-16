@@ -75,15 +75,16 @@ that can occur during sports and recreational activities."**
 
 This is *the* sports-injury standard for grades 7-8 in the California framework,
 it names oral injuries explicitly (this app has a dental-trauma strand), and it
-was **absent from the catalog entirely**. It is now the most-cited entry, on 18
-units.
+was **absent from the catalog entirely**. It is now joint most-cited at **17
+units** (see the correction section below — it was 18 until a bad alignment on
+`sports-psychology-ms` was removed).
 
 Two more relevant standards were also missing and have been added:
 
-- **7.1.S** — "Practice first aid and emergency procedures." Added to the **8**
-  7-8 units that teach hands-on procedures: emergency-action-plan, wound-care,
-  dental-facial-trauma, eye-injuries, ankle-sprain, heat-illness, cold-exposure,
-  fractures-dislocations.
+- **7.1.S** — "Practice first aid and emergency procedures." Initially added to
+  8 units, then **cut to 4** — see the correction section below. It applies only
+  where the student actually performs a procedure: `wound-care-ms`,
+  `dental-facial-trauma-ms`, `ankle-sprain-ms`, `emergency-action-plan-ms`.
 - **4.1.S** — "Report to a trusted adult…", which is the spine of every 7-8 unit.
 
 ---
@@ -92,12 +93,53 @@ Two more relevant standards were also missing and have been added:
 
 | Entry | Code | Units |
 |---|---|---|
-| `CAHE.7-8.S.SportsInjury` | 1.15.S | 18 |
-| `CAHE.7-8.S.TellAdult` | 4.1.S | 12 |
+| `CAHE.7-8.S.SportsInjury` | 1.15.S | 17 |
+| `CAHE.7-8.S.TellAdult` | 4.1.S | 17 |
 | `CAHE.7-8.S.SafetyPlan` | 6.2.S | 10 |
-| `CAHE.7-8.S.FirstAid` | 7.1.S | 8 |
+| `CAHE.7-8.S.FirstAid` | 7.1.S | 4 |
 | `CAHE.7-8.S.ValidInfo` | 3.1.S | 3 |
 | `CAHE.7-8.S.Environment` | 1.11.S | 2 |
+
+### ⚠ The first mapping pass was mechanical, and mechanical was wrong
+
+The remap above initially just swapped each retired id for its replacement and
+tagged first aid by topic. Codex flagged three bad alignments on PR #62; sweeping
+all 18 units rather than fixing only those three found **eight** units needing
+correction.
+
+**7.1.S was over-applied to half the units that got it.** The standard says
+*"Practice first aid and emergency procedures"* — it requires the student to
+actually **do** something. The 7-8 band is deliberately built the opposite way,
+and says so in its own words:
+
+- `heat-illness-ms` — *"your job is simple: recognize it and tell a trusted adult right away. You are not expected to decide how serious it is."*
+- `fractures-dislocations-ms` — *"your job has two parts, and that's it: Do not touch it, move it, or try to straighten it."*
+- `eye-injuries-ms` — *"Your job is not to fix an eye injury."* Even its rinse is *"An adult can also gently rinse the eye."*
+- `cold-exposure-ms` — *"your job in cold weather isn't to treat anyone."*
+
+All four lost the tag. **It was kept on the four units that genuinely have the
+student perform a procedure**: `wound-care-ms` (its own section is headed
+*"self-care steps — your own scrape"*), `dental-facial-trauma-ms` (tooth handling
+and a 10-minute nosebleed pinch), `ankle-sprain-ms` (*"know the basic first
+steps"* — rest, ice 15-20 min wrapped, elevate), and `emergency-action-plan-ms`
+(the student practises a defined role in an emergency response, which is the
+"emergency procedures" half of the standard).
+
+**1.15.S was wrong on `sports-psychology-ms`.** The mechanical swap gave a
+mental-health unit a *reduce-physical-sports-injury* alignment. Its content is
+feelings (×19), listening (×8) and trusted adults (×16), with physical injury
+appearing only as context. Removed; the unit keeps `TellAdult` and `ValidInfo`,
+which fit it exactly.
+
+**4.1.S was under-applied.** The remap only converted units that had carried the
+retired `Decisions` id, so five units that teach reporting heavily but never had
+that tag were missed: `cold-exposure-ms` (23 reporting cues), `heat-illness-ms`
+(11), `skin-conditions-ms` (13), `overuse-injuries-ms` (8), `hydration-nutrition-ms`
+(5). All five added — `TellAdult` is now joint-most-used at 17.
+
+**The lesson:** a standards remap cannot be done by find-and-replace. Each unit
+has to be read against what the standard asks the student to *do*, and this band
+in particular is built around explicitly *not* doing things.
 
 **14 catalog entries, all `verified: true`. 161 references across 54 units**
 (was 159; the dedupe removed 6 duplicate references where two invented entries
