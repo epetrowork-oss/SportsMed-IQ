@@ -1,14 +1,41 @@
 # Documents to pull from the ChatGPT side and upload here
 
-**Why this list exists.** Everything below is blocked from the development
+# ✅ DELIVERED 2026-08-15 — this list has been fulfilled. Read this box first.
+
+**The owner supplied a triaged bundle covering 9 of the 10 documents below, and
+the sourcing work is done.** What follows is kept as the record of what was
+requested and why; **it is no longer a to-do list.** Current state:
+
+| Thread | Status |
+|---|---|
+| **Claim-level sourcing** | **4 of 8 claims closed**, 4 still open. Results in `docs/HANDOFF.md` — that table is authoritative, not section A below |
+| **Both held dental decisions** | ✅ **SETTLED** by the IADT guideline, with **no content change needed** in either case. Section C below is history |
+| **Standards verification** | ⏳ **Not started.** Both California PDFs arrived and are usable. **This is the one genuinely outstanding item on this page** |
+
+**Still uncited after the pass**, each checked rather than assumed: the "1-10-1"
+naming and the ~25× water/air conduction figure (**0 hits** in WMS Hypothermia
+2019); the fixed 15–20 minute eye flush (AAO gives a **pH endpoint of 7.0–7.2**,
+not a duration); the warm-up ~1–2 °C tissue-property claim (only a ScienceDaily
+article was supplied, correctly filed do-not-cite); and the closed-blister claim
+(never had a candidate).
+
+**One document was never obtained:** Shellock & Prentice (row 6).
+
+⚠ **And one claim turned out to be wrong rather than merely uncited** — rigid
+tape's restriction decay, which the lessons had at "20-30 minutes" against a
+source saying most is lost in the **first 20**. Corrected in two strands.
+
+---
+
+**Why this list existed.** Everything below is blocked from the development
 container — the proxy returns a 403 at the gateway for `aao.org`, `aafp.org`,
 `nata.org`, `pmc.ncbi.nlm.nih.gov`, `journals.sagepub.com`, `link.springer.com`
-and `cde.ca.gov` alike (tested 2026-08-15). Nothing here can be checked from a
-session. **Upload the PDFs and every item below closes.**
+and `cde.ca.gov` alike (tested 2026-08-15). Nothing here could be checked from a
+session, which is why the PDFs had to be uploaded.
 
-Ten documents. They resolve **three separate open threads at once**: the
+Ten documents. They resolved **three separate open threads at once**: the
 claim-level sourcing backlog, the standards verification pass, and two of the
-content decisions being held for sign-off.
+content decisions that were being held for sign-off.
 
 ⚠ **These are candidates, not confirmed sources.** Seven of them come from the
 reference list in `docs/CONTENT-REVIEW.md`, which mapped sources to claims
