@@ -189,9 +189,23 @@ The remaining uncited claims are not believed wrong; they are well
 established. They just do not yet have a citation we have verified against
 the source ourselves.
 
-**The standards alignments are unverified.** Each unit lists standards it's
-meant to map to; nobody has checked those against the official documents yet.
-Don't rely on them for reporting.
+**The standards alignments are now verified** (2026-08-16). Every code in
+every unit has been checked line by line against the official California
+documents — the CTE Health Science & Medical Technology standards and the 2008
+Health Education Content Standards — and the wording shown is the official
+wording.
+
+Worth knowing, because it changed what the units claim: the first draft of this
+catalog was written from memory and **most of it was wrong**. Several standards
+had been paraphrased in ways that made them look like a better fit for sports
+medicine than the real text supports, and the single most relevant standard for
+grades 7-8 — *"Explain ways to reduce the risk of injuries (including oral
+injuries) that can occur during sports and recreational activities"* — was
+missing entirely. It is now the most-used one.
+
+You can rely on these for reporting. What is still a judgement call is whether
+a given lesson is mapped to the *right* standard — that is a teacher's call, and
+feedback on it is welcome.
 
 **There's no account recovery, because there are no accounts.** If a student
 clears their browser data, their progress is gone unless they saved a code.
