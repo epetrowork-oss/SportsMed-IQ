@@ -724,22 +724,32 @@ the 9-10 prose except the view label "Posterior cuff — view from back", and
 both muscles it points at appear ×3 each.
 
 ⚠ **Correction to that last count (2026-08-15).** The "×3 each" was a whole-file
-count that lumped image metadata in with teaching text. Counted per location, the
-four cuff muscle names appear in `shoulder-injuries.json` at three places: the
-card's own `image` description, flashcard **`f2` ("Rotator cuff (SITS)")**, and
-**the `list` array of section 0, "Anatomy: the most mobile, least stable joint"** —
-*"Rotator cuff (SITS muscles) — four muscles (supraspinatus, infraspinatus, teres
-minor, subscapularis) that wrap around the ball of the joint…"*. Zero quiz
-questions.
+count that lumped image metadata in with teaching text. **Enumerated over the
+full JSON tree, the four cuff muscle names appear in exactly two places** in
+`shoulder-injuries.json` as it now stands:
 
-⚠⚠ **A first version of this correction said the names appear in "zero section
-bodies" and concluded the card duplicated only a flashcard. That was wrong, and
-it was wrong in the exact way this note warns about** — the scan read each
-section's `body` array and never looked at `list`, which is also rendered lesson
-content. Caught by Codex on PR #61. **The conclusion is unchanged and in fact
-stronger: the names are duplicated in the lesson itself, at full reading size, so
-deleting them from a 343 px diagram costs nothing.** But the evidence for it was
-mis-stated.
+| Location | What it is |
+|---|---|
+| `sections[0].list[0]` | Rendered lesson content — *"Rotator cuff (SITS muscles) — four muscles (supraspinatus, infraspinatus, teres minor, subscapularis) that wrap around the ball of the joint…"* |
+| `flashcards[1].back` | Flashcard `f2`, "Rotator cuff (SITS)" |
+
+Zero quiz questions, and **zero in the `image` description** — the description was
+rewritten when the redesigned card landed and no longer names them individually.
+
+⚠⚠ **This count took three attempts, which is the real lesson.** (1) The original
+handoff said "×3 each in the 9-10 prose" — a whole-file count that could not tell
+prose from image metadata. (2) My correction to it said "zero section bodies,
+duplicated only by a flashcard" — wrong, because the scan read each section's
+`body` and never looked at `list`. Caught by Codex on PR #61. (3) The correction
+to *that* said three locations including the image description — also wrong,
+because I had rewritten that description earlier in the same PR and had not
+re-checked it.
+
+**The conclusion never changed and is stronger than the original claim: the names
+are duplicated in rendered lesson text at full reading size, so deleting them from
+a 343 px diagram costs nothing.** All three errors were in the evidence, not the
+decision — which is its own warning, because a stable conclusion made it easy to
+stop checking the numbers under it.
 
 **The habit, restated so it actually works:** count per *location*, and enumerate
 the location keys explicitly. A section can carry teaching text in `body`, `list`
