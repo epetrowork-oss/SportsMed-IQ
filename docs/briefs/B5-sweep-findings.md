@@ -5,8 +5,11 @@ at the size students actually see them. These are **separate from B3 and B4** an
 should be briefed separately again — B3 is a relabelling redraw, B4 is two
 one-line edits, and this batch is mostly *composition and body-text* work.
 
-⚠ **Card 1 needs an owner decision before it is sent to the image author.** Read
-its section first; the other five are ready to go.
+✅ **All six cards are ready to send.** Card 1's owner decision was made on
+2026-08-15 — **Option A** — and its section below now carries the final build
+spec rather than a question. Read Card 1's section first anyway: it is the
+highest-priority card in the batch and the only one where the wording change is
+the point rather than the legibility fix.
 
 ---
 
