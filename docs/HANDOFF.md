@@ -900,7 +900,9 @@ mandating ice-hockey face protectors — nothing on recognition or management.
 Attaching it would have made a strand read as sourced while its substance
 stayed uncited.
 
-⚠ **Eight claims remain uncited inside strands that are otherwise sourced.**
+⚠ **Four claims remain uncited** (was eight; four closed 2026-08-15 against
+supplied PDFs — see the worked table below, which supersedes this paragraph's
+count). The original framing is kept because the reasoning still applies:
 (RED-S closed 2026-08-04. Two were added the same day when Codex checked the
 newly attached sources against *every* section rather than the headline topic:
 eye-injuries' chemical-splash guidance — which spans **both** the 9-10 and
@@ -910,16 +912,57 @@ Tracking coverage per *strand* hides these, which is how the tester-facing
 count came to be wrong twice — keep this list complete, and update it whenever
 a source is attached that doesn't cover everything a unit teaches.
 
-| Strand / band | Uncited claim | Recorded at |
+### ✅ Worked through against supplied PDFs, 2026-08-15 — 4 closed, 4 still open
+
+The owner supplied a triaged bundle of PDFs. **Every claim below was checked by
+searching the document itself, not by trusting the bundle's own README** — which
+was correct on every call it made, but is exactly the kind of assertion this
+project does not attach sources on.
+
+| Strand / band | Uncited claim | Status |
 |---|---|---|
-| warmup-injury-prevention 11-12 | Raising muscle temperature by ~1–2 °C meaningfully shifts tissue properties | batch 14 notes |
-| taping-wrapping 11-12 | Much of rigid tape's motion restriction is gone within ~20–30 min of activity | ledger |
-| eye-injuries **9-10 and 11-12** | Chemical-splash guidance — 15–20 minutes of flushing plus mandatory medical follow-up (9-10 callout, quiz and flashcard `f10`; 11-12 has a full section). Source has 0 hits for "chemical"/"alkali"/"acid burn" | ledger |
-| skin-conditions 7-8 and 9-10 | **"Leave an intact blister alone"** specifically. The rest of blister care (clean, cover, non-stick dressing, infection referral) was sourced 2026-08-04 to NATA Acute Skin Trauma; this one claim is not in it | ledger |
-| dental-facial-trauma 7-8, 9-10 | Nosebleed management (the NATA dental statement has 0 hits for "nosebleed"/"epistaxis") | ledger |
-| cold-exposure 11-12 | Frostnip classified as a *non-freezing* injury | ledger |
-| cold-exposure 11-12 | "Water conducts heat ~25× faster than air" | ledger |
-| cold-exposure 11-12 | The "1-10-1 principle" naming (the physiology is covered; the mnemonic isn't) | ledger |
+| dental-facial-trauma **7-8, 9-10** + **wound-care 7-8, 9-10** | Nosebleed management | ✅ **CLOSED** — AAFP *Epistaxis: Outpatient Management* states *"Firm pressure is placed on the bilateral nostrils, **below the nasal bones, for 10 to 15 minutes without interruption**."* Matches what the units teach, including the soft-part-not-bony-bridge detail |
+| cold-exposure 11-12 | Frostnip classified as a *non-freezing* injury | ✅ **CLOSED** — WMS Frostbite 2024 states it verbatim: *"Frostnip is a superficial **nonfreezing** cold injury… With frostnip, **ice crystals do not form within the tissue**, and tissue loss does not occur."* The unit's existing wording already matched this precisely, including the "within the tissue" qualifier |
+| taping-wrapping 11-12 **+ ankle-sprain 11-12** | Rigid tape's motion restriction decaying during activity | ✅ **CLOSED, and the figure was wrong** — see below |
+| dental-facial-trauma 9-10 / 11-12 | *(was a held decision, not an uncited claim)* Student replantation + storage ranking | ✅ **SETTLED** — see the dental entry in the ledger |
+| warmup-injury-prevention 11-12 | Raising muscle temperature by ~1–2 °C meaningfully shifts tissue properties | ⚠ **STILL OPEN.** The only document supplied was a **ScienceDaily news article**, which reports a performance change per 1 °C but does not support the tissue-property claim. Correctly filed as do-not-cite; the Shellock & Prentice paper was not obtained |
+| eye-injuries **9-10 and 11-12** | Chemical-splash guidance — **the 15–20 minute flush duration specifically** | ⚠ **PARTIALLY CLOSED.** AAO *Treating Acute Chemical Injuries of the Cornea* supports immediate copious irrigation at the site, continued through transport, plus hospital evaluation — but gives a **pH endpoint (7.0–7.2), not a duration**. 0 hits for "20 min"/"30 min". **The fixed 15–20 minute figure remains uncited** |
+| cold-exposure 11-12 | "Water conducts heat ~25× faster than air" | ⚠ **STILL OPEN** — WMS Hypothermia 2019 has **0 hits** for "25 times", "25-fold" or "twenty-five". Its 7 "conduction" mentions are general heat-transfer exposition |
+| cold-exposure 11-12 | The "1-10-1 principle" naming | ⚠ **STILL OPEN** — **0 hits** for "1-10-1" in WMS Hypothermia 2019. The underlying physiology is covered there; the mnemonic is not |
+| skin-conditions 7-8 and 9-10 | **"Leave an intact blister alone"** specifically | ⚠ **STILL OPEN** — no candidate source was ever identified for this one |
+
+⚠⚠ **The tape claim was not merely uncited — it was wrong, and in two strands.**
+Both `taping-wrapping-adv` and `ankle-sprain-adv` said a substantial share of
+rigid tape's restriction is gone "within about **20-30 minutes**." The source now
+attached (Zwiers et al.) says *"most of the restrictive effects are lost during
+the **first 20 minutes**"*, and its Table 2 puts tape at *"Lost beneficial
+restrictive effects **after 15 min** of exercise."* **The lesson was slower than
+the evidence**, so all five occurrences were corrected to "about 15-20 minutes."
+
+The same passage in `ankle-sprain-adv` also claimed semi-rigid braces "maintain
+their support through a full practice or game." Table 2 puts braces at **45
+minutes**, which supports *longer than tape* but not *a whole session*. Reworded
+to state the comparison the source actually makes.
+
+⚠ **Two bibliographic corrections, both from `docs/CONTENT-REVIEW.md`'s reference
+list — more evidence that list is leads, not citations.** The taping paper is
+**Zwiers et al., J ISAKOS 2016;1:304-310** (received Aug 2016, DOI
+`10.1136/jisakos-2016-000104`), **not a 2021 publication**. And the supplied
+epistaxis paper is **Womack et al., Am Fam Physician 2018;98(4):240-245**, not the
+2005 article the list named — the 2005 paper appears only in its reference list.
+
+⚠ **The nosebleed row understated its own scope, which is now the third time a
+coverage table here has done that.** It listed dental-facial-trauma 7-8 and 9-10.
+Nosebleed is actually taught in **four** units — `dental-facial-trauma-ms` (11
+mentions), `dental-facial-trauma` (10), `wound-care-ms` (7) and `wound-care` (4).
+All four now carry the AAFP source. `dental-facial-trauma-adv` has a single
+passing mention and was deliberately left alone.
+
+**One thing to watch on the nosebleed source:** AAFP says **10 to 15 minutes**;
+the units teach "a full 10 minutes." That is the floor of the recommended range
+rather than a contradiction, and the 9-10 unit already routes to medical care if
+bleeding persists past 10 minutes — but if these units are ever revised, matching
+the source's 10–15 would be tighter.
 
 **A strand being sourced is not the same as every section in it being
 sourced.** Any doc that quotes a count — `TESTERS.md` especially — must reflect
