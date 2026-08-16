@@ -37,27 +37,43 @@ pass.
   `bankart-hill-sachs`, `mandible-ring-anatomy` and `acwr-graph` are live and
   browser-verified. **Only `muscle-strains-two-joint-muscles-map` is held**
   (redo note: `docs/briefs/B4-redo-muscle-strains.md`).
-- **Four of the six `[NEEDS-EVAN]` content calls are settled** — three hedges
-  applied (every-state concussion law, shoulder recurrence range, second-impact
-  mortality) plus one closed as a non-conflict (10%-rule vs ACWR is a deliberate
-  spiral build). **The remaining two are held** pending the IADT guideline:
-  student reinsertion of an avulsed permanent tooth, and the saliva-above-saline
-  storage ranking.
+- **ALL SIX `[NEEDS-EVAN]` content calls are settled.** Three hedges applied
+  (every-state concussion law, shoulder recurrence range, second-impact
+  certainty — the last of which now covers prose, flashcard `f4` and quiz `q4`);
+  one closed as a non-conflict (10%-rule vs ACWR is a deliberate spiral build);
+  and **the two dental calls resolved as *no change needed*** once the IADT
+  guideline was read — it explicitly encourages lay replantation, and its storage
+  ranking (*milk, HBSS, saliva, saline*) confirms the existing quiz key. That
+  queue in `docs/CONTENT-REVIEW.md` is now marked closed.
 - **New-unit authoring is CLOSED** (owner decision): no strength-and-conditioning
   strand, and no further new strands. Sports med content is complete at
   **54 units / 18 strands**; the next subject comes first, with a full review
   pass afterwards. **Do not start new units.**
 
-**What is actually left, and it is all waiting on documents or ChatGPT:**
-1. **`docs/FETCH-LIST.md`** — ten documents to pull from the ChatGPT side. Closes
-   the eight uncited claims, the standards verification pass, and the two held
-   dental decisions. **This is the critical path for everything content-side.**
-2. **ChatGPT handoff** — B5's six cards plus the muscle-strains redo.
+**What is actually left** (the ten-document fetch is DONE — 9 of 10 arrived and
+were worked through on 2026-08-15; **do not re-request them**):
+
+1. **Standards verification** — ⏳ **the one substantial session task left.** Both
+   California PDFs arrived and are usable. No upload needed.
+2. **Two documents still wanted** — AAD *How to Prevent and Treat Blisters* (a
+   candidate I had wrongly reported as non-existent) and Shellock & Prentice 1985.
+   See the "Still wanted" table at the top of `docs/FETCH-LIST.md`.
+3. **ChatGPT handoff** — B5's six cards plus the muscle-strains redo.
+
+**Sourcing result:** 3 of the original 8 uncited claims fully closed (tape decay,
+nosebleed, frostnip), 1 partially closed (eye chemical — irrigation is citable,
+the 15–20 minute duration is not), 4 still open. **One of them turned out to be
+wrong rather than merely uncited**: rigid tape's restriction decay, corrected from
+"20-30 minutes" to "15-20" in two strands. **All six `[NEEDS-EVAN]` content calls
+are settled** — that queue in `docs/CONTENT-REVIEW.md` is closed, and two of them
+resolved as *no change needed* once the IADT guideline was read.
 
 Outside the sprint, the live diagram backlog is now **B5's 6 cards + the
 muscle-strains redo** (B1 and B2 landed 7 on 2026-08-04/05; B3/B4 landed 4 more
 on 2026-08-15; the "14" and "5 open" figures in older notes are both stale), plus
-**eight uncited claims inside sourced strands** —
+**four uncited claims and one partial inside sourced strands** (was eight before
+the 2026-08-15 source pass; the historical list that followed is superseded by the
+worked table in `docs/HANDOFF.md`) — the original list read:
 eye-injuries' chemical-splash guidance (both 9-10 and 11-12), skin-conditions'
 blister care, nosebleed, three cold-exposure specifics, taping-wrapping, and
 warm-up. **Every strand is sourced as of
@@ -497,6 +513,9 @@ else is `implementer` (Sonnet).*
       **all eight uncited claims listed individually** (eye chemical
       splash, blister care, nosebleed, three cold-exposure specifics,
       taping-wrapping, warm-up),
+      *(TESTERS.md now lists **four uncited plus one partial** — updated
+      2026-08-15 when three closed against supplied sources. The count above
+      records what the kit shipped with on 2026-08-03.)*
       unverified standards, and no-account-recovery, and it tells testers to
       report unreadable diagrams anyway since that list isn't proven complete.
       Still to do here: regenerate `npm run images:shotlist` after any

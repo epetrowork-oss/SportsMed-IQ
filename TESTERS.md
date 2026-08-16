@@ -144,26 +144,50 @@ sentence in it is individually cited. (The **eye injuries** units lean on a
 the topic was written from — now paired with the 2013 AAP/AAO protective
 eyewear policy for the prevention sections.)
 
-**Eight individual claims inside otherwise-sourced topics are still
-uncited**, listed here in full rather than summarised, because we got this
-count wrong twice:
+**Four individual claims inside otherwise-sourced topics are still
+uncited**, plus one that is partly cited. Listed in full rather than
+summarised, because we have got this count wrong three times now.
 
-- **Eye injuries, 9th–10th and 11th–12th** — the chemical-splash guidance
-  (flush 15–20 minutes, then still see a doctor)
+*(Updated 2026-08-15 — this list previously said eight. Source documents were
+supplied and checked, closing three of them.)*
+
+**Still uncited:**
+
 - **Skin conditions, 7th–8th and 9th–10th** — specifically the advice to
   *leave an intact blister alone*. The rest of blister care (clean it, cover
-  it, watch for infection) is now cited.
-- **Dental and facial trauma, 7th–8th and 9th–10th** — the nosebleed guidance
-- **Cold exposure, 11th–12th** — classifying frostnip as a non-freezing
-  injury; the "water conducts heat 25× faster than air" figure; and the
-  "1-10-1" naming (the underlying physiology *is* sourced)
-- **Taping and wrapping, 11th–12th** — that most of rigid tape's motion
-  restriction is gone within 20–30 minutes of activity
+  it, watch for infection) is cited. A candidate source has been identified
+  but not yet checked.
+- **Cold exposure, 11th–12th** — the "water conducts heat 25× faster than
+  air" figure, and the "1-10-1" naming. Both were checked against the
+  wilderness-medicine hypothermia guideline and **are not in it**; the
+  underlying physiology *is* sourced.
 - **Warm-up and injury prevention, 11th–12th** — that raising muscle
-  temperature by 1–2 °C meaningfully changes tissue properties
+  temperature by 1–2 °C meaningfully changes tissue properties.
 
-None of these are believed wrong; they're well established. They just don't
-yet have a citation attached that we've verified against the source.
+**Partly cited:**
+
+- **Eye injuries, 9th–10th and 11th–12th** — the chemical-splash guidance.
+  The *"irrigate immediately and keep irrigating, then get medical care"*
+  part is now sourced. The specific **15–20 minute** figure is not — the
+  ophthalmology source sets an endpoint by eye chemistry rather than by a
+  clock.
+
+**Now closed** (were on this list, now cited and verified against the source):
+nosebleed guidance in dental/facial trauma and wound care; frostnip as a
+non-freezing injury; and rigid tape's loss of motion restriction.
+
+⚠ **One of these turned out to be wrong, not just uncited — please note the
+change.** The taping and ankle-sprain lessons used to say most of rigid
+tape's motion restriction is gone **within about 20–30 minutes**. The source
+says most of it goes in the **first 20 minutes**, so the lessons now say
+**15–20 minutes**. If you have looked at this before, the new number is the
+correct one — **not a regression.** A related claim that ankle braces hold
+their support "through a full practice or game" was also softened, because
+the same source measures about 45 minutes.
+
+The remaining uncited claims are not believed wrong; they are well
+established. They just do not yet have a citation we have verified against
+the source ourselves.
 
 **The standards alignments are unverified.** Each unit lists standards it's
 meant to map to; nobody has checked those against the official documents yet.
