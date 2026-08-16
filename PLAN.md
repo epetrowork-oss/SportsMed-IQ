@@ -37,9 +37,12 @@ pass.
   `bankart-hill-sachs`, `mandible-ring-anatomy` and `acwr-graph` are live and
   browser-verified. **Only `muscle-strains-two-joint-muscles-map` is held**
   (redo note: `docs/briefs/B4-redo-muscle-strains.md`).
-- **Five of the six `[NEEDS-EVAN]` content calls are settled** — three hedges
-  applied, one closed as a non-conflict (10%-rule vs ACWR is a deliberate
-  spiral build), two held pending the IADT guideline.
+- **Four of the six `[NEEDS-EVAN]` content calls are settled** — three hedges
+  applied (every-state concussion law, shoulder recurrence range, second-impact
+  mortality) plus one closed as a non-conflict (10%-rule vs ACWR is a deliberate
+  spiral build). **The remaining two are held** pending the IADT guideline:
+  student reinsertion of an avulsed permanent tooth, and the saliva-above-saline
+  storage ranking.
 - **New-unit authoring is CLOSED** (owner decision): no strength-and-conditioning
   strand, and no further new strands. Sports med content is complete at
   **54 units / 18 strands**; the next subject comes first, with a full review

@@ -51,10 +51,21 @@ than described.
 - Title stays: *Right shoulder — anterior view*
 
 **What the section actually teaches.** The whole point of this section is that the
-socket is shallow, so the shoulder trades stability for mobility. The prose names
-only the glenohumeral joint, the humeral head, the glenoid and the scapula. **It
-never names a single rotator cuff muscle** — those live in flashcard `f2`
-("Rotator cuff (SITS)"), which prints them at full reading size.
+socket is shallow, so the shoulder trades stability for mobility. The section's
+`body` paragraphs name only the glenohumeral joint, the humeral head, the glenoid
+and the scapula.
+
+⚠ **Correction (2026-08-15):** an earlier version of this line said the lesson
+"never names a single rotator cuff muscle." **That was false.** All four names are
+in this same section's `list` array — *"Rotator cuff (SITS muscles) — four muscles
+(supraspinatus, infraspinatus, teres minor, subscapularis)…"* — which is rendered
+lesson content, at full reading size. They also appear in flashcard `f2`. Those
+are the only two locations; see `docs/HANDOFF.md` for the full enumeration and for
+how this count managed to be wrong three times.
+
+**It does not change the instruction below, it strengthens it.** The names are
+already taught twice at readable size, so printing them again on a diagram shown
+at 343 px adds nothing and costs the legibility of every other label.
 
 **Remove:**
 - **The entire posterior-cuff inset**, bottom right — the small scapula view labelled
