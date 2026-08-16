@@ -32,12 +32,14 @@ Keep body text plain, dark, and non-italic and it survives surprisingly small.
 
 ---
 
-## Card 1 — `heat-illness-cold-water-immersion-technique.webp` ⚠ DECISION FIRST
+## Card 1 — `heat-illness-cold-water-immersion-technique.webp` ✅ SPEC BELOW
 
 - Unit: `heat-illness.json` (**9-10**) · 4:3 (900 × 675)
 - Folder: `public/images/units/heat-illness/`
 
-**There are two separate problems here, and the first is not an art problem.**
+**There are two separate problems here, and the first was not an art problem.** It
+required an owner decision, which has been made — Option A, spec in 1a below.
+Nothing here is blocked.
 
 ### 1a. The card contradicts the lesson
 
