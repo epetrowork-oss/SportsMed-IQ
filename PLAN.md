@@ -53,12 +53,28 @@ pass.
 **What is actually left** (the ten-document fetch is DONE — 9 of 10 arrived and
 were worked through on 2026-08-15; **do not re-request them**):
 
-1. **Standards verification** — ⏳ **the one substantial session task left.** Both
-   California PDFs arrived and are usable. No upload needed.
+1. ✅ **Standards verification — DONE 2026-08-16.** All catalog entries checked
+   against the official CDE PDFs and every unit mapping re-audited. The first
+   draft was mostly wrong: 7 of 8 CTE entries had drifted toward injury language,
+   3 of 6 CA-HE entries matched no real 7-8 standard, and the single most relevant
+   standard (1.15.S, sports and recreational injuries) was missing entirely. See
+   `docs/STANDARDS-VERIFICATION.md`. **Do not re-run this pass.**
 2. **Two documents still wanted** — AAD *How to Prevent and Treat Blisters* (a
    candidate I had wrongly reported as non-existent) and Shellock & Prentice 1985.
    See the "Still wanted" table at the top of `docs/FETCH-LIST.md`.
-3. **ChatGPT handoff** — B5's six cards plus the muscle-strains redo.
+3. **ChatGPT handoff** — B5's six cards, the muscle-strains redo, and **B6's
+   three photorealism fixes** (`docs/briefs/B6-photorealism-fixes.md`). Note two
+   of B6's cards are also in B5 — `heat-illness-heat-stroke-emergency` and
+   `heat-illness-sweat-cooling` — and both briefs say to do the two changes in a
+   single redraw rather than two passes.
+
+**Image audit (2026-08-17):** all 165 images checked for faces and photorealism.
+**Three violations, all in heat-illness, all predating the style rule** (batch 4;
+the rule was written 2026-07-27). Everything else passed. The owner clarified the
+rule at the same time: **a face is fine — required, even — when the face is the
+anatomy being taught** (dental, eye, ear/nose), and illustrated faces in scenes
+are fine everywhere. **The prohibition is photorealism in a person, not faces.**
+See `docs/HANDOFF.md` for the clarified rule.
 
 **Sourcing result:** 3 of the original 8 uncited claims fully closed (tape decay,
 nosebleed, frostnip), 1 partially closed (eye chemical — irrigation is citable,

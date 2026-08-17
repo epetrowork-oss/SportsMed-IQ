@@ -1,6 +1,6 @@
 # Standards catalog — verification record
 
-# ✅ DONE 2026-08-16. All 14 entries verified against the official CDE documents.
+# ✅ DONE 2026-08-16. All entries verified against the official CDE documents.
 
 `src/content/standards.json` maps SportMedIQ units to California standards. Every
 entry now carries `"verified": true`, checked line by line against the two
@@ -96,7 +96,7 @@ Two more relevant standards were also missing and have been added:
 | `CAHE.7-8.S.TellAdult` | 4.1.S | 17 |
 | `CAHE.7-8.S.SportsInjury` | 1.15.S | 10 |
 | `CAHE.7-8.S.FirstAid` | 7.1.S | 4 |
-| `CAHE.7-8.S.SafetyPlan` | 6.2.S | 2 |
+| `CAHE.7-8.S.SafetyPlan` | 6.2.S | 1 |
 | `CAHE.7-8.S.Environment` | 1.11.S | 2 |
 | ~~`CAHE.7-8.S.ValidInfo`~~ | ~~3.1.S~~ | **removed from the catalog** |
 
@@ -112,7 +112,7 @@ the unit teach the action the standard names?*
 | Tag | Standard says | What was wrong |
 |---|---|---|
 | **`ValidInfo` (3.1.S)** | *"**Analyze sources** of information regarding injury and violence prevention"* | **Zero** of its three units teach source evaluation — `source`, `website`, `reliable`, `accurate information` all return **0 hits** in concussion-ms, sports-psychology-ms and taping-wrapping-ms. **Removed from all three, and the entry deleted from the catalog** since nothing legitimately uses it |
-| **`SafetyPlan` (6.2.S)** | *"**Create** a personal-safety plan"* | Applied to 10 units on topic. Only two ask the student to prepare something in advance: `emergency-action-plan-ms` (*"Know your school before you need to"*) and `hydration-nutrition-ms` (*"Build a water habit"*, *"Pack smart for practice and game day"*). The other eight teach habits and recognition, which is Standard 7 territory, not goal-setting. **Cut 10 → 2** |
+| **`SafetyPlan` (6.2.S)** | *"**Create** a personal-safety plan"* | Applied to 10 units on topic. **Cut 10 → 1.** Only `emergency-action-plan-ms` asks the student to build knowledge of *their own* environment in advance — *"Take a look around your gym, cafeteria, and athletic fields"*, *"know who the adults in charge usually are at your practices"*. `hydration-nutrition-ms` was kept for one round on the strength of *"Pack smart for practice and game day"*, then removed: on reading, that section gives universal recommendations (*"Pack a refillable water bottle"*) and quizzes recall — it never asks the student to create or personalise anything. Habits are Standard 7, not goal-setting |
 | **`SportsInjury` (1.15.S)** | *"Explain ways to **reduce the risk** of injuries"* | Applied to every 7-8 unit. Seven are recognition-and-response only, with no risk-reduction content anywhere in their section structure: ankle-sprain, concussion, emergency-action-plan, fractures-dislocations, muscle-strains, shoulder-injuries, wound-care. **Cut 17 → 10** — kept where prevention is a real section (*"Prevention: mouthguards"*, *"Prevention: wear the right eyewear"*, *"Dressing right so you don't get too cold"*, *"Lowering your risk"*, *"Staying safe in hot weather"*, the whole warm-up unit) |
 
 **The pattern, stated once:** a topic that *sounds* like a standard is not an
@@ -161,10 +161,11 @@ that tag were missed: `cold-exposure-ms` (23 reporting cues), `heat-illness-ms`
 has to be read against what the standard asks the student to *do*, and this band
 in particular is built around explicitly *not* doing things.
 
-**14 catalog entries, all `verified: true`. 161 references across 54 units**
-(was 159; the dedupe removed 6 duplicate references where two invented entries
-both collapsed onto 1.15.S, and first-aid tagging added 8). Every 7-8 unit
-carries at least one standard. `npm run validate:content` — 54 files, 0 errors.
+⚠ **These totals are an intermediate state, superseded twice.** At this point in
+the pass there were **14 catalog entries and 161 references**. After the two
+mapping re-audits described below, the repository now holds **13 entries and 142
+references** — see "Final state" above, which is authoritative. Every 7-8 unit
+still carries at least one standard. `npm run validate:content` — 54 files, 0 errors.
 
 ⚠ **Note on scope.** Only the **grades 7-8** Health Education standards were
 verified, because that is the only Health Ed band the catalog uses. The 9-10 and

@@ -70,6 +70,27 @@ subject, not rendering style: **no photographs, and no identifiable or
 photorealistic people** — realistic *anonymous body parts* (a forearm, a foot,
 hands) are fine and welcome; faces should be illustrated or absent.
 
+**Clarified by the owner 2026-08-17, after a full audit of all 165 images:**
+
+1. **A face is allowed — required, even — when the face is the anatomy being
+   taught.** The dental, eye and ear/nose material cannot be drawn without one.
+   `dental-trauma-injury-types-overview`, `eye-injuries-warning-signs`,
+   `eye-injuries-rigid-shield-technique`, the nosebleed cards and the impetigo
+   card are all **correct as they stand** and must not be sent for redraw.
+2. **Illustrated faces elsewhere are also fine** and were confirmed as such —
+   roughly 30 images carry one (the sports-psychology set, the EAP scenes, the
+   RICE and support-the-arm cards). Several are load-bearing: `listening-scene`
+   needs the approaching adult to read as an adult, `recognize-withdrawal` needs
+   a visibly withdrawn teammate.
+3. **What is actually prohibited is photorealism in a *person*.** The audit found
+   exactly three violations, all in heat-illness, all predating this rule (batch 4,
+   landed before the style note was written on 2026-07-27). See correction batch
+   B6.
+
+**The test, stated so it does not drift again:** ask *"is this a photograph or a
+photoreal render of a person?"* — not *"is there a face?"* A face is a normal part
+of teaching facial anatomy.
+
 ## Progress
 
 Done and merged: home hero, 7 category icons, 18 unit thumbnails, and the lesson
