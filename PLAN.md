@@ -62,14 +62,17 @@ were worked through on 2026-08-15; **do not re-request them**):
 2. **Two documents still wanted** — AAD *How to Prevent and Treat Blisters* (a
    candidate I had wrongly reported as non-existent) and Shellock & Prentice 1985.
    See the "Still wanted" table at the top of `docs/FETCH-LIST.md`.
-3. **ChatGPT handoff** — B5's six cards, the muscle-strains redo, and **B6's
-   three photorealism fixes** (`docs/briefs/B6-photorealism-fixes.md`). **Exactly
-   one card appears in both briefs:** `heat-illness-sweat-cooling` (B5 card 4 for
-   legibility, B6 card 3 for photorealism) — do those two changes in a single
-   redraw. ⚠ An earlier version of this line also claimed
-   `heat-illness-heat-stroke-emergency` overlapped; it does not. That was a
-   conflation with B5's card 1, `heat-illness-cold-water-immersion-technique`,
-   which is a different file on the 9-10 unit.
+3. **ChatGPT handoff — B6 is DONE (3/3 landed 2026-08-17), B5 is 1 of 6 done.**
+   B5 card 4 (`heat-illness-sweat-cooling`) rode along with B6 and has landed.
+   **Still outstanding: B5 cards 1, 2, 3, 5, 6 and the muscle-strains redo** — six
+   files, all untouched since July.
+
+   ⚠ **B5 card 1 is the highest-priority item left in the project.**
+   `heat-illness-cold-water-immersion-technique` still instructs "cool until
+   102°F" while the 9-10 lesson it sits in says to keep cooling until EMS takes
+   over — `"102"` appears **zero times** in `heat-illness.json`. **That
+   contradiction is live in the app right now.** Spec is Option A, in
+   `docs/briefs/B5-sweep-findings.md`.
 
 **Image audit (2026-08-17):** all 165 images checked for faces and photorealism.
 **Three violations, all in heat-illness, all predating the style rule** (batch 4;

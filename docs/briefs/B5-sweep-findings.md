@@ -5,6 +5,19 @@ at the size students actually see them. These are **separate from B3 and B4** an
 should be briefed separately again — B3 is a relabelling redraw, B4 is two
 one-line edits, and this batch is mostly *composition and body-text* work.
 
+# ⚠ STATUS 2026-08-17 — card 4 is DONE, five remain
+
+**Card 4 (`heat-illness-sweat-cooling`) has landed.** It was delivered with batch
+B6 on 2026-08-17: the four unreadable body paragraphs were removed, the four step
+headings enlarged, and the runner redrawn illustrated in the same pass. Verified
+with the stroke-merge test at 343 px. **Do not send card 4 again.**
+
+**Cards 1, 2, 3, 5 and 6 are still outstanding**, all untouched since July.
+**Card 1 is the highest priority in the whole backlog** — its 102 °F instruction
+contradicts the 9-10 lesson, and that contradiction is live in the app today.
+
+---
+
 ✅ **All six cards are ready to send.** Card 1's owner decision was made on
 2026-08-15 — **Option A** — and its section below now carries the final build
 spec rather than a question. Read Card 1's section first anyway: it is the
