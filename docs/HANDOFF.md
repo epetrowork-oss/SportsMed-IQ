@@ -84,8 +84,38 @@ hands) are fine and welcome; faces should be illustrated or absent.
    a visibly withdrawn teammate.
 3. **What is actually prohibited is photorealism in a *person*.** The audit found
    exactly three violations, all in heat-illness, all predating this rule (batch 4,
-   landed before the style note was written on 2026-07-27). See correction batch
-   B6.
+   landed before the style note was written on 2026-07-27).
+
+✅ **B6 DELIVERED AND LANDED 3/3 — 2026-08-17.** Mechanically flawless: correct
+per-card dimensions including the one 16:9 card, every file *smaller* than the
+photoreal original it replaced (49.7 / 50.9 / 54.3 KB, down from 55.5 / 55.9 /
+59.6), and the requested 343 px renders included. All three redraws are fresh, not
+pixel edits.
+
+- `heat-illness-warning-signs` — the photoreal woman is **gone entirely**, replaced
+  by a sun-over-field motif. All seven warning-sign lines, the header and the
+  footer strip are intact.
+- `heat-illness-heat-stroke-emergency` — both figures now illustrated, immersion
+  tub and managing adult preserved. **Margins improved**: the original had content
+  touching the right edge (R0); the redraw has R8.
+- `heat-illness-sweat-cooling` — runner illustrated and face-turned-away, **and**
+  the B5 legibility fix done in the same redraw: the four body paragraphs that
+  dissolved at 343 px are removed and the four step headings enlarged. Verified by
+  stroke-merge test at true 343 px — all four headings resolve with intact
+  letterforms.
+
+Browser-verified at 375 px: all three render, 0 placeholders, 0 console errors,
+0 failed requests, no overflow, each displayed at exactly 343 px.
+
+⚠ **Two of the three JSON descriptions had never matched their art, since batch
+4.** `heat-stroke-emergency` described "an athlete who has collapsed on the field
+with a teammate kneeling beside them" — the image has always been a tub immersion
+with an adult. `sweat-cooling` said "no text in the image" when half the card is a
+labelled process panel. Both were reconciled along with `warning-signs`, whose art
+genuinely changed. **This is the third time a slot description has described
+something the art never contained** (see the mandible card's phantom
+force-transmission arrow). When landing any image, diff the `description` against
+what is actually on the card rather than assuming it was right before.
 
 **The test, stated so it does not drift again:** ask *"is this a photograph or a
 photoreal render of a person?"* — not *"is there a face?"* A face is a normal part

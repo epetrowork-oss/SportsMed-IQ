@@ -29,8 +29,8 @@
         "asset": "heat-illness-sweat-cooling.webp",
         "ratio": "4:3",
         "background": "white",
-        "description": "Simple illustration of an athlete running or playing outdoors with visible sweat droplets on the skin and a few small motion/heat-wave lines rising off the skin, showing heat leaving the body as sweat evaporates. Clean, flat illustration style, no text in the image.",
-        "alt": "Athlete running outdoors with sweat droplets and heat lines showing the body cooling itself.",
+        "description": "Split card. Left: an illustrated runner seen from behind on a sunlit field, face turned away, with blue arrows rising off the skin to show evaporation carrying heat away; heading 'SWEAT COOLING — EVAPORATION REMOVES HEAT' and a short explanatory paragraph. Right: 'THE SWEAT COOLING PROCESS' as four numbered steps, headings only, each with a small icon — 1 BODY TEMPERATURE RISES, 2 SWEAT FORMS ON THE SKIN, 3 EVAPORATION REMOVES HEAT, 4 HIGH HUMIDITY REDUCES COOLING. The step headings deliberately carry no body paragraphs beneath them: an earlier version had four paragraphs that dissolved into unreadable blobs at the 343 px width this card is displayed at on a phone. Bottom: a KEY TAKEAWAY strip and a BETTER COOLING row (low humidity, air movement, more evaporation).",
+        "alt": "Card showing an illustrated runner with arrows depicting sweat evaporating and carrying heat away, beside the four steps of sweat cooling: body temperature rises, sweat forms, evaporation removes heat, and high humidity reduces cooling.",
         "location": "public/images/units/heat-illness/"
       },
       "callout": {
@@ -58,8 +58,8 @@
         "asset": "heat-illness-warning-signs.webp",
         "ratio": "4:3",
         "background": "white",
-        "description": "Simple illustration of an athlete sitting on the sideline in hot weather, looking pale and clammy, head resting in their hands, with small clean icon callouts nearby showing a headache icon and a dizziness icon. Flat, friendly illustration style, minimal detail.",
-        "alt": "Athlete sitting on the sideline looking pale and dizzy in hot weather, with headache and dizziness icons.",
+        "description": "Split card. Left: the seven heat-illness warning signs as a list, each with a yellow warning-triangle icon — headache, dizziness or lightheadedness, nausea, muscle cramps, unusual fatigue or weakness, chills or goosebumps, dark yellow urine / dehydration. Right: an illustrated hot-day motif — a large sun over a green field with heat rising in wavy lines. No person appears on this card by design: the warning-sign list is the teaching, and the previous version used a photorealistic woman, which the project's image rules prohibit. Navy header bar reading '4. WARNING SIGNS'; blue footer strip reading 'Remove from heat and evaluate. Symptoms can escalate quickly.' Flat illustration style.",
+        "alt": "Card listing seven heat-illness warning signs — headache, dizziness, nausea, muscle cramps, unusual fatigue, chills or goosebumps, and dark urine — beside an illustration of a hot sun over a playing field.",
         "location": "public/images/units/heat-illness/"
       }
     },
@@ -90,8 +90,8 @@
         "asset": "heat-illness-heat-stroke-emergency.webp",
         "ratio": "16:9",
         "background": "white",
-        "description": "Simple illustration of an athlete who has collapsed on the field in hot weather, with a teammate kneeling beside them and waving toward the sideline to call an adult. Clean, non-graphic emergency scene, plain illustration style for middle schoolers.",
-        "alt": "A teammate calling for help after another athlete collapses in hot weather.",
+        "description": "Split card. Left: four red action rows with icons — CALL 911 (activate EMS immediately), COOL IMMEDIATELY (begin cooling at once, do not delay), REMOVE CLOTHING (remove excess clothing and gear), COLD-WATER IMMERSION (use cold water immersion if available). Right: an illustrated scene of an athlete lying in an ice-water immersion tub with an adult in a polo shirt and glove kneeling beside them, managing the cooling. Both figures are illustrated, not photorealistic. Navy header reading '5. HEAT STROKE: MEDICAL EMERGENCY'; red banner beneath reading 'Time is critical. Cool first, transport second.' Flat illustration style, non-graphic.",
+        "alt": "Emergency card showing the four heat-stroke actions — call 911, cool immediately, remove clothing, cold-water immersion — beside an illustration of an athlete in an ice-water tub with an adult managing the cooling.",
         "location": "public/images/units/heat-illness/"
       },
       "callout": {
