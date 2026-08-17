@@ -42,7 +42,8 @@ are staying.** Two categories were explicitly confirmed as correct:
 
 ## Card 1 — `heat-illness-warning-signs.webp` (worst of the three)
 
-- Unit: `heat-illness-ms.json` (**7-8**) · folder `public/images/units/heat-illness/`
+- Unit: `heat-illness-ms.json` (**7-8**) · **4:3, 900 × 675** · current file 55.5 KB
+- Folder: `public/images/units/heat-illness/`
 
 **The problem:** the right half is a photorealistic adult woman, seated, hand to
 forehead, **face fully visible and individually identifiable**. She reads as a
@@ -65,7 +66,8 @@ and evaluate. Symptoms can escalate quickly."*
 
 ## Card 2 — `heat-illness-heat-stroke-emergency.webp`
 
-- Unit: `heat-illness-ms.json` (**7-8**) · folder `public/images/units/heat-illness/`
+- Unit: `heat-illness-ms.json` (**7-8**) · ⚠ **16:9, 900 × 506** — the only one of the three at this ratio · current file 55.9 KB
+- Folder: `public/images/units/heat-illness/`
 
 **The problem:** **two** photorealistic people — an adult in a polo and
 sunglasses leaning over a young man in an immersion tub, **both faces fully
@@ -92,7 +94,8 @@ second."*
 
 ## Card 3 — `heat-illness-sweat-cooling.webp`
 
-- Unit: `heat-illness-ms.json` (**7-8**) · folder `public/images/units/heat-illness/`
+- Unit: `heat-illness-ms.json` (**7-8**) · **4:3, 900 × 675** · current file 59.6 KB
+- Folder: `public/images/units/heat-illness/`
 
 **The problem:** the running athlete on the left is a photoreal render. The face
 is mostly turned away, so this is the mildest of the three — but the body, kit and
@@ -113,9 +116,14 @@ do both in one redraw.**
 
 ## Standing rules
 
-WebP · exact filenames and folders above · same ratio and dimensions as the
-current files · **30–60 KB** · no logo or watermark · full-frame · ≥ 12 px clean
-margin on every edge.
+WebP · exact filenames and folders above · **dimensions are per-card and listed
+above — note card 2 is 16:9 while cards 1 and 3 are 4:3** · no logo or watermark ·
+full-frame · ≥ 12 px clean margin on every edge.
+
+⚠ **On file size: all three currently sit at 55–60 KB, at the very top of the
+30–60 KB budget.** That is largely *because* they are photoreal. Illustrated
+replacements should compress considerably better, so aim for the middle of the
+range rather than matching the current sizes.
 
 **And the rule this batch exists to enforce:** no photographs, and **no
 photorealistic or identifiable people**. Illustrated people are the house style
