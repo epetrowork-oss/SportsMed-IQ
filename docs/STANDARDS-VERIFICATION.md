@@ -75,9 +75,9 @@ that can occur during sports and recreational activities."**
 
 This is *the* sports-injury standard for grades 7-8 in the California framework,
 it names oral injuries explicitly (this app has a dental-trauma strand), and it
-was **absent from the catalog entirely**. It is now joint most-cited at **17
-units** (see the correction section below — it was 18 until a bad alignment on
-`sports-psychology-ms` was removed).
+was **absent from the catalog entirely**. It now sits on **10 units** — see the
+two correction sections below. It went 18 → 17 → 10 as successive review passes
+found it applied on topic rather than on whether the unit teaches risk reduction.
 
 Two more relevant standards were also missing and have been added:
 
@@ -93,12 +93,32 @@ Two more relevant standards were also missing and have been added:
 
 | Entry | Code | Units |
 |---|---|---|
-| `CAHE.7-8.S.SportsInjury` | 1.15.S | 17 |
 | `CAHE.7-8.S.TellAdult` | 4.1.S | 17 |
-| `CAHE.7-8.S.SafetyPlan` | 6.2.S | 10 |
+| `CAHE.7-8.S.SportsInjury` | 1.15.S | 10 |
 | `CAHE.7-8.S.FirstAid` | 7.1.S | 4 |
-| `CAHE.7-8.S.ValidInfo` | 3.1.S | 3 |
+| `CAHE.7-8.S.SafetyPlan` | 6.2.S | 2 |
 | `CAHE.7-8.S.Environment` | 1.11.S | 2 |
+| ~~`CAHE.7-8.S.ValidInfo`~~ | ~~3.1.S~~ | **removed from the catalog** |
+
+**13 catalog entries** (was 14). Every 7-8 unit still carries at least one.
+
+### ⚠ The topic-shaped tagging went deeper than the first correction found
+
+The correction below fixed `FirstAid` and one bad `SportsInjury`. **It did not
+re-audit the tags nobody had complained about, and three of them had the same
+defect.** Caught on the next review pass. The rule each time is identical: *does
+the unit teach the action the standard names?*
+
+| Tag | Standard says | What was wrong |
+|---|---|---|
+| **`ValidInfo` (3.1.S)** | *"**Analyze sources** of information regarding injury and violence prevention"* | **Zero** of its three units teach source evaluation — `source`, `website`, `reliable`, `accurate information` all return **0 hits** in concussion-ms, sports-psychology-ms and taping-wrapping-ms. **Removed from all three, and the entry deleted from the catalog** since nothing legitimately uses it |
+| **`SafetyPlan` (6.2.S)** | *"**Create** a personal-safety plan"* | Applied to 10 units on topic. Only two ask the student to prepare something in advance: `emergency-action-plan-ms` (*"Know your school before you need to"*) and `hydration-nutrition-ms` (*"Build a water habit"*, *"Pack smart for practice and game day"*). The other eight teach habits and recognition, which is Standard 7 territory, not goal-setting. **Cut 10 → 2** |
+| **`SportsInjury` (1.15.S)** | *"Explain ways to **reduce the risk** of injuries"* | Applied to every 7-8 unit. Seven are recognition-and-response only, with no risk-reduction content anywhere in their section structure: ankle-sprain, concussion, emergency-action-plan, fractures-dislocations, muscle-strains, shoulder-injuries, wound-care. **Cut 17 → 10** — kept where prevention is a real section (*"Prevention: mouthguards"*, *"Prevention: wear the right eyewear"*, *"Dressing right so you don't get too cold"*, *"Lowering your risk"*, *"Staying safe in hot weather"*, the whole warm-up unit) |
+
+**The pattern, stated once:** a topic that *sounds* like a standard is not an
+alignment. `wound-care-ms` is obviously about injuries, but it never teaches how
+to avoid getting one — so 1.15.S does not apply to it. Reading the section
+headings answers this faster than any keyword count.
 
 ### ⚠ The first mapping pass was mechanical, and mechanical was wrong
 

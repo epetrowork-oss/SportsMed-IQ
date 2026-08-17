@@ -1,5 +1,5 @@
 {
-  "_comment": "California standards catalog. Every entry is a DRAFT: codes and text were compiled from secondary sources because the official CDE PDFs are not reachable from the dev environment. verified stays false until a human checks the entry against the official document (see docs/STANDARDS-VERIFICATION.md). UI must present unverified alignments as drafts.",
+  "_comment": "California standards catalog. VERIFIED 2026-08-16 against the official CDE documents — every entry's officialCode and text were checked line by line and the text is now the official wording, not a paraphrase. Do not reword an entry to fit a lesson: the first draft of this catalog was paraphrased from memory and drifted toward injury language, which is what the verification pass had to undo. Unit-to-standard mappings are made on what the standard asks the student to DO, not on topic similarity — see docs/STANDARDS-VERIFICATION.md for the per-entry record and the mapping rules.",
   "frameworks": {
     "CTE-HSMT": {
       "name": "California CTE Model Curriculum Standards — Health Science & Medical Technology sector, Patient Care pathway",
@@ -89,14 +89,6 @@
       "framework": "CA-HE",
       "officialCode": "1.11.S",
       "text": "Identify ways to prevent climate-related physical conditions such as exhaustion, sunburn, heat stroke, and hypothermia.",
-      "verified": true,
-      "source": "Health Education Content Standards for California Public Schools (2008), Grades Seven and Eight, Injury Prevention and Safety"
-    },
-    {
-      "id": "CAHE.7-8.S.ValidInfo",
-      "framework": "CA-HE",
-      "officialCode": "3.1.S",
-      "text": "Analyze sources of information regarding injury and violence prevention.",
       "verified": true,
       "source": "Health Education Content Standards for California Public Schools (2008), Grades Seven and Eight, Injury Prevention and Safety"
     },
