@@ -140,9 +140,9 @@
     },
     {
       "id": "q4",
-      "question": "What is the underlying mechanism of second impact syndrome?",
+      "question": "What is the proposed mechanism of second impact syndrome?",
       "choices": [
-        "A second hit before recovery can cause loss of cerebral blood vessel autoregulation, leading to rapid, often fatal brain swelling",
+        "A second hit before recovery is thought to cause loss of cerebral blood vessel autoregulation, leading to rapid, often fatal brain swelling",
         "A second hit reopens the original skull fracture",
         "Repeated hits gradually wear down bone density in the skull",
         "It occurs only when the second hit is harder than the first"

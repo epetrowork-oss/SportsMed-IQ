@@ -158,6 +158,24 @@ routes to a human. Labels:
 
 ### `[NEEDS-EVAN]` — medical/legal/scope calls; don't let an LLM decide
 
+# ✅ ALL SIX SETTLED 2026-08-15 — this queue is closed. Do not reopen it.
+
+**Every item below has been decided by the owner or resolved against a primary
+source.** The list is kept as the record of what was asked and how each was
+answered. **A session finding this queue should not treat any entry as pending**,
+and the "working split" note at the end of this section is likewise historical.
+
+| # | Item | Outcome |
+|---|---|---|
+| 1 | Second impact syndrome certainty | ✅ **Hedged.** Prose, flashcard `f4` and quiz `q4` now frame it as the *proposed* mechanism and note the published case series are small |
+| 2 | Student reinserting an avulsed permanent tooth | ✅ **No change — lesson confirmed correct.** IADT 2020 explicitly encourages *"the patient/guardian/teacher/other person to replant the tooth immediately at the emergency site"* |
+| 3 | Tooth storage: saliva above sterile saline | ✅ **No change — quiz key confirmed correct.** IADT 2020: *"In descending order of preference, milk, HBSS, saliva … or saline"* |
+| 4 | Shoulder recurrence "70-90% under age 20" | ✅ **Hedged**, now noting reported rates vary widely between cohorts and studies |
+| 5 | "Every U.S. state has a law…" | ✅ **Hedged** in both bands. The laws do all exist; what varies is the detail, including who counts as an approved provider |
+| 6 | 10%-rule vs ACWR across bands | ✅ **Closed, no change.** Not a conflict — the 11-12 unit opens *"The flat '10% per week' rule you learned before is a reasonable guardrail, but it has a blind spot"* under a heading called "Beyond the 10% rule". A deliberate spiral build |
+
+**The original queue follows.**
+
 1. **Second impact syndrome certainty** (`concussion-adv`, 11-12) — the prose
    states mechanism, "nearly exclusively adolescents," and very high
    mortality with more certainty than the contested literature supports.

@@ -70,6 +70,57 @@ subject, not rendering style: **no photographs, and no identifiable or
 photorealistic people** — realistic *anonymous body parts* (a forearm, a foot,
 hands) are fine and welcome; faces should be illustrated or absent.
 
+**Clarified by the owner 2026-08-17, after a full audit of all 165 images:**
+
+1. **A face is allowed — required, even — when the face is the anatomy being
+   taught.** The dental, eye and ear/nose material cannot be drawn without one.
+   `dental-trauma-injury-types-overview`, `eye-injuries-warning-signs`,
+   `eye-injuries-rigid-shield-technique`, the nosebleed cards and the impetigo
+   card are all **correct as they stand** and must not be sent for redraw.
+2. **Illustrated faces elsewhere are also fine** and were confirmed as such —
+   roughly 30 images carry one (the sports-psychology set, the EAP scenes, the
+   RICE and support-the-arm cards). Several are load-bearing: `listening-scene`
+   needs the approaching adult to read as an adult, `recognize-withdrawal` needs
+   a visibly withdrawn teammate.
+3. **What is actually prohibited is photorealism in a *person*.** The audit found
+   exactly three violations, all in heat-illness, all predating this rule (batch 4,
+   landed before the style note was written on 2026-07-27).
+
+✅ **B6 DELIVERED AND LANDED 3/3 — 2026-08-17.** Mechanically flawless: correct
+per-card dimensions including the one 16:9 card, every file *smaller* than the
+photoreal original it replaced (49.7 / 50.9 / 54.3 KB, down from 55.5 / 55.9 /
+59.6), and the requested 343 px renders included. All three redraws are fresh, not
+pixel edits.
+
+- `heat-illness-warning-signs` — the photoreal woman is **gone entirely**, replaced
+  by a sun-over-field motif. All seven warning-sign lines, the header and the
+  footer strip are intact.
+- `heat-illness-heat-stroke-emergency` — both figures now illustrated, immersion
+  tub and managing adult preserved. **Margins improved**: the original had content
+  touching the right edge (R0); the redraw has R8.
+- `heat-illness-sweat-cooling` — runner illustrated and face-turned-away, **and**
+  the B5 legibility fix done in the same redraw: the four body paragraphs that
+  dissolved at 343 px are removed and the four step headings enlarged. Verified by
+  stroke-merge test at true 343 px — all four headings resolve with intact
+  letterforms.
+
+Browser-verified at 375 px: all three render, 0 placeholders, 0 console errors,
+0 failed requests, no overflow, each displayed at exactly 343 px.
+
+⚠ **Two of the three JSON descriptions had never matched their art, since batch
+4.** `heat-stroke-emergency` described "an athlete who has collapsed on the field
+with a teammate kneeling beside them" — the image has always been a tub immersion
+with an adult. `sweat-cooling` said "no text in the image" when half the card is a
+labelled process panel. Both were reconciled along with `warning-signs`, whose art
+genuinely changed. **This is the third time a slot description has described
+something the art never contained** (see the mandible card's phantom
+force-transmission arrow). When landing any image, diff the `description` against
+what is actually on the card rather than assuming it was right before.
+
+**The test, stated so it does not drift again:** ask *"is this a photograph or a
+photoreal render of a person?"* — not *"is there a face?"* A face is a normal part
+of teaching facial anatomy.
+
 ## Progress
 
 Done and merged: home hero, 7 category icons, 18 unit thumbnails, and the lesson
@@ -933,7 +984,7 @@ project does not attach sources on.
 | taping-wrapping 11-12 **+ ankle-sprain 11-12** | Rigid tape's motion restriction decaying during activity | ✅ **CLOSED, and the figure was wrong** — see below |
 | dental-facial-trauma 9-10 / 11-12 | *(was a held decision, not an uncited claim)* Student replantation + storage ranking | ✅ **SETTLED** — see the dental entry in the ledger |
 | warmup-injury-prevention 11-12 | Raising muscle temperature by ~1–2 °C meaningfully shifts tissue properties | ⚠ **STILL OPEN.** The only document supplied was a **ScienceDaily news article**, which reports a performance change per 1 °C but does not support the tissue-property claim. Correctly filed as do-not-cite; the Shellock & Prentice paper was not obtained |
-| eye-injuries **9-10 and 11-12** | Chemical-splash guidance — **the 15–20 minute flush duration specifically** | ⚠ **PARTIALLY CLOSED.** AAO *Treating Acute Chemical Injuries of the Cornea* supports immediate copious irrigation at the site, continued through transport, plus hospital evaluation — but gives a **pH endpoint (7.0–7.2), not a duration**. 0 hits for "20 min"/"30 min". **The fixed 15–20 minute figure remains uncited** |
+| eye-injuries **9-10 and 11-12** | Chemical-splash guidance — **the 15–20 minute flush duration specifically** | ⚠ **PARTIALLY CLOSED, and the source is now actually attached.** AAO *Treating Acute Chemical Injuries of the Cornea* (Hemmati & Colby, EyeNet, **October 2012**) supports immediate copious irrigation at the site, continued through transport, plus hospital evaluation — but gives a **pH endpoint (7.0–7.2), not a duration**. 0 hits for "20 min"/"30 min". **The fixed 15–20 minute figure remains uncited.** ⚠ **The attachment was missed on the first pass** — the source was verified and written up here on 2026-08-15 but never added to the unit files, so `TESTERS.md` told teachers it was sourced while the app carried no such source. Caught by Codex on PR #62 as the only **P1** of the whole review cycle. Attached to the 9-10 and 11-12 bands on 2026-08-16; `eye-injuries-ms` teaches no chemical content (**0 hits**) and was correctly left alone. ⚠ **AAO's own page carries a staleness warning** — *"This article is from October 2012 and may contain outdated material"* — so this is a second dated source on a strand already flagged for its 2005 textbook |
 | cold-exposure 11-12 | "Water conducts heat ~25× faster than air" | ⚠ **STILL OPEN** — WMS Hypothermia 2019 has **0 hits** for "25 times", "25-fold" or "twenty-five". Its 7 "conduction" mentions are general heat-transfer exposition |
 | cold-exposure 11-12 | The "1-10-1 principle" naming | ⚠ **STILL OPEN** — **0 hits** for "1-10-1" in WMS Hypothermia 2019. The underlying physiology is covered there; the mnemonic is not |
 | skin-conditions 7-8 and 9-10 | **"Leave an intact blister alone"** specifically | ⚠ **STILL OPEN, but a candidate exists and was never requested** — see below |

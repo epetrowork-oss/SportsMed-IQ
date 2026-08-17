@@ -6,7 +6,11 @@
   "gradeBand": "7-8",
   "summary": "Learn how to dress for cold practices and games, notice the warning signs of cold-weather trouble, and know exactly who to tell.",
   "minutes": 10,
-  "standards": ["CAHE.7-8.S.Environment", "CAHE.7-8.S.SelfOthers", "CAHE.7-8.S.SafetyPlan"],
+  "standards": [
+    "CAHE.7-8.S.Environment",
+    "CAHE.7-8.S.SportsInjury",
+    "CAHE.7-8.S.TellAdult"
+  ],
   "sections": [
     {
       "heading": "Why cold weather matters for athletes",

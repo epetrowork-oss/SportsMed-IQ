@@ -6,7 +6,11 @@
   "gradeBand": "9-10",
   "summary": "Tell a minor eye irritation from a sight-threatening injury, and know exactly what to do — and not do — in the first minute.",
   "minutes": 15,
-  "standards": ["CTE.HSMT.B.2.0", "CTE.HSMT.B.2.4", "CTE.HSMT.Anchor.6"],
+  "standards": [
+    "CTE.HSMT.B.2.0",
+    "CTE.HSMT.B.2.4",
+    "CTE.HSMT.Anchor.6"
+  ],
   "sections": [
     {
       "heading": "Why eye injuries deserve their own protocol",
@@ -116,7 +120,12 @@
     {
       "id": "q1",
       "question": "Which tissue forms the clear, dome-shaped front window of the eye and is extremely pain-sensitive when scratched?",
-      "choices": ["Sclera", "Iris", "Cornea", "Orbit"],
+      "choices": [
+        "Sclera",
+        "Iris",
+        "Cornea",
+        "Orbit"
+      ],
       "answerIndex": 2,
       "explanation": "The cornea is the clear front covering of the eye; it is one of the most nerve-dense tissues in the body, so even a small scratch causes sharp pain. The sclera is the white outer wall, the iris is the colored ring, and the orbit is the bony socket."
     },
@@ -147,7 +156,12 @@
     {
       "id": "q4",
       "question": "An athlete takes a finger to the eye and there is now visible blood pooling in front of the colored part of the eye. What is this finding called?",
-      "choices": ["Hyphema", "Ptosis", "Nystagmus", "Photophobia"],
+      "choices": [
+        "Hyphema",
+        "Ptosis",
+        "Nystagmus",
+        "Photophobia"
+      ],
       "answerIndex": 0,
       "explanation": "A hyphema is blood pooling in the front chamber of the eye, in front of the iris/pupil — it is a serious finding that needs urgent physician evaluation, not sideline management."
     },
@@ -272,6 +286,12 @@
       "title": "Protective Eyewear for Young Athletes — Joint Policy Statement of the American Academy of Pediatrics and the American Academy of Ophthalmology",
       "publisher": "American Academy of Ophthalmology",
       "year": 2013
+    },
+    {
+      "title": "Treating Acute Chemical Injuries of the Cornea (Hemmati HD, Colby KA)",
+      "publisher": "EyeNet Magazine, American Academy of Ophthalmology",
+      "year": 2012,
+      "url": "https://www.aao.org/eyenet/article/treating-acute-chemical-injuries-of-cornea"
     }
   ]
 }
