@@ -15,8 +15,23 @@ illustrated; these three are photoreal renders of specific-looking individuals.
 
 **Why only this strand:** heat-illness was **batch 4**, one of the earliest
 delivered. The style rule was written down on **2026-07-27**, after batch 13.
-These three predate it and were never re-checked against it. Nothing else in the
-corpus has this problem.
+These three predate it and were never re-checked against it.
+
+### Two borderline cards that were reviewed and deliberately kept
+
+An earlier version of this brief said flatly that *"nothing else in the corpus has
+this problem."* That was too absolute. A second reviewer flagged two more cards;
+both were re-examined at full resolution and **both are staying**, but the
+reasoning belongs here so the call is visible rather than hidden.
+
+| Card | Why it was flagged | Why it stays |
+|---|---|---|
+| `warmup-injury-prevention-cold-weather.webp` | A realistically-proportioned athlete on a real-looking field | It is **flat vector illustration**, not a photoreal render — smooth gradient shading, no skin texture, no fabric weave, stylised block-shaded hair. It is also **back-turned with no face at all**. Realistic *proportions* are not photorealism |
+| `concussion-warning-signs.webp` | 3D-rendered human heads with facial planes | These are **translucent blue anatomical mannequins**, the standard medical-visualisation style — no skin tone, no hair, no identifying features, not a depiction of a person. The photoreal **eye** in the bottom-right circle is an *anonymous body part*, which the rule explicitly permits |
+
+**If the owner disagrees with either call, they get added to this batch** — the
+judgement is genuinely close on the first one. But neither should be redrawn on
+the strength of this brief alone.
 
 ---
 
