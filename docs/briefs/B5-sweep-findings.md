@@ -1,7 +1,8 @@
 # Correction batch B5 — findings from the full-corpus 343 px sweep
 
-**Six images.** Found on 2026-08-15 when all 139 lesson diagrams were re-checked
-at the size students actually see them. These are **separate from B3 and B4** and
+**Six images originally; five still outstanding** — see the status box below.
+Found on 2026-08-15 when all 139 lesson diagrams were re-checked at the size
+students actually see them. These are **separate from B3 and B4** and
 should be briefed separately again — B3 is a relabelling redraw, B4 is two
 one-line edits, and this batch is mostly *composition and body-text* work.
 
@@ -18,11 +19,10 @@ contradicts the 9-10 lesson, and that contradiction is live in the app today.
 
 ---
 
-✅ **All six cards are ready to send.** Card 1's owner decision was made on
-2026-08-15 — **Option A** — and its section below now carries the final build
-spec rather than a question. Read Card 1's section first anyway: it is the
-highest-priority card in the batch and the only one where the wording change is
-the point rather than the legibility fix.
+Card 1's owner decision was made on 2026-08-15 — **Option A** — and its section
+below carries the final build spec rather than a question. Read Card 1 first: it
+is the highest-priority card in the batch and the only one where the **wording**
+is the problem rather than the art.
 
 ---
 
@@ -162,7 +162,12 @@ rule. The anatomy illustration is correct and should not change.
 
 ---
 
-## Card 4 — `heat-illness-sweat-cooling.webp`
+## ~~Card 4 — `heat-illness-sweat-cooling.webp`~~ ✅ DONE 2026-08-17
+
+**This card has landed — skip it.** Delivered with batch B6: the four body
+paragraphs below were removed, the four step headings enlarged, and the runner
+redrawn illustrated in the same pass. Verified with the stroke-merge test at
+343 px. The original brief text is kept below as the record of what was asked.
 
 - Unit: `heat-illness-ms.json` (**7-8**) · 4:3 (900 × 675)
 - Folder: `public/images/units/heat-illness/`
