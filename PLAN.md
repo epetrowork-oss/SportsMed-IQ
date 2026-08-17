@@ -63,10 +63,13 @@ were worked through on 2026-08-15; **do not re-request them**):
    candidate I had wrongly reported as non-existent) and Shellock & Prentice 1985.
    See the "Still wanted" table at the top of `docs/FETCH-LIST.md`.
 3. **ChatGPT handoff** — B5's six cards, the muscle-strains redo, and **B6's
-   three photorealism fixes** (`docs/briefs/B6-photorealism-fixes.md`). Note two
-   of B6's cards are also in B5 — `heat-illness-heat-stroke-emergency` and
-   `heat-illness-sweat-cooling` — and both briefs say to do the two changes in a
-   single redraw rather than two passes.
+   three photorealism fixes** (`docs/briefs/B6-photorealism-fixes.md`). **Exactly
+   one card appears in both briefs:** `heat-illness-sweat-cooling` (B5 card 4 for
+   legibility, B6 card 3 for photorealism) — do those two changes in a single
+   redraw. ⚠ An earlier version of this line also claimed
+   `heat-illness-heat-stroke-emergency` overlapped; it does not. That was a
+   conflation with B5's card 1, `heat-illness-cold-water-immersion-technique`,
+   which is a different file on the 9-10 unit.
 
 **Image audit (2026-08-17):** all 165 images checked for faces and photorealism.
 **Three violations, all in heat-illness, all predating the style rule** (batch 4;

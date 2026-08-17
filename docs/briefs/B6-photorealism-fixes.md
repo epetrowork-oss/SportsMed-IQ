@@ -1,7 +1,13 @@
 # Correction batch B6 — three photorealistic-people images
 
-**Three images, all in heat-illness.** Found by a full audit of all 165 images in
-the app on 2026-08-17.
+**Three images, all in heat-illness, and all three are 7-8 cards**
+(`heat-illness-ms.json`). Found by a full audit of all 165 images in the app on
+2026-08-17.
+
+⚠ **The band matters for this batch.** 7-8 is the youngest audience and the most
+image-dependent band in the app, so all three redraws need the simple, friendly
+illustrated treatment used elsewhere at that level — not a clinical or adult
+register.
 
 These break the one image rule that has never changed: **no photographs, and no
 identifiable or photorealistic people.** Every other image in the project is
@@ -36,7 +42,7 @@ are staying.** Two categories were explicitly confirmed as correct:
 
 ## Card 1 — `heat-illness-warning-signs.webp` (worst of the three)
 
-- Unit: `heat-illness.json` (**9-10**) · folder `public/images/units/heat-illness/`
+- Unit: `heat-illness-ms.json` (**7-8**) · folder `public/images/units/heat-illness/`
 
 **The problem:** the right half is a photorealistic adult woman, seated, hand to
 forehead, **face fully visible and individually identifiable**. She reads as a
@@ -59,16 +65,18 @@ and evaluate. Symptoms can escalate quickly."*
 
 ## Card 2 — `heat-illness-heat-stroke-emergency.webp`
 
-- Unit: `heat-illness.json` (**9-10**) · folder `public/images/units/heat-illness/`
+- Unit: `heat-illness-ms.json` (**7-8**) · folder `public/images/units/heat-illness/`
 
 **The problem:** **two** photorealistic people — an adult in a polo and
 sunglasses leaning over a young man in an immersion tub, **both faces fully
 visible**. Same violation, doubled.
 
-⚠ **This card is also being changed by batch B5 (card 1) for a separate reason** —
-its 102 °F stop-cooling instruction contradicts the 9-10 lesson. **Please do both
-changes in one redraw rather than two passes.** B5 has the wording spec; this
-brief covers the art.
+⚠ **This card does NOT overlap with B5 — do not look for a 102 °F instruction on
+it.** An earlier draft of this brief said it did. That was a conflation of two
+similarly-named heat-illness cards: B5's card 1 is
+`heat-illness-cold-water-immersion-technique.webp`, a **different file** on the
+**9-10** unit, which is the one carrying the 102 °F wording. This card has no such
+text and needs only the art change below.
 
 **The fix:** redraw both figures illustrated. The scene should still show
 whole-body cold-water immersion with an adult managing it — that is the teaching,
@@ -90,7 +98,7 @@ second."*
 is mostly turned away, so this is the mildest of the three — but the body, kit and
 skin are photographic in a way nothing else in the app is.
 
-**This one is on a 7-8 unit**, the band that leans hardest on its images.
+**Like the other two, this is a 7-8 card** — the band that leans hardest on its images.
 
 **The fix:** redraw the runner illustrated, matching e.g.
 `warmup-injury-prevention-warmup-steps` or
