@@ -1,5 +1,17 @@
 # Plan — pick up here (current focus: image pipeline, see `docs/HANDOFF.md`)
 
+**Update 2026-08-24 — logins landed (owner request; supersedes the "accounts
+permanently out" line below).** Device-local admin/teacher sign-in, classes
+with teacher-chosen anonymous login names + generated student IDs and
+word+digit PINs, one `SMIQC1` class login code per class carrying the roster
+(hashed PINs) and per-class content controls (library visibility, quizzes
+on/off, assignments on/off), per-student progress profiles on shared
+devices, and Microsoft/Google-flavored CSV exports (detail + gradebook
+layouts for Teams/Classroom). Still zero server — see `docs/ACCOUNTS.md`
+for the full model, key inventory, and honest security scope. Follow-ups:
+TESTERS.md doesn't cover the login flow yet; teacher re-shares the class
+code to push settings changes (document in any teacher guide).
+
 This file is the handoff between sessions. Read it first, keep it updated:
 check items off as they land, and add anything newly discovered. The working
 rhythm is unchanged: **build a piece → verify in the browser → commit.**
@@ -670,6 +682,8 @@ aesthetically pleasing." Two sub-phases, sequenced differently:
 
 ## Out of scope (intentional)
 
-Accounts/auth and live server-based sync remain permanently out. Assigning
+Live server-based sync remains permanently out. Accounts moved IN scope
+2026-08-24 — but only as device-local logins + codes (see the update at the
+top and `docs/ACCOUNTS.md`); server-backed accounts stay out. Assigning
 content moved IN scope 2026-07-08 (via offline assignment codes — see the
 alpha sprint above); it is no longer on this list.
