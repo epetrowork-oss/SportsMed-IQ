@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { getAllUnits, getUnitsByCategory, getStandardsForUnit, getUnit } from '../content/index.js'
+import { getAllUnits, getUnitsByCategory, getUnit } from '../content/index.js'
 import { useProgress, getUnitProgress, PASS_THRESHOLD } from '../lib/progress.js'
 import { useRoster, addStudentFromCode, removeStudent } from '../lib/roster.js'
 import {
@@ -11,6 +11,33 @@ import { ASSIGNMENT_MODES } from '../lib/assignments.js'
 import { isComplete, isFlagged, flagReasons, formatMinSec, statusInfo } from '../lib/status.js'
 import StatusIcon from '../components/StatusIcon.jsx'
 import mockRoster from '../content/mock/students.json'
+import {
+  useAuth,
+  setupAdmin,
+  loginAdmin,
+  logoutAdmin,
+  issueTeacherCode,
+  removeIssuedTeacher,
+  redeemTeacherCode,
+  logoutTeacher,
+} from '../lib/auth.js'
+import {
+  useClasses,
+  createClass,
+  removeClass,
+  addStudent,
+  removeStudentFromClass,
+  resetStudentPin,
+  updateClassSettings,
+  buildClassLoginCode,
+  credentialSheetText,
+} from '../lib/classes.js'
+import {
+  downloadDetailCsvMicrosoft,
+  downloadDetailCsvGoogle,
+  downloadGradebookCsvMicrosoft,
+  downloadGradebookCsvGoogle,
+} from '../lib/exports.js'
 
 // due is "YYYY-MM-DD"; parse as local date, not UTC midnight, so it never
 // displays a day early/late depending on timezone (mirrors SyncPage).
@@ -35,71 +62,6 @@ function assignmentCompletion(row, assignment) {
   const total = assignment.unitIds.length
   const complete = assignment.unitIds.filter((id) => isComplete(row.progressFor(id))).length
   return { total, complete, pct: total ? Math.round((complete / total) * 100) : 0 }
-}
-
-// Wide CSV: one row per student, one column per saved assignment (% complete)
-// followed by four columns per unit. Opens cleanly in Sheets/Excel for
-// gradebooks. Per-unit format unchanged from the flat-table version.
-function buildCsv(rows, units, assignments) {
-  const esc = (v) => `"${String(v ?? '').replaceAll('"', '""')}"`
-  const header = [
-    'Student',
-    ...assignments.map((a) => `«${a.name}» — % assigned complete`),
-    ...units.flatMap((u) => [
-      `${u.title} — status`,
-      `${u.title} — best quiz %`,
-      `${u.title} — reading min`,
-      `${u.title} — % of lesson seen`,
-    ]),
-  ]
-  const lines = rows.map((row) => {
-    const cells = [row.name]
-    for (const assignment of assignments) {
-      cells.push(assignmentCompletion(row, assignment).pct)
-    }
-    for (const unit of units) {
-      const p = row.progressFor(unit.id)
-      const started =
-        p && (p.lessonRead || p.quizAttempts || p.flashcardsReviewed || p.readSeconds)
-      let status = !started ? 'Not started' : isComplete(p) ? 'Complete' : 'In progress'
-      if (isFlagged(p)) status += ' (flagged)'
-      cells.push(
-        status,
-        p?.bestQuizScore != null ? Math.round(p.bestQuizScore * 100) : '',
-        p?.readSeconds ? Math.round(p.readSeconds / 60) : started ? 0 : '',
-        p?.scrollPct ? p.scrollPct : started ? 0 : '',
-      )
-    }
-    return cells.map(esc).join(',')
-  })
-
-  // Appended reference section (not part of the per-student table above) so
-  // a teacher can see which California standards each unit is tagged with
-  // without widening every student row by another column per unit. Only
-  // units with at least one resolvable standard get a line.
-  const standardsRows = units
-    .map((u) => ({ unit: u, standards: getStandardsForUnit(u) }))
-    .filter(({ standards }) => standards.length > 0)
-    .map(({ unit, standards }) =>
-      [unit.title, standards.map((s) => `${s.framework.shortName} ${s.officialCode}`).join('; ')]
-        .map(esc)
-        .join(',')
-    )
-  const standardsSection =
-    standardsRows.length > 0
-      ? ['', 'Standards reference', ['Unit', 'Standards'].map(esc).join(','), ...standardsRows]
-      : []
-
-  return [header.map(esc).join(','), ...lines, ...standardsSection].join('\n')
-}
-
-function downloadCsv(rows, units, assignments) {
-  const blob = new Blob([buildCsv(rows, units, assignments)], { type: 'text/csv;charset=utf-8' })
-  const a = document.createElement('a')
-  a.href = URL.createObjectURL(blob)
-  a.download = `sportmediq-progress-${new Date().toISOString().slice(0, 10)}.csv`
-  a.click()
-  URL.revokeObjectURL(a.href)
 }
 
 function AddStudentForm() {
@@ -142,6 +104,326 @@ function AddStudentForm() {
         <p className={result.ok ? 'import-ok' : 'import-error'} role="status">
           {result.message}
         </p>
+      )}
+    </section>
+  )
+}
+
+// --- login gate (Teacher tab lock) ---
+
+function LoginGate() {
+  const { adminConfigured } = useAuth()
+
+  const [teacherCode, setTeacherCode] = useState('')
+  const [teacherError, setTeacherError] = useState('')
+
+  const [adminPass, setAdminPass] = useState('')
+  const [adminError, setAdminError] = useState('')
+
+  const [setupPass, setSetupPass] = useState('')
+  const [setupConfirm, setSetupConfirm] = useState('')
+  const [setupError, setSetupError] = useState('')
+
+  async function handleRedeem() {
+    try {
+      await redeemTeacherCode(teacherCode)
+      setTeacherCode('')
+      setTeacherError('')
+    } catch (err) {
+      setTeacherError(err.message)
+    }
+  }
+
+  async function handleAdminLogin() {
+    try {
+      await loginAdmin(adminPass)
+      setAdminPass('')
+      setAdminError('')
+    } catch (err) {
+      setAdminError(err.message)
+    }
+  }
+
+  async function handleAdminSetup() {
+    if (setupPass.length < 6) {
+      setSetupError('Pick an admin passcode of at least 6 characters.')
+      return
+    }
+    if (setupPass !== setupConfirm) {
+      setSetupError('Passcodes do not match — re-enter them.')
+      return
+    }
+    try {
+      await setupAdmin(setupPass)
+      setSetupPass('')
+      setSetupConfirm('')
+      setSetupError('')
+    } catch (err) {
+      setSetupError(err.message)
+    }
+  }
+
+  return (
+    <div className="page">
+      <h1>Teacher sign-in</h1>
+      <p className="field-hint">
+        Sign-in keeps students on a shared device out of the teacher dashboard. All data stays on
+        this device — there are no online accounts.
+      </p>
+
+      <div className="login-cards">
+        <section className="login-card">
+          <h2>Teacher</h2>
+          <p className="field-hint">Paste the access code your program admin gave you.</p>
+          <textarea
+            className="code-box"
+            placeholder="Paste your teacher access code (starts with SMIQT1)"
+            rows={3}
+            value={teacherCode}
+            onChange={(e) => {
+              setTeacherCode(e.target.value)
+              setTeacherError('')
+            }}
+          />
+          <div className="unit-actions">
+            <button
+              className="button button-primary"
+              onClick={handleRedeem}
+              disabled={!teacherCode.trim()}
+            >
+              Sign in
+            </button>
+          </div>
+          {teacherError && (
+            <p className="import-error" role="status">
+              {teacherError}
+            </p>
+          )}
+        </section>
+
+        <section className="login-card">
+          <h2>Program admin</h2>
+          {adminConfigured ? (
+            <>
+              <p className="field-hint">Enter the admin passcode set up on this device.</p>
+              <input
+                className="text-input"
+                type="password"
+                placeholder="Admin passcode"
+                value={adminPass}
+                onChange={(e) => {
+                  setAdminPass(e.target.value)
+                  setAdminError('')
+                }}
+              />
+              <div className="unit-actions">
+                <button
+                  className="button button-primary"
+                  onClick={handleAdminLogin}
+                  disabled={!adminPass}
+                >
+                  Sign in
+                </button>
+              </div>
+              {adminError && (
+                <p className="import-error" role="status">
+                  {adminError}
+                </p>
+              )}
+            </>
+          ) : (
+            <>
+              <p className="field-hint">
+                Set up the program admin on this device. The admin issues teacher access codes.
+                Everything stays on this device; there is no account recovery — write the
+                passcode down.
+              </p>
+              <label className="assignment-field">
+                Admin passcode (min 6 characters)
+                <input
+                  className="text-input"
+                  type="password"
+                  value={setupPass}
+                  onChange={(e) => {
+                    setSetupPass(e.target.value)
+                    setSetupError('')
+                  }}
+                />
+              </label>
+              <label className="assignment-field">
+                Confirm passcode
+                <input
+                  className="text-input"
+                  type="password"
+                  value={setupConfirm}
+                  onChange={(e) => {
+                    setSetupConfirm(e.target.value)
+                    setSetupError('')
+                  }}
+                />
+              </label>
+              <div className="unit-actions">
+                <button
+                  className="button button-primary"
+                  onClick={handleAdminSetup}
+                  disabled={!setupPass || !setupConfirm}
+                >
+                  Set up admin
+                </button>
+              </div>
+              {setupError && (
+                <p className="import-error" role="status">
+                  {setupError}
+                </p>
+              )}
+            </>
+          )}
+        </section>
+      </div>
+    </div>
+  )
+}
+
+// Top-of-dashboard strip once signed in: who's signed in + a sign-out button.
+function SignedInBanner({ auth }) {
+  const who = auth.role === 'admin' ? 'Program admin' : auth.teacher?.name ?? 'Teacher'
+  return (
+    <div className="teacher-session-bar">
+      <span>
+        Signed in as {who} · {auth.role}
+      </span>
+      <button
+        className="button"
+        onClick={() => (auth.role === 'admin' ? logoutAdmin() : logoutTeacher())}
+      >
+        Sign out
+      </button>
+    </div>
+  )
+}
+
+// --- admin panel: issue/manage teacher access codes ---
+
+function AdminPanel({ issued }) {
+  const [name, setName] = useState('')
+  const [error, setError] = useState('')
+  const [copiedTid, setCopiedTid] = useState(null)
+  const [revealedTid, setRevealedTid] = useState(null)
+  const [confirmRemove, setConfirmRemove] = useState(null)
+
+  async function issue() {
+    try {
+      await issueTeacherCode(name)
+      setName('')
+      setError('')
+    } catch (err) {
+      setError(err.message)
+    }
+  }
+
+  async function copyCode(entry) {
+    try {
+      await navigator.clipboard.writeText(entry.code)
+      setCopiedTid(entry.tid)
+      setTimeout(() => setCopiedTid(null), 2000)
+    } catch {
+      // Clipboard blocked (some school browsers) — reveal the selectable
+      // textarea so the admin can still select and copy the code by hand.
+      setRevealedTid(entry.tid)
+    }
+  }
+
+  return (
+    <section className="admin-panel">
+      <h2>Teacher access codes</h2>
+      <p className="field-hint">
+        Issue a code for each teacher; they paste it on their own device to unlock the Teacher
+        tab there. Re-issuing for the same name replaces the code. Removal is bookkeeping only on
+        this device — there is no server, so there is no remote revocation.
+      </p>
+      <div className="unit-actions">
+        <input
+          className="text-input"
+          type="text"
+          placeholder="Teacher name"
+          value={name}
+          onChange={(e) => {
+            setName(e.target.value)
+            setError('')
+          }}
+        />
+        <button className="button button-primary" onClick={issue} disabled={!name.trim()}>
+          Issue code
+        </button>
+      </div>
+      {error && (
+        <p className="import-error" role="status">
+          {error}
+        </p>
+      )}
+
+      {issued.length > 0 && (
+        <div className="assignment-list">
+          {issued.map((entry) => (
+            <div key={entry.tid} className="assignment-item">
+              <div className="assignment-item-main">
+                <strong>{entry.name}</strong>
+                <span className="field-hint">
+                  Issued {new Date(entry.issuedAt).toLocaleDateString()}
+                </span>
+              </div>
+              <span className="unit-actions">
+                <button className="button" onClick={() => copyCode(entry)}>
+                  {copiedTid === entry.tid ? '✓ Copied' : 'Copy code'}
+                </button>
+                <button
+                  className="button"
+                  onClick={() =>
+                    setRevealedTid((cur) => (cur === entry.tid ? null : entry.tid))
+                  }
+                  aria-expanded={revealedTid === entry.tid}
+                >
+                  {revealedTid === entry.tid ? 'Hide code' : 'Show code'}
+                </button>
+                {confirmRemove === entry.tid ? (
+                  <>
+                    <button
+                      className="button button-danger"
+                      onClick={() => {
+                        removeIssuedTeacher(entry.tid)
+                        setConfirmRemove(null)
+                      }}
+                    >
+                      Confirm remove
+                    </button>
+                    <button className="button" onClick={() => setConfirmRemove(null)}>
+                      Cancel
+                    </button>
+                  </>
+                ) : (
+                  <button
+                    className="remove-button"
+                    onClick={() => setConfirmRemove(entry.tid)}
+                    aria-label={`Remove ${entry.name}`}
+                    title={`Remove ${entry.name}`}
+                  >
+                    ✕
+                  </button>
+                )}
+              </span>
+              {revealedTid === entry.tid && (
+                <textarea
+                  className="code-box"
+                  readOnly
+                  value={entry.code}
+                  rows={4}
+                  onFocus={(e) => e.target.select()}
+                  aria-label={`Access code for ${entry.name}`}
+                />
+              )}
+            </div>
+          ))}
+        </div>
       )}
     </section>
   )
@@ -472,6 +754,443 @@ function TeacherAssignments() {
               </div>
             )
           })}
+        </div>
+      )}
+    </section>
+  )
+}
+
+// --- class manager (teacher-created classes, rosters, and content controls) ---
+
+function ClassStudents({ cls }) {
+  const [addName, setAddName] = useState('')
+  const [addError, setAddError] = useState('')
+  const [confirmRemoveSid, setConfirmRemoveSid] = useState(null)
+  const [sheetCopied, setSheetCopied] = useState(false)
+  const [sheetRevealed, setSheetRevealed] = useState(false)
+
+  function handleAdd() {
+    try {
+      addStudent(cls.cid, addName)
+      setAddName('')
+      setAddError('')
+    } catch (err) {
+      setAddError(err.message)
+    }
+  }
+
+  async function copySheet() {
+    try {
+      await navigator.clipboard.writeText(credentialSheetText(cls))
+      setSheetCopied(true)
+      setTimeout(() => setSheetCopied(false), 2000)
+    } catch {
+      // Clipboard blocked (some school browsers) — reveal the selectable
+      // textarea so the teacher can still select and copy the sheet by hand.
+      setSheetRevealed(true)
+    }
+  }
+
+  return (
+    <div className="class-students">
+      <h3>Students</h3>
+      {cls.students.length === 0 ? (
+        <p className="field-hint">No students yet — add one below.</p>
+      ) : (
+        <div className="assignment-list">
+          {cls.students.map((s) => (
+            <div key={s.sid} className="assignment-item">
+              <div className="assignment-item-main">
+                <strong>{s.name}</strong>
+                <span className="field-hint">
+                  ID {s.sid} · PIN {s.pin}
+                </span>
+              </div>
+              <span className="unit-actions">
+                <button className="button" onClick={() => resetStudentPin(cls.cid, s.sid)}>
+                  New PIN
+                </button>
+                {confirmRemoveSid === s.sid ? (
+                  <>
+                    <button
+                      className="button button-danger"
+                      onClick={() => {
+                        removeStudentFromClass(cls.cid, s.sid)
+                        setConfirmRemoveSid(null)
+                      }}
+                    >
+                      Confirm remove
+                    </button>
+                    <button className="button" onClick={() => setConfirmRemoveSid(null)}>
+                      Cancel
+                    </button>
+                  </>
+                ) : (
+                  <button
+                    className="remove-button"
+                    onClick={() => setConfirmRemoveSid(s.sid)}
+                    aria-label={`Remove ${s.name}`}
+                    title={`Remove ${s.name}`}
+                  >
+                    ✕
+                  </button>
+                )}
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div className="unit-actions">
+        <input
+          className="text-input"
+          type="text"
+          placeholder="Login name — first name or nickname is enough"
+          value={addName}
+          onChange={(e) => {
+            setAddName(e.target.value)
+            setAddError('')
+          }}
+        />
+        <button className="button button-primary" onClick={handleAdd} disabled={!addName.trim()}>
+          Add student
+        </button>
+      </div>
+      <p className="field-hint">First name or nickname is enough — no real full names needed.</p>
+      {addError && (
+        <p className="import-error" role="status">
+          {addError}
+        </p>
+      )}
+
+      {cls.students.length > 0 && (
+        <>
+          <div className="unit-actions">
+            <button className="button" onClick={copySheet}>
+              {sheetCopied ? '✓ Copied' : 'Copy credential sheet'}
+            </button>
+          </div>
+          <p className="field-hint">Print and cut into slips, one per student.</p>
+          {sheetRevealed && (
+            <textarea
+              className="code-box"
+              readOnly
+              value={credentialSheetText(cls)}
+              rows={Math.min(cls.students.length + 2, 10)}
+              onFocus={(e) => e.target.select()}
+              aria-label="Credential sheet"
+            />
+          )}
+        </>
+      )}
+    </div>
+  )
+}
+
+function ClassContentControls({ cls }) {
+  const unitsByCategory = useMemo(() => getUnitsByCategory(), [])
+  const [libraryMode, setLibraryMode] = useState(cls.settings.units === null ? 'all' : 'pick')
+  const [selected, setSelected] = useState(() => new Set(cls.settings.units ?? []))
+  const [gradeBand, setGradeBand] = useState('all')
+
+  function chooseWholeLibrary() {
+    setLibraryMode('all')
+    updateClassSettings(cls.cid, { units: null })
+  }
+
+  function choosePick() {
+    setLibraryMode('pick')
+    // Restore the previous pick, if there was one — an empty selection would
+    // hide the whole library, so only persist a non-empty restriction.
+    if (selected.size > 0) updateClassSettings(cls.cid, { units: [...selected] })
+  }
+
+  function toggleUnit(id) {
+    setSelected((cur) => {
+      const next = new Set(cur)
+      if (next.has(id)) next.delete(id)
+      else next.add(id)
+      if (next.size > 0) updateClassSettings(cls.cid, { units: [...next] })
+      return next
+    })
+  }
+
+  return (
+    <div className="class-content-controls">
+      <h3>What students can see right now</h3>
+
+      <div className="assignment-mode-picker" role="radiogroup" aria-label="Library visibility">
+        <label className="assignment-mode-option">
+          <input
+            type="radio"
+            name={`library-${cls.cid}`}
+            checked={libraryMode === 'all'}
+            onChange={chooseWholeLibrary}
+          />
+          <span>
+            <strong>Whole library</strong> — students can browse every lesson.
+          </span>
+        </label>
+        <label className="assignment-mode-option">
+          <input
+            type="radio"
+            name={`library-${cls.cid}`}
+            checked={libraryMode === 'pick'}
+            onChange={choosePick}
+          />
+          <span>
+            <strong>Only the lessons I pick</strong> — restrict the library to specific lessons.
+          </span>
+        </label>
+      </div>
+
+      {libraryMode === 'pick' && (
+        <>
+          <div className="grade-band-picker" role="group" aria-label="Filter lessons by grade">
+            {BUILDER_GRADE_BANDS.map((band) => (
+              <button
+                key={band.id}
+                type="button"
+                className={
+                  gradeBand === band.id
+                    ? 'grade-band-button grade-band-button-active'
+                    : 'grade-band-button'
+                }
+                onClick={() => setGradeBand(band.id)}
+                aria-pressed={gradeBand === band.id}
+              >
+                {band.label}
+              </button>
+            ))}
+          </div>
+          <div className="assignment-unit-picker">
+            {unitsByCategory.map(({ category, units: catUnits }) => {
+              const visible =
+                gradeBand === 'all' ? catUnits : catUnits.filter((u) => u.gradeBand === gradeBand)
+              if (visible.length === 0) return null
+              return (
+                <div key={category}>
+                  <CategoryHeading level={0}>{category}</CategoryHeading>
+                  {visible.map((unit) => (
+                    <label key={unit.id} className="assignment-unit-row">
+                      <input
+                        type="checkbox"
+                        checked={selected.has(unit.id)}
+                        onChange={() => toggleUnit(unit.id)}
+                      />
+                      <span className="assignment-unit-title">{unit.title}</span>
+                      <GradeBandPill gradeBand={unit.gradeBand} />
+                    </label>
+                  ))}
+                </div>
+              )
+            })}
+          </div>
+          <p className="field-hint">
+            {selected.size} lesson{selected.size === 1 ? '' : 's'} picked — check at least one to
+            restrict the library; students keep seeing the whole library until then.
+          </p>
+        </>
+      )}
+
+      <label className="assignment-mode-option">
+        <input
+          type="checkbox"
+          checked={cls.settings.quizzes}
+          onChange={(e) => updateClassSettings(cls.cid, { quizzes: e.target.checked })}
+        />
+        <span>Quizzes open</span>
+      </label>
+
+      <label className="assignment-mode-option">
+        <input
+          type="checkbox"
+          checked={cls.settings.assignments}
+          onChange={(e) => updateClassSettings(cls.cid, { assignments: e.target.checked })}
+        />
+        <span>Assignments visible</span>
+      </label>
+      <p className="field-hint">
+        Off hides the My Lessons queue and class-code entry on student devices until you're ready
+        to use assignments.
+      </p>
+    </div>
+  )
+}
+
+function ClassLoginCodeBlock({ cls }) {
+  const [copied, setCopied] = useState(false)
+  const [error, setError] = useState('')
+  const [busy, setBusy] = useState(false)
+
+  async function generate() {
+    setBusy(true)
+    try {
+      await buildClassLoginCode(cls.cid)
+      setError('')
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  async function copy() {
+    try {
+      await navigator.clipboard.writeText(cls.code)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      // Clipboard blocked — the textarea below is already visible/selectable.
+    }
+  }
+
+  return (
+    <div className="class-code-block">
+      <h3>Class login code</h3>
+      {cls.code ? (
+        <>
+          <textarea
+            className="code-box"
+            readOnly
+            value={cls.code}
+            rows={4}
+            onFocus={(e) => e.target.select()}
+            aria-label={`Class login code for ${cls.name}`}
+          />
+          <div className="unit-actions">
+            <button className="button button-primary" onClick={copy}>
+              {copied ? '✓ Copied' : 'Copy code'}
+            </button>
+          </div>
+          <p className="field-hint">generated {new Date(cls.codeAt).toLocaleString()}</p>
+        </>
+      ) : cls.students.length > 0 ? (
+        <>
+          <p className="import-error" role="status">
+            Roster or settings changed — generate a fresh code and re-share it with the class
+            (that's how changes reach student devices).
+          </p>
+          <div className="unit-actions">
+            <button className="button button-primary" onClick={generate} disabled={busy}>
+              Generate class login code
+            </button>
+          </div>
+        </>
+      ) : (
+        <p className="field-hint">Add at least one student, then generate a class login code.</p>
+      )}
+      {error && (
+        <p className="import-error" role="status">
+          {error}
+        </p>
+      )}
+      <p className="field-hint">
+        Students paste this one code on their Log in page, then sign in with their own PIN.
+      </p>
+    </div>
+  )
+}
+
+function ClassCard({ cls, expanded, onToggle }) {
+  const [confirmRemove, setConfirmRemove] = useState(false)
+  return (
+    <div className="drill-group">
+      <DrillRow
+        level={0}
+        expanded={expanded}
+        onToggle={onToggle}
+        label={cls.name}
+        right={
+          <span className="drill-stat">
+            {cls.students.length} student{cls.students.length === 1 ? '' : 's'}
+          </span>
+        }
+      />
+      {expanded && (
+        <div className="drill-children class-card-body">
+          <ClassStudents cls={cls} />
+          <ClassContentControls cls={cls} />
+          <ClassLoginCodeBlock cls={cls} />
+          <div className="unit-actions class-remove-row">
+            {confirmRemove ? (
+              <>
+                <button className="button button-danger" onClick={() => removeClass(cls.cid)}>
+                  Confirm remove class
+                </button>
+                <button className="button" onClick={() => setConfirmRemove(false)}>
+                  Cancel
+                </button>
+              </>
+            ) : (
+              <button className="button button-danger" onClick={() => setConfirmRemove(true)}>
+                Remove class
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
+function ClassManager() {
+  const classes = useClasses()
+  const [newName, setNewName] = useState('')
+  const [createError, setCreateError] = useState('')
+  const [openCid, setOpenCid] = useState(null)
+
+  function create() {
+    try {
+      const cls = createClass(newName)
+      setNewName('')
+      setCreateError('')
+      setOpenCid(cls.cid)
+    } catch (err) {
+      setCreateError(err.message)
+    }
+  }
+
+  return (
+    <section className="class-manager">
+      <h2>Classes</h2>
+      <p className="field-hint">
+        Create a class, add students, and share one class login code so students can sign in with
+        their own PIN.
+      </p>
+      <div className="unit-actions">
+        <input
+          className="text-input"
+          type="text"
+          placeholder="Class name (e.g. Period 3)"
+          value={newName}
+          onChange={(e) => {
+            setNewName(e.target.value)
+            setCreateError('')
+          }}
+        />
+        <button className="button button-primary" onClick={create} disabled={!newName.trim()}>
+          Create class
+        </button>
+      </div>
+      {createError && (
+        <p className="import-error" role="status">
+          {createError}
+        </p>
+      )}
+
+      {classes.length === 0 ? (
+        <p className="empty-note">No classes yet — create one above.</p>
+      ) : (
+        <div className="drill-list">
+          {classes.map((cls) => (
+            <ClassCard
+              key={cls.cid}
+              cls={cls}
+              expanded={openCid === cls.cid}
+              onToggle={() => setOpenCid((cur) => (cur === cls.cid ? null : cls.cid))}
+            />
+          ))}
         </div>
       )}
     </section>
@@ -820,6 +1539,12 @@ const GRADE_BANDS = [
 ]
 
 export default function TeacherPage() {
+  const auth = useAuth()
+  if (!auth.role) return <LoginGate />
+  return <TeacherDashboard auth={auth} />
+}
+
+function TeacherDashboard({ auth }) {
   useProgress() // include this device's live progress
   const { students } = useRoster()
   const teacherAssignments = useTeacherAssignments()
@@ -888,6 +1613,7 @@ export default function TeacherPage() {
     const studentRows = (usingMock ? mockRoster.students : students).map((s) => ({
       id: s.id,
       name: s.name,
+      sid: s.sid ?? null,
       removable: !usingMock,
       progressFor: (unitId) => s.progress[unitId],
     }))
@@ -907,6 +1633,7 @@ export default function TeacherPage() {
       {
         id: 'local',
         name: 'You (this device)',
+        sid: null,
         removable: false,
         progressFor: (unitId) => getUnitProgress(unitId),
       },
@@ -915,6 +1642,7 @@ export default function TeacherPage() {
 
   return (
     <div className="page">
+      <SignedInBanner auth={auth} />
       <h1>Teacher dashboard</h1>
       <p className="empty-note">
         A lesson is complete when it's read, its flashcards are reviewed, and the best quiz
@@ -962,10 +1690,37 @@ export default function TeacherPage() {
             <option value="flags">Flags first</option>
           </select>
         </label>
-        <button className="button" onClick={() => downloadCsv(rows, units, teacherAssignments)}>
-          Export CSV
-        </button>
+        <span className="unit-actions">
+          <button
+            className="button"
+            onClick={() => downloadDetailCsvMicrosoft(rows, units, teacherAssignments)}
+          >
+            Excel / Teams — details
+          </button>
+          <button
+            className="button"
+            onClick={() => downloadDetailCsvGoogle(rows, units, teacherAssignments)}
+          >
+            Google Sheets — details
+          </button>
+          <button
+            className="button"
+            onClick={() => downloadGradebookCsvMicrosoft(rows, units, teacherAssignments)}
+          >
+            Excel / Teams — gradebook
+          </button>
+          <button
+            className="button"
+            onClick={() => downloadGradebookCsvGoogle(rows, units, teacherAssignments)}
+          >
+            Google Classroom — gradebook
+          </button>
+        </span>
       </div>
+      <p className="field-hint">
+        Excel/Teams files open in Microsoft Office and upload to Teams; Google files import
+        cleanly into Sheets, Docs and Classroom.
+      </p>
 
       {pivot === 'student' && (
         <ByStudentView
@@ -1003,6 +1758,8 @@ export default function TeacherPage() {
         />
       )}
 
+      {auth.role === 'admin' && <AdminPanel issued={auth.issued} />}
+      <ClassManager />
       <TeacherAssignments />
       <AddStudentForm />
     </div>
