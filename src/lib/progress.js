@@ -5,8 +5,29 @@
 
 import { useSyncExternalStore } from 'react'
 
-const STORAGE_KEY = 'sportmediq:progress:v1'
+const BASE_STORAGE_KEY = 'sportmediq:progress:v1'
+// Written by studentSession.js. Read directly here (rather than importing
+// that module, which imports this one) to pick the progress profile: when a
+// student is logged in, their progress lives under a per-student key so
+// classmates sharing one device never see each other's progress. With no
+// session the legacy key is used, so self-study devices are unaffected.
+const SESSION_KEY = 'sportmediq:studentSession:v1'
 export const PASS_THRESHOLD = 0.7 // quiz score needed to count as passed
+
+function profileStorageKey() {
+  try {
+    const raw = localStorage.getItem(SESSION_KEY)
+    const session = raw ? JSON.parse(raw) : null
+    if (session && typeof session.cid === 'string' && typeof session.sid === 'string') {
+      return `${BASE_STORAGE_KEY}:${session.cid}:${session.sid}`
+    }
+  } catch {
+    // Corrupt session — fall back to the shared profile.
+  }
+  return BASE_STORAGE_KEY
+}
+
+let STORAGE_KEY = profileStorageKey()
 
 const emptyUnit = () => ({
   lessonRead: false,
@@ -133,6 +154,15 @@ function updatePractical(activityId, patch, meaningful = false) {
     },
   }
   save(meaningful ? withMeaningfulActivity(next) : next)
+}
+
+// Called by studentSession.js after a login/logout changes SESSION_KEY:
+// re-derive the storage key, load that profile's state, and re-render
+// everything subscribed to this store.
+export function reloadProgressProfile() {
+  STORAGE_KEY = profileStorageKey()
+  state = load()
+  listeners.forEach((fn) => fn())
 }
 
 // --- mutations ---

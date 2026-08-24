@@ -38,19 +38,26 @@ function hasGamificationData(value) {
     || (value.practicals && typeof value.practicals === 'object' && Object.keys(value.practicals).length > 0)
 }
 
-// Decodes the code and upserts the student (matched case-insensitively by
-// name). Throws a user-readable error for bad codes or missing names.
+// Decodes the code and upserts the student. Codes exported under a class
+// login carry the student ID + class ID, so those match by sid (a student
+// whose login name the teacher renames still lands on the same row);
+// everything else falls back to the old case-insensitive name match.
+// Throws a user-readable error for bad codes or missing names.
 export async function addStudentFromCode(code) {
-  const { name, units, gamification, at } = await decodeProgressCode(code)
+  const { name, units, gamification, at, sid, cid } = await decodeProgressCode(code)
   if (!name) {
     throw new Error(
       'This code has no student name — ask the student to enter their name on the Sync page first.',
     )
   }
-  const existing = state.students.find((s) => s.name.toLowerCase() === name.toLowerCase())
+  const existing =
+    (sid && state.students.find((s) => s.sid === sid && (!cid || !s.cid || s.cid === cid))) ??
+    state.students.find((s) => s.name.toLowerCase() === name.toLowerCase())
   const student = {
     id: existing?.id ?? `stu-${Date.now().toString(36)}`,
     name,
+    sid: sid ?? existing?.sid ?? null,
+    cid: cid ?? existing?.cid ?? null,
     progress: units,
     // Legacy codes decode to an empty gamification shape. Do not let that
     // erase richer data already stored for the same student on this device.

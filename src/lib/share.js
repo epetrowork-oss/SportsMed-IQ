@@ -72,7 +72,11 @@ function compactGamification(gamification) {
   return { activeDates, seenBadgeIds, practicals }
 }
 
-export async function encodeProgress(name, units, gamification = null) {
+// ids: optional { sid, cid } from an active class login (studentSession.js).
+// Carried in the code so the teacher's roster can match the row by student
+// ID instead of relying on the free-text name. Legacy codes without them
+// keep decoding exactly as before.
+export async function encodeProgress(name, units, gamification = null, ids = null) {
   // Only carry fields the schema knows, so codes stay small and predictable.
   const compactUnits = {}
   for (const [unitId, p] of Object.entries(units)) {
@@ -86,17 +90,22 @@ export async function encodeProgress(name, units, gamification = null) {
       scrollPct: Math.round(p.scrollPct ?? 0),
     }
   }
-  const json = JSON.stringify({
+  const payload = {
     name,
     units: compactUnits,
     gamification: compactGamification(gamification),
     at: Date.now(),
-  })
+  }
+  if (typeof ids?.sid === 'string' && ids.sid) payload.sid = ids.sid.slice(0, 40)
+  if (typeof ids?.cid === 'string' && ids.cid) payload.cid = ids.cid.slice(0, 40)
+  const json = JSON.stringify(payload)
   const compressed = await deflate(new TextEncoder().encode(json))
   return PREFIX_V2 + toBase64Url(compressed)
 }
 
-// Returns { name, units, gamification, at } or throws with a user-readable message.
+// Returns { name, units, gamification, at, sid, cid } (sid/cid null when the
+// code was exported without a class login) or throws with a user-readable
+// message.
 export async function decodeProgressCode(code) {
   const trimmed = code.trim()
   let data
@@ -152,5 +161,7 @@ export async function decodeProgressCode(code) {
     units,
     gamification: compactGamification(data.gamification),
     at: data.at ?? null,
+    sid: typeof data.sid === 'string' && data.sid ? data.sid.slice(0, 40) : null,
+    cid: typeof data.cid === 'string' && data.cid ? data.cid.slice(0, 40) : null,
   }
 }
