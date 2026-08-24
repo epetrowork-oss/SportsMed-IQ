@@ -1743,3 +1743,45 @@ h3 {
     transition: none;
   }
 }
+
+/* Student sign-in + class gating */
+
+.student-session-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.student-session-name {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.3rem;
+}
+
+.student-session-signout {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.gated-unavailable {
+  max-width: 32rem;
+}
+
+.gated-unavailable p {
+  color: var(--ink-soft);
+}
+
+.home-session-line {
+  color: var(--ink-soft);
+  margin: -0.4rem 0 0.75rem;
+}
+
+.sync-session-hint {
+  margin: 0.35rem 0 0;
+}

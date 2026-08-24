@@ -11,6 +11,7 @@ import {
   PASS_THRESHOLD,
 } from '../lib/progress.js'
 import { printLessonPacket, printPracticalPacket } from '../lib/print.js'
+import { useClassControls, isUnitVisible } from '../lib/studentSession.js'
 import NotFoundPage from './NotFoundPage.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
 import PracticalActivity from '../components/PracticalActivity.jsx'
@@ -165,11 +166,25 @@ function PracticalActivities({ activities }) {
 export default function UnitPage() {
   const { unitId } = useParams()
   useProgress()
+  const controls = useClassControls()
   const [printMessage, setPrintMessage] = useState('')
   const unit = getUnit(unitId)
-  useReadingTimer(unit ? unit.id : null)
-  useScrollDepth(unit ? unit.id : null)
+  const visible = !unit || isUnitVisible(unit.id, controls)
+  useReadingTimer(unit && visible ? unit.id : null)
+  useScrollDepth(unit && visible ? unit.id : null)
   if (!unit) return <NotFoundPage />
+
+  if (controls && !isUnitVisible(unit.id, controls)) {
+    return (
+      <div className="page page-narrow gated-unavailable">
+        <h1>This lesson isn't open yet</h1>
+        <p>Your teacher hasn't unlocked it for your class yet.</p>
+        <Link className="button" to="/lessons">
+          Back to Library
+        </Link>
+      </div>
+    )
+  }
 
   const p = getUnitProgress(unit.id)
   const passed = (p.bestQuizScore ?? 0) >= PASS_THRESHOLD
@@ -193,19 +208,23 @@ export default function UnitPage() {
       <p className="unit-summary">{unit.summary}</p>
 
       <div className="unit-actions">
-        <Link className="button button-primary" to={`/unit/${unit.id}/quiz`}>
-          Take quiz
-          {p.bestQuizScore != null && (
-            <>
-              {` · best ${Math.round(p.bestQuizScore * 100)}%`}
-              {passed && (
-                <span className="status-done" aria-hidden="true">
-                  {' '}✓
-                </span>
-              )}
-            </>
-          )}
-        </Link>
+        {controls && !controls.quizzes ? (
+          <p className="field-hint">Quizzes open when your teacher turns them on.</p>
+        ) : (
+          <Link className="button button-primary" to={`/unit/${unit.id}/quiz`}>
+            Take quiz
+            {p.bestQuizScore != null && (
+              <>
+                {` · best ${Math.round(p.bestQuizScore * 100)}%`}
+                {passed && (
+                  <span className="status-done" aria-hidden="true">
+                    {' '}✓
+                  </span>
+                )}
+              </>
+            )}
+          </Link>
+        )}
         <Link className="button" to={`/unit/${unit.id}/flashcards`}>
           Flashcards
           {p.flashcardsReviewed && (
@@ -275,12 +294,14 @@ export default function UnitPage() {
             I've read this lesson
           </button>
         )}
-        <Link
-          className={p.lessonRead ? 'button button-primary' : 'button'}
-          to={`/unit/${unit.id}/quiz`}
-        >
-          Continue to quiz →
-        </Link>
+        {!(controls && !controls.quizzes) && (
+          <Link
+            className={p.lessonRead ? 'button button-primary' : 'button'}
+            to={`/unit/${unit.id}/quiz`}
+          >
+            Continue to quiz →
+          </Link>
+        )}
       </div>
     </div>
   )

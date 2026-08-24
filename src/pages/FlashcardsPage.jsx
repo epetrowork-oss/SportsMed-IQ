@@ -2,17 +2,31 @@ import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getUnit } from '../content/index.js'
 import { markFlashcardsReviewed } from '../lib/progress.js'
+import { useClassControls, isUnitVisible } from '../lib/studentSession.js'
 import NotFoundPage from './NotFoundPage.jsx'
 
 export default function FlashcardsPage() {
   const { unitId } = useParams()
   const unit = getUnit(unitId)
+  const controls = useClassControls()
 
   const [index, setIndex] = useState(0)
   const [flipped, setFlipped] = useState(false)
   const [seenLast, setSeenLast] = useState(false)
 
   if (!unit) return <NotFoundPage />
+
+  if (controls && !isUnitVisible(unit.id, controls)) {
+    return (
+      <div className="page page-narrow gated-unavailable">
+        <h1>This lesson isn't open yet</h1>
+        <p>Your teacher hasn't unlocked it for your class yet.</p>
+        <Link className="button" to="/lessons">
+          Back to Library
+        </Link>
+      </div>
+    )
+  }
   const cards = unit.flashcards
   const card = cards[index]
 
