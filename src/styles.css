@@ -1647,6 +1647,82 @@ h3 {
   color: var(--ink);
 }
 
+/* Teacher tab login gate, admin panel, and class manager */
+
+.login-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 32rem;
+}
+
+.login-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 1rem 1.2rem;
+}
+
+.login-card h2 {
+  margin-top: 0;
+}
+
+.teacher-session-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 0.75rem;
+  margin: 0 0 1rem;
+  padding: 0.6rem 0.9rem;
+  background: var(--brand-light);
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  font-weight: 600;
+}
+
+.admin-panel {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  max-width: 42rem;
+}
+
+.class-manager {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+/* Each class's expanded body reuses .drill-children spacing but needs room
+   for several stacked sub-sections instead of one detail panel. */
+.class-card-body {
+  padding: 0.75rem 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.class-students h3,
+.class-content-controls h3,
+.class-code-block h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+}
+
+.class-remove-row {
+  margin: 0;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--line);
+}
+
+/* The export button group can wrap to several lines on narrow screens —
+   keep it from stretching the whole toolbar's flex layout. */
+.table-toolbar .unit-actions {
+  margin: 0;
+}
+
 /* Respect reduced-motion preferences: drop the hover-lift transforms and
    their transitions added in the aesthetic pass. */
 @media (prefers-reduced-motion: reduce) {
@@ -1666,4 +1742,46 @@ h3 {
   .assignment-progress-fill {
     transition: none;
   }
+}
+
+/* Student sign-in + class gating */
+
+.student-session-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.student-session-name {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.3rem;
+}
+
+.student-session-signout {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.gated-unavailable {
+  max-width: 32rem;
+}
+
+.gated-unavailable p {
+  color: var(--ink-soft);
+}
+
+.home-session-line {
+  color: var(--ink-soft);
+  margin: -0.4rem 0 0.75rem;
+}
+
+.sync-session-hint {
+  margin: 0.35rem 0 0;
 }

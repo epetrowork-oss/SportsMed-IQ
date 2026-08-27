@@ -12,6 +12,7 @@ import {
 import { getGamificationSummary } from '../lib/gamification.js'
 import { isComplete } from '../lib/status.js'
 import { decodeAssignment, assignmentStats, hasActiveFocusAssignment } from '../lib/assignments.js'
+import { useStudentSession, isUnitVisible } from '../lib/studentSession.js'
 import StatusIcon from '../components/StatusIcon.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
 
@@ -66,11 +67,13 @@ const GRADE_BANDS = {
   '11-12': '11th–12th grade',
 }
 
-function findContinueUnit() {
-  const candidates = getAllUnits().filter((unit) => {
-    const p = getUnitProgress(unit.id)
-    return isUnitStarted(p) && !isComplete(p)
-  })
+function findContinueUnit(controls) {
+  const candidates = getAllUnits()
+    .filter((unit) => !controls?.restricted || isUnitVisible(unit.id, controls))
+    .filter((unit) => {
+      const p = getUnitProgress(unit.id)
+      return isUnitStarted(p) && !isComplete(p)
+    })
   if (candidates.length === 0) return null
   // getAllUnits() is already in canonical order, so when every candidate has
   // touchedAt === 0 (for example, older imported progress) the first wins.
@@ -253,8 +256,10 @@ function ClassCodeEntry({ hasAssignments = false }) {
 export default function HomePage() {
   const progress = useProgress()
   const assignments = useAssignments()
+  const { session, controls } = useStudentSession()
   const focusMode = hasActiveFocusAssignment(assignments, isUnitComplete)
-  const continueUnit = focusMode ? null : findContinueUnit()
+  const continueUnit = focusMode ? null : findContinueUnit(controls)
+  const hideAssignmentUi = !!(controls && !controls.assignments)
 
   return (
     <div className="page">
@@ -276,16 +281,21 @@ export default function HomePage() {
             Learn sports medicine skills, one lesson at a time — read a lesson, quiz yourself, and
             review flashcards, all saved right on your device.
           </p>
+          {session && (
+            <p className="home-session-line">
+              Signed in as {session.name} · {controls?.className}
+            </p>
+          )}
         </div>
       </section>
 
-      {assignments.length > 0 && <MyLessons assignments={assignments} />}
+      {!hideAssignmentUi && assignments.length > 0 && <MyLessons assignments={assignments} />}
 
       {!focusMode && (continueUnit ? <ContinueCard unit={continueUnit} /> : <StartCard />)}
 
       <GamificationPanel progress={progress} />
 
-      <ClassCodeEntry hasAssignments={assignments.length > 0} />
+      {!hideAssignmentUi && <ClassCodeEntry hasAssignments={assignments.length > 0} />}
 
       <Link to="/lessons" className="button button-primary home-browse-button">
         Browse the Library

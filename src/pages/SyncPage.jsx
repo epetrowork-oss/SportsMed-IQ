@@ -9,6 +9,7 @@ import {
 } from '../lib/progress.js'
 import { encodeProgress, decodeProgressCode } from '../lib/share.js'
 import { decodeAssignment } from '../lib/assignments.js'
+import { useStudentSession } from '../lib/studentSession.js'
 import { getUnit } from '../content/index.js'
 
 function formatDueDate(due) {
@@ -25,6 +26,7 @@ function formatDueDate(due) {
 export default function SyncPage() {
   const { name, units, gamification } = useProgress()
   const assignments = useAssignments()
+  const { session, controls } = useStudentSession()
   const [copied, setCopied] = useState(false)
   const [pasted, setPasted] = useState('')
   const [importResult, setImportResult] = useState(null) // { ok, message }
@@ -35,13 +37,14 @@ export default function SyncPage() {
 
   useEffect(() => {
     let cancelled = false
-    encodeProgress(name, units, gamification).then((c) => {
+    const ids = session ? { sid: session.sid, cid: session.cid } : null
+    encodeProgress(name, units, gamification, ids).then((c) => {
       if (!cancelled) setCode(c)
     })
     return () => {
       cancelled = true
     }
-  }, [name, units, gamification])
+  }, [name, units, gamification, session])
 
   async function copyCode() {
     try {
@@ -118,6 +121,12 @@ export default function SyncPage() {
             Add your name so your teacher knows whose progress this is.
           </p>
         )}
+        {session && (
+          <p className="field-hint sync-session-hint">
+            Signed in — your code carries your student ID ({session.sid}) so your teacher's roster
+            recognizes you.
+          </p>
+        )}
       </section>
 
       <section>
@@ -157,6 +166,7 @@ export default function SyncPage() {
         )}
       </section>
 
+      {!(controls && !controls.assignments) && (
       <section>
         <h2>Class code</h2>
         <p className="field-hint">
@@ -234,6 +244,7 @@ export default function SyncPage() {
           </div>
         )}
       </section>
+      )}
     </div>
   )
 }

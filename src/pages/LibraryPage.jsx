@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { getAllUnits, getUnitsByCategory } from '../content/index.js'
 import { useProgress, useAssignments, getUnitProgress, isUnitComplete } from '../lib/progress.js'
 import { assignedUnitIds, hasActiveFocusAssignment } from '../lib/assignments.js'
+import { useClassControls } from '../lib/studentSession.js'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
 
 // Shared with scripts/list-image-slots.mjs, which reconstructs these same
@@ -82,6 +83,7 @@ function UnitCard({ unit, showGradeBand }) {
 
 export default function LibraryPage() {
   useProgress() // re-render when progress changes
+  const controls = useClassControls()
   const assignments = useAssignments()
   const focusMode = hasActiveFocusAssignment(assignments, isUnitComplete)
   const focusedIds = focusMode ? new Set(assignedUnitIds(assignments)) : null
@@ -103,12 +105,15 @@ export default function LibraryPage() {
   }, [gradeBand])
 
   const searchTerm = search.trim().toLowerCase()
-  const totalUnits = focusMode ? focusedIds.size : getAllUnits().length
+  const classRestricted = !!controls?.restricted
+  const allUnits = classRestricted ? getAllUnits().filter((u) => controls.unitIds.has(u.id)) : getAllUnits()
+  const totalUnits = focusMode ? focusedIds.size : allUnits.length
 
   const groups = getUnitsByCategory()
     .map(({ category, units }) => ({
       category,
       units: units
+        .filter((u) => !classRestricted || controls.unitIds.has(u.id))
         .filter((u) => !focusMode || focusedIds.has(u.id))
         .filter(
           (u) => (gradeBand === 'all' || u.gradeBand === gradeBand) && unitMatchesSearch(u, searchTerm)
@@ -130,6 +135,12 @@ export default function LibraryPage() {
         <p className="empty-note library-focus-note">
           Showing your assigned lessons. Your teacher assigns lessons here — new ones appear when
           you import a class code on the <Link to="/sync">Sync page</Link>.
+        </p>
+      )}
+      {classRestricted && (
+        <p className="empty-note library-focus-note">
+          Your teacher chooses which lessons are open right now — more will appear here as they're
+          unlocked.
         </p>
       )}
       <div className="home-filters">
