@@ -214,6 +214,13 @@ name still lost to the teacher's nickname *through recovery*, because the new
 profile is seeded at login and the merge keeps whatever the destination already
 has; recovery now adopts the recovered profile's name.
 
+A tenth round found one more data-loss path in the release flow: the decision
+to wipe the class data was a render-time snapshot, so a tab that had not yet
+seen another tab add an admin would erase every class, roster and PIN on a
+device that was in fact still guarded. The wipe is now decided by what the
+release operation actually committed (`forgetTeacher()` returns whether an
+admin remains); the rendered value drives only the warning text.
+
 **The honest floor:** whoever physically holds an unlocked device can read
 localStorage with devtools. Everything above raises the cost of the in-app
 paths; none of it defends against that, and no client-only design can.

@@ -397,6 +397,11 @@ function SignedInBanner({ auth }) {
   // themselves up as teacher and read them. auth.js refuses redemption while
   // class data remains, so a failure here locks the device rather than
   // exposing it.
+  //
+  // This value drives the WARNING only. The wipe itself is decided by what
+  // forgetTeacher() actually committed, because another tab may have added an
+  // admin whose storage event has not been delivered here — wiping on this
+  // stale snapshot would erase a device that is in fact still guarded.
   const wipesData = !auth.adminConfigured
 
   function release() {
@@ -406,8 +411,8 @@ function SignedInBanner({ auth }) {
       // can never reach the wipe below. Between the two, the device holds
       // class data with no teacher record — redemption refuses in exactly that
       // state, so the gap is locked rather than open.
-      forgetTeacher()
-      if (wipesData) {
+      const { adminRemains } = forgetTeacher()
+      if (!adminRemains) {
         clearAllClasses()
         clearRoster()
         clearTeacherAssignments()

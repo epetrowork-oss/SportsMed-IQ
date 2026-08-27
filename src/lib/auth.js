@@ -373,18 +373,25 @@ export function logoutTeacher() {
 // their plaintext PINs would sit on a device that now looks blank. The
 // redemption guard above enforces the same rule independently, so forgetting
 // to clear leaves the device locked rather than open.
+// Authorization is checked against freshly-read state INSIDE the commit. A tab
+// signed out in another tab may not have had its storage event delivered yet,
+// and its stale snapshot would otherwise still read as unlocked — which matters
+// more here than anywhere else, because the caller wipes the class data once
+// this succeeds. Throwing here means the wipe never runs.
+//
+// Returns { adminRemains } read from the state actually committed, so the
+// caller's decision about wiping the class data is based on fresh truth. A
+// render-time snapshot is not good enough: another tab may have added an admin
+// whose storage event is still queued, and wiping on the stale value would
+// erase every class, roster and PIN on a device that is in fact still guarded.
 export function forgetTeacher() {
-  // Authorization is checked against freshly-read state INSIDE the commit. A
-  // tab signed out in another tab may not have had its storage event delivered
-  // yet, and its stale snapshot would otherwise still read as unlocked — which
-  // matters more here than anywhere else, because the caller wipes the class
-  // data once this succeeds. Throwing here means the wipe never runs.
-  commit((cur) => {
+  const next = commit((cur) => {
     if (!cur.adminUnlocked && !cur.teacherUnlocked) {
       throw new Error('Sign in first to remove the teacher from this device.')
     }
     return { ...cur, teacher: null, teacherUnlocked: false }
   })
+  return { adminRemains: !!next.admin }
 }
 
 // Sign-out must reach every tab. Without this a second Teacher tab keeps its
