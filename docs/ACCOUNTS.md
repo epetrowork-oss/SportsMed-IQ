@@ -129,6 +129,20 @@ another; and the **teacher-side stores now sync across tabs**, so a stale
 second tab can no longer write back an old roster and erase students, PINs or
 settings saved from the first.
 
+A fourth round found the same shape four more times, and it is worth stating
+as a rule rather than four bullet points: **every async operation here
+snapshots state, then commits after an await, and the cross-tab listeners can
+replace that state in between.** Class-code generation could publish a code
+built from a roster that had since changed (classes now carry a `rev`, checked
+after the hashing); redemption's re-check read this tab's snapshot rather than
+what was persisted (it now reads localStorage directly, since `storage` events
+arrive asynchronously); a login could complete against a roster a newer class
+code had already replaced (the student is re-resolved after the await); and
+previous-PIN recovery could merge one student's work into whichever student
+had since signed in (both the session and the destination key are re-checked).
+Anything added here later must follow the same rule: re-validate after every
+await, against persisted state where another tab could have written.
+
 **The honest floor:** whoever physically holds an unlocked device can read
 localStorage with devtools. Everything above raises the cost of the in-app
 paths; none of it defends against that, and no client-only design can.

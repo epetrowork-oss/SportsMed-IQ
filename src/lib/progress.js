@@ -268,6 +268,10 @@ export function hasRecoverableProfile(cid, sid) {
 // is useless without the PIN itself. Returns true when work was moved.
 export function recoverProfileWithPreviousPin(cid, sid, previousPk) {
   if (!safeKeyPart(cid) || !safeKeyPart(sid) || !safeKeyPart(previousPk)) return false
+  // The destination must still be this student's own profile. If a classmate
+  // signed in from another tab, STORAGE_KEY now points at theirs, and absorbing
+  // into it would both expose this student's work and destroy the original.
+  if (!STORAGE_KEY.startsWith(`${BASE_STORAGE_KEY}:${cid}:${sid}:`)) return false
   const key = `${BASE_STORAGE_KEY}:${cid}:${sid}:${previousPk}`
   if (key === STORAGE_KEY || !siblingProfileKeys(cid, sid).includes(key)) return false
   if (!profileHasWork(key)) return false

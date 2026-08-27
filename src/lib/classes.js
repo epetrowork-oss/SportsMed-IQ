@@ -132,10 +132,13 @@ function save(next) {
   listeners.forEach((fn) => fn())
 }
 
+// Every mutation bumps `rev`. buildClassLoginCode captures it before its
+// hashing awaits and refuses to publish if it moved, so a code can never be
+// attached to a roster that changed while it was being built.
 function updateClass(cid, updater) {
   const cls = state.classes.find((c) => c.cid === cid)
   if (!cls) throw new Error('That class no longer exists on this device.')
-  const next = updater(cls)
+  const next = { ...updater(cls), rev: (cls.rev ?? 0) + 1 }
   save({ ...state, classes: state.classes.map((c) => (c.cid === cid ? next : c)) })
   return next
 }
@@ -171,6 +174,7 @@ export function createClass(name) {
     cid: `c-${randomToken(6)}`,
     name: trimmed,
     createdAt: new Date().toISOString(),
+    rev: 0,
     seq: 0,
     students: [], // [{ sid, name, pin, createdAt }]
     settings: defaultSettings(),
@@ -235,9 +239,21 @@ export function updateClassSettings(cid, patch) {
 // Encodes the class for students: roster with hashed PINs + settings. Also
 // stores the code on the class so it can be re-copied without re-encoding.
 export async function buildClassLoginCode(cid) {
+  const initial = state.classes.find((c) => c.cid === cid)
+  if (!initial) throw new Error('That class no longer exists on this device.')
+  if (initial.students.length === 0) throw new Error('Add at least one student first.')
+
+  // Back-fill any missing salt BEFORE the hashing awaits, so the roster this
+  // code is built from is already the one that will be stored.
+  if (initial.students.some((s) => !s.salt)) {
+    updateClass(cid, (c) => ({
+      ...c,
+      students: c.students.map((s) => ({ ...s, salt: s.salt || randomToken(6) })),
+    }))
+  }
+
   const cls = state.classes.find((c) => c.cid === cid)
-  if (!cls) throw new Error('That class no longer exists on this device.')
-  if (cls.students.length === 0) throw new Error('Add at least one student first.')
+  const rev = cls.rev ?? 0
 
   const settings = normalizeSettings(cls.settings)
   // Drop unit ids that no longer exist in this app version rather than
@@ -245,21 +261,24 @@ export async function buildClassLoginCode(cid) {
   if (settings.units) settings.units = settings.units.filter((id) => getUnit(id) !== null)
 
   const students = await Promise.all(
-    cls.students.map(async (s) => {
-      const salt = s.salt || randomToken(6)
-      return { sid: s.sid, name: s.name, salt, hash: await hashPin(salt, s.pin) }
-    }),
+    cls.students.map(async (s) => ({
+      sid: s.sid,
+      name: s.name,
+      salt: s.salt,
+      hash: await hashPin(s.salt, s.pin),
+    })),
   )
-  // Persist any salt just back-filled for a student added before salts were
-  // stored, so it stays stable from here on.
-  if (cls.students.some((s) => !s.salt)) {
-    updateClass(cid, (c) => ({
-      ...c,
-      students: c.students.map((s) => ({
-        ...s,
-        salt: s.salt || students.find((x) => x.sid === s.sid)?.salt || randomToken(6),
-      })),
-    }))
+
+  // Those hashes took real time (PBKDF2 per student), and another Teacher tab
+  // may have reset a PIN or removed someone meanwhile — the storage listener
+  // would have replaced `state` while `cls` stayed the old snapshot. Publishing
+  // now would attach a code built from the old roster to the new class: a
+  // credential sheet showing one PIN while the code accepts another, or a
+  // removed student still able to sign in.
+  const current = state.classes.find((c) => c.cid === cid)
+  if (!current) throw new Error('That class no longer exists on this device.')
+  if ((current.rev ?? 0) !== rev) {
+    throw new Error('This class changed in another tab while the code was being built — generate it again.')
   }
 
   const payload = {

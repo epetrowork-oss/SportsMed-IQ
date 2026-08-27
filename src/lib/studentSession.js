@@ -181,6 +181,21 @@ export async function loginStudent(cid, sid, pin) {
   if (hash !== student.hash) {
     throw new Error("That PIN doesn't match — check the slip your teacher gave you.")
   }
+
+  // Deriving that hash took real time, and another tab may have imported a
+  // newer class code meanwhile — the storage listener replaces `state` while
+  // `student` stays the old snapshot. Without re-resolving, a login started
+  // just before the import could succeed on a PIN the teacher has since reset,
+  // or for a student the new roster removed.
+  const currentStudent = state.classes
+    .find((c) => c.cid === cid)
+    ?.students.find((s) => s.sid === sid)
+  if (!currentStudent) {
+    throw new Error('Your class was just updated on this device and you are no longer on its roster.')
+  }
+  if (currentStudent.salt !== student.salt || currentStudent.hash !== student.hash) {
+    throw new Error('Your class was just updated on this device — try signing in again with your current PIN.')
+  }
   // The verifier doubles as profile-key material: it is reproducible only by
   // someone who knows this student's actual PIN, so a doctored class code
   // carrying a substituted verifier opens a different, empty profile rather
@@ -205,6 +220,16 @@ export async function recoverPreviousWork(previousPin) {
   if (!student) throw new Error('That class is no longer on this device.')
   if (!(previousPin ?? '').trim()) throw new Error('Type the PIN you used before.')
   const previousPk = (await hashPin(student.salt, previousPin)).slice(0, 16)
+
+  // If another student signed in from a second tab during that await, the
+  // storage listeners have already switched the progress store to them —
+  // moving work now would merge this student's old profile into the new
+  // student's and delete the original.
+  const active = state.session
+  if (!active || active.cid !== session.cid || active.sid !== session.sid) {
+    throw new Error('Someone else signed in on this device — sign in again before moving your work.')
+  }
+
   const moved = recoverProfileWithPreviousPin(session.cid, session.sid, previousPk)
   if (!moved) {
     throw new Error("That PIN doesn't match any earlier work saved on this device.")

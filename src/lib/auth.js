@@ -185,12 +185,32 @@ function deviceHoldsClassData() {
 }
 
 // Why redemption must be refused right now: null when it may proceed.
+//
+// Reads what is *persisted*, not just this tab's snapshot. `storage` events
+// are delivered asynchronously, so another tab can have provisioned a teacher
+// whose record is already in localStorage while this tab's listener has not
+// run yet — a snapshot check would sail past it and overwrite them. A direct
+// read sees the other tab's write immediately.
 function redemptionBlockedReason() {
+  const persisted = (() => {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY)
+      return raw ? JSON.parse(raw) : null
+    } catch {
+      return null
+    }
+  })()
+
+  // This tab's own session still authorizes a hand-over.
   if (state.adminUnlocked || state.teacherUnlocked) return null
-  if (state.teacher) {
-    return `This device is already set up for ${state.teacher.name}. Sign in with the teacher passcode, or ask the program admin to sign in and hand the device over.`
+
+  const teacher = normalizeTeacher(persisted?.teacher) ?? state.teacher
+  if (teacher) {
+    return `This device is already set up for ${teacher.name}. Sign in with the teacher passcode, or ask the program admin to sign in and hand the device over.`
   }
-  if (state.admin) return 'This device already has a program admin. Sign in as admin first.'
+  if (persisted?.admin || state.admin) {
+    return 'This device already has a program admin. Sign in as admin first.'
+  }
   if (deviceHoldsClassData()) {
     return 'This device still holds a class roster. Sign in and clear it (Release device) before setting up a new teacher.'
   }
@@ -242,11 +262,14 @@ export async function redeemTeacherCode(code, passcode) {
     hash: await deriveHex(salt, secret),
   }
 
-  // Re-check immediately before committing. The guard above ran before two
-  // awaits (decompressing attacker-supplied bytes, then key derivation), and
-  // the cross-tab storage listener can replace `state` in between — a
-  // redemption left pending in one tab would otherwise overwrite a teacher who
-  // provisioned this device in another and hand over their dashboard.
+  // Re-check immediately before committing, with no await in between. The
+  // guard above ran before two awaits (decompressing attacker-supplied bytes,
+  // then key derivation), during which another tab can provision this device;
+  // because the check reads persisted storage rather than this tab's snapshot,
+  // it sees that write even if our `storage` event has not been delivered yet.
+  // localStorage offers no compare-and-set, so two commits landing in the same
+  // instant still resolve last-writer-wins — but that window is now sub-
+  // millisecond and contains no awaits.
   const blockedNow = redemptionBlockedReason()
   if (blockedNow) throw new Error(blockedNow)
 
