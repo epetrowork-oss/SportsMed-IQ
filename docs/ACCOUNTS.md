@@ -143,6 +143,19 @@ had since signed in (both the session and the destination key are re-checked).
 Anything added here later must follow the same rule: re-validate after every
 await, against persisted state where another tab could have written.
 
+A fifth round found the same shape eight more times, which made it clear this
+was one architectural flaw rather than a series of bugs: **every store read a
+module-local snapshot, awaited something slow, then wrote a whole store object
+back.** So the fix moved into the stores themselves. Each now exposes
+`commit(updater)`, where the updater receives state **re-read from
+localStorage** at write time and may throw to abort; nothing writes a captured
+snapshot any more. That closes all eight at once — stale admin setup, teacher
+login resurrecting a released teacher, code issuing restoring a stale unlocked
+flag, class codes published after compression, logins validated against a
+superseded roster, class imports erasing a concurrent one, and roster and
+assignment upserts discarding another tab's entry — and it is the rule any new
+store code must follow.
+
 **The honest floor:** whoever physically holds an unlocked device can read
 localStorage with devtools. Everything above raises the cost of the in-app
 paths; none of it defends against that, and no client-only design can.

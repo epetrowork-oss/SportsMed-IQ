@@ -31,6 +31,17 @@ function save(next) {
   listeners.forEach((fn) => fn())
 }
 
+// Every write goes through this, and `updater` receives state re-read from
+// localStorage — never a snapshot captured before an await. Between a read and
+// a write another tab can complete a change this tab has not seen yet
+// (`storage` events are asynchronous), and spreading the old snapshot would
+// silently revert it. The updater may throw to abort.
+function commit(updater) {
+  const next = updater(load())
+  save(next)
+  return next
+}
+
 // Encodes {name, unitIds, mode, due?} into a class code (letting
 // encodeAssignment's validation errors propagate — they already have
 // friendly messages) and upserts the saved entry keyed by case-insensitive
@@ -55,21 +66,24 @@ export async function saveTeacherAssignment({ name, unitIds, mode, due }) {
   }
   if (due) entry.due = due
 
+  // Merged into fresh state: encodeAssignment above is async, so another tab
+  // may have saved or removed an assignment that this tab has not seen.
   const key = entry.name.toLowerCase()
-  const existingIndex = state.assignments.findIndex((a) => a.name.trim().toLowerCase() === key)
-  const assignments = [...state.assignments]
-  if (existingIndex >= 0) {
-    assignments[existingIndex] = entry
-  } else {
-    assignments.push(entry)
-  }
-  save({ assignments })
+  commit((cur) => {
+    const existingIndex = cur.assignments.findIndex((a) => a.name.trim().toLowerCase() === key)
+    const assignments = [...cur.assignments]
+    if (existingIndex >= 0) assignments[existingIndex] = entry
+    else assignments.push(entry)
+    return { assignments }
+  })
   return entry
 }
 
 export function removeTeacherAssignment(name) {
   const key = name.trim().toLowerCase()
-  save({ assignments: state.assignments.filter((a) => a.name.trim().toLowerCase() !== key) })
+  commit((cur) => ({
+    assignments: cur.assignments.filter((a) => a.name.trim().toLowerCase() !== key),
+  }))
 }
 
 // Two Teacher tabs on one device must not fight over this store. Without

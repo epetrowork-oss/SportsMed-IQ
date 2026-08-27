@@ -132,14 +132,29 @@ function save(next) {
   listeners.forEach((fn) => fn())
 }
 
+
+// Every write goes through this, and `updater` receives state re-read from
+// localStorage — never a snapshot captured before an await. Between a read and
+// a write another tab can complete a change this tab has not seen yet
+// (`storage` events are asynchronous), and spreading the old snapshot would
+// silently revert it. The updater may throw to abort.
+function commit(updater) {
+  const next = updater(load())
+  save(next)
+  return next
+}
+
 // Every mutation bumps `rev`. buildClassLoginCode captures it before its
 // hashing awaits and refuses to publish if it moved, so a code can never be
 // attached to a roster that changed while it was being built.
 function updateClass(cid, updater) {
-  const cls = state.classes.find((c) => c.cid === cid)
-  if (!cls) throw new Error('That class no longer exists on this device.')
-  const next = { ...updater(cls), rev: (cls.rev ?? 0) + 1 }
-  save({ ...state, classes: state.classes.map((c) => (c.cid === cid ? next : c)) })
+  let next = null
+  commit((cur) => {
+    const cls = cur.classes.find((c) => c.cid === cid)
+    if (!cls) throw new Error('That class no longer exists on this device.')
+    next = { ...updater(cls), rev: (cls.rev ?? 0) + 1 }
+    return { ...cur, classes: cur.classes.map((c) => (c.cid === cid ? next : c)) }
+  })
   return next
 }
 
@@ -167,7 +182,7 @@ function idPrefix(className) {
 export function createClass(name) {
   const trimmed = (name ?? '').trim().slice(0, 60)
   if (!trimmed) throw new Error('Give the class a name.')
-  if (state.classes.some((c) => c.name.toLowerCase() === trimmed.toLowerCase())) {
+  if (load().classes.some((c) => c.name.toLowerCase() === trimmed.toLowerCase())) {
     throw new Error('A class with that name already exists.')
   }
   const cls = {
@@ -181,12 +196,12 @@ export function createClass(name) {
     code: '',
     codeAt: null,
   }
-  save({ ...state, classes: [...state.classes, cls] })
+  commit((cur) => ({ ...cur, classes: [...cur.classes, cls] }))
   return cls
 }
 
 export function removeClass(cid) {
-  save({ ...state, classes: state.classes.filter((c) => c.cid !== cid) })
+  commit((cur) => ({ ...cur, classes: cur.classes.filter((c) => c.cid !== cid) }))
 }
 
 export function addStudent(cid, loginName) {
@@ -291,7 +306,14 @@ export async function buildClassLoginCode(cid) {
   }
   const compressed = await deflate(new TextEncoder().encode(JSON.stringify(payload)))
   const code = CLASS_CODE_PREFIX + toBase64Url(compressed)
-  updateClass(cid, (c) => ({ ...c, code, codeAt: payload.at }))
+  // Compression is another await, so re-check the revision once more: the
+  // class must not have changed between the hashing check and publishing.
+  updateClass(cid, (c) => {
+    if ((c.rev ?? 0) !== rev) {
+      throw new Error('This class changed in another tab while the code was being built — generate it again.')
+    }
+    return { ...c, code, codeAt: payload.at }
+  })
   return code
 }
 

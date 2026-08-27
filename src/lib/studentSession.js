@@ -75,6 +75,18 @@ function save(next) {
   listeners.forEach((fn) => fn())
 }
 
+// Every write goes through this, and `updater` receives state re-read from
+// localStorage — never a snapshot captured before an await. Decoding a class
+// code and deriving a PIN hash are both slow, and this store persists TWO keys
+// (classes + session), so a stale write here can erase a class another tab
+// imported or log out a student who just signed in there. The updater may
+// throw to abort.
+function commit(updater) {
+  const next = updater(load())
+  save(next)
+  return next
+}
+
 function normalizeSettings(value) {
   const source = value && typeof value === 'object' ? value : {}
   return {
@@ -149,23 +161,32 @@ export async function decodeClassLoginCode(code) {
 // logged out.
 export async function importClassLoginCode(code) {
   const cls = await decodeClassLoginCode(code)
-  const classes = [...state.classes.filter((c) => c.cid !== cls.cid), cls].sort((a, b) =>
-    a.name.localeCompare(b.name),
-  )
-  let session = state.session
-  const loggedOut =
-    session && session.cid === cls.cid && !cls.students.some((s) => s.sid === session.sid)
-  if (loggedOut) session = null
-  save({ classes, session })
+  let loggedOut = false
+  commit((cur) => {
+    const classes = [...cur.classes.filter((c) => c.cid !== cls.cid), cls].sort((a, b) =>
+      a.name.localeCompare(b.name),
+    )
+    let session = cur.session
+    loggedOut = !!(
+      session &&
+      session.cid === cls.cid &&
+      !cls.students.some((s) => s.sid === session.sid)
+    )
+    if (loggedOut) session = null
+    return { classes, session }
+  })
   if (loggedOut) reloadProgressProfile()
   return cls
 }
 
 export function removeImportedClass(cid) {
-  const loggedOut = state.session?.cid === cid
-  save({
-    classes: state.classes.filter((c) => c.cid !== cid),
-    session: loggedOut ? null : state.session,
+  let loggedOut = false
+  commit((cur) => {
+    loggedOut = cur.session?.cid === cid
+    return {
+      classes: cur.classes.filter((c) => c.cid !== cid),
+      session: loggedOut ? null : cur.session,
+    }
   })
   if (loggedOut) reloadProgressProfile()
 }
@@ -183,29 +204,34 @@ export async function loginStudent(cid, sid, pin) {
   }
 
   // Deriving that hash took real time, and another tab may have imported a
-  // newer class code meanwhile — the storage listener replaces `state` while
-  // `student` stays the old snapshot. Without re-resolving, a login started
-  // just before the import could succeed on a PIN the teacher has since reset,
-  // or for a student the new roster removed.
-  const currentStudent = state.classes
-    .find((c) => c.cid === cid)
-    ?.students.find((s) => s.sid === sid)
-  if (!currentStudent) {
-    throw new Error('Your class was just updated on this device and you are no longer on its roster.')
-  }
-  if (currentStudent.salt !== student.salt || currentStudent.hash !== student.hash) {
-    throw new Error('Your class was just updated on this device — try signing in again with your current PIN.')
-  }
-  // The verifier doubles as profile-key material: it is reproducible only by
+  // newer class code meanwhile. Re-resolve against *persisted* state inside the
+  // commit — not this tab's snapshot, which the async storage event may not
+  // have refreshed yet — so a login started just before the import cannot
+  // succeed on a PIN the teacher has since reset, or for a removed student.
+  //
+  // The verifier also doubles as profile-key material: reproducible only by
   // someone who knows this student's actual PIN, so a doctored class code
   // carrying a substituted verifier opens a different, empty profile rather
   // than the real student's.
-  save({ ...state, session: { cid, sid, name: student.name, pk: hash.slice(0, 16) } })
+  let signedIn = null
+  commit((cur) => {
+    const currentStudent = cur.classes
+      .find((c) => c.cid === cid)
+      ?.students.find((s) => s.sid === sid)
+    if (!currentStudent) {
+      throw new Error('Your class was just updated on this device and you are no longer on its roster.')
+    }
+    if (currentStudent.salt !== student.salt || currentStudent.hash !== student.hash) {
+      throw new Error('Your class was just updated on this device — try signing in again with your current PIN.')
+    }
+    signedIn = currentStudent
+    return { ...cur, session: { cid, sid, name: currentStudent.name, pk: hash.slice(0, 16) } }
+  })
   reloadProgressProfile()
   // First login on this profile: pre-fill the progress-code name with the
   // teacher-chosen login name so exported codes identify the student.
-  setStudentName(student.name)
-  return student
+  setStudentName(signedIn.name)
+  return signedIn
 }
 
 // After a teacher resets a PIN the student's old work sits under the key their
@@ -225,7 +251,7 @@ export async function recoverPreviousWork(previousPin) {
   // storage listeners have already switched the progress store to them —
   // moving work now would merge this student's old profile into the new
   // student's and delete the original.
-  const active = state.session
+  const active = load().session
   if (!active || active.cid !== session.cid || active.sid !== session.sid) {
     throw new Error('Someone else signed in on this device — sign in again before moving your work.')
   }
@@ -246,7 +272,7 @@ export function canRecoverPreviousWork() {
 }
 
 export function logoutStudent() {
-  save({ ...state, session: null })
+  commit((cur) => ({ ...cur, session: null }))
   reloadProgressProfile()
 }
 

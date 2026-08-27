@@ -102,6 +102,22 @@ function save(next) {
   listeners.forEach((fn) => fn())
 }
 
+// EVERY write goes through this, and `updater` receives state re-read from
+// localStorage — never a snapshot captured before an await.
+//
+// This is the fix for a whole class of bug rather than one instance of it:
+// each of these functions reads state, awaits something slow (PBKDF2,
+// compression), then writes a whole store object. `storage` events are
+// delivered asynchronously, so between the read and the write another tab can
+// have completed a change that this tab has not seen — and spreading the old
+// snapshot silently reverts it. Re-reading inside the write closes that for
+// every call site at once. The updater may throw to abort.
+function commit(updater) {
+  const next = updater(load())
+  save(next)
+  return next
+}
+
 // --- admin ---
 
 export function adminConfigured() {
@@ -117,25 +133,43 @@ export async function setupAdmin(passcode) {
   // "set up admin" on the locked sign-in screen and land in the dashboard
   // holding that teacher's classes. Claiming admin on a device that already
   // belongs to a teacher requires their session first.
-  if (state.teacher && !state.teacherUnlocked && !state.adminUnlocked) {
-    throw new Error(
-      `This device is already set up for ${state.teacher.name}. Sign in with the teacher passcode before adding a program admin.`,
-    )
-  }
+  const blockedEarly = adminSetupBlockedReason(state)
+  if (blockedEarly) throw new Error(blockedEarly)
+
   const salt = randomToken(8)
   const hash = await deriveHex(salt, trimmed)
-  save({ ...state, admin: { salt, hash }, adminUnlocked: true })
+
+  // Re-checked against fresh state: another tab may have provisioned a teacher
+  // while that derivation ran.
+  return commit((cur) => {
+    const blocked = adminSetupBlockedReason(cur)
+    if (blocked) throw new Error(blocked)
+    if (cur.admin) throw new Error('An admin passcode is already set on this device.')
+    return { ...cur, admin: { salt, hash }, adminUnlocked: true }
+  })
+}
+
+function adminSetupBlockedReason(st) {
+  if (st.teacher && !st.teacherUnlocked && !st.adminUnlocked) {
+    return `This device is already set up for ${st.teacher.name}. Sign in with the teacher passcode before adding a program admin.`
+  }
+  return null
 }
 
 export async function loginAdmin(passcode) {
   if (!state.admin) throw new Error('No admin passcode has been set up on this device yet.')
   const hash = await deriveHex(state.admin.salt, (passcode ?? '').trim())
-  if (hash !== state.admin.hash) throw new Error('That admin passcode is not right.')
-  save({ ...state, adminUnlocked: true })
+  // Verified against the *current* record, not the one captured before the
+  // derivation: another tab may have changed or removed it meanwhile.
+  return commit((cur) => {
+    if (!cur.admin) throw new Error('No admin passcode has been set up on this device yet.')
+    if (hash !== cur.admin.hash) throw new Error('That admin passcode is not right.')
+    return { ...cur, adminUnlocked: true }
+  })
 }
 
 export function logoutAdmin() {
-  save({ ...state, adminUnlocked: false })
+  commit((cur) => ({ ...cur, adminUnlocked: false }))
 }
 
 // --- teacher access codes ---
@@ -152,11 +186,19 @@ export async function issueTeacherCode(teacherName) {
   const compressed = await deflate(new TextEncoder().encode(JSON.stringify(payload)))
   const code = TEACHER_PREFIX + toBase64Url(compressed)
   const entry = { tid, name, code, issuedAt: payload.at }
-  save({
-    ...state,
-    issued: [...state.issued.filter((t) => t.tid !== tid), entry].sort((a, b) =>
-      a.name.localeCompare(b.name),
-    ),
+  // Merged into fresh state: spreading the pre-await snapshot would write back
+  // this tab's `adminUnlocked: true` even if the admin signed out in another
+  // tab meanwhile, re-opening the dashboard.
+  commit((cur) => {
+    if (!cur.adminUnlocked) {
+      throw new Error('You were signed out while the code was being generated — sign in and try again.')
+    }
+    return {
+      ...cur,
+      issued: [...cur.issued.filter((t) => t.tid !== tid), entry].sort((a, b) =>
+        a.name.localeCompare(b.name),
+      ),
+    }
   })
   return entry
 }
@@ -164,7 +206,7 @@ export async function issueTeacherCode(teacherName) {
 // Admin-side bookkeeping only: with no server there is no remote revocation —
 // this removes the entry from this device's issued list.
 export function removeIssuedTeacher(tid) {
-  save({ ...state, issued: state.issued.filter((t) => t.tid !== tid) })
+  commit((cur) => ({ ...cur, issued: cur.issued.filter((t) => t.tid !== tid) }))
 }
 
 // Class data is protected by whatever credential guards this device, so it
@@ -191,24 +233,15 @@ function deviceHoldsClassData() {
 // whose record is already in localStorage while this tab's listener has not
 // run yet — a snapshot check would sail past it and overwrite them. A direct
 // read sees the other tab's write immediately.
-function redemptionBlockedReason() {
-  const persisted = (() => {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY)
-      return raw ? JSON.parse(raw) : null
-    } catch {
-      return null
-    }
-  })()
-
+function redemptionBlockedReason(st) {
   // This tab's own session still authorizes a hand-over.
-  if (state.adminUnlocked || state.teacherUnlocked) return null
+  if (st.adminUnlocked || st.teacherUnlocked) return null
 
-  const teacher = normalizeTeacher(persisted?.teacher) ?? state.teacher
+  const teacher = st.teacher
   if (teacher) {
     return `This device is already set up for ${teacher.name}. Sign in with the teacher passcode, or ask the program admin to sign in and hand the device over.`
   }
-  if (persisted?.admin || state.admin) {
+  if (st.admin) {
     return 'This device already has a program admin. Sign in as admin first.'
   }
   if (deviceHoldsClassData()) {
@@ -226,7 +259,7 @@ function redemptionBlockedReason() {
 // credential: the teacher's passcode, or the admin signing in and calling
 // forgetTeacher() to hand the device over.
 export async function redeemTeacherCode(code, passcode) {
-  const blocked = redemptionBlockedReason()
+  const blocked = redemptionBlockedReason(load())
   if (blocked) throw new Error(blocked)
 
   const trimmed = (code ?? '').trim()
@@ -270,10 +303,11 @@ export async function redeemTeacherCode(code, passcode) {
   // localStorage offers no compare-and-set, so two commits landing in the same
   // instant still resolve last-writer-wins — but that window is now sub-
   // millisecond and contains no awaits.
-  const blockedNow = redemptionBlockedReason()
-  if (blockedNow) throw new Error(blockedNow)
-
-  save({ ...state, teacher, teacherUnlocked: true })
+  commit((cur) => {
+    const blockedNow = redemptionBlockedReason(cur)
+    if (blockedNow) throw new Error(blockedNow)
+    return { ...cur, teacher, teacherUnlocked: true }
+  })
   return teacher
 }
 
@@ -281,14 +315,22 @@ export async function redeemTeacherCode(code, passcode) {
 export async function loginTeacher(passcode) {
   if (!state.teacher) throw new Error('No teacher has been set up on this device yet.')
   const hash = await deriveHex(state.teacher.salt, (passcode ?? '').trim())
-  if (hash !== state.teacher.hash) throw new Error('That teacher passcode is not right.')
-  save({ ...state, teacherUnlocked: true })
+  // Checked against the persisted teacher. If this device was released in
+  // another tab while the derivation ran, the old passcode must not write the
+  // old teacher back and undo the hand-over.
+  return commit((cur) => {
+    if (!cur.teacher) {
+      throw new Error('This device was released while you were signing in — set it up again.')
+    }
+    if (hash !== cur.teacher.hash) throw new Error('That teacher passcode is not right.')
+    return { ...cur, teacherUnlocked: true }
+  })
 }
 
 // Sign out = lock. The teacher record stays so the device still refuses a
 // pasted code; signing back in needs the passcode.
 export function logoutTeacher() {
-  save({ ...state, teacherUnlocked: false })
+  commit((cur) => ({ ...cur, teacherUnlocked: false }))
 }
 
 // Hand the device to a different teacher, or recover from a forgotten
@@ -303,7 +345,7 @@ export function forgetTeacher() {
   if (!state.adminUnlocked && !state.teacherUnlocked) {
     throw new Error('Sign in first to remove the teacher from this device.')
   }
-  save({ ...state, teacher: null, teacherUnlocked: false })
+  commit((cur) => ({ ...cur, teacher: null, teacherUnlocked: false }))
 }
 
 // Sign-out must reach every tab. Without this a second Teacher tab keeps its

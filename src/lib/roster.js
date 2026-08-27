@@ -31,6 +31,17 @@ function save(next) {
   listeners.forEach((fn) => fn())
 }
 
+// Every write goes through this, and `updater` receives state re-read from
+// localStorage — never a snapshot captured before an await. Between a read and
+// a write another tab can complete a change this tab has not seen yet
+// (`storage` events are asynchronous), and spreading the old snapshot would
+// silently revert it. The updater may throw to abort.
+function commit(updater) {
+  const next = updater(load())
+  save(next)
+  return next
+}
+
 function hasGamificationData(value) {
   if (!value || typeof value !== 'object') return false
   return (Array.isArray(value.activeDates) && value.activeDates.length > 0)
@@ -50,30 +61,38 @@ export async function addStudentFromCode(code) {
       'This code has no student name — ask the student to enter their name on the Sync page first.',
     )
   }
-  const existing =
-    (sid && state.students.find((s) => s.sid === sid && (!cid || !s.cid || s.cid === cid))) ??
-    state.students.find((s) => s.name.toLowerCase() === name.toLowerCase())
-  const student = {
-    id: existing?.id ?? `stu-${Date.now().toString(36)}`,
-    name,
-    sid: sid ?? existing?.sid ?? null,
-    cid: cid ?? existing?.cid ?? null,
-    progress: units,
-    // Legacy codes decode to an empty gamification shape. Do not let that
-    // erase richer data already stored for the same student on this device.
-    gamification: hasGamificationData(gamification) ? gamification : existing?.gamification ?? gamification,
-    updatedAt: at ?? Date.now(),
-  }
-  save({
-    students: [...state.students.filter((s) => s.id !== student.id), student].sort((a, b) =>
-      a.name.localeCompare(b.name),
-    ),
+  // Resolved against fresh state inside the commit: decoding above is async,
+  // and another tab may have added or removed a student meanwhile — writing
+  // this tab's whole array back would erase them.
+  let student = null
+  commit((cur) => {
+    const existing =
+      (sid && cur.students.find((s) => s.sid === sid && (!cid || !s.cid || s.cid === cid))) ??
+      cur.students.find((s) => s.name.toLowerCase() === name.toLowerCase())
+    student = {
+      id: existing?.id ?? `stu-${Date.now().toString(36)}`,
+      name,
+      sid: sid ?? existing?.sid ?? null,
+      cid: cid ?? existing?.cid ?? null,
+      progress: units,
+      // Legacy codes decode to an empty gamification shape. Do not let that
+      // erase richer data already stored for the same student on this device.
+      gamification: hasGamificationData(gamification)
+        ? gamification
+        : existing?.gamification ?? gamification,
+      updatedAt: at ?? Date.now(),
+    }
+    return {
+      students: [...cur.students.filter((s) => s.id !== student.id), student].sort((a, b) =>
+        a.name.localeCompare(b.name),
+      ),
+    }
   })
   return student
 }
 
 export function removeStudent(id) {
-  save({ students: state.students.filter((s) => s.id !== id) })
+  commit((cur) => ({ students: cur.students.filter((s) => s.id !== id) }))
 }
 
 // Two Teacher tabs on one device must not fight over this store. Without
