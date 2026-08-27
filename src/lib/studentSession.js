@@ -196,6 +196,18 @@ export function isUnitVisible(unitId, controls = getClassControls()) {
   return controls.unitIds.has(unitId)
 }
 
+// Mirror of the listener in progress.js: when another tab signs a different
+// student in or out, this tab's header and gating must follow, or it would
+// show one student's name over another's progress.
+if (typeof window !== 'undefined') {
+  window.addEventListener('storage', (event) => {
+    if (event.key === null || event.key === STORAGE_KEY || event.key === SESSION_KEY) {
+      state = load()
+      listeners.forEach((fn) => fn())
+    }
+  })
+}
+
 // --- React binding ---
 
 function subscribe(fn) {

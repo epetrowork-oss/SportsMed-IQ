@@ -22,8 +22,20 @@
 import { getStandardsForUnit } from '../content/index.js'
 import { isComplete, isFlagged } from './status.js'
 
+// Quoting alone doesn't make a cell inert: Excel and Sheets still evaluate a
+// value that opens with =, +, - or @ (or a leading tab/CR) as a formula when
+// the file is opened or imported. Student-supplied text reaches these exports
+// — a progress code carries whatever name the student typed — so prefix an
+// apostrophe to force those values to be read as text. Numbers are left alone
+// so quiz scores and minutes stay numeric for sorting and gradebook math.
+function neutralize(v) {
+  if (typeof v === 'number') return String(v)
+  const text = String(v ?? '')
+  return /^[=+\-@\t\r]/.test(text) ? `'${text}` : text
+}
+
 function esc(v) {
-  return `"${String(v ?? '').replaceAll('"', '""')}"`
+  return `"${neutralize(v).replaceAll('"', '""')}"`
 }
 
 function toCsv(rows, eol) {

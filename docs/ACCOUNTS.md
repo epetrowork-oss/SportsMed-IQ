@@ -64,11 +64,42 @@ the code says so where it matters:
   dashboard. Anyone who clears localStorage gets a locked, empty device —
   there is nothing to steal, and no account recovery either (write the
   admin passcode down).
-- PINs are low-entropy by design (easy to say out loud); they're salted and
-  hashed in class codes so a curious student can't read classmates' PINs out
-  of the code, and that's the bar they aim for.
+- PINs are deliberately easy to read aloud, so the space is small: 256 words
+  x 90 numbers = 23,040. Because the class code hands every student a
+  verifier for every classmate's PIN, that space is hashed with **PBKDF2-
+  SHA256 at 150k iterations** rather than a plain digest — a full sweep of
+  one student's PIN goes from milliseconds to ~10 minutes of ordinary CPU
+  time, while login stays under 100ms and generating a class code for a
+  roster stays about a second. This raises the cost of casual snooping; it
+  is **not** proof against someone who deliberately sets up a cracking rig,
+  and shrinking the word list or reverting to a fast hash would undo it.
+- The admin passcode uses the same PBKDF2 derivation, so a weak passcode
+  can't be recovered from localStorage with a quick dictionary run.
 - Teacher access codes prove possession, not identity — with no server,
   revocation is bookkeeping on the admin device only.
+
+### Two limits that are inherent to having no server
+
+Both were raised in review (PR #63) and are real. Neither is fixable by
+better client-side code alone, because every secret a student device could
+check against is already on that student's device:
+
+1. **Teacher access codes are unforgeable only by convention.** Redemption
+   validates the code's shape, not its issuer, so someone who knows the
+   format can hand-build a `SMIQT1.` code and unlock the Teacher tab on a
+   device that has teacher data on it. Closing this needs either a
+   credential the student can't reproduce (e.g. the teacher also setting a
+   passcode on their device at first redemption, so later unlocks need it)
+   or a server to sign codes.
+2. **Class login codes can be edited and re-imported.** A student can decode
+   `SMIQC1.`, change the settings or substitute a PIN hash for one they
+   chose, re-encode, and import it — lifting their own content restrictions,
+   or logging into a classmate's progress profile on a shared device. Same
+   root cause: offline verification means the verifier travels with the data.
+
+Treat the content controls as classroom management (they shape what a
+cooperating student sees), not as a security boundary against a determined
+student.
 
 ## Office-suite exports (`src/lib/exports.js`)
 

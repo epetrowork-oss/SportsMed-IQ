@@ -165,6 +165,23 @@ export function reloadProgressProfile() {
   listeners.forEach((fn) => fn())
 }
 
+// Two tabs open on a shared classroom device must not disagree about whose
+// progress they are showing. Without this, a tab left open by one student
+// keeps rendering — and writing to — their profile after a classmate signs in
+// from another tab. `storage` fires only in the *other* tabs, so this reacts
+// to their logins and logouts; event.key === null means localStorage.clear().
+if (typeof window !== 'undefined') {
+  window.addEventListener('storage', (event) => {
+    if (event.key === null || event.key === SESSION_KEY) {
+      reloadProgressProfile()
+    } else if (event.key === STORAGE_KEY) {
+      // Same student, second tab: pick up their newly written progress.
+      state = load()
+      listeners.forEach((fn) => fn())
+    }
+  })
+}
+
 // --- mutations ---
 
 export function markLessonRead(unitId) {

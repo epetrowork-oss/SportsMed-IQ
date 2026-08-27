@@ -23,30 +23,66 @@
 
 import { useSyncExternalStore } from 'react'
 import { toBase64Url, deflate } from './share.js'
-import { sha256Hex, randomToken } from './auth.js'
+import { deriveHex, randomToken } from './auth.js'
 import { getUnit } from '../content/index.js'
 
 const STORAGE_KEY = 'sportmediq:classes:v1'
 export const CLASS_CODE_PREFIX = 'SMIQC1.'
 
-// Classroom-safe 4-5 letter words for PINs. Word + 2 digits is easy to say
-// out loud, easy to type on a phone, and hard for a classmate to guess.
+// Classroom-safe 4-5 letter words. Word + 2 digits stays easy to read aloud
+// and type, but keep in mind what the size of this list buys: the class code
+// hands every student a verifier for every classmate's PIN, so the PIN space
+// is the ceiling on how much guessing that costs. 256 words x 90 numbers =
+// 23,040 combinations, and hashPin below deliberately makes each guess slow.
+// Shrinking this list, or moving to a fast hash, breaks that assumption.
 const PIN_WORDS = [
-  'TIGER', 'MAPLE', 'RIVER', 'STONE', 'CLOUD', 'EAGLE', 'LEMON', 'PIANO',
-  'ROBIN', 'SOLAR', 'TRACK', 'FIELD', 'COACH', 'MEDAL', 'RELAY', 'SCORE',
-  'CLEAT', 'ARENA', 'COURT', 'SKATE', 'PEDAL', 'WHEEL', 'NORTH', 'OCEAN',
-  'PLANT', 'GREEN', 'AMBER', 'CORAL', 'DELTA', 'FLARE', 'GROVE', 'CEDAR',
-  'BLAZE', 'COMET', 'DRIFT', 'EMBER', 'FROST', 'GLIDE', 'HURON', 'INLET',
-  'JUMBO', 'KAYAK', 'LUNAR', 'MANGO', 'NOBLE', 'OTTER', 'PLUME', 'QUEST',
-  'RIDGE', 'SIENA', 'TEMPO', 'ULTRA', 'VIVID', 'WAVES', 'YIELD', 'ZESTY',
+  'ACORN', 'AMBER', 'ANKLE', 'APPLE', 'APRON', 'ARBOR', 'ARENA', 'ARROW',
+  'ASPEN', 'ATLAS', 'AUDIO', 'AWARD', 'BACON', 'BADGE', 'BAGEL', 'BAKER',
+  'BANJO', 'BARGE', 'BASIL', 'BASIN', 'BEACH', 'BEADS', 'BEAM', 'BEAN',
+  'BENCH', 'BERRY', 'BIRCH', 'BISON', 'BLAZE', 'BLEND', 'BLIMP', 'BLOOM',
+  'BOARD', 'BOAT', 'BONUS', 'BOOTS', 'BRAID', 'BRAIN', 'BRAVE', 'BREAD',
+  'BRICK', 'BRISK', 'BROOK', 'BROOM', 'BRUSH', 'BUDDY', 'BUGLE', 'BUNCH',
+  'CABIN', 'CAMEL', 'CANOE', 'CARGO', 'CAROL', 'CEDAR', 'CHAIR', 'CHALK',
+  'CHARM', 'CHART', 'CHASE', 'CHEER', 'CHESS', 'CHIME', 'CHIRP', 'CHOIR',
+  'CIDER', 'CIVIC', 'CLAMP', 'CLASP', 'CLEAN', 'CLEAR', 'CLEAT', 'CLIFF',
+  'CLIMB', 'CLOAK', 'CLOCK', 'CLOUD', 'CLOVE', 'COACH', 'COAST', 'COCOA',
+  'COMET', 'COMMA', 'CORAL', 'COUCH', 'COURT', 'COVER', 'CRANE', 'CRATE',
+  'CREEK', 'CREST', 'CRISP', 'CROWN', 'CURVE', 'CYCLE', 'DAISY', 'DANCE',
+  'DELTA', 'DEPTH', 'DESK', 'DIARY', 'DIGIT', 'DINER', 'DITCH', 'DIVER',
+  'DOZEN', 'DRAFT', 'DRAKE', 'DRESS', 'DRIFT', 'DRILL', 'DRUM', 'DUNE',
+  'EAGLE', 'EARTH', 'EASEL', 'EAST', 'EBONY', 'ECHO', 'EDGE', 'EIGHT',
+  'ELBOW', 'EMBER', 'ENTRY', 'EQUAL', 'EVENT', 'EXTRA', 'FABLE', 'FANCY',
+  'FERRY', 'FIELD', 'FILM', 'FINCH', 'FIRST', 'FLAME', 'FLARE', 'FLASK',
+  'FLEET', 'FLINT', 'FLOAT', 'FLOOR', 'FLUTE', 'FOCUS', 'FORGE', 'FRAME',
+  'FROND', 'FROST', 'FRUIT', 'GABLE', 'GAUGE', 'GLASS', 'GLIDE', 'GLOBE',
+  'GLOVE', 'GRAIN', 'GRAND', 'GRAPE', 'GRASS', 'GRAVY', 'GREEN', 'GRILL',
+  'GROVE', 'GUIDE', 'HABIT', 'HANDY', 'HAPPY', 'HARP', 'HAVEN', 'HAZEL',
+  'HEART', 'HEDGE', 'HELIX', 'HILL', 'HONEY', 'HORSE', 'HOTEL', 'HOUSE',
+  'HUMID', 'HUMOR', 'ICING', 'IDEAL', 'IGLOO', 'INDEX', 'INLET', 'IRON',
+  'IVORY', 'JELLY', 'JEWEL', 'JOLLY', 'JOUST', 'JUICE', 'KAYAK', 'KNEE',
+  'KNOT', 'LABEL', 'LAKE', 'LANCE', 'LARCH', 'LASER', 'LATCH', 'LEAF',
+  'LEDGE', 'LEMON', 'LEVEL', 'LIGHT', 'LILAC', 'LIMIT', 'LINEN', 'LLAMA',
+  'LOCAL', 'LODGE', 'LOTUS', 'LOYAL', 'LUCKY', 'LUNAR', 'LUNCH', 'LYRIC',
+  'MAGIC', 'MAJOR', 'MANGO', 'MAPLE', 'MARCH', 'MARSH', 'MEDAL', 'MELON',
+  'MERIT', 'METAL', 'METER', 'MINT', 'MIXER', 'MODEL', 'MOTOR', 'MOUNT',
+  'MOUSE', 'MOVIE', 'MUSIC', 'NERVE', 'NOBLE', 'NORTH', 'NOTCH', 'NOVEL',
+  'OASIS', 'OCEAN', 'OLIVE', 'ONION', 'OPERA', 'ORBIT', 'ORGAN', 'OTTER',
+  'OUNCE', 'OVAL', 'OXIDE', 'PANDA', 'PAPER', 'PARK', 'PASTA', 'PATCH',
 ]
 
+// Unbiased pick from `range` (rejection sampling — `byte % range` would skew
+// toward low values whenever range doesn't divide 256).
+function randomBelow(range) {
+  const limit = Math.floor(256 / range) * range
+  const byte = new Uint8Array(1)
+  do {
+    crypto.getRandomValues(byte)
+  } while (byte[0] >= limit)
+  return byte[0] % range
+}
+
 export function generatePin() {
-  const bytes = new Uint8Array(2)
-  crypto.getRandomValues(bytes)
-  const word = PIN_WORDS[bytes[0] % PIN_WORDS.length]
-  const digits = 10 + (bytes[1] % 90) // 10..99, always two digits
-  return `${word}${digits}`
+  return `${PIN_WORDS[randomBelow(PIN_WORDS.length)]}${10 + randomBelow(90)}`
 }
 
 export function normalizePin(pin) {
@@ -54,9 +90,10 @@ export function normalizePin(pin) {
 }
 
 export async function hashPin(salt, pin) {
-  // Truncated hash: the PIN space is small anyway — this is a classroom
-  // deterrent, not cryptographic account security (documented in auth.js).
-  return (await sha256Hex(`${salt}:${normalizePin(pin)}`)).slice(0, 16)
+  // PBKDF2, not a plain digest: these verifiers travel to every student in
+  // the class inside the class code, so each guess must cost real time. See
+  // the note on PIN_WORDS above and docs/ACCOUNTS.md for the threat model.
+  return deriveHex(salt, normalizePin(pin))
 }
 
 const defaultSettings = () => ({ units: null, quizzes: true, assignments: true })

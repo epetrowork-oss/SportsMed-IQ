@@ -20,9 +20,29 @@ const STORAGE_KEY = 'sportmediq:auth:v1'
 const TEACHER_PREFIX = 'SMIQT1.'
 const OTHER_PREFIXES = ['SMIQ2.', 'SMIQ1.', 'SMIQA1.', 'SMIQC1.']
 
-export async function sha256Hex(text) {
-  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text))
-  return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('')
+// PBKDF2-SHA256, used for the admin passcode here and for the student PIN
+// verifiers in classes.js. A fast hash is the wrong tool for both: the PIN
+// verifiers are handed to every student in the class inside the class code,
+// so with SHA-256 anyone holding the code could enumerate the whole PIN space
+// offline in milliseconds. Iterations are a deliberate compromise — enough to
+// make bulk guessing cost real time, few enough that generating a class code
+// for a full roster stays a few seconds on a school Chromebook.
+export const PIN_HASH_ITERATIONS = 150000
+
+export async function deriveHex(salt, secret, iterations = PIN_HASH_ITERATIONS, bits = 128) {
+  const key = await crypto.subtle.importKey(
+    'raw',
+    new TextEncoder().encode(secret),
+    'PBKDF2',
+    false,
+    ['deriveBits'],
+  )
+  const derived = await crypto.subtle.deriveBits(
+    { name: 'PBKDF2', salt: new TextEncoder().encode(salt), iterations, hash: 'SHA-256' },
+    key,
+    bits,
+  )
+  return [...new Uint8Array(derived)].map((b) => b.toString(16).padStart(2, '0')).join('')
 }
 
 export function randomToken(length = 8) {
@@ -76,13 +96,13 @@ export async function setupAdmin(passcode) {
   if (trimmed.length < 6) throw new Error('Pick an admin passcode of at least 6 characters.')
   if (state.admin) throw new Error('An admin passcode is already set on this device.')
   const salt = randomToken(8)
-  const hash = await sha256Hex(`${salt}:${trimmed}`)
+  const hash = await deriveHex(salt, trimmed)
   save({ ...state, admin: { salt, hash }, adminUnlocked: true })
 }
 
 export async function loginAdmin(passcode) {
   if (!state.admin) throw new Error('No admin passcode has been set up on this device yet.')
-  const hash = await sha256Hex(`${state.admin.salt}:${(passcode ?? '').trim()}`)
+  const hash = await deriveHex(state.admin.salt, (passcode ?? '').trim())
   if (hash !== state.admin.hash) throw new Error('That admin passcode is not right.')
   save({ ...state, adminUnlocked: true })
 }
