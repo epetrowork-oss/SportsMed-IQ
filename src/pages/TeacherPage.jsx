@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useState } from 'react'
 import { getAllUnits, getUnitsByCategory, getUnit } from '../content/index.js'
 import { useProgress, getUnitProgress, PASS_THRESHOLD } from '../lib/progress.js'
-import { useRoster, addStudentFromCode, removeStudent } from '../lib/roster.js'
+import { useRoster, addStudentFromCode, removeStudent, clearRoster } from '../lib/roster.js'
 import {
   useTeacherAssignments,
   saveTeacherAssignment,
   removeTeacherAssignment,
+  clearTeacherAssignments,
 } from '../lib/teacherAssignments.js'
 import { ASSIGNMENT_MODES } from '../lib/assignments.js'
 import { isComplete, isFlagged, flagReasons, formatMinSec, statusInfo } from '../lib/status.js'
@@ -25,6 +26,7 @@ import {
 } from '../lib/auth.js'
 import {
   useClasses,
+  clearAllClasses,
   createClass,
   removeClass,
   addStudent,
@@ -390,8 +392,21 @@ function SignedInBanner({ auth }) {
   const [confirmRelease, setConfirmRelease] = useState(false)
   const [releaseError, setReleaseError] = useState('')
 
+  // Releasing hands the device to someone else. With no admin left to guard
+  // it, the departing teacher's classes — rosters and plaintext PINs — must go
+  // with their credential, or the next person to pick the device up could set
+  // themselves up as teacher and read them. auth.js refuses redemption while
+  // class data remains, so a failure here locks the device rather than
+  // exposing it.
+  const wipesData = !auth.adminConfigured
+
   function release() {
     try {
+      if (wipesData) {
+        clearAllClasses()
+        clearRoster()
+        clearTeacherAssignments()
+      }
       forgetTeacher()
       setConfirmRelease(false)
       setReleaseError('')
@@ -410,11 +425,16 @@ function SignedInBanner({ auth }) {
           (confirmRelease ? (
             <>
               <button className="button button-danger" onClick={release}>
-                Confirm release
+                {wipesData ? 'Confirm — release and erase classes' : 'Confirm release'}
               </button>
               <button className="button" onClick={() => setConfirmRelease(false)}>
                 Cancel
               </button>
+              <span className="field-hint">
+                {wipesData
+                  ? 'This device has no program admin, so releasing also erases its classes, rosters and PINs — nothing would protect them otherwise. Export what you need first.'
+                  : 'The teacher is removed from this device. Classes stay, protected by the admin passcode.'}
+              </span>
             </>
           ) : (
             <button

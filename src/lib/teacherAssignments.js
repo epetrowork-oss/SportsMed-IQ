@@ -72,6 +72,25 @@ export function removeTeacherAssignment(name) {
   save({ assignments: state.assignments.filter((a) => a.name.trim().toLowerCase() !== key) })
 }
 
+// Two Teacher tabs on one device must not fight over this store. Without
+// this, the second tab keeps a stale module-local snapshot and its next write
+// persists that whole stale array — silently erasing saved assignments
+// saved from the first tab. `storage` fires only in other tabs.
+if (typeof window !== 'undefined') {
+  window.addEventListener('storage', (event) => {
+    if (event.key === null || event.key === STORAGE_KEY) {
+      state = load()
+      listeners.forEach((fn) => fn())
+    }
+  })
+}
+
+// Wipes this store. Used when a teacher releases the device: their data must
+// not outlive the credential that protected it.
+export function clearTeacherAssignments() {
+  save({ assignments: [] })
+}
+
 function subscribe(fn) {
   listeners.add(fn)
   return () => listeners.delete(fn)

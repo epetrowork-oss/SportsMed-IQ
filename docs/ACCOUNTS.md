@@ -119,6 +119,16 @@ validated before use, and automatic profile adoption was removed entirely —
 nothing moves between profiles now except through the previous-PIN recovery
 below.
 
+A third round closed three more: **Release device** left the departing
+teacher's classes and plaintext PINs on a device that then looked blank
+(release now erases them when no admin remains, and redemption is refused
+while any class data is present, so a missed clear locks the device rather
+than exposing it); **redemption re-checks its guard after its awaits**, so a
+request left pending in one tab cannot overwrite a teacher provisioned in
+another; and the **teacher-side stores now sync across tabs**, so a stale
+second tab can no longer write back an old roster and erase students, PINs or
+settings saved from the first.
+
 **The honest floor:** whoever physically holds an unlocked device can read
 localStorage with devtools. Everything above raises the cost of the in-app
 paths; none of it defends against that, and no client-only design can.

@@ -167,6 +167,36 @@ export function removeIssuedTeacher(tid) {
   save({ ...state, issued: state.issued.filter((t) => t.tid !== tid) })
 }
 
+// Class data is protected by whatever credential guards this device, so it
+// counts as "provisioned" even if the auth record is gone — otherwise
+// releasing a teacher on a device with no admin would leave their rosters and
+// plaintext PINs sitting behind a lock anyone could re-provision. Read
+// directly rather than importing classes.js, which imports this module.
+const CLASSES_KEY = 'sportmediq:classes:v1'
+
+function deviceHoldsClassData() {
+  try {
+    const raw = localStorage.getItem(CLASSES_KEY)
+    const parsed = raw ? JSON.parse(raw) : null
+    return Array.isArray(parsed?.classes) && parsed.classes.length > 0
+  } catch {
+    return false
+  }
+}
+
+// Why redemption must be refused right now: null when it may proceed.
+function redemptionBlockedReason() {
+  if (state.adminUnlocked || state.teacherUnlocked) return null
+  if (state.teacher) {
+    return `This device is already set up for ${state.teacher.name}. Sign in with the teacher passcode, or ask the program admin to sign in and hand the device over.`
+  }
+  if (state.admin) return 'This device already has a program admin. Sign in as admin first.'
+  if (deviceHoldsClassData()) {
+    return 'This device still holds a class roster. Sign in and clear it (Release device) before setting up a new teacher.'
+  }
+  return null
+}
+
 // Teacher-side, first run on a device: redeem an access code AND set the
 // passcode that will unlock this device from now on.
 //
@@ -176,13 +206,8 @@ export function removeIssuedTeacher(tid) {
 // credential: the teacher's passcode, or the admin signing in and calling
 // forgetTeacher() to hand the device over.
 export async function redeemTeacherCode(code, passcode) {
-  if (!state.adminUnlocked && !state.teacherUnlocked && (state.teacher || state.admin)) {
-    throw new Error(
-      state.teacher
-        ? `This device is already set up for ${state.teacher.name}. Sign in with the teacher passcode, or ask the program admin to sign in and hand the device over.`
-        : 'This device already has a program admin. Sign in as admin first.',
-    )
-  }
+  const blocked = redemptionBlockedReason()
+  if (blocked) throw new Error(blocked)
 
   const trimmed = (code ?? '').trim()
   if (!trimmed.startsWith(TEACHER_PREFIX)) {
@@ -216,6 +241,15 @@ export async function redeemTeacherCode(code, passcode) {
     salt,
     hash: await deriveHex(salt, secret),
   }
+
+  // Re-check immediately before committing. The guard above ran before two
+  // awaits (decompressing attacker-supplied bytes, then key derivation), and
+  // the cross-tab storage listener can replace `state` in between — a
+  // redemption left pending in one tab would otherwise overwrite a teacher who
+  // provisioned this device in another and hand over their dashboard.
+  const blockedNow = redemptionBlockedReason()
+  if (blockedNow) throw new Error(blockedNow)
+
   save({ ...state, teacher, teacherUnlocked: true })
   return teacher
 }
@@ -236,6 +270,12 @@ export function logoutTeacher() {
 
 // Hand the device to a different teacher, or recover from a forgotten
 // passcode. Only from an unlocked device: the signed-in teacher, or the admin.
+//
+// The caller must also clear the teacher-side data stores when no admin
+// remains to guard them (TeacherPage does this) — otherwise the classes and
+// their plaintext PINs would sit on a device that now looks blank. The
+// redemption guard above enforces the same rule independently, so forgetting
+// to clear leaves the device locked rather than open.
 export function forgetTeacher() {
   if (!state.adminUnlocked && !state.teacherUnlocked) {
     throw new Error('Sign in first to remove the teacher from this device.')
