@@ -177,6 +177,19 @@ that needs `navigator.locks`, which would make every store mutation async. On a
 classroom device the trade was not judged worth it; it is written down here
 rather than pretended away.
 
+A seventh round found two more, both smaller in kind — the first with no
+security findings in it. Moving the *merge* inside the commit was not enough
+for anything **cumulative**: `readSeconds + 10` computed from a stale snapshot
+is an absolute number, and writing it over a newer stored value drags the total
+backwards. Progress patches are now functions evaluated inside the commit, so
+reading time, quiz attempts, best score and scroll depth are all derived from
+what is actually stored. Second, combining the student record needed a
+migration: a device on the previous split layout kept its session under the old
+key, so the upgrade would have signed every student out and sent their next
+work to the shared profile. Both `studentSession.js` and `progress.js` now fall
+back to the legacy key — both, because `progress.js` initializes first and
+reads the record independently.
+
 **The honest floor:** whoever physically holds an unlocked device can read
 localStorage with devtools. Everything above raises the cost of the in-app
 paths; none of it defends against that, and no client-only design can.

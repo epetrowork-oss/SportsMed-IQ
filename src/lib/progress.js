@@ -32,10 +32,32 @@ function safeKeyPart(value) {
   return typeof value === 'string' && SAFE_KEY_PART.test(value)
 }
 
-function profileStorageKey() {
+// A device upgrading from the split layout still has its session under the old
+// key, and this module initializes BEFORE studentSession.js can migrate it
+// (that module imports this one), so the fallback has to live here too —
+// otherwise the first write after an upgrade lands in the shared profile
+// instead of the student's own.
+const LEGACY_SESSION_KEY = 'sportmediq:studentSession:v1'
+
+function readSession() {
   try {
     const raw = localStorage.getItem(STUDENT_STORE_KEY)
     const session = raw ? JSON.parse(raw)?.session : null
+    if (session) return session
+  } catch {
+    // fall through to the legacy key
+  }
+  try {
+    const legacy = localStorage.getItem(LEGACY_SESSION_KEY)
+    return legacy ? JSON.parse(legacy) : null
+  } catch {
+    return null
+  }
+}
+
+function profileStorageKey() {
+  try {
+    const session = readSession()
     if (session && safeKeyPart(session.cid) && safeKeyPart(session.sid)) {
       const base = `${BASE_STORAGE_KEY}:${session.cid}:${session.sid}`
       return safeKeyPart(session.pk) ? `${base}:${session.pk}` : base
@@ -191,6 +213,10 @@ function commit(updater) {
   for (let attempt = 0; ; attempt += 1) {
     const before = readRaw()
     const next = updater(load())
+    // An updater may return null to mean "nothing to change" — e.g. a scroll
+    // position that is not deeper than the stored one. Skipping the write
+    // avoids pointless saves and storage events.
+    if (next === null) return state
     if (readRaw() === before || attempt >= COMMIT_ATTEMPTS) {
       save(next)
       return next
@@ -206,21 +232,32 @@ function withMeaningfulActivity(nextState) {
     : { ...nextState, gamification: { ...gamification, activeDates: [...gamification.activeDates, today].sort() } }
 }
 
-function updateUnit(unitId, patch, meaningful = false) {
+// `patchFn` and `meaningfulFn` receive the unit's CURRENT persisted state and
+// run inside the commit. That matters for anything cumulative: computing
+// `readSeconds + 10` from a snapshot this tab read before another tab wrote
+// produces an absolute value that, merged over the newer record, would drag the
+// total backwards. Deriving it here means it is always relative to what is
+// actually stored. Return null from patchFn for "no change".
+function updateUnit(unitId, patchFn, meaningfulFn = () => false) {
   commit((cur) => {
-    const current = cur.units[unitId] ?? emptyUnit()
+    const current = { ...emptyUnit(), ...(cur.units[unitId] ?? {}) }
+    const patch = patchFn(current)
+    if (patch === null) return null
     const next = {
       ...cur,
       units: { ...cur.units, [unitId]: { ...current, ...patch, touchedAt: Date.now() } },
     }
-    return meaningful ? withMeaningfulActivity(next) : next
+    return meaningfulFn(current) ? withMeaningfulActivity(next) : next
   })
 }
 
-function updatePractical(activityId, patch, meaningful = false) {
+// Same contract as updateUnit: derived from the current persisted practical.
+function updatePractical(activityId, patchFn, meaningfulFn = () => false) {
   commit((cur) => {
     const gamification = normalizeGamification(cur.gamification)
-    const current = gamification.practicals[activityId] ?? emptyPractical()
+    const current = { ...emptyPractical(), ...(gamification.practicals[activityId] ?? {}) }
+    const patch = patchFn(current)
+    if (patch === null) return null
     const next = {
       ...cur,
       gamification: {
@@ -231,7 +268,7 @@ function updatePractical(activityId, patch, meaningful = false) {
         },
       },
     }
-    return meaningful ? withMeaningfulActivity(next) : next
+    return meaningfulFn(current) ? withMeaningfulActivity(next) : next
   })
 }
 
@@ -343,72 +380,74 @@ if (typeof window !== 'undefined') {
 // --- mutations ---
 
 export function markLessonRead(unitId) {
-  const current = getUnitProgress(unitId)
-  updateUnit(unitId, { lessonRead: true }, !current.lessonRead)
+  updateUnit(unitId, () => ({ lessonRead: true }), (c) => !c.lessonRead)
 }
 
 export function markFlashcardsReviewed(unitId) {
-  const current = getUnitProgress(unitId)
-  updateUnit(unitId, { flashcardsReviewed: true }, !current.flashcardsReviewed)
+  updateUnit(unitId, () => ({ flashcardsReviewed: true }), (c) => !c.flashcardsReviewed)
 }
 
 // Called periodically by the lesson page while it is open and visible.
 // Deltas are capped by the caller; stored as whole seconds.
 export function addReadingTime(unitId, seconds) {
   if (!(seconds > 0)) return
-  const current = getUnitProgress(unitId)
-  updateUnit(unitId, { readSeconds: Math.round(current.readSeconds + seconds) })
+  updateUnit(unitId, (c) => ({ readSeconds: Math.round(c.readSeconds + seconds) }))
 }
 
 // High-water mark of how far down the lesson the student has scrolled.
 export function recordScrollDepth(unitId, pct) {
   const clamped = Math.min(100, Math.max(0, Math.round(pct)))
-  const current = getUnitProgress(unitId)
-  if (clamped > current.scrollPct) updateUnit(unitId, { scrollPct: clamped })
+  updateUnit(unitId, (c) => (clamped > c.scrollPct ? { scrollPct: clamped } : null))
 }
 
 export function recordQuizResult(unitId, correct, total) {
   const score = total > 0 ? correct / total : 0
-  const current = state.units[unitId] ?? emptyUnit()
-  const previousBest = current.bestQuizScore ?? 0
-  const improvement = current.quizAttempts > 0 ? score - previousBest : 0
   updateUnit(
     unitId,
-    {
-      quizAttempts: current.quizAttempts + 1,
-      bestQuizScore: Math.max(previousBest, score),
-      quizImprovementMax: Math.max(current.quizImprovementMax ?? 0, improvement),
+    (c) => {
+      const previousBest = c.bestQuizScore ?? 0
+      const improvement = c.quizAttempts > 0 ? score - previousBest : 0
+      return {
+        quizAttempts: c.quizAttempts + 1,
+        bestQuizScore: Math.max(previousBest, score),
+        quizImprovementMax: Math.max(c.quizImprovementMax ?? 0, improvement),
+      }
     },
-    true,
+    () => true,
   )
 }
 
 export function savePracticalReflection(activityId, reflection) {
   const text = typeof reflection === 'string' ? reflection.trim().slice(0, 4000) : ''
-  const current = getPracticalProgress(activityId)
   updatePractical(
     activityId,
-    {
+    (c) => ({
       reflection: text,
       reflectionCompleted: text.length > 0,
-      readyForReview: text === current.reflection ? current.readyForReview : false,
-    },
-    text.length > 0 && !current.reflectionCompleted,
+      readyForReview: text === c.reflection ? c.readyForReview : false,
+    }),
+    (c) => text.length > 0 && !c.reflectionCompleted,
   )
 }
 
 export function markPracticalReadyForReview(activityId) {
-  const current = getPracticalProgress(activityId)
-  if (!current.reflectionCompleted) return false
-  updatePractical(activityId, { readyForReview: true }, !current.readyForReview)
+  if (!getPracticalProgress(activityId).reflectionCompleted) return false
+  updatePractical(
+    activityId,
+    (c) => (c.reflectionCompleted ? { readyForReview: true } : null),
+    (c) => !c.readyForReview,
+  )
   return true
 }
 
 // Teacher verification is intentionally not exposed as a student-page action.
 // A future teacher-controlled import can call this after validating its source.
 export function applyTeacherPracticalVerification(activityId, verified = true) {
-  const current = getPracticalProgress(activityId)
-  updatePractical(activityId, { teacherVerified: !!verified }, !!verified && !current.teacherVerified)
+  updatePractical(
+    activityId,
+    () => ({ teacherVerified: !!verified }),
+    (c) => !!verified && !c.teacherVerified,
+  )
 }
 
 export function resetAllProgress() {

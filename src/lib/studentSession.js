@@ -52,16 +52,30 @@ function normalizeSession(parsed) {
   }
 }
 
+// Reads the legacy split key when the combined record has no session — a
+// device upgrading from the previous layout keeps { classes } here and its
+// session there. Without this, the upgrade would sign every student out, send
+// their next work to the shared profile instead of their PIN-bound one, and
+// then delete the only copy of the old session on the next save.
+function loadLegacySession() {
+  try {
+    const raw = localStorage.getItem(LEGACY_SESSION_KEY)
+    return normalizeSession(raw ? JSON.parse(raw) : null)
+  } catch {
+    return null
+  }
+}
+
 function load() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     const parsed = raw ? JSON.parse(raw) : {}
     return {
       classes: Array.isArray(parsed.classes) ? parsed.classes : [],
-      session: normalizeSession(parsed.session),
+      session: normalizeSession(parsed.session) ?? loadLegacySession(),
     }
   } catch {
-    return { classes: [], session: null }
+    return { classes: [], session: loadLegacySession() }
   }
 }
 
