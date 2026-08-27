@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import { useStudentSession, logoutStudent } from '../lib/studentSession.js'
+import { useSignedIn } from './RequireSignIn.jsx'
 
 function useOnlineStatus() {
   const [online, setOnline] = useState(navigator.onLine)
@@ -20,6 +21,10 @@ function useOnlineStatus() {
 export default function Layout() {
   const online = useOnlineStatus()
   const { session } = useStudentSession()
+  // Those links all lead to pages RequireSignIn bounces back to /login, so
+  // showing them before sign-in would just be four ways to reach the same
+  // door. Locked, the header offers the two doors that actually open.
+  const { signedIn } = useSignedIn()
 
   return (
     <div className="app">
@@ -29,11 +34,15 @@ export default function Layout() {
           SportMedIQ
         </NavLink>
         <nav className="app-nav">
-          <NavLink to="/" end>
-            Home
-          </NavLink>
-          <NavLink to="/lessons">Library</NavLink>
-          <NavLink to="/sync">Sync</NavLink>
+          {signedIn && (
+            <>
+              <NavLink to="/" end>
+                Home
+              </NavLink>
+              <NavLink to="/lessons">Library</NavLink>
+              <NavLink to="/sync">Sync</NavLink>
+            </>
+          )}
           <NavLink to="/teacher">Teacher</NavLink>
           {!session && <NavLink to="/login">Log in</NavLink>}
         </nav>

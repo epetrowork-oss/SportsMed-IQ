@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import {
   useStudentSession,
   importClassLoginCode,
@@ -76,7 +76,7 @@ function RemoveClassControl({ cid, onRemove }) {
   )
 }
 
-function PickName({ cls, onRemove }) {
+function PickName({ cls, onRemove, next }) {
   const [sid, setSid] = useState(cls.students[0]?.sid ?? '')
   const [pin, setPin] = useState('')
   const [error, setError] = useState('')
@@ -87,7 +87,9 @@ function PickName({ cls, onRemove }) {
       await loginStudent(cls.cid, sid, pin)
       // If this device still holds work saved under an earlier PIN, stay here
       // so the student can bring it over before moving on.
-      if (!canRecoverPreviousWork()) navigate('/')
+      // Otherwise go where they were headed when the lock sent them here, so
+      // a link to one lesson still opens that lesson.
+      if (!canRecoverPreviousWork()) navigate(next || '/')
     } catch (err) {
       setError(err.message)
     }
@@ -197,7 +199,7 @@ function RecoverPreviousWork() {
   )
 }
 
-function SignedIn({ session, controls }) {
+function SignedIn({ session, controls, next }) {
   const recoverable = canRecoverPreviousWork()
   return (
     <div className="page page-narrow">
@@ -210,8 +212,8 @@ function SignedIn({ session, controls }) {
         <button className="button button-primary" onClick={logoutStudent}>
           Sign out
         </button>
-        <Link className="button" to="/">
-          Home
+        <Link className="button" to={next || '/'}>
+          {next ? 'Continue' : 'Home'}
         </Link>
       </div>
     </div>
@@ -221,8 +223,17 @@ function SignedIn({ session, controls }) {
 export default function StudentLoginPage() {
   const { classes, session, controls } = useStudentSession()
   const [picking, setPicking] = useState(null) // cid of the class the picker is showing, when > 1 class
+  // Set by RequireSignIn when it bounced someone here from a locked page.
+  // Never trust it as a URL to anywhere: only in-app paths are followed, so a
+  // crafted link cannot use the login page as an open redirect.
+  const location = useLocation()
+  const requested = location.state?.from
+  const next =
+    typeof requested === 'string' && requested.startsWith('/') && !requested.startsWith('//')
+      ? requested
+      : ''
 
-  if (session) return <SignedIn session={session} controls={controls} />
+  if (session) return <SignedIn session={session} controls={controls} next={next} />
 
   const activeClasses = classes
   const shownClass =
@@ -233,9 +244,17 @@ export default function StudentLoginPage() {
   return (
     <div className="page page-narrow">
       <h1>Student sign-in</h1>
+      {next && (
+        <p className="import-error" role="status">
+          Sign in to open the lessons.
+        </p>
+      )}
       <p className="field-hint">
         No account, no email — your teacher gave you a login name and PIN, and your progress saves
         on this device (even offline).
+      </p>
+      <p className="field-hint">
+        Teachers: <Link to="/teacher">sign in to the teacher dashboard</Link>.
       </p>
 
       <ImportClassCode onImported={(cid) => setPicking(cid)} />
@@ -256,6 +275,7 @@ export default function StudentLoginPage() {
       {shownClass && (
         <PickName
           cls={shownClass}
+          next={next}
           onRemove={(cid) => {
             removeImportedClass(cid)
             setPicking(null)
