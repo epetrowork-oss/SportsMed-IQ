@@ -284,6 +284,8 @@ export function reloadProgressProfile() {
 // Fold one stored profile into the current one and delete it. Best-of-both
 // rules, identical to a progress-code import, so nothing is lost if both keys
 // hold work.
+// Returns the absorbed profile's own name, if it had one, so the caller can
+// decide whether it should win over whatever the current profile holds.
 function absorbProfile(key) {
   if (key === STORAGE_KEY) return false
   let parsed = null
@@ -320,7 +322,13 @@ function profileHasWork(key) {
       return true
     }
     const game = normalizeGamification(parsed.gamification)
-    return game.activeDates.length > 0 || game.seenBadgeIds.length > 0 || Object.keys(game.practicals).length > 0
+    if (game.activeDates.length > 0 || game.seenBadgeIds.length > 0 || Object.keys(game.practicals).length > 0) {
+      return true
+    }
+    // Imported assignments count too: absorbProfile migrates them, so a
+    // student whose only state is a class code's assignment list must still be
+    // offered recovery after a PIN reset rather than silently losing it.
+    return Array.isArray(parsed.assignments) && parsed.assignments.some((a) => a && typeof a.name === 'string')
   } catch {
     return false
   }
@@ -355,7 +363,23 @@ export function recoverProfileWithPreviousPin(cid, sid, previousPk) {
   const key = `${BASE_STORAGE_KEY}:${cid}:${sid}:${previousPk}`
   if (key === STORAGE_KEY || !siblingProfileKeys(cid, sid).includes(key)) return false
   if (!profileHasWork(key)) return false
+
+  // The name the student chose in the older profile must survive. The new
+  // profile was seeded at login with the teacher's login nickname, and
+  // mergeProgress keeps whatever the current profile already has — so without
+  // this the recovered name would lose to the seed and their progress code
+  // would silently go back to identifying them by the nickname.
+  let previousName = ''
+  try {
+    const raw = localStorage.getItem(key)
+    const parsed = raw ? JSON.parse(raw) : null
+    previousName = typeof parsed?.name === 'string' ? parsed.name.trim() : ''
+  } catch {
+    previousName = ''
+  }
+
   const moved = absorbProfile(key)
+  if (moved && previousName) commit((cur) => ({ ...cur, name: previousName.slice(0, 60) }))
   listeners.forEach((fn) => fn())
   return moved
 }

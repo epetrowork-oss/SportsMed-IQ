@@ -202,6 +202,18 @@ login overwrote the progress-code name, so a student who set their own name on
 the Sync page lost it on next sign-in; the login now seeds that name only when
 the profile has none.
 
+A ninth round found three more single-user bugs, all in the identity plumbing
+rather than the locks. Two students called "Alex" in different classes
+collided: the teacher roster matched by student ID first but still fell back to
+the name, so importing the second Alex's code replaced the first Alex's row and
+progress — the name fallback now applies only to legacy codes, which carry no
+ids to match on. A student whose only state was an imported assignment was
+never offered PIN-reset recovery, because the "has work" test ignored
+assignments that recovery would happily have migrated. And a student's chosen
+name still lost to the teacher's nickname *through recovery*, because the new
+profile is seeded at login and the merge keeps whatever the destination already
+has; recovery now adopts the recovered profile's name.
+
 **The honest floor:** whoever physically holds an unlocked device can read
 localStorage with devtools. Everything above raises the cost of the in-app
 paths; none of it defends against that, and no client-only design can.

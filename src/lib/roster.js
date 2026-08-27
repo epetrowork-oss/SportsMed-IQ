@@ -90,9 +90,14 @@ export async function addStudentFromCode(code) {
   // this tab's whole array back would erase them.
   let student = null
   commit((cur) => {
-    const existing =
-      (sid && cur.students.find((s) => s.sid === sid && (!cid || !s.cid || s.cid === cid))) ??
-      cur.students.find((s) => s.name.toLowerCase() === name.toLowerCase())
+    // Match by student ID when the code carries one, and DO NOT fall back to
+    // the name in that case: two students called "Alex" in different classes
+    // are different people, and matching them by name would make the second
+    // import overwrite the first one's row and progress. The name fallback
+    // exists only for legacy codes, which have no ids to match on.
+    const existing = sid
+      ? cur.students.find((s) => s.sid === sid && (!cid || !s.cid || s.cid === cid))
+      : cur.students.find((s) => s.name.toLowerCase() === name.toLowerCase() && !s.sid)
     student = {
       id: existing?.id ?? `stu-${Date.now().toString(36)}`,
       name,
