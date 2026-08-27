@@ -1,3 +1,5 @@
+import { qrSvgMarkup } from './qr.js'
+
 function escapeHtml(value) {
   return String(value ?? '')
     .replaceAll('&', '&amp;')
@@ -35,6 +37,8 @@ function printStyles() {
     p { margin: 0 0 0.12in; }
     li { margin-bottom: 0.05in; }
     section, .callout, .activity-block { break-inside: avoid; }
+    .qr-sheet { text-align: center; margin: 0.25in 0; }
+    .join-url { font-family: 'Courier New', monospace; font-size: 8pt; word-break: break-all; color: #333; }
     .student-lines { display: flex; flex-wrap: wrap; gap: 0.18in 0.35in; margin: 0.15in 0 0.25in; font-weight: 600; }
     .summary { color: #333; margin-bottom: 0.2in; }
     .callout { border: 1px solid #555; padding: 0.12in; margin: 0.12in 0; }
@@ -159,4 +163,27 @@ export function printPracticalPacket(unit, activities = []) {
       ${activities.map((activity, index) => renderActivity(activity, index > 0)).join('')}
     </main>`
   return openPrintDocument(`${unit.title} — practical activities`, body)
+}
+
+// A one-page sheet a teacher can print and pin up (or hand to a student who
+// missed the link): the QR big enough to scan from a desk, the link written
+// out underneath for anyone typing it, and the three steps that follow.
+// Deliberately carries no PINs — those go home on the credential slips, one
+// student at a time, not on a poster.
+export function printClassJoinSheet(cls, joinUrl) {
+  const qr = qrSvgMarkup(joinUrl, { size: 600, minEc: 'M', label: `Join ${cls.name}` })
+  const body = `
+    <h1>Join ${escapeHtml(cls.name)}</h1>
+    <p class="summary">SportMedIQ — scan the code, then sign in with the login name and PIN your teacher gave you.</p>
+    <div class="qr-sheet">${qr || '<p><strong>This class code is too large for a QR code — use the link below.</strong></p>'}</div>
+    <h2>Or open this link</h2>
+    <p class="join-url">${escapeHtml(joinUrl)}</p>
+    <h2>Then</h2>
+    <ol>
+      <li>Pick your name from the class list.</li>
+      <li>Type your PIN — it looks like MAPLE42.</li>
+      <li>Start with the lessons your teacher has opened.</li>
+    </ol>
+    <p class="summary">Your work saves on the device you sign in on, and keeps working with the wi-fi off.</p>`
+  return openPrintDocument(`Join ${cls.name}`, body)
 }

@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useEffect, useRef, useState } from 'react'
+import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
+import { JOIN_PARAM } from '../lib/classes.js'
 import {
   useStudentSession,
   importClassLoginCode,
@@ -199,11 +200,18 @@ function RecoverPreviousWork() {
   )
 }
 
-function SignedIn({ session, controls, next }) {
+function SignedIn({ session, controls, next, joined }) {
   const recoverable = canRecoverPreviousWork()
   return (
     <div className="page page-narrow">
       <h1>Student sign-in</h1>
+      {joined && (
+        <p className={joined.ok ? 'import-ok' : 'import-error'} role="status">
+          {joined.ok
+            ? `${joined.message} Sign out first if you're switching to that class.`
+            : joined.message}
+        </p>
+      )}
       <p>
         You're signed in as <strong>{session.name}</strong> ({session.sid}) — {controls?.className}
       </p>
@@ -220,9 +228,48 @@ function SignedIn({ session, controls, next }) {
   )
 }
 
+// A join link (or a scanned QR) arrives as ?c=<class login code>. Importing
+// it here is what saves a student from pasting 1,500 characters.
+function useJoinLink(onImported) {
+  const [params, setParams] = useSearchParams()
+  const [result, setResult] = useState(null) // { ok, message }
+  const code = params.get(JOIN_PARAM)
+  // The import is async and StrictMode runs effects twice in development;
+  // without this the same code is imported twice and the second run reports
+  // over the first.
+  const handled = useRef('')
+
+  useEffect(() => {
+    if (!code || handled.current === code) return
+    handled.current = code
+    let cancelled = false
+    ;(async () => {
+      try {
+        const cls = await importClassLoginCode(code)
+        if (cancelled) return
+        setResult({ ok: true, message: `${cls.name} added — now pick your name and type your PIN.` })
+        onImported?.(cls.cid)
+      } catch (err) {
+        if (!cancelled) setResult({ ok: false, message: err.message })
+      } finally {
+        // Drop the code from the address bar either way: it is long, it is
+        // not a secret worth leaving in history, and a reload should not
+        // replay the import.
+        if (!cancelled) setParams({}, { replace: true })
+      }
+    })()
+    return () => {
+      cancelled = true
+    }
+  }, [code, onImported, setParams])
+
+  return result
+}
+
 export default function StudentLoginPage() {
   const { classes, session, controls } = useStudentSession()
   const [picking, setPicking] = useState(null) // cid of the class the picker is showing, when > 1 class
+  const joined = useJoinLink(setPicking)
   // Set by RequireSignIn when it bounced someone here from a locked page.
   // Never trust it as a URL to anywhere: only in-app paths are followed, so a
   // crafted link cannot use the login page as an open redirect.
@@ -233,7 +280,7 @@ export default function StudentLoginPage() {
       ? requested
       : ''
 
-  if (session) return <SignedIn session={session} controls={controls} next={next} />
+  if (session) return <SignedIn session={session} controls={controls} next={next} joined={joined} />
 
   const activeClasses = classes
   const shownClass =
@@ -247,6 +294,11 @@ export default function StudentLoginPage() {
       {next && (
         <p className="import-error" role="status">
           Sign in to open the lessons.
+        </p>
+      )}
+      {joined && (
+        <p className={joined.ok ? 'import-ok' : 'import-error'} role="status">
+          {joined.message}
         </p>
       )}
       <p className="field-hint">
