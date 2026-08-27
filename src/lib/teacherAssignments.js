@@ -36,10 +36,34 @@ function save(next) {
 // a write another tab can complete a change this tab has not seen yet
 // (`storage` events are asynchronous), and spreading the old snapshot would
 // silently revert it. The updater may throw to abort.
+const COMMIT_ATTEMPTS = 5
+
+function readRaw() {
+  try {
+    return localStorage.getItem(STORAGE_KEY)
+  } catch {
+    return null
+  }
+}
+
 function commit(updater) {
-  const next = updater(load())
-  save(next)
-  return next
+  // Web Storage serializes each operation but not this read-modify-write pair,
+  // so two tabs can both read before either writes and the later save would
+  // drop the earlier one. There is no compare-and-set for localStorage; the
+  // next best thing is to check that nothing landed between our read and our
+  // write, and redo the update against the newer state if it did. That turns
+  // the common interleaving into a retry instead of silent data loss. A truly
+  // simultaneous write still resolves last-writer-wins — closing that needs
+  // navigator.locks, which would make every mutation async; documented in
+  // docs/ACCOUNTS.md rather than pretended away.
+  for (let attempt = 0; ; attempt += 1) {
+    const before = readRaw()
+    const next = updater(load())
+    if (readRaw() === before || attempt >= COMMIT_ATTEMPTS) {
+      save(next)
+      return next
+    }
+  }
 }
 
 // Encodes {name, unitIds, mode, due?} into a class code (letting

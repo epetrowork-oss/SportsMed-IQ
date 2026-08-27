@@ -402,12 +402,17 @@ function SignedInBanner({ auth }) {
 
   function release() {
     try {
+      // Release FIRST: it re-checks authorization against persisted state and
+      // throws if this tab was signed out elsewhere, so an unauthorized tab
+      // can never reach the wipe below. Between the two, the device holds
+      // class data with no teacher record — redemption refuses in exactly that
+      // state, so the gap is locked rather than open.
+      forgetTeacher()
       if (wipesData) {
         clearAllClasses()
         clearRoster()
         clearTeacherAssignments()
       }
-      forgetTeacher()
       setConfirmRelease(false)
       setReleaseError('')
     } catch (err) {

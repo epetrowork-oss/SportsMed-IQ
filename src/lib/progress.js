@@ -11,7 +11,9 @@ const BASE_STORAGE_KEY = 'sportmediq:progress:v1'
 // student is logged in, their progress lives under a per-student key so
 // classmates sharing one device never see each other's progress. With no
 // session the legacy key is used, so self-study devices are unaffected.
-const SESSION_KEY = 'sportmediq:studentSession:v1'
+// studentSession.js keeps the active session inside its own single record
+// (one atomic write covering classes + session), so read it from there.
+const STUDENT_STORE_KEY = 'sportmediq:studentClasses:v1'
 export const PASS_THRESHOLD = 0.7 // quiz score needed to count as passed
 
 // The key also mixes in `pk` — material studentSession.js derives from the
@@ -32,8 +34,8 @@ function safeKeyPart(value) {
 
 function profileStorageKey() {
   try {
-    const raw = localStorage.getItem(SESSION_KEY)
-    const session = raw ? JSON.parse(raw) : null
+    const raw = localStorage.getItem(STUDENT_STORE_KEY)
+    const session = raw ? JSON.parse(raw)?.session : null
     if (session && safeKeyPart(session.cid) && safeKeyPart(session.sid)) {
       const base = `${BASE_STORAGE_KEY}:${session.cid}:${session.sid}`
       return safeKeyPart(session.pk) ? `${base}:${session.pk}` : base
@@ -159,6 +161,43 @@ function save(next) {
   listeners.forEach((fn) => fn())
 }
 
+// Progress writes go through this for the same reason every other store does.
+// Being synchronous within one tab does NOT serialize tabs: a `storage` event
+// only arrives *after* the other tab's write, so until then this tab holds a
+// stale snapshot — and saving the whole profile from it drops whatever the
+// other tab just recorded (one tab logs a quiz result, the other reading time,
+// and the second write erases the first). Re-reading the persisted profile at
+// write time keeps both.
+const COMMIT_ATTEMPTS = 5
+
+function readRaw() {
+  try {
+    return localStorage.getItem(STORAGE_KEY)
+  } catch {
+    return null
+  }
+}
+
+function commit(updater) {
+  // Web Storage serializes each operation but not this read-modify-write pair,
+  // so two tabs can both read before either writes and the later save would
+  // drop the earlier one. There is no compare-and-set for localStorage; the
+  // next best thing is to check that nothing landed between our read and our
+  // write, and redo the update against the newer state if it did. That turns
+  // the common interleaving into a retry instead of silent data loss. A truly
+  // simultaneous write still resolves last-writer-wins — closing that needs
+  // navigator.locks, which would make every mutation async; documented in
+  // docs/ACCOUNTS.md rather than pretended away.
+  for (let attempt = 0; ; attempt += 1) {
+    const before = readRaw()
+    const next = updater(load())
+    if (readRaw() === before || attempt >= COMMIT_ATTEMPTS) {
+      save(next)
+      return next
+    }
+  }
+}
+
 function withMeaningfulActivity(nextState) {
   const gamification = normalizeGamification(nextState.gamification)
   const today = localDateKey()
@@ -168,31 +207,35 @@ function withMeaningfulActivity(nextState) {
 }
 
 function updateUnit(unitId, patch, meaningful = false) {
-  const current = state.units[unitId] ?? emptyUnit()
-  const next = {
-    ...state,
-    units: { ...state.units, [unitId]: { ...current, ...patch, touchedAt: Date.now() } },
-  }
-  save(meaningful ? withMeaningfulActivity(next) : next)
+  commit((cur) => {
+    const current = cur.units[unitId] ?? emptyUnit()
+    const next = {
+      ...cur,
+      units: { ...cur.units, [unitId]: { ...current, ...patch, touchedAt: Date.now() } },
+    }
+    return meaningful ? withMeaningfulActivity(next) : next
+  })
 }
 
 function updatePractical(activityId, patch, meaningful = false) {
-  const gamification = normalizeGamification(state.gamification)
-  const current = gamification.practicals[activityId] ?? emptyPractical()
-  const next = {
-    ...state,
-    gamification: {
-      ...gamification,
-      practicals: {
-        ...gamification.practicals,
-        [activityId]: { ...current, ...patch, updatedAt: Date.now() },
+  commit((cur) => {
+    const gamification = normalizeGamification(cur.gamification)
+    const current = gamification.practicals[activityId] ?? emptyPractical()
+    const next = {
+      ...cur,
+      gamification: {
+        ...gamification,
+        practicals: {
+          ...gamification.practicals,
+          [activityId]: { ...current, ...patch, updatedAt: Date.now() },
+        },
       },
-    },
-  }
-  save(meaningful ? withMeaningfulActivity(next) : next)
+    }
+    return meaningful ? withMeaningfulActivity(next) : next
+  })
 }
 
-// Called by studentSession.js after a login/logout changes SESSION_KEY:
+// Called by studentSession.js after a login/logout changes the session:
 // re-derive the storage key, load that profile's state, and re-render
 // everything subscribed to this store.
 export function reloadProgressProfile() {
@@ -287,7 +330,7 @@ export function recoverProfileWithPreviousPin(cid, sid, previousPk) {
 // to their logins and logouts; event.key === null means localStorage.clear().
 if (typeof window !== 'undefined') {
   window.addEventListener('storage', (event) => {
-    if (event.key === null || event.key === SESSION_KEY) {
+    if (event.key === null || event.key === STUDENT_STORE_KEY) {
       reloadProgressProfile()
     } else if (event.key === STORAGE_KEY) {
       // Same student, second tab: pick up their newly written progress.
@@ -369,17 +412,24 @@ export function applyTeacherPracticalVerification(activityId, verified = true) {
 }
 
 export function resetAllProgress() {
-  save({ ...state, units: {}, gamification: emptyGamification() })
+  commit((cur) => ({ ...cur, units: {}, gamification: emptyGamification() }))
 }
 
 export function setStudentName(name) {
-  save({ ...state, name: name.trim().slice(0, 60) })
+  commit((cur) => ({ ...cur, name: name.trim().slice(0, 60) }))
 }
 
 export function markBadgesSeen(badgeIds) {
-  const gamification = normalizeGamification(state.gamification)
-  const seenBadgeIds = [...new Set([...gamification.seenBadgeIds, ...(badgeIds ?? [])])]
-  save({ ...state, gamification: { ...gamification, seenBadgeIds } })
+  commit((cur) => {
+    const gamification = normalizeGamification(cur.gamification)
+    return {
+      ...cur,
+      gamification: {
+        ...gamification,
+        seenBadgeIds: [...new Set([...gamification.seenBadgeIds, ...(badgeIds ?? [])])],
+      },
+    }
+  })
 }
 
 function mergePractical(currentValue, importedValue) {
@@ -399,7 +449,8 @@ function mergePractical(currentValue, importedValue) {
 // both for every unit (booleans OR, scores/attempts max). Used when a student
 // loads their code on a second device that may already have some progress.
 export function mergeProgress(name, importedUnits, importedGamification = null) {
-  const merged = { ...state.units }
+  commit((cur) => {
+  const merged = { ...cur.units }
   for (const [unitId, imp] of Object.entries(importedUnits)) {
     const cur = merged[unitId] ?? emptyUnit()
     merged[unitId] = {
@@ -420,7 +471,7 @@ export function mergeProgress(name, importedUnits, importedGamification = null) 
     }
   }
 
-  const currentGame = normalizeGamification(state.gamification)
+  const currentGame = normalizeGamification(cur.gamification)
   const importedGame = normalizeGamification(importedGamification)
   const practicals = { ...currentGame.practicals }
   for (const [activityId, importedPractical] of Object.entries(importedGame.practicals)) {
@@ -431,7 +482,8 @@ export function mergeProgress(name, importedUnits, importedGamification = null) 
     practicals,
     seenBadgeIds: [...new Set([...currentGame.seenBadgeIds, ...importedGame.seenBadgeIds])],
   }
-  save({ ...state, name: state.name || name, units: merged, gamification })
+    return { ...cur, name: cur.name || name, units: merged, gamification }
+  })
 }
 
 // --- assignments (teacher-issued class codes, imported on this device) ---
@@ -441,19 +493,21 @@ export function mergeProgress(name, importedUnits, importedGamification = null) 
 // adding a duplicate.
 export function importAssignment(assignment) {
   const key = assignment.name.trim().toLowerCase()
-  const existingIndex = state.assignments.findIndex((a) => a.name.trim().toLowerCase() === key)
-  const assignments = [...state.assignments]
-  if (existingIndex >= 0) {
-    assignments[existingIndex] = assignment
-  } else {
-    assignments.push(assignment)
-  }
-  save({ ...state, assignments })
+  commit((cur) => {
+    const existingIndex = cur.assignments.findIndex((a) => a.name.trim().toLowerCase() === key)
+    const assignments = [...cur.assignments]
+    if (existingIndex >= 0) assignments[existingIndex] = assignment
+    else assignments.push(assignment)
+    return { ...cur, assignments }
+  })
 }
 
 export function removeAssignment(name) {
   const key = name.trim().toLowerCase()
-  save({ ...state, assignments: state.assignments.filter((a) => a.name.trim().toLowerCase() !== key) })
+  commit((cur) => ({
+    ...cur,
+    assignments: cur.assignments.filter((a) => a.name.trim().toLowerCase() !== key),
+  }))
 }
 
 // --- reads ---

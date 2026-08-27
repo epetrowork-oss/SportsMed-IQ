@@ -156,6 +156,27 @@ superseded roster, class imports erasing a concurrent one, and roster and
 assignment upserts discarding another tab's entry — and it is the rule any new
 store code must follow.
 
+A sixth round finished the job the fifth started. **Release device** checked
+its authorization against a module snapshot and the caller wiped the class data
+*before* releasing, so a tab signed out elsewhere could erase everything — the
+check moved inside the commit and the wipe now runs only after the release
+succeeds. The student store wrote **two keys**, which another tab's write could
+interleave between (and if the second write threw, the UI could name one
+student while loading another's progress); classes and session are now one
+record, so the write is atomic. And `progress.js` — which the previous round
+left alone on the reasoning that its writes are synchronous — turned out to
+have the same flaw, because being synchronous within a tab does not serialize
+*across* tabs: one tab recording a quiz result and another recording reading
+time would lose one of them. It now commits against the persisted profile too.
+
+What remains, and is not fixable with localStorage: `commit` re-reads before
+writing and redoes the update if anything landed in between, which turns the
+common interleaving into a retry — but Web Storage has no compare-and-set, so
+two writes landing in the same instant still resolve last-writer-wins. Closing
+that needs `navigator.locks`, which would make every store mutation async. On a
+classroom device the trade was not judged worth it; it is written down here
+rather than pretended away.
+
 **The honest floor:** whoever physically holds an unlocked device can read
 localStorage with devtools. Everything above raises the cost of the in-app
 paths; none of it defends against that, and no client-only design can.

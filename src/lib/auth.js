@@ -112,10 +112,34 @@ function save(next) {
 // have completed a change that this tab has not seen — and spreading the old
 // snapshot silently reverts it. Re-reading inside the write closes that for
 // every call site at once. The updater may throw to abort.
+const COMMIT_ATTEMPTS = 5
+
+function readRaw() {
+  try {
+    return localStorage.getItem(STORAGE_KEY)
+  } catch {
+    return null
+  }
+}
+
 function commit(updater) {
-  const next = updater(load())
-  save(next)
-  return next
+  // Web Storage serializes each operation but not this read-modify-write pair,
+  // so two tabs can both read before either writes and the later save would
+  // drop the earlier one. There is no compare-and-set for localStorage; the
+  // next best thing is to check that nothing landed between our read and our
+  // write, and redo the update against the newer state if it did. That turns
+  // the common interleaving into a retry instead of silent data loss. A truly
+  // simultaneous write still resolves last-writer-wins — closing that needs
+  // navigator.locks, which would make every mutation async; documented in
+  // docs/ACCOUNTS.md rather than pretended away.
+  for (let attempt = 0; ; attempt += 1) {
+    const before = readRaw()
+    const next = updater(load())
+    if (readRaw() === before || attempt >= COMMIT_ATTEMPTS) {
+      save(next)
+      return next
+    }
+  }
 }
 
 // --- admin ---
@@ -342,10 +366,17 @@ export function logoutTeacher() {
 // redemption guard above enforces the same rule independently, so forgetting
 // to clear leaves the device locked rather than open.
 export function forgetTeacher() {
-  if (!state.adminUnlocked && !state.teacherUnlocked) {
-    throw new Error('Sign in first to remove the teacher from this device.')
-  }
-  commit((cur) => ({ ...cur, teacher: null, teacherUnlocked: false }))
+  // Authorization is checked against freshly-read state INSIDE the commit. A
+  // tab signed out in another tab may not have had its storage event delivered
+  // yet, and its stale snapshot would otherwise still read as unlocked — which
+  // matters more here than anywhere else, because the caller wipes the class
+  // data once this succeeds. Throwing here means the wipe never runs.
+  commit((cur) => {
+    if (!cur.adminUnlocked && !cur.teacherUnlocked) {
+      throw new Error('Sign in first to remove the teacher from this device.')
+    }
+    return { ...cur, teacher: null, teacherUnlocked: false }
+  })
 }
 
 // Sign-out must reach every tab. Without this a second Teacher tab keeps its

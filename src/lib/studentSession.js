@@ -20,18 +20,23 @@ import {
   useProgress,
 } from './progress.js'
 
+// ONE record holds both the imported classes and the active session.
+// They used to be two keys, which meant a write was two storage operations:
+// another tab's commit could interleave between them (persisting student B's
+// login, then having this tab restore student A's session), and if the second
+// operation threw, module state and storage disagreed — with
+// reloadProgressProfile then following the persisted session, the UI could
+// name one student while loading another's progress. A single record makes the
+// write atomic. progress.js reads `.session` out of this same key (it must not
+// import this module, which imports it).
 const STORAGE_KEY = 'sportmediq:studentClasses:v1'
-// The active session lives in its own key because progress.js reads it
-// directly at load time to pick the progress profile (see progress.js —
-// it must not import this module).
-export const SESSION_KEY = 'sportmediq:studentSession:v1'
+// Retained only so the pre-combination key gets cleaned up once.
+const LEGACY_SESSION_KEY = 'sportmediq:studentSession:v1'
 
 const OTHER_PREFIXES = ['SMIQ2.', 'SMIQ1.', 'SMIQA1.', 'SMIQT1.']
 
-function loadSession() {
+function normalizeSession(parsed) {
   try {
-    const raw = localStorage.getItem(SESSION_KEY)
-    const parsed = raw ? JSON.parse(raw) : null
     if (parsed && typeof parsed.cid === 'string' && typeof parsed.sid === 'string') {
       return {
         cid: parsed.cid,
@@ -53,10 +58,10 @@ function load() {
     const parsed = raw ? JSON.parse(raw) : {}
     return {
       classes: Array.isArray(parsed.classes) ? parsed.classes : [],
-      session: loadSession(),
+      session: normalizeSession(parsed.session),
     }
   } catch {
-    return { classes: [], session: loadSession() }
+    return { classes: [], session: null }
   }
 }
 
@@ -66,9 +71,12 @@ const listeners = new Set()
 function save(next) {
   state = next
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({ classes: state.classes }))
-    if (state.session) localStorage.setItem(SESSION_KEY, JSON.stringify(state.session))
-    else localStorage.removeItem(SESSION_KEY)
+    // Single write: classes and session land together or not at all.
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({ classes: state.classes, session: state.session }),
+    )
+    localStorage.removeItem(LEGACY_SESSION_KEY)
   } catch {
     // Storage full or blocked — keep working in memory.
   }
@@ -81,10 +89,34 @@ function save(next) {
 // (classes + session), so a stale write here can erase a class another tab
 // imported or log out a student who just signed in there. The updater may
 // throw to abort.
+const COMMIT_ATTEMPTS = 5
+
+function readRaw() {
+  try {
+    return localStorage.getItem(STORAGE_KEY)
+  } catch {
+    return null
+  }
+}
+
 function commit(updater) {
-  const next = updater(load())
-  save(next)
-  return next
+  // Web Storage serializes each operation but not this read-modify-write pair,
+  // so two tabs can both read before either writes and the later save would
+  // drop the earlier one. There is no compare-and-set for localStorage; the
+  // next best thing is to check that nothing landed between our read and our
+  // write, and redo the update against the newer state if it did. That turns
+  // the common interleaving into a retry instead of silent data loss. A truly
+  // simultaneous write still resolves last-writer-wins — closing that needs
+  // navigator.locks, which would make every mutation async; documented in
+  // docs/ACCOUNTS.md rather than pretended away.
+  for (let attempt = 0; ; attempt += 1) {
+    const before = readRaw()
+    const next = updater(load())
+    if (readRaw() === before || attempt >= COMMIT_ATTEMPTS) {
+      save(next)
+      return next
+    }
+  }
 }
 
 function normalizeSettings(value) {
@@ -306,7 +338,7 @@ export function isUnitVisible(unitId, controls = getClassControls()) {
 // show one student's name over another's progress.
 if (typeof window !== 'undefined') {
   window.addEventListener('storage', (event) => {
-    if (event.key === null || event.key === STORAGE_KEY || event.key === SESSION_KEY) {
+    if (event.key === null || event.key === STORAGE_KEY) {
       state = load()
       listeners.forEach((fn) => fn())
     }
