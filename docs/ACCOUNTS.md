@@ -12,7 +12,9 @@ chooses to share.
 ```
 Admin (program owner's device)
   └─ issues → Teacher access code  SMIQT1.…   (one per teacher)
-                └─ unlocks the Teacher tab on the teacher's device
+                └─ redeemed ONCE on the teacher's device, where the
+                   teacher sets a device passcode; every later unlock
+                   uses that passcode, never the code
                    Teacher creates classes there:
                      class = name + students + content controls
                      each student = login name (teacher-chosen) + ID (P3-01)
@@ -31,7 +33,7 @@ Admin (program owner's device)
   full name, nothing personal is required or stored anywhere.
 - **Per-student progress on shared devices:** logging in switches
   `progress.js` to a per-student storage profile
-  (`sportmediq:progress:v1:<cid>:<sid>`), so classmates on one Chromebook
+  (`sportmediq:progress:v1:<cid>:<sid>:<pk>`), so classmates on one Chromebook
   never see each other's work. No login → the legacy profile, so self-study
   devices behave exactly as before.
 - **Progress codes now carry the student ID** (optional `sid`/`cid` fields
@@ -78,28 +80,48 @@ the code says so where it matters:
 - Teacher access codes prove possession, not identity — with no server,
   revocation is bookkeeping on the admin device only.
 
-### Two limits that are inherent to having no server
+### Code forgery: what is closed, and what is not
 
-Both were raised in review (PR #63) and are real. Neither is fixable by
-better client-side code alone, because every secret a student device could
-check against is already on that student's device:
+Review (PR #63) found both code formats were shape-validated but unauthenticated.
+Neither can be made unforgeable without a server — nothing here signs anything —
+so both are handled by making a forged code *useless* rather than impossible:
 
-1. **Teacher access codes are unforgeable only by convention.** Redemption
-   validates the code's shape, not its issuer, so someone who knows the
-   format can hand-build a `SMIQT1.` code and unlock the Teacher tab on a
-   device that has teacher data on it. Closing this needs either a
-   credential the student can't reproduce (e.g. the teacher also setting a
-   passcode on their device at first redemption, so later unlocks need it)
-   or a server to sign codes.
-2. **Class login codes can be edited and re-imported.** A student can decode
-   `SMIQC1.`, change the settings or substitute a PIN hash for one they
-   chose, re-encode, and import it — lifting their own content restrictions,
-   or logging into a classmate's progress profile on a shared device. Same
-   root cause: offline verification means the verifier travels with the data.
+1. **Teacher access codes.** The code says who a teacher is; it is not a
+   secret. It is redeemed **once**, on a device with nothing on it yet, and the
+   teacher sets a device passcode at that moment. Every later unlock needs the
+   passcode, and a device that already holds a teacher record or an admin
+   passcode **refuses redemption outright** while locked. So a hand-built
+   `SMIQT1.` code opens nothing that matters: on a provisioned device it is
+   rejected, and on a blank device it yields an empty dashboard. Handing a
+   device to another teacher, or recovering a forgotten passcode, goes through
+   *Release device* — available only to a signed-in teacher or the admin.
+2. **Class login codes.** These can still be decoded, edited and re-imported;
+   that part is unavoidable. What it no longer buys is impersonation. A
+   student's progress profile is keyed partly by material derived from their
+   PIN at login (`progress:v1:<cid>:<sid>:<pk>`), so substituting a verifier of
+   your own choosing signs you in against an **empty** profile rather than your
+   classmate's. Reaching the real one needs the real PIN, which is the
+   ~10-minute-per-student PBKDF2 problem above.
+   Lifting the *content controls* by editing a code is still possible — but
+   that was never a security boundary anyway: signing out shows the whole
+   library by design, so the controls are classroom management, not a lock.
 
-Treat the content controls as classroom management (they shape what a
-cooperating student sees), not as a security boundary against a determined
-student.
+**The honest floor:** whoever physically holds an unlocked device can read
+localStorage with devtools. Everything above raises the cost of the in-app
+paths; none of it defends against that, and no client-only design can.
+
+### Moving progress when a PIN changes
+
+Resetting a student's PIN changes their profile key, so their work would be
+stranded. Recovery is deliberately *not* automatic — silently adopting any
+profile filed under the same student ID would hand it to exactly the forger
+case 2 describes. Instead, the sign-in page notices work saved under an older
+key and asks the student to type **their previous PIN**, which only they know;
+that reproduces the old key and merges the work across (best-of-both rules,
+same as a progress-code import), then deletes the old entry. Per-student salts
+are permanent for this reason — a salt regenerated on every code build would
+make the old key unreproducible. Profiles holding no actual work are ignored,
+so an abandoned login never triggers a prompt the student cannot satisfy.
 
 ## Office-suite exports (`src/lib/exports.js`)
 
@@ -122,11 +144,11 @@ matching table — the export is shaped so that takes no hand-reshaping.
 
 | Key | Device | Contents |
 |---|---|---|
-| `sportmediq:auth:v1` | admin/teacher | salted admin passcode hash, admin-unlocked flag, redeemed teacher identity, issued-codes list |
-| `sportmediq:classes:v1` | teacher | classes with rosters (plain PINs), settings, last generated code |
+| `sportmediq:auth:v1` | admin/teacher | admin passcode verifier, teacher identity + device-passcode verifier, per-role unlocked flags, issued-codes list |
+| `sportmediq:classes:v1` | teacher | classes with rosters (plain PINs + permanent per-student salts), settings, last generated code |
 | `sportmediq:studentClasses:v1` | student | imported class-code payloads (hashed PINs) |
-| `sportmediq:studentSession:v1` | student | active `{cid, sid, name}` — read directly by `progress.js` to pick the progress profile |
-| `sportmediq:progress:v1:<cid>:<sid>` | student | per-student progress profile |
+| `sportmediq:studentSession:v1` | student | active `{cid, sid, name, pk}` — `pk` is PIN-derived; `progress.js` reads this to pick the profile |
+| `sportmediq:progress:v1:<cid>:<sid>:<pk>` | student | per-student progress profile, keyed partly by the PIN |
 
 Code prefixes now in the family: `SMIQ1`/`SMIQ2` progress, `SMIQA1`
 assignment, `SMIQT1` teacher access, `SMIQC1` class login. Every decoder

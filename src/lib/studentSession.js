@@ -12,7 +12,14 @@
 import { useSyncExternalStore } from 'react'
 import { fromBase64UrlBytes, inflate } from './share.js'
 import { CLASS_CODE_PREFIX, hashPin } from './classes.js'
-import { reloadProgressProfile, setStudentName, useProgress } from './progress.js'
+import {
+  adoptLegacyProfile,
+  hasRecoverableProfile,
+  recoverProfileWithPreviousPin,
+  reloadProgressProfile,
+  setStudentName,
+  useProgress,
+} from './progress.js'
 
 const STORAGE_KEY = 'sportmediq:studentClasses:v1'
 // The active session lives in its own key because progress.js reads it
@@ -27,7 +34,13 @@ function loadSession() {
     const raw = localStorage.getItem(SESSION_KEY)
     const parsed = raw ? JSON.parse(raw) : null
     if (parsed && typeof parsed.cid === 'string' && typeof parsed.sid === 'string') {
-      return { cid: parsed.cid, sid: parsed.sid, name: typeof parsed.name === 'string' ? parsed.name : '' }
+      return {
+        cid: parsed.cid,
+        sid: parsed.sid,
+        name: typeof parsed.name === 'string' ? parsed.name : '',
+        // Profile-key material derived from the PIN at login (see loginStudent).
+        pk: typeof parsed.pk === 'string' ? parsed.pk : '',
+      }
     }
     return null
   } catch {
@@ -158,12 +171,43 @@ export async function loginStudent(cid, sid, pin) {
   if (hash !== student.hash) {
     throw new Error("That PIN doesn't match — check the slip your teacher gave you.")
   }
-  save({ ...state, session: { cid, sid, name: student.name } })
-  reloadProgressProfile()
+  // The verifier doubles as profile-key material: it is reproducible only by
+  // someone who knows this student's actual PIN, so a doctored class code
+  // carrying a substituted verifier opens a different, empty profile rather
+  // than the real student's.
+  save({ ...state, session: { cid, sid, name: student.name, pk: hash.slice(0, 16) } })
+  adoptLegacyProfile(cid, sid)
   // First login on this profile: pre-fill the progress-code name with the
   // teacher-chosen login name so exported codes identify the student.
   setStudentName(student.name)
   return student
+}
+
+// After a teacher resets a PIN the student's old work sits under the key their
+// previous PIN produced. Typing that PIN reproduces the key — nobody else can,
+// which is why recovery asks for it instead of adopting the profile silently.
+// Returns true when work was moved over.
+export async function recoverPreviousWork(previousPin) {
+  const session = state.session
+  if (!session) throw new Error('Sign in first.')
+  const cls = state.classes.find((c) => c.cid === session.cid)
+  const student = cls?.students.find((s) => s.sid === session.sid)
+  if (!student) throw new Error('That class is no longer on this device.')
+  if (!(previousPin ?? '').trim()) throw new Error('Type the PIN you used before.')
+  const previousPk = (await hashPin(student.salt, previousPin)).slice(0, 16)
+  const moved = recoverProfileWithPreviousPin(session.cid, session.sid, previousPk)
+  if (!moved) {
+    throw new Error("That PIN doesn't match any earlier work saved on this device.")
+  }
+  return moved
+}
+
+// True when this device holds work for the signed-in student under a different
+// PIN key — i.e. their PIN was reset and their old progress is recoverable.
+export function canRecoverPreviousWork() {
+  const session = state.session
+  if (!session) return false
+  return hasRecoverableProfile(session.cid, session.sid)
 }
 
 export function logoutStudent() {

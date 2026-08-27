@@ -10,8 +10,12 @@
 //
 // Teacher access codes: "SMIQT1." + base64url(deflate-raw(UTF-8 JSON)),
 // payload { v: 1, tid, name, at }. Same plumbing as every other code format
-// (share.js). Redeeming one on a device unlocks the Teacher tab there and
-// records who the teacher is.
+// (share.js). The code says *who* a teacher is; it is not a secret and it is
+// not signed (no server to sign it), so it alone must never unlock a device
+// that already holds teacher data — anyone who knows the format could build
+// one. Redeeming therefore happens once, on a device with nothing to protect,
+// and the teacher sets a passcode at that moment; every later unlock on that
+// device needs the passcode. See docs/ACCOUNTS.md.
 
 import { useSyncExternalStore } from 'react'
 import { toBase64Url, fromBase64UrlBytes, deflate, inflate } from './share.js'
@@ -52,6 +56,14 @@ export function randomToken(length = 8) {
   return [...bytes].map((b) => alphabet[b % alphabet.length]).join('')
 }
 
+function normalizeTeacher(value) {
+  if (!value || typeof value !== 'object') return null
+  const { tid, name, salt, hash } = value
+  if (typeof tid !== 'string' || typeof name !== 'string' || !name.trim()) return null
+  if (typeof salt !== 'string' || !salt || typeof hash !== 'string' || !hash) return null
+  return { tid, name, salt, hash, redeemedAt: value.redeemedAt ?? null }
+}
+
 function load() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
@@ -61,14 +73,19 @@ function load() {
       admin: parsed.admin && typeof parsed.admin === 'object' ? parsed.admin : null,
       // Whether the admin is currently logged in on this device.
       adminUnlocked: !!parsed.adminUnlocked,
-      // { tid, name, redeemedAt } once a teacher code has been redeemed here.
-      teacher: parsed.teacher && typeof parsed.teacher === 'object' ? parsed.teacher : null,
+      // { tid, name, redeemedAt, salt, hash } once a teacher has redeemed a
+      // code here AND set a device passcode. A record without a verifier is
+      // from a pre-passcode build and is discarded rather than trusted, so
+      // the device falls back to "redeem a code" instead of unlocking free.
+      teacher: normalizeTeacher(parsed.teacher),
+      // Whether that teacher is currently signed in on this device.
+      teacherUnlocked: !!parsed.teacherUnlocked && !!normalizeTeacher(parsed.teacher),
       // Codes this device has issued (meaningful on the admin's device only):
       // [{ tid, name, code, issuedAt }]
       issued: Array.isArray(parsed.issued) ? parsed.issued : [],
     }
   } catch {
-    return { admin: null, adminUnlocked: false, teacher: null, issued: [] }
+    return { admin: null, adminUnlocked: false, teacher: null, teacherUnlocked: false, issued: [] }
   }
 }
 
@@ -140,8 +157,23 @@ export function removeIssuedTeacher(tid) {
   save({ ...state, issued: state.issued.filter((t) => t.tid !== tid) })
 }
 
-// Teacher-side: paste an access code to unlock the Teacher tab on this device.
-export async function redeemTeacherCode(code) {
+// Teacher-side, first run on a device: redeem an access code AND set the
+// passcode that will unlock this device from now on.
+//
+// Refused outright when the device already holds teacher data (a teacher
+// record or an admin passcode) and nobody is signed in — that is exactly the
+// case a forged code would target. Getting past it needs the existing
+// credential: the teacher's passcode, or the admin signing in and calling
+// forgetTeacher() to hand the device over.
+export async function redeemTeacherCode(code, passcode) {
+  if (!state.adminUnlocked && !state.teacherUnlocked && (state.teacher || state.admin)) {
+    throw new Error(
+      state.teacher
+        ? `This device is already set up for ${state.teacher.name}. Sign in with the teacher passcode, or ask the program admin to sign in and hand the device over.`
+        : 'This device already has a program admin. Sign in as admin first.',
+    )
+  }
+
   const trimmed = (code ?? '').trim()
   if (!trimmed.startsWith(TEACHER_PREFIX)) {
     if (OTHER_PREFIXES.some((p) => trimmed.startsWith(p))) {
@@ -151,6 +183,10 @@ export async function redeemTeacherCode(code) {
     }
     throw new Error('That does not look like a teacher access code (should start with SMIQT1).')
   }
+
+  const secret = (passcode ?? '').trim()
+  if (secret.length < 6) throw new Error('Pick a teacher passcode of at least 6 characters.')
+
   let data
   try {
     const bytes = await inflate(fromBase64UrlBytes(trimmed.slice(TEACHER_PREFIX.length)))
@@ -161,17 +197,40 @@ export async function redeemTeacherCode(code) {
   if (typeof data.tid !== 'string' || typeof data.name !== 'string' || !data.name.trim()) {
     throw new Error('Teacher access code is damaged or incomplete — copy the whole code and try again.')
   }
+
+  const salt = randomToken(8)
   const teacher = {
     tid: data.tid.slice(0, 40),
     name: data.name.trim().slice(0, 60),
     redeemedAt: new Date().toISOString(),
+    salt,
+    hash: await deriveHex(salt, secret),
   }
-  save({ ...state, teacher })
+  save({ ...state, teacher, teacherUnlocked: true })
   return teacher
 }
 
+// Every unlock after the first: passcode only, no code needed.
+export async function loginTeacher(passcode) {
+  if (!state.teacher) throw new Error('No teacher has been set up on this device yet.')
+  const hash = await deriveHex(state.teacher.salt, (passcode ?? '').trim())
+  if (hash !== state.teacher.hash) throw new Error('That teacher passcode is not right.')
+  save({ ...state, teacherUnlocked: true })
+}
+
+// Sign out = lock. The teacher record stays so the device still refuses a
+// pasted code; signing back in needs the passcode.
 export function logoutTeacher() {
-  save({ ...state, teacher: null })
+  save({ ...state, teacherUnlocked: false })
+}
+
+// Hand the device to a different teacher, or recover from a forgotten
+// passcode. Only from an unlocked device: the signed-in teacher, or the admin.
+export function forgetTeacher() {
+  if (!state.adminUnlocked && !state.teacherUnlocked) {
+    throw new Error('Sign in first to remove the teacher from this device.')
+  }
+  save({ ...state, teacher: null, teacherUnlocked: false })
 }
 
 // --- React binding ---
@@ -181,13 +240,16 @@ function subscribe(fn) {
   return () => listeners.delete(fn)
 }
 
-// role: 'admin' (passcode entered on this device) beats 'teacher' (access
-// code redeemed). null = locked.
+// role: 'admin' (admin passcode entered here) beats 'teacher' (teacher
+// passcode entered here). null = locked. `teacherConfigured` tells the
+// sign-in screen whether to ask for a passcode or for a code + new passcode.
 export function useAuth() {
   const snapshot = useSyncExternalStore(subscribe, () => state)
   return {
     adminConfigured: !!snapshot.admin,
-    role: snapshot.adminUnlocked ? 'admin' : snapshot.teacher ? 'teacher' : null,
+    teacherConfigured: !!snapshot.teacher,
+    teacherName: snapshot.teacher?.name ?? '',
+    role: snapshot.adminUnlocked ? 'admin' : snapshot.teacherUnlocked ? 'teacher' : null,
     teacher: snapshot.teacher,
     issued: snapshot.issued,
   }

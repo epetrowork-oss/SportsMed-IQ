@@ -19,7 +19,9 @@ import {
   issueTeacherCode,
   removeIssuedTeacher,
   redeemTeacherCode,
+  loginTeacher,
   logoutTeacher,
+  forgetTeacher,
 } from '../lib/auth.js'
 import {
   useClasses,
@@ -112,10 +114,12 @@ function AddStudentForm() {
 // --- login gate (Teacher tab lock) ---
 
 function LoginGate() {
-  const { adminConfigured } = useAuth()
+  const { adminConfigured, teacherConfigured, teacherName } = useAuth()
 
   const [teacherCode, setTeacherCode] = useState('')
   const [teacherError, setTeacherError] = useState('')
+  const [teacherPass, setTeacherPass] = useState('')
+  const [teacherConfirm, setTeacherConfirm] = useState('')
 
   const [adminPass, setAdminPass] = useState('')
   const [adminError, setAdminError] = useState('')
@@ -124,10 +128,32 @@ function LoginGate() {
   const [setupConfirm, setSetupConfirm] = useState('')
   const [setupError, setSetupError] = useState('')
 
+  // First run on this device: the code says who the teacher is, the passcode
+  // is what unlocks the device from here on.
   async function handleRedeem() {
+    if (teacherPass.length < 6) {
+      setTeacherError('Pick a teacher passcode of at least 6 characters.')
+      return
+    }
+    if (teacherPass !== teacherConfirm) {
+      setTeacherError('Passcodes do not match — re-enter them.')
+      return
+    }
     try {
-      await redeemTeacherCode(teacherCode)
+      await redeemTeacherCode(teacherCode, teacherPass)
       setTeacherCode('')
+      setTeacherPass('')
+      setTeacherConfirm('')
+      setTeacherError('')
+    } catch (err) {
+      setTeacherError(err.message)
+    }
+  }
+
+  async function handleTeacherLogin() {
+    try {
+      await loginTeacher(teacherPass)
+      setTeacherPass('')
       setTeacherError('')
     } catch (err) {
       setTeacherError(err.message)
@@ -174,26 +200,92 @@ function LoginGate() {
       <div className="login-cards">
         <section className="login-card">
           <h2>Teacher</h2>
-          <p className="field-hint">Paste the access code your program admin gave you.</p>
-          <textarea
-            className="code-box"
-            placeholder="Paste your teacher access code (starts with SMIQT1)"
-            rows={3}
-            value={teacherCode}
-            onChange={(e) => {
-              setTeacherCode(e.target.value)
-              setTeacherError('')
-            }}
-          />
-          <div className="unit-actions">
-            <button
-              className="button button-primary"
-              onClick={handleRedeem}
-              disabled={!teacherCode.trim()}
-            >
-              Sign in
-            </button>
-          </div>
+          {teacherConfigured ? (
+            <>
+              <p className="field-hint">
+                This device is set up for <strong>{teacherName}</strong>. Enter the teacher
+                passcode to sign in.
+              </p>
+              <input
+                className="text-input"
+                type="password"
+                placeholder="Teacher passcode"
+                value={teacherPass}
+                onChange={(e) => {
+                  setTeacherPass(e.target.value)
+                  setTeacherError('')
+                }}
+              />
+              <div className="unit-actions">
+                <button
+                  className="button button-primary"
+                  onClick={handleTeacherLogin}
+                  disabled={!teacherPass}
+                >
+                  Sign in
+                </button>
+              </div>
+              <p className="field-hint">
+                Forgot it, or handing this device to another teacher? The program admin can sign
+                in below and release the device.
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="field-hint">
+                Paste the access code your program admin gave you, then pick a passcode for this
+                device. You'll use the passcode to sign in from now on — the code is only needed
+                this once, so a pasted code can never unlock a device that already holds class
+                data.
+              </p>
+              <textarea
+                className="code-box"
+                placeholder="Paste your teacher access code (starts with SMIQT1)"
+                rows={3}
+                value={teacherCode}
+                onChange={(e) => {
+                  setTeacherCode(e.target.value)
+                  setTeacherError('')
+                }}
+              />
+              <label className="assignment-field">
+                Choose a teacher passcode (min 6 characters)
+                <input
+                  className="text-input"
+                  type="password"
+                  value={teacherPass}
+                  onChange={(e) => {
+                    setTeacherPass(e.target.value)
+                    setTeacherError('')
+                  }}
+                />
+              </label>
+              <label className="assignment-field">
+                Confirm passcode
+                <input
+                  className="text-input"
+                  type="password"
+                  value={teacherConfirm}
+                  onChange={(e) => {
+                    setTeacherConfirm(e.target.value)
+                    setTeacherError('')
+                  }}
+                />
+              </label>
+              <div className="unit-actions">
+                <button
+                  className="button button-primary"
+                  onClick={handleRedeem}
+                  disabled={!teacherCode.trim() || !teacherPass || !teacherConfirm}
+                >
+                  Set up this device
+                </button>
+              </div>
+              <p className="field-hint">
+                There is no account recovery — write the passcode down.
+              </p>
+            </>
+          )}
           {teacherError && (
             <p className="import-error" role="status">
               {teacherError}
@@ -287,17 +379,56 @@ function LoginGate() {
 // Top-of-dashboard strip once signed in: who's signed in + a sign-out button.
 function SignedInBanner({ auth }) {
   const who = auth.role === 'admin' ? 'Program admin' : auth.teacher?.name ?? 'Teacher'
+  const [confirmRelease, setConfirmRelease] = useState(false)
+  const [releaseError, setReleaseError] = useState('')
+
+  function release() {
+    try {
+      forgetTeacher()
+      setConfirmRelease(false)
+      setReleaseError('')
+    } catch (err) {
+      setReleaseError(err.message)
+    }
+  }
+
   return (
     <div className="teacher-session-bar">
       <span>
         Signed in as {who} · {auth.role}
       </span>
-      <button
-        className="button"
-        onClick={() => (auth.role === 'admin' ? logoutAdmin() : logoutTeacher())}
-      >
-        Sign out
-      </button>
+      <span className="unit-actions">
+        {auth.teacherConfigured &&
+          (confirmRelease ? (
+            <>
+              <button className="button button-danger" onClick={release}>
+                Confirm release
+              </button>
+              <button className="button" onClick={() => setConfirmRelease(false)}>
+                Cancel
+              </button>
+            </>
+          ) : (
+            <button
+              className="button"
+              onClick={() => setConfirmRelease(true)}
+              title="Remove this teacher from the device so another teacher can set it up"
+            >
+              Release device
+            </button>
+          ))}
+        <button
+          className="button"
+          onClick={() => (auth.role === 'admin' ? logoutAdmin() : logoutTeacher())}
+        >
+          Sign out
+        </button>
+      </span>
+      {releaseError && (
+        <p className="import-error" role="status">
+          {releaseError}
+        </p>
+      )}
     </div>
   )
 }

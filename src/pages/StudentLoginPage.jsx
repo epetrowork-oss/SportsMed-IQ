@@ -6,6 +6,8 @@ import {
   loginStudent,
   logoutStudent,
   removeImportedClass,
+  canRecoverPreviousWork,
+  recoverPreviousWork,
 } from '../lib/studentSession.js'
 
 function ImportClassCode({ onImported }) {
@@ -83,7 +85,9 @@ function PickName({ cls, onRemove }) {
   async function submit() {
     try {
       await loginStudent(cls.cid, sid, pin)
-      navigate('/')
+      // If this device still holds work saved under an earlier PIN, stay here
+      // so the student can bring it over before moving on.
+      if (!canRecoverPreviousWork()) navigate('/')
     } catch (err) {
       setError(err.message)
     }
@@ -141,13 +145,67 @@ function PickName({ cls, onRemove }) {
   )
 }
 
+// Shown when the device holds progress for this student under a different PIN
+// key — what a teacher-issued PIN reset leaves behind. Typing the old PIN is
+// what proves the work is theirs; nothing is moved without it.
+function RecoverPreviousWork() {
+  const [previousPin, setPreviousPin] = useState('')
+  const [result, setResult] = useState(null) // { ok, message }
+
+  async function submit() {
+    try {
+      await recoverPreviousWork(previousPin)
+      setPreviousPin('')
+      setResult({ ok: true, message: 'Your earlier work has been added to this account.' })
+    } catch (err) {
+      setResult({ ok: false, message: err.message })
+    }
+  }
+
+  return (
+    <section className="class-code-entry">
+      <h3>Did your teacher give you a new PIN?</h3>
+      <p className="field-hint">
+        There's earlier work saved on this device. Type the PIN you used before and it will move
+        across — your lessons, quiz scores and streak all come with it.
+      </p>
+      <div className="class-code-entry-row">
+        <label htmlFor="previous-pin" className="sr-only">
+          Your previous PIN
+        </label>
+        <input
+          id="previous-pin"
+          className="text-input"
+          type="text"
+          placeholder="Your previous PIN"
+          value={previousPin}
+          onChange={(e) => {
+            setPreviousPin(e.target.value)
+            setResult(null)
+          }}
+        />
+        <button className="button button-primary" onClick={submit} disabled={!previousPin.trim()}>
+          Bring it over
+        </button>
+      </div>
+      {result && (
+        <p className={result.ok ? 'import-ok' : 'import-error'} role="status">
+          {result.message}
+        </p>
+      )}
+    </section>
+  )
+}
+
 function SignedIn({ session, controls }) {
+  const recoverable = canRecoverPreviousWork()
   return (
     <div className="page page-narrow">
       <h1>Student sign-in</h1>
       <p>
         You're signed in as <strong>{session.name}</strong> ({session.sid}) — {controls?.className}
       </p>
+      {recoverable && <RecoverPreviousWork />}
       <div className="unit-actions">
         <button className="button button-primary" onClick={logoutStudent}>
           Sign out

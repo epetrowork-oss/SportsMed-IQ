@@ -194,7 +194,17 @@ export function addStudent(cid, loginName) {
     }
     const seq = (cls.seq ?? cls.students.length) + 1
     const sid = `${idPrefix(cls.name)}-${String(seq).padStart(2, '0')}`
-    const student = { sid, name, pin: generatePin(), createdAt: new Date().toISOString() }
+    // The salt is per student and permanent — never regenerated when a code
+    // is rebuilt or a PIN is reset. A student who changes PIN can then still
+    // recompute the key of their old progress profile by typing their old PIN
+    // (see progress.js); a rotating salt would strand that work forever.
+    const student = {
+      sid,
+      name,
+      pin: generatePin(),
+      salt: randomToken(6),
+      createdAt: new Date().toISOString(),
+    }
     return withStaleCode(cls, { seq, students: [...cls.students, student] })
   }).students.at(-1)
 }
@@ -208,6 +218,7 @@ export function removeStudentFromClass(cid, sid) {
 export function resetStudentPin(cid, sid) {
   return updateClass(cid, (cls) =>
     withStaleCode(cls, {
+      // Salt deliberately preserved — see addStudent.
       students: cls.students.map((s) => (s.sid === sid ? { ...s, pin: generatePin() } : s)),
     }),
   ).students.find((s) => s.sid === sid)
@@ -235,10 +246,21 @@ export async function buildClassLoginCode(cid) {
 
   const students = await Promise.all(
     cls.students.map(async (s) => {
-      const salt = randomToken(6)
+      const salt = s.salt || randomToken(6)
       return { sid: s.sid, name: s.name, salt, hash: await hashPin(salt, s.pin) }
     }),
   )
+  // Persist any salt just back-filled for a student added before salts were
+  // stored, so it stays stable from here on.
+  if (cls.students.some((s) => !s.salt)) {
+    updateClass(cid, (c) => ({
+      ...c,
+      students: c.students.map((s) => ({
+        ...s,
+        salt: s.salt || students.find((x) => x.sid === s.sid)?.salt || randomToken(6),
+      })),
+    }))
+  }
 
   const payload = {
     v: 1,

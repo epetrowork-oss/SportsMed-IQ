@@ -14,17 +14,42 @@ const BASE_STORAGE_KEY = 'sportmediq:progress:v1'
 const SESSION_KEY = 'sportmediq:studentSession:v1'
 export const PASS_THRESHOLD = 0.7 // quiz score needed to count as passed
 
+// The key also mixes in `pk` — material studentSession.js derives from the
+// PIN at login. Without it, anyone who edited a class login code to carry a
+// PIN verifier of their own choosing could sign in as a classmate and land in
+// that classmate's profile; with it they derive a different key and get an
+// empty one instead. (This closes the in-app path only: whoever holds the
+// device can still read localStorage directly with devtools.)
 function profileStorageKey() {
   try {
     const raw = localStorage.getItem(SESSION_KEY)
     const session = raw ? JSON.parse(raw) : null
     if (session && typeof session.cid === 'string' && typeof session.sid === 'string') {
-      return `${BASE_STORAGE_KEY}:${session.cid}:${session.sid}`
+      const base = `${BASE_STORAGE_KEY}:${session.cid}:${session.sid}`
+      return typeof session.pk === 'string' && session.pk ? `${base}:${session.pk}` : base
     }
   } catch {
     // Corrupt session — fall back to the shared profile.
   }
   return BASE_STORAGE_KEY
+}
+
+// Every profile this device holds for one student: the current key, keys from
+// earlier PINs, and the pre-`pk` key written by older builds. Only that
+// student can have created any of them, since writing one requires signing in
+// with a PIN that verified against the class code.
+function siblingProfileKeys(cid, sid) {
+  const base = `${BASE_STORAGE_KEY}:${cid}:${sid}`
+  const keys = []
+  try {
+    for (let i = 0; i < localStorage.length; i += 1) {
+      const key = localStorage.key(i)
+      if (key === base || (key && key.startsWith(`${base}:`))) keys.push(key)
+    }
+  } catch {
+    // Storage unavailable — nothing to migrate.
+  }
+  return keys
 }
 
 let STORAGE_KEY = profileStorageKey()
@@ -163,6 +188,89 @@ export function reloadProgressProfile() {
   STORAGE_KEY = profileStorageKey()
   state = load()
   listeners.forEach((fn) => fn())
+}
+
+// Fold one stored profile into the current one and delete it. Best-of-both
+// rules, identical to a progress-code import, so nothing is lost if both keys
+// hold work.
+function absorbProfile(key) {
+  if (key === STORAGE_KEY) return false
+  let parsed = null
+  try {
+    const raw = localStorage.getItem(key)
+    parsed = raw ? JSON.parse(raw) : null
+  } catch {
+    parsed = null
+  }
+  if (parsed && typeof parsed === 'object') {
+    mergeProgress(parsed.name ?? '', parsed.units ?? {}, parsed.gamification)
+    for (const assignment of Array.isArray(parsed.assignments) ? parsed.assignments : []) {
+      if (assignment && typeof assignment.name === 'string') importAssignment(assignment)
+    }
+  }
+  try {
+    localStorage.removeItem(key)
+  } catch {
+    // Storage blocked — the stale key is harmless, it just lingers.
+  }
+  return true
+}
+
+// Called by studentSession.js right after a login writes the session. Switches
+// to this student's profile and absorbs only the *legacy* un-keyed profile —
+// written by builds from before progress was bound to the PIN, which can no
+// longer be created. Profiles under a different PIN key are deliberately NOT
+// touched here: adopting those automatically would hand a student who edited a
+// class login code the very profile the PIN binding exists to protect. Moving
+// work across a PIN change goes through recoverProfileWithPreviousPin below,
+// which makes the student prove the old PIN.
+export function adoptLegacyProfile(cid, sid) {
+  STORAGE_KEY = profileStorageKey()
+  state = load()
+  const legacyKey = `${BASE_STORAGE_KEY}:${cid}:${sid}`
+  if (legacyKey !== STORAGE_KEY && siblingProfileKeys(cid, sid).includes(legacyKey)) {
+    absorbProfile(legacyKey)
+  }
+  listeners.forEach((fn) => fn())
+}
+
+// Does a stored profile actually hold work worth moving? An empty shell —
+// left behind by a mistyped class code or an abandoned login — must not make
+// the app offer a recovery the student can't complete.
+function profileHasWork(key) {
+  try {
+    const raw = localStorage.getItem(key)
+    const parsed = raw ? JSON.parse(raw) : null
+    if (!parsed || typeof parsed !== 'object') return false
+    const units = parsed.units && typeof parsed.units === 'object' ? Object.values(parsed.units) : []
+    if (units.some((u) => u && (u.lessonRead || u.flashcardsReviewed || u.quizAttempts > 0 || u.readSeconds > 0))) {
+      return true
+    }
+    const game = normalizeGamification(parsed.gamification)
+    return game.activeDates.length > 0 || game.seenBadgeIds.length > 0 || Object.keys(game.practicals).length > 0
+  } catch {
+    return false
+  }
+}
+
+// Is there work saved on this device for this student under some other key —
+// i.e. from before their PIN was reset? Drives the "bring my earlier work
+// over" prompt on the sign-in page.
+export function hasRecoverableProfile(cid, sid) {
+  return siblingProfileKeys(cid, sid).some((key) => key !== STORAGE_KEY && profileHasWork(key))
+}
+
+// The migration path for a teacher-issued PIN reset. studentSession.js derives
+// `previousPk` from the OLD PIN the student types, which only they can supply:
+// the class code no longer carries the old verifier, and the salt it does carry
+// is useless without the PIN itself. Returns true when work was moved.
+export function recoverProfileWithPreviousPin(cid, sid, previousPk) {
+  const key = `${BASE_STORAGE_KEY}:${cid}:${sid}:${previousPk}`
+  if (key === STORAGE_KEY || !siblingProfileKeys(cid, sid).includes(key)) return false
+  if (!profileHasWork(key)) return false
+  const moved = absorbProfile(key)
+  listeners.forEach((fn) => fn())
+  return moved
 }
 
 // Two tabs open on a shared classroom device must not disagree about whose
