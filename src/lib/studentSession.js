@@ -13,7 +13,6 @@ import { useSyncExternalStore } from 'react'
 import { fromBase64UrlBytes, inflate } from './share.js'
 import { CLASS_CODE_PREFIX, hashPin } from './classes.js'
 import {
-  adoptLegacyProfile,
   hasRecoverableProfile,
   recoverProfileWithPreviousPin,
   reloadProgressProfile,
@@ -106,25 +105,36 @@ export async function decodeClassLoginCode(code) {
   } catch {
     throw new Error('Class login code is damaged or incomplete — copy the whole code and try again.')
   }
+  // Ids go into localStorage key paths, so they must look like the ids this
+  // app generates (P3-01, c-ab12cd) — never anything carrying the ":"
+  // delimiter, which a hand-edited code could use to aim one student's key at
+  // another's profile.
+  const SAFE_ID = /^[A-Za-z0-9_-]{1,40}$/
   const students = Array.isArray(data.students)
     ? data.students.filter(
         (s) =>
           s &&
           typeof s.sid === 'string' &&
+          SAFE_ID.test(s.sid) &&
           typeof s.name === 'string' &&
           typeof s.salt === 'string' &&
           typeof s.hash === 'string',
       )
     : []
-  if (typeof data.cid !== 'string' || typeof data.name !== 'string' || students.length === 0) {
+  if (
+    typeof data.cid !== 'string' ||
+    !SAFE_ID.test(data.cid) ||
+    typeof data.name !== 'string' ||
+    students.length === 0
+  ) {
     throw new Error('Class login code is damaged or incomplete — copy the whole code and try again.')
   }
   return {
-    cid: data.cid.slice(0, 40),
+    cid: data.cid,
     name: data.name.trim().slice(0, 60),
     settings: normalizeSettings(data.settings),
     students: students.map((s) => ({
-      sid: s.sid.slice(0, 40),
+      sid: s.sid,
       name: s.name.trim().slice(0, 40),
       salt: s.salt.slice(0, 40),
       hash: s.hash.slice(0, 64),
@@ -176,7 +186,7 @@ export async function loginStudent(cid, sid, pin) {
   // carrying a substituted verifier opens a different, empty profile rather
   // than the real student's.
   save({ ...state, session: { cid, sid, name: student.name, pk: hash.slice(0, 16) } })
-  adoptLegacyProfile(cid, sid)
+  reloadProgressProfile()
   // First login on this profile: pre-fill the progress-code name with the
   // teacher-chosen login name so exported codes identify the student.
   setStudentName(student.name)

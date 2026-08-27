@@ -295,7 +295,15 @@ function LoginGate() {
 
         <section className="login-card">
           <h2>Program admin</h2>
-          {adminConfigured ? (
+          {teacherConfigured && !adminConfigured ? (
+            // Offering first-run admin setup here would be a back door around
+            // the teacher passcode on a device that already holds their
+            // classes; auth.js refuses it, and the form is hidden to match.
+            <p className="field-hint">
+              This device belongs to <strong>{teacherName}</strong>. Sign in with the teacher
+              passcode above first — a program admin can then be added from the dashboard.
+            </p>
+          ) : adminConfigured ? (
             <>
               <p className="field-hint">Enter the admin passcode set up on this device.</p>
               <input

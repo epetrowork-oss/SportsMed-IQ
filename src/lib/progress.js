@@ -20,13 +20,23 @@ export const PASS_THRESHOLD = 0.7 // quiz score needed to count as passed
 // that classmate's profile; with it they derive a different key and get an
 // empty one instead. (This closes the in-app path only: whoever holds the
 // device can still read localStorage directly with devtools.)
+// Key components are app-generated ids (`P3-01`, `c-ab12cd`) and hex-derived
+// material, but they arrive via a class login code a student can edit, so they
+// are checked rather than trusted: a component containing the ":" delimiter
+// could otherwise be shaped to make one student's key collide with another's.
+const SAFE_KEY_PART = /^[A-Za-z0-9_-]{1,64}$/
+
+function safeKeyPart(value) {
+  return typeof value === 'string' && SAFE_KEY_PART.test(value)
+}
+
 function profileStorageKey() {
   try {
     const raw = localStorage.getItem(SESSION_KEY)
     const session = raw ? JSON.parse(raw) : null
-    if (session && typeof session.cid === 'string' && typeof session.sid === 'string') {
+    if (session && safeKeyPart(session.cid) && safeKeyPart(session.sid)) {
       const base = `${BASE_STORAGE_KEY}:${session.cid}:${session.sid}`
-      return typeof session.pk === 'string' && session.pk ? `${base}:${session.pk}` : base
+      return safeKeyPart(session.pk) ? `${base}:${session.pk}` : base
     }
   } catch {
     // Corrupt session — fall back to the shared profile.
@@ -39,6 +49,7 @@ function profileStorageKey() {
 // student can have created any of them, since writing one requires signing in
 // with a PIN that verified against the class code.
 function siblingProfileKeys(cid, sid) {
+  if (!safeKeyPart(cid) || !safeKeyPart(sid)) return []
   const base = `${BASE_STORAGE_KEY}:${cid}:${sid}`
   const keys = []
   try {
@@ -216,27 +227,9 @@ function absorbProfile(key) {
   return true
 }
 
-// Called by studentSession.js right after a login writes the session. Switches
-// to this student's profile and absorbs only the *legacy* un-keyed profile —
-// written by builds from before progress was bound to the PIN, which can no
-// longer be created. Profiles under a different PIN key are deliberately NOT
-// touched here: adopting those automatically would hand a student who edited a
-// class login code the very profile the PIN binding exists to protect. Moving
-// work across a PIN change goes through recoverProfileWithPreviousPin below,
-// which makes the student prove the old PIN.
-export function adoptLegacyProfile(cid, sid) {
-  STORAGE_KEY = profileStorageKey()
-  state = load()
-  const legacyKey = `${BASE_STORAGE_KEY}:${cid}:${sid}`
-  if (legacyKey !== STORAGE_KEY && siblingProfileKeys(cid, sid).includes(legacyKey)) {
-    absorbProfile(legacyKey)
-  }
-  listeners.forEach((fn) => fn())
-}
-
 // Does a stored profile actually hold work worth moving? An empty shell —
 // left behind by a mistyped class code or an abandoned login — must not make
-// the app offer a recovery the student can't complete.
+// the app offer a recovery the student cannot complete.
 function profileHasWork(key) {
   try {
     const raw = localStorage.getItem(key)
@@ -253,6 +246,15 @@ function profileHasWork(key) {
   }
 }
 
+// NOTE: there is deliberately no automatic profile adoption of any kind.
+// An earlier revision absorbed a "legacy" un-keyed profile at login, which
+// review showed was exploitable: a forged class code carrying a sid shaped
+// like "<victim sid>:<victim pk>" — both readable from the legitimate code —
+// made that legacy key resolve to the victim's real profile. Nothing moves
+// between profiles now except through recoverProfileWithPreviousPin below,
+// which demands the old PIN, and key components are charset-checked above so
+// no id can impersonate a longer key.
+
 // Is there work saved on this device for this student under some other key —
 // i.e. from before their PIN was reset? Drives the "bring my earlier work
 // over" prompt on the sign-in page.
@@ -265,6 +267,7 @@ export function hasRecoverableProfile(cid, sid) {
 // the class code no longer carries the old verifier, and the salt it does carry
 // is useless without the PIN itself. Returns true when work was moved.
 export function recoverProfileWithPreviousPin(cid, sid, previousPk) {
+  if (!safeKeyPart(cid) || !safeKeyPart(sid) || !safeKeyPart(previousPk)) return false
   const key = `${BASE_STORAGE_KEY}:${cid}:${sid}:${previousPk}`
   if (key === STORAGE_KEY || !siblingProfileKeys(cid, sid).includes(key)) return false
   if (!profileHasWork(key)) return false

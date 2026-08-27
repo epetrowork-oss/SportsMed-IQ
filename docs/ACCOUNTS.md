@@ -106,6 +106,19 @@ so both are handled by making a forged code *useless* rather than impossible:
    that was never a security boundary anyway: signing out shows the whole
    library by design, so the controls are classroom management, not a lock.
 
+A second review round closed three more holes in the fixes themselves, all
+worth recording because each was a way *around* the passcode rather than
+through it: first-run **admin setup** was a back door on a teacher's device
+(no admin record exists there, so anyone could claim one and walk into the
+dashboard — it is now refused unless a teacher or admin session is already
+open); **teacher sign-out** did not reach other tabs, so a second tab kept
+serving the dashboard; and a class code carrying a **`sid` shaped like
+`<victim sid>:<victim pk>`** could aim one student's storage key at another's
+profile, so ids are now charset-checked at import, key components are
+validated before use, and automatic profile adoption was removed entirely —
+nothing moves between profiles now except through the previous-PIN recovery
+below.
+
 **The honest floor:** whoever physically holds an unlocked device can read
 localStorage with devtools. Everything above raises the cost of the in-app
 paths; none of it defends against that, and no client-only design can.
@@ -115,7 +128,8 @@ paths; none of it defends against that, and no client-only design can.
 Resetting a student's PIN changes their profile key, so their work would be
 stranded. Recovery is deliberately *not* automatic — silently adopting any
 profile filed under the same student ID would hand it to exactly the forger
-case 2 describes. Instead, the sign-in page notices work saved under an older
+case 2 describes, and an earlier revision that adopted a "legacy" un-keyed
+profile was itself exploitable via a crafted `sid`, so that path is gone. Instead, the sign-in page notices work saved under an older
 key and asks the student to type **their previous PIN**, which only they know;
 that reproduces the old key and merges the work across (best-of-both rules,
 same as a progress-code import), then deletes the old entry. Per-student salts

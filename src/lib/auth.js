@@ -112,6 +112,16 @@ export async function setupAdmin(passcode) {
   const trimmed = (passcode ?? '').trim()
   if (trimmed.length < 6) throw new Error('Pick an admin passcode of at least 6 characters.')
   if (state.admin) throw new Error('An admin passcode is already set on this device.')
+  // Without this, first-run admin setup is a back door around the teacher
+  // passcode: a teacher-only device has no admin record, so anyone could
+  // "set up admin" on the locked sign-in screen and land in the dashboard
+  // holding that teacher's classes. Claiming admin on a device that already
+  // belongs to a teacher requires their session first.
+  if (state.teacher && !state.teacherUnlocked && !state.adminUnlocked) {
+    throw new Error(
+      `This device is already set up for ${state.teacher.name}. Sign in with the teacher passcode before adding a program admin.`,
+    )
+  }
   const salt = randomToken(8)
   const hash = await deriveHex(salt, trimmed)
   save({ ...state, admin: { salt, hash }, adminUnlocked: true })
@@ -231,6 +241,20 @@ export function forgetTeacher() {
     throw new Error('Sign in first to remove the teacher from this device.')
   }
   save({ ...state, teacher: null, teacherUnlocked: false })
+}
+
+// Sign-out must reach every tab. Without this a second Teacher tab keeps its
+// authenticated snapshot and goes on exposing the dashboard after the first
+// tab signs out — the same cross-tab hole already closed for the student
+// session and progress stores. `storage` fires only in other tabs;
+// event.key === null means localStorage.clear().
+if (typeof window !== 'undefined') {
+  window.addEventListener('storage', (event) => {
+    if (event.key === null || event.key === STORAGE_KEY) {
+      state = load()
+      listeners.forEach((fn) => fn())
+    }
+  })
 }
 
 // --- React binding ---
