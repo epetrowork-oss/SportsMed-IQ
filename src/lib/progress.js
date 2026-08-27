@@ -458,6 +458,14 @@ export function setStudentName(name) {
   commit((cur) => ({ ...cur, name: name.trim().slice(0, 60) }))
 }
 
+// Seeds the name only when this profile has none. Login uses this rather than
+// setStudentName: a student who edited "Your name" on the Sync page must not
+// have it replaced by the teacher-chosen login nickname every time they sign
+// back in, which would silently change how their progress code identifies them.
+export function initStudentName(name) {
+  commit((cur) => (cur.name ? cur : { ...cur, name: name.trim().slice(0, 60) }))
+}
+
 export function markBadgesSeen(badgeIds) {
   commit((cur) => {
     const gamification = normalizeGamification(cur.gamification)

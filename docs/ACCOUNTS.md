@@ -190,6 +190,18 @@ work to the shared profile. Both `studentSession.js` and `progress.js` now fall
 back to the legacy key — both, because `progress.js` initializes first and
 reads the record independently.
 
+An eighth round found two workflow bugs rather than concurrency ones. The
+provisioning forms lived only on the locked sign-in screen, so two flows this
+document claimed were supported actually deadlocked: a teacher-only device
+could never gain an admin, and an admin-managed device could never take a
+replacement teacher after a release. Both are now reachable from a **Device
+setup** panel on the dashboard, shown to whichever signed-in role is allowed to
+perform them. (Because a device can now hold both roles, *Sign out* ends the
+whole session rather than demoting admin to teacher.) Second, every student
+login overwrote the progress-code name, so a student who set their own name on
+the Sync page lost it on next sign-in; the login now seeds that name only when
+the profile has none.
+
 **The honest floor:** whoever physically holds an unlocked device can read
 localStorage with devtools. Everything above raises the cost of the in-app
 paths; none of it defends against that, and no client-only design can.

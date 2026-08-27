@@ -16,13 +16,12 @@ import {
   useAuth,
   setupAdmin,
   loginAdmin,
-  logoutAdmin,
   issueTeacherCode,
   removeIssuedTeacher,
   redeemTeacherCode,
   loginTeacher,
-  logoutTeacher,
   forgetTeacher,
+  signOut,
 } from '../lib/auth.js'
 import {
   useClasses,
@@ -450,10 +449,7 @@ function SignedInBanner({ auth }) {
               Release device
             </button>
           ))}
-        <button
-          className="button"
-          onClick={() => (auth.role === 'admin' ? logoutAdmin() : logoutTeacher())}
-        >
+        <button className="button" onClick={signOut}>
           Sign out
         </button>
       </span>
@@ -592,6 +588,182 @@ function AdminPanel({ issued }) {
     </section>
   )
 }
+
+// Provisioning that has to be reachable AFTER signing in, not only from the
+// locked sign-in screen. Two flows deadlock otherwise, both of them documented
+// as supported: a teacher-only device can never gain an admin (setupAdmin
+// refuses while locked, and the sign-in form is gone once the teacher is in),
+// and an admin-managed device can never take a replacement teacher after a
+// release (redemption needs the admin's session, which hides the form).
+function DeviceSetupPanel({ auth }) {
+  const [teacherCode, setTeacherCode] = useState('')
+  const [teacherPass, setTeacherPass] = useState('')
+  const [teacherConfirm, setTeacherConfirm] = useState('')
+  const [teacherMsg, setTeacherMsg] = useState(null)
+
+  const [adminPass, setAdminPass] = useState('')
+  const [adminConfirm, setAdminConfirm] = useState('')
+  const [adminMsg, setAdminMsg] = useState(null)
+
+  const canAddAdmin = !auth.adminConfigured
+  const canTakeTeacher = auth.role === 'admin' && !auth.teacherConfigured
+  // Succeeding hides the form that produced the message (the device is now
+  // provisioned), so the panel stays mounted while there is something to
+  // report — otherwise the confirmation would vanish in the same render.
+  if (!canAddAdmin && !canTakeTeacher && !adminMsg && !teacherMsg) return null
+
+  async function addAdmin() {
+    if (adminPass.length < 6) {
+      setAdminMsg({ ok: false, message: 'Pick an admin passcode of at least 6 characters.' })
+      return
+    }
+    if (adminPass !== adminConfirm) {
+      setAdminMsg({ ok: false, message: 'Passcodes do not match — re-enter them.' })
+      return
+    }
+    try {
+      await setupAdmin(adminPass)
+      setAdminPass('')
+      setAdminConfirm('')
+      setAdminMsg({ ok: true, message: 'Program admin added to this device.' })
+    } catch (err) {
+      setAdminMsg({ ok: false, message: err.message })
+    }
+  }
+
+  async function takeTeacher() {
+    if (teacherPass.length < 6) {
+      setTeacherMsg({ ok: false, message: 'Pick a teacher passcode of at least 6 characters.' })
+      return
+    }
+    if (teacherPass !== teacherConfirm) {
+      setTeacherMsg({ ok: false, message: 'Passcodes do not match — re-enter them.' })
+      return
+    }
+    try {
+      await redeemTeacherCode(teacherCode, teacherPass)
+      setTeacherCode('')
+      setTeacherPass('')
+      setTeacherConfirm('')
+      setTeacherMsg({ ok: true, message: 'Teacher set up on this device.' })
+    } catch (err) {
+      setTeacherMsg({ ok: false, message: err.message })
+    }
+  }
+
+  return (
+    <section className="admin-panel">
+      <h2>Device setup</h2>
+
+      {canAddAdmin && (
+        <>
+          <h3>Add a program admin</h3>
+          <p className="field-hint">
+            An admin can issue teacher access codes and hand this device to another teacher. There
+            is no account recovery — write the passcode down.
+          </p>
+          <label className="assignment-field">
+            Admin passcode (min 6 characters)
+            <input
+              className="text-input"
+              type="password"
+              value={adminPass}
+              onChange={(e) => {
+                setAdminPass(e.target.value)
+                setAdminMsg(null)
+              }}
+            />
+          </label>
+          <label className="assignment-field">
+            Confirm passcode
+            <input
+              className="text-input"
+              type="password"
+              value={adminConfirm}
+              onChange={(e) => {
+                setAdminConfirm(e.target.value)
+                setAdminMsg(null)
+              }}
+            />
+          </label>
+          <div className="unit-actions">
+            <button
+              className="button button-primary"
+              onClick={addAdmin}
+              disabled={!adminPass || !adminConfirm}
+            >
+              Add program admin
+            </button>
+          </div>
+        </>
+      )}
+      {adminMsg && (
+        <p className={adminMsg.ok ? 'import-ok' : 'import-error'} role="status">
+          {adminMsg.message}
+        </p>
+      )}
+
+      {canTakeTeacher && (
+        <>
+          <h3>Set up a teacher on this device</h3>
+          <p className="field-hint">
+            Paste that teacher&apos;s access code and choose the passcode this device will use.
+            They sign in with the passcode from then on.
+          </p>
+          <textarea
+            className="code-box"
+            placeholder="Paste a teacher access code (starts with SMIQT1)"
+            rows={3}
+            value={teacherCode}
+            onChange={(e) => {
+              setTeacherCode(e.target.value)
+              setTeacherMsg(null)
+            }}
+          />
+          <label className="assignment-field">
+            Teacher passcode (min 6 characters)
+            <input
+              className="text-input"
+              type="password"
+              value={teacherPass}
+              onChange={(e) => {
+                setTeacherPass(e.target.value)
+                setTeacherMsg(null)
+              }}
+            />
+          </label>
+          <label className="assignment-field">
+            Confirm passcode
+            <input
+              className="text-input"
+              type="password"
+              value={teacherConfirm}
+              onChange={(e) => {
+                setTeacherConfirm(e.target.value)
+                setTeacherMsg(null)
+              }}
+            />
+          </label>
+          <div className="unit-actions">
+            <button
+              className="button button-primary"
+              onClick={takeTeacher}
+              disabled={!teacherCode.trim() || !teacherPass || !teacherConfirm}
+            >
+              Set up teacher
+            </button>
+          </div>
+        </>
+      )}
+      {teacherMsg && (
+        <p className={teacherMsg.ok ? 'import-ok' : 'import-error'} role="status">
+          {teacherMsg.message}
+        </p>
+      )}
+    </section>
+  )
+}
+
 
 // --- shared drill-down building blocks ---
 
@@ -1923,6 +2095,7 @@ function TeacherDashboard({ auth }) {
       )}
 
       {auth.role === 'admin' && <AdminPanel issued={auth.issued} />}
+      <DeviceSetupPanel auth={auth} />
       <ClassManager />
       <TeacherAssignments />
       <AddStudentForm />

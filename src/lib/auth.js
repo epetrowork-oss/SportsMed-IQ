@@ -196,6 +196,14 @@ export function logoutAdmin() {
   commit((cur) => ({ ...cur, adminUnlocked: false }))
 }
 
+// A device can now hold both roles (an admin added from a teacher's dashboard,
+// or a teacher provisioned from an admin's). "Sign out" must end the session
+// outright rather than silently demoting admin -> teacher and leaving the
+// dashboard open, which is not what anyone clicking it expects.
+export function signOut() {
+  commit((cur) => ({ ...cur, adminUnlocked: false, teacherUnlocked: false }))
+}
+
 // --- teacher access codes ---
 
 // Admin-side: create a code for a named teacher and remember it so it can be

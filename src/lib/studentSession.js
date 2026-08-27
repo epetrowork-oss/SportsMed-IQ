@@ -14,9 +14,9 @@ import { fromBase64UrlBytes, inflate } from './share.js'
 import { CLASS_CODE_PREFIX, hashPin } from './classes.js'
 import {
   hasRecoverableProfile,
+  initStudentName,
   recoverProfileWithPreviousPin,
   reloadProgressProfile,
-  setStudentName,
   useProgress,
 } from './progress.js'
 
@@ -274,9 +274,10 @@ export async function loginStudent(cid, sid, pin) {
     return { ...cur, session: { cid, sid, name: currentStudent.name, pk: hash.slice(0, 16) } }
   })
   reloadProgressProfile()
-  // First login on this profile: pre-fill the progress-code name with the
-  // teacher-chosen login name so exported codes identify the student.
-  setStudentName(signedIn.name)
+  // First login on this profile only: seed the progress-code name with the
+  // teacher-chosen login name so exported codes identify the student. If they
+  // have since set their own name on the Sync page, it is left alone.
+  initStudentName(signedIn.name)
   return signedIn
 }
 
