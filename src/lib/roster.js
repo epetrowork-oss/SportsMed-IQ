@@ -216,6 +216,17 @@ export function mergeRoster(incoming, skip = new Set()) {
     skipped = 0
     const byKey = new Map(cur.students.map((row) => [keyOf(row), row]))
     for (const row of list) {
+      // The refusal comes first, before anything is inserted. A conflicted
+      // (class, student) pair means the class store found two people behind
+      // that ID, and this device may hold no roster row for its one yet --
+      // in which case an insert is not "adding a row the device is missing",
+      // it is filing the backup student's name and progress under the key
+      // that belongs to the other one, where the device student's next
+      // progress import would then land on top of it.
+      if (row.sid && skip.has(`${row.cid ?? ''}:${row.sid}`)) {
+        skipped += 1
+        continue
+      }
       const key = keyOf(row)
       if (!byKey.has(key)) {
         byKey.set(key, row)
@@ -223,7 +234,6 @@ export function mergeRoster(incoming, skip = new Set()) {
         continue
       }
       kept += 1
-      if (row.sid && skip.has(`${row.cid ?? ''}:${row.sid}`)) skipped += 1
     }
     return {
       students: [...byKey.values()].sort((a, b) => a.name.localeCompare(b.name)),

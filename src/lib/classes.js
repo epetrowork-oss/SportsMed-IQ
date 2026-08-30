@@ -82,6 +82,18 @@ function randomBelow(range) {
   return byte[0] % range
 }
 
+// Random LETTERS for the student-ID suffix -- deliberately not alphanumeric.
+// A digit there merges with the sequence in front of it: "P3-02" + "72A"
+// reads as sequence 272 to anything parsing the leading digits, which is how
+// the class's next ID would leap into the hundreds. Letters keep the two
+// parts of the ID readable apart by machine as well as by eye.
+function randomLetters(length) {
+  const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ' // no I or O: they read as 1 and 0
+  const bytes = new Uint8Array(length)
+  crypto.getRandomValues(bytes)
+  return [...bytes].map((b) => alphabet[b % alphabet.length]).join('')
+}
+
 export function generatePin() {
   return `${PIN_WORDS[randomBelow(PIN_WORDS.length)]}${10 + randomBelow(90)}`
 }
@@ -253,7 +265,7 @@ export function addStudent(cid, loginName) {
     // key. Containing that downstream took three review rounds; this is the
     // place it stops being created. Existing IDs are untouched -- they are on
     // slips in students' pockets and in their progress-profile keys.
-    const sid = `${idPrefix(cls.name)}-${String(seq).padStart(2, '0')}${randomToken(3).toUpperCase()}`
+    const sid = `${idPrefix(cls.name)}-${String(seq).padStart(2, '0')}${randomLetters(3)}`
     // The salt is per student and permanent — never regenerated when a code
     // is rebuilt or a PIN is reset. A student who changes PIN can then still
     // recompute the key of their old progress profile by typing their old PIN
@@ -432,7 +444,10 @@ function sameStudent(a, b) {
 // works for both ID shapes.
 function highestSeq(students) {
   return students.reduce((high, s) => {
-    const suffix = Number.parseInt(String(s.sid ?? '').split('-').pop(), 10)
+    // The digit run after the last hyphen, and only that: the suffix is
+    // letters, so it cannot be mistaken for part of the sequence.
+    const digits = /-(\d+)/.exec(String(s.sid ?? ''))
+    const suffix = digits ? Number.parseInt(digits[1], 10) : NaN
     return Number.isFinite(suffix) && suffix > high ? suffix : high
   }, 0)
 }

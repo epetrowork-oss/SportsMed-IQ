@@ -379,8 +379,12 @@ nothing to restore from. The backup file is the restore-from.
   (class, student) then had two people behind one key. Containing that
   downstream took three review rounds, each finding a different store or
   message that settled the question the class merge had declined. New student
-  IDs therefore carry three random characters after the sequence
-  (`P3-04K7M`), so two devices cannot issue the same one. Existing IDs are
+  IDs therefore carry three random **letters** after the sequence
+  (`P3-04KMR`), so two devices cannot issue the same one. Letters, not
+  alphanumerics: a digit there merges with the sequence in front of it, so
+  `P3-02` + `72A` reads as sequence 272 to anything parsing the leading
+  digits, and the class's next ID leaps into the hundreds. I and O are left
+  out too, since they read as 1 and 0 on a printed slip. Existing IDs are
   untouched — they are on slips in students' pockets and inside progress-
   profile keys — so the refusal above still matters for data issued before
   this, and stays.
