@@ -380,6 +380,13 @@ nothing to restore from. The backup file is the restore-from.
   apart. Unioning resurrects the deletion, bringing back a class and its PINs
   the teacher removed on another tab.
 
+  A refused write is tracked **per store**, not as one flag: a quota-limited
+  browser can reject a large class write and accept a small assignment write
+  moments later, and a single flag would read that second success as "all
+  clear" while the class change is still stranded. A store clears itself only
+  by writing successfully — which, under this rule, is also the moment its
+  stranded change is gone.
+
   So a refused write is reported instead (`src/lib/storageHealth.js`), and the
   teacher dashboard says plainly that this browser is not saving. The honest
   consequence, which the message states: work done during that outage lives in

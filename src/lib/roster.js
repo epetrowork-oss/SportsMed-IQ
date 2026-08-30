@@ -36,7 +36,7 @@ function save(next) {
     // class, and a backup of it, on top of writes that never happened.
     lastWriteOk = false
   }
-  reportStorageWrite(lastWriteOk)
+  reportStorageWrite('roster', lastWriteOk)
   listeners.forEach((fn) => fn())
 }
 

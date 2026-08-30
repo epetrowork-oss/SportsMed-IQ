@@ -16,21 +16,34 @@
 
 import { useSyncExternalStore } from 'react'
 
-let failing = false
+// Which stores currently hold a change localStorage refused. Per store, not
+// one flag: a quota-limited browser can reject a large class write and then
+// accept a small assignment write moments later, and a single flag would read
+// that second success as "all clear" while the class change is still
+// stranded. A store clears itself only by writing successfully -- which, under
+// "storage is the truth", is also the moment its stranded change is gone.
+const failing = new Set()
 const listeners = new Set()
 
 function notify() {
   listeners.forEach((fn) => fn())
 }
 
-export function reportStorageWrite(ok) {
-  if (failing === !ok) return
-  failing = !ok
+export function reportStorageWrite(store, ok) {
+  const was = failing.has(store)
+  if (ok === !was) return
+  if (ok) failing.delete(store)
+  else failing.add(store)
   notify()
 }
 
 export function storageIsFailing() {
-  return failing
+  return failing.size > 0
+}
+
+// Which stores are affected, for a message that can say what is at risk.
+export function failingStores() {
+  return [...failing]
 }
 
 function subscribe(fn) {
@@ -39,5 +52,5 @@ function subscribe(fn) {
 }
 
 export function useStorageHealth() {
-  return useSyncExternalStore(subscribe, () => failing)
+  return useSyncExternalStore(subscribe, () => failing.size > 0)
 }
