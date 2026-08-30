@@ -186,7 +186,7 @@ export function mergeRoster(incoming) {
   let added = 0
   let updated = 0
   const keyOf = (row) => (row.sid ? `sid:${row.cid ?? ''}:${row.sid}` : `id:${row.id}`)
-  commit((cur) => {
+  const next = commit((cur) => {
     added = 0
     updated = 0
     const byKey = new Map(cur.students.map((row) => [keyOf(row), row]))
@@ -207,8 +207,14 @@ export function mergeRoster(incoming) {
       students: [...byKey.values()].sort((a, b) => a.name.localeCompare(b.name)),
     }
   })
+  // Contents, not just presence: a rejected write leaves the older row under
+  // the same key, so its existence proves nothing about this restore.
   const stored = load().students
-  const persisted = list.every((row) => stored.some((s) => keyOf(s) === keyOf(row)))
+  const persisted = list.every((row) => {
+    const intended = next.students.find((s) => keyOf(s) === keyOf(row))
+    const got = stored.find((s) => keyOf(s) === keyOf(row))
+    return !!intended && !!got && (got.updatedAt ?? 0) >= (intended.updatedAt ?? 0)
+  })
   return { added, updated, persisted }
 }
 

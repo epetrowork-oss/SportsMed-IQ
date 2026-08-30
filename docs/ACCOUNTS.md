@@ -342,13 +342,21 @@ nothing to restore from. The backup file is the restore-from.
   rule, using `updatedAt`/`createdAt` to tell which copy is newer. When a
   class gains students its `rev` outruns both copies and its stored code is
   cleared, so a code generated before the restore cannot be handed out for the
-  restored roster.
+  restored roster. The ID sequence merges even when no student is restored: a
+  device that issued an ID and later deleted that student carries a `seq`
+  higher than its roster shows, and leaving the lower one in place would hand
+  the departed student's ID — which the teacher's roster still keys their
+  progress rows by — to the next student added.
 - **A write that never landed is not reported as a restore.** The stores keep
   a rejected `localStorage` write in memory on purpose, so the dashboard goes
   on working for the rest of the session — but a restore that claims success
   and vanishes on reload is a lie the teacher would only discover after
   throwing the file away. Each merge re-reads storage to confirm, and the
-  panel says plainly that the data reached this session only.
+  panel says plainly that the data reached this session only. The check
+  compares the persisted records against what the commit intended to write,
+  not merely whether the ids exist: a rejected write leaves the *old* record
+  in place under the same id, so its presence proves nothing about this
+  restore.
 - **The backup reads memory and storage, not just storage.** Persisted state
   can be ahead (another tab's write, whose event has not arrived) and module
   state can be ahead (a write storage refused). The snapshot is the union,

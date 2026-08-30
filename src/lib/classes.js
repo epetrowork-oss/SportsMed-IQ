@@ -434,7 +434,7 @@ export function mergeClasses(incoming) {
   const list = Array.isArray(incoming) ? incoming.filter((c) => c && typeof c.cid === 'string') : []
   let added = 0
   let updated = 0
-  commit((cur) => {
+  const next = commit((cur) => {
     const byCid = new Map(cur.classes.map((c) => [c.cid, c]))
     added = 0
     updated = 0
@@ -447,13 +447,26 @@ export function mergeClasses(incoming) {
       }
       const known = new Set(device.students.map((s) => s.sid))
       const restored = (cls.students ?? []).filter((s) => !known.has(s.sid))
-      if (restored.length === 0) continue
+      const students = restored.length > 0 ? [...device.students, ...restored] : device.students
+      // The sequence merges even when no student is restored, and that case
+      // is not hypothetical: a device that issued an ID and then deleted that
+      // student carries a `seq` higher than its roster shows. Restoring such a
+      // backup onto an older copy with the same remaining students would
+      // otherwise leave the lower sequence in place, and the next student
+      // added would be handed the departed student's ID -- which the roster
+      // still keys their progress rows by.
+      const seq = Math.max(device.seq ?? 0, cls.seq ?? 0, highestSeq(students))
+      if (restored.length === 0) {
+        // Nothing to report to the teacher, and the class code still
+        // describes this roster, so it is left alone.
+        if (seq !== (device.seq ?? 0)) byCid.set(cls.cid, { ...device, seq })
+        continue
+      }
       updated += 1
-      const students = [...device.students, ...restored]
       byCid.set(cls.cid, {
         ...device,
         students,
-        seq: Math.max(device.seq ?? 0, cls.seq ?? 0, highestSeq(students)),
+        seq,
         // The roster changed, so the code the teacher last generated no
         // longer describes this class -- same rule as every other roster
         // edit. rev outruns both copies so a code built before the restore
@@ -466,8 +479,21 @@ export function mergeClasses(incoming) {
     return { ...cur, classes: [...byCid.values()] }
   })
   // Re-read from storage: save() keeps a rejected write in memory on purpose,
-  // so module state is not evidence that anything was written down.
-  const persisted = list.every((cls) => load().classes.some((c) => c.cid === cls.cid))
+  // so module state is not evidence that anything was written down. Asking
+  // only whether the class id is there would not be evidence either -- a
+  // rejected write leaves the OLD class in place under the same id, and the
+  // students this restore added would vanish on reload while the teacher was
+  // told it had worked. Compare against what the commit intended to write.
+  const stored = load().classes
+  const persisted = list.every((cls) => {
+    const intended = next.classes.find((c) => c.cid === cls.cid)
+    const got = stored.find((c) => c.cid === cls.cid)
+    if (!intended || !got) return false
+    return (
+      (got.seq ?? 0) >= (intended.seq ?? 0) &&
+      intended.students.every((s) => got.students.some((g) => g.sid === s.sid))
+    )
+  })
   return { added, updated, persisted }
 }
 

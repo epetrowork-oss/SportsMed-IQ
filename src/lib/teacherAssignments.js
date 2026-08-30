@@ -149,7 +149,7 @@ export function mergeTeacherAssignments(incoming) {
   let added = 0
   let updated = 0
   const key = (entry) => entry.name.trim().toLowerCase()
-  commit((cur) => {
+  const next = commit((cur) => {
     added = 0
     updated = 0
     const assignments = [...cur.assignments]
@@ -165,8 +165,17 @@ export function mergeTeacherAssignments(incoming) {
     }
     return { assignments }
   })
+  // Contents, not just presence -- see mergeRoster.
   const stored = load().assignments
-  const persisted = list.every((entry) => stored.some((a) => key(a) === key(entry)))
+  const persisted = list.every((entry) => {
+    const intended = next.assignments.find((a) => key(a) === key(entry))
+    const got = stored.find((a) => key(a) === key(entry))
+    return (
+      !!intended &&
+      !!got &&
+      String(got.createdAt ?? '') >= String(intended.createdAt ?? '')
+    )
+  })
   return { added, updated, persisted }
 }
 
