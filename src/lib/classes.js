@@ -496,16 +496,20 @@ function highestSeq(students) {
  * of a student it already has also means a restore cannot quietly undo a PIN
  * reset: the PIN on the slip in the student's pocket stays the one that works.
  *
- * Returns { added, updated, conflicts, persisted }. `updated` counts classes
- * that gained students back; `conflicts` lists students the restore refused to
- * guess about (see below); `persisted` is false when the write did not reach
- * localStorage, which save() alone would swallow.
+ * Returns { added, updated, conflicts, duplicateNames, persisted }. `updated`
+ * counts classes that gained students back; `conflicts` lists students the
+ * restore refused to guess about (see below); `duplicateNames` lists login
+ * names that now stand for two students in one class; `persisted` is false
+ * when the write did not reach localStorage, which save() alone would
+ * swallow.
  */
 export function mergeClasses(incoming) {
   const list = Array.isArray(incoming) ? incoming.filter((c) => c && typeof c.cid === 'string') : []
   let added = 0
   let updated = 0
   let conflicts = []
+  let duplicateNames = []
+  const touched = new Set()
   commit((cur) => {
     // `cur` is state re-read from storage at write time: the same truth the
     // snapshot uses, and what keeps this safe against another tab.
@@ -513,10 +517,12 @@ export function mergeClasses(incoming) {
     added = 0
     updated = 0
     conflicts = []
+    touched.clear()
     for (const cls of list) {
       const device = byCid.get(cls.cid)
       if (!device) {
         added += 1
+        touched.add(cls.cid)
         byCid.set(cls.cid, { ...cls, settings: normalizeSettings(cls.settings) })
         continue
       }
@@ -558,6 +564,7 @@ export function mergeClasses(incoming) {
         continue
       }
       updated += 1
+      touched.add(cls.cid)
       byCid.set(cls.cid, {
         ...device,
         students,
@@ -571,6 +578,36 @@ export function mergeClasses(incoming) {
         codeAt: null,
       })
     }
+    // addStudent forbids two students sharing a login name, but a restore can
+    // still produce one: two devices that both hold this class each added a
+    // "Sam", and their IDs now differ by device tag, so both are legitimately
+    // restored. The sign-in list would then show two identical options, and a
+    // student picking the wrong one has their perfectly good PIN rejected.
+    // Reported rather than reconciled -- they may be one person added twice or
+    // two people who share a first name, and only the teacher knows which.
+    // Only classes this restore actually changed: the message says two
+    // students "now" share a name, and repeating it on every later restore of
+    // an unrelated file would be noise about a clash the teacher has already
+    // been told about and may have decided to live with.
+    duplicateNames = []
+    for (const cid of touched) {
+      const cls = byCid.get(cid)
+      if (!cls) continue
+      const byName = new Map()
+      for (const student of cls.students) {
+        const key = student.name.trim().toLowerCase()
+        byName.set(key, [...(byName.get(key) ?? []), student.sid])
+      }
+      for (const [, sids] of byName) {
+        if (sids.length > 1) {
+          duplicateNames.push({
+            className: cls.name,
+            name: cls.students.find((st) => st.sid === sids[0]).name,
+            sids,
+          })
+        }
+      }
+    }
     return { ...cur, classes: [...byCid.values()] }
   })
   // Not re-read and compared: save() knows whether its own write reached
@@ -579,7 +616,7 @@ export function mergeClasses(incoming) {
   // the sequence, the whole record -- was a guess about which differences
   // matter, and the first two were wrong.
   const persisted = lastWriteOk
-  return { added, updated, conflicts, persisted }
+  return { added, updated, conflicts, duplicateNames, persisted }
 }
 
 // Wipes this store. Used when a teacher releases the device: their data must

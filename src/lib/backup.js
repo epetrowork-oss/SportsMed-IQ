@@ -231,6 +231,10 @@ export async function restoreBackup(text, passcode) {
     // person, which happens when two devices both restored a class and each
     // added someone next. Reported rather than silently dropped.
     conflicts: classes.conflicts ?? [],
+    // Login names that now stand for two students in one class -- legitimate
+    // after a restore, but the sign-in list cannot tell them apart on name
+    // alone, so the teacher has to know.
+    duplicateNames: classes.duplicateNames ?? [],
     // Any one store failing to write leaves the device partly restored, which
     // is exactly the state the teacher must not mistake for a finished one.
     persisted: classes.persisted && students.persisted && assignments.persisted,

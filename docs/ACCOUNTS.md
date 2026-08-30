@@ -421,6 +421,17 @@ nothing to restore from. The backup file is the restore-from.
   profile keys — so the refusal above still matters for data issued before
   this, and stays.
 
+- **Two students can end up sharing a login name, and the sign-in list says
+  so.** `addStudent` forbids duplicate names within a class, but it only sees
+  one device: two devices holding the same class can each add a "Sam", and
+  with per-device ID tags both are legitimately restored. They may be one
+  person added twice or two people who share a first name, and only the
+  teacher knows which — so both are kept, the restore reports the clash
+  naming the class and both IDs, and the sign-in list shows the student ID
+  beside the name **only** for the names that collide. That is what lets each
+  student pick their own entry using the slip in their hand, which carries
+  exactly that ID.
+
   The roster's own rule is simpler than a refusal: **a row this device holds
   is never overwritten by a restore**, which needs no lineage reasoning and
   cannot be wrong in that direction. Consulting the class merge's conflicts
