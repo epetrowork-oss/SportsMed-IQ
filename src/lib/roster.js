@@ -179,21 +179,38 @@ export function snapshotRoster() {
   return load().students
 }
 
-// Restores imported student rows, keyed by student ID where the row has one
-// and by row id for pre-class-login rows. A row this device already has is
-// kept: it was imported from a code at least as new as the backup's, and the
-// teacher's dashboard should not step backwards on a restore. Returns
-// { added, updated, persisted }.
-export function mergeRoster(incoming) {
+/**
+ * Restores imported student rows, keyed by student ID where the row has one
+ * and by row id for pre-class-login rows. A row this device already has is
+ * kept: it was imported from a code at least as new as the backup's, and the
+ * teacher's dashboard should not step backwards on a restore.
+ *
+ * `skip` carries the (cid, sid) pairs the class merge refused to guess about
+ * -- the same student ID standing for two different people on two devices.
+ * Without it this store would quietly settle what that one declined to: these
+ * rows key by exactly that pair, so the backup's row would overwrite the name
+ * and progress of whoever holds that ID here, or file one student's work
+ * under another's. A refusal in one store has to be a refusal in both.
+ *
+ * Returns { added, updated, skipped, persisted }.
+ */
+export function mergeRoster(incoming, skip = new Set()) {
   const list = Array.isArray(incoming) ? incoming.filter((s) => s && typeof s.name === 'string') : []
   let added = 0
   let updated = 0
+  let skipped = 0
   const keyOf = (row) => (row.sid ? `sid:${row.cid ?? ''}:${row.sid}` : `id:${row.id}`)
+  const conflicted = (row) => !!row.sid && skip.has(`${row.cid ?? ''}:${row.sid}`)
   commit((cur) => {
     added = 0
     updated = 0
+    skipped = 0
     const byKey = new Map(cur.students.map((row) => [keyOf(row), row]))
     for (const row of list) {
+      if (conflicted(row)) {
+        skipped += 1
+        continue
+      }
       const key = keyOf(row)
       const device = byKey.get(key)
       if (!device) {
@@ -212,7 +229,7 @@ export function mergeRoster(incoming) {
   })
   // The write itself says whether it landed -- see mergeClasses.
   const persisted = lastWriteOk
-  return { added, updated, persisted }
+  return { added, updated, skipped, persisted }
 }
 
 // Wipes this store. Used when a teacher releases the device: their data must

@@ -480,6 +480,7 @@ export function mergeClasses(incoming) {
           // the incoming student's name, PIN and salt without a word; this
           // says so instead, and changes nothing.
           conflicts.push({
+            cid: cls.cid,
             className: device.name,
             sid: student.sid,
             onDevice: mine.name,

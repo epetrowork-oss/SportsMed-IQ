@@ -175,7 +175,8 @@ export async function readBackup(text, passcode) {
  * backup never had, and cannot undo a PIN reset made since it.
  *
  * Returns { at, classes, students, assignments, conflicts, persisted } with
- * { added, updated } counts per kind, so the teacher is told what landed.
+ * { added, updated } counts per kind (and `skipped` for roster rows held back
+ * by a conflict), so the teacher is told what landed.
  *
  * `persisted` is false when a merge did not reach localStorage. The stores
  * swallow a rejected write on purpose -- keeping it in memory means the
@@ -186,7 +187,15 @@ export async function readBackup(text, passcode) {
 export async function restoreBackup(text, passcode) {
   const backup = await readBackup(text, passcode)
   const classes = mergeClasses(backup.classes)
-  const students = mergeRoster(backup.roster)
+  // A student ID the class merge refused to guess about must be refused here
+  // too. Roster rows key by exactly that (class, student) pair, so restoring
+  // one would file the backup student's name and progress under whoever holds
+  // that ID on this device -- settling in one store the question the other
+  // deliberately declined to answer.
+  const students = mergeRoster(
+    backup.roster,
+    new Set(classes.conflicts.map((c) => `${c.cid}:${c.sid}`)),
+  )
   const assignments = mergeTeacherAssignments(backup.assignments)
   return {
     at: backup.at,

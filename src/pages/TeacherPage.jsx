@@ -668,7 +668,7 @@ function BackupPanel() {
       const clash = summary.conflicts.length
         ? ` ${summary.conflicts.length} student${summary.conflicts.length === 1 ? ' was' : 's were'} left out because that student ID belongs to someone else here: ${summary.conflicts
             .map((c) => `${c.sid} is ${c.onDevice} on this device and ${c.inBackup} in the backup`)
-            .join('; ')}. Keeping that class on its own device avoids the clash. If you do need them here, first have them open Sync on their own device and copy their progress code — adding them here gives them a new student ID and an empty profile, and pasting that code back in after they sign in is what brings their work across.`
+            .join('; ')}${summary.students.skipped ? `, and ${summary.students.skipped} imported progress row${summary.students.skipped === 1 ? ' was' : 's were'} held back for the same reason` : ''}. Keeping that class on its own device avoids the clash. If you do need them here, first have them open Sync on their own device and copy their progress code — adding them here gives them a new student ID and an empty profile, and pasting that code back in after they sign in is what brings their work across.`
         : ''
       setRestoreMsg(
         !summary.persisted

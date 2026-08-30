@@ -366,6 +366,12 @@ nothing to restore from. The backup file is the restore-from.
   device, before their old login goes away**, and paste it back after signing
   in under the new ID. That path merges best-of-both and is the only one that
   carries the work across.
+
+  A refusal in one store is a refusal in **all** of them. Roster rows key by
+  the same (class, student) pair, so restoring the backup's row for a
+  conflicted ID would file one student's name and progress under the other —
+  settling in the roster the question the class merge deliberately declined.
+  Those rows are held back and counted, and the panel says so.
 - **A write that never landed is not reported as a restore.** `save()` records
   whether its own `setItem` reached localStorage, and a merge reports that
   directly. Nothing is inferred by re-reading and comparing: every comparison
