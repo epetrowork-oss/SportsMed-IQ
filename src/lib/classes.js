@@ -380,6 +380,45 @@ if (typeof window !== 'undefined') {
   })
 }
 
+// --- backup ---
+
+// A plain snapshot for backup.js, read fresh from storage rather than from
+// this tab's module state: another tab may have added a class whose storage
+// event has not arrived, and a backup that silently omits it is worse than
+// no backup at all.
+export function snapshotClasses() {
+  return load().classes
+}
+
+// Restores classes from a backup. Upserts by class id -- the backup's copy
+// wins for a class this device already has, which is what "restore" means --
+// and leaves every other class alone, so restoring onto a device that is
+// already teaching does not erase its work. Returns { added, replaced }.
+export function mergeClasses(incoming) {
+  const list = Array.isArray(incoming) ? incoming.filter((c) => c && typeof c.cid === 'string') : []
+  let added = 0
+  let replaced = 0
+  commit((cur) => {
+    const byCid = new Map(cur.classes.map((c) => [c.cid, c]))
+    added = 0
+    replaced = 0
+    for (const cls of list) {
+      if (byCid.has(cls.cid)) replaced += 1
+      else added += 1
+      // rev is bumped past whatever this device had, so a code generated
+      // before the restore cannot be published over the restored roster.
+      const previous = byCid.get(cls.cid)
+      byCid.set(cls.cid, {
+        ...cls,
+        rev: Math.max(cls.rev ?? 0, (previous?.rev ?? 0) + 1),
+        settings: normalizeSettings(cls.settings),
+      })
+    }
+    return { ...cur, classes: [...byCid.values()] }
+  })
+  return { added, replaced }
+}
+
 // Wipes this store. Used when a teacher releases the device: their data must
 // not outlive the credential that protected it.
 export function clearAllClasses() {

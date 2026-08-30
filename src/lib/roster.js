@@ -162,6 +162,38 @@ if (typeof window !== 'undefined') {
   })
 }
 
+// --- backup ---
+
+// Read fresh from storage, not from this tab's snapshot: see snapshotClasses.
+export function snapshotRoster() {
+  return load().students
+}
+
+// Restores imported student rows. Upserts by student ID where the row has
+// one, falling back to the row id for pre-class-login rows; the backup's copy
+// wins. Returns { added, replaced }.
+export function mergeRoster(incoming) {
+  const list = Array.isArray(incoming) ? incoming.filter((s) => s && typeof s.name === 'string') : []
+  let added = 0
+  let replaced = 0
+  commit((cur) => {
+    added = 0
+    replaced = 0
+    const keyOf = (row) => (row.sid ? `sid:${row.cid ?? ''}:${row.sid}` : `id:${row.id}`)
+    const byKey = new Map(cur.students.map((row) => [keyOf(row), row]))
+    for (const row of list) {
+      const key = keyOf(row)
+      if (byKey.has(key)) replaced += 1
+      else added += 1
+      byKey.set(key, row)
+    }
+    return {
+      students: [...byKey.values()].sort((a, b) => a.name.localeCompare(b.name)),
+    }
+  })
+  return { added, replaced }
+}
+
 // Wipes this store. Used when a teacher releases the device: their data must
 // not outlive the credential that protected it.
 export function clearRoster() {

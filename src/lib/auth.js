@@ -204,6 +204,25 @@ export function signOut() {
   commit((cur) => ({ ...cur, adminUnlocked: false, teacherUnlocked: false }))
 }
 
+// Checks a passcode against this device's stored verifiers WITHOUT unlocking
+// anything. The backup file is encrypted with the passcode, so a typo at
+// export time would produce a file nobody can ever open — this is what makes
+// that impossible. Returns 'admin' or 'teacher' (whichever matched), and
+// throws a readable error when neither does.
+export async function verifyDevicePasscode(passcode) {
+  const secret = (passcode ?? '').trim()
+  if (!secret) throw new Error('Type the passcode for this device.')
+  // Read fresh: a passcode changed in another tab must not verify against a
+  // stale record here.
+  const cur = load()
+  if (!cur.admin && !cur.teacher) {
+    throw new Error('No passcode has been set up on this device yet.')
+  }
+  if (cur.admin && (await deriveHex(cur.admin.salt, secret)) === cur.admin.hash) return 'admin'
+  if (cur.teacher && (await deriveHex(cur.teacher.salt, secret)) === cur.teacher.hash) return 'teacher'
+  throw new Error("That passcode doesn't match this device's admin or teacher passcode.")
+}
+
 // --- teacher access codes ---
 
 // Admin-side: create a code for a named teacher and remember it so it can be

@@ -309,6 +309,43 @@ are permanent for this reason — a salt regenerated on every code build would
 make the old key unreproducible. Profiles holding no actual work are ignored,
 so an abandoned login never triggers a prompt the student cannot satisfy.
 
+## Backing up a teacher's device (`src/lib/backup.js`)
+
+Everything a teacher has lives in one browser's localStorage on one device.
+With no server behind it, a wiped Chromebook or a replaced laptop takes the
+classes, the rosters, the plain PINs and the settings with it, and there is
+nothing to restore from. The backup file is the restore-from.
+
+- **Encrypted with the device's own passcode** — AES-GCM, key derived by
+  PBKDF2-SHA256 at the same 150k iterations as everything else here. A plain
+  backup would be a file listing every student's login name and PIN sitting in
+  a Downloads folder or a Drive share. Using the passcode the teacher already
+  signs in with costs them no new secret to remember.
+- **The passcode is verified against the device's stored verifier before the
+  file is written** (`verifyDevicePasscode` in `auth.js`, which checks without
+  unlocking anything). A typo at export time would otherwise produce a file
+  nobody could ever open.
+- **It carries work, never credentials.** Classes, roster rows and saved
+  assignments; not the auth record. Signing in on the replacement device stays
+  a deliberate setup step — admin passcode, or a teacher access code — so a
+  copied backup file can never provision an admin by itself. The restored
+  device keeps its own passcode; the backup keeps opening with the old one.
+- **Restore merges, it does not replace.** Classes upsert by class id, roster
+  rows by student id, assignments by name; anything the backup never had is
+  left alone, so restoring onto a device that is already teaching cannot erase
+  its work. A restored class's `rev` is bumped past whatever the device had,
+  so a class code generated before the restore cannot be published over the
+  restored roster. The teacher is told what landed: added and refreshed counts
+  per kind.
+- **Failures are told apart.** A file that is not a backup says so; a wrong
+  passcode or a tampered file says that instead (AES-GCM authenticates as it
+  decrypts, and nothing is written either way).
+
+There is still no account recovery, and now there is one more thing to write
+down: **a backup is only as good as the passcode it was made with.** If both
+the device and the passcode are gone, so is the data — by design, since that
+is the same property that makes the file safe to keep in Drive.
+
 ## Office-suite exports (`src/lib/exports.js`)
 
 Everything is CSV — the one dependency-free format Excel, Word, Google

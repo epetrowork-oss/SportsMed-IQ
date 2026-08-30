@@ -13,6 +13,7 @@ import { isComplete, isFlagged, flagReasons, formatMinSec, statusInfo } from '..
 import StatusIcon from '../components/StatusIcon.jsx'
 import QrCode from '../components/QrCode.jsx'
 import { printClassJoinSheet } from '../lib/print.js'
+import { createBackup, downloadBackup, restoreBackup } from '../lib/backup.js'
 import mockRoster from '../content/mock/students.json'
 import {
   useAuth,
@@ -608,6 +609,144 @@ function AdminPanel({ issued }) {
 // refuses while locked, and the sign-in form is gone once the teacher is in),
 // and an admin-managed device can never take a replacement teacher after a
 // release (redemption needs the admin's session, which hides the form).
+// Everything a teacher has lives on this one device. This is the only way to
+// get it back after a wipe, a reset Chromebook, or a replaced laptop -- there
+// is no server holding a copy.
+function BackupPanel() {
+  const [savePass, setSavePass] = useState('')
+  const [saveMsg, setSaveMsg] = useState(null)
+  const [saving, setSaving] = useState(false)
+
+  const [file, setFile] = useState(null)
+  const [restorePass, setRestorePass] = useState('')
+  const [restoreMsg, setRestoreMsg] = useState(null)
+  const [restoring, setRestoring] = useState(false)
+
+  async function save() {
+    setSaving(true)
+    try {
+      const backup = await createBackup(savePass)
+      downloadBackup(backup)
+      setSavePass('')
+      const { classes, students, rosterRows } = backup.counts
+      setSaveMsg({
+        ok: true,
+        message: `Saved ${backup.filename} — ${classes} class${classes === 1 ? '' : 'es'}, ${students} student${students === 1 ? '' : 's'} with their PINs, ${rosterRows} imported progress row${rosterRows === 1 ? '' : 's'}. Keep it somewhere you will still have if this device is gone.`,
+      })
+    } catch (err) {
+      setSaveMsg({ ok: false, message: err.message })
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  async function restore() {
+    setRestoring(true)
+    try {
+      const text = await file.text()
+      const summary = await restoreBackup(text, restorePass)
+      setRestorePass('')
+      const made = new Date(summary.at)
+      const part = (one, many, counts) =>
+        `${counts.added} ${counts.added === 1 ? one : many} added, ${counts.replaced} refreshed`
+      setRestoreMsg({
+        ok: true,
+        message: `Restored the backup from ${Number.isNaN(made.getTime()) ? 'an earlier device' : made.toLocaleString()} — ${part('class', 'classes', summary.classes)}; ${part('student row', 'student rows', summary.students)}; ${part('assignment', 'assignments', summary.assignments)}.`,
+      })
+    } catch (err) {
+      setRestoreMsg({ ok: false, message: err.message })
+    } finally {
+      setRestoring(false)
+    }
+  }
+
+  return (
+    <section className="backup-panel">
+      <h2>Back up this device</h2>
+      <p className="field-hint">
+        Your classes, rosters, PINs and settings are stored on this device only — there is no
+        online copy. If it is wiped, reset or replaced, a backup file is the only way to get
+        them back. The file is encrypted with this device&apos;s passcode, so it is safe to keep
+        in Drive or on a school share; without that passcode nobody can open it, and that
+        includes you.
+      </p>
+
+      <h3>Save a backup</h3>
+      <div className="class-code-entry-row">
+        <label className="sr-only" htmlFor="backup-pass">
+          This device&apos;s passcode
+        </label>
+        <input
+          id="backup-pass"
+          className="text-input"
+          type="password"
+          autoComplete="current-password"
+          placeholder="This device's passcode"
+          value={savePass}
+          onChange={(e) => {
+            setSavePass(e.target.value)
+            setSaveMsg(null)
+          }}
+        />
+        <button className="button button-primary" onClick={save} disabled={!savePass || saving}>
+          {saving ? 'Saving…' : 'Save backup file'}
+        </button>
+      </div>
+      {saveMsg && (
+        <p className={saveMsg.ok ? 'import-ok' : 'import-error'} role="status">
+          {saveMsg.message}
+        </p>
+      )}
+
+      <h3>Restore from a backup</h3>
+      <p className="field-hint">
+        Adds the backup&apos;s classes to this device and refreshes any it already has. Work that
+        was never in the backup is left alone. Sign-in passcodes are not restored — this device
+        keeps its own.
+      </p>
+      <input
+        className="text-input"
+        type="file"
+        accept="application/json,.json"
+        aria-label="Backup file"
+        onChange={(e) => {
+          setFile(e.target.files?.[0] ?? null)
+          setRestoreMsg(null)
+        }}
+      />
+      <div className="class-code-entry-row">
+        <label className="sr-only" htmlFor="restore-pass">
+          The passcode that backup was made with
+        </label>
+        <input
+          id="restore-pass"
+          className="text-input"
+          type="password"
+          autoComplete="current-password"
+          placeholder="The passcode that backup was made with"
+          value={restorePass}
+          onChange={(e) => {
+            setRestorePass(e.target.value)
+            setRestoreMsg(null)
+          }}
+        />
+        <button
+          className="button button-primary"
+          onClick={restore}
+          disabled={!file || !restorePass || restoring}
+        >
+          {restoring ? 'Restoring…' : 'Restore'}
+        </button>
+      </div>
+      {restoreMsg && (
+        <p className={restoreMsg.ok ? 'import-ok' : 'import-error'} role="status">
+          {restoreMsg.message}
+        </p>
+      )}
+    </section>
+  )
+}
+
 function DeviceSetupPanel({ auth }) {
   const [teacherCode, setTeacherCode] = useState('')
   const [teacherPass, setTeacherPass] = useState('')
@@ -2181,6 +2320,7 @@ function TeacherDashboard({ auth }) {
       <ClassManager />
       <TeacherAssignments />
       <AddStudentForm />
+      <BackupPanel />
     </div>
   )
 }

@@ -123,6 +123,41 @@ if (typeof window !== 'undefined') {
   })
 }
 
+// --- backup ---
+
+// Read fresh from storage, not from this tab's snapshot: another tab may have
+// saved an assignment whose storage event has not arrived here yet.
+export function snapshotTeacherAssignments() {
+  return load().assignments
+}
+
+// Restores saved assignments from a backup, upserting by the same
+// case-insensitive name key saveTeacherAssignment uses. Returns
+// { added, replaced }.
+export function mergeTeacherAssignments(incoming) {
+  const list = Array.isArray(incoming) ? incoming.filter((a) => a && typeof a.name === 'string') : []
+  let added = 0
+  let replaced = 0
+  commit((cur) => {
+    added = 0
+    replaced = 0
+    const assignments = [...cur.assignments]
+    for (const entry of list) {
+      const key = entry.name.trim().toLowerCase()
+      const at = assignments.findIndex((a) => a.name.trim().toLowerCase() === key)
+      if (at >= 0) {
+        assignments[at] = entry
+        replaced += 1
+      } else {
+        assignments.push(entry)
+        added += 1
+      }
+    }
+    return { assignments }
+  })
+  return { added, replaced }
+}
+
 // Wipes this store. Used when a teacher releases the device: their data must
 // not outlive the credential that protected it.
 export function clearTeacherAssignments() {
