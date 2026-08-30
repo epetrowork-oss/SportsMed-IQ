@@ -234,33 +234,45 @@ function useJoinLink(onImported) {
   const [params, setParams] = useSearchParams()
   const [result, setResult] = useState(null) // { ok, message }
   const code = params.get(JOIN_PARAM)
-  // The import is async and StrictMode runs effects twice in development;
-  // without this the same code is imported twice and the second run reports
-  // over the first.
-  const handled = useRef('')
+  // Guards a second import of the same code: the effect can run again while
+  // the first is still in flight (StrictMode mounts, unmounts and remounts
+  // effects in development, and `setParams` changes identity as the query
+  // does). What it must NOT do is tie the import's *results* to one mount —
+  // an earlier version cancelled on cleanup, and since the cleanup lands
+  // before the import resolves, the class was imported while the message,
+  // the auto-pick and the URL cleanup were all suppressed. The code then sat
+  // in the address bar and re-imported on every reload.
+  const started = useRef('')
+  // Whether this page is still the one on screen. Only the URL rewrite
+  // consults it: a student who navigated away mid-import must not have the
+  // next page's query string cleared out from under them. State updates
+  // after unmount are no-ops, so they need no guard.
+  const onScreen = useRef(false)
 
   useEffect(() => {
-    if (!code || handled.current === code) return
-    handled.current = code
-    let cancelled = false
+    onScreen.current = true
+    return () => {
+      onScreen.current = false
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!code || started.current === code) return
+    started.current = code
     ;(async () => {
       try {
         const cls = await importClassLoginCode(code)
-        if (cancelled) return
         setResult({ ok: true, message: `${cls.name} added — now pick your name and type your PIN.` })
         onImported?.(cls.cid)
       } catch (err) {
-        if (!cancelled) setResult({ ok: false, message: err.message })
+        setResult({ ok: false, message: err.message })
       } finally {
         // Drop the code from the address bar either way: it is long, it is
         // not a secret worth leaving in history, and a reload should not
         // replay the import.
-        if (!cancelled) setParams({}, { replace: true })
+        if (onScreen.current) setParams({}, { replace: true })
       }
     })()
-    return () => {
-      cancelled = true
-    }
   }, [code, onImported, setParams])
 
   return result
