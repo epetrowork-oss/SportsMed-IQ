@@ -321,6 +321,13 @@ nothing to restore from. The backup file is the restore-from.
   backup would be a file listing every student's login name and PIN sitting in
   a Downloads folder or a Drive share. Using the passcode the teacher already
   signs in with costs them no new secret to remember.
+- **The verification is confirmed after the derivation, not before.** Each
+  PBKDF2 check takes long enough for another tab to release the teacher or
+  change a passcode while it runs, and the caller downloads every class on the
+  device — so answering "yes" against a record captured before the await would
+  hand that data out on a credential the admin had just revoked. The match is
+  checked against state re-read afterwards, and a record that moved under the
+  check is refused outright.
 - **The passcode is verified against the device's stored verifier before the
   file is written** (`verifyDevicePasscode` in `auth.js`, which checks without
   unlocking anything). A typo at export time would otherwise produce a file

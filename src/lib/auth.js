@@ -209,17 +209,35 @@ export function signOut() {
 // export time would produce a file nobody can ever open — this is what makes
 // that impossible. Returns 'admin' or 'teacher' (whichever matched), and
 // throws a readable error when neither does.
+//
+// Each derivation takes 150k PBKDF2 iterations, which is long enough for
+// another tab to release the teacher or replace a passcode while it runs. A
+// record captured before the await is therefore not evidence afterwards: the
+// caller here downloads every class on the device, so answering "yes" against
+// a credential that has since been revoked would hand that data out on the
+// strength of a passcode the admin had just taken away. The match is confirmed
+// against state re-read AFTER the derivation, and a record that moved under us
+// is refused outright rather than compared to a stale one.
 export async function verifyDevicePasscode(passcode) {
   const secret = (passcode ?? '').trim()
   if (!secret) throw new Error('Type the passcode for this device.')
-  // Read fresh: a passcode changed in another tab must not verify against a
-  // stale record here.
-  const cur = load()
-  if (!cur.admin && !cur.teacher) {
+  const before = load()
+  if (!before.admin && !before.teacher) {
     throw new Error('No passcode has been set up on this device yet.')
   }
-  if (cur.admin && (await deriveHex(cur.admin.salt, secret)) === cur.admin.hash) return 'admin'
-  if (cur.teacher && (await deriveHex(cur.teacher.salt, secret)) === cur.teacher.hash) return 'teacher'
+  // Admin first: on a device holding both, the admin's passcode answers for it.
+  for (const role of ['admin', 'teacher']) {
+    const captured = before[role]
+    if (!captured) continue
+    const hash = await deriveHex(captured.salt, secret)
+    const current = load()[role]
+    if (!current || current.salt !== captured.salt || current.hash !== captured.hash) {
+      throw new Error(
+        "This device's sign-in changed while that was being checked — sign in again and retry.",
+      )
+    }
+    if (hash === current.hash) return role
+  }
   throw new Error("That passcode doesn't match this device's admin or teacher passcode.")
 }
 
