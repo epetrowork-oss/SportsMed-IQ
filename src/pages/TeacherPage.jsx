@@ -651,13 +651,23 @@ function BackupPanel() {
         `${counts.added} ${counts.added === 1 ? one : many} added, ${counts.updated} updated`
       const landed = `${part('class', 'classes', summary.classes)}; ${part('student row', 'student rows', summary.students)}; ${part('assignment', 'assignments', summary.assignments)}`
       const from = Number.isNaN(made.getTime()) ? 'an earlier device' : made.toLocaleString()
+      // A conflict is not a failure, but it is not something to bury under a
+      // tick either: the teacher has to decide, and can only do that if the
+      // message names who is involved.
+      const clash = summary.conflicts.length
+        ? ` ${summary.conflicts.length} student${summary.conflicts.length === 1 ? ' was' : 's were'} left out because that student ID is already someone else here: ${summary.conflicts
+            .map((c) => `${c.sid} is ${c.onDevice} on this device and ${c.inBackup} in the backup`)
+            .join('; ')}. Add them by hand if you need them.`
+        : ''
       setRestoreMsg(
-        summary.persisted
-          ? { ok: true, message: `Restored the backup from ${from} — ${landed}.` }
-          : {
+        !summary.persisted
+          ? {
               ok: false,
               message: `Restored into this session only — ${landed} — but this browser refused to save it, so a reload will lose it. It may be out of storage or in a private window. Keep the backup file, free up space or use a normal window, then restore again.`,
-            },
+            }
+          : summary.conflicts.length
+            ? { ok: false, message: `Restored the backup from ${from} — ${landed}.${clash}` }
+            : { ok: true, message: `Restored the backup from ${from} — ${landed}.` },
       )
     } catch (err) {
       setRestoreMsg({ ok: false, message: err.message })

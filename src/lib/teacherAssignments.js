@@ -149,10 +149,11 @@ export function mergeTeacherAssignments(incoming) {
   let added = 0
   let updated = 0
   const key = (entry) => entry.name.trim().toLowerCase()
-  const next = commit((cur) => {
+  const next = commit(() => {
     added = 0
     updated = 0
-    const assignments = [...cur.assignments]
+    // Built from the union, not from `cur` alone -- see mergeClasses.
+    const assignments = [...snapshotTeacherAssignments()]
     for (const entry of list) {
       const at = assignments.findIndex((a) => key(a) === key(entry))
       if (at < 0) {

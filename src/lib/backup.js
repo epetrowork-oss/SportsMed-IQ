@@ -174,7 +174,7 @@ export async function readBackup(text, passcode) {
  * So restoring onto a device that is already teaching cannot erase work the
  * backup never had, and cannot undo a PIN reset made since it.
  *
- * Returns { at, classes, students, assignments, persisted } with
+ * Returns { at, classes, students, assignments, conflicts, persisted } with
  * { added, updated } counts per kind, so the teacher is told what landed.
  *
  * `persisted` is false when a merge did not reach localStorage. The stores
@@ -193,6 +193,10 @@ export async function restoreBackup(text, passcode) {
     classes,
     students,
     assignments,
+    // Students the restore would not guess about: same student ID, different
+    // person, which happens when two devices both restored a class and each
+    // added someone next. Reported rather than silently dropped.
+    conflicts: classes.conflicts ?? [],
     // Any one store failing to write leaves the device partly restored, which
     // is exactly the state the teacher must not mistake for a finished one.
     persisted: classes.persisted && students.persisted && assignments.persisted,

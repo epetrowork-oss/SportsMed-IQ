@@ -402,6 +402,15 @@ export function snapshotClasses() {
   return [...byCid.values()]
 }
 
+// Whether two roster records are the same person. The salt is permanent and
+// random per student (see addStudent), which makes it the identity that
+// survives a PIN reset, a rename, and a trip through a backup file. Records
+// old enough to predate salts fall back to the login name.
+function sameStudent(a, b) {
+  if (a.salt && b.salt) return a.salt === b.salt
+  return a.name.trim().toLowerCase() === b.name.trim().toLowerCase()
+}
+
 // Highest sequence number any of these students was issued, so a merged class
 // never hands out an ID that is already on a slip in someone's pocket.
 function highestSeq(students) {
@@ -426,18 +435,26 @@ function highestSeq(students) {
  * of a student it already has also means a restore cannot quietly undo a PIN
  * reset: the PIN on the slip in the student's pocket stays the one that works.
  *
- * Returns { added, updated, persisted } -- `updated` counts classes that
- * gained students back, and `persisted` is false when the write did not reach
+ * Returns { added, updated, conflicts, persisted }. `updated` counts classes
+ * that gained students back; `conflicts` lists students the restore refused to
+ * guess about (see below); `persisted` is false when the write did not reach
  * localStorage, which save() alone would swallow.
  */
 export function mergeClasses(incoming) {
   const list = Array.isArray(incoming) ? incoming.filter((c) => c && typeof c.cid === 'string') : []
   let added = 0
   let updated = 0
+  let conflicts = []
   const next = commit((cur) => {
-    const byCid = new Map(cur.classes.map((c) => [c.cid, c]))
+    // The map is built from the union, not from `cur` alone. commit hands the updater state re-read from
+    // storage, which is right for concurrency but wrong on its own here: a
+    // write storage rejected lives only in module state, and rebuilding the
+    // map from storage alone would drop it -- a restore erasing work that was
+    // on screen a moment ago, which is exactly what "never removes" forbids.
+    const byCid = new Map(snapshotClasses().map((c) => [c.cid, c]))
     added = 0
     updated = 0
+    conflicts = []
     for (const cls of list) {
       const device = byCid.get(cls.cid)
       if (!device) {
@@ -445,8 +462,27 @@ export function mergeClasses(incoming) {
         byCid.set(cls.cid, { ...cls, settings: normalizeSettings(cls.settings) })
         continue
       }
-      const known = new Set(device.students.map((s) => s.sid))
-      const restored = (cls.students ?? []).filter((s) => !known.has(s.sid))
+      const held = new Map(device.students.map((s) => [s.sid, s]))
+      const restored = []
+      for (const student of cls.students ?? []) {
+        const mine = held.get(student.sid)
+        if (!mine) {
+          restored.push(student)
+        } else if (!sameStudent(mine, student)) {
+          // Two devices that both restored this class start from the same
+          // sequence, so each one's next student is issued the SAME id. The
+          // two records are different people wearing one ID, and no rule here
+          // can tell which the teacher meant. Filtering by id alone dropped
+          // the incoming student's name, PIN and salt without a word; this
+          // says so instead, and changes nothing.
+          conflicts.push({
+            className: device.name,
+            sid: student.sid,
+            onDevice: mine.name,
+            inBackup: student.name,
+          })
+        }
+      }
       const students = restored.length > 0 ? [...device.students, ...restored] : device.students
       // The sequence merges even when no student is restored, and that case
       // is not hypothetical: a device that issued an ID and then deleted that
@@ -494,7 +530,7 @@ export function mergeClasses(incoming) {
       intended.students.every((s) => got.students.some((g) => g.sid === s.sid))
     )
   })
-  return { added, updated, persisted }
+  return { added, updated, conflicts, persisted }
 }
 
 // Wipes this store. Used when a teacher releases the device: their data must

@@ -347,6 +347,15 @@ nothing to restore from. The backup file is the restore-from.
   higher than its roster shows, and leaving the lower one in place would hand
   the departed student's ID — which the teacher's roster still keys their
   progress rows by — to the next student added.
+- **A student ID that means two different people is reported, not guessed
+  about.** Two devices that both restored a class start from the same
+  sequence, so each one's next student is issued the *same* ID. Matching on
+  the ID alone would have let a restore drop the incoming student's name, PIN
+  and salt without a word. Records are compared by their permanent per-student
+  salt — the identity that survives a PIN reset, a rename and a trip through a
+  backup file — and a genuine clash is named in the panel (which ID, who it is
+  here, who it is in the backup) with nothing changed. No client-only rule can
+  decide which student the teacher meant.
 - **A write that never landed is not reported as a restore.** The stores keep
   a rejected `localStorage` write in memory on purpose, so the dashboard goes
   on working for the rest of the session — but a restore that claims success
@@ -357,6 +366,11 @@ nothing to restore from. The backup file is the restore-from.
   not merely whether the ids exist: a rejected write leaves the *old* record
   in place under the same id, so its presence proves nothing about this
   restore.
+- **Restores merge against memory and storage, not just storage.** `commit`
+  hands its updater state re-read from localStorage, which is right for
+  concurrency but wrong on its own here: a write storage rejected lives only
+  in module state, and rebuilding from storage alone would erase work that was
+  on screen a moment ago — the thing "never removes" exists to forbid.
 - **The backup reads memory and storage, not just storage.** Persisted state
   can be ahead (another tab's write, whose event has not arrived) and module
   state can be ahead (a write storage refused). The snapshot is the union,

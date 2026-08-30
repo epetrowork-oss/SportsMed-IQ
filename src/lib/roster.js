@@ -186,10 +186,13 @@ export function mergeRoster(incoming) {
   let added = 0
   let updated = 0
   const keyOf = (row) => (row.sid ? `sid:${row.cid ?? ''}:${row.sid}` : `id:${row.id}`)
-  const next = commit((cur) => {
+  const next = commit(() => {
     added = 0
     updated = 0
-    const byKey = new Map(cur.students.map((row) => [keyOf(row), row]))
+    // Built from the union, not from `cur` alone -- see the note in
+    // mergeClasses: a row storage rejected lives only in module state, and a
+    // restore must not erase it.
+    const byKey = new Map(snapshotRoster().map((row) => [keyOf(row), row]))
     for (const row of list) {
       const key = keyOf(row)
       const device = byKey.get(key)
