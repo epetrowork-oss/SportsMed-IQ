@@ -171,11 +171,8 @@ export function mergeTeacherAssignments(incoming) {
   const persisted = list.every((entry) => {
     const intended = next.assignments.find((a) => key(a) === key(entry))
     const got = stored.find((a) => key(a) === key(entry))
-    return (
-      !!intended &&
-      !!got &&
-      String(got.createdAt ?? '') >= String(intended.createdAt ?? '')
-    )
+    // The whole record -- see the note in mergeClasses.
+    return !!intended && !!got && JSON.stringify(got) === JSON.stringify(intended)
   })
   return { added, updated, persisted }
 }

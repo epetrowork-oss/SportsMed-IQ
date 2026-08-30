@@ -525,10 +525,14 @@ export function mergeClasses(incoming) {
     const intended = next.classes.find((c) => c.cid === cls.cid)
     const got = stored.find((c) => c.cid === cls.cid)
     if (!intended || !got) return false
-    return (
-      (got.seq ?? 0) >= (intended.seq ?? 0) &&
-      intended.students.every((s) => got.students.some((g) => g.sid === s.sid))
-    )
+    // The whole record, not a chosen few fields. Checking ids and the sequence
+    // let a rejected write pass whenever it happened to leave those alone: a
+    // PIN reset or a settings change living only in module memory looks
+    // identical by that measure, and would roll back on the next reload with
+    // the teacher having been told it was saved. Anything short of "what is
+    // in storage is what the commit meant to write" is guesswork about which
+    // differences matter.
+    return JSON.stringify(got) === JSON.stringify(intended)
   })
   return { added, updated, conflicts, persisted }
 }

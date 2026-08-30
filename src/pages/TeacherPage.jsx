@@ -654,10 +654,16 @@ function BackupPanel() {
       // A conflict is not a failure, but it is not something to bury under a
       // tick either: the teacher has to decide, and can only do that if the
       // message names who is involved.
+      // Naming the clash is not enough on its own: the obvious next move --
+      // adding the student here -- issues them a NEW student ID, and their
+      // progress on their own device is stored under the old one, so they
+      // would sign in to an empty profile with their work unreachable. The
+      // export/import path is the one that carries the work across, and it
+      // has to happen from their device before their old login goes away.
       const clash = summary.conflicts.length
-        ? ` ${summary.conflicts.length} student${summary.conflicts.length === 1 ? ' was' : 's were'} left out because that student ID is already someone else here: ${summary.conflicts
+        ? ` ${summary.conflicts.length} student${summary.conflicts.length === 1 ? ' was' : 's were'} left out because that student ID belongs to someone else here: ${summary.conflicts
             .map((c) => `${c.sid} is ${c.onDevice} on this device and ${c.inBackup} in the backup`)
-            .join('; ')}. Add them by hand if you need them.`
+            .join('; ')}. Keeping that class on its own device avoids the clash. If you do need them here, first have them open Sync on their own device and copy their progress code — adding them here gives them a new student ID and an empty profile, and pasting that code back in after they sign in is what brings their work across.`
         : ''
       setRestoreMsg(
         !summary.persisted

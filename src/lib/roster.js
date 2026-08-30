@@ -216,7 +216,8 @@ export function mergeRoster(incoming) {
   const persisted = list.every((row) => {
     const intended = next.students.find((s) => keyOf(s) === keyOf(row))
     const got = stored.find((s) => keyOf(s) === keyOf(row))
-    return !!intended && !!got && (got.updatedAt ?? 0) >= (intended.updatedAt ?? 0)
+    // The whole record -- see the note in mergeClasses.
+    return !!intended && !!got && JSON.stringify(got) === JSON.stringify(intended)
   })
   return { added, updated, persisted }
 }

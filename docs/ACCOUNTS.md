@@ -356,16 +356,28 @@ nothing to restore from. The backup file is the restore-from.
   backup file — and a genuine clash is named in the panel (which ID, who it is
   here, who it is in the backup) with nothing changed. No client-only rule can
   decide which student the teacher meant.
+
+  The way out matters as much as the detection. Adding the left-out student on
+  this device issues them a **new** student ID, and their progress lives under
+  the old one (`…:<cid>:<sid>:<pk>`), so they would sign in to an empty profile
+  with their work unreachable — the same invisible failure that ruled out
+  re-issuing IDs automatically. Either keep that class on the device it came
+  from, or have the student copy their progress code from Sync **on their own
+  device, before their old login goes away**, and paste it back after signing
+  in under the new ID. That path merges best-of-both and is the only one that
+  carries the work across.
 - **A write that never landed is not reported as a restore.** The stores keep
   a rejected `localStorage` write in memory on purpose, so the dashboard goes
   on working for the rest of the session — but a restore that claims success
   and vanishes on reload is a lie the teacher would only discover after
   throwing the file away. Each merge re-reads storage to confirm, and the
   panel says plainly that the data reached this session only. The check
-  compares the persisted records against what the commit intended to write,
-  not merely whether the ids exist: a rejected write leaves the *old* record
-  in place under the same id, so its presence proves nothing about this
-  restore.
+  compares each persisted record against what the commit intended to write, in
+  full. Neither the id's presence nor a chosen few fields is evidence: a
+  rejected write leaves the *old* record under the same id, and a PIN reset or
+  a settings change that lives only in module memory is invisible to any check
+  that looks at ids and sequence numbers alone — it would roll back on the
+  next reload with the teacher having been told it was saved.
 - **Restores merge against memory and storage, not just storage.** `commit`
   hands its updater state re-read from localStorage, which is right for
   concurrency but wrong on its own here: a write storage rejected lives only
