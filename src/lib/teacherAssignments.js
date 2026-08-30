@@ -125,37 +125,49 @@ if (typeof window !== 'undefined') {
 
 // --- backup ---
 
-// Read fresh from storage, not from this tab's snapshot: another tab may have
-// saved an assignment whose storage event has not arrived here yet.
+// Union of persisted and in-memory entries -- see snapshotClasses in
+// classes.js for why neither alone is safe. For an entry in both, the later
+// `createdAt` wins (saving an assignment always stamps a fresh one).
 export function snapshotTeacherAssignments() {
-  return load().assignments
+  const byName = new Map()
+  const key = (entry) => entry.name.trim().toLowerCase()
+  for (const entry of load().assignments) byName.set(key(entry), entry)
+  for (const entry of state.assignments) {
+    const stored = byName.get(key(entry))
+    if (!stored || String(entry.createdAt ?? '') > String(stored.createdAt ?? '')) {
+      byName.set(key(entry), entry)
+    }
+  }
+  return [...byName.values()]
 }
 
-// Restores saved assignments from a backup, upserting by the same
-// case-insensitive name key saveTeacherAssignment uses. Returns
-// { added, replaced }.
+// Restores saved assignments, keyed by the same case-insensitive name
+// saveTeacherAssignment uses. An entry this device already has is kept unless
+// the backup's is newer. Returns { added, updated, persisted }.
 export function mergeTeacherAssignments(incoming) {
   const list = Array.isArray(incoming) ? incoming.filter((a) => a && typeof a.name === 'string') : []
   let added = 0
-  let replaced = 0
+  let updated = 0
+  const key = (entry) => entry.name.trim().toLowerCase()
   commit((cur) => {
     added = 0
-    replaced = 0
+    updated = 0
     const assignments = [...cur.assignments]
     for (const entry of list) {
-      const key = entry.name.trim().toLowerCase()
-      const at = assignments.findIndex((a) => a.name.trim().toLowerCase() === key)
-      if (at >= 0) {
-        assignments[at] = entry
-        replaced += 1
-      } else {
+      const at = assignments.findIndex((a) => key(a) === key(entry))
+      if (at < 0) {
         assignments.push(entry)
         added += 1
+      } else if (String(entry.createdAt ?? '') > String(assignments[at].createdAt ?? '')) {
+        assignments[at] = entry
+        updated += 1
       }
     }
     return { assignments }
   })
-  return { added, replaced }
+  const stored = load().assignments
+  const persisted = list.every((entry) => stored.some((a) => key(a) === key(entry)))
+  return { added, updated, persisted }
 }
 
 // Wipes this store. Used when a teacher releases the device: their data must

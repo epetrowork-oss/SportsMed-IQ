@@ -164,34 +164,52 @@ if (typeof window !== 'undefined') {
 
 // --- backup ---
 
-// Read fresh from storage, not from this tab's snapshot: see snapshotClasses.
+// Union of persisted and in-memory rows -- see snapshotClasses for why
+// neither alone is safe. For a row in both, the later `updatedAt` wins.
 export function snapshotRoster() {
-  return load().students
+  const byId = new Map()
+  for (const row of load().students) byId.set(row.id, row)
+  for (const row of state.students) {
+    const stored = byId.get(row.id)
+    if (!stored || (row.updatedAt ?? 0) > (stored.updatedAt ?? 0)) byId.set(row.id, row)
+  }
+  return [...byId.values()]
 }
 
-// Restores imported student rows. Upserts by student ID where the row has
-// one, falling back to the row id for pre-class-login rows; the backup's copy
-// wins. Returns { added, replaced }.
+// Restores imported student rows, keyed by student ID where the row has one
+// and by row id for pre-class-login rows. A row this device already has is
+// kept: it was imported from a code at least as new as the backup's, and the
+// teacher's dashboard should not step backwards on a restore. Returns
+// { added, updated, persisted }.
 export function mergeRoster(incoming) {
   const list = Array.isArray(incoming) ? incoming.filter((s) => s && typeof s.name === 'string') : []
   let added = 0
-  let replaced = 0
+  let updated = 0
+  const keyOf = (row) => (row.sid ? `sid:${row.cid ?? ''}:${row.sid}` : `id:${row.id}`)
   commit((cur) => {
     added = 0
-    replaced = 0
-    const keyOf = (row) => (row.sid ? `sid:${row.cid ?? ''}:${row.sid}` : `id:${row.id}`)
+    updated = 0
     const byKey = new Map(cur.students.map((row) => [keyOf(row), row]))
     for (const row of list) {
       const key = keyOf(row)
-      if (byKey.has(key)) replaced += 1
-      else added += 1
-      byKey.set(key, row)
+      const device = byKey.get(key)
+      if (!device) {
+        added += 1
+        byKey.set(key, row)
+      } else if ((row.updatedAt ?? 0) > (device.updatedAt ?? 0)) {
+        // The backup genuinely holds a newer import than this device does --
+        // the device's row came from an older code, or was never re-imported.
+        updated += 1
+        byKey.set(key, row)
+      }
     }
     return {
       students: [...byKey.values()].sort((a, b) => a.name.localeCompare(b.name)),
     }
   })
-  return { added, replaced }
+  const stored = load().students
+  const persisted = list.every((row) => stored.some((s) => keyOf(s) === keyOf(row)))
+  return { added, updated, persisted }
 }
 
 // Wipes this store. Used when a teacher releases the device: their data must

@@ -168,21 +168,34 @@ export async function readBackup(text, passcode) {
 /**
  * Decrypts and merges a backup into this device.
  *
- * Merges rather than replaces: classes upsert by class id, roster rows by
- * student id, assignments by name. Restoring onto a device that is already
- * teaching adds what is missing and refreshes what matches, instead of
- * throwing away work that was never in the backup.
+ * A restore never removes and never rolls back: a class, roster row or
+ * assignment this device does not have is taken from the backup, and one it
+ * already has is kept (a class gains back only the students it is missing).
+ * So restoring onto a device that is already teaching cannot erase work the
+ * backup never had, and cannot undo a PIN reset made since it.
  *
- * Returns { at, classes, students, assignments } with { added, replaced }
- * counts, so the teacher is told what actually landed.
+ * Returns { at, classes, students, assignments, persisted } with
+ * { added, updated } counts per kind, so the teacher is told what landed.
+ *
+ * `persisted` is false when a merge did not reach localStorage. The stores
+ * swallow a rejected write on purpose -- keeping it in memory means the
+ * dashboard still works for the rest of the session -- but a restore that
+ * reports success and vanishes on reload is a lie the teacher would only
+ * discover after throwing the file away. Every caller must show that.
  */
 export async function restoreBackup(text, passcode) {
   const backup = await readBackup(text, passcode)
+  const classes = mergeClasses(backup.classes)
+  const students = mergeRoster(backup.roster)
+  const assignments = mergeTeacherAssignments(backup.assignments)
   return {
     at: backup.at,
-    classes: mergeClasses(backup.classes),
-    students: mergeRoster(backup.roster),
-    assignments: mergeTeacherAssignments(backup.assignments),
+    classes,
+    students,
+    assignments,
+    // Any one store failing to write leaves the device partly restored, which
+    // is exactly the state the teacher must not mistake for a finished one.
+    persisted: classes.persisted && students.persisted && assignments.persisted,
   }
 }
 

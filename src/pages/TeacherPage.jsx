@@ -648,11 +648,17 @@ function BackupPanel() {
       setRestorePass('')
       const made = new Date(summary.at)
       const part = (one, many, counts) =>
-        `${counts.added} ${counts.added === 1 ? one : many} added, ${counts.replaced} refreshed`
-      setRestoreMsg({
-        ok: true,
-        message: `Restored the backup from ${Number.isNaN(made.getTime()) ? 'an earlier device' : made.toLocaleString()} — ${part('class', 'classes', summary.classes)}; ${part('student row', 'student rows', summary.students)}; ${part('assignment', 'assignments', summary.assignments)}.`,
-      })
+        `${counts.added} ${counts.added === 1 ? one : many} added, ${counts.updated} updated`
+      const landed = `${part('class', 'classes', summary.classes)}; ${part('student row', 'student rows', summary.students)}; ${part('assignment', 'assignments', summary.assignments)}`
+      const from = Number.isNaN(made.getTime()) ? 'an earlier device' : made.toLocaleString()
+      setRestoreMsg(
+        summary.persisted
+          ? { ok: true, message: `Restored the backup from ${from} — ${landed}.` }
+          : {
+              ok: false,
+              message: `Restored into this session only — ${landed} — but this browser refused to save it, so a reload will lose it. It may be out of storage or in a private window. Keep the backup file, free up space or use a normal window, then restore again.`,
+            },
+      )
     } catch (err) {
       setRestoreMsg({ ok: false, message: err.message })
     } finally {

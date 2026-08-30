@@ -330,13 +330,30 @@ nothing to restore from. The backup file is the restore-from.
   a deliberate setup step — admin passcode, or a teacher access code — so a
   copied backup file can never provision an admin by itself. The restored
   device keeps its own passcode; the backup keeps opening with the old one.
-- **Restore merges, it does not replace.** Classes upsert by class id, roster
-  rows by student id, assignments by name; anything the backup never had is
-  left alone, so restoring onto a device that is already teaching cannot erase
-  its work. A restored class's `rev` is bumped past whatever the device had,
-  so a class code generated before the restore cannot be published over the
-  restored roster. The teacher is told what landed: added and refreshed counts
-  per kind.
+- **A restore never removes and never rolls back.** A class the device does
+  not have is taken whole; a class it does have keeps everything it already
+  holds — its students, their current PINs, its settings — and gains back only
+  the students the backup has that it lacks. Restoring Monday's backup on
+  Wednesday therefore cannot delete the student added on Tuesday, cannot undo
+  a PIN reset made since (the PIN on the slip in the student's pocket stays
+  the one that works), and cannot regress the ID sequence into handing out an
+  ID that is already on someone's slip. It *does* bring back a student who was
+  deleted, which is the point. Roster rows and assignments follow the same
+  rule, using `updatedAt`/`createdAt` to tell which copy is newer. When a
+  class gains students its `rev` outruns both copies and its stored code is
+  cleared, so a code generated before the restore cannot be handed out for the
+  restored roster.
+- **A write that never landed is not reported as a restore.** The stores keep
+  a rejected `localStorage` write in memory on purpose, so the dashboard goes
+  on working for the rest of the session — but a restore that claims success
+  and vanishes on reload is a lie the teacher would only discover after
+  throwing the file away. Each merge re-reads storage to confirm, and the
+  panel says plainly that the data reached this session only.
+- **The backup reads memory and storage, not just storage.** Persisted state
+  can be ahead (another tab's write, whose event has not arrived) and module
+  state can be ahead (a write storage refused). The snapshot is the union,
+  preferring whichever copy the store's own monotonic field — `rev`,
+  `updatedAt`, `createdAt` — says is newer.
 - **Failures are told apart.** A file that is not a backup says so; a wrong
   passcode or a tampered file says that instead (AES-GCM authenticates as it
   decrypts, and nothing is written either way).

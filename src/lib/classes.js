@@ -382,41 +382,93 @@ if (typeof window !== 'undefined') {
 
 // --- backup ---
 
-// A plain snapshot for backup.js, read fresh from storage rather than from
-// this tab's module state: another tab may have added a class whose storage
-// event has not arrived, and a backup that silently omits it is worse than
-// no backup at all.
+// A snapshot for backup.js: the union of what is persisted and what this tab
+// holds in memory. Neither alone is safe. Persisted state can be ahead --
+// another tab may have added a class whose storage event has not arrived here
+// -- and module state can be ahead too, because save() deliberately keeps a
+// write in memory when localStorage refuses it (a full quota, a locked-down
+// browser). A backup that silently drops either is worse than no backup, and
+// the second case is exactly when a backup matters most.
+//
+// For a class in both, the copy with the higher `rev` wins: every mutation
+// bumps it, so it is the one field that says which version is newer.
 export function snapshotClasses() {
-  return load().classes
+  const byCid = new Map()
+  for (const cls of load().classes) byCid.set(cls.cid, cls)
+  for (const cls of state.classes) {
+    const stored = byCid.get(cls.cid)
+    if (!stored || (cls.rev ?? 0) > (stored.rev ?? 0)) byCid.set(cls.cid, cls)
+  }
+  return [...byCid.values()]
 }
 
-// Restores classes from a backup. Upserts by class id -- the backup's copy
-// wins for a class this device already has, which is what "restore" means --
-// and leaves every other class alone, so restoring onto a device that is
-// already teaching does not erase its work. Returns { added, replaced }.
+// Highest sequence number any of these students was issued, so a merged class
+// never hands out an ID that is already on a slip in someone's pocket.
+function highestSeq(students) {
+  return students.reduce((high, s) => {
+    const suffix = Number.parseInt(String(s.sid ?? '').split('-').pop(), 10)
+    return Number.isFinite(suffix) && suffix > high ? suffix : high
+  }, 0)
+}
+
+/**
+ * Restores classes from a backup.
+ *
+ * The rule is: a restore never removes and never rolls back. A class this
+ * device does not have is taken whole. A class it does have keeps everything
+ * it already holds -- its students, their current PINs, its settings -- and
+ * only gains the students the backup has that it lacks.
+ *
+ * That asymmetry is deliberate. Restoring an older backup over a live class
+ * used to replace the roster wholesale, which deleted every student added
+ * since the backup along with their PINs, and regressed `seq` so the next
+ * student added would reuse a departed one's ID. Preferring the device's copy
+ * of a student it already has also means a restore cannot quietly undo a PIN
+ * reset: the PIN on the slip in the student's pocket stays the one that works.
+ *
+ * Returns { added, updated, persisted } -- `updated` counts classes that
+ * gained students back, and `persisted` is false when the write did not reach
+ * localStorage, which save() alone would swallow.
+ */
 export function mergeClasses(incoming) {
   const list = Array.isArray(incoming) ? incoming.filter((c) => c && typeof c.cid === 'string') : []
   let added = 0
-  let replaced = 0
+  let updated = 0
   commit((cur) => {
     const byCid = new Map(cur.classes.map((c) => [c.cid, c]))
     added = 0
-    replaced = 0
+    updated = 0
     for (const cls of list) {
-      if (byCid.has(cls.cid)) replaced += 1
-      else added += 1
-      // rev is bumped past whatever this device had, so a code generated
-      // before the restore cannot be published over the restored roster.
-      const previous = byCid.get(cls.cid)
+      const device = byCid.get(cls.cid)
+      if (!device) {
+        added += 1
+        byCid.set(cls.cid, { ...cls, settings: normalizeSettings(cls.settings) })
+        continue
+      }
+      const known = new Set(device.students.map((s) => s.sid))
+      const restored = (cls.students ?? []).filter((s) => !known.has(s.sid))
+      if (restored.length === 0) continue
+      updated += 1
+      const students = [...device.students, ...restored]
       byCid.set(cls.cid, {
-        ...cls,
-        rev: Math.max(cls.rev ?? 0, (previous?.rev ?? 0) + 1),
-        settings: normalizeSettings(cls.settings),
+        ...device,
+        students,
+        seq: Math.max(device.seq ?? 0, cls.seq ?? 0, highestSeq(students)),
+        // The roster changed, so the code the teacher last generated no
+        // longer describes this class -- same rule as every other roster
+        // edit. rev outruns both copies so a code built before the restore
+        // cannot be published over it.
+        rev: Math.max(device.rev ?? 0, cls.rev ?? 0) + 1,
+        code: '',
+        codeAt: null,
       })
     }
     return { ...cur, classes: [...byCid.values()] }
   })
-  return { added, replaced }
+  // Re-read from storage: save() keeps a rejected write in memory on purpose,
+  // so module state is not evidence that anything was written down.
+  const persisted = list.every((cls) => load().classes.some((c) => c.cid === cls.cid))
+  return { added, updated, persisted }
 }
 
 // Wipes this store. Used when a teacher releases the device: their data must
