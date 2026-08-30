@@ -21,8 +21,10 @@ characters: the same code is also a join link (post it in Classroom or
 Teams) and a QR code (project it, or print the join sheet), both landing the
 student on /login with the class already imported. The QR encoder is ours —
 `src/lib/qr.js`, no dependency, no network — with `npm run test:qr` as its
-regression gate. Open follow-up: issue #64, legacy roster rows not adopted
-by modern progress codes.
+regression gate. Issue #64 (legacy roster rows not adopted by modern progress
+codes) is fixed: a modern code adopts a pre-login row only when exactly one
+row carries that name and it has no IDs, so the upgrade path stops
+duplicating students without ever merging two different ones.
 
 This file is the handoff between sessions. Read it first, keep it updated:
 check items off as they land, and add anything newly discovered. The working

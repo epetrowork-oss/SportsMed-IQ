@@ -77,7 +77,12 @@ function AddStudentForm() {
   async function add() {
     try {
       const student = await addStudentFromCode(code)
-      setResult({ ok: true, message: `Added ${student.name}.` })
+      setResult({
+        ok: true,
+        message: student.mergedLegacyRow
+          ? `Added ${student.name} — merged into the earlier row saved for that name before class logins existed.`
+          : `Added ${student.name}.`,
+      })
       setCode('')
     } catch (err) {
       setResult({ ok: false, message: err.message })

@@ -48,6 +48,30 @@ Admin (program owner's device)
   in SMIQ2 payloads; legacy codes unaffected), so the teacher roster matches
   a returning student by ID even if their display name changes.
 
+### How the teacher roster decides which row a code belongs to
+
+`addStudentFromCode` matches in this order, and the order is the whole point:
+
+1. **By student ID**, when the code carries one. Two students called "Alex"
+   in different classes are different people; a modern code never falls back
+   to a bare name match, or the second import would overwrite the first one's
+   row and progress.
+2. **A legacy row, but only when the name is unambiguous.** Rows saved before
+   class logins existed have no `sid` or `cid`, so without this the student's
+   first modern code would add a second row and split their history. Such a
+   row is adopted only when *exactly one* row on the roster carries that name
+   and that row is itself a legacy one. A second row with the same name —
+   legacy or identified — blocks the adoption: there is no way to tell whose
+   old work it is, and a duplicate the teacher can see beats a silent merge of
+   one student's semester into another's. When a merge does happen the teacher
+   is told, so a wrong one can be undone by removing the row.
+3. **By name**, for codes with no IDs at all, matching only rows that
+   themselves have no ID. Unchanged behaviour for pre-login devices.
+
+The decision is made inside the store's `commit`, against state re-read at
+write time: decoding a code is async, and a namesake row saved by another tab
+mid-import has to count.
+
 ## How changes reach students (no server, remember)
 
 The class login code is the transport. When the teacher changes the roster
