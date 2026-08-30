@@ -241,6 +241,22 @@ export async function verifyDevicePasscode(passcode) {
   throw new Error("That passcode doesn't match this device's admin or teacher passcode.")
 }
 
+// A fingerprint of one role's stored verifier, for callers that must confirm
+// the credential they matched is STILL the credential when they finally act.
+// Cheap on purpose: no derivation, so it can be re-checked at the moment of
+// disclosure rather than only at the moment of the check.
+export function credentialFingerprint(role) {
+  const record = load()[role]
+  return record ? `${role}:${record.salt}:${record.hash}` : null
+}
+
+// Whether this device is signed in right now, read fresh from storage rather
+// than from a render-time snapshot. A release in another tab clears both.
+export function deviceIsUnlocked() {
+  const cur = load()
+  return !!(cur.adminUnlocked || cur.teacherUnlocked)
+}
+
 // --- teacher access codes ---
 
 // Admin-side: create a code for a named teacher and remember it so it can be

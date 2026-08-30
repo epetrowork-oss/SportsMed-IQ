@@ -20,7 +20,7 @@
 // so a copied file can never provision an admin by itself.
 
 import { toBase64Url, fromBase64UrlBytes, deflate, inflate } from './share.js'
-import { verifyDevicePasscode } from './auth.js'
+import { verifyDevicePasscode, credentialFingerprint, deviceIsUnlocked } from './auth.js'
 import { snapshotClasses, mergeClasses } from './classes.js'
 import { snapshotRoster, mergeRoster } from './roster.js'
 import { snapshotTeacherAssignments, mergeTeacherAssignments } from './teacherAssignments.js'
@@ -71,7 +71,14 @@ function today() {
  */
 export async function createBackup(passcode) {
   const secret = (passcode ?? '').trim()
-  await verifyDevicePasscode(secret)
+  const role = await verifyDevicePasscode(secret)
+  // Verifying is not the moment of disclosure. Deriving the key, compressing
+  // and encrypting are all awaits, and an admin can release the teacher
+  // during them -- after which returning the file would hand every class on
+  // the device out on a credential that no longer exists. The matched record
+  // has to still be the matched record at the boundary where the data
+  // actually leaves, so it is fingerprinted here and re-checked below.
+  const credential = credentialFingerprint(role)
 
   const payload = {
     classes: snapshotClasses(),
@@ -108,6 +115,12 @@ export async function createBackup(passcode) {
     iv: toBase64Url(iv),
     data: toBase64Url(sealed),
   }
+  if (credentialFingerprint(role) !== credential) {
+    throw new Error(
+      "This device's sign-in changed while the backup was being made — nothing was saved. Sign in again and try once more.",
+    )
+  }
+
   return {
     text: `${JSON.stringify(file, null, 2)}\n`,
     filename: `sportmediq-backup-${today()}.json`,
@@ -186,6 +199,18 @@ export async function readBackup(text, passcode) {
  */
 export async function restoreBackup(text, passcode) {
   const backup = await readBackup(text, passcode)
+  // Opening the file is slow, and a release in another tab during it takes
+  // the device's credential away AND wipes the stores. Writing now would
+  // repopulate them with classes and plaintext PINs that nothing guards --
+  // and worse, redeeming a teacher code afterwards is refused precisely
+  // because class data exists, so the release would neither erase the data
+  // nor leave a device anyone can open. Checked immediately before the first
+  // write, against state re-read now.
+  if (!deviceIsUnlocked()) {
+    throw new Error(
+      'This device was signed out or released while the backup was being opened — nothing was restored. Sign in again and try once more.',
+    )
+  }
   const classes = mergeClasses(backup.classes)
   // A student ID the class merge refused to guess about must be refused here
   // too. Roster rows key by exactly that (class, student) pair, so restoring

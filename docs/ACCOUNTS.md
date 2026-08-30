@@ -321,6 +321,17 @@ nothing to restore from. The backup file is the restore-from.
   backup would be a file listing every student's login name and PIN sitting in
   a Downloads folder or a Drive share. Using the passcode the teacher already
   signs in with costs them no new secret to remember.
+- **The credential is re-checked at every boundary where something actually
+  happens, not only where it is checked.** Verifying, deriving the file key,
+  compressing and encrypting are all awaits, and so is decrypting on the way
+  back in — an admin releasing a teacher in another tab lands somewhere in
+  there. So the export re-checks the matched verifier immediately before the
+  file is handed over, and the restore re-checks that the device is still
+  signed in immediately before its first write. The second one matters most:
+  a release wipes the stores, and a restore continuing afterwards would
+  repopulate them with classes and plaintext PINs that nothing guards — while
+  redeeming a teacher code is then refused *because* class data exists, so the
+  release would neither erase the data nor leave a device anyone can open.
 - **The verification is confirmed after the derivation, not before.** Each
   PBKDF2 check takes long enough for another tab to release the teacher or
   change a passcode while it runs, and the caller downloads every class on the
