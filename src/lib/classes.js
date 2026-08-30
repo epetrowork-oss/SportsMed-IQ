@@ -341,6 +341,22 @@ export async function buildClassLoginCode(cid) {
   return code
 }
 
+// --- sharing the code ---
+
+// The query key the join link carries the class code in.
+export const JOIN_PARAM = 'c'
+
+// The class login code as a link a student can tap instead of pasting 1,500
+// characters by hand. There is no server to shorten it against, so the link
+// is long by construction — the QR code beside it on the dashboard is the
+// answer to that, since nobody has to read a QR by eye.
+export function classJoinUrl(code, origin) {
+  if (!code) return ''
+  const host = origin ?? (typeof window === 'undefined' ? '' : window.location.origin)
+  const path = import.meta.env?.BASE_URL ?? '/'
+  return `${host}${path}#/login?${JOIN_PARAM}=${encodeURIComponent(code)}`
+}
+
 // Plain-text credential sheet the teacher can copy into a doc, print, and
 // cut into slips. One line per student.
 export function credentialSheetText(cls) {

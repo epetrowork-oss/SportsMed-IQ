@@ -1711,6 +1711,66 @@ h3 {
   font-size: 1rem;
 }
 
+/* Join link + QR. The h4 headings inside the code block match the h3s above
+   them in weight so the block reads as one panel of steps, not a nest. */
+.class-code-block h4 {
+  margin: 1rem 0 0.35rem;
+  font-size: 0.95rem;
+}
+
+.join-link {
+  font-family: var(--mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+  font-size: 0.75rem;
+}
+
+.qr-block {
+  margin-top: 0.75rem;
+  padding: 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+/* White plate under the symbol: the quiet zone is part of the code, and a
+   page background bleeding into it is what makes a scan fail. */
+.qr-code {
+  background: #fff;
+  border-radius: 0.35rem;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Projected code: as large as the shorter side of the screen allows, since
+   a dense symbol read from the back of a room is a size problem first. */
+.qr-fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #fff;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.qr-fullscreen .qr-code {
+  width: min(92vw, 82vh);
+  height: auto;
+}
+
+.qr-fullscreen p {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
 .class-remove-row {
   margin: 0;
   padding-top: 0.5rem;

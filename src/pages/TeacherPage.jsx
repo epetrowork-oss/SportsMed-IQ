@@ -11,6 +11,8 @@ import {
 import { ASSIGNMENT_MODES } from '../lib/assignments.js'
 import { isComplete, isFlagged, flagReasons, formatMinSec, statusInfo } from '../lib/status.js'
 import StatusIcon from '../components/StatusIcon.jsx'
+import QrCode from '../components/QrCode.jsx'
+import { printClassJoinSheet } from '../lib/print.js'
 import mockRoster from '../content/mock/students.json'
 import {
   useAuth,
@@ -34,6 +36,7 @@ import {
   updateClassSettings,
   buildClassLoginCode,
   credentialSheetText,
+  classJoinUrl,
 } from '../lib/classes.js'
 import {
   downloadDetailCsvMicrosoft,
@@ -74,7 +77,12 @@ function AddStudentForm() {
   async function add() {
     try {
       const student = await addStudentFromCode(code)
-      setResult({ ok: true, message: `Added ${student.name}.` })
+      setResult({
+        ok: true,
+        message: student.mergedLegacyRow
+          ? `Added ${student.name} — merged into the earlier row saved for that name before class logins existed.`
+          : `Added ${student.name}.`,
+      })
       setCode('')
     } catch (err) {
       setResult({ ok: false, message: err.message })
@@ -1360,9 +1368,23 @@ function ClassContentControls({ cls }) {
 }
 
 function ClassLoginCodeBlock({ cls }) {
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState('')
   const [error, setError] = useState('')
   const [busy, setBusy] = useState(false)
+  const [showQr, setShowQr] = useState(false)
+  const [fullScreen, setFullScreen] = useState(false)
+  const joinUrl = classJoinUrl(cls.code)
+
+  // Esc closes the projected code — a teacher mid-lesson should not have to
+  // find the mouse.
+  useEffect(() => {
+    if (!fullScreen) return undefined
+    const onKey = (e) => {
+      if (e.key === 'Escape') setFullScreen(false)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [fullScreen])
 
   async function generate() {
     setBusy(true)
@@ -1376,13 +1398,13 @@ function ClassLoginCodeBlock({ cls }) {
     }
   }
 
-  async function copy() {
+  async function copy(what, text) {
     try {
-      await navigator.clipboard.writeText(cls.code)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
+      await navigator.clipboard.writeText(text)
+      setCopied(what)
+      setTimeout(() => setCopied(''), 2000)
     } catch {
-      // Clipboard blocked — the textarea below is already visible/selectable.
+      // Clipboard blocked — the boxes below are visible and selectable.
     }
   }
 
@@ -1400,10 +1422,65 @@ function ClassLoginCodeBlock({ cls }) {
             aria-label={`Class login code for ${cls.name}`}
           />
           <div className="unit-actions">
-            <button className="button button-primary" onClick={copy}>
-              {copied ? '✓ Copied' : 'Copy code'}
+            <button className="button" onClick={() => copy('code', cls.code)}>
+              {copied === 'code' ? '✓ Copied' : 'Copy code'}
             </button>
           </div>
+
+          <h4>Join link</h4>
+          <p className="field-hint">
+            Post this in Google Classroom or Teams — students tap it and land on the sign-in
+            page with the class already loaded, so nobody types the code.
+          </p>
+          <input
+            className="text-input join-link"
+            readOnly
+            value={joinUrl}
+            onFocus={(e) => e.target.select()}
+            aria-label={`Join link for ${cls.name}`}
+          />
+          <div className="unit-actions">
+            <button className="button button-primary" onClick={() => copy('link', joinUrl)}>
+              {copied === 'link' ? '✓ Copied' : 'Copy join link'}
+            </button>
+            <button className="button" onClick={() => setShowQr((v) => !v)}>
+              {showQr ? 'Hide QR code' : 'Show QR code'}
+            </button>
+          </div>
+
+          {showQr && (
+            <div className="qr-block">
+              <QrCode text={joinUrl} size={520} label={`QR code to join ${cls.name}`} />
+              <p className="field-hint">
+                A whole class roster is a lot to carry, so this is a dense code — a camera needs
+                it big. Project it full screen, or print the sheet and pin it up; scanning it
+                from a laptop screen across the room will not work.
+              </p>
+              <div className="unit-actions">
+                <button className="button button-primary" onClick={() => setFullScreen(true)}>
+                  Full screen
+                </button>
+                <button className="button" onClick={() => printClassJoinSheet(cls, joinUrl)}>
+                  Print join sheet
+                </button>
+              </div>
+            </div>
+          )}
+          {fullScreen && (
+            <div
+              className="qr-fullscreen"
+              role="dialog"
+              aria-modal="true"
+              aria-label={`QR code to join ${cls.name}`}
+              onClick={() => setFullScreen(false)}
+            >
+              <QrCode text={joinUrl} size={2000} label={`QR code to join ${cls.name}`} />
+              <p>Scan to join {cls.name}</p>
+              <button className="button" onClick={() => setFullScreen(false)}>
+                Close
+              </button>
+            </div>
+          )}
           <p className="field-hint">generated {new Date(cls.codeAt).toLocaleString()}</p>
         </>
       ) : cls.students.length > 0 ? (

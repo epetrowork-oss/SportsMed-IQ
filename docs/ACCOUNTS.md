@@ -20,8 +20,9 @@ Admin (program owner's device)
                      each student = login name (teacher-chosen) + ID (P3-01)
                                     + PIN (word + 2 digits, e.g. MAPLE42)
                      └─ generates → Class login code  SMIQC1.…  (one per class)
-                                     └─ students paste it once on /login,
-                                        then sign in with name + PIN
+                                     └─ reaches students as a paste, a join
+                                        link, or a QR code; then they sign
+                                        in on /login with name + PIN
 ```
 
 - **Only the teacher holds account data.** The teacher's device stores the
@@ -36,9 +37,40 @@ Admin (program owner's device)
   (`sportmediq:progress:v1:<cid>:<sid>:<pk>`), so classmates on one Chromebook
   never see each other's work. No login → the legacy profile, so self-study
   devices behave exactly as before.
+- **Nothing opens without a sign-in.** `RequireSignIn` (wired once, at the
+  router) gates Home, the Library, every lesson, quiz and flashcard deck,
+  Achievements and Sync. Only `/login` and `/teacher` answer without a
+  session, and a signed-in teacher or admin passes the gate so they can read
+  through lessons before opening them to a class. Where the visitor was
+  headed is carried in navigation state and followed after sign-in — only
+  in-app paths, so the login page cannot be turned into an open redirect.
 - **Progress codes now carry the student ID** (optional `sid`/`cid` fields
   in SMIQ2 payloads; legacy codes unaffected), so the teacher roster matches
   a returning student by ID even if their display name changes.
+
+### How the teacher roster decides which row a code belongs to
+
+`addStudentFromCode` matches in this order, and the order is the whole point:
+
+1. **By student ID**, when the code carries one. Two students called "Alex"
+   in different classes are different people; a modern code never falls back
+   to a bare name match, or the second import would overwrite the first one's
+   row and progress.
+2. **A legacy row, but only when the name is unambiguous.** Rows saved before
+   class logins existed have no `sid` or `cid`, so without this the student's
+   first modern code would add a second row and split their history. Such a
+   row is adopted only when *exactly one* row on the roster carries that name
+   and that row is itself a legacy one. A second row with the same name —
+   legacy or identified — blocks the adoption: there is no way to tell whose
+   old work it is, and a duplicate the teacher can see beats a silent merge of
+   one student's semester into another's. When a merge does happen the teacher
+   is told, so a wrong one can be undone by removing the row.
+3. **By name**, for codes with no IDs at all, matching only rows that
+   themselves have no ID. Unchanged behaviour for pre-login devices.
+
+The decision is made inside the store's `commit`, against state re-read at
+write time: decoding a code is async, and a namesake row saved by another tab
+mid-import has to count.
 
 ## How changes reach students (no server, remember)
 
@@ -47,6 +79,33 @@ or the content controls, the stored code is invalidated and the Teacher tab
 asks them to **generate a fresh code and re-share it**. Students paste the
 new code and the device updates in place (same class ID = upsert). A student
 removed from the class is logged out on import.
+
+### Getting the code onto student devices
+
+A class login code is a roster, not a password: a verifier and salt per
+student plus the settings, which for thirty students is roughly 1,500
+characters. Three ways out of the teacher's device, all the same code:
+
+| Route | What it is | When it fits |
+|---|---|---|
+| **Copy code** | the raw `SMIQC1.…` string | messaging it, or a student who already has it in a doc |
+| **Copy join link** | `<app>/#/login?c=<code>` | posting in Google Classroom or Teams — one tap, no typing |
+| **QR code** | the same link, encoded (`src/lib/qr.js`) | the projector, or the printed join sheet |
+
+Following a link or scanning the QR imports the class and lands on the
+sign-in page with the name list loaded; the code is then stripped from the
+address bar so a reload does not replay the import.
+
+Two things worth knowing about the QR. It is **dense** — a thirty-student
+class is a 149-module (version 33) symbol, so it needs size, not a corner of
+a slide: it renders at 520px inline, has a full-screen mode for projecting,
+and prints at 600px. And it is drawn **by our own encoder**, because a
+hosted QR image or a CDN library would mean network calls; `npm run test:qr`
+is the regression gate on it.
+
+The printed join sheet deliberately carries **no PINs**. Credentials go home
+on the credential slips, one student at a time — a poster with everyone's
+PIN on it would hand every student every classmate's profile.
 
 ## Content controls (per class)
 
@@ -79,6 +138,17 @@ the code says so where it matters:
   can't be recovered from localStorage with a quick dictionary run.
 - Teacher access codes prove possession, not identity — with no server,
   revocation is bookkeeping on the admin device only.
+- The join link and the QR carry the class code itself, so treat them as the
+  code: anyone who sees the projected square gets the roster's login names
+  and the PIN verifiers, exactly as if they had been handed the pasted code.
+  That is the same exposure the design already accepts (see PBKDF2 above),
+  but it is worth saying out loud before a code goes on a public slide deck
+  or a hallway wall — a class join sheet belongs inside the classroom.
+- The sign-in gate is a UI gate. It stops a student from browsing ahead of
+  the class and makes the content controls mean something, but the lesson
+  content ships inside the app bundle: anyone who can open devtools can read
+  it. No client-only design changes that, and the material is a textbook,
+  not a secret.
 
 ### Code forgery: what is closed, and what is not
 

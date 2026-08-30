@@ -78,6 +78,11 @@ function hasGamificationData(value) {
 // whose login name the teacher renames still lands on the same row);
 // everything else falls back to the old case-insensitive name match.
 // Throws a user-readable error for bad codes or missing names.
+//
+// The returned object carries `mergedLegacyRow` when the import adopted a
+// pre-class-login row (see below). It is on the returned copy only, never on
+// what is stored, so it exists to be reported to the teacher once and then
+// forgotten.
 export async function addStudentFromCode(code) {
   const { name, units, gamification, at, sid, cid } = await decodeProgressCode(code)
   if (!name) {
@@ -89,14 +94,34 @@ export async function addStudentFromCode(code) {
   // and another tab may have added or removed a student meanwhile — writing
   // this tab's whole array back would erase them.
   let student = null
+  let mergedLegacyRow = false
   commit((cur) => {
     // Match by student ID when the code carries one, and DO NOT fall back to
     // the name in that case: two students called "Alex" in different classes
     // are different people, and matching them by name would make the second
     // import overwrite the first one's row and progress. The name fallback
     // exists only for legacy codes, which have no ids to match on.
-    const existing = sid
+    const byId = sid
       ? cur.students.find((s) => s.sid === sid && (!cid || !s.cid || s.cid === cid))
+      : null
+
+    // One exception, for devices upgraded from a build that predates class
+    // logins: those rows have no ids at all, so the student's first modern
+    // code would add a second row and split their history in two. Such a row
+    // can be adopted -- but only when the name picks it out beyond doubt:
+    // exactly one row on the whole roster carries this name, and that row is
+    // itself a legacy one. If any second row shares the name, there is no way
+    // to tell whose old work it is, so the duplicate stands rather than
+    // guessing and attributing one student's semester to another.
+    const sameName = cur.students.filter((s) => s.name.toLowerCase() === name.toLowerCase())
+    const adoptable =
+      sid && !byId && sameName.length === 1 && !sameName[0].sid && !sameName[0].cid
+        ? sameName[0]
+        : null
+    mergedLegacyRow = !!adoptable
+
+    const existing = sid
+      ? byId ?? adoptable
       : cur.students.find((s) => s.name.toLowerCase() === name.toLowerCase() && !s.sid)
     student = {
       id: existing?.id ?? `stu-${Date.now().toString(36)}`,
@@ -117,7 +142,7 @@ export async function addStudentFromCode(code) {
       ),
     }
   })
-  return student
+  return { ...student, mergedLegacyRow }
 }
 
 export function removeStudent(id) {

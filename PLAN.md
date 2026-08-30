@@ -12,6 +12,20 @@ for the full model, key inventory, and honest security scope. Follow-ups:
 TESTERS.md doesn't cover the login flow yet; teacher re-shares the class
 code to push settings changes (document in any teacher guide).
 
+**Update 2026-08-27 — the app is now closed by default.** Nothing but
+`/login` and `/teacher` opens without a sign-in (`RequireSignIn`, wired once
+at the router), so the per-class content controls are a gate rather than a
+suggestion; a signed-in teacher or admin still gets the whole library to
+preview. And a class no longer has to be joined by pasting ~1,500
+characters: the same code is also a join link (post it in Classroom or
+Teams) and a QR code (project it, or print the join sheet), both landing the
+student on /login with the class already imported. The QR encoder is ours —
+`src/lib/qr.js`, no dependency, no network — with `npm run test:qr` as its
+regression gate. Issue #64 (legacy roster rows not adopted by modern progress
+codes) is fixed: a modern code adopts a pre-login row only when exactly one
+row carries that name and it has no IDs, so the upgrade path stops
+duplicating students without ever merging two different ones.
+
 This file is the handoff between sessions. Read it first, keep it updated:
 check items off as they land, and add anything newly discovered. The working
 rhythm is unchanged: **build a piece → verify in the browser → commit.**

@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useEffect, useRef, useState } from 'react'
+import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
+import { JOIN_PARAM } from '../lib/classes.js'
 import {
   useStudentSession,
   importClassLoginCode,
@@ -76,7 +77,7 @@ function RemoveClassControl({ cid, onRemove }) {
   )
 }
 
-function PickName({ cls, onRemove }) {
+function PickName({ cls, onRemove, next }) {
   const [sid, setSid] = useState(cls.students[0]?.sid ?? '')
   const [pin, setPin] = useState('')
   const [error, setError] = useState('')
@@ -87,7 +88,9 @@ function PickName({ cls, onRemove }) {
       await loginStudent(cls.cid, sid, pin)
       // If this device still holds work saved under an earlier PIN, stay here
       // so the student can bring it over before moving on.
-      if (!canRecoverPreviousWork()) navigate('/')
+      // Otherwise go where they were headed when the lock sent them here, so
+      // a link to one lesson still opens that lesson.
+      if (!canRecoverPreviousWork()) navigate(next || '/')
     } catch (err) {
       setError(err.message)
     }
@@ -197,11 +200,18 @@ function RecoverPreviousWork() {
   )
 }
 
-function SignedIn({ session, controls }) {
+function SignedIn({ session, controls, next, joined }) {
   const recoverable = canRecoverPreviousWork()
   return (
     <div className="page page-narrow">
       <h1>Student sign-in</h1>
+      {joined && (
+        <p className={joined.ok ? 'import-ok' : 'import-error'} role="status">
+          {joined.ok
+            ? `${joined.message} Sign out first if you're switching to that class.`
+            : joined.message}
+        </p>
+      )}
       <p>
         You're signed in as <strong>{session.name}</strong> ({session.sid}) — {controls?.className}
       </p>
@@ -210,19 +220,79 @@ function SignedIn({ session, controls }) {
         <button className="button button-primary" onClick={logoutStudent}>
           Sign out
         </button>
-        <Link className="button" to="/">
-          Home
+        <Link className="button" to={next || '/'}>
+          {next ? 'Continue' : 'Home'}
         </Link>
       </div>
     </div>
   )
 }
 
+// A join link (or a scanned QR) arrives as ?c=<class login code>. Importing
+// it here is what saves a student from pasting 1,500 characters.
+function useJoinLink(onImported) {
+  const [params, setParams] = useSearchParams()
+  const [result, setResult] = useState(null) // { ok, message }
+  const code = params.get(JOIN_PARAM)
+  // Guards a second import of the same code: the effect can run again while
+  // the first is still in flight (StrictMode mounts, unmounts and remounts
+  // effects in development, and `setParams` changes identity as the query
+  // does). What it must NOT do is tie the import's *results* to one mount —
+  // an earlier version cancelled on cleanup, and since the cleanup lands
+  // before the import resolves, the class was imported while the message,
+  // the auto-pick and the URL cleanup were all suppressed. The code then sat
+  // in the address bar and re-imported on every reload.
+  const started = useRef('')
+  // Whether this page is still the one on screen. Only the URL rewrite
+  // consults it: a student who navigated away mid-import must not have the
+  // next page's query string cleared out from under them. State updates
+  // after unmount are no-ops, so they need no guard.
+  const onScreen = useRef(false)
+
+  useEffect(() => {
+    onScreen.current = true
+    return () => {
+      onScreen.current = false
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!code || started.current === code) return
+    started.current = code
+    ;(async () => {
+      try {
+        const cls = await importClassLoginCode(code)
+        setResult({ ok: true, message: `${cls.name} added — now pick your name and type your PIN.` })
+        onImported?.(cls.cid)
+      } catch (err) {
+        setResult({ ok: false, message: err.message })
+      } finally {
+        // Drop the code from the address bar either way: it is long, it is
+        // not a secret worth leaving in history, and a reload should not
+        // replay the import.
+        if (onScreen.current) setParams({}, { replace: true })
+      }
+    })()
+  }, [code, onImported, setParams])
+
+  return result
+}
+
 export default function StudentLoginPage() {
   const { classes, session, controls } = useStudentSession()
   const [picking, setPicking] = useState(null) // cid of the class the picker is showing, when > 1 class
+  const joined = useJoinLink(setPicking)
+  // Set by RequireSignIn when it bounced someone here from a locked page.
+  // Never trust it as a URL to anywhere: only in-app paths are followed, so a
+  // crafted link cannot use the login page as an open redirect.
+  const location = useLocation()
+  const requested = location.state?.from
+  const next =
+    typeof requested === 'string' && requested.startsWith('/') && !requested.startsWith('//')
+      ? requested
+      : ''
 
-  if (session) return <SignedIn session={session} controls={controls} />
+  if (session) return <SignedIn session={session} controls={controls} next={next} joined={joined} />
 
   const activeClasses = classes
   const shownClass =
@@ -233,9 +303,22 @@ export default function StudentLoginPage() {
   return (
     <div className="page page-narrow">
       <h1>Student sign-in</h1>
+      {next && (
+        <p className="import-error" role="status">
+          Sign in to open the lessons.
+        </p>
+      )}
+      {joined && (
+        <p className={joined.ok ? 'import-ok' : 'import-error'} role="status">
+          {joined.message}
+        </p>
+      )}
       <p className="field-hint">
         No account, no email — your teacher gave you a login name and PIN, and your progress saves
         on this device (even offline).
+      </p>
+      <p className="field-hint">
+        Teachers: <Link to="/teacher">sign in to the teacher dashboard</Link>.
       </p>
 
       <ImportClassCode onImported={(cid) => setPicking(cid)} />
@@ -256,6 +339,7 @@ export default function StudentLoginPage() {
       {shownClass && (
         <PickName
           cls={shownClass}
+          next={next}
           onRemove={(cid) => {
             removeImportedClass(cid)
             setPicking(null)
