@@ -379,12 +379,26 @@ nothing to restore from. The backup file is the restore-from.
   (class, student) then had two people behind one key. Containing that
   downstream took three review rounds, each finding a different store or
   message that settled the question the class merge had declined. New student
-  IDs therefore carry three random **letters** after the sequence
-  (`P3-04KMR`), so two devices cannot issue the same one. Letters, not
-  alphanumerics: a digit there merges with the sequence in front of it, so
-  `P3-02` + `72A` reads as sequence 272 to anything parsing the leading
-  digits, and the class's next ID leaps into the hundreds. I and O are left
-  out too, since they read as 1 and 0 on a printed slip. Existing IDs are
+  IDs therefore end with **this device's own tag** — five letters drawn once
+  and kept (`P3-04KMRWX`), so every ID a device issues shares it and two
+  devices' IDs are disjoint by construction.
+
+  Per device, not per student, and the difference is the whole point. Random
+  letters *per student* were 24³ = 13,824 values redrawn every time, so two
+  devices adding a student at the same sequence still collided at a real rate,
+  growing with every pair added. A tag is drawn once: two devices share one
+  only if five letters match (1 in ~8 million), and if they don't, no pair of
+  their students can ever collide however many are added.
+
+  Letters, not alphanumerics: a digit in the suffix merges with the sequence
+  in front of it, so `P3-02` + `72A` reads as sequence 272 to anything parsing
+  the leading digits, and the class's next ID leaps into the hundreds. I and O
+  are left out too, since they read as 1 and 0 on a printed slip.
+
+  The collision guard **stays**. IDs issued before this change have no tag, so
+  two devices restored from one backup can still hold pre-change IDs that mean
+  different people, and the guard is what keeps that visible instead of
+  silent. Existing IDs are
   untouched — they are on slips in students' pockets and inside progress-
   profile keys — so the refusal above still matters for data issued before
   this, and stays.

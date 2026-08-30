@@ -94,6 +94,35 @@ function randomLetters(length) {
   return [...bytes].map((b) => alphabet[b % alphabet.length]).join('')
 }
 
+// This device's own tag, drawn once and kept. Every student ID it issues ends
+// with it, which is what makes two devices' IDs disjoint by construction
+// rather than by luck.
+//
+// Per DEVICE, not per student, and that distinction is the whole point. Three
+// random letters per student was 24^3 = 13,824 values drawn afresh for every
+// student, so two devices adding students at the same sequence collided
+// roughly once in fourteen thousand tries -- rare, but a real rate, and one
+// that grows with every pair added. A per-device tag is drawn once: two
+// devices share one only if these five letters match (1 in 8 million), and if
+// they don't, no pair of their students can ever collide however many are
+// added.
+const DEVICE_TAG_KEY = 'sportmediq:deviceTag:v1'
+
+function deviceTag() {
+  try {
+    const stored = localStorage.getItem(DEVICE_TAG_KEY)
+    if (stored && /^[A-Z]{5}$/.test(stored)) return stored
+    const tag = randomLetters(5)
+    localStorage.setItem(DEVICE_TAG_KEY, tag)
+    return tag
+  } catch {
+    // Storage refused: a fresh tag each time is still better than a shared
+    // counter, and storageHealth is already telling the teacher writes are
+    // failing.
+    return randomLetters(5)
+  }
+}
+
 export function generatePin() {
   return `${PIN_WORDS[randomBelow(PIN_WORDS.length)]}${10 + randomBelow(90)}`
 }
@@ -257,15 +286,15 @@ export function addStudent(cid, loginName) {
       throw new Error(`"${name}" is already in this class — pick a different login name.`)
     }
     const seq = (cls.seq ?? cls.students.length) + 1
-    // Sequence for a human to read, then three random characters so two
-    // devices cannot issue the same ID. Backup/restore is what made that
-    // possible: two devices restored from one class share its lineage AND its
-    // counter, so each one's next student was issued exactly the same ID, and
-    // every store keyed by (class, student) then had two people behind one
-    // key. Containing that downstream took three review rounds; this is the
-    // place it stops being created. Existing IDs are untouched -- they are on
-    // slips in students' pockets and in their progress-profile keys.
-    const sid = `${idPrefix(cls.name)}-${String(seq).padStart(2, '0')}${randomLetters(3)}`
+    // Sequence for a human to read, then this device's tag. Backup/restore is
+    // what made collisions possible: two devices restored from one class share
+    // its lineage AND its counter, so each one's next student was issued
+    // exactly the same ID, and every store keyed by (class, student) then had
+    // two people behind one key. Containing that downstream took three review
+    // rounds; the tag is where it stops being created. Existing IDs are
+    // untouched -- they are on slips in students' pockets and in their
+    // progress-profile keys, so the collision guard stays for them.
+    const sid = `${idPrefix(cls.name)}-${String(seq).padStart(2, '0')}${deviceTag()}`
     // The salt is per student and permanent — never regenerated when a code
     // is rebuilt or a PIN is reset. A student who changes PIN can then still
     // recompute the key of their old progress profile by typing their old PIN
