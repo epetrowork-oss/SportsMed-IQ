@@ -356,11 +356,17 @@ nothing to restore from. The backup file is the restore-from.
   a PIN reset made since (the PIN on the slip in the student's pocket stays
   the one that works), and cannot regress the ID sequence into handing out an
   ID that is already on someone's slip. It *does* bring back a student who was
-  deleted, which is the point. Roster rows and assignments follow the same
-  rule, using `updatedAt`/`createdAt` to tell which copy is newer. When a
-  class gains students its `rev` outruns both copies and its stored code is
-  cleared, so a code generated before the restore cannot be handed out for the
-  restored roster. The ID sequence merges even when no student is restored: a
+  deleted, which is the point.
+
+  The three stores do **not** all merge the same way, and an earlier version
+  of this sentence said they did. Classes merge, gaining the students they
+  lack. **Roster rows are never overwritten** — add-only, whatever the
+  timestamps say, for the reasons under "the roster's own rule" below. Saved
+  assignments are the only ones where a newer copy wins, by `createdAt`.
+
+  When a class gains students its `rev` outruns both copies and its stored
+  code is cleared, so a code generated before the restore cannot be handed
+  out for the restored roster. The ID sequence merges even when no student is restored: a
   device that issued an ID and later deleted that student carries a `seq`
   higher than its roster shows, and leaving the lower one in place would hand
   the departed student's ID — which the teacher's roster still keys their
