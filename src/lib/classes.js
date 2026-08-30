@@ -25,6 +25,7 @@ import { useSyncExternalStore } from 'react'
 import { toBase64Url, deflate } from './share.js'
 import { deriveHex, randomToken } from './auth.js'
 import { getUnit } from '../content/index.js'
+import { reportStorageWrite } from './storageHealth.js'
 
 const STORAGE_KEY = 'sportmediq:classes:v1'
 export const CLASS_CODE_PREFIX = 'SMIQC1.'
@@ -121,14 +122,22 @@ function load() {
 
 let state = load()
 const listeners = new Set()
+// Whether the most recent write reached localStorage. Read straight from
+// the write itself, so nothing has to be inferred by re-reading.
+let lastWriteOk = true
 
 function save(next) {
   state = next
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
+    lastWriteOk = true
   } catch {
-    // Storage full or blocked — keep working in memory.
+    // Storage full or blocked — keep working in memory for the rest of the
+    // session, but say so. Silence here is what let a teacher build a whole
+    // class, and a backup of it, on top of writes that never happened.
+    lastWriteOk = false
   }
+  reportStorageWrite(lastWriteOk)
   listeners.forEach((fn) => fn())
 }
 
@@ -382,24 +391,22 @@ if (typeof window !== 'undefined') {
 
 // --- backup ---
 
-// A snapshot for backup.js: the union of what is persisted and what this tab
-// holds in memory. Neither alone is safe. Persisted state can be ahead --
-// another tab may have added a class whose storage event has not arrived here
-// -- and module state can be ahead too, because save() deliberately keeps a
-// write in memory when localStorage refuses it (a full quota, a locked-down
-// browser). A backup that silently drops either is worse than no backup, and
-// the second case is exactly when a backup matters most.
+// What the backup is built from. Storage is the truth, full stop: it is the
+// only state that survives a reload, it already carries what another tab
+// wrote, and it holds no record another tab has deleted.
 //
-// For a class in both, the copy with the higher `rev` wins: every mutation
-// bumps it, so it is the one field that says which version is newer.
+// The tempting alternative -- union it with this tab's module state, so a
+// write localStorage refused still reaches the backup -- cannot work. A
+// record that is in memory and not in storage is EITHER a write that failed
+// here OR one another tab deleted whose `storage` event has not arrived yet,
+// and nothing in the two states tells those apart. Unioning resurrects the
+// deletion: a class the teacher removed on another tab comes back, PINs and
+// all. A refused write is surfaced instead (storageHealth.js), which is the
+// honest answer to the case the union was reaching for -- a teacher whose
+// browser is not saving needs to be told so, not to have it quietly
+// compensated for in one code path.
 export function snapshotClasses() {
-  const byCid = new Map()
-  for (const cls of load().classes) byCid.set(cls.cid, cls)
-  for (const cls of state.classes) {
-    const stored = byCid.get(cls.cid)
-    if (!stored || (cls.rev ?? 0) > (stored.rev ?? 0)) byCid.set(cls.cid, cls)
-  }
-  return [...byCid.values()]
+  return load().classes
 }
 
 // Whether two roster records are the same person. The salt is permanent and
@@ -445,13 +452,10 @@ export function mergeClasses(incoming) {
   let added = 0
   let updated = 0
   let conflicts = []
-  const next = commit((cur) => {
-    // The map is built from the union, not from `cur` alone. commit hands the updater state re-read from
-    // storage, which is right for concurrency but wrong on its own here: a
-    // write storage rejected lives only in module state, and rebuilding the
-    // map from storage alone would drop it -- a restore erasing work that was
-    // on screen a moment ago, which is exactly what "never removes" forbids.
-    const byCid = new Map(snapshotClasses().map((c) => [c.cid, c]))
+  commit((cur) => {
+    // `cur` is state re-read from storage at write time: the same truth the
+    // snapshot uses, and what keeps this safe against another tab.
+    const byCid = new Map(cur.classes.map((c) => [c.cid, c]))
     added = 0
     updated = 0
     conflicts = []
@@ -514,26 +518,12 @@ export function mergeClasses(incoming) {
     }
     return { ...cur, classes: [...byCid.values()] }
   })
-  // Re-read from storage: save() keeps a rejected write in memory on purpose,
-  // so module state is not evidence that anything was written down. Asking
-  // only whether the class id is there would not be evidence either -- a
-  // rejected write leaves the OLD class in place under the same id, and the
-  // students this restore added would vanish on reload while the teacher was
-  // told it had worked. Compare against what the commit intended to write.
-  const stored = load().classes
-  const persisted = list.every((cls) => {
-    const intended = next.classes.find((c) => c.cid === cls.cid)
-    const got = stored.find((c) => c.cid === cls.cid)
-    if (!intended || !got) return false
-    // The whole record, not a chosen few fields. Checking ids and the sequence
-    // let a rejected write pass whenever it happened to leave those alone: a
-    // PIN reset or a settings change living only in module memory looks
-    // identical by that measure, and would roll back on the next reload with
-    // the teacher having been told it was saved. Anything short of "what is
-    // in storage is what the commit meant to write" is guesswork about which
-    // differences matter.
-    return JSON.stringify(got) === JSON.stringify(intended)
-  })
+  // Not re-read and compared: save() knows whether its own write reached
+  // localStorage, and that is the only thing that can say so without
+  // inference. Every comparison tried here -- the id is present, the ids and
+  // the sequence, the whole record -- was a guess about which differences
+  // matter, and the first two were wrong.
+  const persisted = lastWriteOk
   return { added, updated, conflicts, persisted }
 }
 

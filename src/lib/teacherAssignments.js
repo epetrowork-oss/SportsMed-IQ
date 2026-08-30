@@ -5,6 +5,7 @@
 
 import { useSyncExternalStore } from 'react'
 import { encodeAssignment } from './assignments.js'
+import { reportStorageWrite } from './storageHealth.js'
 
 const STORAGE_KEY = 'sportmediq:teacherAssignments:v1'
 
@@ -20,14 +21,22 @@ function load() {
 
 let state = load()
 const listeners = new Set()
+// Whether the most recent write reached localStorage. Read straight from
+// the write itself, so nothing has to be inferred by re-reading.
+let lastWriteOk = true
 
 function save(next) {
   state = next
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
+    lastWriteOk = true
   } catch {
-    // Storage full or blocked — keep working in memory.
+    // Storage full or blocked — keep working in memory for the rest of the
+    // session, but say so. Silence here is what let a teacher build a whole
+    // class, and a backup of it, on top of writes that never happened.
+    lastWriteOk = false
   }
+  reportStorageWrite(lastWriteOk)
   listeners.forEach((fn) => fn())
 }
 
@@ -125,20 +134,9 @@ if (typeof window !== 'undefined') {
 
 // --- backup ---
 
-// Union of persisted and in-memory entries -- see snapshotClasses in
-// classes.js for why neither alone is safe. For an entry in both, the later
-// `createdAt` wins (saving an assignment always stamps a fresh one).
+// Storage is the truth -- see snapshotClasses in classes.js.
 export function snapshotTeacherAssignments() {
-  const byName = new Map()
-  const key = (entry) => entry.name.trim().toLowerCase()
-  for (const entry of load().assignments) byName.set(key(entry), entry)
-  for (const entry of state.assignments) {
-    const stored = byName.get(key(entry))
-    if (!stored || String(entry.createdAt ?? '') > String(stored.createdAt ?? '')) {
-      byName.set(key(entry), entry)
-    }
-  }
-  return [...byName.values()]
+  return load().assignments
 }
 
 // Restores saved assignments, keyed by the same case-insensitive name
@@ -149,11 +147,10 @@ export function mergeTeacherAssignments(incoming) {
   let added = 0
   let updated = 0
   const key = (entry) => entry.name.trim().toLowerCase()
-  const next = commit(() => {
+  commit((cur) => {
     added = 0
     updated = 0
-    // Built from the union, not from `cur` alone -- see mergeClasses.
-    const assignments = [...snapshotTeacherAssignments()]
+    const assignments = [...cur.assignments]
     for (const entry of list) {
       const at = assignments.findIndex((a) => key(a) === key(entry))
       if (at < 0) {
@@ -166,14 +163,8 @@ export function mergeTeacherAssignments(incoming) {
     }
     return { assignments }
   })
-  // Contents, not just presence -- see mergeRoster.
-  const stored = load().assignments
-  const persisted = list.every((entry) => {
-    const intended = next.assignments.find((a) => key(a) === key(entry))
-    const got = stored.find((a) => key(a) === key(entry))
-    // The whole record -- see the note in mergeClasses.
-    return !!intended && !!got && JSON.stringify(got) === JSON.stringify(intended)
-  })
+  // The write itself says whether it landed -- see mergeClasses.
+  const persisted = lastWriteOk
   return { added, updated, persisted }
 }
 

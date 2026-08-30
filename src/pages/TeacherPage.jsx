@@ -14,6 +14,7 @@ import StatusIcon from '../components/StatusIcon.jsx'
 import QrCode from '../components/QrCode.jsx'
 import { printClassJoinSheet } from '../lib/print.js'
 import { createBackup, downloadBackup, restoreBackup } from '../lib/backup.js'
+import { useStorageHealth } from '../lib/storageHealth.js'
 import mockRoster from '../content/mock/students.json'
 import {
   useAuth,
@@ -613,6 +614,10 @@ function AdminPanel({ issued }) {
 // get it back after a wipe, a reset Chromebook, or a replaced laptop -- there
 // is no server holding a copy.
 function BackupPanel() {
+  // A browser that is refusing writes is the one situation where everything
+  // on this dashboard is a lie by the next reload, so it is said here, at the
+  // top of the panel whose whole job is not losing work.
+  const storageFailing = useStorageHealth()
   const [savePass, setSavePass] = useState('')
   const [saveMsg, setSaveMsg] = useState(null)
   const [saving, setSaving] = useState(false)
@@ -685,6 +690,15 @@ function BackupPanel() {
   return (
     <section className="backup-panel">
       <h2>Back up this device</h2>
+      {storageFailing && (
+        <p className="import-error" role="status">
+          This browser refused to save a change. Anything you have done since is only in this
+          tab — it will be gone on reload, a backup saved now would be missing it, and it may be
+          dropped as soon as saving works again. Private windows block saving entirely;
+          otherwise the browser is likely out of space. Move to a normal window or free some
+          space, reload, and redo whatever is missing.
+        </p>
+      )}
       <p className="field-hint">
         Your classes, rosters, PINs and settings are stored on this device only — there is no
         online copy. If it is wiped, reset or replaced, a backup file is the only way to get

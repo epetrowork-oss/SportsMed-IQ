@@ -5,6 +5,7 @@
 
 import { useSyncExternalStore } from 'react'
 import { decodeProgressCode } from './share.js'
+import { reportStorageWrite } from './storageHealth.js'
 
 const STORAGE_KEY = 'sportmediq:roster:v1'
 
@@ -20,14 +21,22 @@ function load() {
 
 let state = load()
 const listeners = new Set()
+// Whether the most recent write reached localStorage. Read straight from
+// the write itself, so nothing has to be inferred by re-reading.
+let lastWriteOk = true
 
 function save(next) {
   state = next
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
+    lastWriteOk = true
   } catch {
-    // Storage full or blocked — keep working in memory.
+    // Storage full or blocked — keep working in memory for the rest of the
+    // session, but say so. Silence here is what let a teacher build a whole
+    // class, and a backup of it, on top of writes that never happened.
+    lastWriteOk = false
   }
+  reportStorageWrite(lastWriteOk)
   listeners.forEach((fn) => fn())
 }
 
@@ -164,16 +173,10 @@ if (typeof window !== 'undefined') {
 
 // --- backup ---
 
-// Union of persisted and in-memory rows -- see snapshotClasses for why
-// neither alone is safe. For a row in both, the later `updatedAt` wins.
+// Storage is the truth -- see snapshotClasses in classes.js for why a union
+// with module state cannot be.
 export function snapshotRoster() {
-  const byId = new Map()
-  for (const row of load().students) byId.set(row.id, row)
-  for (const row of state.students) {
-    const stored = byId.get(row.id)
-    if (!stored || (row.updatedAt ?? 0) > (stored.updatedAt ?? 0)) byId.set(row.id, row)
-  }
-  return [...byId.values()]
+  return load().students
 }
 
 // Restores imported student rows, keyed by student ID where the row has one
@@ -186,13 +189,10 @@ export function mergeRoster(incoming) {
   let added = 0
   let updated = 0
   const keyOf = (row) => (row.sid ? `sid:${row.cid ?? ''}:${row.sid}` : `id:${row.id}`)
-  const next = commit(() => {
+  commit((cur) => {
     added = 0
     updated = 0
-    // Built from the union, not from `cur` alone -- see the note in
-    // mergeClasses: a row storage rejected lives only in module state, and a
-    // restore must not erase it.
-    const byKey = new Map(snapshotRoster().map((row) => [keyOf(row), row]))
+    const byKey = new Map(cur.students.map((row) => [keyOf(row), row]))
     for (const row of list) {
       const key = keyOf(row)
       const device = byKey.get(key)
@@ -210,15 +210,8 @@ export function mergeRoster(incoming) {
       students: [...byKey.values()].sort((a, b) => a.name.localeCompare(b.name)),
     }
   })
-  // Contents, not just presence: a rejected write leaves the older row under
-  // the same key, so its existence proves nothing about this restore.
-  const stored = load().students
-  const persisted = list.every((row) => {
-    const intended = next.students.find((s) => keyOf(s) === keyOf(row))
-    const got = stored.find((s) => keyOf(s) === keyOf(row))
-    // The whole record -- see the note in mergeClasses.
-    return !!intended && !!got && JSON.stringify(got) === JSON.stringify(intended)
-  })
+  // The write itself says whether it landed -- see mergeClasses.
+  const persisted = lastWriteOk
   return { added, updated, persisted }
 }
 

@@ -366,31 +366,26 @@ nothing to restore from. The backup file is the restore-from.
   device, before their old login goes away**, and paste it back after signing
   in under the new ID. That path merges best-of-both and is the only one that
   carries the work across.
-- **A write that never landed is not reported as a restore.** The stores keep
-  a rejected `localStorage` write in memory on purpose, so the dashboard goes
-  on working for the rest of the session — but a restore that claims success
-  and vanishes on reload is a lie the teacher would only discover after
-  throwing the file away. Each merge re-reads storage to confirm, and the
-  panel says plainly that the data reached this session only. The check
-  compares each persisted record against what the commit intended to write, in
-  full. Neither the id's presence nor a chosen few fields is evidence: a
-  rejected write leaves the *old* record under the same id, and a PIN reset or
-  a settings change that lives only in module memory is invisible to any check
-  that looks at ids and sequence numbers alone — it would roll back on the
-  next reload with the teacher having been told it was saved.
-- **Restores merge against memory and storage, not just storage.** `commit`
-  hands its updater state re-read from localStorage, which is right for
-  concurrency but wrong on its own here: a write storage rejected lives only
-  in module state, and rebuilding from storage alone would erase work that was
-  on screen a moment ago — the thing "never removes" exists to forbid.
-- **The backup reads memory and storage, not just storage.** Persisted state
-  can be ahead (another tab's write, whose event has not arrived) and module
-  state can be ahead (a write storage refused). The snapshot is the union,
-  preferring whichever copy the store's own monotonic field — `rev`,
-  `updatedAt`, `createdAt` — says is newer.
-- **Failures are told apart.** A file that is not a backup says so; a wrong
-  passcode or a tampered file says that instead (AES-GCM authenticates as it
-  decrypts, and nothing is written either way).
+- **A write that never landed is not reported as a restore.** `save()` records
+  whether its own `setItem` reached localStorage, and a merge reports that
+  directly. Nothing is inferred by re-reading and comparing: every comparison
+  tried — the id is present, the ids and the sequence, the whole record — was
+  a guess about which differences matter, and the first two were wrong.
+- **Storage is the truth, and a refused write is surfaced, not compensated
+  for.** The snapshots and merges read persisted state only. Unioning it with
+  this tab's module state looks appealing — a write localStorage refused would
+  still reach the backup — but it cannot work: a record in memory and not in
+  storage is *either* a failed write here *or* one another tab deleted whose
+  `storage` event has not arrived, and nothing in the two states tells those
+  apart. Unioning resurrects the deletion, bringing back a class and its PINs
+  the teacher removed on another tab.
+
+  So a refused write is reported instead (`src/lib/storageHealth.js`), and the
+  teacher dashboard says plainly that this browser is not saving. The honest
+  consequence, which the message states: work done during that outage lives in
+  the tab only, is missing from any backup taken then, and may be dropped once
+  saving resumes. A teacher whose browser is refusing writes needs to know
+  that, not to have one code path quietly paper over it.
 
 There is still no account recovery, and now there is one more thing to write
 down: **a backup is only as good as the passcode it was made with.** If both
