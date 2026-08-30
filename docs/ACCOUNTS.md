@@ -372,6 +372,27 @@ nothing to restore from. The backup file is the restore-from.
   conflicted ID would file one student's name and progress under the other —
   settling in the roster the question the class merge deliberately declined.
   Those rows are held back and counted, and the panel says so.
+
+  **Where the collision came from, and why it no longer arises.** Two devices
+  restored from one class shared its lineage *and* its counter, so each one's
+  next student was issued exactly the same ID — and every store keyed by
+  (class, student) then had two people behind one key. Containing that
+  downstream took three review rounds, each finding a different store or
+  message that settled the question the class merge had declined. New student
+  IDs therefore carry three random characters after the sequence
+  (`P3-04K7M`), so two devices cannot issue the same one. Existing IDs are
+  untouched — they are on slips in students' pockets and inside progress-
+  profile keys — so the refusal above still matters for data issued before
+  this, and stays.
+
+  The roster's own rule is simpler than a refusal: **a row this device holds
+  is never overwritten by a restore**, which needs no lineage reasoning and
+  cannot be wrong in that direction. Consulting the class merge's conflicts
+  covered the case where the device still had the class and missed a row
+  retained for a class it had deleted; not overwriting covers both. The cost
+  is that a genuinely newer row in the backup does not refresh an older one
+  here — recoverable in one step, since these rows are a cache of a student's
+  exported progress code and re-importing it is the normal way to update one.
 - **A write that never landed is not reported as a restore.** `save()` records
   whether its own `setItem` reached localStorage, and a merge reports that
   directly. Nothing is inferred by re-reading and comparing: every comparison

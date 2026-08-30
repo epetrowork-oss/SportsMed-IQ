@@ -180,56 +180,57 @@ export function snapshotRoster() {
 }
 
 /**
- * Restores imported student rows, keyed by student ID where the row has one
- * and by row id for pre-class-login rows. A row this device already has is
- * kept: it was imported from a code at least as new as the backup's, and the
- * teacher's dashboard should not step backwards on a restore.
+ * Restores imported student rows from a backup.
  *
- * `skip` carries the (cid, sid) pairs the class merge refused to guess about
- * -- the same student ID standing for two different people on two devices.
- * Without it this store would quietly settle what that one declined to: these
- * rows key by exactly that pair, so the backup's row would overwrite the name
- * and progress of whoever holds that ID here, or file one student's work
- * under another's. A refusal in one store has to be a refusal in both.
+ * A row this device already holds is never overwritten -- the restore only
+ * adds rows the device is missing. That is the whole rule, and it is stated
+ * that way because every attempt to be cleverer here has been wrong: rows key
+ * by (class, student), a key that two devices restored from one class could
+ * both issue to different people, and no field on a roster row says which
+ * person it is. Comparing timestamps let the backup file one student's
+ * progress under another's name; consulting the class store's conflicts
+ * covered that only while the device still HAD the class, and missed a
+ * retained row for a class it had deleted.
  *
- * Returns { added, updated, skipped, persisted }.
+ * Never overwriting needs none of that reasoning and cannot be wrong in that
+ * direction. What it costs is a genuinely newer row in the backup not
+ * refreshing an older one here, which is recoverable in one step: these rows
+ * are a cache of a student's exported progress code, and re-importing the
+ * code is the normal way to update one.
+ *
+ * `skip` carries the (cid, sid) pairs the class merge refused to guess about,
+ * used only to tell the teacher which held-back rows were a real collision
+ * rather than an ordinary duplicate.
+ *
+ * Returns { added, kept, skipped, persisted }.
  */
 export function mergeRoster(incoming, skip = new Set()) {
   const list = Array.isArray(incoming) ? incoming.filter((s) => s && typeof s.name === 'string') : []
   let added = 0
-  let updated = 0
+  let kept = 0
   let skipped = 0
   const keyOf = (row) => (row.sid ? `sid:${row.cid ?? ''}:${row.sid}` : `id:${row.id}`)
-  const conflicted = (row) => !!row.sid && skip.has(`${row.cid ?? ''}:${row.sid}`)
   commit((cur) => {
     added = 0
-    updated = 0
+    kept = 0
     skipped = 0
     const byKey = new Map(cur.students.map((row) => [keyOf(row), row]))
     for (const row of list) {
-      if (conflicted(row)) {
-        skipped += 1
+      const key = keyOf(row)
+      if (!byKey.has(key)) {
+        byKey.set(key, row)
+        added += 1
         continue
       }
-      const key = keyOf(row)
-      const device = byKey.get(key)
-      if (!device) {
-        added += 1
-        byKey.set(key, row)
-      } else if ((row.updatedAt ?? 0) > (device.updatedAt ?? 0)) {
-        // The backup genuinely holds a newer import than this device does --
-        // the device's row came from an older code, or was never re-imported.
-        updated += 1
-        byKey.set(key, row)
-      }
+      kept += 1
+      if (row.sid && skip.has(`${row.cid ?? ''}:${row.sid}`)) skipped += 1
     }
     return {
       students: [...byKey.values()].sort((a, b) => a.name.localeCompare(b.name)),
     }
   })
-  // The write itself says whether it landed -- see mergeClasses.
   const persisted = lastWriteOk
-  return { added, updated, skipped, persisted }
+  return { added, kept, skipped, persisted }
 }
 
 // Wipes this store. Used when a teacher releases the device: their data must

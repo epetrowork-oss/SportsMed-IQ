@@ -245,7 +245,15 @@ export function addStudent(cid, loginName) {
       throw new Error(`"${name}" is already in this class — pick a different login name.`)
     }
     const seq = (cls.seq ?? cls.students.length) + 1
-    const sid = `${idPrefix(cls.name)}-${String(seq).padStart(2, '0')}`
+    // Sequence for a human to read, then three random characters so two
+    // devices cannot issue the same ID. Backup/restore is what made that
+    // possible: two devices restored from one class share its lineage AND its
+    // counter, so each one's next student was issued exactly the same ID, and
+    // every store keyed by (class, student) then had two people behind one
+    // key. Containing that downstream took three review rounds; this is the
+    // place it stops being created. Existing IDs are untouched -- they are on
+    // slips in students' pockets and in their progress-profile keys.
+    const sid = `${idPrefix(cls.name)}-${String(seq).padStart(2, '0')}${randomToken(3).toUpperCase()}`
     // The salt is per student and permanent — never regenerated when a code
     // is rebuilt or a PIN is reset. A student who changes PIN can then still
     // recompute the key of their old progress profile by typing their old PIN
@@ -420,6 +428,8 @@ function sameStudent(a, b) {
 
 // Highest sequence number any of these students was issued, so a merged class
 // never hands out an ID that is already on a slip in someone's pocket.
+// parseInt reads the leading digits and stops at the random suffix, so this
+// works for both ID shapes.
 function highestSeq(students) {
   return students.reduce((high, s) => {
     const suffix = Number.parseInt(String(s.sid ?? '').split('-').pop(), 10)

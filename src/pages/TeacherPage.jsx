@@ -653,7 +653,7 @@ function BackupPanel() {
       setRestorePass('')
       const made = new Date(summary.at)
       const part = (one, many, counts) =>
-        `${counts.added} ${counts.added === 1 ? one : many} added, ${counts.updated} updated`
+        `${counts.added} ${counts.added === 1 ? one : many} added, ${counts.updated ?? counts.kept} ${counts.updated === undefined ? 'already here' : 'updated'}`
       const landed = `${part('class', 'classes', summary.classes)}; ${part('student row', 'student rows', summary.students)}; ${part('assignment', 'assignments', summary.assignments)}`
       const from = Number.isNaN(made.getTime()) ? 'an earlier device' : made.toLocaleString()
       // A conflict is not a failure, but it is not something to bury under a
