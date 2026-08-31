@@ -14,7 +14,22 @@ import StatusIcon from '../components/StatusIcon.jsx'
 import QrCode from '../components/QrCode.jsx'
 import { printClassJoinSheet } from '../lib/print.js'
 import { createBackup, downloadBackup, restoreBackup } from '../lib/backup.js'
-import { useStorageHealth, storageAcceptsWrites, acknowledgeLoss } from '../lib/storageHealth.js'
+import {
+  useStorageHealth,
+  storageAcceptsWrites,
+  acknowledgeLoss,
+  strandedStores,
+  unverifiedStores,
+} from '../lib/storageHealth.js'
+
+// What each store holds, in the teacher's words rather than the code's. A
+// warning that says "the classes store" tells them nothing about where to
+// look; these name the part of the dashboard to go and check.
+const STORE_NAMES = {
+  classes: 'your classes, students and their PINs',
+  roster: 'imported student progress',
+  assignments: 'saved assignments',
+}
 import mockRoster from '../content/mock/students.json'
 import {
   useAuth,
@@ -617,14 +632,14 @@ function BackupPanel() {
   // A browser that is refusing writes is the one situation where everything
   // on this dashboard is a lie by the next reload, so it is said here, at the
   // top of the panel whose whole job is not losing work.
-  // 'ok' | 'stranded' (a refused change is in this tab now) | 'lost' (one was
-  // discarded) | 'both'. Not a severity ladder: they are independent, and a
-  // teacher with an old change gone and a new one unsaved needs to be told
-  // both things.
+  // The hook's value is a change key encoding both sets, not a category: the
+  // lists are read here so a second store joining either one re-renders the
+  // banner that names it.
   const writeHealth = useStorageHealth()
-  const holdingUnsaved = writeHealth === 'stranded' || writeHealth === 'both'
-  const workWasLost = writeHealth === 'lost' || writeHealth === 'both'
-  const ownWritesFailing = writeHealth !== 'ok'
+  const stranded = strandedStores()
+  const unverified = unverifiedStores()
+  const holdingUnsaved = stranded.length > 0
+  const ownWritesFailing = writeHealth !== '|'
   // Also ask storage directly, so a tab opened after the trouble started --
   // or one that has simply not written yet -- does not look healthy while the
   // browser is refusing writes. Re-checked whenever this tab's own health
@@ -675,10 +690,16 @@ function BackupPanel() {
               // redone since -- nothing here can see that -- so this says
               // "unless you have redone it" rather than asserting it is gone
               // from the file.
-              message: holdingUnsaved
-                ? `${saved} But a change in this tab failed to save, so it is NOT in this file. Keep it, then fix the saving problem and take a fresh backup.${passcodeNote}`
-                : `${saved} But a change made here was lost before it could be saved, so unless you have redone it since, this file does not have it either. Redo it, then take a fresh backup.${passcodeNote}`,
+              message: `${saved} But a change in this tab failed to save, so it is NOT in this file. Keep it, then fix the saving problem and take a fresh backup.${passcodeNote}`,
             }
+          : backup.unverifiedChange
+            ? {
+                ok: false,
+                // Weaker than the line above, and deliberately so: a change
+                // this tab cannot account for may be in the file or may not.
+                // Asking the teacher to check is the strongest true thing.
+                message: `${saved} But a change made here could not be saved and this tab no longer has it, so it may or may not be in this file. Check the part of the dashboard the warning above names, and take a fresh backup if you had to redo anything.${passcodeNote}`,
+              }
           : backup.storageRefusing
             ? {
                 ok: false,
@@ -759,27 +780,32 @@ function BackupPanel() {
           gone wrong; a refused probe is something that MAY. Folding them
           together is how a banner ends up telling a teacher their work is
           stranded on the strength of a one-byte test write. */}
-      {workWasLost && (
-        <p className="import-error" role="status">
-          A change made here could not be saved and has since been discarded — it is gone from
-          this tab as well, so there is nothing left to rescue. Whatever you changed just
-          before the trouble started needs doing again. This stays up until you say it is
-          handled, because nothing here can tell whether you have redone it.{' '}
+      {/* One per affected area, each cleared on its own: a teacher who has
+          checked their class list has established nothing about their
+          imported progress, so a single dismiss would clear a warning they
+          never looked at. */}
+      {unverified.map((store) => (
+        <p className="import-error" role="status" key={store}>
+          A change to {STORE_NAMES[store] ?? store} could not be saved, and this tab no longer
+          has it. It may have made it into a later save or it may not — nothing here can tell,
+          which is why this asks you to check rather than declaring it missing. Go and look at that part of the
+          dashboard, and redo whatever is missing.{' '}
           <button
             className="button button-danger"
             onClick={() => {
-              acknowledgeLoss()
+              acknowledgeLoss(store)
               setStorageRefusing(!storageAcceptsWrites())
             }}
           >
-            I&apos;ve redone it
+            I&apos;ve checked this
           </button>
         </p>
-      )}
+      ))}
       {holdingUnsaved ? (
         <p className="import-error" role="status">
-          This browser is refusing to save, and a change made here is only in this tab —
-          it will be gone on reload, and a backup saved now would be missing it. Private
+          This browser is refusing to save, and a change to{' '}
+          {stranded.map((store) => STORE_NAMES[store] ?? store).join(' and ')} is only in this
+          tab — it will be gone on reload, and a backup saved now would be missing it. Private
           windows block saving entirely; otherwise the browser is likely out of space. Move to
           a normal window or free some space, then redo the change so it can be written down.
         </p>

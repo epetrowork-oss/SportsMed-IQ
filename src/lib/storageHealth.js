@@ -44,14 +44,24 @@ import { useSyncExternalStore } from 'react'
 // Two things are tracked, and they are NOT two values of one state -- that
 // was the mistake, and it made the warning disappear exactly when it mattered:
 //
-//   stranded  a refused change is here in memory right now. The dashboard
-//             shows it, it is missing from a backup taken now, and it dies
-//             with the tab. Current, and it changes with every write.
-//   lost      a refused change was discarded. History, not health: it happened
-//             and cannot un-happen, so a later write cannot clear it. This tab
-//             replaces its state from storage on every commit AND on every
-//             `storage` event from another tab, and each of those throws away
-//             whatever a refused write was holding.
+//   stranded    a refused change is here in memory right now. Provable: the
+//               snapshot is read from storage, so it is not in storage, and a
+//               backup taken now does not have it. Current health -- every
+//               write changes it.
+//   unverified  a refused change this tab no longer holds. History, not
+//               health: it happened and cannot un-happen, so a later write
+//               cannot clear it.
+//
+// `unverified`, not `lost`, and the difference is a claim this code cannot
+// make. When state is replaced by something that is not the refused payload,
+// what is known is that this tab can no longer account for that change -- NOT
+// that it is missing from storage. A later write can carry it: refuse a
+// restore of X, then restore X+Y successfully, and X is in storage while the
+// states never matched. And the opposite is equally possible: refuse a
+// DELETION, and a later write that contains the record again has undone it.
+// Telling the two apart needs a diff of the change rather than the state, so
+// the app says what it knows -- this could not be saved and cannot be
+// accounted for here, go and check -- rather than pronouncing it gone.
 //
 // Keeping them on one axis meant the next write decided what the teacher was
 // told about the previous one: a write that landed deleted the entry (banner
@@ -59,12 +69,14 @@ import { useSyncExternalStore } from 'react'
 // state reading "stranded" (banner says the work is still in this tab, when
 // what is in the tab is the NEW change and the old one is gone).
 //
-// A loss clears only when the teacher says so. That is the one thing that
-// actually establishes it -- they have redone the work, or decided not to --
-// and it is bounded, unlike round 16's cross-tab warnings, because it lives
-// in this tab's memory and dies with the tab.
+// An unverified change clears only when the teacher says so, PER STORE. That
+// is the one thing that settles it -- they have looked, and redone the work or
+// found it already there -- and it is bounded, unlike round 16's cross-tab
+// warnings, because it lives in this tab's memory and dies with the tab. Per
+// store because a teacher who has checked their class list has established
+// nothing about their imported progress.
 const stranded = new Set()
-const lost = new Set()
+const unverified = new Set()
 const listeners = new Set()
 
 function notify() {
@@ -82,46 +94,45 @@ export function reportStorageWrite(store, ok) {
 }
 
 // This store's in-memory state was replaced -- by a commit rebuilding from
-// storage, or by another tab's `storage` event -- and a refused write was
-// holding a change in it. That change is now in neither place.
+// storage, or by another tab's `storage` event -- by something that is not
+// the change a refused write was holding. This tab can no longer account for
+// that change.
 //
 // A no-op unless the store is actually stranded: a store with nothing held
-// here has nothing to lose, which is what keeps an ordinary write silent.
+// here has nothing to be unsure about, which is what keeps an ordinary write
+// silent.
 export function reportStorageDiscard(store) {
   if (!stranded.delete(store)) return
-  lost.add(store)
+  unverified.add(store)
   notify()
 }
 
-// The teacher has redone the work, or decided not to. The only thing that
-// settles a loss, and the only thing that clears it.
+// The teacher has checked this part of the device -- redone the work, or found
+// it already there. The only thing that settles it, and it settles only the
+// store named: checking a class list establishes nothing about imported
+// progress, so there is no clear-everything call.
 export function acknowledgeLoss(store) {
-  if (store === undefined) {
-    if (lost.size === 0) return
-    lost.clear()
-  } else if (!lost.delete(store)) {
-    return
-  }
+  if (!unverified.delete(store)) return
   notify()
 }
 
 export function storageIsFailing() {
-  return stranded.size > 0 || lost.size > 0
+  return stranded.size > 0 || unverified.size > 0
 }
 
 // Which stores are affected, for a message that can say what is at risk.
 export function failingStores() {
-  return [...new Set([...stranded, ...lost])]
+  return [...new Set([...stranded, ...unverified])]
 }
 
-// Stores holding a refused change right now -- still rescuable.
+// Stores holding a refused change right now -- provably not in storage.
 export function strandedStores() {
   return [...stranded]
 }
 
-// Stores whose refused change is gone rather than merely unsaved.
-export function lostStores() {
-  return [...lost]
+// Stores whose refused change this tab can no longer account for.
+export function unverifiedStores() {
+  return [...unverified]
 }
 
 // Ask storage directly: a probe write and read-back, then cleaned up.
@@ -155,12 +166,12 @@ function subscribe(fn) {
 }
 
 // A string, not an object: useSyncExternalStore compares snapshots by
-// identity, and a fresh object every render is an infinite loop. Both
-// conditions can hold at once -- an old change discarded, a new one refused --
-// so 'both' is a state, not a rounding of one into the other.
+// identity, and a fresh object every render is an infinite loop. It encodes
+// MEMBERSHIP, not just a category, so that a second store joining either set
+// re-renders the banners that name them. Callers read the lists themselves;
+// this is the change key.
 function healthSnapshot() {
-  if (lost.size > 0) return stranded.size > 0 ? 'both' : 'lost'
-  return stranded.size > 0 ? 'stranded' : 'ok'
+  return `${[...stranded].sort().join(',')}|${[...unverified].sort().join(',')}`
 }
 
 export function useStorageHealth() {

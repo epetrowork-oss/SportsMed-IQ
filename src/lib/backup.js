@@ -32,7 +32,7 @@
 
 import { toBase64Url, fromBase64UrlBytes, deflate, inflate } from './share.js'
 import { verifyDevicePasscode, credentialFingerprint, deviceIsUnlocked } from './auth.js'
-import { storageIsFailing, storageAcceptsWrites } from './storageHealth.js'
+import { strandedStores, unverifiedStores, storageAcceptsWrites } from './storageHealth.js'
 import { snapshotClasses, mergeClasses } from './classes.js'
 import { snapshotRoster, mergeRoster } from './roster.js'
 import { snapshotTeacherAssignments, mergeTeacherAssignments } from './teacherAssignments.js'
@@ -146,11 +146,16 @@ export async function createBackup(passcode) {
     text: `${JSON.stringify(file, null, 2)}\n`,
     filename: `sportmediq-backup-${today()}.json`,
     counts,
-    // TRUE only when a store in this tab has actually had a write rejected.
-    // The snapshot is read from storage, so a change that never reached
-    // storage is provably not in this file. False is NOT a claim that nothing
-    // is missing -- what another tab holds in memory cannot be seen from here.
-    knownIncomplete: storageIsFailing(),
+    // TRUE only when a store in this tab is holding a rejected write RIGHT
+    // NOW. The snapshot is read from storage, so that change is provably not
+    // in this file. False is NOT a claim that nothing is missing -- what
+    // another tab holds in memory cannot be seen from here.
+    knownIncomplete: strandedStores().length > 0,
+    // A refused change this tab can no longer account for. Weaker than
+    // `knownIncomplete` on purpose: a later write may have carried it to
+    // storage, or may have undone it, and nothing here can tell which -- so
+    // this asks the teacher to check rather than telling them it is missing.
+    unverifiedChange: unverifiedStores().length > 0,
     // A separate and weaker fact: storage refused a probe write just now.
     // That establishes the browser is in trouble, not that this payload lost
     // anything -- the probe is one byte and quota rejection is size-dependent,

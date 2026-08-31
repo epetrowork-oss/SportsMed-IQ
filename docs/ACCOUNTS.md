@@ -507,41 +507,54 @@ nothing to restore from. The backup file is the restore-from.
   trying to put something different there — and it keeps a restore that
   changed nothing from reporting itself unpersisted.
 
-  **Stranded is not the same as lost, and the teacher needs different things
-  from each.** Every commit rebuilds state from storage, and so does the
-  `storage` event handler when another tab writes. So a store holding a change
-  localStorage refused loses it the moment any of that happens — a write that
-  lands, a write that is refused, a restore that merges nothing, another tab
-  saving. The change is then in neither place, and saying it is "only in this
-  tab" sends the teacher looking for something that no longer exists.
+  **Stranded is not the same as unaccounted-for, and neither is the same as
+  lost.** Every commit rebuilds state from storage, and so does the `storage`
+  event handler when another tab writes. So a store holding a change
+  localStorage refused stops holding it the moment any of that happens — a
+  write that lands, a write that is refused, a restore that merges nothing,
+  another tab saving.
 
   `src/lib/storageHealth.js` therefore tracks two things per store, and they
   are **not two values of one state** — that was the first attempt, and it made
   the warning vanish exactly when it mattered:
 
-  | | what it is | what the banner asks for |
+  | | what is established | what the banner asks for |
   |---|---|---|
-  | `stranded` | a refused change is here in memory **right now** — current health, and every write changes it | save it: fix the storage problem, it is still rescuable |
-  | `lost` | a refused change **was discarded** — history, which cannot un-happen | redo it: there is nothing left to rescue |
+  | `stranded` | a refused change is here in memory **right now**, and the snapshot is read from storage, so it is provably not in a backup taken now | save it: fix the storage problem, it is still rescuable |
+  | `unverified` | a refused change this tab **no longer holds** — history, which cannot un-happen | check that part of the dashboard, and redo whatever is missing |
 
   On one axis, the next write decided what the teacher was told about the
   previous one. A write that landed deleted the entry — banner gone, work
   gone, teacher never told. A write that was refused left the state reading
   "stranded", so the banner offered to rescue a change that was already gone
-  while the thing actually being held was a different one. Both count as
-  failing, so both keep `knownIncomplete` true.
+  while the thing being held was a different one.
 
-  **A loss clears only when the teacher says so** — an *I've redone it* button
-  on the banner. Nothing in the code can tell whether the work was redone: a
-  later successful write proves the store's current state is saved, not that
-  the discarded change is back. This stays bounded in a way round 16's
-  cross-tab warnings were not, because it lives in this tab's memory and dies
-  with the tab.
+  **`unverified`, not `lost`, because "lost" is a claim this code cannot
+  make.** When state is replaced by something that is not the refused payload,
+  what is known is that this tab can no longer account for that change — not
+  that storage lacks it. A later write can carry it: refuse a merge adding Bo,
+  then land a merge adding Bo *and* Cam, and Bo is in storage although the
+  states never matched. Testing containment instead does not fix it, because
+  the opposite case is equally real: refuse a **deletion**, and a later write
+  that has the record again has undone it, which containment would call
+  survival. Telling the two apart needs a diff of the *change*, not of the
+  state — so the app reports what it knows and asks the teacher to look.
 
-  What decides whether a replacement discarded anything is the same total
-  comparison used above: the state being replaced against the state replacing
-  it. A retry that produces exactly what was stranded lost nothing, and says
-  nothing.
+  That difference is carried through to the backup. `knownIncomplete` means
+  `stranded` only, and licenses "it is NOT in this file". An unverified change
+  gets its own weaker field and its own sentence: "it may or may not be in
+  this file — check."
+
+  **An unverified change clears only when the teacher says so, per store** — an
+  *I've checked this* button on each banner, and the banner names the part of
+  the dashboard to check ("your classes, students and their PINs") rather than
+  the store. Per store because a teacher who has checked their class list has
+  established nothing about their imported progress, and one dismiss-all would
+  clear a warning they never looked at. Nothing in the code can substitute for
+  that check: a later successful write proves the store's current state is
+  saved, not that the earlier change is in it. It stays bounded in a way round
+  16's cross-tab warnings were not, because it lives in this tab's memory and
+  dies with the tab.
 
   So the success message describes the file ("1 class, 2 students with their
   PINs … that is what was saved on this device at the time") rather than
