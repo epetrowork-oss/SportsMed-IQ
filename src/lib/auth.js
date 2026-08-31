@@ -296,7 +296,10 @@ export function sessionFingerprint() {
 export async function issueTeacherCode(teacherName) {
   const name = (teacherName ?? '').trim().slice(0, 60)
   if (!name) throw new Error("Enter the teacher's name first.")
-  const existing = state.issued.find((t) => t.name.toLowerCase() === name.toLowerCase())
+  // Read fresh, not from this tab's snapshot: another tab may already have
+  // issued for this name, and reusing its tid is what "re-issuing replaces
+  // the code" means.
+  const existing = load().issued.find((t) => t.name.toLowerCase() === name.toLowerCase())
   const tid = existing?.tid ?? `t-${randomToken(8)}`
   const payload = { v: 1, tid, name, at: new Date().toISOString() }
   const compressed = await deflate(new TextEncoder().encode(JSON.stringify(payload)))
@@ -309,11 +312,18 @@ export async function issueTeacherCode(teacherName) {
     if (!cur.adminUnlocked) {
       throw new Error('You were signed out while the code was being generated — sign in and try again.')
     }
+    // Filtered by NAME as well as tid. Two issuances for the same
+    // previously-unseen name -- a double-click, or two tabs -- both find no
+    // existing entry and mint different tids, so filtering on tid alone
+    // leaves the first one behind and the list ends up with the name twice,
+    // each against a different code. The name is what the admin reads off
+    // that list, and what "re-issuing replaces the code" is promised about.
+    const replaced = cur.issued.filter(
+      (t) => t.tid !== tid && t.name.trim().toLowerCase() !== name.toLowerCase(),
+    )
     return {
       ...cur,
-      issued: [...cur.issued.filter((t) => t.tid !== tid), entry].sort((a, b) =>
-        a.name.localeCompare(b.name),
-      ),
+      issued: [...replaced, entry].sort((a, b) => a.name.localeCompare(b.name)),
     }
   })
   return entry
@@ -374,9 +384,24 @@ function redemptionBlockedReason(st) {
 // case a forged code would target. Getting past it needs the existing
 // credential: the teacher's passcode, or the admin signing in and calling
 // forgetTeacher() to hand the device over.
+// A fingerprint of whatever teacher record a device holds, or '' for none.
+// Used to bind a redemption to the state it started from.
+function teacherRecordKey(teacher) {
+  return teacher ? `${teacher.tid}:${teacher.salt}:${teacher.hash}` : ''
+}
+
 export async function redeemTeacherCode(code, passcode) {
   const blocked = redemptionBlockedReason(load())
   if (blocked) throw new Error(blocked)
+  // WHICH state authorized this, captured before the awaits below. Re-running
+  // the guard at commit time is not enough on a blank device: two tabs both
+  // pass it, the first provisions its teacher AND unlocks the device, and the
+  // second then finds `teacherUnlocked` true -- so the guard's "this tab's own
+  // session authorizes a hand-over" clause is satisfied by the OTHER tab's
+  // brand-new session, and the second redemption overwrites the teacher and
+  // passcode that were just set up. The guard answers "is a hand-over allowed
+  // now"; this answers "is this still the device I was handed".
+  const startedFrom = teacherRecordKey(load().teacher)
 
   const trimmed = (code ?? '').trim()
   if (!trimmed.startsWith(TEACHER_PREFIX)) {
@@ -422,6 +447,11 @@ export async function redeemTeacherCode(code, passcode) {
   commit((cur) => {
     const blockedNow = redemptionBlockedReason(cur)
     if (blockedNow) throw new Error(blockedNow)
+    if (teacherRecordKey(cur.teacher) !== startedFrom) {
+      throw new Error(
+        'This device was set up for another teacher while that code was being redeemed — reload and check who it belongs to before trying again.',
+      )
+    }
     return { ...cur, teacher, teacherUnlocked: true }
   })
   return teacher

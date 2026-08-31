@@ -349,7 +349,27 @@ nothing to restore from. The backup file is the restore-from.
   its own, because it is not specific to sessions: **a captured value that can
   be empty makes an equality check vacuous.** The check did not fail, it
   succeeded by comparing a value to itself. Every binding here therefore
-  requires its captured value to be non-empty before it is worth comparing. And the panel reads the file before it ever
+  requires its captured value to be non-empty before it is worth comparing.
+
+  **The same rule reaches the teacher-code paths**, which is where a sweep for
+  it found two more. `redeemTeacherCode` re-runs its guard immediately before
+  committing, and that guard asks *is a hand-over allowed now* — a question
+  the wrong tab can answer. On a blank device two tabs both pass the first
+  check; the first provisions its teacher **and unlocks the device**; the
+  second then finds `teacherUnlocked` true and is waved through by the guard's
+  own-session clause, satisfied by the other tab's brand-new session, and
+  overwrites the teacher and passcode just set up. So the redemption is bound
+  to the teacher record it started from: absent stays absent, and a
+  hand-over an admin authorizes still works because that record does not move
+  under it.
+
+  `issueTeacherCode` had the read-only version of the same thing. It filtered
+  the issued list by `tid`, and two issuances for a name not seen before —
+  a double-click, or two tabs — mint different tids, so the first entry
+  survived and the admin's list showed one teacher twice against two different
+  codes. It filters by normalized name as well now, which is what "re-issuing
+  replaces the code" was always promising, and reads the existing entry from
+  storage rather than this tab's snapshot. And the panel reads the file before it ever
   calls `restoreBackup`, so it passes its own reading in: a capture inside the
   library would bind to whoever had been provisioned during `file.text()`.
 

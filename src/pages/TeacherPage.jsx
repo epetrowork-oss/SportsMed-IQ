@@ -884,9 +884,12 @@ function BackupPanel() {
 
       <h3>Restore from a backup</h3>
       <p className="field-hint">
-        Adds the backup&apos;s classes to this device and refreshes any it already has. Work that
-        was never in the backup is left alone. Sign-in passcodes are not restored — this device
-        keeps its own.
+        Brings back anything this device is missing — a class it does not have, students missing
+        from a class it does, progress rows, assignments. It never changes what is already here:
+        a class this device has keeps its own settings, its students and their current PINs, and
+        an assignment it has keeps its own units and the code you handed out. Where the backup
+        disagrees, this device wins and the difference is named below. Sign-in passcodes are not
+        restored — this device keeps its own.
       </p>
       <input
         className="text-input"
