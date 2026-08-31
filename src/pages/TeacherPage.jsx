@@ -14,7 +14,7 @@ import StatusIcon from '../components/StatusIcon.jsx'
 import QrCode from '../components/QrCode.jsx'
 import { printClassJoinSheet } from '../lib/print.js'
 import { createBackup, downloadBackup, restoreBackup } from '../lib/backup.js'
-import { useStorageHealth } from '../lib/storageHealth.js'
+import { useStorageHealth, failingInAnotherTab } from '../lib/storageHealth.js'
 import mockRoster from '../content/mock/students.json'
 import {
   useAuth,
@@ -634,10 +634,18 @@ function BackupPanel() {
       downloadBackup(backup)
       setSavePass('')
       const { classes, students, rosterRows } = backup.counts
-      setSaveMsg({
-        ok: true,
-        message: `Saved ${backup.filename} — ${classes} class${classes === 1 ? '' : 'es'}, ${students} student${students === 1 ? '' : 's'} with their PINs, ${rosterRows} imported progress row${rosterRows === 1 ? '' : 's'}. Keep it somewhere you will still have if this device is gone.`,
-      })
+      const saved = `Saved ${backup.filename} — ${classes} class${classes === 1 ? '' : 'es'}, ${students} student${students === 1 ? '' : 's'} with their PINs, ${rosterRows} imported progress row${rosterRows === 1 ? '' : 's'}.`
+      setSaveMsg(
+        backup.incomplete
+          ? {
+              ok: false,
+              message: `${saved} But this browser has refused to save a change${failingInAnotherTab() ? ' in another SportMedIQ tab' : ''}, so anything stranded there is NOT in this file. Keep it, then fix the saving problem and take a fresh backup.`,
+            }
+          : {
+              ok: true,
+              message: `${saved} Keep it somewhere you will still have if this device is gone.`,
+            },
+      )
     } catch (err) {
       setSaveMsg({ ok: false, message: err.message })
     } finally {
@@ -699,8 +707,8 @@ function BackupPanel() {
       <h2>Back up this device</h2>
       {storageFailing && (
         <p className="import-error" role="status">
-          This browser refused to save a change. Anything you have done since is only in this
-          tab — it will be gone on reload, a backup saved now would be missing it, and it may be
+          {failingInAnotherTab() ? 'Another SportMedIQ tab' : 'This browser'} refused to save a
+          change. Anything done since is only in that tab — it will be gone on reload, a backup saved now would be missing it, and it may be
           dropped as soon as saving works again. Private windows block saving entirely;
           otherwise the browser is likely out of space. Move to a normal window or free some
           space, reload, and redo whatever is missing.

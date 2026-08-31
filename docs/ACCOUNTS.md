@@ -460,6 +460,16 @@ nothing to restore from. The backup file is the restore-from.
   apart. Unioning resurrects the deletion, bringing back a class and its PINs
   the teacher removed on another tab.
 
+  A refused write is also the one piece of cross-tab state that cannot ride on
+  storage, because its whole subject is a write that did not reach storage —
+  nothing was written, so no `storage` event fires. Without that, a second
+  Teacher tab would show no warning and report a backup as complete while
+  silently omitting the first tab's stranded changes. The health signal is
+  broadcast between tabs (`BroadcastChannel`), each tab clears only its own
+  failures, and a backup taken while any tab is stranded is handed over marked
+  incomplete rather than as a clean save — it is still worth keeping, but the
+  teacher is told to fix the saving problem and take a fresh one.
+
   A refused write is tracked **per store**, not as one flag: a quota-limited
   browser can reject a large class write and accept a small assignment write
   moments later, and a single flag would read that second success as "all
