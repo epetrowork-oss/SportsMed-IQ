@@ -171,16 +171,33 @@ let lastWriteOk = true
 
 function save(next) {
   state = next
+  const payload = JSON.stringify(state)
+  // Storage full or blocked — keep working in memory for the rest of the
+  // session, but say so. Silence here is what let a teacher build a whole
+  // class, and a backup of it, on top of writes that never happened.
+  let landed = false
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
-    lastWriteOk = true
+    localStorage.setItem(STORAGE_KEY, payload)
+    landed = true
   } catch {
-    // Storage full or blocked — keep working in memory for the rest of the
-    // session, but say so. Silence here is what let a teacher build a whole
-    // class, and a backup of it, on top of writes that never happened.
-    lastWriteOk = false
+    // refused
   }
-  reportStorageWrite('classes', lastWriteOk)
+  // A refused write only STRANDS something if what it was trying to write
+  // differs from what is already stored. A write whose payload storage
+  // already holds -- a merge that added nothing, a setting changed back to
+  // its current value -- lost nothing when it was rejected. Note this is the
+  // WHOLE payload, not a chosen subset: every earlier attempt to infer
+  // persistence by re-reading picked fields to compare and got it wrong.
+  lastWriteOk = landed || readRaw() === payload
+  // Health is a different question from this write's outcome, and the three
+  // cases are not two. A write that landed clears the store. A write that was
+  // refused and stranded something marks it. A write that was refused and
+  // stranded NOTHING says nothing at all -- it must not mark the store,
+  // because nothing is missing, and it must not clear it either, because it
+  // never reached storage and cannot vouch for an earlier change that did not
+  // either.
+  if (landed) reportStorageWrite('classes', true)
+  else if (!lastWriteOk) reportStorageWrite('classes', false)
   listeners.forEach((fn) => fn())
 }
 

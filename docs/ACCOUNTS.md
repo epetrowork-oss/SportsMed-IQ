@@ -479,7 +479,7 @@ nothing to restore from. The backup file is the restore-from.
 
   | Signal | What it establishes | How it is said |
   |---|---|---|
-  | A store in this tab had a write rejected (`knownIncomplete`) | The snapshot is read from storage, so that change is **provably not** in the file | "a change in this tab failed to save, so it is NOT in this file" |
+  | A store in this tab had a write rejected **and what it tried to write differs from what storage holds** (`knownIncomplete`) | The snapshot is read from storage, so that change is **provably not** in the file | "a change in this tab failed to save, so it is NOT in this file" |
   | Storage refused a probe write just now (`storageRefusing`) | The browser is in trouble; nothing about **this** payload | "may have failed to save, and anything that did fail is not in this file" |
 
   The distinction is not pedantry: the probe is one byte and quota rejection is
@@ -488,6 +488,22 @@ nothing to restore from. The backup file is the restore-from.
   as a finding would be the same overclaim this whole section exists to avoid.
   Neither signal's absence certifies completeness either — what a tab is
   holding in memory after a rejected write is not observable from outside it.
+
+  Note what the first row rests on. A rejected `setItem` is not by itself proof
+  that anything was stranded: a write whose payload storage **already holds** —
+  a merge that added nothing, a setting changed back to its current value —
+  lost nothing when it was refused. So each store's `save()` decides the
+  outcome by what storage holds afterwards, not by whether `setItem` threw:
+
+  ```js
+  } catch {
+    lastWriteOk = readRaw() === payload
+  }
+  ```
+
+  That keeps `knownIncomplete` provable — the snapshot is read from storage,
+  and the write that failed was trying to put something different there — and
+  it keeps a restore that changed nothing from reporting itself unpersisted.
 
   So the success message describes the file ("1 class, 2 students with their
   PINs … that is what was saved on this device at the time") rather than
@@ -524,6 +540,17 @@ enumerate, and the minimum this app enforces is six characters. So a backup
 is not a file to leave anywhere a link reaches: it belongs in storage only
 staff can open, and the save panel warns when the passcode it was just made
 with is short.
+
+**Short, not weak, and the difference is the whole point of the name.** The
+check is `secret.length < 12` and nothing else, because scoring composition
+would mean claiming `Passw0rd!` is strong — the same overclaim in a new place.
+A length threshold works in one direction: under it, the space is small enough
+to be worth a warning whatever the characters are; over it, nothing follows,
+since `passwordpassword` is sixteen characters and a random eleven-character
+secret is not enumerable at all. So the flag is `shortPasscode`, its false
+case means "this one check found nothing" rather than "fine", and the advice
+that follows from it — keep the file where only staff can reach it — is in the
+save message either way. Only the sentence naming the length is conditional.
 
 ## Office-suite exports (`src/lib/exports.js`)
 

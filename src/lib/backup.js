@@ -20,8 +20,10 @@
 // but cannot price a search space small enough to walk. The minimum passcode
 // here is six characters, which is well inside that space. So the file is
 // only as hard to open as its passcode is to guess — the callers say that,
-// name the kind of storage it belongs in, and get `weakPasscode` below to
-// flag the one part of it the code can actually see.
+// name the kind of storage it belongs in, and get `shortPasscode` below to
+// flag the one part of it the code can actually see. Only that part: a short
+// passcode is worth saying out loud, but a long one is not evidence of
+// anything, and nothing here treats it as such.
 //
 // What it does NOT carry is the device's credentials. A backup restores a
 // teacher's *work*, never their identity: signing in on the new device is
@@ -40,10 +42,14 @@ const VERSION = 1
 // Same cost as the passcode and PIN derivations: enough that guessing at the
 // file is slow, few enough that a Chromebook makes the backup in a moment.
 const KDF_ITERATIONS = 150000
-// Not a strength meter -- just the length below which offline guessing is
-// cheap enough to be worth saying out loud. Composition is deliberately not
-// scored: a rule that called `Passw0rd!` strong would be the same overclaim
-// this flag exists to avoid.
+// A length, and nothing more. Composition is deliberately not scored: a rule
+// that called `Passw0rd!` strong would be the same overclaim the whole file
+// is written against. Which means the threshold works in one direction only.
+// Under it, the space is small enough that guessing is worth warning about
+// whatever the characters are. Over it, NOTHING follows: `passwordpassword`
+// is 16 characters and trivially guessed, and an 11-character random secret
+// is not enumerable at all. So this measures shortness, is named for
+// shortness, and its false case is read as "nothing to say", never as "fine".
 const SHORT_PASSCODE = 12
 
 function randomBytes(length) {
@@ -151,10 +157,12 @@ export async function createBackup(passcode) {
     // so it can fail while every real write landed, and pass while a large one
     // elsewhere did not. Reported as a risk, never as a finding.
     storageRefusing: !storageAcceptsWrites(),
-    // Whether the secret this file was just sealed with is short enough to
-    // enumerate offline. Knowable here and nowhere else: the passcode is not
-    // stored, so this call is the only moment anything can say it.
-    weakPasscode: secret.length < SHORT_PASSCODE,
+    // Whether the secret this file was just sealed with is SHORT. True is a
+    // reason to warn; false says only that this one check found nothing, not
+    // that the passcode is strong -- see SHORT_PASSCODE above. Knowable here
+    // and nowhere else: the passcode is not stored, so this call is the only
+    // moment anything can say even this much.
+    shortPasscode: secret.length < SHORT_PASSCODE,
   }
 }
 

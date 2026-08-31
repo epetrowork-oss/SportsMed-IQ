@@ -649,26 +649,32 @@ function BackupPanel() {
       // write in this tab is a fact about the payload; a refused probe is a
       // fact about the browser and only a risk to the payload; a short
       // passcode is a fact about the file's protection, not its contents.
-      const shortPass = backup.weakPasscode
+      //
+      // What the third one is NOT is a verdict on the passcode. `shortPasscode`
+      // false means one length check found nothing, and a long passcode can
+      // still be a guessed word repeated -- so the advice that follows from
+      // it is said EITHER WAY, and only the sentence naming the length is
+      // conditional. A save must never read as "your passcode is fine".
+      const passcodeNote = backup.shortPasscode
         ? ' One more thing: the passcode you just used is short, and anyone who gets this file can try passcodes against it on their own machine as fast as it will go. Keep the file where only staff can reach it — not a shared folder or a link — and use a longer passcode for this device when you can.'
-        : ''
+        : ' However long your passcode is, someone holding this file can keep guessing at it, so keep it where only staff can reach it.'
       setSaveMsg(
         backup.knownIncomplete
           ? {
               ok: false,
-              message: `${saved} But a change in this tab failed to save, so it is NOT in this file. Keep it, then fix the saving problem and take a fresh backup.${shortPass}`,
+              message: `${saved} But a change in this tab failed to save, so it is NOT in this file. Keep it, then fix the saving problem and take a fresh backup.${passcodeNote}`,
             }
           : backup.storageRefusing
             ? {
                 ok: false,
-                message: `${saved} But this browser just refused a test write, so a change made since — in this tab or another one — may have failed to save, and anything that did fail is not in this file. Keep it, then fix the saving problem and take a fresh backup.${shortPass}`,
+                message: `${saved} But this browser just refused a test write, so a change made since — in this tab or another one — may have failed to save, and anything that did fail is not in this file. Keep it, then fix the saving problem and take a fresh backup.${passcodeNote}`,
               }
             : {
-                ok: !backup.weakPasscode,
+                ok: !backup.shortPasscode,
                 // Says what the file holds, and does not claim it holds
                 // everything: a change another tab has failed to save cannot
                 // be seen from here.
-                message: `${saved} That is what was saved on this device at the time. Keep it somewhere you will still have if this device is gone.${shortPass}`,
+                message: `${saved} That is what was saved on this device at the time. Keep it somewhere you will still have if this device is gone.${passcodeNote}`,
               },
       )
     } catch (err) {
@@ -684,6 +690,10 @@ function BackupPanel() {
       const text = await file.text()
       const summary = await restoreBackup(text, restorePass)
       setRestorePass('')
+      // A restore that merged nothing new reports success even while storage is
+      // refusing -- correctly, since it stranded nothing. Re-ask storage so the
+      // banner above still says the browser is in trouble.
+      setStorageRefusing(!storageAcceptsWrites())
       const made = new Date(summary.at)
       const part = (one, many, counts) =>
         `${counts.added} ${counts.added === 1 ? one : many} added, ${counts.updated ?? counts.kept} ${counts.updated === undefined ? 'already here' : 'updated'}`
