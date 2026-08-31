@@ -323,6 +323,23 @@ nothing to restore from. The backup file is the restore-from.
   signs in with costs them no new secret to remember — at the cost that the
   file is only as hard to open as that passcode is to guess, which is why the
   panel names the storage the file belongs in and flags a short one.
+- **All three stores come from one stable snapshot.** Three independent reads
+  are three separate moments, and another tab's restore writes classes, then
+  roster rows, then assignments — so reads taken either side of those writes
+  assemble a device that never existed: the old class list beside the newly
+  restored roster rows, whose students belong to a class the file does not
+  contain. Restoring that onto a replacement device brings back orphaned
+  progress rows without the class and PINs they belong to, and nothing about
+  the session changed, so every other check passes and the file reports
+  success.
+
+  localStorage has no transaction, so `createBackup` uses the same
+  compare-and-retry `commit` does: read, read again, accept only when nothing
+  moved in between. It cannot see a write that landed and was reverted and
+  does not pretend to. When a tab keeps writing, it refuses rather than
+  returning a file whose contents were never simultaneously true.
+
+
 - **Two things are re-checked at every boundary where something actually
   happens, not only where they are checked.** The matched verifier, *and*
   **which session** is signed in — because they move independently, and each
