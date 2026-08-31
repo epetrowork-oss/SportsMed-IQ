@@ -75,6 +75,49 @@ async function deriveAesKey(salt, passcode) {
   )
 }
 
+// How many times to re-read before giving up on a stable snapshot. Reads are
+// cheap; this only ever fails against a tab writing continuously.
+const SNAPSHOT_ATTEMPTS = 5
+
+function readStores() {
+  return {
+    classes: snapshotClasses(),
+    roster: snapshotRoster(),
+    assignments: snapshotTeacherAssignments(),
+  }
+}
+
+/**
+ * All three stores as they were at one moment, or an error.
+ *
+ * Three independent reads are three separate moments, and another tab's
+ * restore writes classes, then roster rows, then assignments. So the reads can
+ * straddle those writes and assemble a device that never existed: the OLD
+ * class list with the NEWLY restored roster rows, whose students belong to a
+ * class the file does not contain. Restoring that onto a replacement device
+ * brings back orphaned progress rows and leaves out the class and PINs they
+ * belong to -- and nothing about the session changed, so every other check
+ * here passes and the file reports success.
+ *
+ * localStorage has no transaction, so the same compare-and-retry `commit` uses
+ * is the best available: read, read again, and accept only when nothing moved
+ * in between. It cannot see a write that landed and was reverted, and it does
+ * not pretend to; what it does rule out is the torn payload above. When a tab
+ * keeps writing, this refuses rather than returning a file whose contents were
+ * never simultaneously true.
+ */
+function snapshotStores() {
+  let taken = readStores()
+  for (let attempt = 0; attempt < SNAPSHOT_ATTEMPTS; attempt += 1) {
+    const again = readStores()
+    if (JSON.stringify(again) === JSON.stringify(taken)) return taken
+    taken = again
+  }
+  throw new Error(
+    'Another tab kept changing this device while the backup was being made — nothing was saved. Close the other tabs and try again.',
+  )
+}
+
 function today() {
   const now = new Date()
   const pad = (n) => String(n).padStart(2, '0')
@@ -125,12 +168,8 @@ export async function createBackup(passcode, session = sessionFingerprint()) {
   // tab changes only the unlocked flags -- the verifier record is untouched --
   // so a credential check alone passes straight through it.
 
-  const payload = {
-    classes: snapshotClasses(),
-    roster: snapshotRoster(),
-    assignments: snapshotTeacherAssignments(),
-    at: new Date().toISOString(),
-  }
+  const stores = snapshotStores()
+  const payload = { ...stores, at: new Date().toISOString() }
   const counts = {
     classes: payload.classes.length,
     students: payload.classes.reduce((n, c) => n + (c.students?.length ?? 0), 0),
