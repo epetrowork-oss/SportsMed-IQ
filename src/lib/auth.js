@@ -384,10 +384,26 @@ function redemptionBlockedReason(st) {
 // case a forged code would target. Getting past it needs the existing
 // credential: the teacher's passcode, or the admin signing in and calling
 // forgetTeacher() to hand the device over.
-// A fingerprint of whatever teacher record a device holds, or '' for none.
-// Used to bind a redemption to the state it started from.
-function teacherRecordKey(teacher) {
-  return teacher ? `${teacher.tid}:${teacher.salt}:${teacher.hash}` : ''
+// A fingerprint of everything about a device's authorization: both credential
+// records and both unlocked flags. Used to bind a slow operation to the state
+// it started from.
+//
+// The whole state, not the part that looks relevant. A redemption binding that
+// recorded only the TEACHER record was defeated by another tab finishing
+// `setupAdmin()` during the derivation: the teacher record is absent on both
+// sides so the binding matched, while the new `adminUnlocked` made the guard
+// return null through its own-session clause -- and a stale redemption
+// installed its teacher on a device that had just acquired an admin. Choosing
+// which fields matter is the same mistake the persistence checks made four
+// times over; this compares all of them.
+function authStateKey(st) {
+  const record = (r) => (r ? `${r.salt}:${r.hash}` : '')
+  return [
+    `admin:${record(st.admin)}`,
+    `adminUnlocked:${st.adminUnlocked ? 1 : 0}`,
+    `teacher:${st.teacher ? st.teacher.tid : ''}:${record(st.teacher)}`,
+    `teacherUnlocked:${st.teacherUnlocked ? 1 : 0}`,
+  ].join('|')
 }
 
 export async function redeemTeacherCode(code, passcode) {
@@ -408,7 +424,7 @@ export async function redeemTeacherCode(code, passcode) {
   // brand-new session, and the second redemption overwrites the teacher and
   // passcode that were just set up. The guard answers "is a hand-over allowed
   // now"; this answers "is this still the device I was handed".
-  const startedFrom = teacherRecordKey(startedState.teacher)
+  const startedFrom = authStateKey(startedState)
 
   const trimmed = (code ?? '').trim()
   if (!trimmed.startsWith(TEACHER_PREFIX)) {
@@ -454,9 +470,9 @@ export async function redeemTeacherCode(code, passcode) {
   commit((cur) => {
     const blockedNow = redemptionBlockedReason(cur)
     if (blockedNow) throw new Error(blockedNow)
-    if (teacherRecordKey(cur.teacher) !== startedFrom) {
+    if (authStateKey(cur) !== startedFrom) {
       throw new Error(
-        'This device was set up for another teacher while that code was being redeemed — reload and check who it belongs to before trying again.',
+        "This device's sign-in changed while that code was being redeemed — reload and check who it belongs to before trying again.",
       )
     }
     return { ...cur, teacher, teacherUnlocked: true }

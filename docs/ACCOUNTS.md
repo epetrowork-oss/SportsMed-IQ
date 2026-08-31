@@ -363,6 +363,17 @@ nothing to restore from. The backup file is the restore-from.
   hand-over an admin authorizes still works because that record does not move
   under it.
 
+  And the binding has to cover the **whole** authorization state, not the part
+  that looks relevant. A version that recorded only the teacher record was
+  defeated by another tab finishing `setupAdmin()` during the derivation: the
+  teacher record is absent on both sides, so the binding matched, while the
+  new `adminUnlocked` made the guard return null through its own-session
+  clause — and a stale redemption installed its teacher, with a passcode of
+  the redeemer's choosing, on a device that had just acquired an admin.
+  `authStateKey` compares both credential records and both unlocked flags.
+  Choosing which fields matter is the same mistake the persistence checks made
+  four times over.
+
   Both readings have to come from **one** read, too. Splitting them —
   `redemptionBlockedReason(load())` on one line and `teacherRecordKey(load())`
   on the next — leaves the binding describing a state the guard never saw: a
