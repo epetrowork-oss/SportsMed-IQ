@@ -626,7 +626,6 @@ function BackupPanel() {
   useEffect(() => {
     setStorageRefusing(!storageAcceptsWrites())
   }, [ownWritesFailing])
-  const storageFailing = ownWritesFailing || storageRefusing
   const [savePass, setSavePass] = useState('')
   const [saveMsg, setSaveMsg] = useState(null)
   const [saving, setSaving] = useState(false)
@@ -645,19 +644,32 @@ function BackupPanel() {
       setStorageRefusing(!storageAcceptsWrites())
       const { classes, students, rosterRows } = backup.counts
       const saved = `Saved ${backup.filename} — ${classes} class${classes === 1 ? '' : 'es'}, ${students} student${students === 1 ? '' : 's'} with their PINs, ${rosterRows} imported progress row${rosterRows === 1 ? '' : 's'}.`
+      // Three different things can be true about this file, and they are not
+      // equally certain, so they are not said in the same voice. A rejected
+      // write in this tab is a fact about the payload; a refused probe is a
+      // fact about the browser and only a risk to the payload; a short
+      // passcode is a fact about the file's protection, not its contents.
+      const shortPass = backup.weakPasscode
+        ? ' One more thing: the passcode you just used is short, and anyone who gets this file can try passcodes against it on their own machine as fast as it will go. Keep the file where only staff can reach it — not a shared folder or a link — and use a longer passcode for this device when you can.'
+        : ''
       setSaveMsg(
         backup.knownIncomplete
           ? {
               ok: false,
-              message: `${saved} But this browser is refusing to save changes, so anything done since — in this tab or another one — is NOT in this file. Keep it, then fix the saving problem and take a fresh backup.`,
+              message: `${saved} But a change in this tab failed to save, so it is NOT in this file. Keep it, then fix the saving problem and take a fresh backup.${shortPass}`,
             }
-          : {
-              ok: true,
-              // Says what the file holds, and does not claim it holds
-              // everything: a change another tab has failed to save cannot be
-              // seen from here.
-              message: `${saved} That is what was saved on this device at the time. Keep it somewhere you will still have if this device is gone.`,
-            },
+          : backup.storageRefusing
+            ? {
+                ok: false,
+                message: `${saved} But this browser just refused a test write, so a change made since — in this tab or another one — may have failed to save, and anything that did fail is not in this file. Keep it, then fix the saving problem and take a fresh backup.${shortPass}`,
+              }
+            : {
+                ok: !backup.weakPasscode,
+                // Says what the file holds, and does not claim it holds
+                // everything: a change another tab has failed to save cannot
+                // be seen from here.
+                message: `${saved} That is what was saved on this device at the time. Keep it somewhere you will still have if this device is gone.${shortPass}`,
+              },
       )
     } catch (err) {
       setSaveMsg({ ok: false, message: err.message })
@@ -718,21 +730,37 @@ function BackupPanel() {
   return (
     <section className="backup-panel">
       <h2>Back up this device</h2>
-      {storageFailing && (
+      {/* Two states, not one flag. A rejected write here is something that HAS
+          gone wrong; a refused probe is something that MAY. Folding them
+          together is how a banner ends up telling a teacher their work is
+          stranded on the strength of a one-byte test write. */}
+      {ownWritesFailing ? (
         <p className="import-error" role="status">
-          This browser is refusing to save changes. Anything done since is only in the tab
-          it was done in — it will be gone on reload, a backup saved now would be missing it, and it may be
+          This browser refused to save a change made here. That change is only in this tab —
+          it will be gone on reload, a backup saved now would be missing it, and it may be
           dropped as soon as saving works again. Private windows block saving entirely;
           otherwise the browser is likely out of space. Move to a normal window or free some
           space, reload, and redo whatever is missing.
         </p>
-      )}
+      ) : storageRefusing ? (
+        <p className="import-error" role="status">
+          This browser just refused a test write, so it may be refusing real ones too — in this
+          tab or another one. Nothing here is known to be lost, but anything that did fail to
+          save is only in the tab it was done in, and would be missing from a backup taken now.
+          Private windows block saving entirely; otherwise the browser is likely out of space.
+          Move to a normal window or free some space, reload, and check that recent work is
+          still here.
+        </p>
+      ) : null}
       <p className="field-hint">
         Your classes, rosters, PINs and settings are stored on this device only — there is no
         online copy. If it is wiped, reset or replaced, a backup file is the only way to get
-        them back. The file is encrypted with this device&apos;s passcode, so it is safe to keep
-        in Drive or on a school share; without that passcode nobody can open it, and that
-        includes you.
+        them back. The file is encrypted with this device&apos;s passcode — and it lists every
+        student&apos;s name and PIN, so it is exactly as hard to open as that passcode is to
+        guess. Anyone who gets the file can try passcodes against it on their own machine, over and
+        over, with nothing watching. Keep it where only staff can reach it, not in a shared
+        folder or behind a link. And keep the passcode: without it
+        nobody can open the file, and that includes you.
       </p>
 
       <h3>Save a backup</h3>

@@ -95,8 +95,10 @@ function randomLetters(length) {
 }
 
 // This device's own tag, drawn once and kept. Every student ID it issues ends
-// with it, which is what makes two devices' IDs disjoint by construction
-// rather than by luck.
+// with it, which is what makes a collision between two devices' IDs rare
+// rather than routine. Rare, not impossible: two devices can draw the same
+// five letters (1 in 24^5, ~8 million), so the conflict guard in mergeClasses
+// stays -- the tag lowers the rate, it does not remove the case.
 //
 // Per DEVICE, not per student, and that distinction is the whole point. Three
 // random letters per student was 24^3 = 13,824 values drawn afresh for every

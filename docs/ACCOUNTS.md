@@ -320,7 +320,9 @@ nothing to restore from. The backup file is the restore-from.
   PBKDF2-SHA256 at the same 150k iterations as everything else here. A plain
   backup would be a file listing every student's login name and PIN sitting in
   a Downloads folder or a Drive share. Using the passcode the teacher already
-  signs in with costs them no new secret to remember.
+  signs in with costs them no new secret to remember — at the cost that the
+  file is only as hard to open as that passcode is to guess, which is why the
+  panel names the storage the file belongs in and flags a short one.
 - **The credential is re-checked at every boundary where something actually
   happens, not only where it is checked.** Verifying, deriving the file key,
   compressing and encrypting are all awaits, and so is decrypting on the way
@@ -397,7 +399,7 @@ nothing to restore from. The backup file is the restore-from.
   settling in the roster the question the class merge deliberately declined.
   Those rows are held back and counted, and the panel says so.
 
-  **Where the collision came from, and why it no longer arises.** Two devices
+  **Where the collision came from, and why it is now rare.** Two devices
   restored from one class shared its lineage *and* its counter, so each one's
   next student was issued exactly the same ID — and every store keyed by
   (class, student) then had two people behind one key. Containing that
@@ -405,7 +407,8 @@ nothing to restore from. The backup file is the restore-from.
   message that settled the question the class merge had declined. New student
   IDs therefore end with **this device's own tag** — five letters drawn once
   and kept (`P3-04KMRWX`), so every ID a device issues shares it and two
-  devices' IDs are disjoint by construction.
+  devices' IDs collide only if the two devices drew the same tag. That is a
+  smaller probability, not zero, which is why the conflict guard above stays.
 
   Per device, not per student, and the difference is the whole point. Random
   letters *per student* were 24³ = 13,824 values redrawn every time, so two
@@ -471,19 +474,26 @@ nothing to restore from. The backup file is the restore-from.
   offline app to describe a browser-wide condition.
 
   Instead, **a backup says what it holds and never claims to hold everything.**
-  Two things are knowable and both raise a warning: this tab's own failed
-  writes, and storage refusing a probe write outright. Neither their absence
-  nor anything else can certify completeness — quota rejection is
-  size-dependent, so a browser near its limit can refuse a class roster in one
-  tab and accept a one-byte probe in another, and what a tab is holding in
-  memory after a rejected write is not observable from outside it at all.
+  Two things are knowable, and they are *not* the same claim, so they are kept
+  apart rather than folded into one flag:
+
+  | Signal | What it establishes | How it is said |
+  |---|---|---|
+  | A store in this tab had a write rejected (`knownIncomplete`) | The snapshot is read from storage, so that change is **provably not** in the file | "a change in this tab failed to save, so it is NOT in this file" |
+  | Storage refused a probe write just now (`storageRefusing`) | The browser is in trouble; nothing about **this** payload | "may have failed to save, and anything that did fail is not in this file" |
+
+  The distinction is not pedantry: the probe is one byte and quota rejection is
+  size-dependent, so it can fail while every real write landed, and pass while
+  a large write elsewhere did not. A probe failure is a risk, and reporting it
+  as a finding would be the same overclaim this whole section exists to avoid.
+  Neither signal's absence certifies completeness either — what a tab is
+  holding in memory after a rejected write is not observable from outside it.
 
   So the success message describes the file ("1 class, 2 students with their
   PINs … that is what was saved on this device at the time") rather than
-  pronouncing it complete, and the warning, when either knowable signal fires,
-  tells the teacher to fix the saving problem and take a fresh one. The honest
-  limit: a second tab holding changes it could not save is invisible to a
-  backup taken here, and only that tab's own warning will say so.
+  pronouncing it complete. The honest limit: a second tab holding changes it
+  could not save is invisible to a backup taken here, and only that tab's own
+  warning will say so.
 
   A refused write is tracked **per store**, not as one flag: a quota-limited
   browser can reject a large class write and accept a small assignment write
@@ -493,16 +503,27 @@ nothing to restore from. The backup file is the restore-from.
   stranded change is gone.
 
   So a refused write is reported instead (`src/lib/storageHealth.js`), and the
-  teacher dashboard says plainly that this browser is not saving. The honest
-  consequence, which the message states: work done during that outage lives in
-  the tab only, is missing from any backup taken then, and may be dropped once
-  saving resumes. A teacher whose browser is refusing writes needs to know
-  that, not to have one code path quietly paper over it.
+  teacher dashboard says plainly what it knows — in the two voices above, one
+  banner for a write that actually failed here and a weaker one for a probe
+  that did. The honest consequence, which the first message states: work done
+  during that outage lives in the tab only, is missing from any backup taken
+  then, and may be dropped once saving resumes. A teacher whose browser is
+  refusing writes needs to know that, not to have one code path quietly paper
+  over it.
 
 There is still no account recovery, and now there is one more thing to write
 down: **a backup is only as good as the passcode it was made with.** If both
-the device and the passcode are gone, so is the data — by design, since that
-is the same property that makes the file safe to keep in Drive.
+the device and the passcode are gone, so is the data — by design.
+
+That cuts the other way too, and the app says so rather than implying the
+encryption is unconditional. The file holds every student's name and plain
+PIN, and anyone holding it can try passcodes against it offline, at whatever
+rate their hardware manages, with no lockout and nothing watching. 150k
+PBKDF2 iterations slow each guess; they do not save a passcode short enough to
+enumerate, and the minimum this app enforces is six characters. So a backup
+is not a file to leave anywhere a link reaches: it belongs in storage only
+staff can open, and the save panel warns when the passcode it was just made
+with is short.
 
 ## Office-suite exports (`src/lib/exports.js`)
 

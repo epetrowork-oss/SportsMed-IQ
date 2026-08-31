@@ -14,6 +14,15 @@
 // teacher no new secret to remember, because it is the passcode they already
 // sign in with — the one they wrote down when they set the device up.
 //
+// What that does NOT buy is protection independent of the passcode. An
+// attacker holding the file guesses against it offline, at their own pace,
+// with no lockout and nobody watching; the iteration count prices each guess
+// but cannot price a search space small enough to walk. The minimum passcode
+// here is six characters, which is well inside that space. So the file is
+// only as hard to open as its passcode is to guess — the callers say that,
+// name the kind of storage it belongs in, and get `weakPasscode` below to
+// flag the one part of it the code can actually see.
+//
 // What it does NOT carry is the device's credentials. A backup restores a
 // teacher's *work*, never their identity: signing in on the new device is
 // still a deliberate setup step (admin passcode, or a teacher access code),
@@ -31,6 +40,11 @@ const VERSION = 1
 // Same cost as the passcode and PIN derivations: enough that guessing at the
 // file is slow, few enough that a Chromebook makes the backup in a moment.
 const KDF_ITERATIONS = 150000
+// Not a strength meter -- just the length below which offline guessing is
+// cheap enough to be worth saying out loud. Composition is deliberately not
+// scored: a rule that called `Passw0rd!` strong would be the same overclaim
+// this flag exists to avoid.
+const SHORT_PASSCODE = 12
 
 function randomBytes(length) {
   const bytes = new Uint8Array(length)
@@ -126,14 +140,21 @@ export async function createBackup(passcode) {
     text: `${JSON.stringify(file, null, 2)}\n`,
     filename: `sportmediq-backup-${today()}.json`,
     counts,
-    // TRUE when something is known to be missing; false is NOT a claim that
-    // nothing is. A backup holds what was in storage at that moment, and what
-    // another tab is keeping in memory after a rejected write cannot be seen
-    // from here -- quota rejection is size-dependent, so even a probe that
-    // succeeds says nothing about a large write refused elsewhere. The two
-    // things that ARE knowable say so: this tab's own failed writes, and
-    // storage refusing outright.
-    knownIncomplete: storageIsFailing() || !storageAcceptsWrites(),
+    // TRUE only when a store in this tab has actually had a write rejected.
+    // The snapshot is read from storage, so a change that never reached
+    // storage is provably not in this file. False is NOT a claim that nothing
+    // is missing -- what another tab holds in memory cannot be seen from here.
+    knownIncomplete: storageIsFailing(),
+    // A separate and weaker fact: storage refused a probe write just now.
+    // That establishes the browser is in trouble, not that this payload lost
+    // anything -- the probe is one byte and quota rejection is size-dependent,
+    // so it can fail while every real write landed, and pass while a large one
+    // elsewhere did not. Reported as a risk, never as a finding.
+    storageRefusing: !storageAcceptsWrites(),
+    // Whether the secret this file was just sealed with is short enough to
+    // enumerate offline. Knowable here and nowhere else: the passcode is not
+    // stored, so this call is the only moment anything can say it.
+    weakPasscode: secret.length < SHORT_PASSCODE,
   }
 }
 
