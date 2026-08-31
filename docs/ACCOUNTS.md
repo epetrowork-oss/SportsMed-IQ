@@ -345,7 +345,11 @@ nothing to restore from. The backup file is the restore-from.
   verification succeeds — produced an *empty* fingerprint, and the check at
   the boundary compared empty with empty and passed, handing every class and
   plaintext PIN out of a signed-out device. So a non-empty session is a
-  precondition, not an incidental. And the panel reads the file before it ever
+  precondition, not an incidental — and the general form is worth stating on
+  its own, because it is not specific to sessions: **a captured value that can
+  be empty makes an equality check vacuous.** The check did not fail, it
+  succeeded by comparing a value to itself. Every binding here therefore
+  requires its captured value to be non-empty before it is worth comparing. And the panel reads the file before it ever
   calls `restoreBackup`, so it passes its own reading in: a capture inside the
   library would bind to whoever had been provisioned during `file.text()`.
 
