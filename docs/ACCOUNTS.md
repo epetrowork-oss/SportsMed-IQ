@@ -460,15 +460,25 @@ nothing to restore from. The backup file is the restore-from.
   apart. Unioning resurrects the deletion, bringing back a class and its PINs
   the teacher removed on another tab.
 
-  A refused write is also the one piece of cross-tab state that cannot ride on
-  storage, because its whole subject is a write that did not reach storage —
-  nothing was written, so no `storage` event fires. Without that, a second
-  Teacher tab would show no warning and report a backup as complete while
-  silently omitting the first tab's stranded changes. The health signal is
-  broadcast between tabs (`BroadcastChannel`), each tab clears only its own
-  failures, and a backup taken while any tab is stranded is handed over marked
-  incomplete rather than as a clean save — it is still worth keeping, but the
-  teacher is told to fix the saving problem and take a fresh one.
+  A second Teacher tab is the awkward case: a refused write fires no `storage`
+  event — nothing was written — so that tab would show no warning and report a
+  backup as complete while omitting the first tab's stranded changes. The
+  answer is **not** to share failure health between tabs. That was tried and it
+  does not end: it needs per-tab identity (two failing tabs, one recovers, and
+  a shared set clears while the other is still stranded), then a join handshake
+  (a tab opened after the failure hears nothing), then liveness (a stranded tab
+  closes and the rest warn forever) — a consensus protocol growing inside an
+  offline app to describe a browser-wide condition.
+
+  Instead, **a backup asks storage directly** whether it will take a write, at
+  the moment the file is made, and is handed over marked *incomplete* if it
+  will not. One line, true for every tab at once because it is a property of
+  the browser rather than of any tab, and it cannot go stale. The file is still
+  worth keeping; the teacher is told to fix the saving problem and take a fresh
+  one. What the probe does not catch: a tab holding a change from an outage
+  storage has since recovered from. That tab shows its own warning and its next
+  write lands, and if it never writes again the change was never going to
+  survive the tab.
 
   A refused write is tracked **per store**, not as one flag: a quota-limited
   browser can reject a large class write and accept a small assignment write

@@ -14,7 +14,7 @@ import StatusIcon from '../components/StatusIcon.jsx'
 import QrCode from '../components/QrCode.jsx'
 import { printClassJoinSheet } from '../lib/print.js'
 import { createBackup, downloadBackup, restoreBackup } from '../lib/backup.js'
-import { useStorageHealth, failingInAnotherTab } from '../lib/storageHealth.js'
+import { useStorageHealth, storageAcceptsWrites } from '../lib/storageHealth.js'
 import mockRoster from '../content/mock/students.json'
 import {
   useAuth,
@@ -617,7 +617,16 @@ function BackupPanel() {
   // A browser that is refusing writes is the one situation where everything
   // on this dashboard is a lie by the next reload, so it is said here, at the
   // top of the panel whose whole job is not losing work.
-  const storageFailing = useStorageHealth()
+  const ownWritesFailing = useStorageHealth()
+  // Also ask storage directly, so a tab opened after the trouble started --
+  // or one that has simply not written yet -- does not look healthy while the
+  // browser is refusing writes. Re-checked whenever this tab's own health
+  // changes, and after each save or restore.
+  const [storageRefusing, setStorageRefusing] = useState(false)
+  useEffect(() => {
+    setStorageRefusing(!storageAcceptsWrites())
+  }, [ownWritesFailing])
+  const storageFailing = ownWritesFailing || storageRefusing
   const [savePass, setSavePass] = useState('')
   const [saveMsg, setSaveMsg] = useState(null)
   const [saving, setSaving] = useState(false)
@@ -633,13 +642,14 @@ function BackupPanel() {
       const backup = await createBackup(savePass)
       downloadBackup(backup)
       setSavePass('')
+      setStorageRefusing(!storageAcceptsWrites())
       const { classes, students, rosterRows } = backup.counts
       const saved = `Saved ${backup.filename} — ${classes} class${classes === 1 ? '' : 'es'}, ${students} student${students === 1 ? '' : 's'} with their PINs, ${rosterRows} imported progress row${rosterRows === 1 ? '' : 's'}.`
       setSaveMsg(
         backup.incomplete
           ? {
               ok: false,
-              message: `${saved} But this browser has refused to save a change${failingInAnotherTab() ? ' in another SportMedIQ tab' : ''}, so anything stranded there is NOT in this file. Keep it, then fix the saving problem and take a fresh backup.`,
+              message: `${saved} But this browser is refusing to save changes, so anything done since — in this tab or another one — is NOT in this file. Keep it, then fix the saving problem and take a fresh backup.`,
             }
           : {
               ok: true,
@@ -707,8 +717,8 @@ function BackupPanel() {
       <h2>Back up this device</h2>
       {storageFailing && (
         <p className="import-error" role="status">
-          {failingInAnotherTab() ? 'Another SportMedIQ tab' : 'This browser'} refused to save a
-          change. Anything done since is only in that tab — it will be gone on reload, a backup saved now would be missing it, and it may be
+          This browser is refusing to save changes. Anything done since is only in the tab
+          it was done in — it will be gone on reload, a backup saved now would be missing it, and it may be
           dropped as soon as saving works again. Private windows block saving entirely;
           otherwise the browser is likely out of space. Move to a normal window or free some
           space, reload, and redo whatever is missing.

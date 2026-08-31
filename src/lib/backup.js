@@ -21,7 +21,7 @@
 
 import { toBase64Url, fromBase64UrlBytes, deflate, inflate } from './share.js'
 import { verifyDevicePasscode, credentialFingerprint, deviceIsUnlocked } from './auth.js'
-import { storageIsFailing } from './storageHealth.js'
+import { storageIsFailing, storageAcceptsWrites } from './storageHealth.js'
 import { snapshotClasses, mergeClasses } from './classes.js'
 import { snapshotRoster, mergeRoster } from './roster.js'
 import { snapshotTeacherAssignments, mergeTeacherAssignments } from './teacherAssignments.js'
@@ -126,11 +126,12 @@ export async function createBackup(passcode) {
     text: `${JSON.stringify(file, null, 2)}\n`,
     filename: `sportmediq-backup-${today()}.json`,
     counts,
-    // A backup is built from what is in storage, so if any tab is holding a
-    // write localStorage refused, this file is missing it. The file is still
-    // worth having -- it is better than nothing -- but the teacher must not be
-    // told it is complete.
-    incomplete: storageIsFailing(),
+    // A backup is built from what is in storage, so a browser that is
+    // refusing writes has changes -- in this tab or any other -- that this
+    // file cannot contain. Asked of storage directly, so it holds for every
+    // tab at once rather than only the one that noticed. The file is still
+    // worth having; the teacher must simply not be told it is complete.
+    incomplete: storageIsFailing() || !storageAcceptsWrites(),
   }
 }
 

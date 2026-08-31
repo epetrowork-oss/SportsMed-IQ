@@ -7,88 +7,79 @@
 // students, printing slips and making backups, and finds out at the next
 // reload that none of it was written down.
 //
-// So the stores report the outcome here instead, and the dashboard says so.
-// This is the piece that lets everything else keep a single simple rule:
-// **what is in storage is the truth**. No store has to guess whether its own
-// memory is ahead because a write failed or stale because another tab deleted
-// something -- a question that cannot be answered from the two states alone,
-// and answering it wrongly resurrects deleted classes.
+// So the stores report the outcome here, and the dashboard says so. That is
+// what lets everything else keep a single simple rule: **what is in storage is
+// the truth**, with a refused write surfaced rather than compensated for.
+//
+// Two ways of knowing, deliberately kept small:
+//
+//   1. What this tab's own writes did (`reportStorageWrite`), which is what
+//      the warning banner reflects.
+//   2. Whether storage will take a write AT ALL, asked directly at the moment
+//      it matters (`storageAcceptsWrites`).
+//
+// The second replaced a cross-tab broadcast of the first. Sharing failure
+// health between tabs sounds right and does not end: it needs per-tab
+// identity (two failing tabs, one recovers, and a shared set clears while the
+// other is still stranded), a join handshake (a tab opened after the failure
+// hears nothing), and then liveness (a stranded tab closes and the rest warn
+// forever) -- a consensus protocol growing inside an offline app to describe
+// a browser-wide condition. Asking storage is one line, answers for every tab
+// at once, and cannot go stale.
+//
+// What the probe does not catch: a tab holding a change from an earlier
+// outage that storage has since recovered from. That tab shows its own
+// warning and its next write lands; if it never writes again the change was
+// never going to survive the tab anyway. Documented in docs/ACCOUNTS.md
+// rather than pretended away.
 
 import { useSyncExternalStore } from 'react'
 
-// Which stores currently hold a change localStorage refused. Per store, not
+// Which stores in THIS tab hold a change localStorage refused. Per store, not
 // one flag: a quota-limited browser can reject a large class write and then
 // accept a small assignment write moments later, and a single flag would read
 // that second success as "all clear" while the class change is still
 // stranded. A store clears itself only by writing successfully -- which, under
 // "storage is the truth", is also the moment its stranded change is gone.
 const failing = new Set()
-// Stores another Teacher tab has told us it could not write. Kept apart from
-// this tab's own failures because only the tab that owns stranded data can
-// clear it: a successful write here says nothing about what is stuck there.
-const failingElsewhere = new Set()
 const listeners = new Set()
 
 function notify() {
   listeners.forEach((fn) => fn())
 }
 
-// A refused write emits no `storage` event -- nothing was written -- so a
-// second Teacher tab would otherwise never learn that the first one is
-// holding changes localStorage rejected. It would then show no warning and
-// report a backup as complete while silently omitting them. This is the one
-// piece of cross-tab state that cannot ride on storage, because its whole
-// subject is a write that did not reach storage.
-const CHANNEL = 'sportmediq:storage-health:v1'
-
-const channel = (() => {
-  try {
-    if (typeof BroadcastChannel !== 'function') return null
-    const bc = new BroadcastChannel(CHANNEL)
-    // Node's implementation keeps the event loop alive; browsers have no
-    // unref and do not need one.
-    bc.unref?.()
-    bc.onmessage = (event) => {
-      const { store, ok } = event.data ?? {}
-      if (typeof store !== 'string') return
-      const was = failingElsewhere.has(store)
-      if (ok === !was) return
-      if (ok) failingElsewhere.delete(store)
-      else failingElsewhere.add(store)
-      notify()
-    }
-    return bc
-  } catch {
-    return null
-  }
-})()
-
 export function reportStorageWrite(store, ok) {
   const was = failing.has(store)
   if (ok === !was) return
   if (ok) failing.delete(store)
   else failing.add(store)
-  try {
-    channel?.postMessage({ store, ok })
-  } catch {
-    // A tab that cannot broadcast still shows its own warning.
-  }
   notify()
 }
 
 export function storageIsFailing() {
-  return failing.size > 0 || failingElsewhere.size > 0
+  return failing.size > 0
 }
 
 // Which stores are affected, for a message that can say what is at risk.
 export function failingStores() {
-  return [...new Set([...failing, ...failingElsewhere])]
+  return [...failing]
 }
 
-// True when the trouble is in another tab rather than this one, so the
-// warning can say where to go and look.
-export function failingInAnotherTab() {
-  return failingElsewhere.size > 0
+// Ask storage directly. A probe write and read-back, then cleaned up: this is
+// the condition that decides whether a backup can be complete, it is true for
+// every tab at once because it is a property of the browser and not of any
+// tab, and it needs nothing remembered between calls.
+const PROBE_KEY = 'sportmediq:storageProbe:v1'
+
+export function storageAcceptsWrites() {
+  try {
+    localStorage.setItem(PROBE_KEY, '1')
+    const readBack = localStorage.getItem(PROBE_KEY) === '1'
+    localStorage.removeItem(PROBE_KEY)
+    return readBack
+  } catch {
+    return false
+  }
 }
 
 function subscribe(fn) {
@@ -97,5 +88,5 @@ function subscribe(fn) {
 }
 
 export function useStorageHealth() {
-  return useSyncExternalStore(subscribe, () => failing.size > 0 || failingElsewhere.size > 0)
+  return useSyncExternalStore(subscribe, () => failing.size > 0)
 }
