@@ -749,6 +749,15 @@ function BackupPanel() {
             .map((c) => `${c.sid} is ${c.onDevice} on this device and ${c.inBackup} in the backup`)
             .join('; ')}${summary.students.skipped ? `, and ${summary.students.skipped} imported progress row${summary.students.skipped === 1 ? ' was' : 's were'} held back for the same reason` : ''}. Keeping that class on its own device avoids the clash. If you do need them here, first have them open Sync on their own device and copy their progress code — adding them here gives them a new student ID and an empty profile, and pasting that code back in after they sign in is what brings their work across.`
         : ''
+      // An assignment the backup and this device disagree about is kept as it
+      // is here and named, never resolved: `createdAt` is the other device's
+      // wall clock, and there is no trusted clock between two Chromebooks. The
+      // teacher knows which device they last edited on; the code does not.
+      const assignmentClash = summary.assignmentConflicts.length
+        ? ` This device already has ${summary.assignmentConflicts.length === 1 ? 'an assignment' : 'assignments'} named ${summary.assignmentConflicts
+            .map((c) => `"${c.name}"`)
+            .join(', ')} set up differently from the backup's. This device's version was kept and the code you already handed out still works. If the backup's is the one you want, delete this one and restore again.`
+        : ''
       const dupes = summary.duplicateNames.length
         ? ` Two students now share a login name: ${summary.duplicateNames
             .map((d) => `"${d.name}" in ${d.className} (${d.sids.join(' and ')})`)
@@ -761,9 +770,15 @@ function BackupPanel() {
               message: `Restored into this session only — ${landed} — but this browser refused to save it, so a reload will lose it. It may be out of storage or in a private window. Keep the backup file, free up space or use a normal window, then restore again.`,
             }
           : summary.conflicts.length
-            ? { ok: false, message: `Restored the backup from ${from} — ${landed}.${clash}${dupes}` }
-            : summary.duplicateNames.length
-              ? { ok: false, message: `Restored the backup from ${from} — ${landed}.${dupes}` }
+            ? {
+                ok: false,
+                message: `Restored the backup from ${from} — ${landed}.${clash}${dupes}${assignmentClash}`,
+              }
+            : summary.duplicateNames.length || summary.assignmentConflicts.length
+              ? {
+                  ok: false,
+                  message: `Restored the backup from ${from} — ${landed}.${dupes}${assignmentClash}`,
+                }
               : { ok: true, message: `Restored the backup from ${from} — ${landed}.` },
       )
     } catch (err) {

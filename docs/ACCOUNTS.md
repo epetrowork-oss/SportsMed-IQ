@@ -325,10 +325,25 @@ nothing to restore from. The backup file is the restore-from.
   panel names the storage the file belongs in and flags a short one.
 - **Two things are re-checked at every boundary where something actually
   happens, not only where they are checked.** The matched verifier, *and*
-  whether the device is still signed in — because they can move independently.
+  **which session** is signed in — because they move independently, and each
+  answers a question the other cannot.
+
   `signOut()` clears the unlocked flags and leaves the verifier record exactly
-  as it was, so a fingerprint comparison alone passes straight through a
-  sign-out in another tab and hands the file over to a locked device. Verifying, deriving the file key,
+  as it was, so a credential comparison alone passes straight through a
+  sign-out in another tab and hands the file to a locked device. And "is the
+  device unlocked" is a *boolean*, which cannot tell "nothing happened" from
+  "this teacher was released, the stores were wiped, and somebody else was set
+  up here" — a restore checking only that would resume into the new teacher's
+  device and write the old teacher's classes and plaintext PINs into it,
+  undoing the release. So `sessionFingerprint()` names *who* is signed in, and
+  a long-running operation is bound to the session that started it.
+
+  The verifier fingerprint also comes back **from** the verification rather
+  than being looked up after it. Looking it up is a second read of the same
+  record, and another tab replacing the credential between the two reads
+  leaves the caller holding a fingerprint of the replacement — which it would
+  then confirm at the boundary, having established nothing at all about the
+  record the passcode actually matched. Verifying, deriving the file key,
   compressing and encrypting are all awaits, and so is decrypting on the way
   back in — an admin releasing a teacher in another tab lands somewhere in
   there. So the export re-checks the matched verifier immediately before the
@@ -367,8 +382,21 @@ nothing to restore from. The backup file is the restore-from.
   The three stores do **not** all merge the same way, and an earlier version
   of this sentence said they did. Classes merge, gaining the students they
   lack. **Roster rows are never overwritten** — add-only, whatever the
-  timestamps say, for the reasons under "the roster's own rule" below. Saved
-  assignments are the only ones where a newer copy wins, by `createdAt`.
+  timestamps say, for the reasons under "the roster's own rule" below. **Saved
+  assignments are never overwritten either**, and a difference is reported
+  rather than resolved.
+
+  That last one used to take whichever copy had the later `createdAt`, and it
+  was the one place a restore could roll something back. It cannot work. A
+  restore is by definition cross-device, `createdAt` is the *source* device's
+  wall clock, and there is no trusted clock between two Chromebooks: a device
+  running ten minutes fast makes every assignment it holds look newer, so an
+  older backup silently overwrites a genuinely newer local assignment — its
+  units, its due date, and the code already handed out to students for it.
+  Ordering by an untrusted timestamp is a guess, and guessing is precisely
+  what the rest of this file stopped doing. The teacher knows which device
+  they last edited on; the code does not, so the clash goes to them by name
+  and this device's version is kept.
 
   When a class gains students its `rev` outruns both copies and its stored
   code is cleared, so a code generated before the restore cannot be handed

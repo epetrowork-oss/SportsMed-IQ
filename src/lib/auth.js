@@ -207,8 +207,17 @@ export function signOut() {
 // Checks a passcode against this device's stored verifiers WITHOUT unlocking
 // anything. The backup file is encrypted with the passcode, so a typo at
 // export time would produce a file nobody can ever open — this is what makes
-// that impossible. Returns 'admin' or 'teacher' (whichever matched), and
-// throws a readable error when neither does.
+// that impossible. Returns { role, credential } — the role that matched and a
+// fingerprint of the exact record it matched — and throws a readable error
+// when neither matches.
+//
+// The fingerprint is returned rather than looked up afterwards, and that is
+// the whole point of returning an object. A caller that re-reads the record
+// to fingerprint it is reading it a second time, and another tab can replace
+// the credential between the two reads; the caller would then be holding a
+// fingerprint of the REPLACEMENT and would happily confirm it later, having
+// verified nothing about the record the passcode actually matched. Binding
+// the two together here is the only place that gap can be closed.
 //
 // Each derivation takes 150k PBKDF2 iterations, which is long enough for
 // another tab to release the teacher or replace a passcode while it runs. A
@@ -236,7 +245,9 @@ export async function verifyDevicePasscode(passcode) {
         "This device's sign-in changed while that was being checked — sign in again and retry.",
       )
     }
-    if (hash === current.hash) return role
+    if (hash === current.hash) {
+      return { role, credential: `${role}:${current.salt}:${current.hash}` }
+    }
   }
   throw new Error("That passcode doesn't match this device's admin or teacher passcode.")
 }
@@ -255,6 +266,26 @@ export function credentialFingerprint(role) {
 export function deviceIsUnlocked() {
   const cur = load()
   return !!(cur.adminUnlocked || cur.teacherUnlocked)
+}
+
+// WHICH session is signed in, not merely that one is. Empty string when the
+// device is locked.
+//
+// "Still unlocked" is not the same question as "still the same person". A
+// release in another tab wipes the stores and can provision a different
+// teacher, and a boolean cannot tell that apart from nothing having happened
+// — so a long-running operation started by teacher A, checking only the
+// boolean, would resume into teacher B's freshly provisioned device and write
+// A's classes and plaintext PINs into it, undoing the release. Both roles are
+// included because a device can hold both, and either changing is a change.
+export function sessionFingerprint() {
+  const cur = load()
+  const parts = []
+  if (cur.adminUnlocked && cur.admin) parts.push(`admin:${cur.admin.salt}:${cur.admin.hash}`)
+  if (cur.teacherUnlocked && cur.teacher) {
+    parts.push(`teacher:${cur.teacher.salt}:${cur.teacher.hash}`)
+  }
+  return parts.join('|')
 }
 
 // --- teacher access codes ---

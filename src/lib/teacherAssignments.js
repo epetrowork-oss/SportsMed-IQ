@@ -190,32 +190,57 @@ export function snapshotTeacherAssignments() {
 }
 
 // Restores saved assignments, keyed by the same case-insensitive name
-// saveTeacherAssignment uses. An entry this device already has is kept unless
-// the backup's is newer. Returns { added, updated, persisted }.
+// saveTeacherAssignment uses. An entry this device does not have is added; one
+// it already has is KEPT, and a difference is reported rather than resolved.
+// Returns { added, kept, conflicts, persisted }.
+//
+// This used to take whichever copy had the later `createdAt`, which was the
+// one place here a restore could roll something back. It cannot work: a
+// restore is by definition cross-device, `createdAt` is the source device's
+// wall clock, and there is no trusted clock between two Chromebooks. A source
+// device running ten minutes fast makes every one of its assignments look
+// newer, and an older backup then overwrites a genuinely newer local
+// assignment -- its units, its due date, and the code already handed out for
+// it. Ordering by an untrusted timestamp is a guess, and guessing is what
+// every other store here stopped doing.
+//
+// So the rule is the one the rest of the restore follows: never remove and
+// never roll back. A real difference goes to the teacher, who knows which
+// device they last edited on.
 export function mergeTeacherAssignments(incoming) {
   const list = Array.isArray(incoming) ? incoming.filter((a) => a && typeof a.name === 'string') : []
   let added = 0
-  let updated = 0
+  let kept = 0
+  let conflicts = []
   const key = (entry) => entry.name.trim().toLowerCase()
+  // Compared whole, not on chosen fields: the point is to be sure a kept entry
+  // and a discarded one really are the same assignment, and picking which
+  // fields count is how that goes wrong.
+  const same = (a, b) =>
+    JSON.stringify({ unitIds: a.unitIds, mode: a.mode, due: a.due ?? null, code: a.code }) ===
+    JSON.stringify({ unitIds: b.unitIds, mode: b.mode, due: b.due ?? null, code: b.code })
   commit((cur) => {
     added = 0
-    updated = 0
+    kept = 0
+    conflicts = []
     const assignments = [...cur.assignments]
     for (const entry of list) {
       const at = assignments.findIndex((a) => key(a) === key(entry))
       if (at < 0) {
         assignments.push(entry)
         added += 1
-      } else if (String(entry.createdAt ?? '') > String(assignments[at].createdAt ?? '')) {
-        assignments[at] = entry
-        updated += 1
+      } else if (same(assignments[at], entry)) {
+        kept += 1
+      } else {
+        kept += 1
+        conflicts.push({ name: assignments[at].name })
       }
     }
     return { assignments }
   })
   // The write itself says whether it landed -- see mergeClasses.
   const persisted = lastWriteOk
-  return { added, updated, persisted }
+  return { added, kept, conflicts, persisted }
 }
 
 // Wipes this store. Used when a teacher releases the device: their data must

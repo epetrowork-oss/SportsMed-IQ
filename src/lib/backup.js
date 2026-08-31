@@ -31,7 +31,7 @@
 // so a copied file can never provision an admin by itself.
 
 import { toBase64Url, fromBase64UrlBytes, deflate, inflate } from './share.js'
-import { verifyDevicePasscode, credentialFingerprint, deviceIsUnlocked } from './auth.js'
+import { verifyDevicePasscode, credentialFingerprint, sessionFingerprint } from './auth.js'
 import { strandedStores, unverifiedStores, storageAcceptsWrites } from './storageHealth.js'
 import { snapshotClasses, mergeClasses } from './classes.js'
 import { snapshotRoster, mergeRoster } from './roster.js'
@@ -92,17 +92,23 @@ function today() {
  */
 export async function createBackup(passcode) {
   const secret = (passcode ?? '').trim()
-  const role = await verifyDevicePasscode(secret)
+  // The fingerprint comes back FROM the verification rather than being looked
+  // up after it. Re-reading the record here would read it a second time, and
+  // another tab replacing the credential in between would leave this holding a
+  // fingerprint of the replacement -- which the check below would then confirm,
+  // having established nothing about the record the passcode actually matched,
+  // and hand out a file encrypted with a passcode that had just been revoked.
+  const { role, credential } = await verifyDevicePasscode(secret)
   // Verifying is not the moment of disclosure. Deriving the key, compressing
   // and encrypting are all awaits, and the device's authorization can change
   // during them -- after which returning the file would hand every class on
   // the device out on a session that no longer exists. TWO things have to
   // still hold at the boundary where the data actually leaves, and they are
-  // separate: the matched record must still be the matched record
-  // (fingerprinted here), and the device must still be signed in. A sign-out
-  // in another tab changes only the unlocked flags -- the verifier record is
-  // untouched -- so a fingerprint check alone passes straight through it.
-  const credential = credentialFingerprint(role)
+  // separate: the matched record must still be the matched record, and the
+  // device must still be signed in as the same person. A sign-out in another
+  // tab changes only the unlocked flags -- the verifier record is untouched --
+  // so a credential check alone passes straight through it.
+  const session = sessionFingerprint()
 
   const payload = {
     classes: snapshotClasses(),
@@ -139,7 +145,7 @@ export async function createBackup(passcode) {
     iv: toBase64Url(iv),
     data: toBase64Url(sealed),
   }
-  if (credentialFingerprint(role) !== credential || !deviceIsUnlocked()) {
+  if (credentialFingerprint(role) !== credential || sessionFingerprint() !== session) {
     throw new Error(
       "This device's sign-in changed while the backup was being made — nothing was saved. Sign in again and try once more.",
     )
@@ -229,9 +235,12 @@ export async function readBackup(text, passcode) {
  *
  * A restore never removes and never rolls back: a class, roster row or
  * assignment this device does not have is taken from the backup, and one it
- * already has is kept (a class gains back only the students it is missing).
+ * already has is kept (a class gains back only the students it is missing),
+ * and an assignment it already has is kept with any difference reported.
  * So restoring onto a device that is already teaching cannot erase work the
- * backup never had, and cannot undo a PIN reset made since it.
+ * backup never had, cannot undo a PIN reset made since it, and cannot roll an
+ * assignment back to an older version on the strength of another device's
+ * clock.
  *
  * Returns { at, classes, students, assignments, conflicts, persisted } with
  * { added, updated } counts per kind (and `skipped` for roster rows held back
@@ -244,15 +253,23 @@ export async function readBackup(text, passcode) {
  * discover after throwing the file away. Every caller must show that.
  */
 export async function restoreBackup(text, passcode) {
+  // WHO started this, captured before the slow part. Opening the file is slow,
+  // and a release in another tab during it takes the device's credential away
+  // AND wipes the stores -- then provisions someone else, at which point the
+  // device is unlocked again. "Still unlocked" would therefore be satisfied by
+  // a DIFFERENT teacher, and this continuation would write the first
+  // teacher's classes and plaintext PINs into the second's freshly set up
+  // device, undoing the release entirely. Worse, redeeming a teacher code
+  // afterwards is refused precisely because class data exists, so the release
+  // would neither erase the data nor leave a device anyone can open. It has to
+  // be the same session, not merely a session.
+  const session = sessionFingerprint()
+  if (!session) {
+    throw new Error('Sign in on this device before restoring a backup.')
+  }
   const backup = await readBackup(text, passcode)
-  // Opening the file is slow, and a release in another tab during it takes
-  // the device's credential away AND wipes the stores. Writing now would
-  // repopulate them with classes and plaintext PINs that nothing guards --
-  // and worse, redeeming a teacher code afterwards is refused precisely
-  // because class data exists, so the release would neither erase the data
-  // nor leave a device anyone can open. Checked immediately before the first
-  // write, against state re-read now.
-  if (!deviceIsUnlocked()) {
+  // Checked immediately before the first write, against state re-read now.
+  if (sessionFingerprint() !== session) {
     throw new Error(
       'This device was signed out or released while the backup was being opened — nothing was restored. Sign in again and try once more.',
     )
@@ -281,6 +298,9 @@ export async function restoreBackup(text, passcode) {
     // after a restore, but the sign-in list cannot tell them apart on name
     // alone, so the teacher has to know.
     duplicateNames: classes.duplicateNames ?? [],
+    // Assignments the two devices disagree about. Kept as they are here and
+    // reported, never resolved by timestamp: see mergeTeacherAssignments.
+    assignmentConflicts: assignments.conflicts ?? [],
     // Any one store failing to write leaves the device partly restored, which
     // is exactly the state the teacher must not mistake for a finished one.
     persisted: classes.persisted && students.persisted && assignments.persisted,
