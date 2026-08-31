@@ -57,15 +57,13 @@ function save(next) {
   // subset: every earlier attempt to infer persistence picked fields to
   // compare and each subset was wrong differently.
   lastWriteOk = landed || JSON.stringify(load()) === payload
-  // Health is a different question from this write's outcome, and the three
-  // cases are not two. A write that landed clears the store. A write that was
-  // refused and stranded something marks it. A write that was refused and
-  // stranded NOTHING says nothing at all -- it must not mark the store,
-  // because nothing is missing, and it must not clear it either, because it
-  // never reached storage and cannot vouch for an earlier change that did not
-  // either.
-  if (landed) reportStorageWrite('roster', true)
-  else if (!lastWriteOk) reportStorageWrite('roster', false)
+  // Health follows the same question the outcome does: is the intended state
+  // what a reader now gets? If it is -- because the write landed, or because
+  // storage already holds it -- this store has nothing outstanding. If it is
+  // not, it does. Anything an EARLIER refused write was holding has already
+  // been accounted for by the discard above, which runs first, so clearing
+  // here cannot bury it.
+  reportStorageWrite('roster', lastWriteOk)
   listeners.forEach((fn) => fn())
 }
 
@@ -196,10 +194,14 @@ if (typeof window !== 'undefined') {
     if (event.key === null || event.key === STORAGE_KEY) {
       const held = JSON.stringify(state)
       state = load()
-      // Another tab wrote this store, so this tab's state is replaced -- and a
-      // change refused here goes with it, exactly as it does on a commit.
-      // Without this the banner would go on offering to rescue it.
+      // Another tab wrote this store, so this tab's state is replaced. Either
+      // it lands on exactly what a refused write here was holding -- in which
+      // case the other tab has just saved that very state, and this store has
+      // nothing outstanding -- or it does not, and this tab can no longer
+      // account for the change. Both are no-ops unless this store was
+      // stranded.
       if (held !== JSON.stringify(state)) reportStorageDiscard('roster')
+      else reportStorageWrite('roster', true)
       listeners.forEach((fn) => fn())
     }
   })

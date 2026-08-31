@@ -521,7 +521,7 @@ nothing to restore from. The backup file is the restore-from.
   | | what is established | what the banner asks for |
   |---|---|---|
   | `stranded` | a refused change is here in memory **right now**, and the snapshot is read from storage, so it is provably not in a backup taken now | save it: fix the storage problem, it is still rescuable |
-  | `unverified` | a refused change this tab **no longer holds** — history, which cannot un-happen | check that part of the dashboard, and redo whatever is missing |
+  | `unverified` | a refused change this tab **can no longer account for** — history, which cannot un-happen | check that part of the dashboard, and redo whatever is missing |
 
   On one axis, the next write decided what the teacher was told about the
   previous one. A write that landed deleted the entry — banner gone, work
@@ -543,7 +543,18 @@ nothing to restore from. The backup file is the restore-from.
   That difference is carried through to the backup. `knownIncomplete` means
   `stranded` only, and licenses "it is NOT in this file". An unverified change
   gets its own weaker field and its own sentence: "it may or may not be in
-  this file — check."
+  this file — check." The wording matters as much as the flag: an earlier
+  draft said the tab "no longer has it", which is false in exactly the
+  superset case above — the tab rebuilt from storage, and storage has it.
+
+  **The equality that clears a store, as well as the one that marks it.** If
+  the state a store is holding after a refused write turns out to equal what
+  is in storage — because another tab saved that very state, or because a
+  later refused write found storage already there — that change is saved, and
+  the store has nothing outstanding. Both places that replace state check for
+  it, so a stranded marker is cleared by the same total comparison that sets
+  it. Without that, a backup went on reporting `knownIncomplete` for a change
+  another tab had already written down.
 
   **An unverified change clears only when the teacher says so, per store** — an
   *I've checked this* button on each banner, and the banner names the part of

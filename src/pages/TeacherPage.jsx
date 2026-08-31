@@ -698,7 +698,7 @@ function BackupPanel() {
                 // Weaker than the line above, and deliberately so: a change
                 // this tab cannot account for may be in the file or may not.
                 // Asking the teacher to check is the strongest true thing.
-                message: `${saved} But a change made here could not be saved and this tab no longer has it, so it may or may not be in this file. Check the part of the dashboard the warning above names, and take a fresh backup if you had to redo anything.${passcodeNote}`,
+                message: `${saved} But a change made here could not be saved when you made it, and this tab can no longer account for it, so it may or may not be in this file. Check the part of the dashboard the warning above names, and take a fresh backup if you had to redo anything.${passcodeNote}`,
               }
           : backup.storageRefusing
             ? {
@@ -786,10 +786,10 @@ function BackupPanel() {
           never looked at. */}
       {unverified.map((store) => (
         <p className="import-error" role="status" key={store}>
-          A change to {STORE_NAMES[store] ?? store} could not be saved, and this tab no longer
-          has it. It may have made it into a later save or it may not — nothing here can tell,
-          which is why this asks you to check rather than declaring it missing. Go and look at that part of the
-          dashboard, and redo whatever is missing.{' '}
+          A change to {STORE_NAMES[store] ?? store} could not be saved when you made it, and
+          this tab can no longer account for it. A later save may have included it, or may not
+          — nothing here can tell, which is why this asks you to check rather than declaring it
+          missing. Go and look at that part of the dashboard, and redo whatever is missing.{' '}
           <button
             className="button button-danger"
             onClick={() => {
