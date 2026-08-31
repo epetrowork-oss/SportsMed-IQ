@@ -773,11 +773,21 @@ function BackupPanel() {
             .map((d) => `"${d.name}" in ${d.className} (${d.sids.join(' and ')})`)
             .join('; ')}. Their sign-in list shows the student ID beside the name so they can tell which is theirs from their slip.`
         : ''
+      // Each store reports its own write, and a quota-limited browser can
+      // reject the big classes payload while accepting the two small ones. An
+      // all-or-nothing "none of this was saved" would then be false about the
+      // parts that were -- so the parts are named, in the teacher's words.
+      const unsaved = [
+        summary.classes.persisted ? null : STORE_NAMES.classes,
+        summary.students.persisted ? null : STORE_NAMES.roster,
+        summary.assignments.persisted ? null : STORE_NAMES.assignments,
+      ].filter(Boolean)
+      const savedSome = unsaved.length < 3
       setRestoreMsg(
         !summary.persisted
           ? {
               ok: false,
-              message: `Restored into this session only — ${landed} — but this browser refused to save it, so a reload will lose it. It may be out of storage or in a private window. Keep the backup file, free up space or use a normal window, then restore again.`,
+              message: `Restored — ${landed} — but this browser refused to save ${unsaved.join(' and ')}${savedSome ? ', though the rest did save' : ''}. What it refused is in this tab only and a reload will lose it. It may be out of storage or in a private window. Keep the backup file, free up space or use a normal window, then restore again.`,
             }
           : summary.conflicts.length
             ? {

@@ -391,7 +391,14 @@ function teacherRecordKey(teacher) {
 }
 
 export async function redeemTeacherCode(code, passcode) {
-  const blocked = redemptionBlockedReason(load())
+  // ONE read, used for both the guard and the binding. Two reads would leave
+  // the binding describing a state the guard never saw: another tab
+  // provisioning between them would be captured as `startedFrom`, and a
+  // redemption that began on a blank device would then confirm that teacher
+  // at commit time and overwrite them. Deciding and recording what was
+  // decided about have to be the same act.
+  const startedState = load()
+  const blocked = redemptionBlockedReason(startedState)
   if (blocked) throw new Error(blocked)
   // WHICH state authorized this, captured before the awaits below. Re-running
   // the guard at commit time is not enough on a blank device: two tabs both
@@ -401,7 +408,7 @@ export async function redeemTeacherCode(code, passcode) {
   // brand-new session, and the second redemption overwrites the teacher and
   // passcode that were just set up. The guard answers "is a hand-over allowed
   // now"; this answers "is this still the device I was handed".
-  const startedFrom = teacherRecordKey(load().teacher)
+  const startedFrom = teacherRecordKey(startedState.teacher)
 
   const trimmed = (code ?? '').trim()
   if (!trimmed.startsWith(TEACHER_PREFIX)) {

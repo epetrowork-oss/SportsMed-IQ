@@ -363,6 +363,14 @@ nothing to restore from. The backup file is the restore-from.
   hand-over an admin authorizes still works because that record does not move
   under it.
 
+  Both readings have to come from **one** read, too. Splitting them —
+  `redemptionBlockedReason(load())` on one line and `teacherRecordKey(load())`
+  on the next — leaves the binding describing a state the guard never saw: a
+  tab provisioning between the two reads is captured as the state this
+  redemption "started from", and the commit-time check then confirms that
+  teacher and overwrites them. Deciding, and recording what was decided about,
+  are one act.
+
   `issueTeacherCode` had the read-only version of the same thing. It filtered
   the issued list by `tid`, and two issuances for a name not seen before —
   a double-click, or two tabs — mint different tids, so the first entry
@@ -642,6 +650,12 @@ nothing to restore from. The backup file is the restore-from.
   saved, not that the earlier change is in it. It stays bounded in a way round
   16's cross-tab warnings were not, because it lives in this tab's memory and
   dies with the tab.
+
+  A restore reports the same way, **per store**. `persisted` is the AND of
+  three writes, and a quota-limited browser can reject the large classes
+  payload while accepting the two small ones — so a single "none of this was
+  saved" would be false about the parts that were. The message names the parts
+  that failed, in the teacher's words, and says the rest did save.
 
   So the success message describes the file ("1 class, 2 students with their
   PINs … that is what was saved on this device at the time") rather than
