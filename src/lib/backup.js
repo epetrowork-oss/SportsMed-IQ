@@ -126,12 +126,14 @@ export async function createBackup(passcode) {
     text: `${JSON.stringify(file, null, 2)}\n`,
     filename: `sportmediq-backup-${today()}.json`,
     counts,
-    // A backup is built from what is in storage, so a browser that is
-    // refusing writes has changes -- in this tab or any other -- that this
-    // file cannot contain. Asked of storage directly, so it holds for every
-    // tab at once rather than only the one that noticed. The file is still
-    // worth having; the teacher must simply not be told it is complete.
-    incomplete: storageIsFailing() || !storageAcceptsWrites(),
+    // TRUE when something is known to be missing; false is NOT a claim that
+    // nothing is. A backup holds what was in storage at that moment, and what
+    // another tab is keeping in memory after a rejected write cannot be seen
+    // from here -- quota rejection is size-dependent, so even a probe that
+    // succeeds says nothing about a large write refused elsewhere. The two
+    // things that ARE knowable say so: this tab's own failed writes, and
+    // storage refusing outright.
+    knownIncomplete: storageIsFailing() || !storageAcceptsWrites(),
   }
 }
 

@@ -646,14 +646,17 @@ function BackupPanel() {
       const { classes, students, rosterRows } = backup.counts
       const saved = `Saved ${backup.filename} — ${classes} class${classes === 1 ? '' : 'es'}, ${students} student${students === 1 ? '' : 's'} with their PINs, ${rosterRows} imported progress row${rosterRows === 1 ? '' : 's'}.`
       setSaveMsg(
-        backup.incomplete
+        backup.knownIncomplete
           ? {
               ok: false,
               message: `${saved} But this browser is refusing to save changes, so anything done since — in this tab or another one — is NOT in this file. Keep it, then fix the saving problem and take a fresh backup.`,
             }
           : {
               ok: true,
-              message: `${saved} Keep it somewhere you will still have if this device is gone.`,
+              // Says what the file holds, and does not claim it holds
+              // everything: a change another tab has failed to save cannot be
+              // seen from here.
+              message: `${saved} That is what was saved on this device at the time. Keep it somewhere you will still have if this device is gone.`,
             },
       )
     } catch (err) {

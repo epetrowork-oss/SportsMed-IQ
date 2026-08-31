@@ -65,10 +65,18 @@ export function failingStores() {
   return [...failing]
 }
 
-// Ask storage directly. A probe write and read-back, then cleaned up: this is
-// the condition that decides whether a backup can be complete, it is true for
-// every tab at once because it is a property of the browser and not of any
-// tab, and it needs nothing remembered between calls.
+// Ask storage directly: a probe write and read-back, then cleaned up.
+//
+// Read this signal in ONE direction only. A probe that fails proves storage is
+// refusing writes; a probe that succeeds proves almost nothing, because quota
+// rejection is size-dependent — a browser near its limit can refuse a class
+// roster and accept one byte in the same breath. So this can raise the alarm
+// and must never be used to certify that nothing is missing.
+//
+// That asymmetry is the whole reason the completeness claim was dropped rather
+// than re-derived: what another tab is holding in memory after a rejected
+// write is not observable from here at all, and no probe of any size changes
+// that.
 const PROBE_KEY = 'sportmediq:storageProbe:v1'
 
 export function storageAcceptsWrites() {

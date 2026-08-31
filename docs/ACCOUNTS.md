@@ -470,15 +470,20 @@ nothing to restore from. The backup file is the restore-from.
   closes and the rest warn forever) — a consensus protocol growing inside an
   offline app to describe a browser-wide condition.
 
-  Instead, **a backup asks storage directly** whether it will take a write, at
-  the moment the file is made, and is handed over marked *incomplete* if it
-  will not. One line, true for every tab at once because it is a property of
-  the browser rather than of any tab, and it cannot go stale. The file is still
-  worth keeping; the teacher is told to fix the saving problem and take a fresh
-  one. What the probe does not catch: a tab holding a change from an outage
-  storage has since recovered from. That tab shows its own warning and its next
-  write lands, and if it never writes again the change was never going to
-  survive the tab.
+  Instead, **a backup says what it holds and never claims to hold everything.**
+  Two things are knowable and both raise a warning: this tab's own failed
+  writes, and storage refusing a probe write outright. Neither their absence
+  nor anything else can certify completeness — quota rejection is
+  size-dependent, so a browser near its limit can refuse a class roster in one
+  tab and accept a one-byte probe in another, and what a tab is holding in
+  memory after a rejected write is not observable from outside it at all.
+
+  So the success message describes the file ("1 class, 2 students with their
+  PINs … that is what was saved on this device at the time") rather than
+  pronouncing it complete, and the warning, when either knowable signal fires,
+  tells the teacher to fix the saving problem and take a fresh one. The honest
+  limit: a second tab holding changes it could not save is invisible to a
+  backup taken here, and only that tab's own warning will say so.
 
   A refused write is tracked **per store**, not as one flag: a quota-limited
   browser can reject a large class write and accept a small assignment write
