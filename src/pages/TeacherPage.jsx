@@ -41,6 +41,7 @@ import {
   loginTeacher,
   forgetTeacher,
   signOut,
+  sessionFingerprint,
 } from '../lib/auth.js'
 import {
   useClasses,
@@ -658,9 +659,13 @@ function BackupPanel() {
   const [restoring, setRestoring] = useState(false)
 
   async function save() {
+    // Read who is signed in before anything else happens, and hand that to
+    // the library rather than letting it look for itself later. Everything
+    // after the first await belongs to whoever is signed in *then*.
+    const session = sessionFingerprint()
     setSaving(true)
     try {
-      const backup = await createBackup(savePass)
+      const backup = await createBackup(savePass, session)
       downloadBackup(backup)
       setSavePass('')
       setStorageRefusing(!storageAcceptsWrites())
@@ -721,10 +726,15 @@ function BackupPanel() {
   }
 
   async function restore() {
+    // Before `file.text()`, which is an await of this component's own. A
+    // release and reprovision landing during it would otherwise let the
+    // library bind to the teacher who was set up in the meantime, and merge
+    // this teacher's backup into that teacher's device.
+    const session = sessionFingerprint()
     setRestoring(true)
     try {
       const text = await file.text()
-      const summary = await restoreBackup(text, restorePass)
+      const summary = await restoreBackup(text, restorePass, session)
       setRestorePass('')
       // A restore that merged nothing new reports success even while storage is
       // refusing -- correctly, since it stranded nothing. Re-ask storage so the

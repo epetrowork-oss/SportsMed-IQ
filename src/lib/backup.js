@@ -88,9 +88,25 @@ function today() {
  * mistyped one is refused here rather than quietly producing a file that
  * cannot be opened again.
  *
+ * `session` is the caller's own reading of who is signed in, taken BEFORE any
+ * work it does of its own. A caller that awaits anything first -- reading a
+ * file, say -- and lets this capture the session afterwards would bind to
+ * whoever is signed in by then, which is exactly the release-and-reprovision
+ * this binding exists to catch. The default is correct only for a caller that
+ * calls straight away.
+ *
  * Returns { text, filename, counts } — the caller downloads `text`.
  */
-export async function createBackup(passcode) {
+export async function createBackup(passcode, session = sessionFingerprint()) {
+  // Captured BEFORE the verification, not after it. A sign-out during the
+  // derivation leaves the credential perfectly valid, so verification
+  // succeeds -- and a session read afterwards is the empty string, which the
+  // check at the boundary then compares against the empty string and passes.
+  // A signed-out device would have handed over every class and plaintext PIN
+  // on it. Non-empty is therefore a precondition, not an incidental.
+  if (!session) {
+    throw new Error('Sign in on this device before saving a backup.')
+  }
   const secret = (passcode ?? '').trim()
   // The fingerprint comes back FROM the verification rather than being looked
   // up after it. Re-reading the record here would read it a second time, and
@@ -108,7 +124,6 @@ export async function createBackup(passcode) {
   // device must still be signed in as the same person. A sign-out in another
   // tab changes only the unlocked flags -- the verifier record is untouched --
   // so a credential check alone passes straight through it.
-  const session = sessionFingerprint()
 
   const payload = {
     classes: snapshotClasses(),
@@ -242,6 +257,10 @@ export async function readBackup(text, passcode) {
  * assignment back to an older version on the strength of another device's
  * clock.
  *
+ * `session` is the caller's own reading of who is signed in, taken BEFORE any
+ * work it does of its own — see createBackup for why the default is only safe
+ * for a caller that calls straight away.
+ *
  * Returns { at, classes, students, assignments, conflicts, persisted } with
  * { added, updated } counts per kind (and `skipped` for roster rows held back
  * by a conflict), so the teacher is told what landed.
@@ -252,7 +271,7 @@ export async function readBackup(text, passcode) {
  * reports success and vanishes on reload is a lie the teacher would only
  * discover after throwing the file away. Every caller must show that.
  */
-export async function restoreBackup(text, passcode) {
+export async function restoreBackup(text, passcode, session = sessionFingerprint()) {
   // WHO started this, captured before the slow part. Opening the file is slow,
   // and a release in another tab during it takes the device's credential away
   // AND wipes the stores -- then provisions someone else, at which point the
@@ -263,7 +282,6 @@ export async function restoreBackup(text, passcode) {
   // afterwards is refused precisely because class data exists, so the release
   // would neither erase the data nor leave a device anyone can open. It has to
   // be the same session, not merely a session.
-  const session = sessionFingerprint()
   if (!session) {
     throw new Error('Sign in on this device before restoring a backup.')
   }

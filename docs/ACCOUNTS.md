@@ -338,6 +338,17 @@ nothing to restore from. The backup file is the restore-from.
   undoing the release. So `sessionFingerprint()` names *who* is signed in, and
   a long-running operation is bound to the session that started it.
 
+  **The session is read before the first await, not after it**, and by the
+  caller when the caller has awaits of its own. Both halves matter and each
+  was a separate hole. Capturing after `verifyDevicePasscode` meant a sign-out
+  during the derivation — which leaves the credential perfectly valid, so
+  verification succeeds — produced an *empty* fingerprint, and the check at
+  the boundary compared empty with empty and passed, handing every class and
+  plaintext PIN out of a signed-out device. So a non-empty session is a
+  precondition, not an incidental. And the panel reads the file before it ever
+  calls `restoreBackup`, so it passes its own reading in: a capture inside the
+  library would bind to whoever had been provisioned during `file.text()`.
+
   The verifier fingerprint also comes back **from** the verification rather
   than being looked up after it. Looking it up is a second read of the same
   record, and another tab replacing the credential between the two reads
