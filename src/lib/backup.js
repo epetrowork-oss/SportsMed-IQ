@@ -94,11 +94,14 @@ export async function createBackup(passcode) {
   const secret = (passcode ?? '').trim()
   const role = await verifyDevicePasscode(secret)
   // Verifying is not the moment of disclosure. Deriving the key, compressing
-  // and encrypting are all awaits, and an admin can release the teacher
+  // and encrypting are all awaits, and the device's authorization can change
   // during them -- after which returning the file would hand every class on
-  // the device out on a credential that no longer exists. The matched record
-  // has to still be the matched record at the boundary where the data
-  // actually leaves, so it is fingerprinted here and re-checked below.
+  // the device out on a session that no longer exists. TWO things have to
+  // still hold at the boundary where the data actually leaves, and they are
+  // separate: the matched record must still be the matched record
+  // (fingerprinted here), and the device must still be signed in. A sign-out
+  // in another tab changes only the unlocked flags -- the verifier record is
+  // untouched -- so a fingerprint check alone passes straight through it.
   const credential = credentialFingerprint(role)
 
   const payload = {
@@ -136,7 +139,7 @@ export async function createBackup(passcode) {
     iv: toBase64Url(iv),
     data: toBase64Url(sealed),
   }
-  if (credentialFingerprint(role) !== credential) {
+  if (credentialFingerprint(role) !== credential || !deviceIsUnlocked()) {
     throw new Error(
       "This device's sign-in changed while the backup was being made — nothing was saved. Sign in again and try once more.",
     )

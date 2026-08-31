@@ -27,13 +27,27 @@ let lastWriteOk = true
 
 function save(next) {
   const held = JSON.stringify(state)
+  // Asked BEFORE anything is replaced: is what this tab is holding already
+  // written down? Another tab can persist exactly this state and have its
+  // `storage` event still queued, in which case the change survived and this
+  // commit is not what loses it -- it reads that same state back out of
+  // storage and builds on it.
+  const heldWasStored = readRaw() === held
   state = next
   const payload = JSON.stringify(state)
   // Replacing state above throws away whatever a refused write was holding
-  // here -- `next` came from `load()`, so it cannot contain it. Unless it is
-  // the same state, which is a retry that preserved it. A no-op when this
-  // store was not stranded, which is every ordinary write.
-  if (held !== payload) reportStorageDiscard('assignments')
+  // here -- `next` came from `load()`, so it cannot contain it. Two exceptions,
+  // and both are proved by an exact comparison rather than assumed: the same
+  // state is being written again (a retry that preserved it), or storage
+  // already had it. All three branches are no-ops when this store was not
+  // stranded, which is every ordinary write.
+  if (held === payload) {
+    // Nothing replaced; this write's own outcome below is the whole story.
+  } else if (heldWasStored) {
+    reportStorageWrite('assignments', true)
+  } else {
+    reportStorageDiscard('assignments')
+  }
   // Storage full or blocked — keep working in memory for the rest of the
   // session, but say so. Silence here is what let a teacher build a whole
   // class, and a backup of it, on top of writes that never happened.

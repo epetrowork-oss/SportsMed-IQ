@@ -323,8 +323,12 @@ nothing to restore from. The backup file is the restore-from.
   signs in with costs them no new secret to remember — at the cost that the
   file is only as hard to open as that passcode is to guess, which is why the
   panel names the storage the file belongs in and flags a short one.
-- **The credential is re-checked at every boundary where something actually
-  happens, not only where it is checked.** Verifying, deriving the file key,
+- **Two things are re-checked at every boundary where something actually
+  happens, not only where they are checked.** The matched verifier, *and*
+  whether the device is still signed in — because they can move independently.
+  `signOut()` clears the unlocked flags and leaves the verifier record exactly
+  as it was, so a fingerprint comparison alone passes straight through a
+  sign-out in another tab and hands the file over to a locked device. Verifying, deriving the file key,
   compressing and encrypting are all awaits, and so is decrypting on the way
   back in — an admin releasing a teacher in another tab lands somewhere in
   there. So the export re-checks the matched verifier immediately before the
@@ -555,6 +559,15 @@ nothing to restore from. The backup file is the restore-from.
   it, so a stranded marker is cleared by the same total comparison that sets
   it. Without that, a backup went on reporting `knownIncomplete` for a change
   another tab had already written down.
+
+  That question has to be asked **before** the replacement, not after. Another
+  tab can persist exactly this tab's stranded state while its `storage` event
+  is still queued; the next local commit then reads that matching state back
+  out of storage and builds a larger payload on top of it, so the held state
+  and the new payload differ even though storage already proves the change
+  survived. `save()` therefore records `readRaw() === held` first, and only
+  treats the replacement as a discard when neither that nor the payload
+  matches.
 
   **An unverified change clears only when the teacher says so, per store** — an
   *I've checked this* button on each banner, and the banner names the part of
