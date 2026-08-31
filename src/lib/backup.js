@@ -79,6 +79,54 @@ async function deriveAesKey(salt, passcode) {
 // cheap; this only ever fails against a tab writing continuously.
 const SNAPSHOT_ATTEMPTS = 5
 
+// A restore writes three stores in sequence, and between those writes the
+// device is in a state that is real -- it is on disk -- but is nobody's
+// intent. Two equal reads cannot tell that apart from a settled device: a
+// restoring tab paused between mergeClasses() and mergeRoster() presents the
+// same intermediate combination to both reads, so the snapshot is stable
+// because the writer stopped, not because the restore finished. A backup taken
+// then holds the new classes with the old progress rows, and the teacher who
+// takes it right after restoring has a file missing the thing they just
+// restored.
+//
+// So a restore says out loud that it is running, and an export refuses while
+// it is. This is a marker, not a lock: localStorage has no compare-and-set, so
+// two tabs restoring at once is still last-writer-wins, and a tab that dies
+// mid-restore leaves the marker behind -- which is what the timestamp is for.
+// It closes the window it can see and does not pretend to be mutual exclusion.
+const RESTORE_MARKER = 'sportmediq:restoreInProgress:v1'
+// Long enough that no real restore outlives it, short enough that a crashed
+// tab does not block backups for the rest of the day.
+const RESTORE_MARKER_TTL_MS = 60000
+
+function markRestoreRunning() {
+  try {
+    localStorage.setItem(RESTORE_MARKER, String(Date.now()))
+  } catch {
+    // Storage refusing is already reported by the health machinery; a backup
+    // taken during this restore loses the protection, not the warning.
+  }
+}
+
+function clearRestoreRunning() {
+  try {
+    localStorage.removeItem(RESTORE_MARKER)
+  } catch {
+    // Nothing to do: the timestamp expires on its own.
+  }
+}
+
+function restoreIsRunning() {
+  try {
+    const at = Number(localStorage.getItem(RESTORE_MARKER))
+    if (!at) return false
+    // A marker from the future is a clock change, not a live restore.
+    return Date.now() - at >= 0 && Date.now() - at < RESTORE_MARKER_TTL_MS
+  } catch {
+    return false
+  }
+}
+
 function readStores() {
   return {
     classes: snapshotClasses(),
@@ -107,6 +155,11 @@ function readStores() {
  * never simultaneously true.
  */
 function snapshotStores() {
+  if (restoreIsRunning()) {
+    throw new Error(
+      'A restore is running in another tab — wait for it to finish, then save the backup so the file has everything it put back.',
+    )
+  }
   let taken = readStores()
   for (let attempt = 0; attempt < SNAPSHOT_ATTEMPTS; attempt += 1) {
     const again = readStores()
@@ -169,6 +222,15 @@ export async function createBackup(passcode, session = sessionFingerprint()) {
   // so a credential check alone passes straight through it.
 
   const stores = snapshotStores()
+  // Health AT THE SNAPSHOT, because that is what the file is made of. Reading
+  // it at the end instead lets a strand that this payload really is missing
+  // disappear before it is reported: another tab persisting exactly the
+  // stranded state during encryption clears the strand (round 23), and the
+  // late read then says all is well about a file built from the older
+  // snapshot. Both readings are kept and OR-ed below -- a strand either side
+  // of the snapshot means the file lacks that change.
+  const strandedAtSnapshot = strandedStores().length > 0
+  const unverifiedAtSnapshot = unverifiedStores().length > 0
   const payload = { ...stores, at: new Date().toISOString() }
   const counts = {
     classes: payload.classes.length,
@@ -213,12 +275,12 @@ export async function createBackup(passcode, session = sessionFingerprint()) {
     // NOW. The snapshot is read from storage, so that change is provably not
     // in this file. False is NOT a claim that nothing is missing -- what
     // another tab holds in memory cannot be seen from here.
-    knownIncomplete: strandedStores().length > 0,
+    knownIncomplete: strandedAtSnapshot || strandedStores().length > 0,
     // A refused change this tab can no longer account for. Weaker than
     // `knownIncomplete` on purpose: a later write may have carried it to
     // storage, or may have undone it, and nothing here can tell which -- so
     // this asks the teacher to check rather than telling them it is missing.
-    unverifiedChange: unverifiedStores().length > 0,
+    unverifiedChange: unverifiedAtSnapshot || unverifiedStores().length > 0,
     // A separate and weaker fact: storage refused a probe write just now.
     // That establishes the browser is in trouble, not that this payload lost
     // anything -- the probe is one byte and quota rejection is size-dependent,
@@ -331,6 +393,18 @@ export async function restoreBackup(text, passcode, session = sessionFingerprint
       'This device was signed out or released while the backup was being opened — nothing was restored. Sign in again and try once more.',
     )
   }
+  markRestoreRunning()
+  try {
+    return mergeAll(backup)
+  } finally {
+    clearRestoreRunning()
+  }
+}
+
+// The three merges, in order. Split out only so restoreBackup's marker can
+// wrap all of them in one `finally` -- a restore that throws half way must not
+// leave the marker behind for the full minute.
+function mergeAll(backup) {
   const classes = mergeClasses(backup.classes)
   // A student ID the class merge refused to guess about must be refused here
   // too. Roster rows key by exactly that (class, student) pair, so restoring

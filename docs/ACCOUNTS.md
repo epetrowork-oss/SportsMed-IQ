@@ -339,6 +339,28 @@ nothing to restore from. The backup file is the restore-from.
   does not pretend to. When a tab keeps writing, it refuses rather than
   returning a file whose contents were never simultaneously true.
 
+  Two equal reads are still not proof that no multi-store operation is
+  underway. A restoring tab *paused* between `mergeClasses()` and
+  `mergeRoster()` presents the same intermediate state to both reads — stable
+  because the writer stopped, not because the restore finished — and the file
+  then holds the new classes with the old progress rows, which is the worst
+  version of this bug because the teacher took that backup precisely to
+  capture what they had just restored. So a restore says out loud that it is
+  running (`sportmediq:restoreInProgress:v1`, raised across all three merges
+  and lowered in a `finally`), and an export refuses while it is. A marker,
+  not a lock: two tabs restoring at once is still last-writer-wins, and a
+  timestamp expires the marker a crashed tab leaves behind. It closes the
+  window it can see and does not pretend to be mutual exclusion.
+
+  **The health flags are read at the snapshot, not at the end.** The file is
+  made of the snapshot, so a strand that this payload really is missing must
+  be reported even if it clears before the file is finished — another tab
+  persisting exactly the stranded state during encryption clears it (see
+  "stranded is not the same as unaccounted-for" below), and a late read would
+  then report all-well about a file built from the older snapshot. Both
+  readings are taken and OR-ed: a strand either side of the snapshot means the
+  file lacks that change.
+
 
 - **Two things are re-checked at every boundary where something actually
   happens, not only where they are checked.** The matched verifier, *and*
