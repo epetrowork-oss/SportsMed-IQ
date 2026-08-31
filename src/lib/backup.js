@@ -95,6 +95,16 @@ const SNAPSHOT_ATTEMPTS = 5
 // mid-restore leaves the marker behind -- which is what the timestamp is for.
 // It closes the window it can see and does not pretend to be mutual exclusion.
 const RESTORE_MARKER = 'sportmediq:restoreInProgress:v1'
+// The marker says a restore is running NOW, and completion deletes it -- which
+// deletes the only evidence that one overlapped these reads. A restore paused
+// between merges can resume, finish, and clear the marker after the second
+// read but before the check, and the equal intermediate reads are then
+// accepted as settled. So a restore also leaves something behind that
+// finishing cannot erase: a counter bumped once per restore, in the same
+// `finally` that lowers the marker, so a partial restore that threw counts
+// too. Presence answers "is one running"; the counter answers "did one happen
+// while I was looking", and only the second survives the restore ending.
+const RESTORE_GENERATION = 'sportmediq:restoreGeneration:v1'
 // Long enough that no real restore outlives it, short enough that a crashed
 // tab does not block backups for the rest of the day.
 const RESTORE_MARKER_TTL_MS = 60000
@@ -113,6 +123,23 @@ function clearRestoreRunning() {
     localStorage.removeItem(RESTORE_MARKER)
   } catch {
     // Nothing to do: the timestamp expires on its own.
+  }
+}
+
+function restoreGeneration() {
+  try {
+    return localStorage.getItem(RESTORE_GENERATION) ?? '0'
+  } catch {
+    return '0'
+  }
+}
+
+function bumpRestoreGeneration() {
+  try {
+    localStorage.setItem(RESTORE_GENERATION, String((Number(restoreGeneration()) || 0) + 1))
+  } catch {
+    // Storage refusing is reported elsewhere; a backup taken across this
+    // restore loses the protection, not the warning.
   }
 }
 
@@ -155,26 +182,23 @@ function readStores() {
  * never simultaneously true.
  */
 function snapshotStores() {
-  let taken = readStores()
   for (let attempt = 0; attempt < SNAPSHOT_ATTEMPTS; attempt += 1) {
+    const generation = restoreGeneration()
+    const taken = readStores()
     const again = readStores()
-    // The marker is part of the ACCEPTANCE condition, checked after the reads
-    // rather than once before them. Checking it first only rules out a restore
-    // already running: one that starts after that check and then pauses
-    // between merges presents the same intermediate state to both reads, so
-    // equality alone accepts precisely the torn snapshot the marker exists to
-    // reject. Equal reads and no restore in flight are two different claims,
-    // and the payload needs both.
-    if (restoreIsRunning()) {
-      throw new Error(
-        'A restore is running in another tab — wait for it to finish, then save the backup so the file has everything it put back.',
-      )
-    }
+    // Three claims, all needed, all checked AFTER the reads rather than once
+    // before them: no restore is running, none finished while we looked, and
+    // nothing else moved between the two reads. Checking only the first, and
+    // only up front, misses a restore that starts afterwards; checking
+    // presence at all misses one that finishes before the check, because
+    // finishing removes the marker.
+    if (restoreIsRunning() || restoreGeneration() !== generation) continue
     if (JSON.stringify(again) === JSON.stringify(taken)) return taken
-    taken = again
   }
   throw new Error(
-    'Another tab kept changing this device while the backup was being made — nothing was saved. Close the other tabs and try again.',
+    restoreIsRunning()
+      ? 'A restore is running in another tab — wait for it to finish, then save the backup so the file has everything it put back.'
+      : 'Another tab kept changing this device while the backup was being made — nothing was saved. Close the other tabs and try again.',
   )
 }
 
@@ -404,6 +428,10 @@ export async function restoreBackup(text, passcode, session = sessionFingerprint
   try {
     return mergeAll(backup)
   } finally {
+    // Both, and in this order: the counter is what an export looking back can
+    // still see once the marker is gone. In the `finally` so a restore that
+    // threw half way -- the most dangerous kind to snapshot across -- counts.
+    bumpRestoreGeneration()
     clearRestoreRunning()
   }
 }

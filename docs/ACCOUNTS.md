@@ -352,8 +352,18 @@ nothing to restore from. The backup file is the restore-from.
   Checking it first only rules out a restore already running; one that starts
   after that check and then pauses presents the same intermediate state to
   both reads, so equality alone would accept exactly the snapshot the marker
-  exists to reject. Equal reads and no restore in flight are two different
-  claims and the payload needs both. A marker,
+  exists to reject.
+
+  And presence is not enough on its own, because **finishing deletes the
+  evidence**: a paused restore can resume, complete, and clear the marker
+  after the second read but before the check, leaving nothing to object to. So
+  a restore also bumps a counter (`sportmediq:restoreGeneration:v1`) in the
+  same `finally` that lowers the marker — including when it threw half way,
+  which is the most dangerous state to snapshot across. Presence answers "is
+  one running"; the counter answers "did one happen while I was looking", and
+  only the second survives the restore ending. Acceptance needs all three:
+  no restore running, none finished across the reads, and nothing else moved
+  between them. A marker,
   not a lock: two tabs restoring at once is still last-writer-wins, and a
   timestamp expires the marker a crashed tab leaves behind. It closes the
   window it can see and does not pretend to be mutual exclusion.
