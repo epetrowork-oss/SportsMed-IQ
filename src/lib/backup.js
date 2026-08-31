@@ -155,14 +155,21 @@ function readStores() {
  * never simultaneously true.
  */
 function snapshotStores() {
-  if (restoreIsRunning()) {
-    throw new Error(
-      'A restore is running in another tab — wait for it to finish, then save the backup so the file has everything it put back.',
-    )
-  }
   let taken = readStores()
   for (let attempt = 0; attempt < SNAPSHOT_ATTEMPTS; attempt += 1) {
     const again = readStores()
+    // The marker is part of the ACCEPTANCE condition, checked after the reads
+    // rather than once before them. Checking it first only rules out a restore
+    // already running: one that starts after that check and then pauses
+    // between merges presents the same intermediate state to both reads, so
+    // equality alone accepts precisely the torn snapshot the marker exists to
+    // reject. Equal reads and no restore in flight are two different claims,
+    // and the payload needs both.
+    if (restoreIsRunning()) {
+      throw new Error(
+        'A restore is running in another tab — wait for it to finish, then save the backup so the file has everything it put back.',
+      )
+    }
     if (JSON.stringify(again) === JSON.stringify(taken)) return taken
     taken = again
   }

@@ -347,7 +347,13 @@ nothing to restore from. The backup file is the restore-from.
   version of this bug because the teacher took that backup precisely to
   capture what they had just restored. So a restore says out loud that it is
   running (`sportmediq:restoreInProgress:v1`, raised across all three merges
-  and lowered in a `finally`), and an export refuses while it is. A marker,
+  and lowered in a `finally`), and an export refuses while it is — checked as
+  part of the **acceptance** condition after the reads, not once before them.
+  Checking it first only rules out a restore already running; one that starts
+  after that check and then pauses presents the same intermediate state to
+  both reads, so equality alone would accept exactly the snapshot the marker
+  exists to reject. Equal reads and no restore in flight are two different
+  claims and the payload needs both. A marker,
   not a lock: two tabs restoring at once is still last-writer-wins, and a
   timestamp expires the marker a crashed tab leaves behind. It closes the
   window it can see and does not pretend to be mutual exclusion.
