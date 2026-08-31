@@ -25,7 +25,7 @@ import { useSyncExternalStore } from 'react'
 import { toBase64Url, deflate } from './share.js'
 import { deriveHex, randomToken } from './auth.js'
 import { getUnit } from '../content/index.js'
-import { reportStorageWrite } from './storageHealth.js'
+import { reportStorageWrite, reportStorageDiscard } from './storageHealth.js'
 
 const STORAGE_KEY = 'sportmediq:classes:v1'
 export const CLASS_CODE_PREFIX = 'SMIQC1.'
@@ -183,12 +183,18 @@ function save(next) {
     // refused
   }
   // A refused write only STRANDS something if what it was trying to write
-  // differs from what is already stored. A write whose payload storage
-  // already holds -- a merge that added nothing, a setting changed back to
-  // its current value -- lost nothing when it was rejected. Note this is the
-  // WHOLE payload, not a chosen subset: every earlier attempt to infer
-  // persistence by re-reading picked fields to compare and got it wrong.
-  lastWriteOk = landed || readRaw() === payload
+  // differs from what a reader will now get. A write whose intent storage
+  // already satisfies -- a merge that added nothing, a setting changed back
+  // to its current value, an empty store whose key was never written --
+  // lost nothing when it was rejected.
+  //
+  // Compared through `load()`, not against the raw string: `load()` is how
+  // every reader here sees storage, so this asks the only question that
+  // matters, and an absent key and an empty store come out equal because to
+  // a reader they are. Note it is the WHOLE state either way, not a chosen
+  // subset: every earlier attempt to infer persistence picked fields to
+  // compare and each subset was wrong differently.
+  lastWriteOk = landed || JSON.stringify(load()) === payload
   // Health is a different question from this write's outcome, and the three
   // cases are not two. A write that landed clears the store. A write that was
   // refused and stranded something marks it. A write that was refused and
@@ -198,6 +204,12 @@ function save(next) {
   // either.
   if (landed) reportStorageWrite('classes', true)
   else if (!lastWriteOk) reportStorageWrite('classes', false)
+  // A refused write that stranded nothing still REPLACED `state` above, and
+  // `next` was rebuilt from storage -- so whatever an earlier refused write
+  // was holding here is gone now, not merely unsaved. Harmless for this
+  // write, not harmless for that one, and the difference is what the teacher
+  // is told: redo it, rather than hurry to save what is still in the tab.
+  else reportStorageDiscard('classes')
   listeners.forEach((fn) => fn())
 }
 

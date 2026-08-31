@@ -617,7 +617,10 @@ function BackupPanel() {
   // A browser that is refusing writes is the one situation where everything
   // on this dashboard is a lie by the next reload, so it is said here, at the
   // top of the panel whose whole job is not losing work.
-  const ownWritesFailing = useStorageHealth()
+  // 'ok' | 'stranded' (a refused change is still in this tab) | 'lost' (a
+  // later commit rebuilt from storage and discarded it).
+  const writeHealth = useStorageHealth()
+  const ownWritesFailing = writeHealth !== 'ok'
   // Also ask storage directly, so a tab opened after the trouble started --
   // or one that has simply not written yet -- does not look healthy while the
   // browser is refusing writes. Re-checked whenever this tab's own health
@@ -744,7 +747,15 @@ function BackupPanel() {
           gone wrong; a refused probe is something that MAY. Folding them
           together is how a banner ends up telling a teacher their work is
           stranded on the strength of a one-byte test write. */}
-      {ownWritesFailing ? (
+      {writeHealth === 'lost' ? (
+        <p className="import-error" role="status">
+          This browser refused to save a change made here, and that change has now been
+          discarded — it is gone from this tab too, so there is nothing left to rescue and
+          nothing to wait for. Private windows block saving entirely; otherwise the browser is
+          likely out of space. Move to a normal window or free some space, reload, and redo
+          whatever is missing.
+        </p>
+      ) : writeHealth === 'stranded' ? (
         <p className="import-error" role="status">
           This browser refused to save a change made here. That change is only in this tab —
           it will be gone on reload, a backup saved now would be missing it, and it may be

@@ -490,20 +490,40 @@ nothing to restore from. The backup file is the restore-from.
   holding in memory after a rejected write is not observable from outside it.
 
   Note what the first row rests on. A rejected `setItem` is not by itself proof
-  that anything was stranded: a write whose payload storage **already holds** —
-  a merge that added nothing, a setting changed back to its current value —
-  lost nothing when it was refused. So each store's `save()` decides the
-  outcome by what storage holds afterwards, not by whether `setItem` threw:
+  that anything was stranded: a write whose intent storage **already
+  satisfies** — a merge that added nothing, a setting changed back to its
+  current value, an empty store whose key was never written — lost nothing
+  when it was refused. So each store's `save()` decides the outcome by what a
+  reader will now get, not by whether `setItem` threw:
 
   ```js
-  } catch {
-    lastWriteOk = readRaw() === payload
-  }
+  lastWriteOk = landed || JSON.stringify(load()) === payload
   ```
 
-  That keeps `knownIncomplete` provable — the snapshot is read from storage,
-  and the write that failed was trying to put something different there — and
-  it keeps a restore that changed nothing from reporting itself unpersisted.
+  Through `load()` rather than the raw string, because `load()` is how every
+  reader here sees storage: an absent key and an empty store come out equal,
+  as they must, since to a reader they are. That keeps `knownIncomplete`
+  provable — the snapshot is read from storage, and the write that failed was
+  trying to put something different there — and it keeps a restore that
+  changed nothing from reporting itself unpersisted.
+
+  **Stranded is not the same as lost, and the teacher needs different things
+  from each.** Every commit rebuilds state from storage. So a store already
+  holding a change localStorage refused loses it the moment any later write
+  runs — including one that lands, and including a restore that merges
+  nothing. The change is then in neither place. Saying it is "only in this
+  tab" at that point sends the teacher looking for something that no longer
+  exists, so `src/lib/storageHealth.js` tracks two states per store:
+
+  | state | what it means | what the banner asks for |
+  |---|---|---|
+  | `stranded` | the refused change is still here in memory | save it — fix the storage problem, it is still rescuable |
+  | `lost` | a later commit rebuilt from storage and discarded it | redo it — there is nothing left to rescue |
+
+  Both count as failing, so both keep `knownIncomplete` true. A successful
+  write clears either, which is deliberate: the alternative is a warning that
+  never goes away, and round 16 is the record of where that leads. The window
+  in which the warning is shown is the window in which it is actionable.
 
   So the success message describes the file ("1 class, 2 students with their
   PINs … that is what was saved on this device at the time") rather than

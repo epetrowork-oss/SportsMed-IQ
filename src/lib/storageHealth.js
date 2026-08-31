@@ -35,13 +35,31 @@
 
 import { useSyncExternalStore } from 'react'
 
-// Which stores in THIS tab hold a change localStorage refused. Per store, not
+// Which stores in THIS tab are in trouble, and WHICH TROUBLE. Per store, not
 // one flag: a quota-limited browser can reject a large class write and then
 // accept a small assignment write moments later, and a single flag would read
 // that second success as "all clear" while the class change is still
-// stranded. A store clears itself only by writing successfully -- which, under
-// "storage is the truth", is also the moment its stranded change is gone.
-const failing = new Set()
+// stranded.
+//
+// Two states, because they call for different things from the teacher:
+//
+//   'stranded'  a refused change is still here in memory. The dashboard shows
+//               it, it is missing from a backup taken now, and it dies with
+//               the tab.
+//   'lost'      that change is gone from memory too. Every write rebuilds
+//               state from storage, so a later commit -- even one that lands,
+//               even a restore that merges nothing -- overwrites what the
+//               refused write was holding. Nothing anywhere has it now, and
+//               the teacher has to redo it rather than hurry to save it.
+//
+// Telling a teacher a change is "only in this tab" once it is not even that
+// sends them looking for something that no longer exists.
+//
+// A store clears itself only by writing successfully. That clears 'lost' too,
+// which is deliberate: the alternative is a warning that never goes away, and
+// round 16 is the record of where perpetual cross-tab warnings lead. The
+// window in which it is shown is the window in which it is actionable.
+const failing = new Map()
 const listeners = new Set()
 
 function notify() {
@@ -49,10 +67,21 @@ function notify() {
 }
 
 export function reportStorageWrite(store, ok) {
-  const was = failing.has(store)
-  if (ok === !was) return
-  if (ok) failing.delete(store)
-  else failing.add(store)
+  if (ok) {
+    if (!failing.delete(store)) return
+  } else {
+    if (failing.get(store) === 'stranded') return
+    failing.set(store, 'stranded')
+  }
+  notify()
+}
+
+// A commit rebuilt this store's state from storage, discarding a change an
+// earlier refused write was holding in memory. Called only when there was one:
+// a store that was not stranded has nothing to lose.
+export function reportStorageDiscard(store) {
+  if (failing.get(store) !== 'stranded') return
+  failing.set(store, 'lost')
   notify()
 }
 
@@ -62,7 +91,12 @@ export function storageIsFailing() {
 
 // Which stores are affected, for a message that can say what is at risk.
 export function failingStores() {
-  return [...failing]
+  return [...failing.keys()]
+}
+
+// Stores whose refused change is gone rather than merely unsaved.
+export function lostStores() {
+  return [...failing].filter(([, state]) => state === 'lost').map(([store]) => store)
 }
 
 // Ask storage directly: a probe write and read-back, then cleaned up.
@@ -95,6 +129,13 @@ function subscribe(fn) {
   return () => listeners.delete(fn)
 }
 
+// A string, not an object: useSyncExternalStore compares snapshots by
+// identity, and a fresh object every render is an infinite loop.
+function healthSnapshot() {
+  if (failing.size === 0) return 'ok'
+  return [...failing.values()].includes('lost') ? 'lost' : 'stranded'
+}
+
 export function useStorageHealth() {
-  return useSyncExternalStore(subscribe, () => failing.size > 0)
+  return useSyncExternalStore(subscribe, healthSnapshot)
 }
