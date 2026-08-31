@@ -170,8 +170,14 @@ const listeners = new Set()
 let lastWriteOk = true
 
 function save(next) {
+  const held = JSON.stringify(state)
   state = next
   const payload = JSON.stringify(state)
+  // Replacing state above throws away whatever a refused write was holding
+  // here -- `next` came from `load()`, so it cannot contain it. Unless it is
+  // the same state, which is a retry that preserved it. A no-op when this
+  // store was not stranded, which is every ordinary write.
+  if (held !== payload) reportStorageDiscard('classes')
   // Storage full or blocked — keep working in memory for the rest of the
   // session, but say so. Silence here is what let a teacher build a whole
   // class, and a backup of it, on top of writes that never happened.
@@ -204,12 +210,6 @@ function save(next) {
   // either.
   if (landed) reportStorageWrite('classes', true)
   else if (!lastWriteOk) reportStorageWrite('classes', false)
-  // A refused write that stranded nothing still REPLACED `state` above, and
-  // `next` was rebuilt from storage -- so whatever an earlier refused write
-  // was holding here is gone now, not merely unsaved. Harmless for this
-  // write, not harmless for that one, and the difference is what the teacher
-  // is told: redo it, rather than hurry to save what is still in the tab.
-  else reportStorageDiscard('classes')
   listeners.forEach((fn) => fn())
 }
 
@@ -463,7 +463,12 @@ export function credentialSheetText(cls) {
 if (typeof window !== 'undefined') {
   window.addEventListener('storage', (event) => {
     if (event.key === null || event.key === STORAGE_KEY) {
+      const held = JSON.stringify(state)
       state = load()
+      // Another tab wrote this store, so this tab's state is replaced -- and a
+      // change refused here goes with it, exactly as it does on a commit.
+      // Without this the banner would go on offering to rescue it.
+      if (held !== JSON.stringify(state)) reportStorageDiscard('classes')
       listeners.forEach((fn) => fn())
     }
   })

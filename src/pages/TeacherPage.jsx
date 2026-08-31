@@ -14,7 +14,7 @@ import StatusIcon from '../components/StatusIcon.jsx'
 import QrCode from '../components/QrCode.jsx'
 import { printClassJoinSheet } from '../lib/print.js'
 import { createBackup, downloadBackup, restoreBackup } from '../lib/backup.js'
-import { useStorageHealth, storageAcceptsWrites } from '../lib/storageHealth.js'
+import { useStorageHealth, storageAcceptsWrites, acknowledgeLoss } from '../lib/storageHealth.js'
 import mockRoster from '../content/mock/students.json'
 import {
   useAuth,
@@ -617,9 +617,13 @@ function BackupPanel() {
   // A browser that is refusing writes is the one situation where everything
   // on this dashboard is a lie by the next reload, so it is said here, at the
   // top of the panel whose whole job is not losing work.
-  // 'ok' | 'stranded' (a refused change is still in this tab) | 'lost' (a
-  // later commit rebuilt from storage and discarded it).
+  // 'ok' | 'stranded' (a refused change is in this tab now) | 'lost' (one was
+  // discarded) | 'both'. Not a severity ladder: they are independent, and a
+  // teacher with an old change gone and a new one unsaved needs to be told
+  // both things.
   const writeHealth = useStorageHealth()
+  const holdingUnsaved = writeHealth === 'stranded' || writeHealth === 'both'
+  const workWasLost = writeHealth === 'lost' || writeHealth === 'both'
   const ownWritesFailing = writeHealth !== 'ok'
   // Also ask storage directly, so a tab opened after the trouble started --
   // or one that has simply not written yet -- does not look healthy while the
@@ -665,7 +669,15 @@ function BackupPanel() {
         backup.knownIncomplete
           ? {
               ok: false,
-              message: `${saved} But a change in this tab failed to save, so it is NOT in this file. Keep it, then fix the saving problem and take a fresh backup.${passcodeNote}`,
+              // Two reasons this file can be short, and they are not the same
+              // sentence: something is being held here unsaved, or something
+              // was lost before it could be. A lost change may have been
+              // redone since -- nothing here can see that -- so this says
+              // "unless you have redone it" rather than asserting it is gone
+              // from the file.
+              message: holdingUnsaved
+                ? `${saved} But a change in this tab failed to save, so it is NOT in this file. Keep it, then fix the saving problem and take a fresh backup.${passcodeNote}`
+                : `${saved} But a change made here was lost before it could be saved, so unless you have redone it since, this file does not have it either. Redo it, then take a fresh backup.${passcodeNote}`,
             }
           : backup.storageRefusing
             ? {
@@ -747,21 +759,29 @@ function BackupPanel() {
           gone wrong; a refused probe is something that MAY. Folding them
           together is how a banner ends up telling a teacher their work is
           stranded on the strength of a one-byte test write. */}
-      {writeHealth === 'lost' ? (
+      {workWasLost && (
         <p className="import-error" role="status">
-          This browser refused to save a change made here, and that change has now been
-          discarded — it is gone from this tab too, so there is nothing left to rescue and
-          nothing to wait for. Private windows block saving entirely; otherwise the browser is
-          likely out of space. Move to a normal window or free some space, reload, and redo
-          whatever is missing.
+          A change made here could not be saved and has since been discarded — it is gone from
+          this tab as well, so there is nothing left to rescue. Whatever you changed just
+          before the trouble started needs doing again. This stays up until you say it is
+          handled, because nothing here can tell whether you have redone it.{' '}
+          <button
+            className="button button-danger"
+            onClick={() => {
+              acknowledgeLoss()
+              setStorageRefusing(!storageAcceptsWrites())
+            }}
+          >
+            I&apos;ve redone it
+          </button>
         </p>
-      ) : writeHealth === 'stranded' ? (
+      )}
+      {holdingUnsaved ? (
         <p className="import-error" role="status">
-          This browser refused to save a change made here. That change is only in this tab —
-          it will be gone on reload, a backup saved now would be missing it, and it may be
-          dropped as soon as saving works again. Private windows block saving entirely;
-          otherwise the browser is likely out of space. Move to a normal window or free some
-          space, reload, and redo whatever is missing.
+          This browser is refusing to save, and a change made here is only in this tab —
+          it will be gone on reload, and a backup saved now would be missing it. Private
+          windows block saving entirely; otherwise the browser is likely out of space. Move to
+          a normal window or free some space, then redo the change so it can be written down.
         </p>
       ) : storageRefusing ? (
         <p className="import-error" role="status">

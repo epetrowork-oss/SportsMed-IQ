@@ -508,22 +508,40 @@ nothing to restore from. The backup file is the restore-from.
   changed nothing from reporting itself unpersisted.
 
   **Stranded is not the same as lost, and the teacher needs different things
-  from each.** Every commit rebuilds state from storage. So a store already
-  holding a change localStorage refused loses it the moment any later write
-  runs — including one that lands, and including a restore that merges
-  nothing. The change is then in neither place. Saying it is "only in this
-  tab" at that point sends the teacher looking for something that no longer
-  exists, so `src/lib/storageHealth.js` tracks two states per store:
+  from each.** Every commit rebuilds state from storage, and so does the
+  `storage` event handler when another tab writes. So a store holding a change
+  localStorage refused loses it the moment any of that happens — a write that
+  lands, a write that is refused, a restore that merges nothing, another tab
+  saving. The change is then in neither place, and saying it is "only in this
+  tab" sends the teacher looking for something that no longer exists.
 
-  | state | what it means | what the banner asks for |
+  `src/lib/storageHealth.js` therefore tracks two things per store, and they
+  are **not two values of one state** — that was the first attempt, and it made
+  the warning vanish exactly when it mattered:
+
+  | | what it is | what the banner asks for |
   |---|---|---|
-  | `stranded` | the refused change is still here in memory | save it — fix the storage problem, it is still rescuable |
-  | `lost` | a later commit rebuilt from storage and discarded it | redo it — there is nothing left to rescue |
+  | `stranded` | a refused change is here in memory **right now** — current health, and every write changes it | save it: fix the storage problem, it is still rescuable |
+  | `lost` | a refused change **was discarded** — history, which cannot un-happen | redo it: there is nothing left to rescue |
 
-  Both count as failing, so both keep `knownIncomplete` true. A successful
-  write clears either, which is deliberate: the alternative is a warning that
-  never goes away, and round 16 is the record of where that leads. The window
-  in which the warning is shown is the window in which it is actionable.
+  On one axis, the next write decided what the teacher was told about the
+  previous one. A write that landed deleted the entry — banner gone, work
+  gone, teacher never told. A write that was refused left the state reading
+  "stranded", so the banner offered to rescue a change that was already gone
+  while the thing actually being held was a different one. Both count as
+  failing, so both keep `knownIncomplete` true.
+
+  **A loss clears only when the teacher says so** — an *I've redone it* button
+  on the banner. Nothing in the code can tell whether the work was redone: a
+  later successful write proves the store's current state is saved, not that
+  the discarded change is back. This stays bounded in a way round 16's
+  cross-tab warnings were not, because it lives in this tab's memory and dies
+  with the tab.
+
+  What decides whether a replacement discarded anything is the same total
+  comparison used above: the state being replaced against the state replacing
+  it. A retry that produces exactly what was stranded lost nothing, and says
+  nothing.
 
   So the success message describes the file ("1 class, 2 students with their
   PINs … that is what was saved on this device at the time") rather than
