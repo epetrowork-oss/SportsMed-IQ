@@ -109,21 +109,62 @@ const RESTORE_GENERATION = 'sportmediq:restoreGeneration:v1'
 // tab does not block backups for the rest of the day.
 const RESTORE_MARKER_TTL_MS = 60000
 
-function markRestoreRunning() {
+// The marker holds every restore currently running, keyed by its own id --
+// not one flag. A single flag is cleared unconditionally by whichever restore
+// finishes FIRST, which takes down the liveness of one still paused between
+// merges: a backup starting after that sees no marker, and no generation
+// change either (the finished restore's bump is already in its baseline, the
+// unfinished one has not bumped yet), so it accepts the unfinished restore's
+// intermediate state as settled. A restore must not be able to clear
+// another's evidence.
+function readRestorers() {
   try {
-    localStorage.setItem(RESTORE_MARKER, String(Date.now()))
+    const raw = localStorage.getItem(RESTORE_MARKER)
+    const parsed = raw ? JSON.parse(raw) : {}
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return {}
+    const live = {}
+    for (const [id, at] of Object.entries(parsed)) {
+      const age = Date.now() - Number(at)
+      // Expired is a tab that died mid-restore; an entry from the future is a
+      // clock change. Neither is a live restore.
+      if (Number.isFinite(age) && age >= 0 && age < RESTORE_MARKER_TTL_MS) live[id] = at
+    }
+    return live
+  } catch {
+    return {}
+  }
+}
+
+function writeRestorers(next) {
+  try {
+    if (Object.keys(next).length === 0) localStorage.removeItem(RESTORE_MARKER)
+    else localStorage.setItem(RESTORE_MARKER, JSON.stringify(next))
   } catch {
     // Storage refusing is already reported by the health machinery; a backup
     // taken during this restore loses the protection, not the warning.
   }
 }
 
-function clearRestoreRunning() {
-  try {
-    localStorage.removeItem(RESTORE_MARKER)
-  } catch {
-    // Nothing to do: the timestamp expires on its own.
-  }
+function randomRestorerId() {
+  const bytes = new Uint8Array(6)
+  crypto.getRandomValues(bytes)
+  return [...bytes].map((b) => b.toString(16).padStart(2, '0')).join('')
+}
+
+function markRestoreRunning() {
+  const id = randomRestorerId()
+  writeRestorers({ ...readRestorers(), [id]: Date.now() })
+  return id
+}
+
+function clearRestoreRunning(id) {
+  // Only its own entry. Read-modify-write is still last-writer-wins --
+  // localStorage has no compare-and-set -- so two restores finishing in the
+  // same instant can lose one removal; the TTL bounds that, and it is the same
+  // residue documented for the merges themselves.
+  const live = readRestorers()
+  delete live[id]
+  writeRestorers(live)
 }
 
 function restoreGeneration() {
@@ -144,14 +185,7 @@ function bumpRestoreGeneration() {
 }
 
 function restoreIsRunning() {
-  try {
-    const at = Number(localStorage.getItem(RESTORE_MARKER))
-    if (!at) return false
-    // A marker from the future is a clock change, not a live restore.
-    return Date.now() - at >= 0 && Date.now() - at < RESTORE_MARKER_TTL_MS
-  } catch {
-    return false
-  }
+  return Object.keys(readRestorers()).length > 0
 }
 
 function readStores() {
@@ -424,15 +458,17 @@ export async function restoreBackup(text, passcode, session = sessionFingerprint
       'This device was signed out or released while the backup was being opened — nothing was restored. Sign in again and try once more.',
     )
   }
-  markRestoreRunning()
+  const restorerId = markRestoreRunning()
   try {
     return mergeAll(backup)
   } finally {
     // Both, and in this order: the counter is what an export looking back can
-    // still see once the marker is gone. In the `finally` so a restore that
-    // threw half way -- the most dangerous kind to snapshot across -- counts.
+    // still see once this restore's entry is gone. In the `finally` so a
+    // restore that threw half way -- the most dangerous kind to snapshot
+    // across -- counts. And only THIS restore's entry is removed, so a
+    // concurrent one keeps its own liveness.
     bumpRestoreGeneration()
-    clearRestoreRunning()
+    clearRestoreRunning(restorerId)
   }
 }
 
