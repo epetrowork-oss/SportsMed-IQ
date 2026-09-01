@@ -363,7 +363,19 @@ nothing to restore from. The backup file is the restore-from.
   one running"; the counter answers "did one happen while I was looking", and
   only the second survives the restore ending. Acceptance needs all three:
   no restore running, none finished across the reads, and nothing else moved
-  between them. A marker,
+  between them.
+
+  The marker holds **every** running restore, keyed by its own id, rather than
+  being one flag. One flag is cleared unconditionally by whichever restore
+  finishes first, which takes down the liveness of one still paused between
+  merges — and the counter does not cover that either, since the finished
+  restore's bump is already in the baseline while the unfinished one has not
+  bumped yet. A restore must not be able to clear another's evidence, so each
+  removes only its own entry. An expired entry (a tab that died mid-restore)
+  and an unreadable marker are not live restores, so neither blocks backups
+  for ever. This was a real hole, separate from the residue below.
+
+  A marker,
   not a lock: two tabs restoring at once is still last-writer-wins, and a
   timestamp expires the marker a crashed tab leaves behind. It closes the
   window it can see and does not pretend to be mutual exclusion.
