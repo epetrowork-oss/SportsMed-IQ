@@ -90,11 +90,17 @@ const SNAPSHOT_ATTEMPTS = 5
 // restored.
 //
 // So a restore says out loud that it is running, and an export refuses while
-// it is. This is a marker, not a lock: localStorage has no compare-and-set, so
-// two tabs restoring at once is still last-writer-wins, and a tab that dies
-// mid-restore leaves the marker behind -- which is what the timestamp is for.
-// It closes the window it can see and does not pretend to be mutual exclusion.
-const RESTORE_MARKER = 'sportmediq:restoreInProgress:v1'
+// it is. Each restore gets its OWN key under this prefix, so no restore ever
+// writes a value another restore owns -- see below for why one shared value
+// cannot work. A tab that dies mid-restore leaves its key behind, which is
+// what the timestamp is for.
+//
+// This is a marker, not a lock, and the distinction is worth keeping exact.
+// What it does close: an export cannot take a snapshot across a restore it can
+// see. What it does not: localStorage has no compare-and-set, so two tabs
+// restoring at once still resolve last-writer-wins in the DATA merges, and no
+// marker scheme changes that.
+const RESTORE_MARKER_PREFIX = 'sportmediq:restoreInProgress:v2:'
 // The marker says a restore is running NOW, and completion deletes it -- which
 // deletes the only evidence that one overlapped these reads. A restore paused
 // between merges can resume, finish, and clear the marker after the second
@@ -117,32 +123,23 @@ const RESTORE_MARKER_TTL_MS = 60000
 // unfinished one has not bumped yet), so it accepts the unfinished restore's
 // intermediate state as settled. A restore must not be able to clear
 // another's evidence.
-function readRestorers() {
-  try {
-    const raw = localStorage.getItem(RESTORE_MARKER)
-    const parsed = raw ? JSON.parse(raw) : {}
-    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return {}
-    const live = {}
-    for (const [id, at] of Object.entries(parsed)) {
-      const age = Date.now() - Number(at)
-      // Expired is a tab that died mid-restore; an entry from the future is a
-      // clock change. Neither is a live restore.
-      if (Number.isFinite(age) && age >= 0 && age < RESTORE_MARKER_TTL_MS) live[id] = at
-    }
-    return live
-  } catch {
-    return {}
-  }
-}
-
-function writeRestorers(next) {
-  try {
-    if (Object.keys(next).length === 0) localStorage.removeItem(RESTORE_MARKER)
-    else localStorage.setItem(RESTORE_MARKER, JSON.stringify(next))
-  } catch {
-    // Storage refusing is already reported by the health machinery; a backup
-    // taken during this restore loses the protection, not the warning.
-  }
+// ONE KEY PER RESTORE, never a shared object. Holding all of them in one
+// value means every restore has to read-modify-write it, and that loses an
+// entry outright: two tabs entering here at once both read the same object
+// before either writes, so the second `setItem` erases the first restore's
+// liveness. The erased one is then invisible -- and if the surviving restore
+// finishes and bumps the generation while the erased one is still paused
+// between merges, a backup started afterwards sees no live marker and no
+// generation change, and accepts the paused restore's torn state.
+//
+// A key per restore has no read-modify-write to lose, because no restore ever
+// writes a value another restore owns. This is worth separating from the
+// residue that genuinely is inherent: two tabs restoring at once still
+// resolves last-writer-wins in the DATA merges, and no marker scheme changes
+// that. Liveness is not in that category, and calling it residue -- as an
+// earlier comment here did -- was wrong.
+function restorerKey(id) {
+  return `${RESTORE_MARKER_PREFIX}${id}`
 }
 
 function randomRestorerId() {
@@ -151,20 +148,51 @@ function randomRestorerId() {
   return [...bytes].map((b) => b.toString(16).padStart(2, '0')).join('')
 }
 
+// Every live restorer key, pruning the expired ones as it goes. Pruning is a
+// per-key removal, so it cannot disturb a key it does not own.
+function liveRestorerKeys() {
+  const live = []
+  const stale = []
+  try {
+    for (let i = 0; i < localStorage.length; i += 1) {
+      const key = localStorage.key(i)
+      if (!key || !key.startsWith(RESTORE_MARKER_PREFIX)) continue
+      const age = Date.now() - Number(localStorage.getItem(key))
+      // Expired is a tab that died mid-restore; a value from the future is a
+      // clock change. Neither is a live restore.
+      if (Number.isFinite(age) && age >= 0 && age < RESTORE_MARKER_TTL_MS) live.push(key)
+      else stale.push(key)
+    }
+  } catch {
+    return []
+  }
+  for (const key of stale) {
+    try {
+      localStorage.removeItem(key)
+    } catch {
+      // Harmless: it is already treated as not live.
+    }
+  }
+  return live
+}
+
 function markRestoreRunning() {
   const id = randomRestorerId()
-  writeRestorers({ ...readRestorers(), [id]: Date.now() })
+  try {
+    localStorage.setItem(restorerKey(id), String(Date.now()))
+  } catch {
+    // Storage refusing is already reported by the health machinery; a backup
+    // taken during this restore loses the protection, not the warning.
+  }
   return id
 }
 
 function clearRestoreRunning(id) {
-  // Only its own entry. Read-modify-write is still last-writer-wins --
-  // localStorage has no compare-and-set -- so two restores finishing in the
-  // same instant can lose one removal; the TTL bounds that, and it is the same
-  // residue documented for the merges themselves.
-  const live = readRestorers()
-  delete live[id]
-  writeRestorers(live)
+  try {
+    localStorage.removeItem(restorerKey(id))
+  } catch {
+    // Nothing to do: the TTL expires it.
+  }
 }
 
 function restoreGeneration() {
@@ -185,7 +213,7 @@ function bumpRestoreGeneration() {
 }
 
 function restoreIsRunning() {
-  return Object.keys(readRestorers()).length > 0
+  return liveRestorerKeys().length > 0
 }
 
 function readStores() {

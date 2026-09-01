@@ -346,8 +346,8 @@ nothing to restore from. The backup file is the restore-from.
   then holds the new classes with the old progress rows, which is the worst
   version of this bug because the teacher took that backup precisely to
   capture what they had just restored. So a restore says out loud that it is
-  running (`sportmediq:restoreInProgress:v1`, raised across all three merges
-  and lowered in a `finally`), and an export refuses while it is — checked as
+  running (its own key under `sportmediq:restoreInProgress:v2:`, raised across
+  all three merges and removed in a `finally`), and an export refuses while it is — checked as
   part of the **acceptance** condition after the reads, not once before them.
   Checking it first only rules out a restore already running; one that starts
   after that check and then pauses presents the same intermediate state to
@@ -358,7 +358,7 @@ nothing to restore from. The backup file is the restore-from.
   evidence**: a paused restore can resume, complete, and clear the marker
   after the second read but before the check, leaving nothing to object to. So
   a restore also bumps a counter (`sportmediq:restoreGeneration:v1`) in the
-  same `finally` that lowers the marker — including when it threw half way,
+  same `finally` that removes its marker key — including when it threw half way,
   which is the most dangerous state to snapshot across. Presence answers "is
   one running"; the counter answers "did one happen while I was looking", and
   only the second survives the restore ending. Acceptance needs all three:
@@ -375,10 +375,22 @@ nothing to restore from. The backup file is the restore-from.
   and an unreadable marker are not live restores, so neither blocks backups
   for ever. This was a real hole, separate from the residue below.
 
-  A marker,
-  not a lock: two tabs restoring at once is still last-writer-wins, and a
-  timestamp expires the marker a crashed tab leaves behind. It closes the
-  window it can see and does not pretend to be mutual exclusion.
+  **One key per restore, never a shared value.** Holding all of them in one
+  value means every restore read-modify-writes it, and that loses an entry
+  outright: two tabs entering at once both read the same object before either
+  writes, so the second erases the first's liveness. The erased restore is then
+  invisible — and if the surviving one finishes and bumps the generation while
+  the erased one is still paused, a backup started afterwards sees no live
+  marker and no generation change. A key per restore has nothing shared to
+  erase.
+
+  This is worth separating from the residue that genuinely is inherent. Two
+  tabs restoring at once still resolve last-writer-wins **in the data merges**,
+  because localStorage has no compare-and-set, and no marker scheme changes
+  that. Liveness was never in that category, and an earlier version of this
+  section calling it residue was wrong: it was a fixable defect being filed
+  under an unfixable one, which is the most comfortable kind of mistake to
+  make and the hardest to notice.
 
   **The health flags are read at the snapshot, not at the end.** The file is
   made of the snapshot, so a strand that this payload really is missing must
