@@ -1711,6 +1711,26 @@ h3 {
   font-size: 1rem;
 }
 
+/* Backup panel: the same card language as the other dashboard sections, with
+   its two halves (save / restore) separated by their headings rather than a
+   box each. */
+.backup-panel {
+  margin-top: 1.5rem;
+  padding: 1rem 1.1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  background: var(--surface, #fff);
+}
+
+.backup-panel h3 {
+  margin: 1.1rem 0 0.4rem;
+  font-size: 1rem;
+}
+
+.backup-panel input[type='file'] {
+  padding: 0.5rem;
+}
+
 /* Join link + QR. The h4 headings inside the code block match the h3s above
    them in weight so the block reads as one panel of steps, not a nest. */
 .class-code-block h4 {

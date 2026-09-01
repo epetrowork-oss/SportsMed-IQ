@@ -26,6 +26,16 @@ codes) is fixed: a modern code adopts a pre-login row only when exactly one
 row carries that name and it has no IDs, so the upgrade path stops
 duplicating students without ever merging two different ones.
 
+**Update 2026-08-30 — teacher devices can be backed up.** `src/lib/backup.js`
+writes an encrypted file (AES-GCM, PBKDF2 key from the device's own passcode)
+holding the classes, rosters with their PINs, settings and saved assignments,
+and restores it onto a replacement device by merging rather than replacing.
+Credentials are deliberately not in it, so a copied file cannot provision an
+admin. This closes the one failure that used to lose a semester permanently —
+a wiped or replaced Chromebook. Still open from the same review of gaps: the
+first-run screen doesn't tell a new teacher what to do (and TESTERS.md still
+has no teacher quick start), and nothing throttles wrong PIN attempts.
+
 This file is the handoff between sessions. Read it first, keep it updated:
 check items off as they land, and add anything newly discovered. The working
 rhythm is unchanged: **build a piece → verify in the browser → commit.**

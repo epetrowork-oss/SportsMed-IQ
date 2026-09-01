@@ -5,6 +5,7 @@
 
 import { useSyncExternalStore } from 'react'
 import { decodeProgressCode } from './share.js'
+import { reportStorageWrite, reportStorageDiscard } from './storageHealth.js'
 
 const STORAGE_KEY = 'sportmediq:roster:v1'
 
@@ -20,14 +21,63 @@ function load() {
 
 let state = load()
 const listeners = new Set()
+// Whether the most recent write reached localStorage. Read straight from
+// the write itself, so nothing has to be inferred by re-reading.
+let lastWriteOk = true
 
 function save(next) {
+  const held = JSON.stringify(state)
+  // Asked BEFORE anything is replaced: is what this tab is holding already
+  // written down? Another tab can persist exactly this state and have its
+  // `storage` event still queued, in which case the change survived and this
+  // commit is not what loses it -- it reads that same state back out of
+  // storage and builds on it.
+  const heldWasStored = readRaw() === held
   state = next
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
-  } catch {
-    // Storage full or blocked — keep working in memory.
+  const payload = JSON.stringify(state)
+  // Replacing state above throws away whatever a refused write was holding
+  // here -- `next` came from `load()`, so it cannot contain it. Two exceptions,
+  // and both are proved by an exact comparison rather than assumed: the same
+  // state is being written again (a retry that preserved it), or storage
+  // already had it. All three branches are no-ops when this store was not
+  // stranded, which is every ordinary write.
+  if (held === payload) {
+    // Nothing replaced; this write's own outcome below is the whole story.
+  } else if (heldWasStored) {
+    reportStorageWrite('roster', true)
+  } else {
+    reportStorageDiscard('roster')
   }
+  // Storage full or blocked — keep working in memory for the rest of the
+  // session, but say so. Silence here is what let a teacher build a whole
+  // class, and a backup of it, on top of writes that never happened.
+  let landed = false
+  try {
+    localStorage.setItem(STORAGE_KEY, payload)
+    landed = true
+  } catch {
+    // refused
+  }
+  // A refused write only STRANDS something if what it was trying to write
+  // differs from what a reader will now get. A write whose intent storage
+  // already satisfies -- a merge that added nothing, a setting changed back
+  // to its current value, an empty store whose key was never written --
+  // lost nothing when it was rejected.
+  //
+  // Compared through `load()`, not against the raw string: `load()` is how
+  // every reader here sees storage, so this asks the only question that
+  // matters, and an absent key and an empty store come out equal because to
+  // a reader they are. Note it is the WHOLE state either way, not a chosen
+  // subset: every earlier attempt to infer persistence picked fields to
+  // compare and each subset was wrong differently.
+  lastWriteOk = landed || JSON.stringify(load()) === payload
+  // Health follows the same question the outcome does: is the intended state
+  // what a reader now gets? If it is -- because the write landed, or because
+  // storage already holds it -- this store has nothing outstanding. If it is
+  // not, it does. Anything an EARLIER refused write was holding has already
+  // been accounted for by the discard above, which runs first, so clearing
+  // here cannot bury it.
+  reportStorageWrite('roster', lastWriteOk)
   listeners.forEach((fn) => fn())
 }
 
@@ -156,10 +206,91 @@ export function removeStudent(id) {
 if (typeof window !== 'undefined') {
   window.addEventListener('storage', (event) => {
     if (event.key === null || event.key === STORAGE_KEY) {
+      const held = JSON.stringify(state)
       state = load()
+      // Another tab wrote this store, so this tab's state is replaced. Either
+      // it lands on exactly what a refused write here was holding -- in which
+      // case the other tab has just saved that very state, and this store has
+      // nothing outstanding -- or it does not, and this tab can no longer
+      // account for the change. Both are no-ops unless this store was
+      // stranded.
+      if (held !== JSON.stringify(state)) reportStorageDiscard('roster')
+      else reportStorageWrite('roster', true)
       listeners.forEach((fn) => fn())
     }
   })
+}
+
+// --- backup ---
+
+// Storage is the truth -- see snapshotClasses in classes.js for why a union
+// with module state cannot be.
+export function snapshotRoster() {
+  return load().students
+}
+
+/**
+ * Restores imported student rows from a backup.
+ *
+ * A row this device already holds is never overwritten -- the restore only
+ * adds rows the device is missing. That is the whole rule, and it is stated
+ * that way because every attempt to be cleverer here has been wrong: rows key
+ * by (class, student), a key that two devices restored from one class could
+ * both issue to different people, and no field on a roster row says which
+ * person it is. Comparing timestamps let the backup file one student's
+ * progress under another's name; consulting the class store's conflicts
+ * covered that only while the device still HAD the class, and missed a
+ * retained row for a class it had deleted.
+ *
+ * Never overwriting needs none of that reasoning and cannot be wrong in that
+ * direction. What it costs is a genuinely newer row in the backup not
+ * refreshing an older one here, which is recoverable in one step: these rows
+ * are a cache of a student's exported progress code, and re-importing the
+ * code is the normal way to update one.
+ *
+ * `skip` carries the (cid, sid) pairs the class merge refused to guess about,
+ * used only to tell the teacher which held-back rows were a real collision
+ * rather than an ordinary duplicate.
+ *
+ * Returns { added, kept, skipped, persisted }.
+ */
+export function mergeRoster(incoming, skip = new Set()) {
+  const list = Array.isArray(incoming) ? incoming.filter((s) => s && typeof s.name === 'string') : []
+  let added = 0
+  let kept = 0
+  let skipped = 0
+  const keyOf = (row) => (row.sid ? `sid:${row.cid ?? ''}:${row.sid}` : `id:${row.id}`)
+  commit((cur) => {
+    added = 0
+    kept = 0
+    skipped = 0
+    const byKey = new Map(cur.students.map((row) => [keyOf(row), row]))
+    for (const row of list) {
+      // The refusal comes first, before anything is inserted. A conflicted
+      // (class, student) pair means the class store found two people behind
+      // that ID, and this device may hold no roster row for its one yet --
+      // in which case an insert is not "adding a row the device is missing",
+      // it is filing the backup student's name and progress under the key
+      // that belongs to the other one, where the device student's next
+      // progress import would then land on top of it.
+      if (row.sid && skip.has(`${row.cid ?? ''}:${row.sid}`)) {
+        skipped += 1
+        continue
+      }
+      const key = keyOf(row)
+      if (!byKey.has(key)) {
+        byKey.set(key, row)
+        added += 1
+        continue
+      }
+      kept += 1
+    }
+    return {
+      students: [...byKey.values()].sort((a, b) => a.name.localeCompare(b.name)),
+    }
+  })
+  const persisted = lastWriteOk
+  return { added, kept, skipped, persisted }
 }
 
 // Wipes this store. Used when a teacher releases the device: their data must

@@ -204,6 +204,90 @@ export function signOut() {
   commit((cur) => ({ ...cur, adminUnlocked: false, teacherUnlocked: false }))
 }
 
+// Checks a passcode against this device's stored verifiers WITHOUT unlocking
+// anything. The backup file is encrypted with the passcode, so a typo at
+// export time would produce a file nobody can ever open — this is what makes
+// that impossible. Returns { role, credential } — the role that matched and a
+// fingerprint of the exact record it matched — and throws a readable error
+// when neither matches.
+//
+// The fingerprint is returned rather than looked up afterwards, and that is
+// the whole point of returning an object. A caller that re-reads the record
+// to fingerprint it is reading it a second time, and another tab can replace
+// the credential between the two reads; the caller would then be holding a
+// fingerprint of the REPLACEMENT and would happily confirm it later, having
+// verified nothing about the record the passcode actually matched. Binding
+// the two together here is the only place that gap can be closed.
+//
+// Each derivation takes 150k PBKDF2 iterations, which is long enough for
+// another tab to release the teacher or replace a passcode while it runs. A
+// record captured before the await is therefore not evidence afterwards: the
+// caller here downloads every class on the device, so answering "yes" against
+// a credential that has since been revoked would hand that data out on the
+// strength of a passcode the admin had just taken away. The match is confirmed
+// against state re-read AFTER the derivation, and a record that moved under us
+// is refused outright rather than compared to a stale one.
+export async function verifyDevicePasscode(passcode) {
+  const secret = (passcode ?? '').trim()
+  if (!secret) throw new Error('Type the passcode for this device.')
+  const before = load()
+  if (!before.admin && !before.teacher) {
+    throw new Error('No passcode has been set up on this device yet.')
+  }
+  // Admin first: on a device holding both, the admin's passcode answers for it.
+  for (const role of ['admin', 'teacher']) {
+    const captured = before[role]
+    if (!captured) continue
+    const hash = await deriveHex(captured.salt, secret)
+    const current = load()[role]
+    if (!current || current.salt !== captured.salt || current.hash !== captured.hash) {
+      throw new Error(
+        "This device's sign-in changed while that was being checked — sign in again and retry.",
+      )
+    }
+    if (hash === current.hash) {
+      return { role, credential: `${role}:${current.salt}:${current.hash}` }
+    }
+  }
+  throw new Error("That passcode doesn't match this device's admin or teacher passcode.")
+}
+
+// A fingerprint of one role's stored verifier, for callers that must confirm
+// the credential they matched is STILL the credential when they finally act.
+// Cheap on purpose: no derivation, so it can be re-checked at the moment of
+// disclosure rather than only at the moment of the check.
+export function credentialFingerprint(role) {
+  const record = load()[role]
+  return record ? `${role}:${record.salt}:${record.hash}` : null
+}
+
+// Whether this device is signed in right now, read fresh from storage rather
+// than from a render-time snapshot. A release in another tab clears both.
+export function deviceIsUnlocked() {
+  const cur = load()
+  return !!(cur.adminUnlocked || cur.teacherUnlocked)
+}
+
+// WHICH session is signed in, not merely that one is. Empty string when the
+// device is locked.
+//
+// "Still unlocked" is not the same question as "still the same person". A
+// release in another tab wipes the stores and can provision a different
+// teacher, and a boolean cannot tell that apart from nothing having happened
+// — so a long-running operation started by teacher A, checking only the
+// boolean, would resume into teacher B's freshly provisioned device and write
+// A's classes and plaintext PINs into it, undoing the release. Both roles are
+// included because a device can hold both, and either changing is a change.
+export function sessionFingerprint() {
+  const cur = load()
+  const parts = []
+  if (cur.adminUnlocked && cur.admin) parts.push(`admin:${cur.admin.salt}:${cur.admin.hash}`)
+  if (cur.teacherUnlocked && cur.teacher) {
+    parts.push(`teacher:${cur.teacher.salt}:${cur.teacher.hash}`)
+  }
+  return parts.join('|')
+}
+
 // --- teacher access codes ---
 
 // Admin-side: create a code for a named teacher and remember it so it can be
@@ -212,7 +296,10 @@ export function signOut() {
 export async function issueTeacherCode(teacherName) {
   const name = (teacherName ?? '').trim().slice(0, 60)
   if (!name) throw new Error("Enter the teacher's name first.")
-  const existing = state.issued.find((t) => t.name.toLowerCase() === name.toLowerCase())
+  // Read fresh, not from this tab's snapshot: another tab may already have
+  // issued for this name, and reusing its tid is what "re-issuing replaces
+  // the code" means.
+  const existing = load().issued.find((t) => t.name.toLowerCase() === name.toLowerCase())
   const tid = existing?.tid ?? `t-${randomToken(8)}`
   const payload = { v: 1, tid, name, at: new Date().toISOString() }
   const compressed = await deflate(new TextEncoder().encode(JSON.stringify(payload)))
@@ -225,11 +312,18 @@ export async function issueTeacherCode(teacherName) {
     if (!cur.adminUnlocked) {
       throw new Error('You were signed out while the code was being generated — sign in and try again.')
     }
+    // Filtered by NAME as well as tid. Two issuances for the same
+    // previously-unseen name -- a double-click, or two tabs -- both find no
+    // existing entry and mint different tids, so filtering on tid alone
+    // leaves the first one behind and the list ends up with the name twice,
+    // each against a different code. The name is what the admin reads off
+    // that list, and what "re-issuing replaces the code" is promised about.
+    const replaced = cur.issued.filter(
+      (t) => t.tid !== tid && t.name.trim().toLowerCase() !== name.toLowerCase(),
+    )
     return {
       ...cur,
-      issued: [...cur.issued.filter((t) => t.tid !== tid), entry].sort((a, b) =>
-        a.name.localeCompare(b.name),
-      ),
+      issued: [...replaced, entry].sort((a, b) => a.name.localeCompare(b.name)),
     }
   })
   return entry
@@ -290,9 +384,47 @@ function redemptionBlockedReason(st) {
 // case a forged code would target. Getting past it needs the existing
 // credential: the teacher's passcode, or the admin signing in and calling
 // forgetTeacher() to hand the device over.
+// A fingerprint of everything about a device's authorization: both credential
+// records and both unlocked flags. Used to bind a slow operation to the state
+// it started from.
+//
+// The whole state, not the part that looks relevant. A redemption binding that
+// recorded only the TEACHER record was defeated by another tab finishing
+// `setupAdmin()` during the derivation: the teacher record is absent on both
+// sides so the binding matched, while the new `adminUnlocked` made the guard
+// return null through its own-session clause -- and a stale redemption
+// installed its teacher on a device that had just acquired an admin. Choosing
+// which fields matter is the same mistake the persistence checks made four
+// times over; this compares all of them.
+function authStateKey(st) {
+  const record = (r) => (r ? `${r.salt}:${r.hash}` : '')
+  return [
+    `admin:${record(st.admin)}`,
+    `adminUnlocked:${st.adminUnlocked ? 1 : 0}`,
+    `teacher:${st.teacher ? st.teacher.tid : ''}:${record(st.teacher)}`,
+    `teacherUnlocked:${st.teacherUnlocked ? 1 : 0}`,
+  ].join('|')
+}
+
 export async function redeemTeacherCode(code, passcode) {
-  const blocked = redemptionBlockedReason(load())
+  // ONE read, used for both the guard and the binding. Two reads would leave
+  // the binding describing a state the guard never saw: another tab
+  // provisioning between them would be captured as `startedFrom`, and a
+  // redemption that began on a blank device would then confirm that teacher
+  // at commit time and overwrite them. Deciding and recording what was
+  // decided about have to be the same act.
+  const startedState = load()
+  const blocked = redemptionBlockedReason(startedState)
   if (blocked) throw new Error(blocked)
+  // WHICH state authorized this, captured before the awaits below. Re-running
+  // the guard at commit time is not enough on a blank device: two tabs both
+  // pass it, the first provisions its teacher AND unlocks the device, and the
+  // second then finds `teacherUnlocked` true -- so the guard's "this tab's own
+  // session authorizes a hand-over" clause is satisfied by the OTHER tab's
+  // brand-new session, and the second redemption overwrites the teacher and
+  // passcode that were just set up. The guard answers "is a hand-over allowed
+  // now"; this answers "is this still the device I was handed".
+  const startedFrom = authStateKey(startedState)
 
   const trimmed = (code ?? '').trim()
   if (!trimmed.startsWith(TEACHER_PREFIX)) {
@@ -338,6 +470,11 @@ export async function redeemTeacherCode(code, passcode) {
   commit((cur) => {
     const blockedNow = redemptionBlockedReason(cur)
     if (blockedNow) throw new Error(blockedNow)
+    if (authStateKey(cur) !== startedFrom) {
+      throw new Error(
+        "This device's sign-in changed while that code was being redeemed — reload and check who it belongs to before trying again.",
+      )
+    }
     return { ...cur, teacher, teacherUnlocked: true }
   })
   return teacher

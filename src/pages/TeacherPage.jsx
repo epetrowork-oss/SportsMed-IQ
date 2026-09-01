@@ -13,6 +13,23 @@ import { isComplete, isFlagged, flagReasons, formatMinSec, statusInfo } from '..
 import StatusIcon from '../components/StatusIcon.jsx'
 import QrCode from '../components/QrCode.jsx'
 import { printClassJoinSheet } from '../lib/print.js'
+import { createBackup, downloadBackup, restoreBackup } from '../lib/backup.js'
+import {
+  useStorageHealth,
+  storageAcceptsWrites,
+  acknowledgeLoss,
+  strandedStores,
+  unverifiedStores,
+} from '../lib/storageHealth.js'
+
+// What each store holds, in the teacher's words rather than the code's. A
+// warning that says "the classes store" tells them nothing about where to
+// look; these name the part of the dashboard to go and check.
+const STORE_NAMES = {
+  classes: 'your classes, students and their PINs',
+  roster: 'imported student progress',
+  assignments: 'saved assignments',
+}
 import mockRoster from '../content/mock/students.json'
 import {
   useAuth,
@@ -24,6 +41,7 @@ import {
   loginTeacher,
   forgetTeacher,
   signOut,
+  sessionFingerprint,
 } from '../lib/auth.js'
 import {
   useClasses,
@@ -608,6 +626,324 @@ function AdminPanel({ issued }) {
 // refuses while locked, and the sign-in form is gone once the teacher is in),
 // and an admin-managed device can never take a replacement teacher after a
 // release (redemption needs the admin's session, which hides the form).
+// Everything a teacher has lives on this one device. This is the only way to
+// get it back after a wipe, a reset Chromebook, or a replaced laptop -- there
+// is no server holding a copy.
+function BackupPanel() {
+  // A browser that is refusing writes is the one situation where everything
+  // on this dashboard is a lie by the next reload, so it is said here, at the
+  // top of the panel whose whole job is not losing work.
+  // The hook's value is a change key encoding both sets, not a category: the
+  // lists are read here so a second store joining either one re-renders the
+  // banner that names it.
+  const writeHealth = useStorageHealth()
+  const stranded = strandedStores()
+  const unverified = unverifiedStores()
+  const holdingUnsaved = stranded.length > 0
+  const ownWritesFailing = writeHealth !== '|'
+  // Also ask storage directly, so a tab opened after the trouble started --
+  // or one that has simply not written yet -- does not look healthy while the
+  // browser is refusing writes. Re-checked whenever this tab's own health
+  // changes, and after each save or restore.
+  const [storageRefusing, setStorageRefusing] = useState(false)
+  useEffect(() => {
+    setStorageRefusing(!storageAcceptsWrites())
+  }, [ownWritesFailing])
+  const [savePass, setSavePass] = useState('')
+  const [saveMsg, setSaveMsg] = useState(null)
+  const [saving, setSaving] = useState(false)
+
+  const [file, setFile] = useState(null)
+  const [restorePass, setRestorePass] = useState('')
+  const [restoreMsg, setRestoreMsg] = useState(null)
+  const [restoring, setRestoring] = useState(false)
+
+  async function save() {
+    // Read who is signed in before anything else happens, and hand that to
+    // the library rather than letting it look for itself later. Everything
+    // after the first await belongs to whoever is signed in *then*.
+    const session = sessionFingerprint()
+    setSaving(true)
+    try {
+      const backup = await createBackup(savePass, session)
+      downloadBackup(backup)
+      setSavePass('')
+      setStorageRefusing(!storageAcceptsWrites())
+      const { classes, students, rosterRows } = backup.counts
+      const saved = `Saved ${backup.filename} — ${classes} class${classes === 1 ? '' : 'es'}, ${students} student${students === 1 ? '' : 's'} with their PINs, ${rosterRows} imported progress row${rosterRows === 1 ? '' : 's'}.`
+      // Three different things can be true about this file, and they are not
+      // equally certain, so they are not said in the same voice. A rejected
+      // write in this tab is a fact about the payload; a refused probe is a
+      // fact about the browser and only a risk to the payload; a short
+      // passcode is a fact about the file's protection, not its contents.
+      //
+      // What the third one is NOT is a verdict on the passcode. `shortPasscode`
+      // false means one length check found nothing, and a long passcode can
+      // still be a guessed word repeated -- so the advice that follows from
+      // it is said EITHER WAY, and only the sentence naming the length is
+      // conditional. A save must never read as "your passcode is fine".
+      const passcodeNote = backup.shortPasscode
+        ? ' One more thing: the passcode you just used is short, and anyone who gets this file can try passcodes against it on their own machine as fast as it will go. Keep the file where only staff can reach it — not a shared folder or a link — and use a longer passcode for this device when you can.'
+        : ' However long your passcode is, someone holding this file can keep guessing at it, so keep it where only staff can reach it.'
+      setSaveMsg(
+        backup.knownIncomplete
+          ? {
+              ok: false,
+              // Two reasons this file can be short, and they are not the same
+              // sentence: something is being held here unsaved, or something
+              // was lost before it could be. A lost change may have been
+              // redone since -- nothing here can see that -- so this says
+              // "unless you have redone it" rather than asserting it is gone
+              // from the file.
+              message: `${saved} But a change in this tab failed to save, so it is NOT in this file. Keep it, then fix the saving problem and take a fresh backup.${passcodeNote}`,
+            }
+          : backup.unverifiedChange
+            ? {
+                ok: false,
+                // Weaker than the line above, and deliberately so: a change
+                // this tab cannot account for may be in the file or may not.
+                // Asking the teacher to check is the strongest true thing.
+                message: `${saved} But a change made here could not be saved when you made it, and this tab can no longer account for it, so it may or may not be in this file. Check the part of the dashboard the warning above names, and take a fresh backup if you had to redo anything.${passcodeNote}`,
+              }
+          : backup.storageRefusing
+            ? {
+                ok: false,
+                message: `${saved} But this browser just refused a test write, so a change made since — in this tab or another one — may have failed to save, and anything that did fail is not in this file. Keep it, then fix the saving problem and take a fresh backup.${passcodeNote}`,
+              }
+            : {
+                ok: !backup.shortPasscode,
+                // Says what the file holds, and does not claim it holds
+                // everything: a change another tab has failed to save cannot
+                // be seen from here.
+                message: `${saved} That is what was saved on this device at the time. Keep it somewhere you will still have if this device is gone.${passcodeNote}`,
+              },
+      )
+    } catch (err) {
+      setSaveMsg({ ok: false, message: err.message })
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  async function restore() {
+    // Before `file.text()`, which is an await of this component's own. A
+    // release and reprovision landing during it would otherwise let the
+    // library bind to the teacher who was set up in the meantime, and merge
+    // this teacher's backup into that teacher's device.
+    const session = sessionFingerprint()
+    setRestoring(true)
+    try {
+      const text = await file.text()
+      const summary = await restoreBackup(text, restorePass, session)
+      setRestorePass('')
+      // A restore that merged nothing new reports success even while storage is
+      // refusing -- correctly, since it stranded nothing. Re-ask storage so the
+      // banner above still says the browser is in trouble.
+      setStorageRefusing(!storageAcceptsWrites())
+      const made = new Date(summary.at)
+      const part = (one, many, counts) =>
+        `${counts.added} ${counts.added === 1 ? one : many} added, ${counts.updated ?? counts.kept} ${counts.updated === undefined ? 'already here' : 'updated'}`
+      const landed = `${part('class', 'classes', summary.classes)}; ${part('student row', 'student rows', summary.students)}; ${part('assignment', 'assignments', summary.assignments)}`
+      const from = Number.isNaN(made.getTime()) ? 'an earlier device' : made.toLocaleString()
+      // A conflict is not a failure, but it is not something to bury under a
+      // tick either: the teacher has to decide, and can only do that if the
+      // message names who is involved.
+      // Naming the clash is not enough on its own: the obvious next move --
+      // adding the student here -- issues them a NEW student ID, and their
+      // progress on their own device is stored under the old one, so they
+      // would sign in to an empty profile with their work unreachable. The
+      // export/import path is the one that carries the work across, and it
+      // has to happen from their device before their old login goes away.
+      const clash = summary.conflicts.length
+        ? ` ${summary.conflicts.length} student${summary.conflicts.length === 1 ? ' was' : 's were'} left out because that student ID belongs to someone else here: ${summary.conflicts
+            .map((c) => `${c.sid} is ${c.onDevice} on this device and ${c.inBackup} in the backup`)
+            .join('; ')}${summary.students.skipped ? `, and ${summary.students.skipped} imported progress row${summary.students.skipped === 1 ? ' was' : 's were'} held back for the same reason` : ''}. Keeping that class on its own device avoids the clash. If you do need them here, first have them open Sync on their own device and copy their progress code — adding them here gives them a new student ID and an empty profile, and pasting that code back in after they sign in is what brings their work across.`
+        : ''
+      // An assignment the backup and this device disagree about is kept as it
+      // is here and named, never resolved: `createdAt` is the other device's
+      // wall clock, and there is no trusted clock between two Chromebooks. The
+      // teacher knows which device they last edited on; the code does not.
+      const assignmentClash = summary.assignmentConflicts.length
+        ? ` This device already has ${summary.assignmentConflicts.length === 1 ? 'an assignment' : 'assignments'} named ${summary.assignmentConflicts
+            .map((c) => `"${c.name}"`)
+            .join(', ')} set up differently from the backup's. This device's version was kept and the code you already handed out still works. If the backup's is the one you want, delete this one and restore again.`
+        : ''
+      const dupes = summary.duplicateNames.length
+        ? ` Two students now share a login name: ${summary.duplicateNames
+            .map((d) => `"${d.name}" in ${d.className} (${d.sids.join(' and ')})`)
+            .join('; ')}. Their sign-in list shows the student ID beside the name so they can tell which is theirs from their slip.`
+        : ''
+      // Each store reports its own write, and a quota-limited browser can
+      // reject the big classes payload while accepting the two small ones. An
+      // all-or-nothing "none of this was saved" would then be false about the
+      // parts that were -- so the parts are named, in the teacher's words.
+      const unsaved = [
+        summary.classes.persisted ? null : STORE_NAMES.classes,
+        summary.students.persisted ? null : STORE_NAMES.roster,
+        summary.assignments.persisted ? null : STORE_NAMES.assignments,
+      ].filter(Boolean)
+      const savedSome = unsaved.length < 3
+      setRestoreMsg(
+        !summary.persisted
+          ? {
+              ok: false,
+              message: `Restored — ${landed} — but this browser refused to save ${unsaved.join(' and ')}${savedSome ? ', though the rest did save' : ''}. What it refused is in this tab only and a reload will lose it. It may be out of storage or in a private window. Keep the backup file, free up space or use a normal window, then restore again.`,
+            }
+          : summary.conflicts.length
+            ? {
+                ok: false,
+                message: `Restored the backup from ${from} — ${landed}.${clash}${dupes}${assignmentClash}`,
+              }
+            : summary.duplicateNames.length || summary.assignmentConflicts.length
+              ? {
+                  ok: false,
+                  message: `Restored the backup from ${from} — ${landed}.${dupes}${assignmentClash}`,
+                }
+              : { ok: true, message: `Restored the backup from ${from} — ${landed}.` },
+      )
+    } catch (err) {
+      setRestoreMsg({ ok: false, message: err.message })
+    } finally {
+      setRestoring(false)
+    }
+  }
+
+  return (
+    <section className="backup-panel">
+      <h2>Back up this device</h2>
+      {/* Two states, not one flag. A rejected write here is something that HAS
+          gone wrong; a refused probe is something that MAY. Folding them
+          together is how a banner ends up telling a teacher their work is
+          stranded on the strength of a one-byte test write. */}
+      {/* One per affected area, each cleared on its own: a teacher who has
+          checked their class list has established nothing about their
+          imported progress, so a single dismiss would clear a warning they
+          never looked at. */}
+      {unverified.map((store) => (
+        <p className="import-error" role="status" key={store}>
+          A change to {STORE_NAMES[store] ?? store} could not be saved when you made it, and
+          this tab can no longer account for it. A later save may have included it, or may not
+          — nothing here can tell, which is why this asks you to check rather than declaring it
+          missing. Go and look at that part of the dashboard, and redo whatever is missing.{' '}
+          <button
+            className="button button-danger"
+            onClick={() => {
+              acknowledgeLoss(store)
+              setStorageRefusing(!storageAcceptsWrites())
+            }}
+          >
+            I&apos;ve checked this
+          </button>
+        </p>
+      ))}
+      {holdingUnsaved ? (
+        <p className="import-error" role="status">
+          This browser is refusing to save, and a change to{' '}
+          {stranded.map((store) => STORE_NAMES[store] ?? store).join(' and ')} is only in this
+          tab — it will be gone on reload, and a backup saved now would be missing it. Private
+          windows block saving entirely; otherwise the browser is likely out of space. Move to
+          a normal window or free some space, then redo the change so it can be written down.
+        </p>
+      ) : storageRefusing ? (
+        <p className="import-error" role="status">
+          This browser just refused a test write, so it may be refusing real ones too — in this
+          tab or another one. Nothing here is known to be lost, but anything that did fail to
+          save is only in the tab it was done in, and would be missing from a backup taken now.
+          Private windows block saving entirely; otherwise the browser is likely out of space.
+          Move to a normal window or free some space, reload, and check that recent work is
+          still here.
+        </p>
+      ) : null}
+      <p className="field-hint">
+        Your classes, rosters, PINs and settings are stored on this device only — there is no
+        online copy. If it is wiped, reset or replaced, a backup file is the only way to get
+        them back. The file is encrypted with this device&apos;s passcode — and it lists every
+        student&apos;s name and PIN, so it is exactly as hard to open as that passcode is to
+        guess. Anyone who gets the file can try passcodes against it on their own machine, over and
+        over, with nothing watching. Keep it where only staff can reach it, not in a shared
+        folder or behind a link. And keep the passcode: without it
+        nobody can open the file, and that includes you.
+      </p>
+
+      <h3>Save a backup</h3>
+      <div className="class-code-entry-row">
+        <label className="sr-only" htmlFor="backup-pass">
+          This device&apos;s passcode
+        </label>
+        <input
+          id="backup-pass"
+          className="text-input"
+          type="password"
+          autoComplete="current-password"
+          placeholder="This device's passcode"
+          value={savePass}
+          onChange={(e) => {
+            setSavePass(e.target.value)
+            setSaveMsg(null)
+          }}
+        />
+        <button className="button button-primary" onClick={save} disabled={!savePass || saving}>
+          {saving ? 'Saving…' : 'Save backup file'}
+        </button>
+      </div>
+      {saveMsg && (
+        <p className={saveMsg.ok ? 'import-ok' : 'import-error'} role="status">
+          {saveMsg.message}
+        </p>
+      )}
+
+      <h3>Restore from a backup</h3>
+      <p className="field-hint">
+        Brings back anything this device is missing — a class it does not have, students missing
+        from a class it does, progress rows, assignments. It never changes what is already here:
+        a class this device has keeps its own settings, its students and their current PINs, and
+        an assignment it has keeps its own units and the code you handed out. Where the backup
+        disagrees, this device wins and the difference is named below. Sign-in passcodes are not
+        restored — this device keeps its own.
+      </p>
+      <input
+        className="text-input"
+        type="file"
+        accept="application/json,.json"
+        aria-label="Backup file"
+        onChange={(e) => {
+          setFile(e.target.files?.[0] ?? null)
+          setRestoreMsg(null)
+        }}
+      />
+      <div className="class-code-entry-row">
+        <label className="sr-only" htmlFor="restore-pass">
+          The passcode that backup was made with
+        </label>
+        <input
+          id="restore-pass"
+          className="text-input"
+          type="password"
+          autoComplete="current-password"
+          placeholder="The passcode that backup was made with"
+          value={restorePass}
+          onChange={(e) => {
+            setRestorePass(e.target.value)
+            setRestoreMsg(null)
+          }}
+        />
+        <button
+          className="button button-primary"
+          onClick={restore}
+          disabled={!file || !restorePass || restoring}
+        >
+          {restoring ? 'Restoring…' : 'Restore'}
+        </button>
+      </div>
+      {restoreMsg && (
+        <p className={restoreMsg.ok ? 'import-ok' : 'import-error'} role="status">
+          {restoreMsg.message}
+        </p>
+      )}
+    </section>
+  )
+}
+
 function DeviceSetupPanel({ auth }) {
   const [teacherCode, setTeacherCode] = useState('')
   const [teacherPass, setTeacherPass] = useState('')
@@ -2181,6 +2517,7 @@ function TeacherDashboard({ auth }) {
       <ClassManager />
       <TeacherAssignments />
       <AddStudentForm />
+      <BackupPanel />
     </div>
   )
 }

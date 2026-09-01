@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import { JOIN_PARAM } from '../lib/classes.js'
 import {
@@ -79,6 +79,14 @@ function RemoveClassControl({ cid, onRemove }) {
 
 function PickName({ cls, onRemove, next }) {
   const [sid, setSid] = useState(cls.students[0]?.sid ?? '')
+  const duplicateNames = useMemo(() => {
+    const seen = new Map()
+    for (const s of cls.students) {
+      const key = s.name.trim().toLowerCase()
+      seen.set(key, (seen.get(key) ?? 0) + 1)
+    }
+    return new Set([...seen].filter(([, n]) => n > 1).map(([key]) => key))
+  }, [cls.students])
   const [pin, setPin] = useState('')
   const [error, setError] = useState('')
   const navigate = useNavigate()
@@ -116,7 +124,11 @@ function PickName({ cls, onRemove, next }) {
       >
         {cls.students.map((s) => (
           <option key={s.sid} value={s.sid}>
-            {s.name}
+            {/* Two students in one class can share a login name after a
+                restore brings both devices' rosters together. Showing the
+                student ID only for those lets them pick the right one using
+                the slip in their hand, without cluttering the usual case. */}
+            {duplicateNames.has(s.name.trim().toLowerCase()) ? `${s.name} — ${s.sid}` : s.name}
           </option>
         ))}
       </select>
