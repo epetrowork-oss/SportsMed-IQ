@@ -72,7 +72,14 @@ export default function QuizPage() {
   if (finished) {
     const score = questions.length > 0 ? correctCount / questions.length : 0
     const passed = score >= PASS_THRESHOLD
-    const nextStep = nextLearningStep(unit.id, getUnitProgress(unit.id), controls)
+    // The attempt just finished is already recorded, so the stored best answers
+    // "is this unit's quiz requirement met?" while `passed` only answers "did
+    // this attempt clear the bar?". Guidance and the next step follow the best;
+    // the score line keeps reporting the attempt honestly.
+    const progress = getUnitProgress(unit.id)
+    const best = progress.bestQuizScore ?? 0
+    const bestPasses = best >= PASS_THRESHOLD
+    const nextStep = nextLearningStep(unit.id, progress, controls)
     return (
       <div className="page page-narrow">
         <nav className="breadcrumb">
@@ -87,13 +94,15 @@ export default function QuizPage() {
           <p>
             {passed
               ? 'Nice work — that counts as a pass.'
-              : `You need ${Math.round(PASS_THRESHOLD * 100)}% to pass. Review the lesson and try again.`}
+              : bestPasses
+                ? `This attempt was below ${Math.round(PASS_THRESHOLD * 100)}%. Your best score of ${Math.round(best * 100)}% still counts as a pass.`
+                : `You need ${Math.round(PASS_THRESHOLD * 100)}% to pass. Review the lesson and try again.`}
           </p>
         </div>
         <LearningSteps unitId={unit.id} current="quiz" />
         <div className="unit-actions">
-          <Link className="button button-primary" to={passed ? nextStep.to : `/unit/${unit.id}`}>
-            {passed ? nextStep.label : 'Review the lesson'} →
+          <Link className="button button-primary" to={bestPasses ? nextStep.to : `/unit/${unit.id}`}>
+            {bestPasses ? nextStep.label : 'Review the lesson'} →
           </Link>
           <button className="button" onClick={restart}>Retake quiz</button>
           <Link className="button" to="/">My learning</Link>
