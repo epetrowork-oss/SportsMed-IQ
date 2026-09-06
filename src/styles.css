@@ -394,67 +394,29 @@ h3 {
   color: var(--ink-soft);
 }
 
-/* "Continue where you left off" (or its start-your-first-lesson fallback)
-   — the landing page's featured action, just below the hero. */
-
+/* Featured learning action: dark text on a pale teal surface. Keep this
+   component's resting, hover, and child treatments together. */
 .continue-card {
   display: block;
-  background: linear-gradient(135deg, var(--brand), var(--brand-deep));
-  border: 1.5px solid var(--brand);
-  border-radius: 0.9rem;
-  padding: 1.25rem 1.4rem;
-  margin: 0 0 1.25rem;
-  color: #fff;
+  padding: 2rem;
+  margin: 0 0 1.75rem;
+  border: 1px solid #c4dfd9;
+  border-left: 4px solid var(--brand);
+  background: #eaf4f2;
+  color: var(--ink);
+  border-radius: 1rem;
+  box-shadow: none;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(15, 76, 92, 0.25);
-  transition: box-shadow 0.15s, transform 0.15s;
 }
-
-.continue-card:hover {
-  box-shadow: 0 6px 20px rgba(15, 76, 92, 0.32);
-  transform: translateY(-1px);
-}
-
-.continue-kicker {
-  color: #fff;
-  opacity: 0.85;
-}
-
-.continue-title {
-  margin: 0.3rem 0 0.5rem;
-  font-size: 1.35rem;
-  color: #fff;
-}
-
-.continue-meta {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.continue-meta .pill-grade {
-  margin-top: 0;
-}
-
-/* Contrast override: continue-card sits on the solid brand background now,
-   so its status text needs to stay legible without touching the shared
-   .status-dot color rules used everywhere else (teacher dashboard, unit
-   cards). pill-grade's own white background already reads fine as-is. */
-.continue-meta .status-dot {
-  color: #fff;
-}
-
-.continue-meta .status-flag {
-  color: #ffdca3;
-}
-
-.continue-summary {
-  margin: 0.5rem 0 0;
-  color: #fff;
-  opacity: 0.85;
-  font-size: 0.9rem;
-}
+.continue-card:hover { border-color: var(--brand); }
+.continue-card .continue-kicker { color: var(--brand); }
+.continue-title { color: var(--ink); font-size: clamp(1.4rem, 2.5vw, 2rem); margin: .7rem 0 1rem; }
+.continue-meta { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem; }
+.continue-meta .pill-grade { margin-top: 0; }
+.continue-meta .status-dot { color: var(--ink); }
+.continue-meta .status-flag { color: #805000; }
+.continue-summary { margin: .5rem 0 0; color: var(--ink-soft); font-size: .9rem; }
+.continue-action { display: inline-flex; gap: 2rem; align-items: center; padding: .7rem 1rem; margin-top: .6rem; color: white; background: var(--brand); border-radius: .65rem; font-weight: 650; }
 
 .home-browse-button {
   margin: 0 0 1.75rem;
@@ -1904,9 +1866,6 @@ summary { cursor: pointer; min-height: 44px; padding: .55rem 0; font-weight: 650
 .help-panel { background: #edf4f5; box-shadow: none; }
 .help-panel h2 { margin-top: 0; }
 .help-panel p { color: var(--ink-soft); font-size: .9rem; }
-.continue-card { display: block; padding: 2rem; margin: 0 0 1.75rem; border: 1px solid #c4dfd9; border-left: 4px solid var(--brand); background: #eaf4f2; border-radius: 1rem; box-shadow: none; text-decoration: none; }
-.continue-title { color: var(--ink); font-size: clamp(1.4rem, 2.5vw, 2rem); margin: .7rem 0 1rem; }
-.continue-action { display: inline-flex; gap: 2rem; align-items: center; padding: .7rem 1rem; margin-top: .6rem; color: white; background: var(--brand); border-radius: .65rem; font-weight: 650; }
 .assignment-card, .assignment-card-list { box-shadow: none; }
 .my-lessons { margin-top: 1.5rem; }
 .assignment-card { border-radius: 1rem; padding: 1.4rem; }

@@ -1,3 +1,4 @@
+import { appScrollGuard } from '../lib/scrollDepth.js'
 import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { useStudentSession, logoutStudent } from '../lib/studentSession.js'
@@ -27,7 +28,7 @@ export default function Layout() {
   const { signedIn, role } = useSignedIn()
   const { pathname } = useLocation()
   const teacherView = pathname === '/teacher'
-  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  useEffect(() => { appScrollGuard.run(() => window.scrollTo(0, 0)) }, [pathname])
 
   return (
     <div className="app">

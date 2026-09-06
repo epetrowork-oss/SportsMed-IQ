@@ -71,6 +71,13 @@ try {
   const assignment = await assignments.saveTeacherAssignment({ name: 'Practice', unitIds: [unit.id], mode: 'focus' })
   progress.importAssignment(await decode.decodeAssignment(assignment.code))
   check(render('/').includes('Practice'), 'Imported assignment appears on home')
+  const focusAssignment = await assignments.saveTeacherAssignment({ name: 'Focus scope', unitIds: [unit.id, 'concussion', 'heat-illness'], mode: 'focus' })
+  progress.importAssignment(await decode.decodeAssignment(focusAssignment.code))
+  check(render('/').includes('1<small> / 3</small>'), 'Focus-mode dashboard counts only assigned available lessons')
+  const { homeHero } = await server.ssrLoadModule('/src/content/homeHero.js')
+  const homeMarkup = render('/')
+  check(homeMarkup.includes(`data-ratio="${homeHero.ratio}"`) && homeMarkup.includes(homeHero.alt), 'Home image uses shared shot-list metadata')
+
   // Render all 54 lessons and their quiz/card screens to catch content-dependent failures.
   for (const u of units) {
     for (const suffix of ['', '/quiz', '/flashcards']) check(render(`/unit/${u.id}${suffix}`).includes('Lesson progress'), `${u.id}${suffix} renders`)

@@ -66,3 +66,30 @@ The supervised preview starts, but the cloud browser rejects the preview address
    use text descriptions for visual references; the screen print stylesheet retains images.
 
 Keep this as a draft until those checks are complete. No production deployment was made.
+
+## PR #67 review fixes
+
+All five findings in the supplied fix brief are addressed:
+
+1. Contents jumps and route resets use a shared scroll guard. It excludes the
+   app's scroll burst until two quiet animation frames, restarting the drain on
+   each suppressed scroll event.
+2. Depth tracking samples only scroll events. Mount, resize and cleanup do not
+   measure; cleanup only saves prior evidence, avoiding reads of a replacement DOM.
+3. The continuation card has one coherent light-surface rule set, dark child text,
+   and a border-only hover. Calculated contrast is at least 5.35:1 for the changed
+   text colors on the pale card, and 6.91:1 for white on the teal action.
+4. The home progress denominator intersects class access and focus assignments,
+   matching the lesson scope shown in the library.
+5. Home and the shot-list generator import one shared 4:3 image specification,
+   including description and alt text. Existing artwork is retained.
+
+Checks executed after these fixes: production build; content validation (54 files,
+zero errors); redesign self-test (194 checks); scroll-depth self-test (7 simulated
+scroll/frame lifecycle scenarios); image-slot generator; numeric color-contrast
+calculation; and `git diff --check`. No new dependencies were added.
+
+The scroll tests simulate events and animation frames; they are not real browser
+interaction tests. All four browser QA groups above remain open, including visual
+layout, real click-throughs, installed-PWA offline reload, and print pagination.
+The existing build-size warning remains. Keep PR #67 in draft.

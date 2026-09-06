@@ -1,3 +1,4 @@
+import { homeHero } from '../content/homeHero.js'
 import { nextLearningStep } from '../lib/learningPath.js'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -12,7 +13,7 @@ import {
 } from '../lib/progress.js'
 import { getGamificationSummary } from '../lib/gamification.js'
 import { isComplete } from '../lib/status.js'
-import { decodeAssignment, assignmentStats, hasActiveFocusAssignment } from '../lib/assignments.js'
+import { decodeAssignment, assignmentStats, hasActiveFocusAssignment, assignedUnitIds } from '../lib/assignments.js'
 import { useStudentSession, isUnitVisible } from '../lib/studentSession.js'
 import StatusIcon from '../components/StatusIcon.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
@@ -265,7 +266,8 @@ export default function HomePage() {
   const continueUnit = focusMode ? null : findContinueUnit(controls)
   const hideAssignmentUi = !!(controls && !controls.assignments)
 
-  const visibleUnits = getAllUnits().filter((u) => !controls?.restricted || isUnitVisible(u.id, controls))
+  const focusedIds = focusMode ? new Set(assignedUnitIds(assignments)) : null
+  const visibleUnits = getAllUnits().filter((u) => isUnitVisible(u.id, controls) && (!focusMode || focusedIds.has(u.id)))
   const completed = visibleUnits.filter((u) => isUnitComplete(u.id)).length
   return (
     <div className="page dashboard-page">
@@ -282,7 +284,7 @@ export default function HomePage() {
           <section className="explore-panel">
             <div><span className="kicker">KEEP EXPLORING</span><h2>Knowledge for the sidelines</h2><p>Find a topic, build a skill, and put your learning into practice.</p>
             <Link to="/lessons" className="button">Explore the library →</Link></div>
-            <ImagePlaceholder asset="home-hero.webp" purpose="home hero image" ratio="4:3" background="white" location="public/images/home/" alt="First-aid kit and athletic tape beside a sports field" />
+            <ImagePlaceholder {...homeHero} />
           </section>
         </div>
         <aside className="home-sidebar" aria-label="Learning summary">

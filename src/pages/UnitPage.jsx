@@ -1,3 +1,4 @@
+import { appScrollGuard, observeScrollDepth } from '../lib/scrollDepth.js'
 import { nextLearningStep } from '../lib/learningPath.js'
 import LearningSteps from '../components/LearningSteps.jsx'
 import { useEffect, useState } from 'react'
@@ -60,32 +61,11 @@ function formatReadTime(seconds) {
 function useScrollDepth(unitId) {
   useEffect(() => {
     if (!unitId) return
-    let maxPct = 0
-    let savedPct = 0
-    const measure = () => {
-      const el = document.documentElement
-      const scrollable = el.scrollHeight - el.clientHeight
-      const pct =
-        scrollable <= 0 ? 100 : Math.min(100, ((el.scrollTop + el.clientHeight) / el.scrollHeight) * 100)
-      if (pct > maxPct) maxPct = pct
-    }
-    const flush = () => {
-      if (maxPct > savedPct) {
-        recordScrollDepth(unitId, maxPct)
-        savedPct = maxPct
-      }
-    }
-    measure()
-    const interval = setInterval(flush, 2000)
-    window.addEventListener('scroll', measure, { passive: true })
-    window.addEventListener('resize', measure)
-    return () => {
-      measure()
-      flush()
-      clearInterval(interval)
-      window.removeEventListener('scroll', measure)
-      window.removeEventListener('resize', measure)
-    }
+    return observeScrollDepth({
+      target: window,
+      element: () => document.documentElement,
+      record: (pct) => recordScrollDepth(unitId, pct),
+    })
   }, [unitId])
 }
 
@@ -216,7 +196,7 @@ export default function UnitPage() {
           {activities.length > 0 && <button className="button" type="button" onClick={printActivities}>Print activity packet</button>}
         </div></details>
       </div>
-      <details className="lesson-contents"><summary>In this lesson</summary><nav aria-label="Lesson sections">{unit.sections.map((section, i) => section.heading && <button className="contents-link" key={i} onClick={() => { const target = document.getElementById(`lesson-section-${i}`); target?.scrollIntoView({ behavior: 'instant', block: 'start' }); target?.focus({ preventScroll: true }) }}>{String(i + 1).padStart(2, '0')} · {section.heading}</button>)}</nav></details>
+      <details className="lesson-contents"><summary>In this lesson</summary><nav aria-label="Lesson sections">{unit.sections.map((section, i) => section.heading && <button className="contents-link" key={i} onClick={() => { appScrollGuard.run(() => { const target = document.getElementById(`lesson-section-${i}`); target?.scrollIntoView({ behavior: 'instant', block: 'start' }); target?.focus({ preventScroll: true }) }) }}>{String(i + 1).padStart(2, '0')} · {section.heading}</button>)}</nav></details>
       {printMessage && <p className="field-hint" role="status">{printMessage}</p>}
 
       <article className="lesson">
