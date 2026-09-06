@@ -1,3 +1,26 @@
+# September 2026 application redesign
+
+Implemented on `codex/professional-redesign` at the owner’s request.
+
+- [x] Shared teal/navy visual system, responsive navigation, account menu, skip link.
+- [x] Focused learning home, library topic/status/assignment filters, consistent vocabulary.
+- [x] Read/quiz/cards progress navigation and shared next-action logic.
+- [x] Lesson section contents and secondary print controls; uncropped lesson diagrams.
+- [x] Quiz result next actions, flashcard completion panel, progress page.
+- [x] Student join steps and teacher sign-in presentation.
+- [x] Teacher Overview / Classes / Assignments / Reports / Settings and consolidated CSV export.
+- [x] Purpose-based progress sharing, transfer, and assignment import.
+- [x] Production build, content validation, QR checks, state/server-render journey checks.
+- [ ] Browser visual and interaction QA at phone/tablet/desktop sizes.
+- [ ] Installed-PWA offline reload and physical/browser print-layout checks.
+
+The preview service starts, but the cloud browser rejects its internal address with
+`ERR_BLOCKED_BY_CLIENT`. This is an environment limitation, not a passed visual gate.
+Keep the redesign as a draft review until browser checks are complete. See
+`docs/REDESIGN-REVIEW.md` for scope, verification, and review steps.
+
+---
+
 # Plan — pick up here (current focus: image pipeline, see `docs/HANDOFF.md`)
 
 **Update 2026-08-24 — logins landed (owner request; supersedes the "accounts

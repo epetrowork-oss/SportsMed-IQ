@@ -1,3 +1,6 @@
+import { appScrollGuard, observeScrollDepth } from '../lib/scrollDepth.js'
+import { nextLearningStep } from '../lib/learningPath.js'
+import LearningSteps from '../components/LearningSteps.jsx'
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getUnit, getStandardsForUnit } from '../content/index.js'
@@ -8,7 +11,6 @@ import {
   markLessonRead,
   addReadingTime,
   recordScrollDepth,
-  PASS_THRESHOLD,
 } from '../lib/progress.js'
 import { printLessonPacket, printPracticalPacket } from '../lib/print.js'
 import { useClassControls, isUnitVisible } from '../lib/studentSession.js'
@@ -59,32 +61,11 @@ function formatReadTime(seconds) {
 function useScrollDepth(unitId) {
   useEffect(() => {
     if (!unitId) return
-    let maxPct = 0
-    let savedPct = 0
-    const measure = () => {
-      const el = document.documentElement
-      const scrollable = el.scrollHeight - el.clientHeight
-      const pct =
-        scrollable <= 0 ? 100 : Math.min(100, ((el.scrollTop + el.clientHeight) / el.scrollHeight) * 100)
-      if (pct > maxPct) maxPct = pct
-    }
-    const flush = () => {
-      if (maxPct > savedPct) {
-        recordScrollDepth(unitId, maxPct)
-        savedPct = maxPct
-      }
-    }
-    measure()
-    const interval = setInterval(flush, 2000)
-    window.addEventListener('scroll', measure, { passive: true })
-    window.addEventListener('resize', measure)
-    return () => {
-      measure()
-      flush()
-      clearInterval(interval)
-      window.removeEventListener('scroll', measure)
-      window.removeEventListener('resize', measure)
-    }
+    return observeScrollDepth({
+      target: window,
+      element: () => document.documentElement,
+      record: (pct) => recordScrollDepth(unitId, pct),
+    })
   }, [unitId])
 }
 
@@ -187,7 +168,7 @@ export default function UnitPage() {
   }
 
   const p = getUnitProgress(unit.id)
-  const passed = (p.bestQuizScore ?? 0) >= PASS_THRESHOLD
+  const nextStep = nextLearningStep(unit.id, p, controls)
   const standards = getStandardsForUnit(unit)
   const activities = getActivitiesForUnit(unit)
 
@@ -202,51 +183,25 @@ export default function UnitPage() {
   return (
     <div className="page page-narrow">
       <nav className="breadcrumb">
-        <Link to="/lessons">Units</Link> / {unit.title}
+        <Link to="/lessons">Library</Link> / {unit.title}
       </nav>
       <h1>{unit.title}</h1>
       <p className="unit-summary">{unit.summary}</p>
 
-      <div className="unit-actions">
-        {controls && !controls.quizzes ? (
-          <p className="field-hint">Quizzes open when your teacher turns them on.</p>
-        ) : (
-          <Link className="button button-primary" to={`/unit/${unit.id}/quiz`}>
-            Take quiz
-            {p.bestQuizScore != null && (
-              <>
-                {` · best ${Math.round(p.bestQuizScore * 100)}%`}
-                {passed && (
-                  <span className="status-done" aria-hidden="true">
-                    {' '}✓
-                  </span>
-                )}
-              </>
-            )}
-          </Link>
-        )}
-        <Link className="button" to={`/unit/${unit.id}/flashcards`}>
-          Flashcards
-          {p.flashcardsReviewed && (
-            <span className="status-done" aria-hidden="true">
-              {' '}✓
-            </span>
-          )}
-        </Link>
-        <button className="button" type="button" onClick={printLesson}>
-          Print lesson
-        </button>
-        {activities.length > 0 && (
-          <button className="button" type="button" onClick={printActivities}>
-            Print activity packet{activities.length > 1 ? 's' : ''}
-          </button>
-        )}
+      <LearningSteps unitId={unit.id} current="read" />
+      <div className="lesson-tools">
+        <span className="field-hint">{unit.minutes ? `About ${unit.minutes} minutes · ` : ''}{unit.sections.length} sections</span>
+        <details className="print-menu"><summary>Print & resources</summary><div className="unit-actions">
+          <button className="button" type="button" onClick={printLesson}>Print lesson</button>
+          {activities.length > 0 && <button className="button" type="button" onClick={printActivities}>Print activity packet</button>}
+        </div></details>
       </div>
+      <details className="lesson-contents"><summary>In this lesson</summary><nav aria-label="Lesson sections">{unit.sections.map((section, i) => section.heading && <button className="contents-link" key={i} onClick={() => { appScrollGuard.run(() => { const target = document.getElementById(`lesson-section-${i}`); target?.scrollIntoView({ behavior: 'instant', block: 'start' }); target?.focus({ preventScroll: true }) }) }}>{String(i + 1).padStart(2, '0')} · {section.heading}</button>)}</nav></details>
       {printMessage && <p className="field-hint" role="status">{printMessage}</p>}
 
       <article className="lesson">
         {unit.sections.map((section, i) => (
-          <section key={i}>
+          <section key={i} id={`lesson-section-${i}`} tabIndex={-1}>
             {section.heading && <h2>{section.heading}</h2>}
             {(section.body ?? []).map((paragraph, j) => (
               <p key={j}>{paragraph}</p>
@@ -294,14 +249,10 @@ export default function UnitPage() {
             I've read this lesson
           </button>
         )}
-        {!(controls && !controls.quizzes) && (
-          <Link
-            className={p.lessonRead ? 'button button-primary' : 'button'}
-            to={`/unit/${unit.id}/quiz`}
-          >
-            Continue to quiz →
-          </Link>
-        )}
+        {p.lessonRead && <>
+          {nextStep.stage === 'waiting' && <p className="field-hint">Your quiz will open when your teacher updates class access.</p>}
+          <Link className="button button-primary" to={nextStep.to}>{nextStep.label} →</Link>
+        </>}
       </div>
     </div>
   )

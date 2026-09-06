@@ -1,3 +1,5 @@
+import { homeHero } from '../content/homeHero.js'
+import { nextLearningStep } from '../lib/learningPath.js'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getAllUnits, getUnit } from '../content/index.js'
@@ -11,7 +13,7 @@ import {
 } from '../lib/progress.js'
 import { getGamificationSummary } from '../lib/gamification.js'
 import { isComplete } from '../lib/status.js'
-import { decodeAssignment, assignmentStats, hasActiveFocusAssignment } from '../lib/assignments.js'
+import { decodeAssignment, assignmentStats, hasActiveFocusAssignment, assignedUnitIds } from '../lib/assignments.js'
 import { useStudentSession, isUnitVisible } from '../lib/studentSession.js'
 import StatusIcon from '../components/StatusIcon.jsx'
 import ImagePlaceholder from '../components/ImagePlaceholder.jsx'
@@ -72,7 +74,7 @@ function findContinueUnit(controls) {
     .filter((unit) => !controls?.restricted || isUnitVisible(unit.id, controls))
     .filter((unit) => {
       const p = getUnitProgress(unit.id)
-      return isUnitStarted(p) && !isComplete(p)
+      return isUnitStarted(p) && !isComplete(p) && nextLearningStep(unit.id, p, controls).stage !== 'waiting'
     })
   if (candidates.length === 0) return null
   // getAllUnits() is already in canonical order, so when every candidate has
@@ -82,11 +84,11 @@ function findContinueUnit(controls) {
   )
 }
 
-function ContinueCard({ unit }) {
+function ContinueCard({ unit, controls }) {
   const p = getUnitProgress(unit.id)
   const gradeLabel = GRADE_BANDS[unit.gradeBand]
   return (
-    <Link to={`/unit/${unit.id}`} className="continue-card">
+    <Link to={nextLearningStep(unit.id, p, controls).to} className="continue-card">
       <span className="continue-kicker kicker">Continue where you left off</span>
       <h2 className="continue-title">{unit.title}</h2>
       <div className="continue-meta">
@@ -94,6 +96,7 @@ function ContinueCard({ unit }) {
         <StatusIcon progress={p} />
       </div>
       <p className="continue-summary">{progressSummary(p)}</p>
+      <span className="continue-action">{nextLearningStep(unit.id, p, controls).label} <span aria-hidden="true">→</span></span>
     </Link>
   )
 }
@@ -102,8 +105,8 @@ function StartCard() {
   return (
     <Link to="/lessons" className="continue-card">
       <span className="continue-kicker kicker">Get started</span>
-      <h2 className="continue-title">Start your first lesson</h2>
-      <p className="continue-summary">Browse the library to pick a topic and dive in.</p>
+      <h2 className="continue-title">Find your next lesson</h2>
+      <p className="continue-summary">Browse the library to choose an available topic.</p>
     </Link>
   )
 }
@@ -123,10 +126,11 @@ function sortAssignments(assignments) {
   })
 }
 
-function AssignmentCard({ view }) {
-  const { assignment, total, complete, nextUnitId, allDone } = view
+function AssignmentCard({ view, controls }) {
+  const { assignment, total, complete, allDone } = view
   const pct = total > 0 ? Math.round((complete / total) * 100) : 0
-  const nextUnit = nextUnitId ? getUnit(nextUnitId) : null
+  const nextUnit = assignment.unitIds.map(getUnit).find((unit) => unit && isUnitVisible(unit.id, controls) && !isUnitComplete(unit.id))
+  const nextStep = nextUnit ? nextLearningStep(nextUnit.id, getUnitProgress(nextUnit.id), controls) : null
   const due = dueInfo(assignment.due, allDone)
 
   return (
@@ -154,8 +158,9 @@ function AssignmentCard({ view }) {
           </p>
         </>
       )}
-      {!allDone && nextUnit && (
-        <Link to={`/unit/${nextUnit.id}`} className="button button-primary assignment-next-up">
+      {!allDone && (!nextUnit || nextStep?.stage === 'waiting') && <p className="field-hint">Your next step opens when your teacher updates class access.</p>}
+      {!allDone && nextUnit && nextStep.stage !== 'waiting' && (
+        <Link to={nextStep.to} className="button button-primary assignment-next-up">
           Next up: {nextUnit.title}
         </Link>
       )}
@@ -163,7 +168,7 @@ function AssignmentCard({ view }) {
   )
 }
 
-function MyLessons({ assignments }) {
+function MyLessons({ assignments, controls }) {
   const views = sortAssignments(assignments)
   const active = views.filter((view) => !view.allDone)
   const completed = views.filter((view) => view.allDone)
@@ -174,7 +179,7 @@ function MyLessons({ assignments }) {
       <p className="field-hint">A lesson is complete after you read it, pass its quiz, and review its flashcards.</p>
       <div className="assignment-card-list">
         {active.map((view) => (
-          <AssignmentCard key={view.assignment.name} view={view} />
+          <AssignmentCard key={view.assignment.name} view={view} controls={controls} />
         ))}
       </div>
       {completed.length > 0 && (
@@ -182,7 +187,7 @@ function MyLessons({ assignments }) {
           <summary>Completed assignments ({completed.length})</summary>
           <div className="assignment-card-list">
             {completed.map((view) => (
-              <AssignmentCard key={view.assignment.name} view={view} />
+              <AssignmentCard key={view.assignment.name} view={view} controls={controls} />
             ))}
           </div>
         </details>
@@ -228,14 +233,14 @@ function ClassCodeEntry({ hasAssignments = false }) {
 
   return (
     <section className="class-code-entry">
-      <h3>{hasAssignments ? 'Add another class code' : 'Have a class code from your teacher?'}</h3>
+      <h3>{hasAssignments ? 'Add another assignment' : 'Have an assignment code?'}</h3>
       <div className="class-code-entry-row">
-        <label htmlFor="home-class-code" className="sr-only">Class code</label>
+        <label htmlFor="home-class-code" className="sr-only">Assignment code</label>
         <input
           id="home-class-code"
           type="text"
           className="text-input"
-          placeholder="Paste your class code here"
+          placeholder="Paste your assignment code here"
           value={pasted}
           onChange={(e) => {
             setPasted(e.target.value)
@@ -257,65 +262,37 @@ export default function HomePage() {
   const progress = useProgress()
   const assignments = useAssignments()
   const { session, controls } = useStudentSession()
-  const focusMode = hasActiveFocusAssignment(assignments, isUnitComplete)
+  const focusMode = controls?.assignments !== false && hasActiveFocusAssignment(assignments, isUnitComplete)
   const continueUnit = focusMode ? null : findContinueUnit(controls)
   const hideAssignmentUi = !!(controls && !controls.assignments)
 
+  const focusedIds = focusMode ? new Set(assignedUnitIds(assignments)) : null
+  const visibleUnits = getAllUnits().filter((u) => isUnitVisible(u.id, controls) && (!focusMode || focusedIds.has(u.id)))
+  const completed = visibleUnits.filter((u) => isUnitComplete(u.id)).length
   return (
-    <div className="page">
-      <section className="home-hero">
-        <div className="home-hero-image">
-          <ImagePlaceholder
-            asset="home-hero.webp"
-            purpose="home hero image"
-            ratio="21:9"
-            background="white"
-            description="A red first-aid kit bag with a Star of Life emblem, water bottle, and athletic tape on the sideline of a sunlit stadium field — welcoming scene that sets the tone for the app."
-            location="public/images/home/"
-            alt="A red first-aid kit bag, water bottle, and athletic tape on the sideline of a stadium field"
-          />
+    <div className="page dashboard-page">
+      <header className="page-heading">
+        <span className="kicker">YOUR LEARNING SPACE</span>
+        <h1>{session ? `Welcome back, ${session.name}` : 'Your next step starts here'}</h1>
+        <p>{controls?.className || 'Build your sports medicine knowledge, one lesson at a time.'}</p>
+      </header>
+      <div className="home-layout">
+        <div>
+          {!focusMode && (continueUnit ? <ContinueCard unit={continueUnit} controls={controls} /> : <StartCard />)}
+          {!hideAssignmentUi && assignments.length > 0 && <MyLessons assignments={assignments} controls={controls} />}
+          {focusMode && !assignments.length && <StartCard />}
+          <section className="explore-panel">
+            <div><span className="kicker">KEEP EXPLORING</span><h2>Knowledge for the sidelines</h2><p>Find a topic, build a skill, and put your learning into practice.</p>
+            <Link to="/lessons" className="button">Explore the library →</Link></div>
+            <ImagePlaceholder {...homeHero} />
+          </section>
         </div>
-        <div className="home-hero-text">
-          <h1>SportMedIQ</h1>
-          <p className="home-hero-tagline">
-            Learn sports medicine skills, one lesson at a time — read a lesson, quiz yourself, and
-            review flashcards, all saved right on your device.
-          </p>
-          {session && (
-            <p className="home-session-line">
-              Signed in as {session.name} · {controls?.className}
-            </p>
-          )}
-        </div>
-      </section>
-
-      {!hideAssignmentUi && assignments.length > 0 && <MyLessons assignments={assignments} />}
-
-      {!focusMode && (continueUnit ? <ContinueCard unit={continueUnit} /> : <StartCard />)}
-
-      <GamificationPanel progress={progress} />
-
-      {!hideAssignmentUi && <ClassCodeEntry hasAssignments={assignments.length > 0} />}
-
-      <Link to="/lessons" className="button button-primary home-browse-button">
-        Browse the Library
-      </Link>
-
-      <div className="how-it-works">
-        <div className="how-it-works-card">
-          <h3>For students</h3>
-          <p>
-            Read the lesson, take the quiz, and review the flashcards. When you're ready to hand in
-            proof of progress, share your progress code from <Link to="/sync">Sync</Link>.
-          </p>
-        </div>
-        <div className="how-it-works-card">
-          <h3>For teachers</h3>
-          <p>
-            Add student codes on the <Link to="/teacher">Teacher</Link> tab to see a class view of
-            who's finished what.
-          </p>
-        </div>
+        <aside className="home-sidebar" aria-label="Learning summary">
+          <section className="summary-panel"><span className="kicker">YOUR PROGRESS</span><strong className="stat-number">{completed}<small> / {visibleUnits.length}</small></strong><p>Available lessons completed</p><Link to="/achievements">View progress →</Link></section>
+          <GamificationPanel progress={progress} />
+          <section className="help-panel"><h2>Ready to hand in your work?</h2><p>Share a progress code so your teacher can update their roster.</p><Link to="/sync">Share with your teacher →</Link></section>
+          {!hideAssignmentUi && <details className="setup-details"><summary>Add an assignment</summary><ClassCodeEntry hasAssignments={assignments.length > 0} /></details>}
+        </aside>
       </div>
     </div>
   )

@@ -27,6 +27,8 @@ export default function SyncPage() {
   const { name, units, gamification } = useProgress()
   const assignments = useAssignments()
   const { session, controls } = useStudentSession()
+  const [task, setTask] = useState('share')
+  const [copyError, setCopyError] = useState('')
   const [copied, setCopied] = useState(false)
   const [pasted, setPasted] = useState('')
   const [importResult, setImportResult] = useState(null) // { ok, message }
@@ -50,9 +52,10 @@ export default function SyncPage() {
     try {
       await navigator.clipboard.writeText(code)
       setCopied(true)
+      setCopyError('')
       setTimeout(() => setCopied(false), 2000)
     } catch {
-      // Clipboard blocked (some school browsers) — the textarea is selectable.
+      setCopyError('Automatic copying is unavailable. Select the code below and copy it manually.')
     }
   }
 
@@ -100,12 +103,14 @@ export default function SyncPage() {
 
   return (
     <div className="page page-narrow">
-      <h1>Sync between devices</h1>
-      <p className="empty-note">
-        Your progress lives on this device. To move it to another device — or hand it in to
-        your teacher — copy your code below. No internet needed.
-      </p>
-
+      <span className="kicker">SAVE & SHARE</span><h1>Share your learning</h1>
+      <p className="unit-summary">Your work saves on this device. Choose what you want to do next.</p>
+      <nav className="workspace-nav" aria-label="Sharing tasks">
+        <button className={task === 'share' ? 'active' : ''} aria-current={task === 'share' ? 'page' : undefined} onClick={() => setTask('share')}>Share with teacher</button>
+        <button className={task === 'move' ? 'active' : ''} aria-current={task === 'move' ? 'page' : undefined} onClick={() => setTask('move')}>Move progress</button>
+        {controls?.assignments !== false && <button className={task === 'assignment' ? 'active' : ''} aria-current={task === 'assignment' ? 'page' : undefined} onClick={() => setTask('assignment')}>Add assignment</button>}
+      </nav>
+      {task !== 'assignment' && <div className="workspace-panel">
       <section>
         <h2>Your name</h2>
         <input
@@ -123,30 +128,33 @@ export default function SyncPage() {
         )}
         {session && (
           <p className="field-hint sync-session-hint">
-            Signed in — your code carries your student ID ({session.sid}) so your teacher's roster
-            recognizes you.
+            Your code includes your class identity so your teacher can match your work.
           </p>
         )}
       </section>
 
       <section>
-        <h2>Your progress code</h2>
-        <textarea className="code-box" readOnly value={code} rows={4} onFocus={(e) => e.target.select()} />
+        <h2>{task === 'share' ? 'Send your progress to your teacher' : 'Copy from this device'}</h2>
+        <p>{task === 'share' ? 'Copy your code and send it using your teacher’s preferred method. Your teacher then imports it into their roster.' : 'Copy this code. On your other device, sign in as yourself, open Share → Move progress, and paste it below.'}</p>
+        <textarea aria-label="Your progress code" className="code-box" readOnly value={code} rows={4} onFocus={(e) => e.target.select()} />
         <div className="unit-actions">
-          <button className="button button-primary" onClick={copyCode}>
-            {copied ? '✓ Copied' : 'Copy code'}
+          <button className="button button-primary" onClick={copyCode} disabled={!code}>
+            {copied ? '✓ Code copied' : 'Copy progress code'}
           </button>
         </div>
         <p className="field-hint">
-          Paste it into the Sync page on your other device, or send it to your teacher.
+          Copying a code does not send it. Your teacher’s report updates after they import it.
         </p>
       </section>
 
-      <section>
-        <h2>Load a code</h2>
+      {copyError && <p role="status" className="import-error">{copyError}</p>}
+      {copied && <p role="status" className="import-ok">Code copied. Ready to paste.</p>}
+      {task === 'move' && <section>
+        <h2>Load progress on this device</h2>
         <textarea
           className="code-box"
-          placeholder="Paste a progress code here (starts with SMIQ)"
+          aria-label="Progress code from another device"
+          placeholder="Paste your progress code here"
           value={pasted}
           onChange={(e) => {
             setPasted(e.target.value)
@@ -164,17 +172,19 @@ export default function SyncPage() {
             {importResult.message}
           </p>
         )}
-      </section>
+      </section>}
 
-      {!(controls && !controls.assignments) && (
+      </div>}
+      {task === 'assignment' && controls?.assignments !== false && (
       <section>
-        <h2>Class code</h2>
+        <h2>Add an assignment</h2>
         <p className="field-hint">
-          If your teacher gave you a class code, paste it here to load your assigned lessons.
+          Paste the assignment code from your teacher to add your lessons and due date. To join a class, use Student sign-in.
         </p>
         <textarea
           className="code-box"
-          placeholder="Paste a class code here (starts with SMIQA1)"
+          aria-label="Assignment code"
+          placeholder="Paste your assignment code here"
           value={classPasted}
           onChange={(e) => {
             setClassPasted(e.target.value)
@@ -188,7 +198,7 @@ export default function SyncPage() {
             onClick={importClassCode}
             disabled={!classPasted.trim()}
           >
-            Import class code
+            Add assignment
           </button>
         </div>
         {classImportResult && (

@@ -1,7 +1,9 @@
+import LearningSteps from '../components/LearningSteps.jsx'
+import { nextLearningStep } from '../lib/learningPath.js'
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getUnit } from '../content/index.js'
-import { recordQuizResult, PASS_THRESHOLD } from '../lib/progress.js'
+import { recordQuizResult, PASS_THRESHOLD, getUnitProgress } from '../lib/progress.js'
 import { useClassControls, isUnitVisible } from '../lib/studentSession.js'
 import NotFoundPage from './NotFoundPage.jsx'
 
@@ -70,10 +72,18 @@ export default function QuizPage() {
   if (finished) {
     const score = questions.length > 0 ? correctCount / questions.length : 0
     const passed = score >= PASS_THRESHOLD
+    // The attempt just finished is already recorded, so the stored best answers
+    // "is this unit's quiz requirement met?" while `passed` only answers "did
+    // this attempt clear the bar?". Guidance and the next step follow the best;
+    // the score line keeps reporting the attempt honestly.
+    const progress = getUnitProgress(unit.id)
+    const best = progress.bestQuizScore ?? 0
+    const bestPasses = best >= PASS_THRESHOLD
+    const nextStep = nextLearningStep(unit.id, progress, controls)
     return (
       <div className="page page-narrow">
         <nav className="breadcrumb">
-          <Link to="/lessons">Units</Link> / <Link to={`/unit/${unit.id}`}>{unit.title}</Link> / Quiz
+          <Link to="/lessons">Library</Link> / <Link to={`/unit/${unit.id}`}>{unit.title}</Link> / Quiz
         </nav>
         <h1>Quiz results</h1>
         <div className={`quiz-results-card ${passed ? 'quiz-results-card-pass' : ''}`}>
@@ -84,19 +94,18 @@ export default function QuizPage() {
           <p>
             {passed
               ? 'Nice work — that counts as a pass.'
-              : `You need ${Math.round(PASS_THRESHOLD * 100)}% to pass. Review the lesson and try again.`}
+              : bestPasses
+                ? `This attempt was below ${Math.round(PASS_THRESHOLD * 100)}%. Your best score of ${Math.round(best * 100)}% still counts as a pass.`
+                : `You need ${Math.round(PASS_THRESHOLD * 100)}% to pass. Review the lesson and try again.`}
           </p>
         </div>
+        <LearningSteps unitId={unit.id} current="quiz" />
         <div className="unit-actions">
-          <button className="button button-primary" onClick={restart}>
-            Retake quiz
-          </button>
-          <Link className="button" to={`/unit/${unit.id}`}>
-            Back to lesson
+          <Link className="button button-primary" to={bestPasses ? nextStep.to : `/unit/${unit.id}`}>
+            {bestPasses ? nextStep.label : 'Review the lesson'} →
           </Link>
-          <Link className="button" to={`/unit/${unit.id}/flashcards`}>
-            Review flashcards
-          </Link>
+          <button className="button" onClick={restart}>Retake quiz</button>
+          <Link className="button" to="/">My learning</Link>
         </div>
       </div>
     )
@@ -126,9 +135,10 @@ export default function QuizPage() {
   return (
     <div className="page page-narrow">
       <nav className="breadcrumb">
-        <Link to="/lessons">Units</Link> / <Link to={`/unit/${unit.id}`}>{unit.title}</Link> / Quiz
+        <Link to="/lessons">Library</Link> / <Link to={`/unit/${unit.id}`}>{unit.title}</Link> / Quiz
       </nav>
-      <p className="kicker quiz-progress">
+      <LearningSteps unitId={unit.id} current="quiz" />
+      <p className="kicker quiz-progress" role="status">
         Question {index + 1} of {questions.length}
       </p>
       <div

@@ -1,3 +1,4 @@
+import { homeHero } from '../src/content/homeHero.js'
 // Shot-list generator: scans src/content/units/*.json for every image slot
 // in the app — the 7 home-page category icons, one hero thumbnail per
 // strand, and any per-section lesson diagrams — and prints a markdown table
@@ -46,20 +47,8 @@ const addSlot = (asset, row) => {
   slots.set(asset, row)
 }
 
-// 0. Home hero — a single fixed page-level asset with no content-JSON
-// backing to derive it from, unlike the slots below. Kept in sync by hand
-// with the <ImagePlaceholder> call in src/pages/HomePage.jsx.
-addSlot('home-hero.webp', {
-  asset: 'home-hero.webp',
-  purpose: 'home hero image',
-  ratio: '21:9',
-  background: 'white',
-  location: 'public/images/home/',
-  text: 'None',
-  description:
-    'A student athletic trainer taping an ankle on the sideline, first-aid kit open nearby — welcoming, hands-on scene that sets the tone for the app.',
-  alt: "A student athletic trainer taping an athlete's ankle on the sideline",
-})
+// 0. Home image — identical metadata to the rendered page.
+addSlot(homeHero.asset, { ...homeHero, text: 'None' })
 
 // 1. Category icons — one per unique category, derived from the string.
 const categories = [...new Set(units.map((u) => u.category).filter(Boolean))].sort()

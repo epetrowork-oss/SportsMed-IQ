@@ -1,3 +1,4 @@
+import { useSearchParams } from 'react-router-dom'
 import { useEffect, useMemo, useState } from 'react'
 import { getAllUnits, getUnitsByCategory, getUnit } from '../content/index.js'
 import { useProgress, getUnitProgress, PASS_THRESHOLD } from '../lib/progress.js'
@@ -93,7 +94,7 @@ function AddStudentForm() {
     <section className="add-student">
       <h2>Add a student</h2>
       <p className="field-hint">
-        Paste the progress code from the student's Sync page. Pasting a newer code for the
+        Paste the progress code from the student’s Share page. Pasting a newer code for the
         same name updates their row.
       </p>
       <textarea
@@ -199,8 +200,8 @@ function LoginGate() {
   }
 
   return (
-    <div className="page">
-      <h1>Teacher sign-in</h1>
+    <div className="page signin-page">
+      <span className="kicker">TEACHER ACCESS</span><h1>Welcome to your workspace</h1>
       <p className="field-hint">
         Sign-in keeps students on a shared device out of the teacher dashboard. All data stays on
         this device — there are no online accounts.
@@ -912,8 +913,8 @@ function TeacherAssignments() {
     <section className="teacher-assignments">
       <h2>Assignments</h2>
       <p className="field-hint">
-        Build a class code for a set of lessons, then share it with students to paste into
-        their Sync page.
+        Choose lessons and a due date, then share the assignment code. Students add it in
+        Share → Add assignment.
       </p>
 
       <label className="assignment-field">
@@ -1004,7 +1005,7 @@ function TeacherAssignments() {
           onClick={generate}
           disabled={!name.trim() || selected.size === 0}
         >
-          Generate class code
+          Create assignment code
         </button>
       </div>
       <p className="field-hint">
@@ -1097,7 +1098,7 @@ function TeacherAssignments() {
                     value={a.code}
                     rows={4}
                     onFocus={(e) => e.target.select()}
-                    aria-label={`Class code for ${a.name}`}
+                    aria-label={`Assignment code for ${a.name}`}
                   />
                 )}
               </div>
@@ -1963,6 +1964,14 @@ export default function TeacherPage() {
 }
 
 function TeacherDashboard({ auth }) {
+  const [workspaceParams, setWorkspaceParams] = useSearchParams()
+  const workspaceTabs = ['overview', 'classes', 'assignments', 'reports', 'settings']
+  const workspace = workspaceTabs.includes(workspaceParams.get('view')) ? workspaceParams.get('view') : 'overview'
+  const setWorkspace = (view) => setWorkspaceParams({ view })
+  const classes = useClasses()
+  const [exportFormat, setExportFormat] = useState('microsoft')
+  const [exportLayout, setExportLayout] = useState('gradebook')
+
   useProgress() // include this device's live progress
   const { students } = useRoster()
   const teacherAssignments = useTeacherAssignments()
@@ -2061,7 +2070,25 @@ function TeacherDashboard({ auth }) {
   return (
     <div className="page">
       <SignedInBanner auth={auth} />
-      <h1>Teacher dashboard</h1>
+      <span className="kicker">TEACHER WORKSPACE</span><h1>{workspace === 'overview' ? 'Your teaching overview' : workspace.charAt(0).toUpperCase() + workspace.slice(1)}</h1>
+      <p className="workspace-intro">Plan the learning. Follow the progress. Keep your class moving.</p>
+      <nav className="workspace-nav" aria-label="Teacher tools">{workspaceTabs.map((tab) => <button key={tab} className={workspace === tab ? 'active' : ''} aria-current={workspace === tab ? 'page' : undefined} onClick={() => setWorkspace(tab)}>{tab.charAt(0).toUpperCase() + tab.slice(1)}</button>)}</nav>
+      {workspace === 'overview' && <>
+        <div className="stats-grid">
+          <section className="summary-panel"><span className="kicker">CLASSES</span><strong className="stat-number">{classes.length}</strong><p>On this device</p></section>
+          <section className="summary-panel"><span className="kicker">PROGRESS REPORTS</span><strong className="stat-number">{students.length}</strong><p>Student reports imported</p></section>
+          <section className="summary-panel"><span className="kicker">ASSIGNMENTS</span><strong className="stat-number">{teacherAssignments.length}</strong><p>Saved for sharing</p></section>
+        </div>
+        <h2>What would you like to do?</h2>
+        <div className="task-grid">
+          <button className="task-card" onClick={() => setWorkspace('classes')}><span className="task-icon">01</span><h3>Set up your class</h3><p>Add students, manage lesson access, and share a join link.</p><span>Open classes →</span></button>
+          <button className="task-card" onClick={() => setWorkspace('assignments')}><span className="task-icon">02</span><h3>Assign the next lesson</h3><p>Choose lessons and a due date, then share an assignment code.</p><span>Open assignments →</span></button>
+          <button className="task-card" onClick={() => setWorkspace('reports')}><span className="task-icon">03</span><h3>Check student progress</h3><p>Import progress, review completion, and export your gradebook.</p><span>Open reports →</span></button>
+        </div>
+        <div className="help-panel"><h2>Keep classroom progress up to date</h2><p>Student work saves on each student’s device. Import a fresh progress code in Reports to see their latest work. After changing class access, share an updated join link from Classes.</p></div>
+      </>}
+      {workspace === 'reports' && <section className="workspace-panel">
+      <h2>Student progress</h2>
       <p className="empty-note">
         A lesson is complete when it's read, its flashcards are reviewed, and the best quiz
         score is at least {Math.round(PASS_THRESHOLD * 100)}%. Click any row to drill down to a
@@ -2108,37 +2135,15 @@ function TeacherDashboard({ auth }) {
             <option value="flags">Flags first</option>
           </select>
         </label>
-        <span className="unit-actions">
-          <button
-            className="button"
-            onClick={() => downloadDetailCsvMicrosoft(rows, units, teacherAssignments)}
-          >
-            Excel / Teams — details
-          </button>
-          <button
-            className="button"
-            onClick={() => downloadDetailCsvGoogle(rows, units, teacherAssignments)}
-          >
-            Google Sheets — details
-          </button>
-          <button
-            className="button"
-            onClick={() => downloadGradebookCsvMicrosoft(rows, units, teacherAssignments)}
-          >
-            Excel / Teams — gradebook
-          </button>
-          <button
-            className="button"
-            onClick={() => downloadGradebookCsvGoogle(rows, units, teacherAssignments)}
-          >
-            Google Classroom — gradebook
-          </button>
-        </span>
+        <details className="export-menu"><summary className="button">Export results ↓</summary><div className="export-options">
+          <label>Format<select value={exportFormat} onChange={(e) => setExportFormat(e.target.value)}><option value="microsoft">Excel / Teams</option><option value="google">Google</option></select></label>
+          <label>Report<select value={exportLayout} onChange={(e) => setExportLayout(e.target.value)}><option value="gradebook">Gradebook</option><option value="details">Detailed progress</option></select></label>
+          <button className="button button-primary" onClick={() => {
+            const download = exportFormat === 'microsoft' ? (exportLayout === 'gradebook' ? downloadGradebookCsvMicrosoft : downloadDetailCsvMicrosoft) : (exportLayout === 'gradebook' ? downloadGradebookCsvGoogle : downloadDetailCsvGoogle)
+            download(rows, units, teacherAssignments)
+          }}>Download CSV</button>
+        </div></details>
       </div>
-      <p className="field-hint">
-        Excel/Teams files open in Microsoft Office and upload to Teams; Google files import
-        cleanly into Sheets, Docs and Classroom.
-      </p>
 
       {pivot === 'student' && (
         <ByStudentView
@@ -2176,11 +2181,14 @@ function TeacherDashboard({ auth }) {
         />
       )}
 
-      {auth.role === 'admin' && <AdminPanel issued={auth.issued} />}
-      <DeviceSetupPanel auth={auth} />
-      <ClassManager />
-      <TeacherAssignments />
       <AddStudentForm />
+      </section>}
+      {workspace === 'classes' && <section className="workspace-panel"><ClassManager /></section>}
+      {workspace === 'assignments' && <section className="workspace-panel"><TeacherAssignments /></section>}
+      {workspace === 'settings' && <section className="workspace-panel">
+        {auth.role === 'admin' && <AdminPanel issued={auth.issued} />}
+        <DeviceSetupPanel auth={auth} />
+      </section>}
     </div>
   )
 }
