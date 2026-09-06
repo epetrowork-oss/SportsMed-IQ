@@ -1,3 +1,4 @@
+import { statusInfo } from '../lib/status.js'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getAllUnits, getUnitsByCategory } from '../content/index.js'
@@ -85,7 +86,7 @@ export default function LibraryPage() {
   useProgress() // re-render when progress changes
   const controls = useClassControls()
   const assignments = useAssignments()
-  const focusMode = hasActiveFocusAssignment(assignments, isUnitComplete)
+  const focusMode = controls?.assignments !== false && hasActiveFocusAssignment(assignments, isUnitComplete)
   const focusedIds = focusMode ? new Set(assignedUnitIds(assignments)) : null
   const [gradeBand, setGradeBand] = useState(() => {
     try {
@@ -95,6 +96,9 @@ export default function LibraryPage() {
     }
   })
   const [search, setSearch] = useState('')
+  const [categoryFilter, setCategoryFilter] = useState('all')
+  const [statusFilter, setStatusFilter] = useState('all')
+  const [scope, setScope] = useState('all')
 
   useEffect(() => {
     try {
@@ -107,7 +111,10 @@ export default function LibraryPage() {
   const searchTerm = search.trim().toLowerCase()
   const classRestricted = !!controls?.restricted
   const allUnits = classRestricted ? getAllUnits().filter((u) => controls.unitIds.has(u.id)) : getAllUnits()
-  const totalUnits = focusMode ? focusedIds.size : allUnits.length
+  const availableUnits = allUnits.filter((u) => !focusMode || focusedIds.has(u.id))
+  const totalUnits = availableUnits.length
+  const assigned = new Set(assignedUnitIds(assignments))
+  const categories = [...new Set(availableUnits.map((u) => u.category))]
 
   const groups = getUnitsByCategory()
     .map(({ category, units }) => ({
@@ -115,6 +122,9 @@ export default function LibraryPage() {
       units: units
         .filter((u) => !classRestricted || controls.unitIds.has(u.id))
         .filter((u) => !focusMode || focusedIds.has(u.id))
+        .filter((u) => categoryFilter === 'all' || u.category === categoryFilter)
+        .filter((u) => statusFilter === 'all' || statusInfo(getUnitProgress(u.id)).key === statusFilter)
+        .filter((u) => scope === 'all' || assigned.has(u.id))
         .filter(
           (u) => (gradeBand === 'all' || u.gradeBand === gradeBand) && unitMatchesSearch(u, searchTerm)
         ),
@@ -125,7 +135,8 @@ export default function LibraryPage() {
 
   return (
     <div className="page">
-      <h1>Library</h1>
+      <span className="kicker">EXPLORE & LEARN</span>
+      <h1>Lesson library</h1>
       <p className="library-intro">
         {focusMode
           ? 'Browse your assigned lessons, filter by grade band, or search by topic.'
@@ -134,7 +145,7 @@ export default function LibraryPage() {
       {focusMode && (
         <p className="empty-note library-focus-note">
           Showing your assigned lessons. Your teacher assigns lessons here — new ones appear when
-          you import a class code on the <Link to="/sync">Sync page</Link>.
+          you add an assignment code on the <Link to="/sync">Share page</Link>.
         </p>
       )}
       {classRestricted && (
@@ -158,30 +169,28 @@ export default function LibraryPage() {
         </div>
         <div className="search-field">
           <label htmlFor="unit-search" className="sr-only">
-            Search units
+            Search lessons
           </label>
           <input
             id="unit-search"
             type="search"
             className="search-input"
-            placeholder="Search units…"
+            placeholder="Search lessons…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
       </div>
-      <p className="search-count">
-        {matchedCount} of {totalUnits} units
+      <div className="filter-row">
+        <label>Topic<select value={categoryFilter} onChange={(e) => setCategoryFilter(e.target.value)}><option value="all">All topics</option>{categories.map((c) => <option key={c}>{c}</option>)}</select></label>
+        <label>Progress<select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}><option value="all">Any progress</option><option value="none">Not started</option><option value="progress">In progress</option><option value="done">Complete</option></select></label>
+        {!focusMode && assignments.length > 0 && <label>Show<select value={scope} onChange={(e) => setScope(e.target.value)}><option value="all">All available lessons</option><option value="assigned">Assigned to me</option></select></label>}
+        <button className="button" onClick={() => { setSearch(''); setGradeBand('all'); setCategoryFilter('all'); setStatusFilter('all'); setScope('all') }}>Reset filters</button>
+      </div>
+      <p className="search-count" role="status">
+        {matchedCount} of {totalUnits} lessons
       </p>
-      {groups.length === 0 && (
-        <p className="empty-note">
-          {searchTerm
-            ? <>No units match &ldquo;{search.trim()}&rdquo;.</>
-            : gradeBand === 'all'
-            ? <>No units yet. Add a JSON file to <code>src/content/units/</code> to create one.</>
-            : `No units yet for ${GRADE_BANDS.find((b) => b.id === gradeBand)?.label} grade.`}
-        </p>
-      )}
+      {groups.length === 0 && <div className="empty-state"><h2>{totalUnits ? 'No matching lessons' : 'Your lessons will appear here'}</h2><p>{totalUnits ? 'Try another topic or reset your filters.' : 'Ask your teacher for an updated class login link to open your lessons.'}</p></div>}
       {groups.map(({ category, units }) => (
         <section key={category} className="category-group">
           <div className={`category-heading category-accent-${slugify(category)}`}>

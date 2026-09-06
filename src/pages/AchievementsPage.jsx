@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { getAllUnits } from '../content/index.js'
 import { getGamificationSummary } from '../lib/gamification.js'
 import { localDateKey, useProgress } from '../lib/progress.js'
@@ -21,7 +22,7 @@ export default function AchievementsPage() {
 
   return (
     <div className="page page-narrow">
-      <h1>Achievements</h1>
+      <span className="kicker">EVERY STEP COUNTS</span><h1>Your progress</h1>
       <p className="unit-summary">
         Progress rewards careful learning, accurate review, consistency, and teacher-verified practice—not speed during emergency activities.
       </p>
@@ -68,7 +69,7 @@ export default function AchievementsPage() {
       </section>
 
       <section>
-        <h2>Badges</h2>
+        <h2>Achievements</h2>
         <div className="badge-grid">
           {summary.badges.map((badge) => (
             <article
@@ -88,6 +89,7 @@ export default function AchievementsPage() {
           ))}
         </div>
       </section>
+      <div className="unit-actions"><Link className="button button-primary" to="/">Continue learning →</Link></div>
     </div>
   )
 }

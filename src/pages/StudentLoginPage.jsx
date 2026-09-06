@@ -203,8 +203,9 @@ function RecoverPreviousWork() {
 function SignedIn({ session, controls, next, joined }) {
   const recoverable = canRecoverPreviousWork()
   return (
-    <div className="page page-narrow">
-      <h1>Student sign-in</h1>
+    <div className="page page-narrow signin-page">
+      <span className="kicker">SPORTS MEDICINE STARTS HERE</span>
+      <h1>Your learning starts here</h1>
       {joined && (
         <p className={joined.ok ? 'import-ok' : 'import-error'} role="status">
           {joined.ok
@@ -217,10 +218,10 @@ function SignedIn({ session, controls, next, joined }) {
       </p>
       {recoverable && <RecoverPreviousWork />}
       <div className="unit-actions">
-        <button className="button button-primary" onClick={logoutStudent}>
+        <button className="button" onClick={logoutStudent}>
           Sign out
         </button>
-        <Link className="button" to={next || '/'}>
+        <Link className="button button-primary" to={next || '/'}>
           {next ? 'Continue' : 'Home'}
         </Link>
       </div>
@@ -301,11 +302,12 @@ export default function StudentLoginPage() {
       : activeClasses.find((c) => c.cid === picking) ?? null
 
   return (
-    <div className="page page-narrow">
-      <h1>Student sign-in</h1>
+    <div className="page page-narrow signin-page">
+      <span className="kicker">SPORTS MEDICINE STARTS HERE</span>
+      <h1>Your learning starts here</h1>
       {next && (
-        <p className="import-error" role="status">
-          Sign in to open the lessons.
+        <p className="welcome-note" role="status">
+          Join your class to start learning.
         </p>
       )}
       {joined && (
@@ -321,7 +323,8 @@ export default function StudentLoginPage() {
         Teachers: <Link to="/teacher">sign in to the teacher dashboard</Link>.
       </p>
 
-      <ImportClassCode onImported={(cid) => setPicking(cid)} />
+      <ol className="join-steps"><li><span>1</span>Join your class</li><li><span>2</span>Choose your name</li><li><span>3</span>Enter your PIN</li></ol>
+      {activeClasses.length > 0 ? <details className="setup-details"><summary>Join another class or update access</summary><ImportClassCode onImported={(cid) => setPicking(cid)} /></details> : <div className="signin-panel"><p className="field-hint">Open your teacher’s join link or scan their QR code. You can also paste the class login code below.</p><ImportClassCode onImported={(cid) => setPicking(cid)} /></div>}
 
       {activeClasses.length > 1 && !shownClass && (
         <section>

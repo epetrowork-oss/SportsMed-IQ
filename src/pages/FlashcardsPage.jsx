@@ -1,7 +1,9 @@
+import LearningSteps from '../components/LearningSteps.jsx'
+import { nextLearningStep } from '../lib/learningPath.js'
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getUnit } from '../content/index.js'
-import { markFlashcardsReviewed } from '../lib/progress.js'
+import { markFlashcardsReviewed, getUnitProgress, useProgress } from '../lib/progress.js'
 import { useClassControls, isUnitVisible } from '../lib/studentSession.js'
 import NotFoundPage from './NotFoundPage.jsx'
 
@@ -9,6 +11,7 @@ export default function FlashcardsPage() {
   const { unitId } = useParams()
   const unit = getUnit(unitId)
   const controls = useClassControls()
+  useProgress()
 
   const [index, setIndex] = useState(0)
   const [flipped, setFlipped] = useState(false)
@@ -29,6 +32,7 @@ export default function FlashcardsPage() {
   }
   const cards = unit.flashcards
   const card = cards[index]
+  const nextStep = nextLearningStep(unit.id, { ...getUnitProgress(unit.id), flashcardsReviewed: true }, controls)
 
   function go(delta) {
     const next = Math.min(cards.length - 1, Math.max(0, index + delta))
@@ -55,10 +59,13 @@ export default function FlashcardsPage() {
   return (
     <div className="page page-narrow">
       <nav className="breadcrumb">
-        <Link to="/lessons">Units</Link> / <Link to={`/unit/${unit.id}`}>{unit.title}</Link> /
+        <Link to="/lessons">Library</Link> / <Link to={`/unit/${unit.id}`}>{unit.title}</Link> /
         Flashcards
       </nav>
-      <p className="quiz-progress">
+      <h1>Flashcard review</h1>
+      <p className="unit-summary">{unit.title}</p>
+      <LearningSteps unitId={unit.id} current="cards" />
+      <p className="quiz-progress" role="status">
         Card {index + 1} of {cards.length}
         {seenLast && ' · ✓ reviewed'}
       </p>
@@ -91,6 +98,11 @@ export default function FlashcardsPage() {
           Next →
         </button>
       </div>
+      {index === cards.length - 1 && <section className="completion-panel" aria-live="polite">
+        <span className="kicker">REVIEW COMPLETE</span><h2>You reached the end of this deck</h2>
+        <p>{nextStep.stage === 'complete' ? 'All three steps are complete. Your progress is saved on this device.' : nextStep.stage === 'waiting' ? 'Your quiz will open when your teacher updates class access.' : 'Keep going with your next learning step.'}</p>
+        <Link className="button button-primary" onClick={() => markFlashcardsReviewed(unit.id)} to={nextStep.to}>{nextStep.label} →</Link>
+      </section>}
     </div>
   )
 }

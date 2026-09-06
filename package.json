@@ -10,7 +10,8 @@
     "validate:content": "node scripts/validate-content.mjs",
     "audit:content": "node scripts/audit-subject-content.mjs",
     "images:shotlist": "node scripts/list-image-slots.mjs",
-    "test:qr": "node scripts/qr-selftest.mjs"
+    "test:qr": "node scripts/qr-selftest.mjs",
+    "test:journey": "node scripts/redesign-selftest.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",
